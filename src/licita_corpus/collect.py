@@ -368,6 +368,7 @@ def montar_catalogo(
             "contratos_lidos": descoberta.contratos_lidos,
             "candidatos_inspecionados": descoberta.compras_inspecionadas,
             "candidatos_com_cadeia_publicada": len(descoberta.candidatos),
+            "janelas_pendentes_por_falha_api": descoberta.falhas_api,
             "processos_reprovados_no_download": len(reprovados),
             "cotas": asdict(cotas),
             "marcas_de_reuso": reuse.resumir(marcas),

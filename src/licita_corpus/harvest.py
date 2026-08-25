@@ -26,7 +26,7 @@ from .classify import (
     papel_documento_contrato,
     parece_aquisicao_de_bens,
 )
-from .pncp import Pncp, partes_controle
+from .pncp import Pncp, PncpError, partes_controle
 
 
 class LinhasJsonl:
@@ -67,6 +67,7 @@ class ResultadoDescoberta:
     contratos_lidos: int
     compras_inspecionadas: int
     rejeitados: int
+    falhas_api: int = 0
 
 
 def _data(valor: str) -> date:
@@ -345,52 +346,71 @@ def descobrir(
 ) -> ResultadoDescoberta:
     """Inspeciona até ``max_candidatos`` contratações semeadas por contratos."""
     cache = LinhasJsonl(destino, lambda r: r["numero_controle_pncp"])
+    arquivo_falhas = destino.with_name("contract_first_falhas_api.jsonl")
     vistos: set[str] = set()
     contratos_lidos = 0
     inspecionadas = 0
     candidatos_no_escopo = 0
     rejeitados = 0
+    falhas_api = 0
 
     parar = False
     for inicio, fim in janelas_periodo(data_inicial, data_final):
         log(f"contratos publicados: janela {inicio}–{fim}")
-        for contrato in pncp.contratos_publicados(inicio, fim):
-            contratos_lidos += 1
-            if motivo_contrato_base(contrato):
-                continue
-            numero = contrato["numeroControlePncpCompra"]
-            if numero in vistos:
-                continue
-            vistos.add(numero)
+        try:
+            for contrato in pncp.contratos_publicados(inicio, fim):
+                contratos_lidos += 1
+                if motivo_contrato_base(contrato):
+                    continue
+                numero = contrato["numeroControlePncpCompra"]
+                if numero in vistos:
+                    continue
+                vistos.add(numero)
 
-            existente = cache.obter(numero)
-            if existente is None:
-                candidato, motivo, no_escopo = _inspecionar_candidato(pncp, contrato)
-                registro = {
-                    "numero_controle_pncp": numero,
-                    "no_escopo": no_escopo,
-                    "aprovado": candidato is not None,
-                    "motivo": motivo,
-                    "contrato_semente": contrato.get("numeroControlePNCP"),
-                    "data_publicacao_semente": contrato.get("dataPublicacaoPncp"),
-                    "candidato": candidato,
-                }
-                cache.adicionar(registro)
-                existente = registro
-                inspecionadas += 1
-            if existente.get("no_escopo"):
-                candidatos_no_escopo += 1
-                if not existente.get("aprovado"):
-                    rejeitados += 1
-                if candidatos_no_escopo % 10 == 0:
-                    completos = sum(1 for r in cache.ler() if r.get("aprovado"))
-                    log(
-                        f"contract-first: {candidatos_no_escopo}/{max_candidatos} candidatos "
-                        f"no escopo; {completos} cadeias completas em cache"
-                    )
-                if candidatos_no_escopo >= max_candidatos:
-                    parar = True
-                    break
+                existente = cache.obter(numero)
+                if existente is None:
+                    candidato, motivo, no_escopo = _inspecionar_candidato(pncp, contrato)
+                    registro = {
+                        "numero_controle_pncp": numero,
+                        "no_escopo": no_escopo,
+                        "aprovado": candidato is not None,
+                        "motivo": motivo,
+                        "contrato_semente": contrato.get("numeroControlePNCP"),
+                        "data_publicacao_semente": contrato.get("dataPublicacaoPncp"),
+                        "candidato": candidato,
+                    }
+                    cache.adicionar(registro)
+                    existente = registro
+                    inspecionadas += 1
+                if existente.get("no_escopo"):
+                    candidatos_no_escopo += 1
+                    if not existente.get("aprovado"):
+                        rejeitados += 1
+                    if candidatos_no_escopo % 10 == 0:
+                        completos = sum(1 for r in cache.ler() if r.get("aprovado"))
+                        log(
+                            f"contract-first: {candidatos_no_escopo}/{max_candidatos} candidatos "
+                            f"no escopo; {completos} cadeias completas em cache"
+                        )
+                    if candidatos_no_escopo >= max_candidatos:
+                        parar = True
+                        break
+        except PncpError as erro:
+            # Uma janela indisponível permanece explicitamente pendente, mas
+            # não impede inspecionar períodos independentes mais antigos.
+            # Nunca é transformada em lista vazia nem checkpoint concluído.
+            falhas_api += 1
+            registro_falha = {
+                "data_inicial": inicio,
+                "data_final": fim,
+                "instante": datetime.now().astimezone().isoformat(),
+                "erro": str(erro),
+            }
+            arquivo_falhas.parent.mkdir(parents=True, exist_ok=True)
+            with arquivo_falhas.open("a", encoding="utf-8") as saida:
+                saida.write(json.dumps(registro_falha, ensure_ascii=False) + "\n")
+            log(f"AVISO: janela {inicio}–{fim} pendente por falha da API: {erro}")
+            continue
         if parar:
             break
 
@@ -408,6 +428,8 @@ def descobrir(
     log(
         f"contract-first concluído: {contratos_lidos} contratos lidos, "
         f"{candidatos_no_escopo} contratações no escopo, "
-        f"{len(candidatos)} cadeias completas"
+        f"{len(candidatos)} cadeias completas, {falhas_api} janelas pendentes"
     )
-    return ResultadoDescoberta(candidatos, contratos_lidos, candidatos_no_escopo, rejeitados)
+    return ResultadoDescoberta(
+        candidatos, contratos_lidos, candidatos_no_escopo, rejeitados, falhas_api
+    )

@@ -3,12 +3,13 @@
 import pytest
 
 from licita_corpus.harvest import (
+    descobrir,
     inspecionar_candidato,
     janelas_periodo,
     motivo_compra,
     motivo_contrato_base,
 )
-from licita_corpus.pncp import partes_controle
+from licita_corpus.pncp import PncpError, partes_controle
 
 
 NUMERO_COMPRA = "12345678000199-1-000042/2025"
@@ -148,3 +149,24 @@ def test_vinculo_divergente_nao_e_aceito_por_semelhanca():
     candidato, motivo = inspecionar_candidato(PncpFalso(vinculo="outro"), contrato())
     assert candidato is None
     assert motivo == "nenhum contrato inicial confirmado pela contratação"
+
+
+def test_falha_de_uma_janela_fica_pendente_e_periodo_seguinte_continua(tmp_path):
+    class PncpComJanelaIndisponivel(PncpFalso):
+        def contratos_publicados(self, inicio, fim):
+            if inicio == "20250102":
+                raise PncpError("HTTP 504")
+            yield contrato()
+
+    resultado = descobrir(
+        PncpComJanelaIndisponivel(),
+        tmp_path / "contract_first.jsonl",
+        data_inicial="20250101",
+        data_final="20250102",
+        max_candidatos=1,
+        log=lambda _mensagem: None,
+    )
+    assert resultado.falhas_api == 1
+    assert len(resultado.candidatos) == 1
+    falhas = (tmp_path / "contract_first_falhas_api.jsonl").read_text(encoding="utf-8")
+    assert "HTTP 504" in falhas

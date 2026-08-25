@@ -1,0 +1,244 @@
+{
+  "id": "synthetic-r2-complete",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "tr-synthetic-1",
+      "type": "TR",
+      "format": "DOCX",
+      "title": "ANOTAÇÃO SINTÉTICA — NÃO É PROCESSO REAL",
+      "sections": [
+        {
+          "id": "section-synthetic-object",
+          "title_original": "OBJETO SINTÉTICO",
+          "section_type_normalized": "OBJECT",
+          "blocks": [
+            {
+              "id": "block-synthetic-object",
+              "type": "PARAGRAPH",
+              "text": "Item sintético: cadeira usada apenas em teste automatizado."
+            },
+            {
+              "id": "block-synthetic-quantity",
+              "type": "PARAGRAPH",
+              "text": "Quantidade sintética: 10 unidades."
+            },
+            {
+              "id": "block-synthetic-delivery",
+              "type": "PARAGRAPH",
+              "text": "Entrega sintética em 15 dias corridos."
+            },
+            {
+              "id": "block-synthetic-contract",
+              "type": "PARAGRAPH",
+              "text": "Vigência sintética de 12 meses."
+            },
+            {
+              "id": "block-synthetic-warranty",
+              "type": "PARAGRAPH",
+              "text": "Garantia sintética de 24 meses."
+            },
+            {
+              "id": "block-synthetic-unit-price",
+              "type": "PARAGRAPH",
+              "text": "Preço unitário sintético de R$ 100,00."
+            },
+            {
+              "id": "block-synthetic-total-price",
+              "type": "PARAGRAPH",
+              "text": "Preço total sintético de R$ 1.000,00."
+            },
+            {
+              "id": "block-synthetic-location",
+              "type": "PARAGRAPH",
+              "text": "Local sintético de entrega: depósito de teste."
+            },
+            {
+              "id": "block-synthetic-receipt",
+              "type": "PARAGRAPH",
+              "text": "Recebimento sintético em 5 dias."
+            },
+            {
+              "id": "block-synthetic-payment",
+              "type": "PARAGRAPH",
+              "text": "Pagamento sintético em 30 dias."
+            },
+            {
+              "id": "block-synthetic-requirement",
+              "type": "PARAGRAPH",
+              "text": "Requisito sintético: capacidade mínima de 100 kg."
+            }
+          ],
+          "evidence": {
+            "document_id": "tr-synthetic-1",
+            "page": 1,
+            "block_id": "block-synthetic-object",
+            "quote": "Item sintético: cadeira usada apenas em teste automatizado."
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-synthetic-1",
+          "description": "Cadeira sintética para teste",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 10,
+              "unit": "unidade",
+              "item_id": "item-synthetic-1",
+              "evidence": [
+                {
+                  "document_id": "tr-synthetic-1",
+                  "page": 1,
+                  "block_id": "block-synthetic-quantity",
+                  "quote": "Quantidade sintética: 10 unidades."
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "capacidade",
+              "operator": "GREATER_THAN_OR_EQUAL",
+              "value": 100,
+              "unit": "kg",
+              "item_id": "item-synthetic-1",
+              "evidence": [
+                {
+                  "document_id": "tr-synthetic-1",
+                  "page": 1,
+                  "block_id": "block-synthetic-requirement",
+                  "quote": "capacidade mínima de 100 kg"
+                }
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-object",
+              "quote": "Item sintético: cadeira usada apenas em teste automatizado."
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 15,
+          "unit": "dia_corrido",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-delivery",
+              "quote": "Entrega sintética em 15 dias corridos."
+            }
+          ]
+        },
+        {
+          "field_type": "CONTRACT_TERM",
+          "value": 12,
+          "unit": "mês",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-contract",
+              "quote": "Vigência sintética de 12 meses."
+            }
+          ]
+        },
+        {
+          "field_type": "WARRANTY_TERM",
+          "value": 24,
+          "unit": "mês",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-warranty",
+              "quote": "Garantia sintética de 24 meses."
+            }
+          ]
+        },
+        {
+          "field_type": "UNIT_PRICE",
+          "value": "100.00",
+          "unit": "BRL",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-unit-price",
+              "quote": "Preço unitário sintético de R$ 100,00."
+            }
+          ]
+        },
+        {
+          "field_type": "TOTAL_PRICE",
+          "value": "1000.00",
+          "unit": "BRL",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-total-price",
+              "quote": "Preço total sintético de R$ 1.000,00."
+            }
+          ]
+        },
+        {
+          "field_type": "DELIVERY_LOCATION",
+          "value": "depósito de teste",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-location",
+              "quote": "Local sintético de entrega: depósito de teste."
+            }
+          ]
+        },
+        {
+          "field_type": "RECEIPT_DEADLINE",
+          "value": 5,
+          "unit": "dia",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-receipt",
+              "quote": "Recebimento sintético em 5 dias."
+            }
+          ]
+        },
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 30,
+          "unit": "dia",
+          "item_id": "item-synthetic-1",
+          "evidence": [
+            {
+              "document_id": "tr-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-payment",
+              "quote": "Pagamento sintético em 30 dias."
+            }
+          ]
+        }
+      ],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

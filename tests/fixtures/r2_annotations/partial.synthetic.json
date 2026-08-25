@@ -1,0 +1,70 @@
+{
+  "id": "synthetic-r2-partial",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "etp-synthetic-1",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "ANOTAÇÃO PARCIAL SINTÉTICA — NÃO É PROCESSO REAL",
+      "sections": [
+        {
+          "id": "section-synthetic-items",
+          "title_original": "ITENS SINTÉTICOS",
+          "blocks": [
+            {
+              "id": "block-synthetic-item",
+              "type": "TABLE_CELL",
+              "text": "Item de teste sem correspondência com contratação real."
+            },
+            {
+              "id": "block-synthetic-quantity",
+              "type": "TABLE_CELL",
+              "text": "Quantidade para teste: 2 unidades."
+            }
+          ],
+          "evidence": {
+            "document_id": "etp-synthetic-1",
+            "page": 1,
+            "block_id": "block-synthetic-item",
+            "quote": "Item de teste sem correspondência com contratação real."
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-synthetic-partial-1",
+          "description": "Item parcial sintético",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 2,
+              "unit": "unidade",
+              "item_id": "item-synthetic-partial-1",
+              "evidence": [
+                {
+                  "document_id": "etp-synthetic-1",
+                  "page": 1,
+                  "block_id": "block-synthetic-quantity",
+                  "quote": "Quantidade para teste: 2 unidades."
+                }
+              ]
+            }
+          ],
+          "requirements": [],
+          "evidence": [
+            {
+              "document_id": "etp-synthetic-1",
+              "page": 1,
+              "block_id": "block-synthetic-item",
+              "quote": "Item de teste sem correspondência com contratação real."
+            }
+          ]
+        }
+      ],
+      "field_values": [],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

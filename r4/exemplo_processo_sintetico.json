@@ -1,0 +1,1242 @@
+{
+  "id": "processo-sintetico-r4-001",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "doc-etp-sintetico",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "Estudo Técnico Preliminar — Sensores Aurora",
+      "sections": [
+        {
+          "id": "sec-etp-objeto",
+          "title_original": "1. OBJETO E NECESSIDADE",
+          "section_type_normalized": "OBJECT",
+          "blocks": [
+            {
+              "id": "blk-etp-objeto",
+              "type": "PARAGRAPH",
+              "text": "Este estudo propõe a aquisição fictícia de 20 kits de sensores ambientais para o Laboratório Aurora."
+            },
+            {
+              "id": "blk-etp-especificacao",
+              "type": "PARAGRAPH",
+              "text": "Cada kit deverá medir temperatura entre 0 °C e 50 °C e possuir comunicação LoRaWAN."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-etp-sintetico",
+            "page": 1,
+            "block_id": "blk-etp-objeto",
+            "quote": "aquisição fictícia de 20 kits de sensores ambientais",
+            "attr": "object"
+          }
+        },
+        {
+          "id": "sec-etp-resultado",
+          "title_original": "2. RESULTADO ESPERADO",
+          "section_type_normalized": "OUTCOME",
+          "blocks": [
+            {
+              "id": "blk-etp-resultado",
+              "type": "PARAGRAPH",
+              "text": "A solução deverá permitir leituras remotas sem instalação civil permanente."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-etp-sintetico",
+            "page": 2,
+            "block_id": "blk-etp-resultado",
+            "quote": "leituras remotas sem instalação civil permanente",
+            "attr": "technical.outcome"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-etp-01",
+          "description": "Kit de sensor ambiental",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 20,
+              "unit": "kit",
+              "item_id": "item-etp-01",
+              "evidence": [
+                {
+                  "document_id": "doc-etp-sintetico",
+                  "page": 1,
+                  "block_id": "blk-etp-objeto",
+                  "quote": "20 kits de sensores ambientais",
+                  "attr": "quantity"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "technical.temperature_range",
+              "operator": "BETWEEN",
+              "value": [
+                0,
+                50
+              ],
+              "unit": "°C",
+              "item_id": "item-etp-01",
+              "evidence": [
+                {
+                  "document_id": "doc-etp-sintetico",
+                  "page": 1,
+                  "block_id": "blk-etp-especificacao",
+                  "quote": "medir temperatura entre 0 °C e 50 °C",
+                  "attr": "technical.temperature_range"
+                }
+              ]
+            },
+            {
+              "attribute": "technical.communication_protocol",
+              "operator": "EQUAL",
+              "value": "LoRaWAN",
+              "item_id": "item-etp-01",
+              "evidence": [
+                {
+                  "document_id": "doc-etp-sintetico",
+                  "page": 1,
+                  "block_id": "blk-etp-especificacao",
+                  "quote": "comunicação LoRaWAN",
+                  "attr": "technical.communication_protocol"
+                }
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "doc-etp-sintetico",
+              "page": 1,
+              "block_id": "blk-etp-objeto",
+              "quote": "20 kits de sensores ambientais",
+              "attr": "item"
+            }
+          ]
+        }
+      ],
+      "field_values": [],
+      "requirements": []
+    },
+    {
+      "id": "doc-tr-sintetico",
+      "type": "TR",
+      "format": "PDF",
+      "title": "Termo de Referência — Sensores Aurora",
+      "sections": [
+        {
+          "id": "sec-tr-itens",
+          "title_original": "3. ESPECIFICAÇÃO DO ITEM",
+          "section_type_normalized": "ITEMS",
+          "blocks": [
+            {
+              "id": "blk-tr-item",
+              "type": "TABLE",
+              "text": "Item 1 — Kit sensor ambiental — quantidade: 20 kits."
+            },
+            {
+              "id": "blk-tr-spec",
+              "type": "TABLE_CELL",
+              "text": "Faixa de medição: de 0 °C a 50 °C; precisão máxima de 0,5 °C."
+            },
+            {
+              "id": "blk-tr-communication",
+              "type": "TABLE_CELL",
+              "text": "Comunicação: LoRaWAN ou Wi-Fi."
+            },
+            {
+              "id": "blk-tr-price",
+              "type": "TABLE_CELL",
+              "text": "Preço unitário estimado: R$ 125,50; preço total estimado: R$ 2.510,00."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 1,
+            "block_id": "blk-tr-item",
+            "quote": "Item 1 — Kit sensor ambiental — quantidade: 20 kits.",
+            "attr": "item"
+          }
+        },
+        {
+          "id": "sec-tr-execucao",
+          "title_original": "4. EXECUÇÃO E ENTREGA",
+          "section_type_normalized": "EXECUTION",
+          "blocks": [
+            {
+              "id": "blk-tr-execucao",
+              "type": "PARAGRAPH",
+              "text": "A contratada deverá entregar os kits em embalagem individual resistente, no Almoxarifado Central Aurora, sem instalação civil."
+            },
+            {
+              "id": "blk-tr-prazo",
+              "type": "PARAGRAPH",
+              "text": "O prazo de entrega será de 30 dias corridos contados da ordem de fornecimento."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 2,
+            "block_id": "blk-tr-execucao",
+            "quote": "A contratada deverá entregar os kits",
+            "attr": "execution"
+          }
+        },
+        {
+          "id": "sec-tr-recebimento",
+          "title_original": "5. RECEBIMENTO",
+          "section_type_normalized": "RECEIPT",
+          "blocks": [
+            {
+              "id": "blk-tr-recebimento",
+              "type": "PARAGRAPH",
+              "text": "O recebimento provisório ocorrerá na entrega; o definitivo dependerá da conferência da quantidade e dos requisitos técnicos em até 5 dias úteis."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 3,
+            "block_id": "blk-tr-recebimento",
+            "quote": "O recebimento provisório ocorrerá na entrega",
+            "attr": "receipt"
+          }
+        },
+        {
+          "id": "sec-tr-medicao",
+          "title_original": "6. MEDIÇÃO E ACEITE",
+          "section_type_normalized": "MEASUREMENT",
+          "blocks": [
+            {
+              "id": "blk-tr-medicao",
+              "type": "PARAGRAPH",
+              "text": "A medição considerará cada unidade entregue e aceita, registrada em termo de recebimento definitivo."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 4,
+            "block_id": "blk-tr-medicao",
+            "quote": "A medição considerará cada unidade entregue e aceita",
+            "attr": "measurement"
+          }
+        },
+        {
+          "id": "sec-tr-pagamento",
+          "title_original": "7. PAGAMENTO",
+          "section_type_normalized": "PAYMENT",
+          "blocks": [
+            {
+              "id": "blk-tr-pagamento",
+              "type": "PARAGRAPH",
+              "text": "O pagamento será efetuado em até 10 dias úteis após o recebimento definitivo e a apresentação da nota fiscal atestada."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 5,
+            "block_id": "blk-tr-pagamento",
+            "quote": "O pagamento será efetuado em até 10 dias úteis",
+            "attr": "payment"
+          }
+        },
+        {
+          "id": "sec-tr-vigencia",
+          "title_original": "8. VIGÊNCIA E GARANTIA",
+          "section_type_normalized": "WARRANTY",
+          "blocks": [
+            {
+              "id": "blk-tr-vigencia",
+              "type": "PARAGRAPH",
+              "text": "A vigência contratual prevista é de 12 meses, e a garantia dos kits será de 12 meses."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-tr-sintetico",
+            "page": 6,
+            "block_id": "blk-tr-vigencia",
+            "quote": "A vigência contratual prevista é de 12 meses",
+            "attr": "contract.term"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-tr-01",
+          "description": "Kit sensor ambiental",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 20,
+              "unit": "kit",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-item",
+                  "quote": "quantidade: 20 kits",
+                  "attr": "quantity"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_DEADLINE",
+              "value": 30,
+              "unit": "dias_corridos",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 2,
+                  "block_id": "blk-tr-prazo",
+                  "quote": "30 dias corridos",
+                  "attr": "delivery.deadline"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_LOCATION",
+              "value": "Almoxarifado Central Aurora",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 2,
+                  "block_id": "blk-tr-execucao",
+                  "quote": "Almoxarifado Central Aurora",
+                  "attr": "delivery.location"
+                }
+              ]
+            },
+            {
+              "field_type": "WARRANTY_TERM",
+              "value": 12,
+              "unit": "meses",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 6,
+                  "block_id": "blk-tr-vigencia",
+                  "quote": "garantia dos kits será de 12 meses",
+                  "attr": "warranty.term"
+                }
+              ]
+            },
+            {
+              "field_type": "UNIT_PRICE",
+              "value": "125.50",
+              "unit": "BRL",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-price",
+                  "quote": "Preço unitário estimado: R$ 125,50",
+                  "attr": "price.unit"
+                }
+              ]
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2510.00",
+              "unit": "BRL",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-price",
+                  "quote": "preço total estimado: R$ 2.510,00",
+                  "attr": "price.total"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "technical.measurement_range",
+              "operator": "BETWEEN",
+              "value": [
+                0,
+                50
+              ],
+              "unit": "°C",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-spec",
+                  "quote": "Faixa de medição: de 0 °C a 50 °C",
+                  "attr": "technical.measurement_range"
+                }
+              ]
+            },
+            {
+              "attribute": "technical.accuracy",
+              "operator": "LESS_THAN_OR_EQUAL",
+              "value": 0.5,
+              "unit": "°C",
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-spec",
+                  "quote": "precisão máxima de 0,5 °C",
+                  "attr": "technical.accuracy"
+                }
+              ]
+            },
+            {
+              "attribute": "technical.communication_protocol",
+              "operator": "IN",
+              "value": [
+                "LoRaWAN",
+                "Wi-Fi"
+              ],
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 1,
+                  "block_id": "blk-tr-communication",
+                  "quote": "LoRaWAN ou Wi-Fi",
+                  "attr": "technical.communication_protocol"
+                }
+              ]
+            },
+            {
+              "attribute": "execution.installation_included",
+              "operator": "EQUAL",
+              "value": false,
+              "item_id": "item-tr-01",
+              "evidence": [
+                {
+                  "document_id": "doc-tr-sintetico",
+                  "page": 2,
+                  "block_id": "blk-tr-execucao",
+                  "quote": "sem instalação civil",
+                  "attr": "execution.installation_included"
+                }
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 1,
+              "block_id": "blk-tr-item",
+              "quote": "Item 1 — Kit sensor ambiental",
+              "attr": "item"
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "CONTRACT_TERM",
+          "value": 12,
+          "unit": "meses",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 6,
+              "block_id": "blk-tr-vigencia",
+              "quote": "vigência contratual prevista é de 12 meses",
+              "attr": "contract.term"
+            }
+          ]
+        },
+        {
+          "field_type": "RECEIPT_DEADLINE",
+          "value": 5,
+          "unit": "dias_uteis",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 3,
+              "block_id": "blk-tr-recebimento",
+              "quote": "em até 5 dias úteis",
+              "attr": "receipt.deadline"
+            }
+          ]
+        },
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 10,
+          "unit": "dias_uteis",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 5,
+              "block_id": "blk-tr-pagamento",
+              "quote": "em até 10 dias úteis",
+              "attr": "payment.deadline"
+            }
+          ]
+        }
+      ],
+      "requirements": [
+        {
+          "attribute": "execution.packaging",
+          "operator": "CONTAINS",
+          "value": "embalagem individual resistente",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 2,
+              "block_id": "blk-tr-execucao",
+              "quote": "embalagem individual resistente",
+              "attr": "execution.packaging"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.provisional",
+          "operator": "EXISTS",
+          "value": true,
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 3,
+              "block_id": "blk-tr-recebimento",
+              "quote": "recebimento provisório ocorrerá",
+              "attr": "receipt.provisional"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.definitive",
+          "operator": "EXISTS",
+          "value": true,
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 3,
+              "block_id": "blk-tr-recebimento",
+              "quote": "o definitivo dependerá",
+              "attr": "receipt.definitive"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.acceptance_criteria",
+          "operator": "CONTAINS",
+          "value": "conferência da quantidade e dos requisitos técnicos",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 3,
+              "block_id": "blk-tr-recebimento",
+              "quote": "conferência da quantidade e dos requisitos técnicos",
+              "attr": "receipt.acceptance_criteria"
+            }
+          ]
+        },
+        {
+          "attribute": "measurement.acceptance_basis",
+          "operator": "CONTAINS",
+          "value": "cada unidade entregue e aceita",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 4,
+              "block_id": "blk-tr-medicao",
+              "quote": "cada unidade entregue e aceita",
+              "attr": "measurement.acceptance_basis"
+            }
+          ]
+        },
+        {
+          "attribute": "measurement.record",
+          "operator": "CONTAINS",
+          "value": "termo de recebimento definitivo",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 4,
+              "block_id": "blk-tr-medicao",
+              "quote": "termo de recebimento definitivo",
+              "attr": "measurement.record"
+            }
+          ]
+        },
+        {
+          "attribute": "payment.trigger",
+          "operator": "CONTAINS",
+          "value": "após o recebimento definitivo",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 5,
+              "block_id": "blk-tr-pagamento",
+              "quote": "após o recebimento definitivo",
+              "attr": "payment.trigger"
+            }
+          ]
+        },
+        {
+          "attribute": "payment.condition",
+          "operator": "CONTAINS",
+          "value": "nota fiscal atestada",
+          "evidence": [
+            {
+              "document_id": "doc-tr-sintetico",
+              "page": 5,
+              "block_id": "blk-tr-pagamento",
+              "quote": "nota fiscal atestada",
+              "attr": "payment.condition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doc-edital-sintetico",
+      "type": "EDITAL",
+      "format": "DOCX",
+      "title": "Edital Fictício — Sensores Aurora",
+      "sections": [
+        {
+          "id": "sec-edital-itens",
+          "title_original": "ANEXO I — DESCRIÇÃO E PREÇOS",
+          "section_type_normalized": "ITEMS",
+          "blocks": [
+            {
+              "id": "blk-edital-item",
+              "type": "TABLE",
+              "text": "Item 1 — Kit sensor ambiental — quantidade máxima: 20 kits; garantia mínima: 6 meses."
+            },
+            {
+              "id": "blk-edital-price",
+              "type": "TABLE_CELL",
+              "text": "Preço unitário estimado: R$ 125,50; preço total estimado: R$ 2.510,00."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-edital-sintetico",
+            "page": 1,
+            "block_id": "blk-edital-item",
+            "quote": "Item 1 — Kit sensor ambiental — quantidade máxima: 20 kits; garantia mínima: 6 meses.",
+            "attr": "item"
+          }
+        },
+        {
+          "id": "sec-edital-entrega",
+          "title_original": "4. PRAZO E LOCAL DE ENTREGA",
+          "section_type_normalized": "DELIVERY",
+          "blocks": [
+            {
+              "id": "blk-edital-entrega",
+              "type": "PARAGRAPH",
+              "text": "A entrega deverá ocorrer no Almoxarifado Central Aurora em 30 dias corridos."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-edital-sintetico",
+            "page": 2,
+            "block_id": "blk-edital-entrega",
+            "quote": "A entrega deverá ocorrer no Almoxarifado Central Aurora",
+            "attr": "delivery"
+          }
+        },
+        {
+          "id": "sec-edital-pagamento",
+          "title_original": "8. PAGAMENTO",
+          "section_type_normalized": "PAYMENT",
+          "blocks": [
+            {
+              "id": "blk-edital-pagamento",
+              "type": "PARAGRAPH",
+              "text": "O pagamento será realizado em até 10 dias úteis após o atesto da nota fiscal."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-edital-sintetico",
+            "page": 3,
+            "block_id": "blk-edital-pagamento",
+            "quote": "O pagamento será realizado em até 10 dias úteis",
+            "attr": "payment"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-edital-01",
+          "description": "Kit sensor ambiental",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 20,
+              "unit": "kit",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-item",
+                  "quote": "quantidade máxima: 20 kits",
+                  "attr": "quantity"
+                }
+              ]
+            },
+            {
+              "field_type": "WARRANTY_TERM",
+              "value": 6,
+              "unit": "meses",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-item",
+                  "quote": "garantia mínima: 6 meses",
+                  "attr": "warranty.term"
+                }
+              ]
+            },
+            {
+              "field_type": "UNIT_PRICE",
+              "value": "125.50",
+              "unit": "BRL",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-price",
+                  "quote": "Preço unitário estimado: R$ 125,50",
+                  "attr": "price.unit"
+                }
+              ]
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2510.00",
+              "unit": "BRL",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-price",
+                  "quote": "preço total estimado: R$ 2.510,00",
+                  "attr": "price.total"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_DEADLINE",
+              "value": 30,
+              "unit": "dias_corridos",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 2,
+                  "block_id": "blk-edital-entrega",
+                  "quote": "30 dias corridos",
+                  "attr": "delivery.deadline"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_LOCATION",
+              "value": "Almoxarifado Central Aurora",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 2,
+                  "block_id": "blk-edital-entrega",
+                  "quote": "Almoxarifado Central Aurora",
+                  "attr": "delivery.location"
+                }
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "quantity.maximum",
+              "operator": "LESS_THAN_OR_EQUAL",
+              "value": 20,
+              "unit": "kit",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-item",
+                  "quote": "quantidade máxima: 20 kits",
+                  "attr": "quantity.maximum"
+                }
+              ]
+            },
+            {
+              "attribute": "warranty.minimum",
+              "operator": "GREATER_THAN_OR_EQUAL",
+              "value": 6,
+              "unit": "meses",
+              "item_id": "item-edital-01",
+              "evidence": [
+                {
+                  "document_id": "doc-edital-sintetico",
+                  "page": 1,
+                  "block_id": "blk-edital-item",
+                  "quote": "garantia mínima: 6 meses",
+                  "attr": "warranty.minimum"
+                }
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "doc-edital-sintetico",
+              "page": 1,
+              "block_id": "blk-edital-item",
+              "quote": "Item 1 — Kit sensor ambiental",
+              "attr": "item"
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 10,
+          "unit": "dias_uteis",
+          "evidence": [
+            {
+              "document_id": "doc-edital-sintetico",
+              "page": 3,
+              "block_id": "blk-edital-pagamento",
+              "quote": "em até 10 dias úteis",
+              "attr": "payment.deadline"
+            }
+          ]
+        }
+      ],
+      "requirements": [
+        {
+          "attribute": "payment.condition",
+          "operator": "CONTAINS",
+          "value": "atesto da nota fiscal",
+          "evidence": [
+            {
+              "document_id": "doc-edital-sintetico",
+              "page": 3,
+              "block_id": "blk-edital-pagamento",
+              "quote": "atesto da nota fiscal",
+              "attr": "payment.condition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doc-contrato-sintetico",
+      "type": "CONTRATO",
+      "format": "PDF",
+      "title": "Contrato Fictício nº 01/2026 — Sensores Aurora",
+      "sections": [
+        {
+          "id": "sec-contrato-execucao",
+          "title_original": "CLÁUSULA QUARTA — EXECUÇÃO",
+          "section_type_normalized": "EXECUTION",
+          "blocks": [
+            {
+              "id": "blk-contrato-execucao",
+              "type": "PARAGRAPH",
+              "text": "A contratada entregará os 20 kits no Almoxarifado Central Aurora em até 30 dias corridos e fornecerá manual de operação."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 2,
+            "block_id": "blk-contrato-execucao",
+            "quote": "A contratada entregará os 20 kits",
+            "attr": "execution"
+          }
+        },
+        {
+          "id": "sec-contrato-recebimento",
+          "title_original": "CLÁUSULA QUINTA — RECEBIMENTO",
+          "section_type_normalized": "RECEIPT",
+          "blocks": [
+            {
+              "id": "blk-contrato-recebimento",
+              "type": "PARAGRAPH",
+              "text": "O recebimento provisório será feito pelo fiscal; o recebimento definitivo ocorrerá após a correção de eventuais não conformidades."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 3,
+            "block_id": "blk-contrato-recebimento",
+            "quote": "O recebimento provisório será feito pelo fiscal",
+            "attr": "receipt"
+          }
+        },
+        {
+          "id": "sec-contrato-medicao",
+          "title_original": "CLÁUSULA SEXTA — MEDIÇÃO",
+          "section_type_normalized": "MEASUREMENT",
+          "blocks": [
+            {
+              "id": "blk-contrato-medicao",
+              "type": "PARAGRAPH",
+              "text": "A medição será unitária: somente unidades conformes e registradas no termo de recebimento definitivo serão contabilizadas."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 4,
+            "block_id": "blk-contrato-medicao",
+            "quote": "A medição será unitária",
+            "attr": "measurement"
+          }
+        },
+        {
+          "id": "sec-contrato-pagamento",
+          "title_original": "CLÁUSULA SÉTIMA — PAGAMENTO",
+          "section_type_normalized": "PAYMENT",
+          "blocks": [
+            {
+              "id": "blk-contrato-pagamento",
+              "type": "PARAGRAPH",
+              "text": "O pagamento ocorrerá em até 10 dias úteis depois do recebimento definitivo e do atesto da nota fiscal."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 5,
+            "block_id": "blk-contrato-pagamento",
+            "quote": "O pagamento ocorrerá em até 10 dias úteis",
+            "attr": "payment"
+          }
+        },
+        {
+          "id": "sec-contrato-garantia",
+          "title_original": "CLÁUSULA OITAVA — GARANTIA",
+          "section_type_normalized": "WARRANTY",
+          "blocks": [
+            {
+              "id": "blk-contrato-garantia",
+              "type": "PARAGRAPH",
+              "text": "A garantia contratual dos kits será de 12 meses a partir do recebimento definitivo."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 6,
+            "block_id": "blk-contrato-garantia",
+            "quote": "garantia contratual dos kits será de 12 meses",
+            "attr": "warranty.term"
+          }
+        },
+        {
+          "id": "sec-contrato-vigencia",
+          "title_original": "CLÁUSULA NONA — VIGÊNCIA",
+          "section_type_normalized": "TERM",
+          "blocks": [
+            {
+              "id": "blk-contrato-vigencia",
+              "type": "PARAGRAPH",
+              "text": "A vigência deste contrato é de 12 meses."
+            }
+          ],
+          "evidence": {
+            "document_id": "doc-contrato-sintetico",
+            "page": 7,
+            "block_id": "blk-contrato-vigencia",
+            "quote": "A vigência deste contrato é de 12 meses",
+            "attr": "contract.term"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-contrato-01",
+          "description": "Kit sensor ambiental",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 20,
+              "unit": "kit",
+              "item_id": "item-contrato-01",
+              "evidence": [
+                {
+                  "document_id": "doc-contrato-sintetico",
+                  "page": 2,
+                  "block_id": "blk-contrato-execucao",
+                  "quote": "20 kits",
+                  "attr": "quantity"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_DEADLINE",
+              "value": 30,
+              "unit": "dias_corridos",
+              "item_id": "item-contrato-01",
+              "evidence": [
+                {
+                  "document_id": "doc-contrato-sintetico",
+                  "page": 2,
+                  "block_id": "blk-contrato-execucao",
+                  "quote": "30 dias corridos",
+                  "attr": "delivery.deadline"
+                }
+              ]
+            },
+            {
+              "field_type": "DELIVERY_LOCATION",
+              "value": "Almoxarifado Central Aurora",
+              "item_id": "item-contrato-01",
+              "evidence": [
+                {
+                  "document_id": "doc-contrato-sintetico",
+                  "page": 2,
+                  "block_id": "blk-contrato-execucao",
+                  "quote": "Almoxarifado Central Aurora",
+                  "attr": "delivery.location"
+                }
+              ]
+            },
+            {
+              "field_type": "WARRANTY_TERM",
+              "value": 12,
+              "unit": "meses",
+              "item_id": "item-contrato-01",
+              "evidence": [
+                {
+                  "document_id": "doc-contrato-sintetico",
+                  "page": 6,
+                  "block_id": "blk-contrato-garantia",
+                  "quote": "garantia contratual dos kits será de 12 meses",
+                  "attr": "warranty.term"
+                }
+              ]
+            }
+          ],
+          "requirements": [],
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 2,
+              "block_id": "blk-contrato-execucao",
+              "quote": "20 kits",
+              "attr": "item"
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "CONTRACT_TERM",
+          "value": 12,
+          "unit": "meses",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 7,
+              "block_id": "blk-contrato-vigencia",
+              "quote": "vigência deste contrato é de 12 meses",
+              "attr": "contract.term"
+            }
+          ]
+        },
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 10,
+          "unit": "dias_uteis",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 5,
+              "block_id": "blk-contrato-pagamento",
+              "quote": "em até 10 dias úteis",
+              "attr": "payment.deadline"
+            }
+          ]
+        }
+      ],
+      "requirements": [
+        {
+          "attribute": "execution.documentation",
+          "operator": "EXISTS",
+          "value": true,
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 2,
+              "block_id": "blk-contrato-execucao",
+              "quote": "fornecerá manual de operação",
+              "attr": "execution.documentation"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.provisional",
+          "operator": "EXISTS",
+          "value": true,
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 3,
+              "block_id": "blk-contrato-recebimento",
+              "quote": "recebimento provisório será feito",
+              "attr": "receipt.provisional"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.definitive",
+          "operator": "EXISTS",
+          "value": true,
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 3,
+              "block_id": "blk-contrato-recebimento",
+              "quote": "recebimento definitivo ocorrerá",
+              "attr": "receipt.definitive"
+            }
+          ]
+        },
+        {
+          "attribute": "receipt.correction",
+          "operator": "CONTAINS",
+          "value": "correção de eventuais não conformidades",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 3,
+              "block_id": "blk-contrato-recebimento",
+              "quote": "correção de eventuais não conformidades",
+              "attr": "receipt.correction"
+            }
+          ]
+        },
+        {
+          "attribute": "measurement.unit",
+          "operator": "EQUAL",
+          "value": "unitária",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 4,
+              "block_id": "blk-contrato-medicao",
+              "quote": "A medição será unitária",
+              "attr": "measurement.unit"
+            }
+          ]
+        },
+        {
+          "attribute": "measurement.conformity",
+          "operator": "CONTAINS",
+          "value": "unidades conformes",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 4,
+              "block_id": "blk-contrato-medicao",
+              "quote": "somente unidades conformes",
+              "attr": "measurement.conformity"
+            }
+          ]
+        },
+        {
+          "attribute": "measurement.record",
+          "operator": "CONTAINS",
+          "value": "termo de recebimento definitivo",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 4,
+              "block_id": "blk-contrato-medicao",
+              "quote": "termo de recebimento definitivo",
+              "attr": "measurement.record"
+            }
+          ]
+        },
+        {
+          "attribute": "payment.trigger",
+          "operator": "CONTAINS",
+          "value": "depois do recebimento definitivo",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 5,
+              "block_id": "blk-contrato-pagamento",
+              "quote": "depois do recebimento definitivo",
+              "attr": "payment.trigger"
+            }
+          ]
+        },
+        {
+          "attribute": "payment.condition",
+          "operator": "CONTAINS",
+          "value": "atesto da nota fiscal",
+          "evidence": [
+            {
+              "document_id": "doc-contrato-sintetico",
+              "page": 5,
+              "block_id": "blk-contrato-pagamento",
+              "quote": "atesto da nota fiscal",
+              "attr": "payment.condition"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "rule_id": "R4_AMBIGUITY_WARRANTY",
+      "severity": "MED",
+      "message": "A garantia do item sintético aparece como 12 meses no TR e no contrato, mas 6 meses no edital; as ocorrências devem permanecer separadas até a adjudicação.",
+      "attrs": {
+        "category": "warranty",
+        "field_type": "WARRANTY_TERM",
+        "candidate_values": [
+          "12 meses",
+          "6 meses"
+        ],
+        "resolution": "OPEN_FOR_ADJUDICATION"
+      },
+      "evidence": [
+        {
+          "document_id": "doc-tr-sintetico",
+          "page": 6,
+          "block_id": "blk-tr-vigencia",
+          "quote": "garantia dos kits será de 12 meses",
+          "attr": "warranty.term"
+        },
+        {
+          "document_id": "doc-edital-sintetico",
+          "page": 1,
+          "block_id": "blk-edital-item",
+          "quote": "garantia mínima: 6 meses",
+          "attr": "warranty.term"
+        },
+        {
+          "document_id": "doc-contrato-sintetico",
+          "page": 6,
+          "block_id": "blk-contrato-garantia",
+          "quote": "garantia contratual dos kits será de 12 meses",
+          "attr": "warranty.term"
+        }
+      ],
+      "status": "OPEN"
+    }
+  ]
+}

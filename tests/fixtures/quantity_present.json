@@ -1,0 +1,71 @@
+{
+  "id": "proc-quantity-present",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "tr-1",
+      "type": "TR",
+      "format": "DOCX",
+      "title": "TERMO DE REFERÊNCIA",
+      "sections": [
+        {
+          "id": "sec-objeto",
+          "title_original": "DEFINIÇÃO DO OBJETO",
+          "section_type_normalized": "OBJECT",
+          "blocks": [
+            {
+              "id": "b-obj-tbl-1",
+              "type": "TABLE_CELL",
+              "text": "Notebook Processador i7, 16GB RAM, SSD 512GB"
+            },
+            {
+              "id": "b-obj-tbl-qtd",
+              "type": "TABLE_CELL",
+              "text": "30 Unidades"
+            }
+          ],
+          "evidence": {
+            "document_id": "tr-1",
+            "page": 1,
+            "block_id": "b-obj-tbl-1",
+            "quote": "Notebook Processador i7, 16GB RAM, SSD 512GB"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-1",
+          "description": "Notebook Processador i7, 16GB RAM, SSD 512GB",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 30,
+              "unit": "un",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "tr-1",
+                  "page": 1,
+                  "block_id": "b-obj-tbl-qtd",
+                  "quote": "30 Unidades"
+                }
+              ]
+            }
+          ],
+          "requirements": [],
+          "evidence": [
+            {
+              "document_id": "tr-1",
+              "page": 1,
+              "block_id": "b-obj-tbl-1",
+              "quote": "Notebook Processador i7, 16GB RAM, SSD 512GB"
+            }
+          ]
+        }
+      ],
+      "field_values": [],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,622 @@
+{
+  "$defs": {
+    "BlockType": {
+      "enum": [
+        "PARAGRAPH",
+        "TABLE",
+        "TABLE_CELL",
+        "LIST",
+        "HEADER"
+      ],
+      "title": "BlockType",
+      "type": "string"
+    },
+    "Document": {
+      "additionalProperties": false,
+      "description": "Documento da cadeia (ETP, TR, edital, contrato).",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/DocumentType"
+        },
+        "format": {
+          "$ref": "#/$defs/DocumentFormat"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "title": "Sections",
+          "type": "array"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/Item"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "field_values": {
+          "items": {
+            "$ref": "#/$defs/FieldValue"
+          },
+          "title": "Field Values",
+          "type": "array"
+        },
+        "requirements": {
+          "items": {
+            "$ref": "#/$defs/Requirement"
+          },
+          "title": "Requirements",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "format"
+      ],
+      "title": "Document",
+      "type": "object"
+    },
+    "DocumentBlock": {
+      "additionalProperties": false,
+      "description": "Bloco elementar do documento: parágrafo, célula, item de lista etc.",
+      "properties": {
+        "id": {
+          "description": "Id estável do bloco.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/BlockType"
+        },
+        "text": {
+          "description": "Texto original do bloco.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "text"
+      ],
+      "title": "DocumentBlock",
+      "type": "object"
+    },
+    "DocumentFormat": {
+      "enum": [
+        "PDF",
+        "DOCX"
+      ],
+      "title": "DocumentFormat",
+      "type": "string"
+    },
+    "DocumentType": {
+      "enum": [
+        "ETP",
+        "TR",
+        "EDITAL",
+        "CONTRATO"
+      ],
+      "title": "DocumentType",
+      "type": "string"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "description": "Âncora navegável até o trecho original de um documento.",
+      "properties": {
+        "document_id": {
+          "description": "Id do documento de origem.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "page": {
+          "description": "Página começando em 1.",
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "block_id": {
+          "description": "Id do bloco no documento.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Block Id",
+          "type": "string"
+        },
+        "quote": {
+          "description": "Texto original preservado.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Quote",
+          "type": "string"
+        },
+        "attr": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Atributo ao qual a evidência se refere.",
+          "title": "Attr"
+        }
+      },
+      "required": [
+        "document_id",
+        "page",
+        "block_id",
+        "quote"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FieldType": {
+      "enum": [
+        "QUANTITY",
+        "DELIVERY_DEADLINE",
+        "CONTRACT_TERM",
+        "WARRANTY_TERM",
+        "UNIT_PRICE",
+        "TOTAL_PRICE",
+        "DELIVERY_LOCATION",
+        "RECEIPT_DEADLINE",
+        "PAYMENT_DEADLINE"
+      ],
+      "title": "FieldType",
+      "type": "string"
+    },
+    "FieldValue": {
+      "additionalProperties": false,
+      "description": "Valor estruturado extraído (quantidade, prazo, valor etc.).\n\nQuantidades são números positivos e valores monetários são normalizados\npara ``Decimal``. A unidade continua opcional: a RULE-002 verifica apenas\na presença da quantidade.",
+      "properties": {
+        "field_type": {
+          "$ref": "#/$defs/FieldType"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "format": "date",
+              "type": "string"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Unidade normalizada (string), não enum.",
+          "title": "Unit"
+        },
+        "item_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Id"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "field_type",
+        "value",
+        "evidence"
+      ],
+      "title": "FieldValue",
+      "type": "object"
+    },
+    "Finding": {
+      "additionalProperties": false,
+      "description": "Achado/risco para revisão humana. Nunca 'aprovado'/'reprovado'.",
+      "properties": {
+        "rule_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/$defs/Severity"
+        },
+        "message": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Message",
+          "type": "string"
+        },
+        "item_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Id"
+        },
+        "attrs": {
+          "additionalProperties": true,
+          "title": "Attrs",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/FindingStatus",
+          "default": "OPEN"
+        }
+      },
+      "required": [
+        "rule_id",
+        "severity",
+        "message",
+        "evidence"
+      ],
+      "title": "Finding",
+      "type": "object"
+    },
+    "FindingStatus": {
+      "enum": [
+        "OPEN",
+        "ACCEPTED",
+        "CORRECTED",
+        "DISMISSED"
+      ],
+      "title": "FindingStatus",
+      "type": "string"
+    },
+    "Item": {
+      "additionalProperties": false,
+      "description": "Item de fornecimento no documento.",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "field_values": {
+          "items": {
+            "$ref": "#/$defs/FieldValue"
+          },
+          "title": "Field Values",
+          "type": "array"
+        },
+        "requirements": {
+          "items": {
+            "$ref": "#/$defs/Requirement"
+          },
+          "title": "Requirements",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "evidence"
+      ],
+      "title": "Item",
+      "type": "object"
+    },
+    "Requirement": {
+      "additionalProperties": false,
+      "description": "Requisito estruturado (atributo, operador, valor, unidade, item).",
+      "properties": {
+        "attribute": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Attribute",
+          "type": "string"
+        },
+        "operator": {
+          "$ref": "#/$defs/RequirementOperator"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                    "type": "string"
+                  },
+                  {
+                    "format": "date",
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "type": "array"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "item_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Id"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "attribute",
+        "operator",
+        "value",
+        "evidence"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    },
+    "RequirementOperator": {
+      "enum": [
+        "EQUAL",
+        "NOT_EQUAL",
+        "GREATER_THAN",
+        "GREATER_THAN_OR_EQUAL",
+        "LESS_THAN",
+        "LESS_THAN_OR_EQUAL",
+        "BETWEEN",
+        "IN",
+        "CONTAINS",
+        "EXISTS"
+      ],
+      "title": "RequirementOperator",
+      "type": "string"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "description": "Seção com título original e, opcionalmente, tipo normalizado.",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Id",
+          "type": "string"
+        },
+        "title_original": {
+          "description": "Título original da seção.",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Title Original",
+          "type": "string"
+        },
+        "section_type_normalized": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Tipo normalizado da seção, quando disponível.",
+          "title": "Section Type Normalized"
+        },
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/DocumentBlock"
+          },
+          "title": "Blocks",
+          "type": "array"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      },
+      "required": [
+        "id",
+        "title_original",
+        "evidence"
+      ],
+      "title": "Section",
+      "type": "object"
+    },
+    "Severity": {
+      "enum": [
+        "HIGH",
+        "MED",
+        "LOW"
+      ],
+      "title": "Severity",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Raiz do modelo estruturado de um processo.",
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1.0",
+      "default": "0.1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "documents": {
+      "items": {
+        "$ref": "#/$defs/Document"
+      },
+      "title": "Documents",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "title": "ProcurementProcess",
+  "type": "object"
+}

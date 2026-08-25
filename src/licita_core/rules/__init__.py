@@ -1,0 +1,1 @@
+"""Conjunto de regras do TR Linter determinístico (R8)."""

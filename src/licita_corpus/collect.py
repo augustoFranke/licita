@@ -1,13 +1,9 @@
-"""Coletor R1 exclusivamente contract-first para o PNCP.
+"""Coletor R1 rarest-first para o PNCP.
 
-Fluxo único:
-
-``contratos publicados → numeroControlePncpCompra → detalhe da contratação →
-arquivos ETP/TR/edital → contratos associados → arquivo do contrato → download``.
-
-Um processo só entra no catálogo depois que os quatro documentos abrem
-localmente e entregam texto. Falhas da API interrompem a execução e não são
-persistidas como ausência de dados.
+Fluxo único: ``contratações → ETP/TR/edital → contrato associado → download``.
+Compras sem o trio raro são descartadas antes da consulta contratual; órgãos
+que publicam o trio são priorizados. Um processo só entra no catálogo depois
+que os quatro documentos abrem localmente e entregam texto.
 """
 
 from __future__ import annotations
@@ -15,7 +11,7 @@ from __future__ import annotations
 import json
 import sys
 from dataclasses import asdict, dataclass, field
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Callable, Sequence
 
@@ -164,7 +160,7 @@ def baixar_processo(pncp: Pncp, candidato: Candidato, caminhos: Caminhos) -> Pro
         verificacao = documento["verificacao"]
         if not verificacao["abriu"]:
             descartados.append({**documento, "motivo_descarte": verificacao["erro"] or "não abriu"})
-        elif verificacao["precisa_ocr"]:
+        elif verificacao["precisa_ocr"] or not (verificacao.get("caracteres") or 0):
             descartados.append({**documento, "motivo_descarte": "arquivo sem texto utilizável"})
         else:
             aproveitados.append(documento)
@@ -213,23 +209,17 @@ def coletar(
     *,
     data_inicial: str = "20240101",
     data_final: str | None = None,
-    max_candidatos: int = 100,
     cotas: Cotas = Cotas(),
+    reserva: int = 5,
+    workers: int = 6,
     log: Callable[[str], None] = _log,
 ) -> dict[str, Any]:
     caminhos = Caminhos(raiz)
-    data_final = data_final or date.today().strftime("%Y%m%d")
+    data_final = data_final or (date.today() - timedelta(days=1)).strftime("%Y%m%d")
 
+    banco_harvest = caminhos.harvest / "rarest_first.sqlite3"
+    descoberta: harvest.ResultadoDescoberta | None = None
     with Pncp() as pncp:
-        descoberta = harvest.descobrir(
-            pncp,
-            caminhos.harvest / "contract_first.jsonl",
-            data_inicial=data_inicial,
-            data_final=data_final,
-            max_candidatos=max_candidatos,
-            log=log,
-        )
-        candidatos = [Candidato(registro) for registro in descoberta.candidatos]
         aprovados: list[Candidato] = []
         documentos: list[dict[str, Any]] = []
         descartados: list[dict[str, Any]] = []
@@ -237,12 +227,27 @@ def coletar(
         banidos: set[str] = set()
 
         for rodada in range(1, MAX_RODADAS + 1):
+            # A descoberta roda novamente a cada rodada. Candidatos que falham
+            # no download são removidos do SQLite, e páginas pendentes fornecem
+            # substitutos em vez de repetir indefinidamente os mesmos arquivos.
+            descoberta = harvest.descobrir(
+                pncp,
+                banco_harvest,
+                data_inicial=data_inicial,
+                data_final=data_final,
+                cotas=cotas,
+                reserva=reserva,
+                workers=workers,
+                log=log,
+            )
+            candidatos = [Candidato(registro) for registro in descoberta.candidatos]
             disponiveis = [c for c in candidatos if c.numero not in banidos]
             selecao, deficits = selecionar(disponiveis, cotas, iniciais=aprovados)
-            novos = [c for c in selecao if c.numero not in {a.numero for a in aprovados}]
+            aprovados_ids = {a.numero for a in aprovados}
+            novos = [c for c in selecao if c.numero not in aprovados_ids]
             if not novos:
-                log(f"rodada {rodada}: sem substitutos; déficits {deficits}")
-                break
+                log(f"rodada {rodada}: sem substitutos nesta passagem; déficits {deficits}")
+                continue
             log(f"rodada {rodada}: baixando {len(novos)} cadeias completas")
             for candidato in novos:
                 resultado = baixar_processo(pncp, candidato, caminhos)
@@ -252,17 +257,22 @@ def coletar(
                     descartados.extend(resultado.descartados)
                     log(f"  ok  {candidato.numero}")
                 else:
+                    motivo = resultado.motivo or "download documental reprovado"
                     banidos.add(candidato.numero)
+                    harvest.invalidar_download(banco_harvest, candidato.numero, motivo)
                     reprovados.append(
-                        {"numero_controle_pncp": candidato.numero, "motivo": resultado.motivo or ""}
+                        {"numero_controle_pncp": candidato.numero, "motivo": motivo}
                     )
                     descartados.extend(resultado.descartados)
-                    log(f"  x   {candidato.numero}: {resultado.motivo}")
+                    log(f"  x   {candidato.numero}: {motivo}")
             _, deficits = selecionar([], cotas, iniciais=aprovados)
             if not any(deficits.values()):
                 break
 
         extras = {c.numero: _extras_do_processo(pncp, c, caminhos) for c in aprovados}
+
+    if descoberta is None:  # pragma: no cover - MAX_RODADAS é constante positiva
+        raise RuntimeError("descoberta não executada")
 
     return montar_catalogo(
         caminhos,
@@ -362,14 +372,19 @@ def montar_catalogo(
     )
 
     resumo = estatisticas(processos, documentos)
+    por_orgao: dict[str, int] = {}
+    for processo in processos:
+        cnpj = processo["orgao"]["cnpj"]
+        por_orgao[cnpj] = por_orgao.get(cnpj, 0) + 1
     resumo.update(
         {
-            "estrategia": "pncp_contract_first",
-            "contratos_lidos": descoberta.contratos_lidos,
-            "candidatos_inspecionados": descoberta.compras_inspecionadas,
+            "estrategia": "pncp_rarest_first",
+            "contratacoes_lidas": descoberta.contratacoes_lidas,
+            "compras_inspecionadas": descoberta.compras_inspecionadas,
             "candidatos_com_cadeia_publicada": len(descoberta.candidatos),
             "janelas_pendentes_por_falha_api": descoberta.falhas_api,
             "processos_reprovados_no_download": len(reprovados),
+            "max_processos_por_orgao": max(por_orgao.values(), default=0),
             "cotas": asdict(cotas),
             "marcas_de_reuso": reuse.resumir(marcas),
         }
@@ -382,16 +397,23 @@ def montar_catalogo(
 def principal(argv: Sequence[str] | None = None) -> int:
     import argparse
 
-    parser = argparse.ArgumentParser(description="Coleta corpus PNCP a partir dos contratos publicados.")
+    parser = argparse.ArgumentParser(description="Coleta corpus PNCP começando pelo trio ETP/TR/edital.")
     parser.add_argument("--raiz", type=Path, default=Path("corpus"))
     parser.add_argument("--data-inicial", default="20240101")
-    parser.add_argument("--data-final", default=date.today().strftime("%Y%m%d"))
-    parser.add_argument("--candidatos", type=int, default=100)
+    parser.add_argument("--data-final", default="20251231")
     parser.add_argument("--processos", type=int, default=30)
+    parser.add_argument("--reserva", type=int, default=5)
+    parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--orgaos", type=int, default=5)
     parser.add_argument("--categorias", type=int, default=3)
     parser.add_argument("--max-por-orgao", type=int, default=6)
     argumentos = parser.parse_args(argv)
+    try:
+        fim = datetime.strptime(argumentos.data_final, "%Y%m%d").date()
+    except ValueError:
+        parser.error("--data-final deve usar YYYYMMDD")
+    if fim >= date.today():
+        parser.error("--data-final deve ser uma data já encerrada, anterior a hoje")
 
     cotas = Cotas(
         processos=argumentos.processos,
@@ -403,10 +425,18 @@ def principal(argv: Sequence[str] | None = None) -> int:
         argumentos.raiz,
         data_inicial=argumentos.data_inicial,
         data_final=argumentos.data_final,
-        max_candidatos=argumentos.candidatos,
         cotas=cotas,
+        reserva=argumentos.reserva,
+        workers=argumentos.workers,
     )
-    return 0 if resumo["processos"] >= cotas.processos else 1
+    passou = (
+        resumo["processos"] >= cotas.processos
+        and resumo["orgaos_distintos"] >= cotas.orgaos_distintos
+        and resumo["categorias_distintas"] >= cotas.categorias_distintas
+        and resumo["processos_cadeia_completa"] == resumo["processos"]
+        and resumo["max_processos_por_orgao"] <= cotas.max_por_orgao
+    )
+    return 0 if passou else 1
 
 
 if __name__ == "__main__":

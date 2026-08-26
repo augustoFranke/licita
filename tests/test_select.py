@@ -1,4 +1,4 @@
-"""Seleção entre candidatos contract-first, todos com cadeia completa."""
+"""Seleção entre candidatos rarest-first, todos com cadeia completa."""
 
 from licita_corpus.select import Candidato, Cotas, selecionar
 
@@ -36,6 +36,13 @@ def test_prioriza_diversidade_do_corpus():
     selecionados, _ = selecionar(pool(), Cotas())
     assert len({c.orgao for c in selecionados}) >= 5
     assert len({c.categoria for c in selecionados}) >= 3
+
+
+def test_teto_por_orgao_e_limite_duro_mesmo_sem_oferta_diversa():
+    candidatos = pool(quantidade=60, orgaos=1, categorias=5)
+    selecionados, falta = selecionar(candidatos, Cotas(max_por_orgao=6))
+    assert len(selecionados) == 6
+    assert falta["processos"] == 24
 
 
 def test_respeita_teto_por_orgao_quando_existe_oferta():

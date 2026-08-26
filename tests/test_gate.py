@@ -48,7 +48,7 @@ def corpus(tmp_path):
         do_processo = []
         for papel in ("ETP", "TR", "EDITAL", "CONTRATO"):
             arquivo = pasta / f"{papel.lower()}-01.pdf"
-            _pdf(arquivo, f"{papel} do processo {indice}")
+            _pdf(arquivo, f"{papel} do processo {indice} com conteúdo textual suficiente para validação local")
             do_processo.append(
                 {
                     "documento_id": f"{identificador}#{papel.lower()}-01",

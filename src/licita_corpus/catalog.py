@@ -159,7 +159,7 @@ def montar_processo(
                 f"/contratos/contratacao/{compra['ano_compra']}/{compra['sequencial_compra']}"
             ),
             "itens_local": extras.get("arquivo_itens"),
-            "descoberta": compra.get("origem_descoberta", "contratos_publicados_pncp"),
+            "descoberta": compra.get("origem_descoberta", "contratacoes_publicadas_pncp"),
         },
         "contratos": [
             {

@@ -1,9 +1,9 @@
-"""Cliente da API pública do PNCP usado pelo coletor contract-first.
+"""Cliente da API pública do PNCP usado pelo coletor rarest-first.
 
-O fluxo tem uma única porta de entrada: ``/api/consulta/v1/contratos``. Cada
-contrato aponta para sua contratação por ``numeroControlePncpCompra``; desse
-identificador derivam o detalhe e os arquivos da compra, os contratos associados
-e os arquivos do contrato. Nenhuma busca textual, UASG ou fonte externa é usada.
+A descoberta começa no endpoint documentado de contratações por publicação,
+filtrado na origem para Pregão Eletrônico. Só compras com ETP, TR e edital
+publicados avançam para a consulta de contratos associados. Não há busca
+textual, UASG, similaridade, scraping ou fonte externa.
 """
 
 from __future__ import annotations
@@ -13,7 +13,7 @@ import re
 import threading
 import time
 from dataclasses import dataclass, field
-from typing import Any, Iterator
+from typing import Any
 
 import httpx
 
@@ -38,19 +38,22 @@ class _Limitador:
         self.proximo = 0.0
 
     def esperar(self) -> None:
+        # Dormir sob o lock preserva a ordem das reservas entre threads. Se o
+        # sono ocorresse depois de liberar o lock, uma thread atrasada poderia
+        # disparar junto da seguinte e violar o intervalo global.
         with self.lock:
             agora = time.monotonic()
             espera = max(0.0, self.proximo - agora)
-            self.proximo = max(agora, self.proximo) + self.intervalo
-        if espera:
-            time.sleep(espera)
+            if espera:
+                time.sleep(espera)
+            self.proximo = time.monotonic() + self.intervalo
 
 
 @dataclass
 class Pncp:
     timeout: float = 90.0
     tentativas: int = 7
-    intervalo: float = 0.75
+    intervalo: float = 0.25
     _client: httpx.Client = field(init=False, repr=False)
     _limitador: _Limitador = field(init=False, repr=False)
 
@@ -59,7 +62,7 @@ class Pncp:
             timeout=httpx.Timeout(self.timeout, connect=20.0),
             headers={"Accept": "application/json", "User-Agent": USER_AGENT},
             follow_redirects=True,
-            limits=httpx.Limits(max_connections=4, max_keepalive_connections=4),
+            limits=httpx.Limits(max_connections=8, max_keepalive_connections=8),
         )
         self._limitador = _Limitador(self.intervalo)
 
@@ -96,9 +99,12 @@ class Pncp:
         params: dict[str, Any] | None = None,
         *,
         ausente_ok: bool = False,
+        sem_conteudo_ok: bool = False,
     ) -> Any:
         resposta = self._request(url, params)
-        if resposta.status_code in (204, 404) and ausente_ok:
+        if resposta.status_code == 204 and (ausente_ok or sem_conteudo_ok):
+            return None
+        if resposta.status_code == 404 and ausente_ok:
             return None
         if resposta.status_code >= 400:
             detalhe = resposta.text[:300].replace("\n", " ")
@@ -112,51 +118,46 @@ class Pncp:
         except ValueError as erro:
             raise PncpError(f"JSON inválido em {resposta.url}") from erro
 
-    # -------------------------------------------------------- contract-first
+    # ---------------------------------------------------------- rarest-first
 
-    def contratos_publicados(
+    def pagina_contratacoes_publicadas(
         self,
         data_inicial: str,
         data_final: str,
         *,
-        pagina_inicial: int = 1,
+        pagina: int,
+        modalidade: int = 6,
+        cnpj: str | None = None,
         tamanho_pagina: int = 50,
-        max_paginas: int | None = None,
-    ) -> Iterator[dict[str, Any]]:
-        """Itera contratos/empenhos pela data de publicação no PNCP."""
-        pagina = pagina_inicial
-        lidas = 0
-        while max_paginas is None or lidas < max_paginas:
-            payload = self._json(
-                f"{CONSULTA}/contratos",
-                {
-                    "dataInicial": data_inicial,
-                    "dataFinal": data_final,
-                    "pagina": pagina,
-                    "tamanhoPagina": tamanho_pagina,
-                },
-            )
-            if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
-                raise PncpError("resposta de contratos sem campo 'data' válido")
-            dados = payload["data"]
-            total = payload.get("totalPaginas")
-            if not isinstance(total, int) or total < 0:
-                raise PncpError("resposta de contratos sem 'totalPaginas' válido")
-            yield from dados
-            lidas += 1
-            if pagina >= total:
-                return
-            if not dados:
-                raise PncpError("paginação de contratos terminou antes de totalPaginas")
-            pagina += 1
+    ) -> tuple[list[dict[str, Any]], int]:
+        """Uma página do feed oficial de contratações por publicação.
 
-    def compra(self, cnpj: str, ano: int, sequencial: int) -> dict[str, Any] | None:
+        O chamador persiste ``pagina`` em SQLite depois de processá-la. Assim,
+        uma falha nunca vira lista vazia e a retomada não relê o período inteiro.
+        """
+        params: dict[str, Any] = {
+            "dataInicial": data_inicial,
+            "dataFinal": data_final,
+            "codigoModalidadeContratacao": modalidade,
+            "pagina": pagina,
+            "tamanhoPagina": tamanho_pagina,
+        }
+        if cnpj:
+            params["cnpj"] = cnpj
         payload = self._json(
-            f"{CONSULTA}/orgaos/{cnpj}/compras/{ano}/{sequencial}", ausente_ok=True
+            f"{CONSULTA}/contratacoes/publicacao", params, sem_conteudo_ok=True
         )
-        if payload is not None and not isinstance(payload, dict):
-            raise PncpError("detalhe da contratação não é um objeto")
-        return payload
+        if payload is None:
+            return [], 0
+        if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
+            raise PncpError("resposta de contratações sem campo 'data' válido")
+        total = payload.get("totalPaginas")
+        if not isinstance(total, int) or total < 0:
+            raise PncpError("resposta de contratações sem 'totalPaginas' válido")
+        dados = payload["data"]
+        if pagina <= total and not dados:
+            raise PncpError("paginação de contratações terminou antes de totalPaginas")
+        return dados, total
 
     def contratos_da_compra(
         self, cnpj: str, ano: int, sequencial: int, *, tamanho_pagina: int = 50
@@ -202,16 +203,32 @@ class Pncp:
         return payload
 
     def itens_compra(self, cnpj: str, ano: int, sequencial: int) -> list[dict[str, Any]]:
-        payload = self._json(
-            f"{PNCP_API}/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens",
-            {"pagina": 1, "tamanhoPagina": 500},
-            ausente_ok=True,
-        )
-        if payload is None:
-            return []
-        if not isinstance(payload, list):
-            raise PncpError("lista de itens inválida")
-        return payload
+        url = f"{PNCP_API}/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens"
+        itens: list[dict[str, Any]] = []
+        vistos: set[str] = set()
+        pagina = 1
+        while True:
+            payload = self._json(
+                url,
+                {"pagina": pagina, "tamanhoPagina": 500},
+                ausente_ok=True,
+            )
+            if payload is None:
+                return itens
+            if not isinstance(payload, list) or not all(isinstance(x, dict) for x in payload):
+                raise PncpError("lista de itens inválida")
+            novos = 0
+            for item in payload:
+                chave = str(item.get("numeroItem") or item.get("sequencialItem") or item)
+                if chave not in vistos:
+                    vistos.add(chave)
+                    itens.append(item)
+                    novos += 1
+            if len(payload) < 500:
+                return itens
+            if novos == 0:
+                raise PncpError("paginação de itens repetiu a página anterior")
+            pagina += 1
 
     def baixar(self, url: str) -> tuple[bytes, str | None, str | None]:
         resposta = self._request(url)

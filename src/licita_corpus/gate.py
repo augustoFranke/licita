@@ -44,7 +44,7 @@ def _ler(raiz: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[s
     return processos, documentos, relacoes
 
 
-def conferir(raiz: Path, minimo_processos: int = 30) -> dict[str, Any]:
+def conferir(raiz: Path, minimo_processos: int = 30, max_por_orgao: int = 6) -> dict[str, Any]:
     processos, documentos, relacoes = _ler(raiz)
 
     falhas: list[dict[str, str]] = []
@@ -61,6 +61,11 @@ def conferir(raiz: Path, minimo_processos: int = 30) -> dict[str, Any]:
         if not resultado.abriu:
             falhas.append(
                 {"documento_id": documento["documento_id"], "erro": resultado.erro or "não abriu"}
+            )
+            continue
+        if not resultado.utilizavel:
+            falhas.append(
+                {"documento_id": documento["documento_id"], "erro": "arquivo sem texto utilizável"}
             )
             continue
         abertos += 1
@@ -100,11 +105,21 @@ def conferir(raiz: Path, minimo_processos: int = 30) -> dict[str, Any]:
     sem_relacoes = [p["processo_id"] for p in processos if arestas_por_processo.get(p["processo_id"], 0) < 3]
 
     orgaos = {p["orgao"]["cnpj"] for p in processos}
+    por_orgao = {
+        cnpj: sum(p["orgao"]["cnpj"] == cnpj for p in processos) for cnpj in orgaos
+    }
+    maior_orgao = max(por_orgao.values(), default=0)
     categorias = {p["categoria_objeto"] for p in processos}
 
     criterios = [
         Criterio("processos", f"≥{minimo_processos}", str(len(processos)), len(processos) >= minimo_processos),
         Criterio("órgãos distintos", "≥5", str(len(orgaos)), len(orgaos) >= 5),
+        Criterio(
+            "máximo por órgão",
+            f"≤{max_por_orgao}",
+            str(maior_orgao),
+            maior_orgao <= max_por_orgao and bool(processos),
+        ),
         Criterio("categorias de bens", "≥3", str(len(categorias)), len(categorias) >= 3),
         Criterio(
             "processos do Poder Executivo federal",
@@ -137,7 +152,7 @@ def conferir(raiz: Path, minimo_processos: int = 30) -> dict[str, Any]:
             len(vinculos_exatos) == len(processos) and bool(processos),
         ),
         Criterio(
-            "documentos que abrem localmente",
+            "documentos utilizáveis localmente",
             f"{len(documentos)}",
             str(abertos),
             abertos == len(documentos) and bool(documentos),
@@ -215,9 +230,10 @@ def principal(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Verifica o gate do R1 sobre o corpus em disco.")
     parser.add_argument("--raiz", type=Path, default=Path("corpus"))
     parser.add_argument("--processos", type=int, default=30)
+    parser.add_argument("--max-por-orgao", type=int, default=6)
     argumentos = parser.parse_args(argv)
 
-    resultado = conferir(argumentos.raiz, argumentos.processos)
+    resultado = conferir(argumentos.raiz, argumentos.processos, argumentos.max_por_orgao)
     escrever_json(argumentos.raiz / "catalogo" / "gate.json", resultado)
     markdown = como_markdown(argumentos.raiz, resultado)
     (argumentos.raiz / "GATE_R1.md").write_text(markdown, encoding="utf-8")

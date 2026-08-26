@@ -1,4 +1,4 @@
-"""Seleção determinística entre cadeias já completas do coletor contract-first."""
+"""Seleção determinística entre cadeias completas do coletor rarest-first."""
 
 from __future__ import annotations
 
@@ -88,7 +88,9 @@ def selecionar(
     while len(estado.selecionados) < cotas.processos and restantes:
         permitidos = [
             c for c in restantes if estado.por_orgao(c.orgao) < cotas.max_por_orgao
-        ] or restantes
+        ]
+        if not permitidos:
+            break
         falta = estado.deficits()
         orgaos = {c.orgao for c in estado.selecionados}
         categorias = {c.categoria for c in estado.selecionados}

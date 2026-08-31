@@ -1,0 +1,2406 @@
+[
+  {
+    "processo_id": "18025940000109-1-000260-2025",
+    "numero_controle_pncp": "18025940000109-1-000260/2025",
+    "orgao": {
+      "cnpj": "18025940000109",
+      "razao_social": "MUNICIPIO DE ITAJUBA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE ITAJUBÁ - MG",
+      "uf": "MG",
+      "municipio": "Itajubá"
+    },
+    "processo_administrativo": "241/2025",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 260,
+      "titulo": "46",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2025-11-13T22:32:58",
+      "inicio_propostas": "2025-11-13T23:00:00",
+      "fim_propostas": "2025-12-01T12:00:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS PARA AQUISIÇÃO DE EQUIPAMENTOS ODONTOLÓGICOS PARA ATENDER DIVERSAS AÇÕES DA SECRETARIA MUNCIPAL DE SAÚDE - SEMSA, conforme TR, parte integrante do edital, condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+    "categoria_objeto": "material_medico_hospitalar",
+    "valores": {
+      "total_estimado": 917092.6,
+      "total_estimado_itens": 917092.6,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18025940000109/2025/260",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18025940000109/compras/2025/260",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18025940000109/compras/2025/260/arquivos",
+      "descoberta": "pncp_busca"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18025940000109-1-000260-2025#etp-04"
+      ],
+      "TR": [
+        "18025940000109-1-000260-2025#tr-02"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18025940000109-1-000260-2025#etp-04",
+      "18025940000109-1-000260-2025#tr-02"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "01612698000169-1-000047-2024",
+    "numero_controle_pncp": "01612698000169-1-000047/2024",
+    "orgao": {
+      "cnpj": "01612698000169",
+      "razao_social": "MUNICIPIO DE ENTRE RIOS",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE ENTRE RIOS",
+      "uf": "SC",
+      "municipio": "Entre Rios"
+    },
+    "processo_administrativo": "44/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 47,
+      "titulo": "PE 23",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-10-14T14:17:33",
+      "inicio_propostas": "2024-07-23T13:00:00",
+      "fim_propostas": "2024-08-08T08:00:00"
+    },
+    "objeto": "O objeto da presente licitação é a escolha da proposta mais vantajosa para AQUISIÇÃO DE IMPLEMENTO AGRICOLA, COM USO DE RECURSOS PROPRIOS E DE CONVENIO SPOA/SE/MAPA Nº 957207/2024 – TRANSFEREGOV.BR Nº 006518/2024, DE ACORDO COM TERMO DE COMVENIO E PLANO DE TRABALHO, para atividades do Executivo Municipal, com uso de recursos próprios e de repasses, de acordo com estudo técnico preliminar, conforme natureza, condições, quantidades e exigências estabelecidas neste instrumento, de acordo com estudo técnico preliminar, conforme natureza, condições, quantidades e exigências estabelecidas neste instrumento",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 950000.0,
+      "total_estimado_itens": 950000.0,
+      "quantidade_itens": null,
+      "total_homologado": 950000.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01612698000169/2024/47",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01612698000169/compras/2024/47",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01612698000169/compras/2024/47/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01612698000169-1-000047-2024#etp-02"
+      ],
+      "TR": [
+        "01612698000169-1-000047-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01612698000169-1-000047-2024#etp-02",
+      "01612698000169-1-000047-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "25105255000140-1-000041-2024",
+    "numero_controle_pncp": "25105255000140-1-000041/2024",
+    "orgao": {
+      "cnpj": "25105255000140",
+      "razao_social": "MUNICIPIO DE COLINAS DO SUL",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MUNICIPIO DE COLINAS DO SUL",
+      "uf": "GO",
+      "municipio": "Colinas do Sul"
+    },
+    "processo_administrativo": "2899/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 41,
+      "titulo": "(2561) | 11-0",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-09-19T09:59:37",
+      "inicio_propostas": "2024-10-07T12:00:00",
+      "fim_propostas": "2024-10-21T09:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE NOTEBOOKS, IMPRESSORAS E PERIFÉRICOS, ATRAVES DE SISTEMA DE REGISTRO DE PREÇO, CONFORME QUANTIDADES, CONDIÇÕES E ESPECIFICAÇÕES ESTABELICIDAS NESTE TERMO DE REFERENCIA E ESTUDO PRELIMINAR TÉCNICO.",
+    "categoria_objeto": "equipamentos_de_informatica",
+    "valores": {
+      "total_estimado": 895770.74,
+      "total_estimado_itens": 895770.74,
+      "quantidade_itens": null,
+      "total_homologado": 581860.06,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/25105255000140/2024/41",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/25105255000140/compras/2024/41",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/25105255000140/compras/2024/41/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "25105255000140-1-000041-2024#etp-12"
+      ],
+      "TR": [
+        "25105255000140-1-000041-2024#tr-11"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "25105255000140-1-000041-2024#etp-12",
+      "25105255000140-1-000041-2024#tr-11"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "88814181000130-1-000215-2024",
+    "numero_controle_pncp": "88814181000130-1-000215/2024",
+    "orgao": {
+      "cnpj": "88814181000130",
+      "razao_social": "MUNICIPIO DE OSORIO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE OSÓRIO",
+      "uf": "RS",
+      "municipio": "Osório"
+    },
+    "processo_administrativo": "108108/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 215,
+      "titulo": "0025",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-06-11T08:30:30",
+      "inicio_propostas": "2024-06-11T10:00:00",
+      "fim_propostas": "2024-06-25T09:00:00"
+    },
+    "objeto": "Aquisição de uma fragmentadora de papéis, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar/Termo de Referência e no Edital",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 11436.0,
+      "total_estimado_itens": 11436.0,
+      "quantidade_itens": null,
+      "total_homologado": 5299.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/88814181000130/2024/215",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/88814181000130/compras/2024/215",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/88814181000130/compras/2024/215/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "88814181000130-1-000215-2024#etp-02"
+      ],
+      "TR": [
+        "88814181000130-1-000215-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "88814181000130-1-000215-2024#etp-02",
+      "88814181000130-1-000215-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "88814181000130-1-000180-2024",
+    "numero_controle_pncp": "88814181000130-1-000180/2024",
+    "orgao": {
+      "cnpj": "88814181000130",
+      "razao_social": "MUNICIPIO DE OSORIO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE OSÓRIO",
+      "uf": "RS",
+      "municipio": "Osório"
+    },
+    "processo_administrativo": "173/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 180,
+      "titulo": "0018",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-05-20T15:53:20",
+      "inicio_propostas": "2024-05-20T10:00:00",
+      "fim_propostas": "2024-06-10T09:00:00"
+    },
+    "objeto": "Aquisição de equipamentos eletrodomésticos destinados as escolas municipais, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar/Termo de Referência e no Edital.",
+    "categoria_objeto": "eletrodomesticos_e_eletroeletronicos",
+    "valores": {
+      "total_estimado": 13908.88,
+      "total_estimado_itens": 13908.88,
+      "quantidade_itens": null,
+      "total_homologado": 12685.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/88814181000130/2024/180",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/88814181000130/compras/2024/180",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/88814181000130/compras/2024/180/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "88814181000130-1-000180-2024#etp-02"
+      ],
+      "TR": [
+        "88814181000130-1-000180-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "88814181000130-1-000180-2024#etp-02",
+      "88814181000130-1-000180-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "88814181000130-1-000098-2024",
+    "numero_controle_pncp": "88814181000130-1-000098/2024",
+    "orgao": {
+      "cnpj": "88814181000130",
+      "razao_social": "MUNICIPIO DE OSORIO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "FUNDO MUNICIPAL DA SAÚDE",
+      "uf": "RS",
+      "municipio": "Osório"
+    },
+    "processo_administrativo": "104/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 98,
+      "titulo": "PCE 5",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-03-28T08:35:23",
+      "inicio_propostas": "2024-03-28T10:00:00",
+      "fim_propostas": "2024-04-10T08:59:59"
+    },
+    "objeto": "Aquisição de VEÍCULOS NOVOS DESTINADOS À SECRETARIA DE SAÚDE, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar/Termo de Referência e Edital.",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 297802.5,
+      "total_estimado_itens": 297802.5,
+      "quantidade_itens": null,
+      "total_homologado": 522200.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/88814181000130/2024/98",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/88814181000130/compras/2024/98",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/88814181000130/compras/2024/98/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "88814181000130-1-000098-2024#etp-02"
+      ],
+      "TR": [
+        "88814181000130-1-000098-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "88814181000130-1-000098-2024#etp-02",
+      "88814181000130-1-000098-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "88814181000130-1-000101-2024",
+    "numero_controle_pncp": "88814181000130-1-000101/2024",
+    "orgao": {
+      "cnpj": "88814181000130",
+      "razao_social": "MUNICIPIO DE OSORIO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MANUTENÇÃO DESENVOLVIMENTO E ENSINO",
+      "uf": "RS",
+      "municipio": "Osório"
+    },
+    "processo_administrativo": "108/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 101,
+      "titulo": "PCE 6",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-04-01T14:06:00",
+      "inicio_propostas": "2024-04-01T11:00:00",
+      "fim_propostas": "2024-04-11T08:59:00"
+    },
+    "objeto": "Aquisição de materiais de limpeza destinados a Secretaria de Educação, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar/Termo de Referência, anexos ao processo.",
+    "categoria_objeto": "material_de_limpeza_e_higiene",
+    "valores": {
+      "total_estimado": 78778.7,
+      "total_estimado_itens": 78778.7,
+      "quantidade_itens": null,
+      "total_homologado": 158774.2,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/88814181000130/2024/101",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/88814181000130/compras/2024/101",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/88814181000130/compras/2024/101/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "88814181000130-1-000101-2024#etp-02"
+      ],
+      "TR": [
+        "88814181000130-1-000101-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "88814181000130-1-000101-2024#etp-02",
+      "88814181000130-1-000101-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "88814181000130-1-000177-2024",
+    "numero_controle_pncp": "88814181000130-1-000177/2024",
+    "orgao": {
+      "cnpj": "88814181000130",
+      "razao_social": "MUNICIPIO DE OSORIO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MANUTENÇÃO DESENVOLVIMENTO E ENSINO",
+      "uf": "RS",
+      "municipio": "Osório"
+    },
+    "processo_administrativo": "173/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 177,
+      "titulo": "PCE 18",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-05-20T08:21:59",
+      "inicio_propostas": "2024-05-20T10:00:00",
+      "fim_propostas": "2024-06-10T08:59:59"
+    },
+    "objeto": "Aquisição de equipamentos eletrodomésticos destinados as escolas municipais, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar/Termo de Referência e no Edital.",
+    "categoria_objeto": "eletrodomesticos_e_eletroeletronicos",
+    "valores": {
+      "total_estimado": 13908.88,
+      "total_estimado_itens": 13908.88,
+      "quantidade_itens": null,
+      "total_homologado": 12685.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/88814181000130/2024/177",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/88814181000130/compras/2024/177",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/88814181000130/compras/2024/177/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "88814181000130-1-000177-2024#etp-02"
+      ],
+      "TR": [
+        "88814181000130-1-000177-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "88814181000130-1-000177-2024#etp-02",
+      "88814181000130-1-000177-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "83024240000153-1-000099-2024",
+    "numero_controle_pncp": "83024240000153-1-000099/2024",
+    "orgao": {
+      "cnpj": "83024240000153",
+      "razao_social": "MUNICIPIO DE ITA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Secretaria Municipal de Administração e Fazenda",
+      "uf": "SC",
+      "municipio": "Itá"
+    },
+    "processo_administrativo": "73/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 99,
+      "titulo": "PCE 38",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-04-18T08:35:35",
+      "inicio_propostas": "2024-04-19T08:00:00",
+      "fim_propostas": "2024-05-09T08:30:00"
+    },
+    "objeto": "Aquisição de cargas e cascos de gás liquefeito de petróleo GLP 13 e 45, nos termos e características descritas no presente Termo de Referência e no Estudo Técnico Preliminar e Edital vinculados.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 75880.0,
+      "total_estimado_itens": 75880.0,
+      "quantidade_itens": null,
+      "total_homologado": 69330.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/83024240000153/2024/99",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/83024240000153/compras/2024/99",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/83024240000153/compras/2024/99/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "83024240000153-1-000099-2024#etp-02"
+      ],
+      "TR": [
+        "83024240000153-1-000099-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "83024240000153-1-000099-2024#etp-02",
+      "83024240000153-1-000099-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "52061181000160-1-000057-2024",
+    "numero_controle_pncp": "52061181000160-1-000057/2024",
+    "orgao": {
+      "cnpj": "52061181000160",
+      "razao_social": "DEPARTAMENTO DE AGUA E ESGOTO DE MARILIA",
+      "esfera": "M",
+      "poder": "E",
+      "unidade": "DAE Marilia",
+      "uf": "SP",
+      "municipio": "Marília"
+    },
+    "processo_administrativo": "150/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 57,
+      "titulo": "39",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-06-17T10:23:07",
+      "inicio_propostas": "2024-06-18T09:00:00",
+      "fim_propostas": "2024-07-01T08:30:00"
+    },
+    "objeto": "Aquisição de atuadores elétricos para reservação e substituição de equipamentos inoperantes em diversas unidades da Autarquia, conforme especificações constantes no Estudo Técnico Preliminar, Termo de Referência e, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 79025.49,
+      "total_estimado_itens": 79025.49,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/52061181000160/2024/57",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/52061181000160/compras/2024/57",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/52061181000160/compras/2024/57/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "52061181000160-1-000057-2024#etp-04"
+      ],
+      "TR": [
+        "52061181000160-1-000057-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "52061181000160-1-000057-2024#etp-04",
+      "52061181000160-1-000057-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "17749896000290-1-000025-2024",
+    "numero_controle_pncp": "17749896000290-1-000025/2024",
+    "orgao": {
+      "cnpj": "17749896000290",
+      "razao_social": "MUNICIPIO DE SAO JOAO DEL REI",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "SECRETARIA MUN DE SAÚDE DE SÃO JOÃO DEL REI",
+      "uf": "MG",
+      "municipio": "São João del Rei"
+    },
+    "processo_administrativo": "00006224",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 25,
+      "titulo": "00006224",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-05-27T09:52:58",
+      "inicio_propostas": "2024-05-23T09:00:00",
+      "fim_propostas": "2024-06-07T08:30:00"
+    },
+    "objeto": "FUTURA E EVENTUAL CONTRATAÇÕES DE EMPRESA ESPECIALIZDA, PARA FORNECIMENTO DE LANCHES, PÃES, BOLOS E OUTROS ALIMENTOS PARA A SECRETARIA MUNICIPAL DE SAÚDE, CONFORME ESPECIFICAÇÕES CONSTANTES DO ESTUDO TÉCNICO PRELIMINAR E/OU TERMO DE REFERÊNCIA.\r\n",
+    "categoria_objeto": "generos_alimenticios",
+    "valores": {
+      "total_estimado": 896016.26,
+      "total_estimado_itens": 896016.26,
+      "quantidade_itens": null,
+      "total_homologado": 591959.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/17749896000290/2024/25",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/17749896000290/compras/2024/25",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/17749896000290/compras/2024/25/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "17749896000290-1-000025-2024#etp-08"
+      ],
+      "TR": [
+        "17749896000290-1-000025-2024#tr-07"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "17749896000290-1-000025-2024#etp-08",
+      "17749896000290-1-000025-2024#tr-07"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "52061181000160-1-000080-2024",
+    "numero_controle_pncp": "52061181000160-1-000080/2024",
+    "orgao": {
+      "cnpj": "52061181000160",
+      "razao_social": "DEPARTAMENTO DE AGUA E ESGOTO DE MARILIA",
+      "esfera": "M",
+      "poder": "E",
+      "unidade": "DAE Marilia",
+      "uf": "SP",
+      "municipio": "Marília"
+    },
+    "processo_administrativo": "165",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 80,
+      "titulo": "50",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-08-13T14:58:01",
+      "inicio_propostas": "2024-08-14T09:00:00",
+      "fim_propostas": "2024-08-29T08:30:00"
+    },
+    "objeto": "Registrar preços para eventuais aquisições equipamentos de segurança do trabalho (EPI e EPC) para uso dos servidores do DAEM, destinadas exclusivamente para ME/EPP e Equiparados, de acordo com Termo de Referência e Estudo Técnico Preliminar, pelo período de 12 meses.",
+    "categoria_objeto": "epi_uniformes_e_textil",
+    "valores": {
+      "total_estimado": 75384.18,
+      "total_estimado_itens": 75384.18,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/52061181000160/2024/80",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/52061181000160/compras/2024/80",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/52061181000160/compras/2024/80/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "52061181000160-1-000080-2024#etp-03"
+      ],
+      "TR": [
+        "52061181000160-1-000080-2024#tr-02"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "52061181000160-1-000080-2024#etp-03",
+      "52061181000160-1-000080-2024#tr-02"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "17749896000290-1-000055-2024",
+    "numero_controle_pncp": "17749896000290-1-000055/2024",
+    "orgao": {
+      "cnpj": "17749896000290",
+      "razao_social": "MUNICIPIO DE SAO JOAO DEL REI",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "SECRETARIA MUN DE SAÚDE DE SÃO JOÃO DEL REI",
+      "uf": "MG",
+      "municipio": "São João del Rei"
+    },
+    "processo_administrativo": "00012524",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 55,
+      "titulo": "00012524",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-09-04T16:08:05",
+      "inicio_propostas": "2024-09-05T09:00:00",
+      "fim_propostas": "2024-09-18T08:30:00"
+    },
+    "objeto": "FUTURA E EVENTUAL AQUISIÇÃO DE CATETERES HIDROFÍLICOS E ACESSÓRIOS PARA CATETERISMO URETRAL INTERMITENTE PARA A SECRETARIA MUNICIPAL DE SAÚDE, CONFORME ESPECIFICAÇÕES CONSTANTES DO ESTUDO TÉCNICO PRELIMINAR E/OU TERMO DE REFERÊNCIA",
+    "categoria_objeto": "material_medico_hospitalar",
+    "valores": {
+      "total_estimado": 0.0,
+      "total_estimado_itens": 0.0,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/17749896000290/2024/55",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/17749896000290/compras/2024/55",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/17749896000290/compras/2024/55/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "17749896000290-1-000055-2024#etp-02"
+      ],
+      "TR": [
+        "17749896000290-1-000055-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "17749896000290-1-000055-2024#etp-02",
+      "17749896000290-1-000055-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "83026138000197-1-000126-2024",
+    "numero_controle_pncp": "83026138000197-1-000126/2024",
+    "orgao": {
+      "cnpj": "83026138000197",
+      "razao_social": "MUNICIPIO DE DESCANSO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE DESCANSO - SC",
+      "uf": "SC",
+      "municipio": "Descanso"
+    },
+    "processo_administrativo": "64/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 126,
+      "titulo": "PE 22",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-10-16T15:09:32",
+      "inicio_propostas": "2024-10-17T07:30:00",
+      "fim_propostas": "2024-10-29T08:00:00"
+    },
+    "objeto": "REGISTRO DE PREÇO PARA EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA AQUISIÇÃO DE MUDAS DE PLANTAS, FLORES E GRAMAS E MATERIAIS DE AJARDINAMENTO PARA USO NAS DIVERSAS SECRETARIAS E PROGRAMAS DO MUNICIPIO DE DESCANSO, DE ACORDO COM O TERMO DE REFERÊNCIA E O ESTUDO TECNICO PRELIMINAR DO EDITAL.",
+    "categoria_objeto": "material_agropecuario_e_jardinagem",
+    "valores": {
+      "total_estimado": 239778.1,
+      "total_estimado_itens": 239778.1,
+      "quantidade_itens": null,
+      "total_homologado": 130019.65,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/83026138000197/2024/126",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/83026138000197/compras/2024/126",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/83026138000197/compras/2024/126/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "83026138000197-1-000126-2024#etp-02"
+      ],
+      "TR": [
+        "83026138000197-1-000126-2024#tr-04"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "83026138000197-1-000126-2024#etp-02",
+      "83026138000197-1-000126-2024#tr-04"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "87613048000153-1-000119-2024",
+    "numero_controle_pncp": "87613048000153-1-000119/2024",
+    "orgao": {
+      "cnpj": "87613048000153",
+      "razao_social": "MUNICIPIO DE GIRUA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MUNICIPIO DE GIRUA/RS",
+      "uf": "RS",
+      "municipio": "Giruá"
+    },
+    "processo_administrativo": "125",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 119,
+      "titulo": "32",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-06-10T17:28:05",
+      "inicio_propostas": "2024-06-10T17:00:00",
+      "fim_propostas": "2024-06-21T13:59:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS para aquisição de postes para o setor de habitação da Secretaria Municipal de Promoção Humana do Município de Giruá/RS, cuja descrição e condições do item estão detalhadas neste Edital, no Estudo Técnico Preliminar (Anexo I) e no Termo de Referência (Anexo I-A):\n",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 72655.25,
+      "total_estimado_itens": 72655.25,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/87613048000153/2024/119",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/87613048000153/compras/2024/119",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/87613048000153/compras/2024/119/arquivos",
+      "descoberta": "pncp_busca"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "87613048000153-1-000119-2024#etp-02"
+      ],
+      "TR": [
+        "87613048000153-1-000119-2024#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "87613048000153-1-000119-2024#etp-02",
+      "87613048000153-1-000119-2024#tr-03"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "87613048000153-1-000158-2024",
+    "numero_controle_pncp": "87613048000153-1-000158/2024",
+    "orgao": {
+      "cnpj": "87613048000153",
+      "razao_social": "MUNICIPIO DE GIRUA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MUNICIPIO DE GIRUA/RS",
+      "uf": "RS",
+      "municipio": "Giruá"
+    },
+    "processo_administrativo": "165",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 158,
+      "titulo": "46",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-07-09T16:45:23",
+      "inicio_propostas": "2024-07-09T18:00:00",
+      "fim_propostas": "2024-07-26T13:59:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS para aquisição de postes para o setor de habitação da Secretaria Municipal de Promoção Humana do Município de Giruá/RS, cuja descrição e condições do item estão detalhadas neste Edital, no Estudo Técnico Preliminar (Anexo I) e no Termo de Referência (Anexo I-A):",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 20317.5,
+      "total_estimado_itens": 20317.5,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/87613048000153/2024/158",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/87613048000153/compras/2024/158",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/87613048000153/compras/2024/158/arquivos",
+      "descoberta": "pncp_busca"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "87613048000153-1-000158-2024#etp-05"
+      ],
+      "TR": [
+        "87613048000153-1-000158-2024#tr-06"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "87613048000153-1-000158-2024#etp-05",
+      "87613048000153-1-000158-2024#tr-06"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "13988308000139-1-000095-2024",
+    "numero_controle_pncp": "13988308000139-1-000095/2024",
+    "orgao": {
+      "cnpj": "13988308000139",
+      "razao_social": "MUNICIPIO DE SENHOR DO BONFIM",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO",
+      "uf": "BA",
+      "municipio": "Senhor do Bonfim"
+    },
+    "processo_administrativo": "0093/24",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 95,
+      "titulo": "012",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-06-06T14:59:44",
+      "inicio_propostas": "2024-06-10T10:00:00",
+      "fim_propostas": "2024-07-03T09:00:00"
+    },
+    "objeto": "Aquisição de veículos diversos a serem utilizados pelas diversas Secretarias do Município de Senhor do Bonfim-BA",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 3413939.6,
+      "total_estimado_itens": 3413939.6,
+      "quantidade_itens": null,
+      "total_homologado": 2526000.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/13988308000139/2024/95",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/13988308000139/compras/2024/95",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/13988308000139/compras/2024/95/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "13988308000139-1-000095-2024#etp-09"
+      ],
+      "TR": [
+        "13988308000139-1-000095-2024#tr-10"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "13988308000139-1-000095-2024#etp-09",
+      "13988308000139-1-000095-2024#tr-10"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "76017474000108-1-000118-2025",
+    "numero_controle_pncp": "76017474000108-1-000118/2025",
+    "orgao": {
+      "cnpj": "76017474000108",
+      "razao_social": "MUNICIPIO DE GUARATUBA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE GUARATUBA - PR",
+      "uf": "PR",
+      "municipio": "GUARATUBA"
+    },
+    "processo_administrativo": "37216/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 118,
+      "titulo": "90037",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2025-12-05T07:17:54",
+      "inicio_propostas": "2025-12-05T08:00:00",
+      "fim_propostas": "2025-12-18T09:00:00"
+    },
+    "objeto": "Registro de Preços para aquisição de material de acondicionamento, descartáveis e embalagens.  ",
+    "categoria_objeto": "material_de_limpeza_e_higiene",
+    "valores": {
+      "total_estimado": 1057189.17,
+      "total_estimado_itens": 1057189.17,
+      "quantidade_itens": null,
+      "total_homologado": 691095.791,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/76017474000108/2025/118",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/76017474000108/compras/2025/118",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/76017474000108/compras/2025/118/arquivos",
+      "descoberta": "compras_gov"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "76017474000108-1-000118-2025#etp-03"
+      ],
+      "TR": [
+        "76017474000108-1-000118-2025#tr-10"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "76017474000108-1-000118-2025#etp-03",
+      "76017474000108-1-000118-2025#tr-10"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "87613022000105-1-000285-2025",
+    "numero_controle_pncp": "87613022000105-1-000285/2025",
+    "orgao": {
+      "cnpj": "87613022000105",
+      "razao_social": "MUNICIPIO DE SAO LUIZ GONZAGA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNIC.DE SÃO LUIZ GONZAGA/RS",
+      "uf": "RS",
+      "municipio": "SÃO LUIZ GONZAGA"
+    },
+    "processo_administrativo": "2521/2025",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 285,
+      "titulo": "90063",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2025-12-10T07:10:54",
+      "inicio_propostas": "2025-12-10T08:00:00",
+      "fim_propostas": "2025-12-23T08:30:00"
+    },
+    "objeto": "Aquisição de drones.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 54311.96,
+      "total_estimado_itens": 54311.96,
+      "quantidade_itens": null,
+      "total_homologado": 49539.99,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/87613022000105/2025/285",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/87613022000105/compras/2025/285",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/87613022000105/compras/2025/285/arquivos",
+      "descoberta": "compras_gov"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "87613022000105-1-000285-2025#etp-07"
+      ],
+      "TR": [
+        "87613022000105-1-000285-2025#tr-06"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "87613022000105-1-000285-2025#etp-07",
+      "87613022000105-1-000285-2025#tr-06"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "87613022000105-1-000106-2024",
+    "numero_controle_pncp": "87613022000105-1-000106/2024",
+    "orgao": {
+      "cnpj": "87613022000105",
+      "razao_social": "MUNICIPIO DE SAO LUIZ GONZAGA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNIC.DE SÃO LUIZ GONZAGA/RS",
+      "uf": "RS",
+      "municipio": "SÃO LUIZ GONZAGA"
+    },
+    "processo_administrativo": "704/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 106,
+      "titulo": "90010",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-07-02T07:12:19",
+      "inicio_propostas": "2024-07-02T08:00:00",
+      "fim_propostas": "2024-07-15T09:00:00"
+    },
+    "objeto": "Aquisição parcelada de recargas de gás oxigênio medicinal. ",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 5103.6,
+      "total_estimado_itens": 5103.6,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/87613022000105/2024/106",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/87613022000105/compras/2024/106",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/87613022000105/compras/2024/106/arquivos",
+      "descoberta": "compras_gov"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "87613022000105-1-000106-2024#etp-03"
+      ],
+      "TR": [
+        "87613022000105-1-000106-2024#tr-05"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "87613022000105-1-000106-2024#etp-03",
+      "87613022000105-1-000106-2024#tr-05"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "87613022000105-1-000034-2024",
+    "numero_controle_pncp": "87613022000105-1-000034/2024",
+    "orgao": {
+      "cnpj": "87613022000105",
+      "razao_social": "MUNICIPIO DE SAO LUIZ GONZAGA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNIC.DE SÃO LUIZ GONZAGA/RS",
+      "uf": "RS",
+      "municipio": "SÃO LUIZ GONZAGA"
+    },
+    "processo_administrativo": "549/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 34,
+      "titulo": "90004",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-04-08T07:11:20",
+      "inicio_propostas": "2024-04-08T08:00:00",
+      "fim_propostas": "2024-04-24T09:00:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS para aquisição parcelada de placas, dispositivos auxiliares e materiais para sinalização vertical de trânsito.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 58934.84,
+      "total_estimado_itens": 58934.84,
+      "quantidade_itens": null,
+      "total_homologado": 42982.9,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/87613022000105/2024/34",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/87613022000105/compras/2024/34",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/87613022000105/compras/2024/34/arquivos",
+      "descoberta": "compras_gov"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "87613022000105-1-000034-2024#etp-03"
+      ],
+      "TR": [
+        "87613022000105-1-000034-2024#tr-05"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "87613022000105-1-000034-2024#etp-03",
+      "87613022000105-1-000034-2024#tr-05"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "18260489000104-1-000155-2024",
+    "numero_controle_pncp": "18260489000104-1-000155/2024",
+    "orgao": {
+      "cnpj": "18260489000104",
+      "razao_social": "MUNICIPIO DE TUPACIGUARA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "FUNDO MUNICIPAL DE EDUCAÇÃO",
+      "uf": "MG",
+      "municipio": "Tupaciguara"
+    },
+    "processo_administrativo": "86",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 155,
+      "titulo": "24",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-12-01T01:14:03",
+      "inicio_propostas": "2024-12-04T09:00:00",
+      "fim_propostas": "2024-12-19T09:00:00"
+    },
+    "objeto": "[Publicenter] - Aquisição de panificados, para suprir as necessidades do Fundo Municipal de Educação na confecção da merenda escolar, nas quantidades e especificações contidas no Estudo Técnico Preliminar, Termo de Referência e demais anexo                                                                                                                                                                                                                                                           ",
+    "categoria_objeto": "generos_alimenticios",
+    "valores": {
+      "total_estimado": 639861.5,
+      "total_estimado_itens": 639861.5,
+      "quantidade_itens": null,
+      "total_homologado": 638380.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18260489000104/2024/155",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18260489000104/compras/2024/155",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18260489000104/compras/2024/155/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18260489000104-1-000155-2024#etp-03"
+      ],
+      "TR": [
+        "18260489000104-1-000155-2024#tr-04"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18260489000104-1-000155-2024#etp-03",
+      "18260489000104-1-000155-2024#tr-04"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "18260489000104-1-000106-2024",
+    "numero_controle_pncp": "18260489000104-1-000106/2024",
+    "orgao": {
+      "cnpj": "18260489000104",
+      "razao_social": "MUNICIPIO DE TUPACIGUARA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "FUNDO MUNICIPAL DE ASSISTÊNCIA SOCIAL",
+      "uf": "MG",
+      "municipio": "Tupaciguara"
+    },
+    "processo_administrativo": "43",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 106,
+      "titulo": "7",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-07-08T09:18:53",
+      "inicio_propostas": "2024-07-08T08:00:00",
+      "fim_propostas": "2024-07-23T09:00:00"
+    },
+    "objeto": "[Publicenter] - Aquisição de cestas básicas, para distribuição gratuita à pessoas em situação de vulnerabilidade social, conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar, Termo de Referência e anexos ao Edital.  ",
+    "categoria_objeto": "generos_alimenticios",
+    "valores": {
+      "total_estimado": 2295999.6,
+      "total_estimado_itens": 2295999.6,
+      "quantidade_itens": null,
+      "total_homologado": 1462800.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18260489000104/2024/106",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18260489000104/compras/2024/106",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18260489000104/compras/2024/106/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18260489000104-1-000106-2024#etp-03"
+      ],
+      "TR": [
+        "18260489000104-1-000106-2024#tr-04"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18260489000104-1-000106-2024#etp-03",
+      "18260489000104-1-000106-2024#tr-04"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "18260489000104-1-000129-2024",
+    "numero_controle_pncp": "18260489000104-1-000129/2024",
+    "orgao": {
+      "cnpj": "18260489000104",
+      "razao_social": "MUNICIPIO DE TUPACIGUARA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "SECRETARIA MUNICIPAL DE EDUCAÇÃO",
+      "uf": "MG",
+      "municipio": "Tupaciguara"
+    },
+    "processo_administrativo": "63",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 129,
+      "titulo": "15",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-09-05T15:36:33",
+      "inicio_propostas": "2024-09-05T08:59:00",
+      "fim_propostas": "2024-09-23T09:00:00"
+    },
+    "objeto": "[Publicenter] - Aquisição de bebidas para atender as necessidades das Secretarias Municipais  de Educação, Saúde, Desenvolvimento Social e de Governo conforme condições, quantidades e exigências estabelecidas no Estudo Técnico Preliminar, Termo de Referência e anexos ao Edital. ",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 147726.69,
+      "total_estimado_itens": 147726.69,
+      "quantidade_itens": null,
+      "total_homologado": 75950.15,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18260489000104/2024/129",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18260489000104/compras/2024/129",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18260489000104/compras/2024/129/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18260489000104-1-000129-2024#etp-12"
+      ],
+      "TR": [
+        "18260489000104-1-000129-2024#tr-13"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18260489000104-1-000129-2024#etp-12",
+      "18260489000104-1-000129-2024#tr-13"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "45780095000141-1-000193-2024",
+    "numero_controle_pncp": "45780095000141-1-000193/2024",
+    "orgao": {
+      "cnpj": "45780095000141",
+      "razao_social": "MUNICIPIO DE CAMPO LIMPO PAULISTA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Campo Limpo Paulista",
+      "uf": "SP",
+      "municipio": "Campo Limpo Paulista"
+    },
+    "processo_administrativo": "510/2024",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 193,
+      "titulo": "41/2024",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-07-30T08:21:36",
+      "inicio_propostas": "2024-07-30T09:00:00",
+      "fim_propostas": "2024-08-12T09:00:00"
+    },
+    "objeto": "Contratação de empresa especializada para fornecimento de itens de café da manhã, conforme especificações do Estudo Técnico Preliminar e Termo de Referência, conforme descritivo constante do Anexo I deste Edital.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 101174.4,
+      "total_estimado_itens": 101174.4,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/45780095000141/2024/193",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/45780095000141/compras/2024/193",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/45780095000141/compras/2024/193/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "45780095000141-1-000193-2024#etp-03"
+      ],
+      "TR": [
+        "45780095000141-1-000193-2024#tr-02"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "45780095000141-1-000193-2024#etp-03",
+      "45780095000141-1-000193-2024#tr-02"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "18260489000104-1-000158-2024",
+    "numero_controle_pncp": "18260489000104-1-000158/2024",
+    "orgao": {
+      "cnpj": "18260489000104",
+      "razao_social": "MUNICIPIO DE TUPACIGUARA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO E",
+      "uf": "MG",
+      "municipio": "Tupaciguara"
+    },
+    "processo_administrativo": "91",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 158,
+      "titulo": "26",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2024-12-05T13:43:58",
+      "inicio_propostas": "2024-12-06T09:00:00",
+      "fim_propostas": "2024-12-20T09:00:00"
+    },
+    "objeto": "[Publicenter] - Aquisição de combustíveis para abastecimento da frota municipal, para atender as necessidades de diversas Secretarias e Fundos do Município de Tupaciguara no ano de 2025, conforme quantidades e especificações contidas no Estudo Técnico Preliminar, Termo de Referência e demais anexos ao Edital.",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 4627335.78,
+      "total_estimado_itens": 4627335.78,
+      "quantidade_itens": null,
+      "total_homologado": 4620945.0,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18260489000104/2024/158",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18260489000104/compras/2024/158",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18260489000104/compras/2024/158/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18260489000104-1-000158-2024#etp-04"
+      ],
+      "TR": [
+        "18260489000104-1-000158-2024#tr-05"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18260489000104-1-000158-2024#etp-04",
+      "18260489000104-1-000158-2024#tr-05"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "02056737000151-1-000358-2024",
+    "numero_controle_pncp": "02056737000151-1-000358/2024",
+    "orgao": {
+      "cnpj": "02056737000151",
+      "razao_social": "MUNICIPIO DE QUIRINOPOLIS",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "FMS - FUNDO MUNICIPAL DE SAUDE",
+      "uf": "GO",
+      "municipio": "Quirinópolis"
+    },
+    "processo_administrativo": "98",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 358,
+      "titulo": "98",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-07-24T13:39:18",
+      "inicio_propostas": "2024-07-24T09:00:00",
+      "fim_propostas": "2024-08-05T09:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE FÓRMULAS NUTRICIONAIS E ENTERAIS, MATERIAIS FARMACOLÓGICOS E SUPLEMENTOS, PARA ATENDER A DEMANDA DO FUNDO MUNICIPAL DE SAÚDE DE QUIRINÓPOLIS/GO- FMS E DO FUNDO MUNICIPAL DE ASSISTÊNCIA SOCIAL – FMAS.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 3041382.2,
+      "total_estimado_itens": 3041382.2,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/02056737000151/2024/358",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/02056737000151/compras/2024/358",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/02056737000151/compras/2024/358/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "02056737000151-1-000358-2024#etp-03"
+      ],
+      "TR": [
+        "02056737000151-1-000358-2024#tr-06"
+      ],
+      "EDITAL": [],
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "02056737000151-1-000358-2024#etp-03",
+      "02056737000151-1-000358-2024#tr-06"
+    ],
+    "extras": {
+      "fonte": "compras"
+    },
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "4-municipal-historical-ocr"
+  },
+  {
+    "processo_id": "44699908000100-1-000054-2025",
+    "numero_controle_pncp": "44699908000100-1-000054/2025",
+    "orgao": {
+      "cnpj": "44699908000100",
+      "razao_social": "SERVICO DE AGUA E ESGOTO DO MUNICIPIO DE ARARAS - SAEMA",
+      "esfera": "M",
+      "poder": "E",
+      "unidade": "Serviço de Água e Esgoto do Município de Araras",
+      "uf": "SP",
+      "municipio": "Araras"
+    },
+    "processo_administrativo": "206/2025",
+    "processo_administrativo_fonte": "detalhe_publico_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 54,
+      "titulo": "006/2025",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2025-03-18T10:36:16",
+      "inicio_propostas": "2025-03-20T09:00:00",
+      "fim_propostas": "2025-04-02T08:30:00"
+    },
+    "objeto": "Contratação de empresa especializada para o fornecimento de energia elétrica na modalidade atacadista (aquisição de energia no mercado livre), com aquisição de até 1,260 Megawatt médio (MW Médio) de energia elétrica no Ambiente de Contratação Livre (ACL), pelo período de 33 (trinta e três) meses, de acordo com as especificações contidas no Termo de Referência e Estudo Técnico Preliminar.",
+    "categoria_objeto": "material_de_construcao_e_ferramentas",
+    "valores": {
+      "total_estimado": 12464791.92,
+      "total_estimado_itens": 12464791.92,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": null
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/44699908000100/2025/54",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/44699908000100/compras/2025/54",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/44699908000100/compras/2025/54/arquivos",
+      "descoberta": "pncp_busca+pncp_confirmacao"
+    },
+    "contratos": [],
+    "cadeia": {
+      "ETP": [
+        "44699908000100-1-000054-2025#etp-02"
+      ],
+      "TR": [
+        "44699908000100-1-000054-2025#tr-03"
+      ],
+      "EDITAL": [],
+      "CONTRATO": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": false,
+      "contagem": {
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 0,
+        "CONTRATO": 0
+      }
+    },
+    "documentos": [
+      "44699908000100-1-000054-2025#etp-02",
+      "44699908000100-1-000054-2025#tr-03"
+    ],
+    "extras": {
+      "fonte": "auto"
+    },
+    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "FORA_DO_PERFIL",
+    "perfil_inicial": "FORA_DO_PERFIL",
+    "scope_status": "OUT_OF_SCOPE",
+    "policy_version": "4-municipal-historical-ocr",
+    "collection_policy_version": "2-historical-ocr"
+  }
+]

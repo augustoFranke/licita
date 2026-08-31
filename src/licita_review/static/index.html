@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licita — Painel de Revisão Humana (R6)</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="navbar">
+      <div class="brand">
+        <span class="logo-badge">LICITA</span>
+        <h1>Human Review <span>R6</span></h1>
+      </div>
+      <div class="controls">
+        <div class="select-group">
+          <label for="process-select">Processo:</label>
+          <select id="process-select">
+            <option value="">Carregando processos...</option>
+          </select>
+        </div>
+        <button id="btn-refresh" class="btn btn-secondary" title="Recarregar dados">Atualizar</button>
+        <button id="btn-audit" class="btn btn-secondary" title="Ver log de auditoria">Log de Auditoria</button>
+        <button id="btn-export" class="btn btn-primary" title="Exportar dados confirmados">Exportar Fatos</button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+      <!-- Left Panel: Structured Data & Items -->
+      <section class="panel left-panel">
+        <div class="panel-header">
+          <h2>Campos Estruturados</h2>
+          <div class="status-summary" id="status-summary">
+            <span class="badge badge-extracted">0 Extraídos</span>
+            <span class="badge badge-confirmed">0 Confirmados</span>
+            <span class="badge badge-rejected">0 Rejeitados</span>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="items">Itens do TR (<span id="items-count">0</span>)</button>
+          <button class="tab-btn" data-tab="fields">Campos Documentais (<span id="fields-count">0</span>)</button>
+        </div>
+
+        <div class="tab-content active" id="tab-items">
+          <div class="card-list" id="items-container">
+            <div class="empty-state">Selecione um processo para iniciar a revisão.</div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-fields">
+          <div class="card-list" id="fields-container">
+            <div class="empty-state">Nenhum campo documental carregado.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: Evidence & Document Inspector -->
+      <section class="panel right-panel">
+        <div class="panel-header">
+          <h2>Inspetor de Evidência Documental</h2>
+          <span class="badge badge-neutral" id="evidence-page-tag">Selecione um campo</span>
+        </div>
+
+        <div class="evidence-content" id="evidence-container">
+          <div class="empty-state">
+            <p>Clique em um item ou campo à esquerda para visualizar sua âncora e contexto textual.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Audit Modal -->
+    <div class="modal" id="audit-modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Trilha de Auditoria Imutável (Audit Trail)</h3>
+          <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Data/Hora (UTC)</th>
+                <th>Usuário</th>
+                <th>Alvo</th>
+                <th>Ação</th>
+                <th>Valor Anterior</th>
+                <th>Novo Valor</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="audit-table-body">
+              <tr><td colspan="7" class="text-center">Nenhum registro de auditoria.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -73,7 +73,15 @@ def test_aggregate_report_counts_nested_and_document_level_annotations() -> None
     assert totals["processes"] == 2
     assert totals["documents"] == {
         "total": 2,
-        "by_type": {"ETP": 1, "TR": 1, "EDITAL": 0, "CONTRATO": 0},
+        "by_type": {
+            "DFD": 0,
+            "ETP": 1,
+            "TR": 1,
+            "EDITAL": 0,
+            "CONTRATO": 0,
+            "PESQUISA_PRECOS": 0,
+            "OUTROS": 0,
+        },
     }
     assert totals["items"] == 2
     assert totals["field_values"]["total"] == len(FieldType) + 1

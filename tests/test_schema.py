@@ -253,7 +253,7 @@ def test_requirement_attribute_and_finding_message_must_not_be_empty() -> None:
     data["findings"] = [
         {
             "rule_id": "RULE-X",
-            "severity": "LOW",
+            "severity": "INFO",
             "message": "   ",
             "evidence": [evidence],
         }

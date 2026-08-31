@@ -2,10 +2,10 @@
 
 Duas decisões independentes vivem aqui:
 
-- ``papel_documento`` — a que elo da cadeia ``ETP → TR → edital → contrato`` um
-  arquivo pertence. O ``tipoDocumentoId`` do PNCP é autoritativo quando existe;
-  o título é usado apenas para resgatar arquivos publicados como "Outros
-  Documentos", que é onde a maior parte dos TRs municipais aparece.
+- ``papel_documento`` — tipo do pack (``01``): ``DFD``, ``ETP``, ``TR``,
+  ``EDITAL``, ``CONTRATO``, ``PESQUISA_PRECOS``, ``OUTROS``. O
+  ``tipoDocumentoId`` do PNCP é autoritativo quando existe; o título é usado
+  apenas para resgatar arquivos publicados como "Outros Documentos".
 - ``categoria_objeto`` — a categoria de bem, usada para satisfazer o mínimo de
   três categorias exigido pelo R1.
 """
@@ -27,19 +27,31 @@ def normalizar(texto: str) -> str:
 
 # ------------------------------------------------------------ papel do doc
 
+DFD = "DFD"
 ETP = "ETP"
 TR = "TR"
 EDITAL = "EDITAL"
 CONTRATO = "CONTRATO"
-AVISO_DIRETA = "AVISO_CONTRATACAO_DIRETA"
-MINUTA_CONTRATO = "MINUTA_CONTRATO"
-OUTRO = "OUTRO"
+PESQUISA_PRECOS = "PESQUISA_PRECOS"
+OUTROS = "OUTROS"
+OUTRO = OUTROS  # alias legado
+AVISO_DIRETA = OUTROS  # PNCP tipo 1 não é tipo do pack
+MINUTA_CONTRATO = OUTROS  # PNCP tipo 3 não é tipo do pack
 
-#: ``tipoDocumentoId`` do PNCP → papel na cadeia documental da v1.
+MUNICIPAL_14133_PREGAO_ELETRONICO_BENS = (
+    "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+)
+PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS = (
+    MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+)
+PERFIL_SUPPORTED = "SUPPORTED"
+PERFIL_FORA = "FORA_DO_PERFIL"
+
+#: ``tipoDocumentoId`` do PNCP → tipo do pack.
 TIPO_PNCP_PARA_PAPEL = {
-    1: AVISO_DIRETA,
+    1: OUTROS,
     2: EDITAL,
-    3: MINUTA_CONTRATO,
+    3: OUTROS,
     4: TR,
     7: ETP,
     12: CONTRATO,
@@ -47,11 +59,29 @@ TIPO_PNCP_PARA_PAPEL = {
 
 #: Regras de título, aplicadas em ordem — a primeira que casar vence.
 _REGRAS_TITULO: tuple[tuple[str, re.Pattern[str]], ...] = (
-    (ETP, re.compile(r"\b(estudo(s)? tecnico(s)? preliminar|\betp\b)")),
-    (TR, re.compile(r"\b(termo de referencia|termo referencia|\btr\b)")),
-    (MINUTA_CONTRATO, re.compile(r"\bminuta.{0,20}\b(contrato|contratual)")),
+    (
+        DFD,
+        re.compile(
+            r"(?<![a-z0-9])(?:documento de formalizacao da demanda|dfd)(?![a-z0-9])"
+        ),
+    ),
+    (
+        ETP,
+        re.compile(
+            r"(?<![a-z0-9])(?:estudos? tecnicos? preliminar(?:es)?|etp)(?![a-z0-9])"
+        ),
+    ),
+    (
+        TR,
+        re.compile(
+            r"(?<![a-z0-9])(?:termos? de referencias?|termos? referencias?|tr)(?![a-z0-9])"
+        ),
+    ),
+    (
+        PESQUISA_PRECOS,
+        re.compile(r"pesquisa de precos?"),
+    ),
     (CONTRATO, re.compile(r"\bcontrato\b")),
-    (AVISO_DIRETA, re.compile(r"\baviso de contratacao direta\b")),
     (EDITAL, re.compile(r"\bedital\b")),
 )
 
@@ -63,28 +93,34 @@ _TITULO_NEGATIVO = re.compile(
 )
 
 
-def papel_documento(tipo_id: int | None, titulo: str) -> str:
+def papel_documento(tipo_id: int | str | None, titulo: str) -> str:
     """Papel do arquivo na cadeia documental.
 
     O ``tipoDocumentoId`` prevalece. Só caímos no título quando o PNCP
     classificou o arquivo como genérico (``16 — Outros Documentos``) ou não
-    informou tipo.
+    informou tipo. Algumas integrações devolvem o código como texto, por isso
+    a conversão é feita antes da consulta à tabela oficial.
     """
-    if tipo_id in TIPO_PNCP_PARA_PAPEL:
-        return TIPO_PNCP_PARA_PAPEL[tipo_id]
-    if tipo_id not in (None, 16):
-        return OUTRO
+    try:
+        codigo = None if tipo_id is None else int(tipo_id)
+    except (TypeError, ValueError):
+        codigo = None
+    if codigo in TIPO_PNCP_PARA_PAPEL:
+        return TIPO_PNCP_PARA_PAPEL[codigo]
+    if codigo not in (None, 16):
+        return OUTROS
     alvo = normalizar(titulo)
     if _TITULO_NEGATIVO.search(alvo):
-        return OUTRO
+        return OUTROS
     for papel, padrao in _REGRAS_TITULO:
         if padrao.search(alvo):
             return papel
-    return OUTRO
+    return OUTROS
 
 
-#: Papéis que a v1 ingere (scope.md, nível documental).
-PAPEIS_DA_CADEIA = (ETP, TR, EDITAL, CONTRATO)
+#: Tipos do pack. O lote R1 só baixa ETP e TR.
+PAPEIS_DA_CADEIA = (DFD, ETP, TR, EDITAL, CONTRATO, PESQUISA_PRECOS)
+PAPEIS_MATERIAIS = (ETP, TR, EDITAL, CONTRATO)
 
 
 # ------------------------------------------------------- categoria do objeto
@@ -94,85 +130,148 @@ PAPEIS_DA_CADEIA = (ETP, TR, EDITAL, CONTRATO)
 _CATEGORIAS: tuple[tuple[str, tuple[str, ...]], ...] = (
     (
         "medicamentos_e_insumos_farmaceuticos",
-        ("medicamento", "farmaco", "insumo farmaceutico", "soro", "vacina", "psicotropico"),
-    ),
-    (
-        "material_medico_hospitalar",
         (
-            "material medico", "medico hospitalar", "hospitalar", "odontologic",
-            "laboratorial", "seringa", "luva de procedimento", "cateter", "curativo",
-            "material penso", "correlato",
+            "medicamento", "medicamentos", "farmaco", "farmacos",
+            "insumo farmaceutico", "insumos farmaceuticos", "soro", "soros",
+            "vacina", "vacinas", "psicotropico", "psicotropicos",
         ),
     ),
     (
         "equipamentos_medico_hospitalares",
-        ("equipamento medico", "equipamento hospitalar", "aspirador cirurgic",
-         "cadeira de rodas", "desfibrilador", "monitor multiparametro", "autoclave"),
+        (
+            "equipamento medico", "equipamentos medicos",
+            "equipamento hospitalar", "equipamentos hospitalares",
+            "equipamentos medico hospitalares", "equipamentos medicos hospitalares",
+            "aspirador cirurgico", "aspiradores cirurgicos", "cadeira de rodas",
+            "cadeiras de rodas", "desfibrilador", "desfibriladores",
+            "monitor multiparametro", "monitores multiparametros", "autoclave",
+            "autoclaves",
+        ),
+    ),
+    (
+        "material_medico_hospitalar",
+        (
+            "material medico", "materiais medicos", "medico hospitalar",
+            "medicos hospitalares", "hospitalar", "odontologico", "odontologica",
+            "odontologicos", "odontologicas", "laboratorial", "laboratoriais",
+            "seringa", "seringas", "luva de procedimento", "luvas de procedimento",
+            "cateter", "cateteres", "curativo", "curativos", "material penso",
+            "materiais penso", "correlato", "correlatos",
+        ),
     ),
     (
         "generos_alimenticios",
-        ("genero alimenticio", "alimenticio", "alimentacao escolar", "merenda",
-         "hortifrut", "carne", "leite", "cesta basica", "panificacao", "paes"),
+        (
+            "genero alimenticio", "generos alimenticios", "alimenticio", "alimenticios",
+            "alimentacao escolar", "merenda", "merendas", "hortifrut", "carne", "carnes",
+            "leite", "leites", "cesta basica", "cestas basicas", "panificacao", "paes",
+        ),
     ),
     (
         "material_de_limpeza_e_higiene",
-        ("material de limpeza", "produto de limpeza", "higiene", "higienizacao",
-         "saneante", "descartavel", "copa e cozinha"),
+        (
+            "material de limpeza", "materiais de limpeza", "produto de limpeza",
+            "produtos de limpeza", "higiene", "higienes", "higiene bucal",
+            "higienes bucais", "higienizacao", "saneante", "saneantes", "descartavel",
+            "descartaveis", "copa e cozinha",
+        ),
     ),
     (
         "material_de_expediente_e_escritorio",
-        ("material de expediente", "material de escritorio", "papelaria", "papel a4",
-         "suprimento de informatica", "cartucho", "toner", "material grafico"),
+        (
+            "material de expediente", "materiais de expediente", "material de escritorio",
+            "materiais de escritorio", "papelaria", "papel a4", "suprimento de informatica",
+            "suprimentos de informatica", "cartucho", "cartuchos", "toner", "toners",
+            "material grafico", "materiais graficos",
+        ),
     ),
     (
         "mobiliario",
-        ("mobiliario", "movel", "moveis", "cadeira", "mesa", "armario", "estante",
-         "longarina", "poltrona"),
+        (
+            "mobiliario", "movel", "moveis", "cadeira", "cadeiras", "mesa", "mesas",
+            "armario", "armarios", "estante", "estantes", "longarina", "longarinas",
+            "poltrona", "poltronas",
+        ),
     ),
     (
         "equipamentos_de_informatica",
-        ("informatica", "computador", "notebook", "microcomputador", "impressora",
-         "scanner", "servidor de rede", "switch", "nobreak", "monitor de video",
-         "tablet", "licenciamento de software", "software"),
+        (
+            "informatica", "computador", "computadores", "notebook", "notebooks",
+            "microcomputador", "microcomputadores", "impressora", "impressoras", "scanner",
+            "scanners", "servidor de rede", "servidores de rede", "switch", "switches",
+            "nobreak", "nobreaks", "monitor de video", "monitores de video", "tablet",
+            "tablets", "licenciamento de software", "software", "softwares",
+        ),
     ),
     (
         "eletrodomesticos_e_eletroeletronicos",
-        ("eletrodomestico", "eletroeletronic", "ar condicionado", "ar-condicionado",
-         "condicionador de ar", "refrigerador", "freezer", "televisor", "bebedouro",
-         "ventilador", "fogao"),
+        (
+            "eletrodomestico", "eletrodomesticos", "eletroeletronico", "eletroeletronicos",
+            "ar condicionado", "ares condicionados", "condicionador de ar",
+            "condicionadores de ar", "refrigerador", "refrigeradores", "freezer", "freezers",
+            "televisor", "televisores", "bebedouro", "bebedouros", "ventilador", "ventiladores",
+            "fogao", "fogoes",
+        ),
     ),
     (
         "veiculos_pecas_e_combustiveis",
-        ("veiculo", "automovel", "caminhao", "onibus", "ambulancia", "pneu",
-         "peca automotiva", "combustivel", "oleo lubrificante", "motocicleta"),
+        (
+            "veiculo", "veiculos", "automovel", "automoveis", "caminhao", "caminhoes",
+            "onibus", "ambulancia", "ambulancias", "pneu", "pneus", "peca automotiva",
+            "pecas automotivas", "combustivel", "combustiveis", "oleo lubrificante",
+            "oleos lubrificantes", "motocicleta", "motocicletas",
+        ),
     ),
     (
         "material_de_construcao_e_ferramentas",
-        ("material de construcao", "hidraulic", "ferramenta", "cimento", "tinta",
-         "material eletrico", "iluminacao publica", "lampada"),
+        (
+            "material de construcao", "materiais de construcao", "hidraulica", "hidraulico",
+            "hidraulicas", "hidraulicos", "ferramenta", "ferramentas", "cimento", "cimentos",
+            "tinta", "tintas", "asfalto", "asfaltos", "asfalto frio", "asfaltos frios",
+            "material eletrico", "materiais eletricos", "iluminacao publica", "lampada", "lampadas",
+        ),
     ),
     (
         "epi_uniformes_e_textil",
-        ("epi", "equipamento de protecao individual", "uniforme", "fardamento",
-         "vestuario", "enxoval", "textil", "calcado"),
+        (
+            "epi", "equipamento de protecao individual", "equipamentos de protecao individual",
+            "uniforme", "uniformes", "fardamento", "fardamentos", "vestuario", "enxoval",
+            "textil", "texteis", "calcado", "calcados",
+        ),
     ),
     (
         "material_agropecuario_e_jardinagem",
-        ("agropecuar", "semente", "muda", "fertilizante", "racao", "adubo",
-         "calcario", "jardinagem"),
+        (
+            "agropecuario", "agropecuaria", "agropecuarios", "agropecuarias", "agricola",
+            "agricolas", "implemento agricola", "implementos agricolas", "semente", "sementes",
+            "muda", "mudas", "fertilizante", "fertilizantes", "racao", "racoes", "adubo",
+            "adubos", "calcario", "calcarios", "jardinagem",
+        ),
     ),
     (
         "material_didatico_e_esportivo",
-        ("material didatico", "material escolar", "livro", "brinquedo",
-         "material esportivo", "instrumento musical"),
+        (
+            "material didatico", "materiais didaticos", "material escolar", "materiais escolares",
+            "livro", "livros", "brinquedo", "brinquedos", "material esportivo",
+            "materiais esportivos", "instrumento musical", "instrumentos musicais",
+        ),
     ),
 )
+
+
+def _contem_termo_de_categoria(alvo: str, termo: str) -> bool:
+    """Casa um termo inteiro, sem aceitar prefixos ou palavras embutidas."""
+    termo_normalizado = normalizar(termo)
+    if not termo_normalizado:
+        return False
+    padrao = rf"(?<![a-z0-9]){re.escape(termo_normalizado)}(?![a-z0-9])"
+    return re.search(padrao, alvo) is not None
 
 
 def categoria_objeto(objeto: str) -> str:
     alvo = normalizar(objeto)
     for categoria, termos in _CATEGORIAS:
-        if any(normalizar(t) in alvo for t in termos):
+        if any(_contem_termo_de_categoria(alvo, termo) for termo in termos):
             return categoria
     return "outros_bens"
 
@@ -185,12 +284,17 @@ _AQUISICAO = re.compile(
 
 #: Marcadores de objeto fora do escopo da v1 (serviços, obras, engenharia).
 _FORA_DE_ESCOPO = re.compile(
-    r"\b(prestacao de servico|servicos de|servico de|obra|obras|engenharia|reforma|"
-    r"construcao de|ampliacao de|pavimentacao|locacao de|aluguel de|"
+    r"(?<![a-z0-9])(?:"
+    r"prestacao de servicos?|servicos?|obra|obras|engenharia|reformas?|"
+    r"internac(?:ao|oes) hospitalar(?:es)?|exames? laborator(?:ial|iais)|"
+    r"consultas?|procedimentos?|atendimentos?|construcao de|ampliacao de|"
+    r"pavimentacao|locac(?:ao|oes)|aluguel de|"
     r"contratacao de empresa (especializada )?para (a )?(prestacao|execucao|realizacao)|"
-    r"mao de obra|terceirizacao|manutencao (preventiva|corretiva)|consultoria|"
-    r"assessoria|capacitacao|treinamento|seguro|transporte escolar|"
-    r"coleta de residuo|show|artistic|leilao|credenciamento)\b"
+    r"mao de obra|terceirizacao|manutenc(?:ao|oes)|consultoria|assessoria|capacitacao|"
+    r"treinamento|seguro|transporte escolar|coleta de residuos?|show|artistic(?:o|a|os|as)?|"
+    r"leilao|credenciamento|instalacao de|implantacao de|desenvolvimento de|"
+    r"suporte tecnico|energia(?: eletrica)?"
+    r")(?![a-z0-9])"
 )
 
 
@@ -202,9 +306,41 @@ def parece_aquisicao_de_bens(objeto: str) -> bool:
     ``scope.md`` — é apenas o filtro de coleta.
     """
     alvo = normalizar(objeto)
-    if not _AQUISICAO.search(alvo):
+    if _FORA_DE_ESCOPO.search(alvo):
         return False
-    return not _FORA_DE_ESCOPO.search(alvo)
+    if _AQUISICAO.search(alvo):
+        return True
+
+    # Alguns órgãos publicam apenas uma lista inequívoca de bens (por
+    # exemplo, "cateteres periféricos" ou "SRP informática"), sem verbo de
+    # aquisição. Uma categoria conhecida é evidência suficiente; texto
+    # genérico continua rejeitado.
+    return categoria_objeto(alvo) != "outros_bens"
+
+
+def classificar_perfil_inicial(
+    *,
+    esfera: str | None,
+    amparo_legal_nome: str | None,
+    modalidade_id: int | str | None,
+    objeto: str | None,
+) -> str:
+    """Classifica o perfil municipal de bens comuns do Pregão Eletrônico."""
+    esfera_n = (esfera or "").strip().upper()
+    amparo = normalizar(amparo_legal_nome or "")
+    try:
+        modalidade = int(modalidade_id) if not isinstance(modalidade_id, bool) else None
+    except (TypeError, ValueError):
+        modalidade = None
+    lei = "lei 14 133" in amparo
+    if (
+        esfera_n == "M"
+        and lei
+        and modalidade == 6
+        and parece_aquisicao_de_bens(objeto or "")
+    ):
+        return PERFIL_SUPPORTED
+    return PERFIL_FORA
 
 
 #: ``tipoDocumentoNome`` dos anexos de contrato → papel. Esses anexos vêm com
@@ -212,10 +348,10 @@ def parece_aquisicao_de_bens(objeto: str) -> bool:
 _TIPO_ANEXO_CONTRATO = {
     "contrato": CONTRATO,
     "termo de contrato": CONTRATO,
-    "termo aditivo": OUTRO,       # altera o contrato; não é o instrumento inicial
-    "nota de empenho": OUTRO,     # substitui o contrato em alguns casos, mas não é ele
-    "termo de rescisao": OUTRO,
-    "termo de apostilamento": OUTRO,
+    "termo aditivo": OUTROS,
+    "nota de empenho": OUTROS,
+    "termo de rescisao": OUTROS,
+    "termo de apostilamento": OUTROS,
 }
 
 

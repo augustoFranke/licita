@@ -1,0 +1,131 @@
+{
+  "passou": true,
+  "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+  "processos_elegiveis": 27,
+  "processos_elegiveis_ids": [
+    "01612698000169-1-000047-2024",
+    "02056737000151-1-000358-2024",
+    "13988308000139-1-000095-2024",
+    "17749896000290-1-000025-2024",
+    "17749896000290-1-000055-2024",
+    "18025940000109-1-000260-2025",
+    "18260489000104-1-000106-2024",
+    "18260489000104-1-000129-2024",
+    "18260489000104-1-000155-2024",
+    "18260489000104-1-000158-2024",
+    "25105255000140-1-000041-2024",
+    "45780095000141-1-000193-2024",
+    "52061181000160-1-000057-2024",
+    "52061181000160-1-000080-2024",
+    "76017474000108-1-000118-2025",
+    "83024240000153-1-000099-2024",
+    "83026138000197-1-000126-2024",
+    "87613022000105-1-000034-2024",
+    "87613022000105-1-000106-2024",
+    "87613022000105-1-000285-2025",
+    "87613048000153-1-000119-2024",
+    "87613048000153-1-000158-2024",
+    "88814181000130-1-000098-2024",
+    "88814181000130-1-000101-2024",
+    "88814181000130-1-000177-2024",
+    "88814181000130-1-000180-2024",
+    "88814181000130-1-000215-2024"
+  ],
+  "processos_out_of_scope_ids": [
+    "44699908000100-1-000054-2025"
+  ],
+  "criterios": [
+    {
+      "nome": "processos",
+      "exigido": "≥20",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "órgãos distintos",
+      "exigido": "≥5",
+      "obtido": "15",
+      "passou": true
+    },
+    {
+      "nome": "máximo por órgão",
+      "exigido": "≤5",
+      "obtido": "5",
+      "passou": true
+    },
+    {
+      "nome": "categorias distintas",
+      "exigido": "≥3",
+      "obtido": "9",
+      "passou": true
+    },
+    {
+      "nome": "esferas permitidas",
+      "exigido": "M",
+      "obtido": "M",
+      "passou": true
+    },
+    {
+      "nome": "perfil MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+      "exigido": "≥20",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "processos no filtro Lei 14.133/Pregão/bens",
+      "exigido": "≥20",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "processos SUPPORTED com exatamente um ETP e um TR",
+      "exigido": "27",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "processos SUPPORTED com documentos utilizáveis localmente",
+      "exigido": "27",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "relações ETP→TR catalogadas",
+      "exigido": "27 processos",
+      "obtido": "27 processos",
+      "passou": true
+    },
+    {
+      "nome": "vínculos válidos dos contratos presentes",
+      "exigido": "0",
+      "obtido": "0",
+      "passou": true
+    },
+    {
+      "nome": "somente documentos ETP/TR",
+      "exigido": "0 extras",
+      "obtido": "0",
+      "passou": true
+    },
+    {
+      "nome": "sem contratos no lote",
+      "exigido": "0",
+      "obtido": "0",
+      "passou": true
+    },
+    {
+      "nome": "documentos ETP",
+      "exigido": "≥20",
+      "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "documentos TR",
+      "exigido": "≥20",
+      "obtido": "27",
+      "passou": true
+    }
+  ],
+  "falhas_de_abertura": [],
+  "processos_sem_relacoes": []
+}

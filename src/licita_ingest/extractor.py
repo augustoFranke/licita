@@ -5,8 +5,9 @@ A implementação mantém duas propriedades importantes para as etapas seguintes
 * cada bloco carrega ``document_id`` e página (física no PDF, lógica no DOCX);
 * o texto de parágrafos/células não é normalizado, resumido ou descartado.
 
-PDFs sem camada textual são detectados, mas não são enviados a um OCR: o OCR
-é explicitamente um fallback ainda não implementado nesta etapa.
+PDFs sem camada textual usam o mesmo fallback OCR da coleta
+(``licita_corpus.verify``). Sem texto utilizável, a extração falha de forma
+explícita.
 """
 
 from __future__ import annotations
@@ -16,7 +17,7 @@ from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
-from .errors import OCRNotImplementedError, UnsupportedFormatError
+from .errors import OCRRequiredError, UnsupportedFormatError
 from .models import (
     BBox,
     BlockType,
@@ -382,6 +383,47 @@ def _pdf_has_unreadable_image(page: Any, page_text: str) -> bool:
         return False
 
 
+def _aplicar_ocr_pdf(
+    path: Path,
+    document_id: str,
+    pages: Sequence[StructuredPage],
+    ocr_pages: Sequence[int],
+) -> tuple[tuple[StructuredPage, ...], tuple[int, ...]]:
+    """Reusa o motor de OCR da coleta; não inventa texto se a qualidade falhar."""
+    from licita_corpus.verify import verificar
+
+    resultado = verificar(path, ocr=True)
+    textos = {
+        pagina.pagina: pagina.texto
+        for pagina in resultado.paginas_avaliadas
+        if pagina.texto.strip()
+    }
+    atualizadas: list[StructuredPage] = []
+    restantes: list[int] = []
+    alvo = set(ocr_pages)
+    for page in pages:
+        if page.number not in alvo:
+            atualizadas.append(page)
+            continue
+        texto = textos.get(page.number, "").strip()
+        if not texto:
+            restantes.append(page.number)
+            atualizadas.append(page)
+            continue
+        bloco = StructuredBlock(
+            document_id=document_id,
+            id=f"{document_id}:p-{page.number:04d}:ocr-0001",
+            type=BlockType.PARAGRAPH,
+            text=texto,
+            page=page.number,
+            page_kind=PageKind.PHYSICAL,
+            index=len(page.blocks),
+            metadata={"source": "ocr"},
+        )
+        atualizadas.append(replace(page, text=texto, blocks=page.blocks + (bloco,)))
+    return tuple(atualizadas), tuple(restantes)
+
+
 def _extract_pdf(path: Path, document_id: str, digest: str) -> StructuredDocument:
     import pymupdf
 
@@ -404,7 +446,9 @@ def _extract_pdf(path: Path, document_id: str, digest: str) -> StructuredDocumen
         page_count = pdf.page_count
 
     if ocr_pages:
-        raise OCRNotImplementedError(path, ocr_pages)
+        pages, ocr_pages = _aplicar_ocr_pdf(path, document_id, pages, ocr_pages)
+        if ocr_pages:
+            raise OCRRequiredError(path, ocr_pages)
 
     return StructuredDocument(
         document_id=document_id,
@@ -415,6 +459,7 @@ def _extract_pdf(path: Path, document_id: str, digest: str) -> StructuredDocumen
         pages=tuple(pages),
         page_count=page_count,
         page_kind=PageKind.PHYSICAL,
+        ocr_required_pages=(),
     )
 
 

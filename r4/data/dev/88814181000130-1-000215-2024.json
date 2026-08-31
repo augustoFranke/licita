@@ -1,0 +1,2286 @@
+{
+  "id": "88814181000130-1-000215-2024",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "88814181000130-1-000215-2024:etp",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "etp-02-estudo-tecnico-preliminar.pdf",
+      "sections": [
+        {
+          "id": "88814181000130-1-000215-2024:etp:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "1 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0005",
+              "type": "PARAGRAPH",
+              "text": "ESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Área Requisitante"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Responsável pela elaboração"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Secretaria de Administração"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Willy August Albert Sant’Helena Artmann\nVanessa Dutra"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0008",
+              "type": "PARAGRAPH",
+              "text": "1. DESCRIÇÃO DA NECESSIDADE\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0009",
+              "type": "PARAGRAPH",
+              "text": "A Prefeitura de Osório, através de sua Secretaria de Administração adquire \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0010",
+              "type": "PARAGRAPH",
+              "text": "anualmente 240 caixas de folha A4, contendo 5.000 folhas cada, chegando-se ao incrível \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0011",
+              "type": "PARAGRAPH",
+              "text": "consumo de aproximadamente 1.200.000 (Um milhão e duzentos mil) folhas ano, além \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0012",
+              "type": "PARAGRAPH",
+              "text": "disso, a recentemente aprovada Lei Municipal 6.797/2023, estabelece que deverá ser \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0013",
+              "type": "PARAGRAPH",
+              "text": "efetuada a fragmentação manual ou mecânica dos suportes de registro de informação, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0014",
+              "type": "PARAGRAPH",
+              "text": "com isso, estima-se que nesse momento pelo menos 30% dessas folhas são descartadas \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0015",
+              "type": "PARAGRAPH",
+              "text": "diretamente, sendo que o restante, integrará processos que serão descartados, dentro \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0016",
+              "type": "PARAGRAPH",
+              "text": "dos prazos estabelecidos na referida Lei Municipal, além de uma grande massa \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0017",
+              "type": "PARAGRAPH",
+              "text": "documental já prescrita, que iniciará nos próximos meses, os procedimentos legais para o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0018",
+              "type": "PARAGRAPH",
+              "text": "descarte.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0019",
+              "type": "PARAGRAPH",
+              "text": "2. PLANO DE CONTRATAÇÕES ANUAL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0020",
+              "type": "PARAGRAPH",
+              "text": "Não se aplica.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0021",
+              "type": "PARAGRAPH",
+              "text": "3. REQUISITOS DA CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0022",
+              "type": "PARAGRAPH",
+              "text": "O presente projeto, visa a aquisição de uma fragmentadora de papéis, a ser \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0023",
+              "type": "PARAGRAPH",
+              "text": "alojada junto a sede administrativa do município, criando-se uma rotina de recolhimento \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0024",
+              "type": "PARAGRAPH",
+              "text": "destes resíduos, que após a fragmentação, serão recolhidos pela cooperativa de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0025",
+              "type": "PARAGRAPH",
+              "text": "reciclagem, para o correto descarte do material e geração de renda aos agentes \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0026",
+              "type": "PARAGRAPH",
+              "text": "cooperativados.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0001:b-0027",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "2 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Desta forma, a produção diária de informações contidas no suporte papel, aliada a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0006",
+              "type": "PARAGRAPH",
+              "text": "necessidade de fragmentação dos documentos que deverão ser descartados após a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0007",
+              "type": "PARAGRAPH",
+              "text": "aplicação dos prazos estabelecidos na Lei, tendem a gerar um volume significativo, que \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0008",
+              "type": "PARAGRAPH",
+              "text": "por questões de sigilo de informações, em especial as pessoais, obrigatoriamente exigem \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0009",
+              "type": "PARAGRAPH",
+              "text": "o tratamento eficiente e seguro dessa massa documental.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Aliado a isso, temos a questão social e ambiental envolvidas diretamente, no \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0011",
+              "type": "PARAGRAPH",
+              "text": "descarte correto dos resíduos sólidos produzidos por essa municipalidade, nestes termos, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0012",
+              "type": "PARAGRAPH",
+              "text": "o município deve preocupar-se em gerir e nesse caso, reciclar os papéis por ele \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0013",
+              "type": "PARAGRAPH",
+              "text": "produzidos e consoante a isso, estabelecer através de termos de cooperação, o estímulo \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0014",
+              "type": "PARAGRAPH",
+              "text": "ao programa de coleta seletiva, preferencialmente em parceria com grupos de catadores \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0015",
+              "type": "PARAGRAPH",
+              "text": "organizados em cooperativas, conforme versa o programa Jogue Limpo com Osório, que \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0016",
+              "type": "PARAGRAPH",
+              "text": "estabelece em seu Art. 4º Para a realização dos objetivos propostos, o Programa Jogue \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Limpo com Osório deverá complementar estratégia de gestão que assegure a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0018",
+              "type": "PARAGRAPH",
+              "text": "participação dos órgãos oficiais, bem como representação de organizações sociais, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0019",
+              "type": "PARAGRAPH",
+              "text": "entidades associativas e científicas afins. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0020",
+              "type": "PARAGRAPH",
+              "text": "4. ESTIMATIVA DAS QUANTIDADES\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Proc. Admin. Nº"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Objeto"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Consumo (Qtd)"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "Período"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "28189/2023"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FRAGMENTADORA DA PAPEL"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "1"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0023",
+              "type": "PARAGRAPH",
+              "text": "5. LEVANTAMENTO DE MERCADO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0024",
+              "type": "PARAGRAPH",
+              "text": "Com relação a fragmentadora de papel, verifica-se após uma breve pesquisa sobre \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0025",
+              "type": "PARAGRAPH",
+              "text": "o produto, uma ampla gama de equipamentos, que se adéquam a necessidade de cada \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0026",
+              "type": "PARAGRAPH",
+              "text": "serviço, neste caso, propõe-se o investimento de um equipamento robusto, que possui \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0027",
+              "type": "PARAGRAPH",
+              "text": "valor condizente com o objetivo do projeto, visto que permite ser compartilhada por até 20 \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0028",
+              "type": "PARAGRAPH",
+              "text": "pessoas, ou seja, ideal para utilização departamental. Ela possui capacidade de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0029",
+              "type": "PARAGRAPH",
+              "text": "fragmentar automaticamente no mínimo 300 folhas empilhadas e pelo menos 10 folhas \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0002:b-0030",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "3 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "manualmente, bem como painel com bloqueio, impossibilitando qualquer tentativa de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "abertura da máquina e interrupção do processo de fragmentação, possuindo nível de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "segurança P-4 (supercorte em partículas), fragmenta clipes e pequenos grampos presos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "no papel, além de cartões magnéticos. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Sendo assim, o equipamento atende aos requisitos de utilização compartilhada \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0010",
+              "type": "PARAGRAPH",
+              "text": "por diversos servidores, fragmentando um volume considerável de folhas com a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0011",
+              "type": "PARAGRAPH",
+              "text": "segurança do acesso aos documentos, somente ao agente público responsável pelo \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0012",
+              "type": "PARAGRAPH",
+              "text": "descarte, que após fragmentado, inviabiliza a obtenção por terceiros da informação ali \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0013",
+              "type": "PARAGRAPH",
+              "text": "existente.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Descrição completada solução\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ESPECIFICAÇÃO"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FRAGMENTADORA DE PAPEL\nCARACTERÍSTICAS:\n•\nFragmentação automática mínima 300 folhas empilhadas;\n•\nFragmenta manualmente pelo menos 10 folhas;\n•\nOperação silenciosa;\n•\nFuncionamento: 240 min e descanso 45 min (automático);\n               30 min e descanso 45 min (manual);\n               Uso contínuo;\n•\nPainel com bloqueio;\n•\nNível de segurança P-4 (supercorte de partículas)\n•\nFragmenta clipes e pequenos grampos;\n•\nTecnologia antiatolamento de papel: Sim\n•\nVoltagem: 220v;\n•\nGarantia de no mínimo 1 ano contra defeitos de fabricação.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Figura 1: imagem meramente ilustrativa\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0003:b-0020",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "4 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "6. ESTIMATIVA DO VALOR DA CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Foram prospectadas soluções de mercado que pudessem atender aos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "requisitos, bem como avaliação da necessidade do serviço, por meio de valores \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0008",
+              "type": "PARAGRAPH",
+              "text": "identificados no Painel de Preços do Governo Federal, Portal Nacional de Contratações \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Públicas (PNCP), em contratações similares, respeitando o intervalo temporal de até 01 \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0010",
+              "type": "PARAGRAPH",
+              "text": "(um) ano contado a partir da data da realização da pesquisa de preços, assim como a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0011",
+              "type": "PARAGRAPH",
+              "text": "busca em mídia especializada com resultados obtidos em sítios de busca na rede mundial \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0012",
+              "type": "PARAGRAPH",
+              "text": "de computadores. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0013",
+              "type": "PARAGRAPH",
+              "text": "Da mesma forma, em pesquisas em lojas especializadas demonstraram que o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0014",
+              "type": "PARAGRAPH",
+              "text": "valor estimado para a fragmentadora de papel, seria entre R$ 5.588,00 a R$ 17.284,00, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0015",
+              "type": "PARAGRAPH",
+              "text": "respeitando-se as especificações necessárias ao trabalho a ser realizado.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0016",
+              "type": "PARAGRAPH",
+              "text": "7. DESCRIÇÃO DA SOLUÇÃO COM UM TODO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Conforme pesquisa de mercado, percebe-se que o item a que se postula a compra, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0018",
+              "type": "PARAGRAPH",
+              "text": "sofre grande variação de mercado, principalmente relacionada a sua utilização diária.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Sendo assim, os materiais propostos, foram sugeridos em virtude da carga de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0020",
+              "type": "PARAGRAPH",
+              "text": "trabalho à que serão subordinados, visto que deverão suportar um grande número de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0021",
+              "type": "PARAGRAPH",
+              "text": "servidores à utilizá-los diariamente por períodos longo de tempo, fato determinante no \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0022",
+              "type": "PARAGRAPH",
+              "text": "dimensionamento da fragmentadora sugerida, a fim de evitar o seu superaquecimento, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0023",
+              "type": "PARAGRAPH",
+              "text": "com isso, a solução utilizada é a de equipamento capaz de fragmentar automaticamente \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0024",
+              "type": "PARAGRAPH",
+              "text": "quantidades de no mínimo 300 folhas ou mais, por vez.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0025",
+              "type": "PARAGRAPH",
+              "text": "Com a necessidade de aplicação da Lei Municipal 6.797/2023, verifica-se o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0026",
+              "type": "PARAGRAPH",
+              "text": "descarte de um volume considerável de documentos prescritos, além de papéis de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0027",
+              "type": "PARAGRAPH",
+              "text": "descarte oriundos de erros de impressão (entre outros), razão pela qual opta-se por \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0028",
+              "type": "PARAGRAPH",
+              "text": "fragmentadora com funcionamento de no mínimo 240 minutos em uso automático para \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0029",
+              "type": "PARAGRAPH",
+              "text": "cada 45 minutos de descanso (resfriamento) ou mesmo de funcionamento contínuo (sem \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0004:b-0030",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "5 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": "a necessidade de resfriamento), permitindo o uso na integralidade dos turnos da manhã \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0006",
+              "type": "PARAGRAPH",
+              "text": "ou tarde e resfriamento nos intervalos.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0007",
+              "type": "PARAGRAPH",
+              "text": "Como o equipamento poderá ter seu uso compartilhado, entre servidores do \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0008",
+              "type": "PARAGRAPH",
+              "text": "executivo municipal de setores diferentes, opta-se por fragmentadora que contenha painel \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0009",
+              "type": "PARAGRAPH",
+              "text": "com bloqueio, permitindo que o servidor coloque os documentos para o descarte e realize \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0010",
+              "type": "PARAGRAPH",
+              "text": "outras tarefas, durante o período de fragmentação dos papéis, sem que haja o risco de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0011",
+              "type": "PARAGRAPH",
+              "text": "quebra de sigilo das informações ali depositadas.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0012",
+              "type": "PARAGRAPH",
+              "text": "O nível de segurança P-4, resulta da Lei Municipal 6.797/2023, que disciplina § 1º \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0013",
+              "type": "PARAGRAPH",
+              "text": "do Art. 14 que a “eliminação de documentos públicos de que trata o caput deve garantir \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0014",
+              "type": "PARAGRAPH",
+              "text": "que a descaracterização dos documentos não poderá ser revertida”.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0015",
+              "type": "PARAGRAPH",
+              "text": "A fragmentação de clipes e pequenos grampos, visa garantir a vida útil do \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0016",
+              "type": "PARAGRAPH",
+              "text": "equipamento, que seria reduzida, no eventual erro na preparação dos documentos ao \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0017",
+              "type": "PARAGRAPH",
+              "text": "descarte pela não retirada na plenitude de clipes e grampos.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0018",
+              "type": "PARAGRAPH",
+              "text": "8. JUSTIFICATIVA PARA PARCELAMENTO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Como se trata de compra unitária, no caso da fragmentadora, torna-se impossível o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0020",
+              "type": "PARAGRAPH",
+              "text": "parcelamento da aquisição.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0021",
+              "type": "PARAGRAPH",
+              "text": "9. DEMONSTRATIVO DOS RESULTADOS PRETENDIDOS\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0022",
+              "type": "PARAGRAPH",
+              "text": "Como já descrito na justificativa, pretende-se a criação de uma rotina de reciclagem \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0023",
+              "type": "PARAGRAPH",
+              "text": "dos papéis produzidos nos diversos setores da administração municipal, aliado a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0024",
+              "type": "PARAGRAPH",
+              "text": "necessidade de fragmentação de documentos, já existentes junto aos Arquivos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0025",
+              "type": "PARAGRAPH",
+              "text": "Administrativos da Prefeitura, e que por razões legais já se encontram aptos para seu \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0026",
+              "type": "PARAGRAPH",
+              "text": "descarte.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0027",
+              "type": "PARAGRAPH",
+              "text": "Como cabe ao setor de Arquivo, conforme Lei Municipal nº 6.797/2023, o descarte \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0028",
+              "type": "PARAGRAPH",
+              "text": "correto dos documentos prescritos, rotina que ao ser implementada pelo setor, deve ser \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0005:b-0029",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "6 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "diária, acreditamos que o aproveitamento dos servidores do local, para a fragmentação e \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0006",
+              "type": "PARAGRAPH",
+              "text": "descarte dos documentos não apenas do arquivo, mas do cotidiano administrativo da \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0007",
+              "type": "PARAGRAPH",
+              "text": "sede, gere o aproveitamento e eficiência dos recursos humanos, centralizando o trabalho \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0008",
+              "type": "PARAGRAPH",
+              "text": "em um único setor, realizado pelos servidores do mesmo.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Conforme proposta, postula-se o convênio com ONG de reciclagem, para que a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0010",
+              "type": "PARAGRAPH",
+              "text": "mesma, realize a busca corrente do material fragmentado, contudo, ao destinar o material \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0011",
+              "type": "PARAGRAPH",
+              "text": "à coleta seletiva regular de lixo, acreditamos que os resultados pretendidos venham a ser \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0012",
+              "type": "PARAGRAPH",
+              "text": "os mesmos, nesses termos, a fragmentação, recolhimento e reciclagem do material.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0013",
+              "type": "PARAGRAPH",
+              "text": "10.PROVIDÊNCIAS PRÉVIAS AO CONTRATO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Como o objeto está diretamente relacionado à implementação da Lei Municipal \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0015",
+              "type": "PARAGRAPH",
+              "text": "6.797/2023, os trabalhos de treinamento dos servidores, quanto a identificação e condição \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0016",
+              "type": "PARAGRAPH",
+              "text": "para descarte dos documentos, faz parte dos trabalhos a serem executados pela \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Comissão CPAD, sendo assim, para o melhor aproveitamento dos recursos humanos, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0018",
+              "type": "PARAGRAPH",
+              "text": "vemos como desnecessário o treinamento adicional dos servidores.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0019",
+              "type": "PARAGRAPH",
+              "text": "11.CONTRATAÇÕES CORRELATAS/INTERDEPENDENTES\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0020",
+              "type": "PARAGRAPH",
+              "text": "Desconhecemos contratações correlatas e/ou interdependentes.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0021",
+              "type": "PARAGRAPH",
+              "text": "12.IMPACTOS AMBIENTAIS\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0022",
+              "type": "PARAGRAPH",
+              "text": "O projeto em si, além do cumprimento da Lei Municipal 6.797/2023, visa a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0023",
+              "type": "PARAGRAPH",
+              "text": "mitigação de impactos ambientais, neste caso, do correto descarte para a reciclagem, dos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0024",
+              "type": "PARAGRAPH",
+              "text": "papéis gerados pela sede do executivo municipal\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto Ambiental"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Medida de Tratamento"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Geração de resíduos sólidos de papéis"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Fragmentação e acondicionamento em sacos de\nlixo"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Descarte de resíduos sólidos de papel"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Serão enviados regularmente nos dias destinados à"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0006:b-0028",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "7 | 7\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto Ambiental"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Medida de Tratamento"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "coleta seletiva, os sacos de lixo com papéis \nfragmentados, até que seja celebrado convênio \nentre o município e ONG de reciclagem, para que a \nmesma, realize regularmente a coleta do material \ndiretamente na Sede do executivo municipal.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0007",
+              "type": "PARAGRAPH",
+              "text": "13.VIABILIDADE DA CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Conforme estudo técnico preliminar, conclui-se, a necessidade de ações para a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0009",
+              "type": "PARAGRAPH",
+              "text": "implementação da Lei Municipal nº 6.797/2023, neste caso, da aquisição dos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "equipamentos necessários para a fragmentação dos documentos legalmente aptos para o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0011",
+              "type": "PARAGRAPH",
+              "text": "descarte.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Da mesma forma, verifica-se como intempestiva a correta destinação do papel \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0013",
+              "type": "PARAGRAPH",
+              "text": "gerado no cotidiano administrativo, dos mais diversos setores da sede do executivo \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0014",
+              "type": "PARAGRAPH",
+              "text": "municipal.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0015",
+              "type": "PARAGRAPH",
+              "text": "Concluindo-se a nosso ver, como necessária a destinação orçamentaria para a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0016",
+              "type": "PARAGRAPH",
+              "text": "aquisição imediata dos materiais elencados acima.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Osório, 25 de maio de 2024\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0018",
+              "type": "PARAGRAPH",
+              "text": "Identificação e assinatura do servidor (ou equipe) responsável\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:etp:p-0007:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8287 l E-mail licitaosorio@yahoo.com.br\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "88814181000130-1-000215-2024:etp",
+            "page": 1,
+            "block_id": "88814181000130-1-000215-2024:etp:p-0001:b-0001",
+            "quote": "ESTADO DO RIO GRANDE DO SUL\n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [],
+      "field_values": [],
+      "requirements": []
+    },
+    {
+      "id": "88814181000130-1-000215-2024:tr",
+      "type": "TR",
+      "format": "PDF",
+      "title": "tr-03-termo-de-referencia.pdf",
+      "sections": [
+        {
+          "id": "88814181000130-1-000215-2024:tr:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "1 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0005",
+              "type": "PARAGRAPH",
+              "text": "TERMO DE REFERÊNCIA – AQUISIÇÃO DE BENS\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Entrega imediata \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0007",
+              "type": "PARAGRAPH",
+              "text": "Processo Administrativo nº 28.189/2023\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0008",
+              "type": "PARAGRAPH",
+              "text": "1. CONDIÇÕES GERAIS DE CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0009",
+              "type": "PARAGRAPH",
+              "text": "1.1.\nAquisição de uma fragmentadora de papéis, a ser alojada junto a sede administrativa do município, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0010",
+              "type": "PARAGRAPH",
+              "text": "criando-se uma rotina de recolhimento destes resíduos.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Item"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Especificação"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Unid."
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "Qtd."
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Valor Unit"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0001:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Total"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FRAGMENTADORA DE PAPÉIS, com capacidade\npara fragmentar automatci amente 300 folhas\nempilhadas e manualmente até 10 folhas;"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "(à mediana)\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$ 11.436,00\n(à mediana)\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0017",
+              "type": "PARAGRAPH",
+              "text": "2. FUNDAMENTAÇÃO E DESCRIÇÃO DA NECESSIDADE DA CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0018",
+              "type": "PARAGRAPH",
+              "text": "2.1.\nA fundamentação da contratação e de seus quantitativos encontra-se pormenorizada em tópico \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0019",
+              "type": "PARAGRAPH",
+              "text": "específico do Estudo Técnico Preliminar, apêndice deste Termo de Referência.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0020",
+              "type": "PARAGRAPH",
+              "text": "2.2.\nO objeto da contratação não se enquadra no Plano de Contratações Anual.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0021",
+              "type": "PARAGRAPH",
+              "text": "3. DESCRIÇÃO DA SOLUÇÃO COMO UM TODO CONSIDERADO O CICLO DE VIDA DO OBJETO E \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0022",
+              "type": "PARAGRAPH",
+              "text": "ESPECIFICAÇÃO DO PRODUTO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0023",
+              "type": "PARAGRAPH",
+              "text": "3.1.\nA descrição da solução como um todo se encontra pormenorizada em tópico específico do Estudo \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0024",
+              "type": "PARAGRAPH",
+              "text": "Técnico Preliminar, apêndice deste Termo de Referência.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0025",
+              "type": "PARAGRAPH",
+              "text": "4. REQUISITOS DA CONTRATAÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0026",
+              "type": "PARAGRAPH",
+              "text": "Sustentabilidade\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0027",
+              "type": "PARAGRAPH",
+              "text": "4.1.\nO objeto da aquisição, além do cumprimento da Lei Municipal 6.797/2023, visa a mitigação de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0028",
+              "type": "PARAGRAPH",
+              "text": "impactos ambientais, neste caso, do correto descarte para a reciclagem, dos papéis gerados pela \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0001:b-0029",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "2 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Sede do executivo municipal, através da fragmentação, que serão enviados regularmente nos dias \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0006",
+              "type": "PARAGRAPH",
+              "text": "destinados à coleta seletiva, até que seja celebrado convênio entre o município e ONG de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0007",
+              "type": "PARAGRAPH",
+              "text": "reciclagem, para que a mesma, realize regularmente a coleta do material diretamente na Sede do \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0008",
+              "type": "PARAGRAPH",
+              "text": "executivo municipal.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Indicação de marcas ou modelos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "4.2.\nNão serão indicadas marcas ou modelos, sendo o objeto da aquisição condizente com as \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0011",
+              "type": "PARAGRAPH",
+              "text": "especificações no Estudo Técnico Preliminar, apêndice deste Termo de Referência.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Da vedação de contratação de marca ou produto \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0013",
+              "type": "PARAGRAPH",
+              "text": "4.3.\nNão será vedada, desde que condizente com as especificações no Estudo Técnico Preliminar, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0014",
+              "type": "PARAGRAPH",
+              "text": "apêndice deste Termo de Referência\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0015",
+              "type": "PARAGRAPH",
+              "text": "Da exigência de amostra\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0016",
+              "type": "PARAGRAPH",
+              "text": "4.4.\nNão serão exigidas amostras do item:\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Da exigência de carta de solidariedade\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0018",
+              "type": "PARAGRAPH",
+              "text": "4.5.\nEm caso de fornecedor revendedor ou distribuidor, será exigida carta de solidariedade emitida pelo \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0019",
+              "type": "PARAGRAPH",
+              "text": "fabricante, que assegure a consonância com as especificações no Estudo Técnico Preliminar, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0020",
+              "type": "PARAGRAPH",
+              "text": "apêndice deste Termo de Referência.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0021",
+              "type": "PARAGRAPH",
+              "text": "Subcontratação\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0022",
+              "type": "PARAGRAPH",
+              "text": "4.6.\nNão é admitida a subcontratação do objeto contratual.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0023",
+              "type": "PARAGRAPH",
+              "text": "Garantia da contratação\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0024",
+              "type": "PARAGRAPH",
+              "text": "4.7.\nNão haverá exigência da garantia da contratação nos termos dos arts. 96 e seguintes da Lei \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0025",
+              "type": "PARAGRAPH",
+              "text": "nº 14.133, de 2021, pelas razões constantes do Estudo Técnico Preliminar.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0026",
+              "type": "PARAGRAPH",
+              "text": "5. MODELO DE EXECUÇÃO DO OBJETO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0027",
+              "type": "PARAGRAPH",
+              "text": "Condições de Entrega\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0028",
+              "type": "PARAGRAPH",
+              "text": "5.1.\nO prazo de entrega dos bens é de até 30 (trinta) dias, contados da assinatura do contrato ou \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0029",
+              "type": "PARAGRAPH",
+              "text": "recebimento de instrumento equivalente (nota de empenho, autorização de fornecimento ou início \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0030",
+              "type": "PARAGRAPH",
+              "text": "de serviço, carta-contrato), em remessa única. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0002:b-0031",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "3 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "5.2.\nCaso não seja possível a entrega na data assinalada, a empresa deverá comunicar as razões \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "respectivas com pelo menos (5) dias de antecedência para que qualquer pleito de prorrogação de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "prazo seja analisado, ressalvadas situações de caso fortuito e força maior.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "5.3.\nOs bens deverão ser entregues no seguinte endereço: Almoxarifado Central da Prefeitura (Parque \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "de Máquinas), localizado na Rua Albatroz, 33, bairro Albatroz, Osório-RS. (Horário das 8 h às \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0010",
+              "type": "PARAGRAPH",
+              "text": "11h30min) e das 13h30min às 17 h, de segunda-feira a sexta-feira).\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Garantia, manutenção e assistência técnica\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0012",
+              "type": "PARAGRAPH",
+              "text": "5.4.\nO prazo de garantia é aquele estabelecido na Lei nº 8.078, de 11 de setembro de 1990 (Código de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0013",
+              "type": "PARAGRAPH",
+              "text": "Defesa do Consumidor) e descrito nas especificações no Estudo Técnico Preliminar, apêndice deste \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Termo de Referência. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0015",
+              "type": "PARAGRAPH",
+              "text": "6. MODELO DE GESTÃO DO CONTRATO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0016",
+              "type": "PARAGRAPH",
+              "text": "6.1.\nO contrato ou instrumento equivalente deverá ser executado fielmente pelas partes, e cada parte \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0017",
+              "type": "PARAGRAPH",
+              "text": "responderá pelas consequências de sua inexecução total ou parcial, de acordo com as cláusulas \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0018",
+              "type": "PARAGRAPH",
+              "text": "avençadas nesses documentos, nas normas da Lei nº 14.133/2021 e:\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0019",
+              "type": "PARAGRAPH",
+              "text": "a)\nno Edital, quando a licitação for na modalidade Pregão; \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0020",
+              "type": "PARAGRAPH",
+              "text": "6.2.\nAs comunicações entre a Administração e a contratada devem ser realizadas por escrito sempre que \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0021",
+              "type": "PARAGRAPH",
+              "text": "o ato exigir tal formalidade, admitindo-se o uso de mensagem eletrônica para esse fim.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0022",
+              "type": "PARAGRAPH",
+              "text": "6.3.\nA Administração poderá convocar representante da empresa para adoção de providências que \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0023",
+              "type": "PARAGRAPH",
+              "text": "devam ser cumpridas de imediato.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0024",
+              "type": "PARAGRAPH",
+              "text": "6.4.\n Após a assinatura do contrato ou recebimento de instrumento equivalente, a Administração poderá \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0025",
+              "type": "PARAGRAPH",
+              "text": "convocar o representante da empresa contratada para reunião inicial para apresentação do plano \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0026",
+              "type": "PARAGRAPH",
+              "text": "de fiscalização, que conterá informações acerca das obrigações contratuais, dos mecanismos de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0027",
+              "type": "PARAGRAPH",
+              "text": "fiscalização, das estratégias para execução do objeto e das sanções aplicáveis, dentre outros.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0028",
+              "type": "PARAGRAPH",
+              "text": "6.5.\nA execução do contrato poderá ser acompanhada e fiscalizada pelos fiscais do contrato, ou pelos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0029",
+              "type": "PARAGRAPH",
+              "text": "respectivos substitutos, conforme disposto no art. 48 de Decreto Municipal nº 133/2023.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0003:b-0030",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "4 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "7. CRITÉRIOS DE MEDIÇÃO E DE PAGAMENTO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Recebimento\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "7.1.\nOs bens serão recebidos provisoriamente, de forma sumária, no ato da entrega, juntamente com a \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0008",
+              "type": "PARAGRAPH",
+              "text": "nota fiscal ou instrumento de cobrança equivalente, pelo Almoxarifado ou pelo responsável por seu \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0009",
+              "type": "PARAGRAPH",
+              "text": "acompanhamento e fiscalização ou o seu suplente, para efeito de posterior verificação de sua \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0010",
+              "type": "PARAGRAPH",
+              "text": "conformidade com as especificações constantes no Termo de Referência e na proposta.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0011",
+              "type": "PARAGRAPH",
+              "text": "7.2.\nOs bens poderão ser rejeitados, no todo ou em parte, inclusive antes do recebimento provisório, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0012",
+              "type": "PARAGRAPH",
+              "text": "quando em desacordo com as especificações constantes no Termo de Referência e na proposta, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0013",
+              "type": "PARAGRAPH",
+              "text": "devendo ser substituídos no prazo de 10 (dez) dias, a contar da notificação da contratada, às suas \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0014",
+              "type": "PARAGRAPH",
+              "text": "custas, sem prejuízo da aplicação das penalidades.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0015",
+              "type": "PARAGRAPH",
+              "text": "7.3.\nO recebimento definitivo ocorrerá no prazo de 10 (dez) dias uteis, a contar do recebimento da nota \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0016",
+              "type": "PARAGRAPH",
+              "text": "fiscal ou instrumento de cobrança equivalente, pelo Almoxarifado ou pelo responsável por seu \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0017",
+              "type": "PARAGRAPH",
+              "text": "acompanhamento e fiscalização ou o seu suplente, após a verificação da qualidade e quantidade do \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0018",
+              "type": "PARAGRAPH",
+              "text": "material e consequente aceitação mediante termo detalhado.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0019",
+              "type": "PARAGRAPH",
+              "text": "7.4.\nO prazo para recebimento definitivo poderá ser excepcionalmente prorrogado, de forma justificada, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0020",
+              "type": "PARAGRAPH",
+              "text": "por igual período, quando houver necessidade de diligências para a aferição do atendimento das \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0021",
+              "type": "PARAGRAPH",
+              "text": "exigências contratuais.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0022",
+              "type": "PARAGRAPH",
+              "text": "7.5.\nNo caso de controvérsia sobre a execução do objeto, quanto à dimensão, qualidade e quantidade, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0023",
+              "type": "PARAGRAPH",
+              "text": "deverá ser observado o teor do art. 143 da Lei nº 14.133/2021, comunicando-se à empresa para \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0024",
+              "type": "PARAGRAPH",
+              "text": "emissão de Nota Fiscal pertinente à parcela incontroversa da execução do objeto, para efeito de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0025",
+              "type": "PARAGRAPH",
+              "text": "liquidação e pagamento.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0026",
+              "type": "PARAGRAPH",
+              "text": "7.6.\nO prazo para a solução, pelo contratado, de inconsistências na execução do objeto ou de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0027",
+              "type": "PARAGRAPH",
+              "text": "saneamento da nota fiscal ou de instrumento de cobrança equivalente, verificadas pela \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0028",
+              "type": "PARAGRAPH",
+              "text": "Administração durante a análise prévia à liquidação de despesa, não será computado para os fins do \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0029",
+              "type": "PARAGRAPH",
+              "text": "recebimento definitivo.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0030",
+              "type": "PARAGRAPH",
+              "text": "7.7.\nO recebimento provisório ou definitivo não excluirá a responsabilidade civil pela solidez e pela \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0031",
+              "type": "PARAGRAPH",
+              "text": "segurança dos bens nem a responsabilidade ético-profissional pela perfeita execução do contrato.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0004:b-0032",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "5 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Liquidação\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0006",
+              "type": "PARAGRAPH",
+              "text": "7.8.\nRecebida a Nota Fiscal ou documento de cobrança equivalente, correrá o prazo de dez dias úteis \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0007",
+              "type": "PARAGRAPH",
+              "text": "para fins de liquidação, na forma desta seção, prorrogáveis por igual período.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0008",
+              "type": "PARAGRAPH",
+              "text": "7.8.1.\nO prazo de que trata o item anterior será reduzido à metade, mantendo-se a possibilidade de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0009",
+              "type": "PARAGRAPH",
+              "text": "prorrogação, no caso de contratações decorrentes de despesas cujos valores não ultrapassem o \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0010",
+              "type": "PARAGRAPH",
+              "text": "limite de que trata o inciso II do art. 75 da Lei nº 14.133/2021.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0011",
+              "type": "PARAGRAPH",
+              "text": "7.9.\nPara fins de liquidação, o setor competente deverá verificar se a nota fiscal ou instrumento de \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0012",
+              "type": "PARAGRAPH",
+              "text": "cobrança equivalente apresentado expressa os elementos necessários e essenciais do documento, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0013",
+              "type": "PARAGRAPH",
+              "text": "tais como: \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0014",
+              "type": "PARAGRAPH",
+              "text": "a)\no prazo de validade;\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0015",
+              "type": "PARAGRAPH",
+              "text": "b)\na data da emissão; \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0016",
+              "type": "PARAGRAPH",
+              "text": "c)\nos dados do órgão contratante; \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0017",
+              "type": "PARAGRAPH",
+              "text": "d)\no valor a pagar; e \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0018",
+              "type": "PARAGRAPH",
+              "text": "e)\neventual destaque do valor de retenções tributárias cabíveis.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0019",
+              "type": "PARAGRAPH",
+              "text": "7.10.\nHavendo erro na apresentação da nota fiscal ou instrumento de cobrança equivalente, ou \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0020",
+              "type": "PARAGRAPH",
+              "text": "circunstância que impeça a liquidação da despesa, esta ficará sobrestada até que o contratado \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0021",
+              "type": "PARAGRAPH",
+              "text": "providencie as medidas saneadoras, reiniciando-se o prazo após a comprovação da regularização da \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0022",
+              "type": "PARAGRAPH",
+              "text": "situação, sem ônus ao contratante.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0023",
+              "type": "PARAGRAPH",
+              "text": "7.11.\nA nota fiscal ou instrumento de cobrança equivalente deverá ser obrigatoriamente acompanhado \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0024",
+              "type": "PARAGRAPH",
+              "text": "da comprovação da regularidade fiscal, mediante consulta aos sítios eletrônicos oficiais ou à \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0025",
+              "type": "PARAGRAPH",
+              "text": "documentação mencionada no art. 68 da Lei nº 14.133/2021. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0026",
+              "type": "PARAGRAPH",
+              "text": "7.12.\nEm se tratando de licitação na modalidade Pregão, a Administração deverá realizar consulta para: \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0027",
+              "type": "PARAGRAPH",
+              "text": "a)\nVerificar a manutenção das condições de habilitação exigidas no edital; \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0028",
+              "type": "PARAGRAPH",
+              "text": "b)\nIdentificar possível razão que impeça a participação em licitação, no âmbito do órgão ou entidade, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0029",
+              "type": "PARAGRAPH",
+              "text": "proibição de contratar com o Poder Público;\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0030",
+              "type": "PARAGRAPH",
+              "text": "c)\nOcorrências impeditivas indiretas.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0005:b-0031",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "6 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "7.13.\nConstatando-se, a situação de irregularidade do contratado, será providenciada sua notificação, por \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0006",
+              "type": "PARAGRAPH",
+              "text": "escrito, para que, no prazo de 5 (cinco) dias úteis, regularize sua situação ou, no mesmo prazo, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0007",
+              "type": "PARAGRAPH",
+              "text": "apresente sua defesa. O prazo poderá ser prorrogado uma vez, por igual período, a critério da \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Administração.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0009",
+              "type": "PARAGRAPH",
+              "text": "7.14.\nNão havendo regularização ou sendo a defesa considerada improcedente, a Administração deverá \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0010",
+              "type": "PARAGRAPH",
+              "text": "comunicar aos órgãos responsáveis pela fiscalização da regularidade fiscal quanto à inadimplência \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0011",
+              "type": "PARAGRAPH",
+              "text": "do contratado, bem como quanto à existência de pagamento a ser efetuado, para que sejam \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0012",
+              "type": "PARAGRAPH",
+              "text": "acionados os meios pertinentes e necessários para garantir o recebimento de seus créditos. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0013",
+              "type": "PARAGRAPH",
+              "text": "7.15.\nPersistindo a irregularidade, a Administração deverá adotar as medidas necessárias à rescisão \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0014",
+              "type": "PARAGRAPH",
+              "text": "contratual nos autos do processo administrativo correspondente, assegurada ao contratado a ampla \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0015",
+              "type": "PARAGRAPH",
+              "text": "defesa. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0016",
+              "type": "PARAGRAPH",
+              "text": "7.16.\nHavendo a efetiva execução do objeto, os pagamentos serão realizados normalmente, até que se \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0017",
+              "type": "PARAGRAPH",
+              "text": "decida pela rescisão do contrato ou instrumento equivalente, caso o contratado não regularize sua \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0018",
+              "type": "PARAGRAPH",
+              "text": "situação junto à Administração. \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Prazo de pagamento\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0020",
+              "type": "PARAGRAPH",
+              "text": "7.17.\nO pagamento será efetuado no prazo de até 10 (dez) dias úteis contados da finalização da \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0021",
+              "type": "PARAGRAPH",
+              "text": "liquidação da despesa, conforme seção anterior, nos termos da Instrução Normativa SEGES/ME nº \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0022",
+              "type": "PARAGRAPH",
+              "text": "77, de 2022.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0023",
+              "type": "PARAGRAPH",
+              "text": "7.18.\nNo caso de atraso pela Administração, os valores devidos ao contratado serão atualizados \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0024",
+              "type": "PARAGRAPH",
+              "text": "monetariamente entre o termo final do prazo de pagamento até a data de sua efetiva realização, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0025",
+              "type": "PARAGRAPH",
+              "text": "mediante aplicação do Índice de Preços ao Consumidor – Amplo (IPCA), divulgado pelo IBGE.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0026",
+              "type": "PARAGRAPH",
+              "text": "Forma de pagamento\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0027",
+              "type": "PARAGRAPH",
+              "text": "7.19.\nO pagamento será realizado por meio de ordem bancária, para crédito em banco, agência e conta \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0028",
+              "type": "PARAGRAPH",
+              "text": "correntes indicadas pelo contratado.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0029",
+              "type": "PARAGRAPH",
+              "text": "7.20.\nSerá considerada data do pagamento o dia em que constar como emitida a ordem bancária para \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0030",
+              "type": "PARAGRAPH",
+              "text": "pagamento.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0031",
+              "type": "PARAGRAPH",
+              "text": "7.21.\nQuando do pagamento, será efetuada a retenção tributária prevista na legislação aplicável.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0006:b-0032",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "7 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0005",
+              "type": "PARAGRAPH",
+              "text": "7.21.1. Independentemente do percentual de tributo inserido na planilha de preços, quando houver, serão \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0006",
+              "type": "PARAGRAPH",
+              "text": "retidos na fonte, quando da realização do pagamento, os percentuais estabelecidos na legislação \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0007",
+              "type": "PARAGRAPH",
+              "text": "vigente.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0008",
+              "type": "PARAGRAPH",
+              "text": "7.22.\nO contratado regularmente optante pelo Simples Nacional, nos termos da Lei Complementar \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0009",
+              "type": "PARAGRAPH",
+              "text": "nº 123, de 2006, não sofrerá a retenção tributária quanto aos impostos e contribuições abrangidos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "por aquele regime. No entanto, o pagamento ficará condicionado à apresentação de comprovação, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0011",
+              "type": "PARAGRAPH",
+              "text": "por meio de documento oficial, de que faz jus ao tratamento tributário favorecido previsto na \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0012",
+              "type": "PARAGRAPH",
+              "text": "referida Lei Complementar.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0013",
+              "type": "PARAGRAPH",
+              "text": "8. FORMA E CRITÉRIOS DE SELEÇÃO DO FORNECEDOR E FORMA DE FORNECIMENTO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Forma de seleção e critério de julgamento da proposta\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0015",
+              "type": "PARAGRAPH",
+              "text": "8.1.\nO fornecedor será selecionado por meio da realização de procedimento de LICITAÇÃO, na \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0016",
+              "type": "PARAGRAPH",
+              "text": "modalidade PREGÃO, sob a forma ELETRÔNICA, com adoção do critério de julgamento pelo MENOR \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0017",
+              "type": "PARAGRAPH",
+              "text": "PREÇO.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0018",
+              "type": "PARAGRAPH",
+              "text": "Forma de fornecimento\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0019",
+              "type": "PARAGRAPH",
+              "text": "8.2.\nO fornecimento do objeto será de forma imediata e integral, não resultando em obrigações futuras, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0020",
+              "type": "PARAGRAPH",
+              "text": "inclusive quanto a assistência técnica.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0021",
+              "type": "PARAGRAPH",
+              "text": "Exigências de habilitação\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0022",
+              "type": "PARAGRAPH",
+              "text": "8.3.\nPara fins de habilitação, deverá o licitante vencedor comprovar os requisitos de habilitação jurídica, \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0023",
+              "type": "PARAGRAPH",
+              "text": "fiscal, social e trabalhista; de qualificação econômico-financeira e técnica, se for o caso, conforme \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0024",
+              "type": "PARAGRAPH",
+              "text": "exigências e detalhamento constante:\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0025",
+              "type": "PARAGRAPH",
+              "text": "a)\nno Edital, quando a licitação for na modalidade Pregão; \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0026",
+              "type": "PARAGRAPH",
+              "text": "9. ESTIMATIVAS DO VALOR DA  AQUISIÇÃO\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0027",
+              "type": "PARAGRAPH",
+              "text": "9.1.\nO custo estimado total da aquisição é de R$ 11.436,00 (onze mil, quatrocentos e trinta e seis reais), \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0028",
+              "type": "PARAGRAPH",
+              "text": "conforme custos unitários apostos na tabela acima para o item 1.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0007:b-0029",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0001",
+              "type": "PARAGRAPH",
+              "text": "ESTADO DO RIO GRANDE DO SUL\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MUNICÍPIO DE OSÓRIO\nSecretaria Municipal de Administração\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Setor de Compras e Licitações\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "8 | 8\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "10. ADEQUAÇÃO ORÇAMENTÁRIA\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "10.1.\nAs despesas decorrentes da presente aquisição correrão à conta de recursos específicos \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": "consignados no Lei Orçamentária Anual do Município.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0008",
+              "type": "PARAGRAPH",
+              "text": "10.2.\nA aquisição será atendida pela seguinte dotação:\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0009",
+              "type": "PARAGRAPH",
+              "text": "07.047.0018.0541.0122.2283.34490520000000000000.07591075 – 984\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0010",
+              "type": "PARAGRAPH",
+              "text": "10.3.\nA dotação relativa aos exercícios financeiros subsequentes será indicada após aprovação da Lei \n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Orçamentária respectiva e liberação dos créditos correspondentes, mediante apostilamento.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Osório, 24 de maio de 2024.\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0013",
+              "type": "PARAGRAPH",
+              "text": "Identificação e assinatura do servidor (ou equipe) responsável\n"
+            },
+            {
+              "id": "88814181000130-1-000215-2024:tr:p-0008:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Av. Jorge Dariva nº 1251 – Centro - 95520-000 Osório-RS\nTel. (51) 3663-8228 l E-mail pregaoosorio@gmail.com\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "88814181000130-1-000215-2024:tr",
+            "page": 1,
+            "block_id": "88814181000130-1-000215-2024:tr:p-0001:b-0001",
+            "quote": "ESTADO DO RIO GRANDE DO SUL\n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-1",
+          "description": "Fragmentadora de papéis",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "88814181000130-1-000215-2024:tr",
+                  "page": 1,
+                  "block_id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0004",
+                  "quote": "01",
+                  "attr": "QUANTITY"
+                },
+                {
+                  "document_id": "88814181000130-1-000215-2024:tr",
+                  "page": 1,
+                  "block_id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0003",
+                  "quote": "UN",
+                  "attr": "unit"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "11436.00",
+              "unit": "BRL",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "88814181000130-1-000215-2024:tr",
+                  "page": 1,
+                  "block_id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0006",
+                  "quote": "R$ 11.436,00\n(à mediana)\n",
+                  "attr": "TOTAL_PRICE"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [],
+          "evidence": [
+            {
+              "document_id": "88814181000130-1-000215-2024:tr",
+              "page": 1,
+              "block_id": "88814181000130-1-000215-2024:tr:p-0001:t-0001:r-0002:c-0002",
+              "quote": "FRAGMENTADORA DE PAPÉIS, com capacidade\npara fragmentar automatci amente 300 folhas\nempilhadas e manualmente até 10 folhas;",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 30,
+          "unit": "dias",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "88814181000130-1-000215-2024:tr",
+              "page": 2,
+              "block_id": "88814181000130-1-000215-2024:tr:p-0002:b-0028",
+              "quote": "5.1.\nO prazo de entrega dos bens é de até 30 (trinta) dias, contados da assinatura do contrato ou \n",
+              "attr": "DELIVERY_DEADLINE"
+            }
+          ],
+          "review_status": "EXTRACTED"
+        },
+        {
+          "field_type": "DELIVERY_LOCATION",
+          "value": "Almoxarifado Central da Prefeitura",
+          "unit": null,
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "88814181000130-1-000215-2024:tr",
+              "page": 3,
+              "block_id": "88814181000130-1-000215-2024:tr:p-0003:b-0008",
+              "quote": "5.3.\nOs bens deverão ser entregues no seguinte endereço: Almoxarifado Central da Prefeitura (Parque \n",
+              "attr": "DELIVERY_LOCATION"
+            }
+          ],
+          "review_status": "EXTRACTED"
+        }
+      ],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

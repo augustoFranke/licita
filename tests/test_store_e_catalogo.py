@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from licita_corpus.catalog import montar_processo, montar_relacoes
+from licita_corpus.catalog import estatisticas, montar_processo, montar_relacoes
 from licita_corpus.store import identificar_extensao, processo_id, slug
 
 
@@ -76,24 +76,56 @@ class TestMontagemDeProcesso:
             "cnpj_orgao": "10806496000149",
             "ano_compra": 2025,
             "sequencial_compra": 70,
-            "orgao": "INSTITUTO FEDERAL DO PIAUI",
-            "esfera": "F",
+            "orgao": "MUNICIPIO DE EXEMPLO",
+            "esfera": "M",
             "uf": "PI",
             "objeto": "Aquisição de material de limpeza",
             "categoria_objeto": "material_de_limpeza_e_higiene",
+            "modalidade_id": 6,
+            "instrumento_convocatorio_codigo": 1,
+            "amparo_legal_codigo": 1,
+            "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
         }
 
     def test_funciona_sem_metadados_extras(self, compra):
         registro = montar_processo(compra, None, [], [])
         assert registro["processo_id"] == "10806496000149-1-000070-2025"
         assert registro["fontes"]["portal_pncp"].endswith("/editais/10806496000149/2025/70")
-        assert registro["cadeia"] == {"ETP": [], "TR": [], "EDITAL": [], "CONTRATO": []}
+        assert registro["cadeia"] == {
+            "DFD": [],
+            "ETP": [],
+            "TR": [],
+            "EDITAL": [],
+            "CONTRATO": [],
+            "PESQUISA_PRECOS": [],
+        }
+        assert registro["perfil_id"] == "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+        assert registro["perfil_status"] == registro["perfil_inicial"] == "SUPPORTED"
+        assert registro["scope_status"] == "SUPPORTED"
+
+    def test_estatisticas_separam_elegiveis_de_controle_negativo(self, compra):
+        elegivel = montar_processo(compra, None, [], [])
+        fora = montar_processo(
+            {**compra, "numero_controle_pncp": "10806496000149-1-000071/2025", "objeto": "Aquisição de energia elétrica"},
+            None,
+            [],
+            [],
+        )
+
+        assert fora["scope_status"] == "OUT_OF_SCOPE"
+        # O estado de escopo explícito prevalece sobre aliases legados obsoletos.
+        fora["perfil_status"] = fora["perfil_inicial"] = "SUPPORTED"
+        resumo = estatisticas([elegivel, fora], [])
+        assert resumo["processos"] == 2
+        assert resumo["processos_elegiveis"] == 1
+        assert resumo["processos_out_of_scope"] == 1
+        assert resumo["categorias_distintas_elegiveis"] == 1
 
     def test_agrupa_documentos_por_papel(self, compra):
         documentos = [
             {"documento_id": "x#tr-01", "papel": "TR"},
             {"documento_id": "x#etp-02", "papel": "ETP"},
-            {"documento_id": "x#outro", "papel": "OUTRO"},
+            {"documento_id": "x#outro", "papel": "OUTROS"},
         ]
         registro = montar_processo(compra, None, documentos, [])
         assert registro["cadeia"]["TR"] == ["x#tr-01"]
@@ -125,7 +157,14 @@ class TestMontagemDeProcesso:
         registro = montar_processo(compra, None, documentos, [])
         escopo = registro["escopo_documental"]
         assert escopo["um_documento_por_papel"] is False
-        assert escopo["contagem"] == {"ETP": 1, "TR": 2, "EDITAL": 1, "CONTRATO": 1}
+        assert escopo["contagem"] == {
+            "DFD": 0,
+            "ETP": 1,
+            "TR": 2,
+            "EDITAL": 1,
+            "CONTRATO": 1,
+            "PESQUISA_PRECOS": 0,
+        }
 
     def test_cadeia_completa_com_um_documento_por_papel(self, compra):
         documentos = [

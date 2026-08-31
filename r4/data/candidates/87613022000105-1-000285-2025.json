@@ -1,0 +1,1253 @@
+{
+  "id": "87613022000105-1-000285-2025",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "87613022000105-1-000285-2025:etp",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "etp-07-63900883322446965863900880539962490953947-rev-0-estudo-tecni.pdf",
+      "sections": [
+        {
+          "id": "87613022000105-1-000285-2025:etp:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0021",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0001",
+              "type": "PARAGRAPH",
+              "text": "PEDIDO DE COMPRA:   000191 / 2025\nEMISSÃO: 01/12/2025\nSECRETARIA: SECRETARIA MUNICIPAL DE AGRICULTURA E DESENVOLVIMENTO RURAL - SEMAG\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Objetivo: AQUISIÇÃO DE DRONES, DESTINADOS AO CORPO DE BOMBEIROS E A SECRETARIA MUNICIPAL DE\nAGRICULTURA E DESENVOLVIMENTO RURAL DE SÃO LUIZ GONZAGA/RS.\nJustificativa: O equipamento que será adquirido pelo Corpo de Bombeiros será utilizado em ações de busca e salvamento de\npessoas desaparecidas, monitoramento de incêndios, apoio em situações de desastres naturais e reconhecimento de áreas de\nrisco ou de difícil acesso, contribuindo para a eficiência das operações de segurança pública. O equipamento que será\nadquirido pela Secretaria Municipal de Agricultura e Desenvolvimento Rural tem por objetivo o apoio técnico, mapeamento,\nmonitoramento e fiscalização de atividades e serviços rurais no âmbito do município. A aquisição dos drones com câmera\ntérmica visa aprimorar a capacidade operacional dos órgãos municipais e regionais de resposta a emergências. Localização\nde vítimas em áreas de mata, alagamentos ou baixa visibilidade; Monitoramento aéreo em incêndios florestais ou urbanos;\nApoio à Defesa Civil em situações de risco geológico e hidrológico; Redução de custos e riscos humanos em operações de\ncampo; Apoio técnico, mapeamento, monitoramento e fiscalização de atividades e serviços rurais no âmbito do município. A\nutilização de tecnologia aérea amplia significativamente a rapidez e a precisão das ações de resgate e monitoramento,\natendendo às diretrizes de eficiência e economicidade previstas na Lei nº 14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0003",
+              "type": "PARAGRAPH",
+              "text": "DESCRIÇÃO DA NECESSIDADE\nO Município apresenta necessidade de aquisição de drones equipados com câmeras de alta resolução, incluindo sensores\ntérmicos quando aplicável, para apoiar operações do Corpo de Bombeiros e da Secretaria Municipal de Agricultura e\nDesenvolvimento Rural. O uso desses equipamentos permitirá monitoramento aéreo em tempo real, registro fotográfico e\nvideográfico de alta qualidade e inspeção de áreas de difícil acesso, otimizando a atuação das equipes e a aplicação dos\nrecursos públicos.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "1. Corpo de Bombeiros\nAtualmente, as operações de busca e salvamento, monitoramento de incêndios e inspeção de áreas de risco dependem de\nobservação direta e recursos terrestres, métodos limitados em alcance, agilidade e segurança, especialmente durante a noite\nou em condições de baixa visibilidade.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0005",
+              "type": "PARAGRAPH",
+              "text": "O drone com câmera térmica permitirá:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Localização rápida e precisa de pessoas desaparecidas em áreas de mata, alagamentos ou terrenos acidentados;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0007",
+              "type": "PARAGRAPH",
+              "text": "Monitoramento de incêndios florestais e urbanos, com identificação de focos de calor;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Apoio à Defesa Civil em situações de risco geológico e hidrológico;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Reconhecimento e mapeamento de áreas de difícil acesso sem exposição de pessoal;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Registro detalhado das operações para planejamento e análise futura.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Benefícios operacionais:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Maior autonomia e cobertura em operações;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0013",
+              "type": "PARAGRAPH",
+              "text": "Redução do tempo de resposta;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Aumento da segurança das equipes;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0015",
+              "type": "PARAGRAPH",
+              "text": "Otimização de recursos humanos e logísticos;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0016",
+              "type": "PARAGRAPH",
+              "text": "Atendimento às diretrizes de eficiência, economicidade e transparência da Lei nº 14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0017",
+              "type": "PARAGRAPH",
+              "text": "2. Secretaria Municipal de Agricultura e Desenvolvimento Rural\nA secretaria atende pequenos agricultores, garantindo prestação de serviços e acompanhamento das atividades desenvolvidas\ncom maquinários públicos. A aquisição de um drone com câmera de alta resolução permitirá:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0018",
+              "type": "PARAGRAPH",
+              "text": "Fiscalização e monitoramento das ações realizadas em áreas rurais;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Verificação do correto uso de máquinas e equipamentos agrícolas;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0001:b-0020",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 1 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0012",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0001",
+              "type": "PARAGRAPH",
+              "text": "Planejamento de intervenções mais eficazes com base em imagens detalhadas;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Redução de tempo e custos das inspeções presenciais, aumentando a eficiência da secretaria.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0003",
+              "type": "PARAGRAPH",
+              "text": "A incorporação dessa tecnologia é essencial para modernizar os processos de fiscalização, assegurar a aplicação eficiente\ndos recursos públicos e melhorar a prestação de serviços aos pequenos produtores rurais.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Conclusão\nDessa forma, a presente contratação visa, por meio da aquisição dos drones, ampliar a capacidade técnica e operacional do\nCorpo de Bombeiros e da Secretaria Municipal de Agricultura e Desenvolvimento Rural, proporcionando maior eficiência,\nsegurança e precisão nas operações e garantindo atendimento integral às demandas da população do município.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": "ALINHAMENTO ENTRE A CONTRATAÇÃO E O PLANEJAMENTO\nA contratação pretendida está prevista no Plano de Contratações Anual do Município de São Luiz Gonzaga/RS, conforme os\nitens: \"44253 - DRONE COM CÂMERA TÉRMICA\"; \"44298 - DRONE\", encontrando-se assim alinhada ao planejamento\nestratégico e orçamentário desta Administração.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Dessa forma, a contratação se apresenta como uma ação planejada, necessária e coerente com as políticas públicas\nmunicipais de segurança, defesa civil e gestão de riscos, conforme orientações do Decreto Federal nº 10.947/2022 e da Lei nº\n14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0007",
+              "type": "PARAGRAPH",
+              "text": "DESCRIÇÃO DOS REQUISITOS DA CONTRATAÇÃO\nO objeto possui natureza comum, tendo em vista que seus padrões de sempenho e qualidade podem ser objetivamente\ndenfinidos pelo edital, por meio de especificações usuais de mercado, nos termos do art. 6º, inciso XIII, da Lei Federal Nº\n14.133/2021. A contratação será realizada por meio de licitação, na modalidade Pregão, na sua forma eletrônica, com critério\nde julgamento por menor preço, nos termos dos artigos 6º inciso XLI, 17, §2º e 34, todos da Lei Federal Nº 14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0009",
+              "type": "PARAGRAPH",
+              "text": "1. PECULIAREDADES DO OBJETO:\n1.1. CARACTERISTICAS:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "ITEM 01: DRONE DE IMAGENS AEREAS DE ALTA DENIFIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0002:b-0011",
+              "type": "PARAGRAPH",
+              "text": "ITEM 02: DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K, garantindo\nimagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras públicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em tempo real e\ngravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 2 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0010",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": "Acessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de transporte, garantindo\noperação contínua e transporte seguro.\nEstrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para estabilização e\nposicionamento, garantindo segurança operacional adequada.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "A aquisição dos equipamentos, da qual trata a presente Licitação, deverá ser prestada da seguinte forma:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "2. PRAZO, FORMA E LOCAIS DE ENTREGA:\n2.1. Após a homologação do processo de Licitação, um contrato será firmado junto a empresa vencedora. Após a assinatura do\ncontrato, o Setor Administrativo da SEMAG enviará uma Autorização de Fornecimento para a empresa.\n2.2 O fornecimento do objeto contratado se dará no prazo máximo de 30 (trinta) dias, podendo ser prorrogado, uma única\nvez, por igual período, contados do recebimento da Autorização de Fornecimento acompanhada de nota de empenho\ncorrespondente emitida pelo CONTRATANTE.\nA entrega DEVERÁ ocorrer na sede da Prefeitura, na Rua Venâncio Aires, nº 2438, Bairro Centro - São Luiz Gonzaga, RS,\nCEP 97.800-000.\n2.3. A ENTREGA DEVERA SER FEITA SEM CUSTOS PARA O MUNICÍPIO. Caso não seja possível a entrega do veículo\ndentro do prazo estabelecido, a empresa vencedora deverá comunicar para a SEMAG as razões para a impossibilidade da\nentrega, no prazo de 03 (três) dias úteis após o recebimento da Autorização de Fornecimento.\n2.4. O RECEBIMENTO DO OBJETO NÃO EXCLUI A RESPONSABILIDADE DO LICITANTE CONTRATADO QUANTO AOS\nVÍCIOS OCULTOS, OU SEJA, SÓ MANIFESTADOS QUANDO DA SUA NORMAL UTILIZAÇÃO.\n2.5. POR OCASIÃO DA ENTREGA, CASO SEJA DETECTADO QUE OS PRODUTOS NÃO ATENDAM AS\nESPECIFICAÇÕES DO OBJETO LICITADO, PODERÁ A ADMINISTRAÇÃO REJEITÁ-LO, INTEGRALMENTE OU EM PARTE,\nOBRIGANDO-SE A LICITANTE A PROVIDENCIAR A SUBSTITUIÇÃO DO BEM NÃO ACEITO, NO PRAZO DE 15 (QUINZE)\nDIAS CONTADOS DE SUA NOTIFICAÇÃO.\n2.6. OS ITENS A SEREM ENTREGUES DEVERÃO SER ADEQUADAMENTE ACONDICIONADOS, DE FORMA A PERMITIR\nA COMPLETA PRESERVAÇÃO DO MESMO E SUA SEGURANÇA DURANTE O TRANSPORTE.\n2.7. A NOTA FISCAL DEVERÁ SER ENTREGUE JUNTO COM O OBJETO.\n2.8. A empresa contratada deverá no tocante ao fornecimento e entrega do item objeto deste Certame, OBEDECER\nrigorosamente todas as disposições legais pertinentes.\n2.9. A contratada deverá proceder à demonstração técnica de funcionamento do equipamento no ato da entrega,\nassegurando a plena operação e treinamento básico dos servidores designados.\n2.10. O objeto do presente contrato será recebido: Provisoriamente, de forma sumária, pelo responsável por seu\nacompanhamento e fiscalização, designado pelo CONTRATANTE, com verificação posterior da conformidade do material com\nas exigências contratuais. Definitivamente por servidor (GESTOR) ou comissão designada pela autoridade competente,\nmediante assinatura de termo circunstanciado comprovando o atendimento das exigências contratuais.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "3. PAGAMENTO:\n3.1 Os pagamentos serão efetuados em até 30 (trinta) dias úteis contados da apresentação da nota fiscal ou nota fiscal fatura à\nSecretaria Municipal da Fazenda, devendo constar nela ou acompanhá-la o atestado de recebimento expedido e devidamente\nassinado pelo fiscal do contrato. O documento fiscal deverá ser do estabelecimento que apresentou a proposta vencedora da\nlicitação.\n3.2.Quando do pagamento, será efetuada a retenção tributária prevista na legislação aplicável.\n \n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "4. OBRIGAÇÕES DO CONTRATANTE:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "São obrigações do CONTRATANTE:\n4.1. Exigir o cumprimento de todas as obrigações assumidas pelo CONTRATADA, de acordo com o contrato e seus anexos;\n4.2. Assegurar à CONTRATADA as condições necessárias à regular execução do contrato.\n4.3. Determinar as providências necessárias quando o fornecimento do objeto não observar a forma estipulada no edital e neste\ncontrato, sem prejuízo da aplicação das sanções cabíveis, quando for o caso.\n4.4. Acompanhar e fiscalizar a execução do contrato e o cumprimento das obrigações pelo Contratado;\n4.5. Efetuar o devido pagamento à CONTRATADA, conforme definido neste contrato.\n4.6. Emitir decisão sobre todas as solicitações e reclamações relacionadas à execução do presente Contrato, ressalvados os\nrequerimentos manifestamente impertinentes, meramente protelatórios ou de nenhum interesse para a boa execução do ajuste.\n4.6.1. A Administração terá o prazo de 01 (um) mês, a contar da data do protocolo do requerimento para decidir, admitida a\nprorrogação motivada, por igual período.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 3 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": "4.7. Responder eventuais pedidos de reestabelecimento do equilíbrio econômico-financeiro feitos pelo contratado no prazo\nmáximo de 01 (um) mês.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "São obrigações da CONTRATADA:\n4.8. Fornecer o objeto de acordo com as especificações, quantidade e prazos do edital e deste contrato, bem como nos termos\nda sua proposta, assumindo exclusivamente seus os riscos e as despesas decorrentes da boa e perfeita execução do objeto.\n4.9. Responsabilizar-se pela integralidade dos ônus, dos tributos, dos emolumentos, dos honorários e das despesas incidentes\nsobre o objeto contratado, bem como por cumprir todas as obrigações trabalhistas, previdenciárias e acidentárias relativas aos\nempregados que utilizar para a execução do objeto, inclusive as decorrentes de convenções, acordos ou dissídios coletivos.\n4.10. Responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com o Código de Defesa do Consumidor (Lei\nnº 8.078, de 1990);\n4.11. Responsabilizar-se pelos vícios e danos decorrentes da execução do objeto, bem como por todo e qualquer dano\ncausado à Administração ou terceiros, não reduzindo essa responsabilidade a fiscalização ou o acompanhamento da execução\ncontratual pelo contratante, que ficará autorizado a descontar dos pagamentos devidos ou da garantia, caso exigida, o valor\ncorrespondente aos danos sofridos;\n4.12. Atender às determinações regulares emitidas pelo fiscal ou gestor do contrato ou autoridade superior (art. 137, II, da Lei\nn.º 14.133, de 2021) e prestar todo esclarecimento ou informação por eles solicitados;\n4.13. Manter durante a execução do contrato, em compatibilidade com as obrigações assumidas, todas as condições de\nhabilitação e qualificação exigidas na licitação;\n4.14. Cumprir as exigências de reserva de cargos prevista em lei, bem como em outras normas específicas, para pessoa com\ndeficiência, para reabilitado da Previdência Social e para aprendiz.\n4.15. Zelar pelo cumprimento, por parte de seus empregados, das normas do Ministério do Trabalho, cabendo à\nCONTRATADA o fornecimento de equipamentos de proteção individual (EPI) e quaisquer outros insumos necessários à\nprestação dos serviços.\n4.16. Arcar com o ônus decorrente de eventual equívoco no dimensionamento dos quantitativos de sua proposta, inclusive\nquanto aos custos variáveis decorrentes de fatores futuros e incertos, devendo complementá-los, caso o previsto inicialmente\nem sua proposta não seja satisfatório para o atendimento do objeto da contratação, exceto quando ocorrer algum dos eventos\narrolados no art. 124, II, d, da Lei nº 14.133, de 2021.\n4.17. Reparar e/ou corrigir, às suas expensas, as entregas em que for verificado vício, defeito ou incorreção resultantes da\nexecução do objeto em desacordo com o pactuado.\n4.18. Executar as obrigações assumidas no presente contrato por seus próprios meios, não sendo admitida a subcontratação,\nsalvo expressa autorização do CONTRATANTE.\n4.19. Substituir, sem ônus adicional, o produto em caso de defeito de fabricação identificado no período de garantia.\n4.20. Garantir o funcionamento do equipamento durante o período de garantia;\n4.21. Prestar suporte técnico e orientações necessárias ao uso do equipamento.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "5. SANÇÕES:\nO licitante ou o contratado será responsabilizado administrativamente pelas seguintes infrações:\nI. Dar causa à inexecução parcial do contrato;\nII. Dar causa à inexecução parcial do contrato que cause grave dano à Administração, ao funcionamento dos serviços públicos\nou ao interesse coletivo;\nIII. Dar causa à inexecução total do contrato;\nIV. Deixar de entregar a documentação exigida para o certame;\nV. Não manter a proposta, salvo em decorrência de fato superveniente devidamente justificado;\nVI. Não celebrar o contrato ou não entregar a documentação exigida para a contratação, quando convocado dentro do prazo de\nvalidade de sua proposta; VII. Ensejar o retardamento da execução ou da entrega do objeto da licitação sem motivo justificado;\nVIII. Apresentar declaração ou documentação falsa exigida para o certame ou prestar declaração falsa durante a licitação ou a\nexecução do contrato;\nIX. Fraudar a licitação ou praticar ato fraudulento na execução do contrato;\nX. Comportar-se de modo inidôneo ou cometer fraude de qualquer natureza;\nXI. Praticar atos ilícitos com vistas a frustrar os objetivos da licitação;\nXII. Praticar ato lesivo previsto no art. 5º da Lei nº 12.846, de 1º de agosto de 2013.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Serão aplicadas ao responsável pelas infrações administrativas previstas nesta Lei as seguintes sanções:\nI. Advertência;\nII. Multa;\nIII. Impedimento de licitar e contratar;\nIV. Declaração de inidoneidade para licitar ou contratar.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0004:b-0006",
+              "type": "PARAGRAPH",
+              "text": "6. EXTINÇÃO\n6.1. O contrato será extinto quando cumpridas as obrigações de ambas as partes, ainda que isso ocorra antes do prazo\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 4 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "estipulado.\n6.2.  O contrato poderá ser extinto nas hipóteses previstas no artigo 137 da Lei nº 14.133/2021, inclusive por acordo entre as\npartes, assegurados o contraditório e a ampla defesa.\n6.2.1. Nesta hipótese, aplicam-se também os artigos 138 e 139 da mesma Lei.\n6.3. A extinção do contrato não configura óbice para o reconhecimento do desequilíbrio econômico-financeiro, hipótese em que\nserá concedida indenização por meio de termo indenizatório (art. 131, caput, da Lei n.º 14.133, de 2021).\n6.4. O contrato poderá ser extinto caso se constate que o contratado mantém vínculo de natureza técnica, comercial, econômica,\nfinanceira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que tenha desempenhado\nfunção na licitação ou atue na fiscalização ou na gestão do contrato, ou que deles seja cônjuge, companheiro ou parente em\nlinha reta, colateral ou por afinidade, até o terceiro grau (art. 14, inciso IV, da Lei n.º 14.133, de 2021).\nA contratação será realizada por meio de licitação, na modalidade Pregão, na sua forma eletrônica, com critério de julgamento\npor menor preço, nos termos dos artigos 6º, inciso XLI, 17, § 2º, e 34, todos da Lei Federal nº 14.133/2021. Para fornecimento\ndo objeto pretendido, os eventuais interessados deverão comprovar que atuam em ramo de atividade compatível com o objeto\nda licitação, bem como apresentar os seguintes documentos a título habilitação, nos termos do art. 62 da Lei Federal nº\n14.133/2021:\nHabilitação jurídica:\n- Cópia do registro comercial, no caso de empresa individual;\n- Cópia do ato constitutivo, estatuto ou contrato social em vigor, devidamente registrado, em se tratando de sociedades\ncomerciais, e, no caso de sociedade por ações, acompanhado de documentos de eleição de seus administradores;\n- Comprovante de inscrição no Cadastro de Pessoas Físicas (CPF), se o licitante for pessoa natural, ou no Cadastro Nacional\nda Pessoa Jurídica (CNPJ), se o licitante for pessoa jurídica;\n- Cópia do decreto de autorização, em se tratando de empresa ou sociedade estrangeira em funcionamento no País, e ato de\nregistro ou autorização para funcionamento expedido pelo órgão competente, quando a atividade assim o exigir.\nHabilitação fiscal, social e trabalhista:\n- Comprovante de inscrição no cadastro de contribuintes estadual e/ou municipal, se houver, relativo ao domicílio ou sede do\nlicitante, pertinente ao seu ramo de atividade e compatível com o objeto contratual;\n- Prova de regularidade perante a Fazenda federal, estadual e/ou municipal do domicílio ou sede do licitante, e com o Município\nde São Luiz Gonzaga/RS, nos termos do art. 193 do Código Tributário Nacional, ou outra equivalente, na forma da lei;\n- Prova de regularidade relativa à Seguridade Social e ao FGTS, que demonstre cumprimento dos encargos sociais instituídos\npor lei;\n- Prova de regularidade perante a Justiça do Trabalho;\n- Declaração de cumprimento do disposto no inciso XXXIII do art. 7º da Constituição Federal (realizada diretamente no sistema\nquando do lançamento da proposta).\nHabilitação econômico-financeira:\n- Certidão negativa de falência expedida pelo distribuidor da sede da pessoa jurídica, em prazo não superior a 90 (noventa)\ndias da data designada para a apresentação do documento.\nESTIMATIVA DAS QUANTIDADES\nAs quantidades estimadas para esta licitação são baseadas no histórico de utilização, na análise das demandas operacionais\ndo Corpo de Bombeiros, no contexto atual de atuação da Secretaria Municipal de Agricultura e Desenvolvimento Rural e nos\nrecursos financeiros disponíveis, justificando-se o quantitativo proposto em razão do expressivo número de atendimentos\nrealizados e da necessidade de fiscalização e monitoramento dessas ações.\nAssim sendo, segue o cálculo das quantidades: \n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "QUANT."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DESCRIÇÃO"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0005:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 5 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Garantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”;\nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "02"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K,\ngarantindo imagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras\npúblicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em\ntempo real e gravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nAcessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de\ntransporte, garantindo operação contínua e transporte seguro.\nEstrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para\nestabilização e posicionamento, garantindo segurança operacional adequada.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ALTERNATIVAS DISPONÍVEIS NO MERCADO\nConforme pesquisa de mercado realizada, para solução da necessidade administrativa objeto do presente Estudo Técnico\nPreliminar, vislumbra-se possível, sob os aspectos técnico e econômico, a contratação de empresas especializadas em\ncomércio, distribuição e fornecimento de drones profissionais com câmera térmica, equipamentos eletrônicos de alta\nprecisão e soluções de monitoramento aéreo.\nNeste sentido, seguem algumas referências de potenciais fornecedores que comercializam produtos compatíveis com o\nobjeto:\nDJI Store Brasil – modelos profissionais de drones com câmera térmica;\nAutel Robotics – kits de drones para inspeção e monitoramento;\nFornecedores nacionais cadastrados no PNCP (Portal Nacional de Contratações Públicas) com histórico de\nfornecimento de drones para órgãos de segurança pública.\nAs informações acima foram obtidas por meio de pesquisa em sites de fabricantes e distribuidores, consulta ao PNCP,\nalém de levantamentos realizados junto a fornecedores especializados no setor.\nTais referências foram obtidas por meio de pesquisas feitas para atender à demanda no licitacon.gov.br, www.gov.br/compras e\nPNCP, efetuadas com base no Decreto Municipal n° 6871 de 2022, que “Estabelece o procedimento administrativo para a\nrealização de pesquisa de preços para aquisição de bens, contratação de serviços em geral e para contratação de obras e\nserviços de engenharia no âmbito do Município de São Luiz Gonzaga, nos termos da Lei Federal nº 14.133/2021”.\nA análise realizada demonstra que a contratação de empresas com experiência comprovada no fornecimento de drones\nprofissionais e acessórios, aliada à compatibilidade técnica do equipamento com as necessidades do Corpo de\nBombeiros e da Defesa Civil, garante viabilidade técnica e econômica do processo, atendendo aos princípios da\neficiência, economicidade e planejamento.\n \nDentre as possíveis soluções para o atendimento da demanda, foram avaliadas as seguintes alternativas:\n1. Aquisição direta de drones e equipamentos associados (compra):\nTrata-se da opção mais indicada e tecnicamente adequada, considerando a necessidade permanente e contínua do uso\ndos equipamentos pela Secretaria. A compra garante a disponibilidade imediata dos drones, autonomia operacional e\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0006:b-0014",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 6 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "melhor aproveitamento dos recursos públicos ao longo do tempo, visto que o investimento inicial se dilui frente ao uso\nfrequente e previsível dos equipamentos. Além disso, a aquisição possibilita maior controle sobre a manutenção,\nconservação e uso, reduzindo a dependência de fornecedores externos.\n2. Locação de drones e equipamentos associados:\nA hipótese de locação foi analisada, porém descartada por não apresentar vantajosidade econômica e operacional a\nlongo prazo. Apesar de reduzir o investimento inicial, essa alternativa acarretaria custos recorrentes e contínuos ao erário,\nalém de sujeitar o Município à disponibilidade de fornecedores e prazos de entrega, o que poderia comprometer a\nexecução das atividades de monitoramento e mapeamento em períodos críticos. Outro fator relevante é a limitação\ncontratual, que geralmente restringe a personalização e adequação dos drones às demandas específicas da Secretaria,\ncomo sensores, câmeras de alta resolução ou capacidade de voo prolongado.\n3. Cessão ou compartilhamento de drones com outros órgãos públicos:\nTambém foi considerada a possibilidade de firmar parcerias com outras secretarias municipais ou entes públicos para o\nuso compartilhado dos equipamentos. Entretanto, essa alternativa se mostrou inviável diante da descentralização das\natividades executadas pela Secretaria e da alta demanda por uso dos drones em diferentes localidades e períodos do\nano. O compartilhamento poderia resultar em indisponibilidade dos equipamentos quando mais necessários, afetando\ndiretamente a prestação dos serviços, como monitoramento agrícola, fiscalização ambiental ou levantamento geoespacial.\n4. Contratação de serviços terceirizados:\nOutra opção analisada seria a terceirização das atividades que exigem drones, mediante a contratação de empresas\nespecializadas que já possuam os equipamentos necessários. Todavia, essa solução apresenta custo significativamente\nmais elevado no médio e longo prazo e não garante a mesma flexibilidade e autonomia operacional que a posse dos\ndrones. Além disso, a necessidade de execução contínua e sazonal das atividades inviabiliza depender exclusivamente da\nagenda e disponibilidade de terceiros.\nDiante da análise comparativa das alternativas, a aquisição dos drones demonstra ser a alternativa mais eficiente, segura\ne vantajosa sob os aspectos técnico e econômico. Ela garante autonomia operacional, disponibilidade permanente dos\nequipamentos e maior controle sobre o uso e a manutenção, representando o melhor custo-benefício para a\nAdministração Pública.\nConsiderando essas especificações, os drones a serem adquiridos foram descritos de forma a garantir a plena\ncompatibilidade com as atividades da Secretaria, especialmente no que se refere à autonomia de voo, tipo de sensor,\ncapacidade de carga e integração com softwares de mapeamento e monitoramento. Tal compatibilidade assegura a\neficiência, segurança e economicidade na operação dos drones, evitando a necessidade de aquisições adicionais de\nequipamentos ou adaptações tecnológicas. Com isso, a escolha dos itens a serem adquiridos visa otimizar o uso da\ntecnologia disponível, promovendo a racionalização dos recursos públicos e a efetividade na execução das atividades\ndesempenhadas pela Secretaria.\nESTIMATIVA DO VALOR DA CONTRATAÇÃO\nEstima-se para a contratação almejada o valor total de R$ 54.311,96 (cinquenta e quatro mil, trezentos e onze reais e\nnoventa e seis centavos).\nITEM QUANT. DESCRIÇÃO\nVALOR\nUNITÁRIO\nVALOR\nTOTAL\nDRONE DE IMAGENS AEREAS\nDE ALTA DENIFIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de\n45 minutos por bateria;\nCâmera óptica de 20\nmegapixels, com gravação em\nresolução 4K;\nSistema de estabilização de voo\ntriplo, GPS e retorno automático;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "QUANT."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DESCRIÇÃO"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "VALOR\nUNITÁRIO"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "VALOR\nTOTAL"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE DE IMAGENS AEREAS\nDE ALTA DENIFIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de\n45 minutos por bateria;\nCâmera óptica de 20\nmegapixels, com gravação em\nresolução 4K;\nSistema de estabilização de voo\ntriplo, GPS e retorno automático;"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0007:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 7 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nCOMPRAS\nESTUDO TÉCNICO PRELIMIN"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "AR"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0001:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Impressão: 09/12/2025\nHora: 09:30:08"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Resistência a ventos de até 10\nm/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e\ncarregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta\nresolução, com múltiplas paletas\nde cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador\nremoto, baterias extras,\ncarregadores e estojo rígido de\ntransporte.\nEntrega acompanhada de nota\nfiscal, manual técnico e\ncertificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "R$\n48,296,29"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n48.296,29"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "02"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Peso máximo de decolagem:\nInferior a 300 gramas.\nCâmera principal: Sensor RGB,\nresolução mínima de 12 MP, com\ncapacidade de gravação em no\nmínimo 4K, garantindo imagens\nnítidas e estáveis para\nelaboração de relatórios e\ncomprovação de serviços.\nTempo de voo: Mínimo de 25\nminutos por bateria, com\ncobertura adequada para áreas\nrurais e obras públicas.\nSistema de posicionamento:\nGPS integrado, garantindo\nprecisão em mapeamentos e\nlocalização de obras.\nControle remoto: Com display\nintegrado ou compatível com\ntablet/smartphone, permitindo\nmonitoramento em tempo real e\ngravação de imagens.\nAutonomia de voo: Mínimo de\n30 minutos.\nResistência ao vento: Nível 5,\naproximadamente 30 a 38 km/h.\nAlcance mínimo de\ntransmissão: 5 km.\nAcessórios e kit completo:\nDeve incluir bateria extra,\ncarregador rápido, hélices\nreservas e maleta de transporte,\ngarantindo operação contínua e\ntransporte seguro.\nEstrutura e segurança:\nEstrutura robusta, resistente a\nventos de nível 5, com sensores\ninferiores para estabilização e\nposicionamento, garantindo\nsegurança operacional\nadequada.\nEntrega acompanhada de nota\nfiscal, manual técnico e\ncertificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "R$\n6.015,67"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n6.015,67"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0008:t-0001:r-0004:c-0006",
+              "type": "TABLE_CELL",
+              "text": "e Soluções LTDA Página 8 de 13"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nCOMPRAS\nESTUDO TÉCNICO PRELIMINAR"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Impressão: 09/12/2025\nHora: 09:30:08"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "TOTAL R$ 54.311,96\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Vislumbra-se que tal valor é compatível com o praticado pelo mercado correspondente, observando-se o disposto no Decreto\nMunicipal n.º 6871 de 2022, que “Estabelece o procedimento administrativo para a realização de pesquisa de preços para\naquisição de bens, contratação de serviços em geral e para contratação de obras e serviços de engenharia no âmbito do\nMunicípio de São Luiz Gonzaga, nos termos da Lei Federal nº 14.133/2021”.\nPESQUISAS DE PREÇOS REALIZADOS: LICITACON - TCE/RS; PORTAL DE COMPRAS PÚBLICAS; PORTAL NACIONAL\nDE CONTRATAÇÕES PÚBLICAS.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Parâmetros utilizados para obtenção de preço: busca de descritivo semelhante ao objeto a ser contratado; contratações com\ndata máxima de um ano da data da pesquisa ; análise crítica de todos os orçamentos encontrados de forma a extrair aqueles\ncom valores semelhantes entre 03 (três) - no mínimo de forma que a diferença entre o maior nunca supere 75%.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:b-0005",
+              "type": "PARAGRAPH",
+              "text": "A metodologia utilizada para a obtenção do preço estimado foi a média dos valores praticados pelo mercado para serviços\nsemelhantes, com base no Art. 6º, §1º do Decreto Municipal Nº 6.871/2022. Justifica-se tal metodologia por ajudar a identificar\nofertas razoáveis e alinhadas ao mercado, contribuindo assim para um processo mais junto, equilibrado e eficiente, tanto para a\nAdministração Pública quanto para os fornecedores.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:b-0007",
+              "type": "PARAGRAPH",
+              "text": "DESCRIÇÃO DA SOLUÇÃO COMO UM TODO\nA solução proposta para atender à necessidade administrativa identificada consiste na realização de procedimento licitatório,\nna modalidade Pregão Eletrônico, visando à aquisição, junto  a empresa especializada, dos Drones, conforme especificações\ntécnicas detalhadas no Termo de Referência que integra este Estudo Técnico Preliminar e conforme as seguintes\nespecificações e condições:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "QUANT."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DESCRIÇÃO"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "02"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K,\ngarantindo imagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras\npúblicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em\ntempo real e gravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nAcessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de\ntransporte, garantindo operação contínua e transporte seguro.\nEstrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para\nestabilização e posicionamento, garantindo segurança operacional adequada."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Usuário/"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Matricula: V"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0009:t-0002:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "AGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA Página 9 de 1"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0010:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0010:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Entrega acompanhada de nota fiscal, manual técnico e certificado de garantia."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0010:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "A opção pela aquisição dos drones decorre da análise técnica e econômica apresentada no item anterior, que demonstrou a\ninviabilidade das demais alternativas avaliadas — como locação, cessão, compartilhamento de equipamentos ou terceirização\ndos serviços —, sobretudo em razão da necessidade de uso contínuo, permanente e descentralizado desses equipamentos\npelas equipes do Corpo de Bombeiros e da Secretaria Municipal de Agricultura e Desenvolvimento Rural – SEMAG.\nSob a ótica da eficiência administrativa e da economicidade, princípios consagrados no caput do art. 37 da Constituição\nFederal e no art. 11 da Lei Federal nº 14.133/2021, a aquisição direta dos drones apresenta-se como a alternativa mais\nvantajosa ao interesse público. Essa opção assegura autonomia operacional, disponibilidade imediata dos equipamentos,\nprevisibilidade de custos, e maior controle sobre o uso, manutenção e conservação dos bens patrimoniais, fatores essenciais\npara a continuidade e qualidade dos serviços públicos.\nNo caso do Corpo de Bombeiros, a posse dos equipamentos próprios permitirá a pronta resposta em situações emergenciais,\ncomo buscas e salvamentos, monitoramento de incêndios e reconhecimento de áreas de risco, sem dependência de terceiros\nou restrições de agenda, o que é imprescindível em ocorrências que exigem rapidez e precisão.\nJá para a Secretaria Municipal de Agricultura e Desenvolvimento Rural, a aquisição dos drones garante a execução autônoma e\ncontínua de atividades de fiscalização, monitoramento e planejamento agrícola, especialmente em áreas rurais extensas ou de\ndifícil acesso. A compatibilidade técnica dos drones com os softwares e sistemas de georreferenciamento já utilizados pela\nSecretaria também evita custos adicionais com adaptações e garante a integração eficiente das informações levantadas em\ncampo.\nDo ponto de vista econômico, a solução proposta é a mais vantajosa, uma vez que o investimento inicial se dilui ao longo da\nvida útil dos equipamentos, considerando o uso intensivo e permanente que lhes será destinado. O custo-benefício é ampliado\npela redução de despesas futuras com locações e deslocamentos, além da eliminação de riscos operacionais associados à\ndependência de terceiros, como atrasos em cronogramas, falhas de disponibilidade e limitações técnicas.\nCumpre destacar que a presente contratação está em plena conformidade com os objetivos do planejamento da contratação\npública, previstos no art. 18, inciso I, da Lei nº 14.133/2021, e que o Estudo Técnico Preliminar foi elaborado em observância ao\nart. 6º, inciso XXII, da referida Lei, identificando a solução mais adequada e vantajosa ao atendimento das necessidades\nadministrativas do Município.\nDessa forma, a solução proposta atende integralmente aos princípios da legalidade, eficiência, economicidade, continuidade\ndo serviço público e supremacia do interesse público (art. 11 da Lei nº 14.133/2021), constituindo-se na alternativa mais\nadequada para a satisfação da necessidade administrativa identificada e garantindo o pleno atendimento das políticas públicas\nmunicipais voltadas à segurança pública e ao desenvolvimento rural sustentável.\n \nASSISTÊNCIA TÉCNICA:\nA empresa contratada deverá oferecer assistência técnica e manutenção durante todo o período de garantia, por meio de\noficina, centro técnico ou representante autorizado localizado a uma distância máxima de 1.000 (mil) quilômetros do Município\nde São Luiz Gonzaga/RS.\nConsiderando que os drones serão utilizados de forma contínua e intensiva nas operações do Corpo de Bombeiros e da\nSecretaria Municipal de Agricultura e Desenvolvimento Rural, a manutenção preventiva e corretiva é indispensável para garantir\no pleno funcionamento dos equipamentos, assegurar a continuidade dos serviços públicos e evitar prejuízos operacionais. Os\ndrones serão empregados em atividades de alta relevância, tais como: busca e salvamento de pessoas em áreas de difícil\nacesso; monitoramento de incêndios florestais e urbanos, com identificação de focos de calor; inspeções agrícolas e\nmonitoramento de áreas rurais; registro e mapeamento aéreo de áreas de risco e de interesse público.\nO deslocamento excessivo dos equipamentos até locais muito distantes implicaria custos logísticos elevados, demora no\natendimento técnico e indisponibilidade operacional dos drones, comprometendo a eficiência das ações do Município. Assim, a\nlimitação da distância de até 1.000 km tem por objetivo assegurar suporte técnico ágil, viável e economicamente equilibrado,\nconforme os princípios da Lei nº 14.133/2021, em especial os da eficiência, economicidade e continuidade dos serviços\npúblicos.\nA definição desse limite baseia-se em critérios técnicos e operacionais, considerando: \n- a necessidade de resposta rápida para manutenções corretivas e atualizações de software e firmware;\n- a abrangência nacional da rede de assistência técnica de marcas reconhecidas no mercado;\n- a disponibilidade de empresas especializadas em calibração de sensores, substituição de peças, suporte remoto e\nmanutenção eletrônica dentro desse raio geográfico.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0010:b-0015",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 10 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0018",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0001",
+              "type": "PARAGRAPH",
+              "text": "A distância estabelecida de até 1.000 km amplia o universo de fornecedores, sem comprometer a viabilidade operacional,\npermitindo que empresas de diferentes regiões do país participem do certame. Assim, o critério não restringe a\ncompetitividade, mas assegura condições adequadas de atendimento e suporte técnico qualificado, indispensáveis ao pleno\nfuncionamento dos drones.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Considerações sobre a necessidade de proximidade na prestação de manutenção e assistência técnica dos drones:\nConsiderando a existência de inúmeras empresas aptas a realizar serviços em distância máxima de 1.000km da sede do\nMunicípio, não comprometendo o universo de concorrentes, apontando abaixo a existência de empresas aptas a realizarem o\nserviço:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0003",
+              "type": "PARAGRAPH",
+              "text": "DRONE PLACE COMERCIO E MANUTENCÇÃO LTDA — CNPJ: 33.261.753/0001-00 (LOCALIZAÇÃO: RUA SANTO\nÂNTONIO, 1460 – SALA 501 – BARREIROS, SÃO JOSÉ/SC | DISTÂNCIA: 773km);\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0004",
+              "type": "PARAGRAPH",
+              "text": "FLORIPA DRONE LTDA — CNPJ: 45.621.738/0001-04 (LOCALIZAÇÃO EDIFÍCIO HENRIQUE DEUCHER - RUA SANTOS\nSARAIVA, 469 – LOJA 16 – ESTREITO, FLORIANÓPOLIS/SC | DISTÂNCIA: 777km);\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0005",
+              "type": "PARAGRAPH",
+              "text": "FARMING SOLUTIONS FREDERICO LTDA — CNPJ: 53.214.884/0001-43 (LOCALIZAÇÃO: RUA SANTO CERUTI, 110\n– BARRIL, FREDERICO WESTPHALEN/RS | DISTÂNCIA 281kM).\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0007",
+              "type": "PARAGRAPH",
+              "text": "CONSIDERAÇÕES ADICIONAIS:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0008",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a licitação não impõe restrição geográfica indevida, mas estabelece a necessidade de que os serviços de\nmanutenção e assistência técnica dos drones sejam prestados de forma a atender prontamente às demandas do Município,\ngarantindo resposta técnica eficiente e tempestiva;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0009",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a presente aquisição tem por finalidade atender necessidades operacionais do Corpo de Bombeiros e da\nSecretaria Municipal de Agricultura e Desenvolvimento Rural, os quais dependem de equipamentos plenamente funcionais para\natuação imediata em situações de emergência, fiscalização e monitoramento;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0010",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que as operações do Corpo de Bombeiros - como busca e salvamento, monitoramento de incêncios,\nidentificação de focos de calor e reconhecimento de áreas de risco - exigem disponibilidade permanente dos drones, inclusive\ncom sensores térmicos, não sendo possível aguardar longos prazos para manutenção ou suporte técnico, sob pena de\ncomprometimento da segurança pública;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0011",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a Secretaria Municipal de Agricultura e Desenvolvimento Rural utiliza os drones para a fiscalização agrícola,\nverificação do uso adequado de maquinários públicos, monitoramento de áreas rurais e apoio à tomada de decisões,\natividades que demandam equipamentos sempre prontos para uso e com alta confiabilidade técnica;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0012",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a manutenção e assistência técnica realizadas a longas distâncias poderiam comprometer a continuidade\nde serviços essenciais, urgentes e estratégicos, tanto na esfera da segurança pública quanto no atendimento de pequenos\nprodutores rurais, sendo o suporte técnico dentro de um rario de até 1.000 km fundamental para assegurar equilíbrio entre\ncompetitividade, eficiência operacional e celeridade;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0013",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a proximidade relativa do prestador reduzi os prazos de manutenção, diminui custos de deslocamento dos\nequipamentos e assegura a continuidade das operações emergenciais, de fiscalização rural e de monitoramento aéreo em\ntempo real, funcções diretamente vinculadas à eficiência, economicidade e transparência exigidas pela Lei Nº 14.133/2021;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0014",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a Administração depende do pleno e contínuo funcionamento dos drones para garantir a efetividade das\nações do Corpo de Bombeiros e da Secretaria de Agricultura, especialmente em ocorrências de risco, inspeções técnicas,\nmonitoramento de incêndios, salvamentos e fiscalização de áreas rurais de difícil acesso;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0015",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que a limitação geográfica exigida não restringe a competitividade do certame, mas visa assegurar\natendimento imediato e razoável, preservando a continuidade dos serviços públicos prestados à população;\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0016",
+              "type": "PARAGRAPH",
+              "text": "- Considerando que não se trata de restrição à participação de licitantes, mas da necessidade técnica de que o serviço seja\nexecutado em localidade suficientemente próxima para não afetar a operacionalidade dos drones e, consequentemente, a\nprestação dos serviços essenciais aos cidadãos de São Luiz Gonzaga/RS, exigência plenamente justificada pela busca de\nsegurança, agilidade e economicidade na execução contratual.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0011:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Dessa forma, a previsão de que a assistência técnica e manutenção sejam prestadas por centro autorizado localizado em até\n1.000 km da sede do Município de São Luiz Gonzaga/RS é plenamente justificável do ponto de vista técnico, econômico e\noperacional, garantindo o suporte necessário à plena operacionalidade dos drones e à eficiência das ações públicas\ndesempenhadas pelas secretarias municipais envolvidas.\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 11 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0010",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0001",
+              "type": "PARAGRAPH",
+              "text": "JUSTIFICATIVA PARA O PARCELAMENTO OU NÃO DA CONTRATAÇÃO\nNos termos do art. 40, inciso V, alínea b, da Lei Federal nº 14.133/2021, as licitações atenderão ao princípio do\nparcelamento,quando tecnicamente viável e economicamente vantajoso. Na aplicação deste princípio, o § 2º do mesmo art. 40\nestabelece que deverão ser considerados a viabilidade da divisão do objeto em lotes, o aproveitamento das peculiaridades do\nmercado local, com vistas à economicidade, sempre que possível, desde que atendidos os parâmetros de qualidade; e o dever\nde buscar a ampliação da competição e de evitar a concentração de mercado.\nEm vista disto, o princípio do parcelamento deverá ser aplicado à presente contratação.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0004",
+              "type": "PARAGRAPH",
+              "text": "RESULTADOS PRETENDIDOS\nPretende-se, com o presente processo licitatório, assegurar a seleção da proposta apta a gerar a contratação mais vantajosa\npara o Município de São Luiz Gonzaga/RS. Almeja-se, igualmente, assegurar o tratamento isônimico entre os licitantes, bem\ncomo a justa competição, bem como evitar contratação com o sobrepreço ou com preço manifestamente inexequível e\nsuperfaturamento na execução do contrato. A contratação decorrente do presente processo licitatório exigirá da contratada o\ncumprimento das boas práticas de sustentabilidade, contribuindo para a racionalização e otimização do uso dos recursos\npúblicos, bem como para a redução dos impactos ambientais, alinhando-se às políticas municipais e nacionais de\nresponsabilidade socioambiental.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Dessa forma, o presente processo licitatório atende aos princípios constitucionais da administração pública e às diretrizes da\nLei nº 14.133/2021, garantindo transparência, legalidade e eficiência na contratação.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0006",
+              "type": "PARAGRAPH",
+              "text": "PROVIDÊNCIAS PRÉVIAS AO CONTRATO\nPara a contratação pretendida não haverá necessidade de providências prévias no âmbito da Administração. O Corpo de\nBombeiros de São Luiz Gonzaga e a Secretaria Municipal de Agricultura e Desenvolvimento Rural indicaram servidores para\natuarem como gestor e fiscais do contrato.\nAdemais, para que a pretendida contratação tenha sucesso, é preciso que outras etapas sejam concluídas, quais sejam:\na) Elaboração de minuta do edital;\nb) Realização de certificação de disponibilidade orçamentária;\nc) Designação em Portaria de pregoeiro, equipe de apoio, agente de contratação (conforme o caso);\nd) Elaboração de minuta do contrato;\ne) Encaminhamento do processo para análise jurídica;\nf) Análise da manifestação jurídica e atendimento aos apontamentos constantes no parecer, mediante Nota Técnica com os\najustes indicados;\ng) Publicação e divulgação do edital e anexos;\nh) Resposta a eventuais pedidos de esclarecimentos e/ou impugnação, caso aplicável;\ni) Realização do certame, com suas respectivas etapas;\nj) Realização de empenho; e\nl) Assinatura e publicação do contrato.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0008",
+              "type": "PARAGRAPH",
+              "text": "CONTRATAÇÕES CORRELATAS E/OU INTERDEPENDENTES\nO presente estudo identificou a existência de contratações correlatas e/ou interdependentes necessárias para assegurar a\nplena eficiência, segurança operacional e continuidade da execução do objeto ora proposto. Embora a aquisição dos drones\natenda, em um primeiro momento, à demanda administrativa apresentada pelo Município e pelo Corpo de Bombeiros, sua\nadequada operação ao longo do tempo depende de serviços especializados de manutenção preventiva e corretiva, bem como\nde eventual fornecimento de peças de reposição, baterias, hélices, sensores e demais componentes específicos necessários\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0012:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 12 de 13\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0009",
+              "type": "PARAGRAPH",
+              "text": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0001",
+              "type": "PARAGRAPH",
+              "text": "para o funcionamento dos mesmos.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Diferentemente do que ocorre com outros equipamentos/maquinários municipais, o Município não possui, atualmente,\ninstrumento vigente que contemple serviços de manutenção ou fornecimento de peças voltados a drones ou equipamentos\naéreos não tripulados. Assim, não há ata de registro de preços ou contrato em vigor que possa atender, complementarmente, à\ndemanda decorrente da aquisição ora planejada.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Diante disso, resta evidente a necessidade de futura contratação específica, por meio de processo licitatório próprio, destinada\nà prestação de serviços técnicos de manutenção preventiva e corretiva dos drones, bem como ao fornecimento de peças,\ncomponentes e acessórios essenciais para garantir o pleno funcionamento dos equipamentos e a continuidade dos serviços\npúblicos de monitoramento, inspeção e apoio às atividades do Corpo de Bombeiros e da Secretaria Municipal de Agricultura e\nDesenvolvimento Rural.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Tal contratação complementar será indispensável para assegurar a durabilidade dos equipamentos, mitigar riscos operacionais\ne garantir o adequado suporte técnico ao longo da vida útil dos drones, evitando interrupções nas atividades públicas que deles\ndependem.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0005",
+              "type": "PARAGRAPH",
+              "text": "POSSÍVEIS IMPACTOS AMBIENTAIS\nEste estudo não identificou possíveis impactos ambientais.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0006",
+              "type": "PARAGRAPH",
+              "text": "DECLARAÇÃO DE VIABILIDADE\nCom base na justificativa e nas especificações técnicas constantes neste Estudo Técnico Preliminar e seus anexos, e na\nexistência de planejamento orçamentário para subsidiar esta contratação, declaramos que a contratação é viável, atendendo\naos padrões e preços de mercado.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:etp:p-0013:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 13 de 13\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "87613022000105-1-000285-2025:etp",
+            "page": 1,
+            "block_id": "87613022000105-1-000285-2025:etp:p-0001:b-0021",
+            "quote": "São Luiz Gonzaga - RS\nImpressão: 09/12/2025\nCOMPRAS\nHora: 09:30:08\nESTUDO TÉCNICO PRELIMINAR\n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [],
+      "field_values": [],
+      "requirements": []
+    },
+    {
+      "id": "87613022000105-1-000285-2025:tr",
+      "type": "TR",
+      "format": "PDF",
+      "title": "tr-06-63900883322431995963900880539946627153947-rev-0-termo-de-ref.pdf",
+      "sections": [
+        {
+          "id": "87613022000105-1-000285-2025:tr:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "PEDIDO DE COMPRA:   000191 / 2025\nEMISSÃO: 01/12/2025\nSECRETARIA: SECRETARIA MUNICIPAL DE AGRICULTURA E DESENVOLVIMENTO RURAL - SEMAG\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Objetivo: AQUISIÇÃO DE DRONES, DESTINADOS AO CORPO DE BOMBEIROS E A SECRETARIA MUNICIPAL DE\nAGRICULTURA E DESENVOLVIMENTO RURAL DE SÃO LUIZ GONZAGA/RS.\nJustificativa: O equipamento que será adquirido pelo Corpo de Bombeiros será utilizado em ações de busca e salvamento de\npessoas desaparecidas, monitoramento de incêndios, apoio em situações de desastres naturais e reconhecimento de áreas de\nrisco ou de difícil acesso, contribuindo para a eficiência das operações de segurança pública. O equipamento que será\nadquirido pela Secretaria Municipal de Agricultura e Desenvolvimento Rural tem por objetivo o apoio técnico, mapeamento,\nmonitoramento e fiscalização de atividades e serviços rurais no âmbito do município. A aquisição dos drones com câmera\ntérmica visa aprimorar a capacidade operacional dos órgãos municipais e regionais de resposta a emergências. Localização\nde vítimas em áreas de mata, alagamentos ou baixa visibilidade; Monitoramento aéreo em incêndios florestais ou urbanos;\nApoio à Defesa Civil em situações de risco geológico e hidrológico; Redução de custos e riscos humanos em operações de\ncampo; Apoio técnico, mapeamento, monitoramento e fiscalização de atividades e serviços rurais no âmbito do município. A\nutilização de tecnologia aérea amplia significativamente a rapidez e a precisão das ações de resgate e monitoramento,\natendendo às diretrizes de eficiência e economicidade previstas na Lei nº 14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "DEFINIÇÃO DO OBJETO\nO presente procsso de licitação tem por objeto a  aquisição de drones, destinados a atender às demandas operacionais do\nMunicípio de São Luiz Gonzaga/RS, especialmente em atividades de monitoramento áereo em tempo real, busca e salvamento,\ninspeções em áreas de difícil acesso e demais ações que requeiram visão aérea térmica e de alta resolução, bem como\nregistro fotográfico e videográfico de alta qualidade e inspeção de áreas de difícil acesso, otimizando a atuação das equipes.\nCom base nas características técnicas necessárias e nas necessidades identificadas em campo, justifica-se a aquisição dos\nseguintes itens:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "QUANT."
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0006:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DESCRIÇÃO"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0008:c-0001",
+              "type": "TABLE_CELL",
+              "text": "02"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0008:c-0002",
+              "type": "TABLE_CELL",
+              "text": "01\nunidade"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0008:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K,\ngarantindo imagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras\npúblicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em\ntempo real e gravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nAcessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de\ntransporte, garantindo operação contínua e transporte seguro.\nEstrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0009:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Usuário/"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0009:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Matricula: V"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0009:c-0003",
+              "type": "TABLE_CELL",
+              "text": "AGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA Página 1 de"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0002:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0002:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "estabilização e posicionamento, garantindo segurança operacional adequada.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0002:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "A aquisição dos drones representa um avanço significativo para a modernização e o aprimoramento dos serviços prestados\npelo Corpo de Bombeiros e pela Secretaria Municipal de Agricultura e Desenvolvimento Rural. No âmbito do Corpo de\nBombeiros, esses equipamentos serão especialmente essenciais em operações de salvamento, busca e resgate, permitindo\nresposta imediata em situações de urgência, localização rápida de vítimas em áreas de difícil acesso e suporte aéreo em\ncenários de risco, contribuindo diretamente para a preservação de vidas. Para a Secretaria Municipal de Agricultura e\nDesenvolvimento Rural, os drones possibilitarão monitoramento aéreo preciso, mapeamento de áreas rurais, inspeção de\nlavouras e avaliação de danos, garantindo maior assertividade e eficiência nas ações de assistência ao produtor rural. Assim, o\ninvestimento ampliará de forma expressiva a capacidade técnico-operacional das equipes, reduzirá o tempo de resposta às\ndemandas da população — especialmente nas comunidades do interior — e assegurará maior eficiência, segurança e\nqualidade na prestação dos serviços públicos.\nO objeto possui natureza comum, tendo em vista que seus padrões de sempenho e qualidade podem ser objetivamente\ndenfinidos pelo edital, por meio de especificações usuais de mercado, nos termos do art. 6º, inciso XIII, da Lei Federal Nº\n14.133/2021. A contratação será realizada por meio de licitação, na modalidade Pregão, na sua forma eletrônica, com critério\nde julgamento por menor preço, nos termos dos artigos 6º inciso XLI, 17, §2º e 34, todos da Lei Federal Nº 14.133/2021.\n \n1. PECULIAREDADES DO OBJETO:\n1.1. CARACTERISTICAS:\nITEM 01: DRONE DE IMAGENS AEREAS DE ALTA DENIFIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\nITEM 02: DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K, garantindo\nimagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras públicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em tempo real e\ngravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nAcessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de transporte, garantindo\noperação contínua e transporte seguro.\nEstrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para estabilização e\nposicionamento, garantindo segurança operacional adequada.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n \nVIGÊNCIA DO CONTRATO ATÉ 31/12/2025.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 2 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": "FUNDAMENTAÇÃO DA CONTRATAÇÃO\nA fundamentação de Contratação e seus quantitativos encontra-se detalhado no ESTUDO TÉCNICO PRELIMINAR\n(ETP) anexo a esse TERMO DE REFERÊNCIA (TR).\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "DESCRIÇÃO DA SOLUÇÃO COMO UM TODO\nA solução proposta para atender à necessidade administrativa identificada consiste na realização de procedimento licitatório,\nna modalidade Pregão Eletrônico, visando à aquisição, junto a empresa especializada, de drones (modelo equipado com\ncâmera térmica e modelo convencional), conforme as especificações técnicas e operacionais detalhadas no Estudo Técnico\nPreliminar (ETP) e neste Termo de Referência (TR).\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "A opção pela aquisição dos referidos equipamentos decorre da análise técnica e econômica realizada no item anterior, que\nconcluiu pela inviabilidade das demais alternativas estudadas — como locação, cessão, compartilhamento de equipamentos ou\nterceirização dos serviços —, especialmente em razão da necessidade de uso contínuo, permanente, imediato e\ndescentralizado dos drones no âmbito das atividades desempenhadas pelo Corpo de Bombeiros do Município e pela\nSecretaria Municipal de Agricultura e Desenvolvimento Rural – SEMAG.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "No caso do Corpo de Bombeiros, os drones são essenciais para operações de busca, resgate e salvamento, sobretudo em\náreas de difícil acesso ou em situações emergenciais que exigem resposta rápida, como incêndios, desaparecimentos,\nalagamentos e ocorrências em zonas rurais. A disponibilidade imediata desses equipamentos permite o encurtamento do\ntempo de resposta, a localização ágil de vítimas e o monitoramento aéreo em tempo real, contribuindo diretamente para a\nproteção e preservação de vidas, finalidade que não poderia ser atendida de forma eficaz por meio de locações ou\nequipamentos compartilhados, devido à imprevisibilidade e urgência das ocorrências.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "No âmbito da Secretaria Municipal de Agricultura e Desenvolvimento Rural, os drones possibilitam o monitoramento aéreo de\npropriedades rurais, inspeção de lavouras, mapeamento de áreas produtivas, avaliação de danos climáticos, acompanhamento\nde estradas vicinais e identificação de situações de risco ambiental. A utilização contínua e descentralizada desses\nequipamentos, em diversas localidades do interior, torna economicamente e tecnicamente inadequado o uso compartilhado ou\nterceirizado, visto que comprometeria a regularidade e a eficiência dos serviços públicos prestados ao produtor rural.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Sob a ótica da eficiência administrativa e da economicidade — princípios previstos no caput do art. 37 da Constituição Federal\ne no art. 11 da Lei Federal nº 14.133/2021 — a aquisição direta mostra-se a alternativa mais vantajosa, garantindo:\n- autonomia e disponibilidade imediata dos equipamentos;\n- maior previsibilidade de custos;\n- redução de riscos operacionais associados à dependência de terceiros;\n- atendimento rápido a demandas emergenciais;\n- continuidade dos serviços públicos prestados tanto pelo Corpo de Bombeiros quanto pela SEMAG.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "Do ponto de vista técnico, a aquisição própria assegura a compatibilidade dos drones com os sistemas de operação, softwares\ne protocolos de segurança adotados pelas instituições, evitando adaptações improvisadas, limitações funcionais ou\nnecessidade de investimentos adicionais em dispositivos externos. As especificações dos equipamentos foram definidas\nconsiderando critérios como autonomia de voo, resolução de imagem e sensor térmico, alcance de transmissão, sistemas de\nsegurança, resistência a intempéries e capacidade de operação em diferentes cenários rurais e urbanos.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Do ponto de vista econômico, a solução demonstra-se mais vantajosa, pois o investimento inicial se dilui ao longo da vida útil\ndos equipamentos, gerando redução de custos futuros e maior retorno social, especialmente quando comparado aos gastos\nrecorrentes que seriam necessários para locação ou terceirização de serviços. Ademais, elimina-se o risco de\nindisponibilidade de equipamentos em períodos de alta demanda — situação crítica especialmente para o Corpo de\nBombeiros.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Cumpre destacar que a presente solução está em consonância com os objetivos do planejamento da contratação previstos no\nart. 18, inciso I, da Lei nº 14.133/2021, que determina a elaboração do Estudo Técnico Preliminar como instrumento destinado à\nidentificação da alternativa mais adequada e vantajosa para o atendimento da necessidade administrativa (art. 6º, inciso XXII,\nda Lei nº 14.133/2021).\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Dessa forma, a solução proposta atende plenamente aos princípios da legalidade, eficiência, economicidade, continuidade do\nserviço público e supremacia do interesse público (art. 11 da Lei nº 14.133/2021), constituindo-se como a alternativa mais\napropriada para suprir as demandas operacionais do Corpo de Bombeiros e da Secretaria Municipal de Agricultura e\nDesenvolvimento Rural, garantindo a segurança da população, a melhoria da resposta emergencial e o fortalecimento das\npolíticas públicas de desenvolvimento rural.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0003:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 3 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": "Considerando o ciclo de vida do objeto, a contratação deverá contemplar não apenas o fornecimento do equipamento, mas\ntambém as condições necessárias à sua manutenção, suporte técnico e garantia, de modo a assegurar a plena\noperacionalidade e durabilidade do bem adquirido.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "A empresa fornecedora deverá:\n- Garantir assistência técnica durante o período mínimo de 12 (doze) meses, a contar do recebimento definitivo dos\nequipamentos;\n- Disponibilizar atendimento técnico e suporte remoto, sempre que houver falhas operacionais, instabilidades sistêmicas ou\nnecessidade de atualização de firmware e software de operação;\n- Assegurar a disponibilidade de peças de reposição, baterias, hélices, sensores, cabos e demais componentes originais pelo\nperíodo mínimo de 5 (cinco) anos após a entrega;\n- Fornecer manual técnico, documentação completa e treinamento básico de operação, em língua portuguesa, destinados aos\nservidores do Corpo de Bombeiros e da SEMAG responsáveis pelo manuseio dos drones;\n- Cumprir todas as normas, certificações e requisitos de segurança aplicáveis às aeronaves remotamente pilotadas (RPA), em\nconformidade com as regulamentações da ANAC, DECEA, ANATEL e demais órgãos competentes.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Tais condições visam garantir que o investimento público proporcione atendimento contínuo, eficiente e seguro às demandas\noperacionais do Município, contribuindo para a redução de custos futuros com manutenção corretiva, mitigação de riscos e\nprolongamento da vida útil dos equipamentos.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "REQUISITOS DA CONTRATAÇÃO\nO objeto possui natureza comum, tendo em vista que seus padrões de sempenho e qualidade podem ser objetivamente\ndenfinidos pelo edital, por meio de especificações usuais de mercado, nos termos do art. 6º, inciso XIII, da Lei Federal Nº\n14.133/2021. A contratação será realizada por meio de licitação, na modalidade Pregão, na sua forma eletrônica, com critério\nde julgamento por menor preço, nos termos dos artigos 6º inciso XLI, 17, §2º e 34, todos da Lei Federal Nº 14.133/2021.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "1. PECULIAREDADES DO OBJETO:\n1.1. CARACTERISTICAS:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0008",
+              "type": "PARAGRAPH",
+              "text": "ITEM 01: DRONE DE IMAGENS AEREAS DE ALTA DENIFIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0004:b-0009",
+              "type": "PARAGRAPH",
+              "text": "ITEM 02: DRONE.\nPeso máximo de decolagem: Inferior a 300 gramas.\nCâmera principal: Sensor RGB, resolução mínima de 12 MP, com capacidade de gravação em no mínimo 4K, garantindo\nimagens nítidas e estáveis para elaboração de relatórios e comprovação de serviços.\nTempo de voo: Mínimo de 25 minutos por bateria, com cobertura adequada para áreas rurais e obras públicas.\nSistema de posicionamento: GPS integrado, garantindo precisão em mapeamentos e localização de obras.\nControle remoto: Com display integrado ou compatível com tablet/smartphone, permitindo monitoramento em tempo real e\ngravação de imagens.\nAutonomia de voo: Mínimo de 30 minutos.\nResistência ao vento: Nível 5, aproximadamente 30 a 38 km/h.\nAlcance mínimo de transmissão: 5 km.\nAcessórios e kit completo: Deve incluir bateria extra, carregador rápido, hélices reservas e maleta de transporte, garantindo\noperação contínua e transporte seguro.\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 4 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0001",
+              "type": "PARAGRAPH",
+              "text": "Estrutura e segurança: Estrutura robusta, resistente a ventos de nível 5, com sensores inferiores para estabilização e\nposicionamento, garantindo segurança operacional adequada.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0003",
+              "type": "PARAGRAPH",
+              "text": "A aquisição dos equipamentos, da qual trata a presente Licitação, deverá ser prestada da seguinte forma:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "2. PRAZO, FORMA E LOCAIS DE ENTREGA:\n2.1. Após a homologação do processo de Licitação, um contrato será firmado junto a empresa vencedora. Após a assinatura do\ncontrato, o Setor Administrativo da SEMAG enviará uma Autorização de Fornecimento para a empresa.\n2.2 O fornecimento do objeto contratado se dará no prazo máximo de 30 (trinta) dias, podendo ser prorrogado, uma única\nvez, por igual período, contados do recebimento da Autorização de Fornecimento acompanhada de nota de empenho\ncorrespondente emitida pelo CONTRATANTE.\nA entrega DEVERÁ ocorrer na sede da Prefeitura, na Rua Venâncio Aires, nº 2438, Bairro Centro - São Luiz Gonzaga, RS,\nCEP 97.800-000.\n2.3. A ENTREGA DEVERA SER FEITA SEM CUSTOS PARA O MUNICÍPIO. Caso não seja possível a entrega do veículo\ndentro do prazo estabelecido, a empresa vencedora deverá comunicar para a SEMAG as razões para a impossibilidade da\nentrega, no prazo de 03 (três) dias úteis após o recebimento da Autorização de Fornecimento.\n2.4. O RECEBIMENTO DO OBJETO NÃO EXCLUI A RESPONSABILIDADE DO LICITANTE CONTRATADO QUANTO AOS\nVÍCIOS OCULTOS, OU SEJA, SÓ MANIFESTADOS QUANDO DA SUA NORMAL UTILIZAÇÃO.\n2.5. POR OCASIÃO DA ENTREGA, CASO SEJA DETECTADO QUE OS PRODUTOS NÃO ATENDAM AS\nESPECIFICAÇÕES DO OBJETO LICITADO, PODERÁ A ADMINISTRAÇÃO REJEITÁ-LO, INTEGRALMENTE OU EM PARTE,\nOBRIGANDO-SE A LICITANTE A PROVIDENCIAR A SUBSTITUIÇÃO DO BEM NÃO ACEITO, NO PRAZO DE 15 (QUINZE)\nDIAS CONTADOS DE SUA NOTIFICAÇÃO.\n2.6. OS ITENS A SEREM ENTREGUES DEVERÃO SER ADEQUADAMENTE ACONDICIONADOS, DE FORMA A PERMITIR\nA COMPLETA PRESERVAÇÃO DO MESMO E SUA SEGURANÇA DURANTE O TRANSPORTE.\n2.7. A NOTA FISCAL DEVERÁ SER ENTREGUE JUNTO COM O OBJETO.\n2.8. A empresa contratada deverá no tocante ao fornecimento e entrega do item objeto deste Certame, OBEDECER\nrigorosamente todas as disposições legais pertinentes.\n2.9. A contratada deverá proceder à demonstração técnica de funcionamento do equipamento no ato da entrega,\nassegurando a plena operação e treinamento básico dos servidores designados.\n2.10. O objeto do presente contrato será recebido: Provisoriamente, de forma sumária, pelo responsável por seu\nacompanhamento e fiscalização, designado pelo CONTRATANTE, com verificação posterior da conformidade do material com\nas exigências contratuais. Definitivamente por servidor (GESTOR) ou comissão designada pela autoridade competente,\nmediante assinatura de termo circunstanciado comprovando o atendimento das exigências contratuais.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0006",
+              "type": "PARAGRAPH",
+              "text": "3. PAGAMENTO:\n3.1 Os pagamentos serão efetuados em até 30 (trinta) dias úteis contados da apresentação da nota fiscal ou nota fiscal fatura à\nSecretaria Municipal da Fazenda, devendo constar nela ou acompanhá-la o atestado de recebimento expedido e devidamente\nassinado pelo fiscal do contrato. O documento fiscal deverá ser do estabelecimento que apresentou a proposta vencedora da\nlicitação.\n3.2.Quando do pagamento, será efetuada a retenção tributária prevista na legislação aplicável.\n \n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0007",
+              "type": "PARAGRAPH",
+              "text": "4. OBRIGAÇÕES DO CONTRATANTE:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0008",
+              "type": "PARAGRAPH",
+              "text": "São obrigações do CONTRATANTE:\n4.1. Exigir o cumprimento de todas as obrigações assumidas pelo CONTRATADA, de acordo com o contrato e seus anexos;\n4.2. Assegurar à CONTRATADA as condições necessárias à regular execução do contrato.\n4.3. Determinar as providências necessárias quando o fornecimento do objeto não observar a forma estipulada no edital e neste\ncontrato, sem prejuízo da aplicação das sanções cabíveis, quando for o caso.\n4.4. Acompanhar e fiscalizar a execução do contrato e o cumprimento das obrigações pelo Contratado;\n4.5. Efetuar o devido pagamento à CONTRATADA, conforme definido neste contrato.\n4.6. Emitir decisão sobre todas as solicitações e reclamações relacionadas à execução do presente Contrato, ressalvados os\nrequerimentos manifestamente impertinentes, meramente protelatórios ou de nenhum interesse para a boa execução do ajuste.\n4.6.1. A Administração terá o prazo de 01 (um) mês, a contar da data do protocolo do requerimento para decidir, admitida a\nprorrogação motivada, por igual período.\n4.7. Responder eventuais pedidos de reestabelecimento do equilíbrio econômico-financeiro feitos pelo contratado no prazo\nmáximo de 01 (um) mês.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0005:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 5 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0006:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0006:b-0001",
+              "type": "PARAGRAPH",
+              "text": "São obrigações da CONTRATADA:\n4.8. Fornecer o objeto de acordo com as especificações, quantidade e prazos do edital e deste contrato, bem como nos termos\nda sua proposta, assumindo exclusivamente seus os riscos e as despesas decorrentes da boa e perfeita execução do objeto.\n4.9. Responsabilizar-se pela integralidade dos ônus, dos tributos, dos emolumentos, dos honorários e das despesas incidentes\nsobre o objeto contratado, bem como por cumprir todas as obrigações trabalhistas, previdenciárias e acidentárias relativas aos\nempregados que utilizar para a execução do objeto, inclusive as decorrentes de convenções, acordos ou dissídios coletivos.\n4.10. Responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com o Código de Defesa do Consumidor (Lei\nnº 8.078, de 1990);\n4.11. Responsabilizar-se pelos vícios e danos decorrentes da execução do objeto, bem como por todo e qualquer dano\ncausado à Administração ou terceiros, não reduzindo essa responsabilidade a fiscalização ou o acompanhamento da execução\ncontratual pelo contratante, que ficará autorizado a descontar dos pagamentos devidos ou da garantia, caso exigida, o valor\ncorrespondente aos danos sofridos;\n4.12. Atender às determinações regulares emitidas pelo fiscal ou gestor do contrato ou autoridade superior (art. 137, II, da Lei\nn.º 14.133, de 2021) e prestar todo esclarecimento ou informação por eles solicitados;\n4.13. Manter durante a execução do contrato, em compatibilidade com as obrigações assumidas, todas as condições de\nhabilitação e qualificação exigidas na licitação;\n4.14. Cumprir as exigências de reserva de cargos prevista em lei, bem como em outras normas específicas, para pessoa com\ndeficiência, para reabilitado da Previdência Social e para aprendiz.\n4.15. Zelar pelo cumprimento, por parte de seus empregados, das normas do Ministério do Trabalho, cabendo à\nCONTRATADA o fornecimento de equipamentos de proteção individual (EPI) e quaisquer outros insumos necessários à\nprestação dos serviços.\n4.16. Arcar com o ônus decorrente de eventual equívoco no dimensionamento dos quantitativos de sua proposta, inclusive\nquanto aos custos variáveis decorrentes de fatores futuros e incertos, devendo complementá-los, caso o previsto inicialmente\nem sua proposta não seja satisfatório para o atendimento do objeto da contratação, exceto quando ocorrer algum dos eventos\narrolados no art. 124, II, d, da Lei nº 14.133, de 2021.\n4.17. Reparar e/ou corrigir, às suas expensas, as entregas em que for verificado vício, defeito ou incorreção resultantes da\nexecução do objeto em desacordo com o pactuado.\n4.18. Executar as obrigações assumidas no presente contrato por seus próprios meios, não sendo admitida a subcontratação,\nsalvo expressa autorização do CONTRATANTE.\n4.19. Substituir, sem ônus adicional, o produto em caso de defeito de fabricação identificado no período de garantia.\n4.20. Garantir o funcionamento do equipamento durante o período de garantia;\n4.21. Prestar suporte técnico e orientações necessárias ao uso do equipamento.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0006:b-0003",
+              "type": "PARAGRAPH",
+              "text": "5. SANÇÕES:\nO licitante ou o contratado será responsabilizado administrativamente pelas seguintes infrações:\nI. Dar causa à inexecução parcial do contrato;\nII. Dar causa à inexecução parcial do contrato que cause grave dano à Administração, ao funcionamento dos serviços públicos\nou ao interesse coletivo;\nIII. Dar causa à inexecução total do contrato;\nIV. Deixar de entregar a documentação exigida para o certame;\nV. Não manter a proposta, salvo em decorrência de fato superveniente devidamente justificado;\nVI. Não celebrar o contrato ou não entregar a documentação exigida para a contratação, quando convocado dentro do prazo de\nvalidade de sua proposta; VII. Ensejar o retardamento da execução ou da entrega do objeto da licitação sem motivo justificado;\nVIII. Apresentar declaração ou documentação falsa exigida para o certame ou prestar declaração falsa durante a licitação ou a\nexecução do contrato;\nIX. Fraudar a licitação ou praticar ato fraudulento na execução do contrato;\nX. Comportar-se de modo inidôneo ou cometer fraude de qualquer natureza;\nXI. Praticar atos ilícitos com vistas a frustrar os objetivos da licitação;\nXII. Praticar ato lesivo previsto no art. 5º da Lei nº 12.846, de 1º de agosto de 2013.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Serão aplicadas ao responsável pelas infrações administrativas previstas nesta Lei as seguintes sanções:\nI. Advertência;\nII. Multa;\nIII. Impedimento de licitar e contratar;\nIV. Declaração de inidoneidade para licitar ou contratar.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "6. EXTINÇÃO\n6.1. O contrato será extinto quando cumpridas as obrigações de ambas as partes, ainda que isso ocorra antes do prazo\nestipulado.\n6.2.  O contrato poderá ser extinto nas hipóteses previstas no artigo 137 da Lei nº 14.133/2021, inclusive por acordo entre as\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 6 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0001",
+              "type": "PARAGRAPH",
+              "text": "partes, assegurados o contraditório e a ampla defesa.\n6.2.1. Nesta hipótese, aplicam-se também os artigos 138 e 139 da mesma Lei.\n6.3. A extinção do contrato não configura óbice para o reconhecimento do desequilíbrio econômico-financeiro, hipótese em que\nserá concedida indenização por meio de termo indenizatório (art. 131, caput, da Lei n.º 14.133, de 2021).\n6.4. O contrato poderá ser extinto caso se constate que o contratado mantém vínculo de natureza técnica, comercial, econômica,\nfinanceira, trabalhista ou civil com dirigente do órgão ou entidade contratante ou com agente público que tenha desempenhado\nfunção na licitação ou atue na fiscalização ou na gestão do contrato, ou que deles seja cônjuge, companheiro ou parente em\nlinha reta, colateral ou por afinidade, até o terceiro grau (art. 14, inciso IV, da Lei n.º 14.133, de 2021).\nA contratação será realizada por meio de licitação, na modalidade Pregão, na sua forma eletrônica, com critério de julgamento\npor menor preço, nos termos dos artigos 6º, inciso XLI, 17, § 2º, e 34, todos da Lei Federal nº 14.133/2021. Para fornecimento\ndo objeto pretendido, os eventuais interessados deverão comprovar que atuam em ramo de atividade compatível com o objeto\nda licitação, bem como apresentar os seguintes documentos a título habilitação, nos termos do art. 62 da Lei Federal nº\n14.133/2021:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Habilitação jurídica:\n- Cópia do registro comercial, no caso de empresa individual;\n- Cópia do ato constitutivo, estatuto ou contrato social em vigor, devidamente registrado, em se tratando de sociedades\ncomerciais, e, no caso de sociedade por ações, acompanhado de documentos de eleição de seus administradores;\n- Comprovante de inscrição no Cadastro de Pessoas Físicas (CPF), se o licitante for pessoa natural, ou no Cadastro Nacional\nda Pessoa Jurídica (CNPJ), se o licitante for pessoa jurídica;\n- Cópia do decreto de autorização, em se tratando de empresa ou sociedade estrangeira em funcionamento no País, e ato de\nregistro ou autorização para funcionamento expedido pelo órgão competente, quando a atividade assim o exigir.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Habilitação fiscal, social e trabalhista:\n- Comprovante de inscrição no cadastro de contribuintes estadual e/ou municipal, se houver, relativo ao domicílio ou sede do\nlicitante, pertinente ao seu ramo de atividade e compatível com o objeto contratual;\n- Prova de regularidade perante a Fazenda federal, estadual e/ou municipal do domicílio ou sede do licitante, e com o Município\nde São Luiz Gonzaga/RS, nos termos do art. 193 do Código Tributário Nacional, ou outra equivalente, na forma da lei;\n- Prova de regularidade relativa à Seguridade Social e ao FGTS, que demonstre cumprimento dos encargos sociais instituídos\npor lei;\n- Prova de regularidade perante a Justiça do Trabalho;\n- Declaração de cumprimento do disposto no inciso XXXIII do art. 7º da Constituição Federal (realizada diretamente no sistema\nquando do lançamento da proposta).\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Habilitação econômico-financeira:\n- Certidão negativa de falência expedida pelo distribuidor da sede da pessoa jurídica, em prazo não superior a 90 (noventa)\ndias da data designada para a apresentação do documento.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0005",
+              "type": "PARAGRAPH",
+              "text": "MODELO DE EXECUÇÃO DO OBJETO\nApós a adjudicação e homologação pela Autoridade Superior, o licitante mais bem classificado terá o prazo de 05 (cinco) dias\núteis, contados a partir da data de sua convocação para assinatura do contrato. Os equipamentos serão devidamente\nrequisitados pelo Corpo de Bombeiros e pela Secretaria Municipal de Agricultura e Desenvolvimento Rural, no prazo máximo\nde 30 (trinta) dias, podendo ser prorrogado uma única vez, por igual período, contados do recebimento da ordem de\nfornecimento acompanhada de nota de empenho correspondente, emitida pelo CONTRATANTE seja realizada a entrega no\nlocal indicado na ordem de fornecimento, conforme descrito no item 04 deste Termo de Referência.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Será realizado teste funcional para comprovar a conformidade do equipamento com as especificações técnicas exigidas. Caso\nsejam identificadas irregularidades ou defeitos, a contratada deverá substituí-lo ou corrigi-los imediatamente, sem ônus\nadicional à Administração. Após a constatação da conformidade e do perfeito funcionamento do equipamento, será emitido o\nTermo de Recebimento Definitivo.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0007",
+              "type": "PARAGRAPH",
+              "text": "Durante o prazo de garantia contratual, a contratada deverá prestar assistência técnica, realizar reparos e substituições\nnecessárias e garantir o pleno funcionamento do drone, observando as condições definidas neste Termo. O não atendimento a\nessas obrigações dentro dos prazos fixados poderá acarretar sanções contratuais e eventual rescisão.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0008",
+              "type": "PARAGRAPH",
+              "text": "O contrato será encerrado após o cumprimento integral das obrigações assumidas, a expiração do prazo de garantia e a\ninexistência de pendências administrativas, financeiras ou técnicas.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0007:b-0009",
+              "type": "PARAGRAPH",
+              "text": "A execução contratual será acompanhada e fiscalizada por servidor designado, responsável por registrar ocorrências, emitir\npareceres e adotar as medidas necessárias para assegurar que o fornecimento do equipamento alcance os resultados\nUsuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 7 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0001",
+              "type": "PARAGRAPH",
+              "text": "pretendidos de eficiência, segurança e economicidade, em conformidade com o planejamento realizado nos Estudos Técnicos\nPreliminares.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "MODELO DE GESTÃO DO CONTRATO\nA gestão e a fiscalização do objeto contratado serão realizadas conforme o disposto no Decreto Municipal Nº 6.910, de 28 de\nfevereiro de 2023, que \"Regulamenta as funções do agente de contratação, da equipe de apoio e da comissão de contratação,\nsuas atribuições e funcionamento, a fiscalização e a gestão dos contratos, e a atuação da assessoria jurídica e do controle\ninterno no âmbito do Município de São Luiz Gonzaga/RS, nos termos da Lei Federal Nº 14.133/2021\".\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0003",
+              "type": "PARAGRAPH",
+              "text": "A gestão da ata de registro de preços e a execução do contrato será objeto de acompanhemtno, fiscalização e avaliação por\nparte do CONTRATANTE, através dos servidores RENE DOMERASKI, matrícula 6418 - Fiscal Titular, JACSON FIORIN\nBRANDÃO, matrícula 3042 - Fiscal Suplente a quem competirá comunicar ao Gestor do Contrato as falhas porventura\nconstatadas no cumprimento do contrato e solicitar a correção das mesmas.\nO Secretário Municipal de Fazenda, Sr. PEDRO ROBERTO HECK, matrícula 2706, será o Gestor do Contrato.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Dentre as responsabilidades do(s) fiscal(is) está a necessidade de anotar, em registro próprio, todas as ocorrências\nrelacionadas à execução do contrato, inclusive quando de seu fiel cumprimento, determinando o que for necessário para a\nregularização de eventuais faltas ou defeitos observados.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CRITÉRIOS DE MEDIÇÃO E DE PAGAMENTO\nOs pagamentos serão efetuados em até 30 (trinta) dias úteis contados da apresentação da nota fiscal ou nota fiscal fatura à\nSecretaria Municipal da Fazenda, devendo constar nela ou acompanhá-la o atestado de recebimento expedido e devidamente\nassinado pelo fiscal do contrato. O documento fiscal deverá ser do estabelecimento que apresentou a proposta vencedora da\nlicitação. Quando do pagamento, será efetuada a retenção tributária prevista na legislação aplicável. O documento fiscal deverá\nser acompanhado de cópia do comprovante de pagamento do ISSQN da respectiva nota emitida referente ao local da\nrealização do serviço.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "FORMA E CRITÉRIOS DE SELEÇÃO DO FORNECEDOR/PRESTADOR DE SERVIÇO\nConforme disposto no item 4, o futuro contratado será selecionado mediante processo licitatório na modalidade Pregão, na sua\nforma eletrônica, com critério de julgamento por menor preço, nos termos dos artigos 6º, inciso XLI, 17, § 2º, e 34, todos da Lei\nFederal nº 14.133/2021. As propostas devem ser apresentadas dentro do orçamento estimado para a contratação, de acordo\ncom a estimativa de valores apresentados no Estudo Técnico Preliminar.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": "ESTIMATIVA DO VALOR DA CONTRATAÇÃO\nEstima-se para a contratação almejada considerando a quinatidade máxima de cada intem, o valor total de R$\n54.311,96 (cinquenta e quatro mil, trezentos e onze reais e noventa e seis centavos).\nVislumbra-se que tal valor é compatível com o praticado pelo mercado correspondente, observando-se o disposto no Decreto\nMunicipal n.º 6871 de 2022, que “Estabelece o procedimento administrativo para a realização de pesquisa de preços para\naquisição de bens, contratação de serviços em geral e para contratação de obras e serviços de engenharia no âmbito do\nMunicípio de São Luiz Gonzaga, nos termos da Lei Federal nº 14.133/2021”.\nPESQUISAS DE PREÇOS REALIZADAS:\nLICITACON - TCE/RS\nPORTAL DE COMPRAS PÚBLICAS\nPORTAL NACIONAL DE CONTRATAÇÕES PÚBLICAS\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0009",
+              "type": "PARAGRAPH",
+              "text": "ADEQUAÇÃO ORÇAMENTÁRIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0008:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 8 de 9\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0009:b-0006",
+              "type": "PARAGRAPH",
+              "text": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0009:b-0001",
+              "type": "PARAGRAPH",
+              "text": "O dispêndio financeiro decorrente da contratação ora pretendida ocorrerá por meio da seguinte dotação orçamentária:\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0009:b-0002",
+              "type": "PARAGRAPH",
+              "text": "05 0502 06 0182 0180 1,024 449052000000 - EQUIPAMENTOS E MATERIAL PERMANENTE - FR 0759.02 - SECRETARIA\nMUNICIPAL DA FAZENDA \nDesta dotação será o valor de R$ 48.296,29.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0009:b-0003",
+              "type": "PARAGRAPH",
+              "text": "12.02 20 122 0110 1010 - Reaparelhamento da Secretaria Municipal de Agricultura e Desenvolvimento Rural - Origem do\nrecurso: Recurso Livre da SEMAG.\n0500 | 4490 52 00 00 00 | EQUIPAMENTOS E MATERIAL PERMANENTE\nAcesso: 5311 - Desta dotação será o valor de  R$ 6.015,66.\n"
+            },
+            {
+              "id": "87613022000105-1-000285-2025:tr:p-0009:b-0005",
+              "type": "PARAGRAPH",
+              "text": "Usuário/Matricula: VAGNER RAMBO DE AVILA/2717 - Sistema de Compras - Abase Sistemas e Soluções LTDA\nPágina 9 de 9\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "87613022000105-1-000285-2025:tr",
+            "page": 1,
+            "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0001:c-0001",
+            "quote": "Impressão: 09/12/2025\nCOMPRAS\nHora: 09:33:37\nTERMO DE REFERÊNCIA\n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-1",
+          "description": "Drone de imagens aéreas em alta definição",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 1,
+              "unit": "unidade",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000285-2025:tr",
+                  "page": 1,
+                  "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0002",
+                  "quote": "01\nunidade",
+                  "attr": "QUANTITY"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "WARRANTY_TERM",
+              "value": 12,
+              "unit": "meses",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000285-2025:tr",
+                  "page": 1,
+                  "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0003",
+                  "quote": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n",
+                  "attr": "WARRANTY_TERM"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "technical.range_min",
+              "operator": "GREATER_THAN_OR_EQUAL",
+              "value": 8,
+              "unit": "km",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000285-2025:tr",
+                  "page": 1,
+                  "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0003",
+                  "quote": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n",
+                  "attr": "technical.range_min"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "attribute": "technical.weight_max",
+              "operator": "LESS_THAN",
+              "value": 1,
+              "unit": "kg",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000285-2025:tr",
+                  "page": 1,
+                  "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0003",
+                  "quote": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n",
+                  "attr": "technical.weight_max"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000285-2025:tr",
+              "page": 1,
+              "block_id": "87613022000105-1-000285-2025:tr:p-0001:t-0001:r-0007:c-0003",
+              "quote": "DRONE DE IMAGENS AEREAS EM ALTA DEFINIÇÃO.\nAlcance mínimo de 8 km;\nAutonomia de voo aproximada de 45 minutos por bateria;\nCâmera óptica de 20 megapixels, com gravação em resolução 4K;\nSistema de estabilização de voo triplo, GPS e retorno automático;\nResistência a ventos de até 10 m/s;\nPeso inferior a 1 kg;\nConjunto com duas baterias e carregador duplo;\nGarantia mínima de 12 meses;\nCâmera térmica de alta resolução, com múltiplas paletas de cores e precisão de detecção;\nCom sensor CMOS de 4/3”; \nKit completo com controlador remoto, baterias extras, carregadores e estojo rígido de transporte.\nEntrega acompanhada de nota fiscal, manual técnico e certificado de garantia.\n",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 30,
+          "unit": "dias",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000285-2025:tr",
+              "page": 5,
+              "block_id": "87613022000105-1-000285-2025:tr:p-0005:b-0004",
+              "quote": "2. PRAZO, FORMA E LOCAIS DE ENTREGA:\n2.1. Após a homologação do processo de Licitação, um contrato será firmado junto a empresa vencedora. Após a assinatura do\ncontrato, o Setor Administrativo da SEMAG enviará uma Autorização de Fornecimento para a empresa.\n2.2 O fornecimento do objeto contratado se dará no prazo máximo de 30 (trinta) dias, podendo ser prorrogado, uma única\nvez, por igual período, contados do recebimento da Autorização de Fornecimento acompanhada de nota de empenho\ncorrespondente emitida pelo CONTRATANTE.\nA entrega DEVERÁ ocorrer na sede da Prefeitura, na Rua Venâncio Aires, nº 2438, Bairro Centro - São Luiz Gonzaga, RS,\nCEP 97.800-000.\n2.3. A ENTREGA DEVERA SER FEITA SEM CUSTOS PARA O MUNICÍPIO. Caso não seja possível a entrega do veículo\ndentro do prazo estabelecido, a empresa vencedora deverá comunicar para a SEMAG as razões para a impossibilidade da\nentrega, no prazo de 03 (três) dias úteis após o recebimento da Autorização de Fornecimento.\n2.4. O RECEBIMENTO DO OBJETO NÃO EXCLUI A RESPONSABILIDADE DO LICITANTE CONTRATADO QUANTO AOS\nVÍCIOS OCULTOS, OU SEJA, SÓ MANIFESTADOS QUANDO DA SUA NORMAL UTILIZAÇÃO.\n2.5. POR OCASIÃO DA ENTREGA, CASO SEJA DETECTADO QUE OS PRODUTOS NÃO ATENDAM AS\nESPECIFICAÇÕES DO OBJETO LICITADO, PODERÁ A ADMINISTRAÇÃO REJEITÁ-LO, INTEGRALMENTE OU EM PARTE,\nOBRIGANDO-SE A LICITANTE A PROVIDENCIAR A SUBSTITUIÇÃO DO BEM NÃO ACEITO, NO PRAZO DE 15 (QUINZE)\nDIAS CONTADOS DE SUA NOTIFICAÇÃO.\n2.6. OS ITENS A SEREM ENTREGUES DEVERÃO SER ADEQUADAMENTE ACONDICIONADOS, DE FORMA A PERMITIR\nA COMPLETA PRESERVAÇÃO DO MESMO E SUA SEGURANÇA DURANTE O TRANSPORTE.\n2.7. A NOTA FISCAL DEVERÁ SER ENTREGUE JUNTO COM O OBJETO.\n2.8. A empresa contratada deverá no tocante ao fornecimento e entrega do item objeto deste Certame, OBEDECER\nrigorosamente todas as disposições legais pertinentes.\n2.9. A contratada deverá proceder à demonstração técnica de funcionamento do equipamento no ato da entrega,\nassegurando a plena operação e treinamento básico dos servidores designados.\n2.10. O objeto do presente contrato será recebido: Provisoriamente, de forma sumária, pelo responsável por seu\nacompanhamento e fiscalização, designado pelo CONTRATANTE, com verificação posterior da conformidade do material com\nas exigências contratuais. Definitivamente por servidor (GESTOR) ou comissão designada pela autoridade competente,\nmediante assinatura de termo circunstanciado comprovando o atendimento das exigências contratuais.\n",
+              "attr": "DELIVERY_DEADLINE"
+            }
+          ],
+          "review_status": "EXTRACTED"
+        }
+      ],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

@@ -12,7 +12,7 @@ from docx import Document as DocxDocument
 from licita_ingest import (
     BlockType,
     DocumentFormat,
-    OCRNotImplementedError,
+    OCRRequiredError,
     OCR_FALLBACK_IMPLEMENTED,
     PageKind,
     UnsupportedFormatError,
@@ -153,7 +153,7 @@ def test_docx_preserves_paragraphs_tables_and_explicit_logical_page_break(
     assert all(block.document_id == extracted.document_id for block in extracted.iter_blocks())
 
 
-def test_scanned_pdf_reports_unimplemented_ocr_instead_of_silently_returning_empty_text(
+def test_scanned_pdf_reports_failed_ocr_instead_of_silently_returning_empty_text(
     tmp_path: Path,
 ) -> None:
     path = tmp_path / "escaneado.pdf"
@@ -165,10 +165,9 @@ def test_scanned_pdf_reports_unimplemented_ocr_instead_of_silently_returning_emp
     document.save(path)
     document.close()
 
-    assert OCR_FALLBACK_IMPLEMENTED is False
-    with pytest.raises(OCRNotImplementedError, match="OCR não implementado") as error:
+    assert OCR_FALLBACK_IMPLEMENTED is True
+    with pytest.raises(OCRRequiredError, match="OCR não produziu texto utilizável") as error:
         extract_document(path, document_id="scan-1")
-    assert isinstance(error.value, NotImplementedError)
     assert error.value.pages == (1,)
 
 

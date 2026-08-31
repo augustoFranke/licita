@@ -6,14 +6,15 @@
         "TABLE",
         "TABLE_CELL",
         "LIST",
-        "HEADER"
+        "HEADER",
+        "IMAGE"
       ],
       "title": "BlockType",
       "type": "string"
     },
     "Document": {
       "additionalProperties": false,
-      "description": "Documento da cadeia (ETP, TR, edital, contrato).",
+      "description": "Documento da cadeia (tipos de ``01_REQUIREMENTS.md``).",
       "properties": {
         "id": {
           "minLength": 1,
@@ -118,10 +119,13 @@
     },
     "DocumentType": {
       "enum": [
+        "DFD",
         "ETP",
         "TR",
         "EDITAL",
-        "CONTRATO"
+        "CONTRATO",
+        "PESQUISA_PRECOS",
+        "OUTROS"
       ],
       "title": "DocumentType",
       "type": "string"
@@ -199,7 +203,7 @@
     },
     "FieldValue": {
       "additionalProperties": false,
-      "description": "Valor estruturado extraído (quantidade, prazo, valor etc.).\n\nQuantidades são números positivos e valores monetários são normalizados\npara ``Decimal``. A unidade continua opcional: a RULE-002 verifica apenas\na presença da quantidade.",
+      "description": "Valor estruturado extraído (quantidade, prazo, valor etc.).\n\nQuantidades são números positivos e valores monetários são normalizados\npara ``Decimal``. A unidade é opcional no schema; a RULE-002 exige\nquantidade e unidade de fornecimento no item.",
       "properties": {
         "field_type": {
           "$ref": "#/$defs/FieldType"
@@ -262,6 +266,10 @@
           "minItems": 1,
           "title": "Evidence",
           "type": "array"
+        },
+        "review_status": {
+          "$ref": "#/$defs/ReviewStatus",
+          "default": "EXTRACTED"
         }
       },
       "required": [
@@ -276,14 +284,67 @@
       "additionalProperties": false,
       "description": "Achado/risco para revisão humana. Nunca 'aprovado'/'reprovado'.",
       "properties": {
+        "id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
         "rule_id": {
           "minLength": 1,
           "pattern": "\\S",
           "title": "Rule Id",
           "type": "string"
         },
+        "category": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/FindingCategory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "severity": {
           "$ref": "#/$defs/Severity"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
         },
         "message": {
           "minLength": 1,
@@ -332,12 +393,26 @@
       "title": "Finding",
       "type": "object"
     },
+    "FindingCategory": {
+      "enum": [
+        "STRUCTURE",
+        "CONSISTENCY",
+        "MARKET",
+        "HISTORY",
+        "PRICE",
+        "EXECUTION",
+        "COMPLIANCE"
+      ],
+      "title": "FindingCategory",
+      "type": "string"
+    },
     "FindingStatus": {
       "enum": [
         "OPEN",
-        "ACCEPTED",
-        "CORRECTED",
-        "DISMISSED"
+        "UNDER_REVIEW",
+        "RESOLVED",
+        "ACCEPTED_RISK",
+        "FALSE_POSITIVE"
       ],
       "title": "FindingStatus",
       "type": "string"
@@ -496,6 +571,10 @@
           "minItems": 1,
           "title": "Evidence",
           "type": "array"
+        },
+        "review_status": {
+          "$ref": "#/$defs/ReviewStatus",
+          "default": "EXTRACTED"
         }
       },
       "required": [
@@ -521,6 +600,15 @@
         "EXISTS"
       ],
       "title": "RequirementOperator",
+      "type": "string"
+    },
+    "ReviewStatus": {
+      "enum": [
+        "EXTRACTED",
+        "CONFIRMED",
+        "REJECTED"
+      ],
+      "title": "ReviewStatus",
       "type": "string"
     },
     "Section": {
@@ -577,8 +665,8 @@
     "Severity": {
       "enum": [
         "HIGH",
-        "MED",
-        "LOW"
+        "MEDIUM",
+        "INFO"
       ],
       "title": "Severity",
       "type": "string"

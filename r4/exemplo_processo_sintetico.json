@@ -1202,7 +1202,7 @@
   "findings": [
     {
       "rule_id": "R4_AMBIGUITY_WARRANTY",
-      "severity": "MED",
+      "severity": "MEDIUM",
       "message": "A garantia do item sintético aparece como 12 meses no TR e no contrato, mas 6 meses no edital; as ocorrências devem permanecer separadas até a adjudicação.",
       "attrs": {
         "category": "warranty",

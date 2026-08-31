@@ -37,10 +37,13 @@ NonEmptyString = Annotated[
 # ---------------------------------------------------------------- enums
 
 class DocumentType(str, Enum):
+    DFD = "DFD"
     ETP = "ETP"
     TR = "TR"
     EDITAL = "EDITAL"
     CONTRATO = "CONTRATO"
+    PESQUISA_PRECOS = "PESQUISA_PRECOS"
+    OUTROS = "OUTROS"
 
 
 class DocumentFormat(str, Enum):
@@ -54,6 +57,7 @@ class BlockType(str, Enum):
     TABLE_CELL = "TABLE_CELL"
     LIST = "LIST"
     HEADER = "HEADER"
+    IMAGE = "IMAGE"
 
 
 class FieldType(str, Enum):
@@ -83,15 +87,32 @@ class RequirementOperator(str, Enum):
 
 class Severity(str, Enum):
     HIGH = "HIGH"
-    MED = "MED"
-    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    INFO = "INFO"
 
 
 class FindingStatus(str, Enum):
     OPEN = "OPEN"
-    ACCEPTED = "ACCEPTED"
-    CORRECTED = "CORRECTED"
-    DISMISSED = "DISMISSED"
+    UNDER_REVIEW = "UNDER_REVIEW"
+    RESOLVED = "RESOLVED"
+    ACCEPTED_RISK = "ACCEPTED_RISK"
+    FALSE_POSITIVE = "FALSE_POSITIVE"
+
+
+class ReviewStatus(str, Enum):
+    EXTRACTED = "EXTRACTED"
+    CONFIRMED = "CONFIRMED"
+    REJECTED = "REJECTED"
+
+
+class FindingCategory(str, Enum):
+    STRUCTURE = "STRUCTURE"
+    CONSISTENCY = "CONSISTENCY"
+    MARKET = "MARKET"
+    HISTORY = "HISTORY"
+    PRICE = "PRICE"
+    EXECUTION = "EXECUTION"
+    COMPLIANCE = "COMPLIANCE"
 
 
 class SchemaModel(BaseModel):
@@ -162,8 +183,8 @@ class FieldValue(SchemaModel):
     """Valor estruturado extraído (quantidade, prazo, valor etc.).
 
     Quantidades são números positivos e valores monetários são normalizados
-    para ``Decimal``. A unidade continua opcional: a RULE-002 verifica apenas
-    a presença da quantidade.
+    para ``Decimal``. A unidade é opcional no schema; a RULE-002 exige
+    quantidade e unidade de fornecimento no item.
     """
 
     field_type: FieldType
@@ -174,6 +195,7 @@ class FieldValue(SchemaModel):
     )
     item_id: NonEmptyString | None = None
     evidence: list[Evidence] = Field(..., min_length=1)
+    review_status: ReviewStatus = ReviewStatus.EXTRACTED
 
     @model_validator(mode="before")
     @classmethod
@@ -289,6 +311,7 @@ class Requirement(SchemaModel):
     unit: NonEmptyString | None = None
     item_id: NonEmptyString | None = None
     evidence: list[Evidence] = Field(..., min_length=1)
+    review_status: ReviewStatus = ReviewStatus.EXTRACTED
 
     @model_validator(mode="before")
     @classmethod
@@ -478,7 +501,7 @@ class Item(SchemaModel):
 # ---------------------------------------------------------------- document / process
 
 class Document(SchemaModel):
-    """Documento da cadeia (ETP, TR, edital, contrato)."""
+    """Documento da cadeia (tipos de ``01_REQUIREMENTS.md``)."""
 
     id: NonEmptyString
     type: DocumentType
@@ -510,13 +533,23 @@ class Document(SchemaModel):
 class Finding(SchemaModel):
     """Achado/risco para revisão humana. Nunca 'aprovado'/'reprovado'."""
 
+    id: NonEmptyString | None = None
     rule_id: NonEmptyString
+    category: FindingCategory | None = None
     severity: Severity
+    confidence: float | None = Field(default=None, ge=0, le=1)
+    title: NonEmptyString | None = None
     message: NonEmptyString
     item_id: NonEmptyString | None = None
     attrs: dict[str, Any] = Field(default_factory=dict)
     evidence: list[Evidence] = Field(..., min_length=1)
     status: FindingStatus = FindingStatus.OPEN
+
+    @model_validator(mode="after")
+    def _default_title(self) -> "Finding":
+        if self.title is None:
+            self.title = self.message
+        return self
 
 
 class ProcurementProcess(SchemaModel):

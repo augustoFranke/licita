@@ -5,9 +5,10 @@ não emite ``Finding``.
 """
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Any
 
-from licita_core.schema import Document, Finding, ProcurementProcess, Severity
+from licita_core.schema import Document, Finding, FindingCategory, ProcurementProcess, Severity
 
 
 @dataclass(frozen=True)
@@ -16,6 +17,10 @@ class RuleContext:
 
     process: ProcurementProcess
     target_document_id: str
+    profile_id: str = "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+    package_files: tuple[str, ...] = ()
+    package_anchors: dict[str, list[str]] = field(default_factory=dict)
+    overlay_id: str | None = None
 
     @property
     def target_document(self) -> Document | None:
@@ -35,6 +40,8 @@ class Rule(ABC):
     scope: str
     legal_basis: str
     severity: Severity
+    rule_class: str = "NORMATIVE"
+    category: FindingCategory | None = None
 
     @abstractmethod
     def applies(self, context: RuleContext) -> bool:

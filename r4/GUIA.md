@@ -13,11 +13,14 @@ externo ou transformar interpretação jurídica em fato estruturado.
 
 ## 1. Escopo e unidade de trabalho
 
-Anotar apenas processos dentro do perfil fixado no plano: aquisição de bens
-comuns, Lei 14.133/2021, no encadeamento `ETP → TR → EDITAL → CONTRATO`.
-Serviços, obras, engenharia e regimes especiais ficam fora desta rodada.
-Cada processo deve ser anotado como uma unidade, mantendo todos os seus
-documentos e relações; nunca dividir os quatro elos entre `dev` e `eval`.
+Anotar apenas processos elegíveis no perfil exclusivo
+`MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: esfera `M`, Lei nº 14.133/2021,
+Pregão Eletrônico (`PE`) e aquisição de bens comuns. Nesta rodada a unidade é
+exatamente o par ETP→TR da mesma contratação. O controle negativo SAEMA de
+energia e qualquer processo `FORA_DO_PERFIL` não entram em R2/R4 nem nas
+métricas. Serviços, obras, engenharia, outras modalidades, outras esferas e
+regimes especiais ficam fora. Cada processo é uma unidade; nunca dividir ETP
+e TR do mesmo processo entre `dev` e `eval`.
 
 A unidade mínima do trabalho é uma afirmação sustentada por uma evidência:
 
@@ -60,17 +63,19 @@ A especificação técnica e as regras de serialização estão em
 
 ### 3.1 Preparar o processo
 
-1. Confirmar no catálogo da R1 o processo, seu escopo, a cadeia documental e
-   os hashes dos arquivos.
+1. Confirmar no catálogo/manifesto da R1 o processo, perfil, esfera `M`,
+   elegibilidade, par ETP/TR e hashes SHA-256 dos originais.
 2. Confirmar que os blocos da R3 preservam documento, página, tipo de bloco,
-   tabela/parágrafo e texto original.
+   tabela/parágrafo e texto original. Se houve OCR, conferir no manifesto o
+   hash original, idioma, versão/configuração, hash e proveniência do artefato
+   derivado.
 3. Escolher um ID estável e separar o processo no split previamente definido.
 4. Não começar a anotar se um documento ou página necessária estiver ilegível;
    registrar a pendência para não converter erro de ingestão em rótulo negativo.
 
 ### 3.2 Anotar documentos e seções
 
-Para cada ETP, TR, edital e contrato disponível:
+Para cada um dos dois documentos elegíveis do lote, ETP e TR:
 
 1. Criar `Document` com tipo e formato corretos.
 2. Reproduzir as seções relevantes, mantendo `title_original` literal.
@@ -184,25 +189,26 @@ regras em ordem:
 | Fonte diz “não se aplica”, “não possui” ou equivalente | Criar requisito explícito, normalmente `attribute: <tema>.exists`, `operator: EXISTS`, `value: false`, com evidência. |
 | Número sem unidade | Anotar o número se o campo estiver claro, deixar `unit: null` e abrir achado de unidade ausente. Não escolher “unidade” por hábito. |
 | “A definir”, “conforme demanda” ou valor ilegível | Não inventar `value`; preservar a citação e abrir achado de valor não resolvido. |
-| TR, edital e contrato divergem | Anotar cada ocorrência no documento de origem e abrir `Finding` com todas as evidências. A precedência é uma decisão de revisão, não do anotador. |
+| ETP e TR divergem | Anotar cada ocorrência no documento de origem e abrir `Finding` com todas as evidências. A precedência é uma decisão de revisão, não do anotador. |
 | Duas quantidades têm papéis diferentes | Manter um registro por papel/citação. Se `0.1.0` não consegue codificar o papel, registrar a limitação em `Finding.attrs` sem descartar os números. |
 | Condição ou exceção complexa não cabe no atributo/operador | Estruturar a parte segura, não afirmar equivalência; abrir achado de representação insuficiente com a citação completa. |
-| OCR, tabela quebrada ou página não navegável | Não corrigir pela aparência. Solicitar correção da ingestão ou marcar achado; nenhuma extração sem âncora válida. |
+| OCR, tabela quebrada ou página não navegável | Não corrigir pela aparência nem alterar o original. OCR pode ser refeito para qualquer arquivo e cacheado por SHA-256 original + idioma + versão/configuração; o resultado é derivado auditável. Sem âncora válida, solicitar correção da ingestão ou marcar achado. |
 | Item ou linha não pode ser separado | Não criar itens imaginários. Manter a evidência conjunta e registrar a ambiguidade para adjudicação. |
 | Repetição literal no mesmo documento | Um registro pode conter várias evidências se o valor é a mesma afirmação; não contar cópias como requisitos diferentes. |
 
-`Finding.status` começa em `OPEN`. `ACCEPTED`, `CORRECTED` e `DISMISSED`
-descrevem a decisão de revisão, não uma resposta do sistema sobre o mérito da
-licitação. O texto do achado deve dizer qual é a dúvida e apontar para as
-ocorrências, sem usar “aprovado” ou “reprovado”.
+`Finding.status` começa em `OPEN`. `UNDER_REVIEW`, `RESOLVED`, `ACCEPTED_RISK`
+e `FALSE_POSITIVE` descrevem a decisão de revisão (`FR-081`), não um veredito
+sobre o mérito da licitação. Severidade: `HIGH` | `MEDIUM` | `INFO`. O texto
+do achado deve dizer qual é a dúvida e apontar para as ocorrências, sem usar
+“aprovado” ou “reprovado”.
 
 ## 5. Divisão desenvolvimento/avaliação
 
 A divisão deve ser feita antes da extração da R5 e por **processo**, não por
 documento ou por página:
 
-1. Colocar ETP, TR, edital, contrato, anexos e versões copiadas do mesmo
-   processo em um único grupo.
+1. Colocar ETP, TR, anexos incorporados e versões copiadas do mesmo processo
+   em um único grupo; o payload elegível desta rodada contém exatamente ETP/TR.
 2. Agrupar também documentos reutilizados ou duplicados identificados por hash;
    nenhum texto-fonte ou cópia quase idêntica pode atravessar os splits.
 3. Usar `dev` para ajustar política, normalização, regras e prompts. `eval` é
@@ -212,8 +218,11 @@ documento ou por página:
    variedade de órgãos/categorias sem permitir vazamento. A meta do plano é
    10–15 processos reais no total; este repositório ainda não afirma possuir
    essa amostra.
-5. Guardar o split em manifesto externo com `process_id`, hashes, versão da
-   política e data do congelamento; não inserir `split` no JSON do schema.
+5. Guardar o split em manifesto/catálogo externo com `process_id`, perfil,
+   esfera `M`, hashes dos originais, versão da policy
+   `4-municipal-historical-ocr`, data do congelamento e, quando aplicável,
+   idioma, versão/configuração e hash do artefato OCR; não inserir esses campos
+   no JSON do schema.
 
 Relatar separadamente erros de ingestão, falhas de normalização e falhas de
 localização da evidência. Um processo do `eval` não pode ser movido para
@@ -253,16 +262,17 @@ superficial do JSON de A.
    no schema.
 
 O registro de revisão fica fora do `ProcurementProcess` e deve guardar versão
-da política, revisores, data, decisão, diferenças e adjudicação. Isso mantém o
-payload compatível com `additionalProperties: false` e torna a auditoria
-repetível.
+da política, revisores, data, decisão, diferenças e adjudicação. Perfil,
+esfera, hashes e metadados de OCR também ficam no manifesto/catálogo externo.
+Isso mantém o payload fechado, sem campos de esfera, e compatível com
+`additionalProperties: false`, além de tornar a auditoria repetível.
 
 ## 7. Gate específico da R4
 
 O gate não é “o exemplo valida”. Para a amostra real, exigir:
 
-- a quantidade de processos definida pelo plano, sem contar o exemplo
-  sintético;
+- a quantidade de processos elegíveis definida pelo plano, sem contar o
+  exemplo sintético, o controle negativo SAEMA ou qualquer `FORA_DO_PERFIL`;
 - cobertura dos temas pedidos pela R4 e pelo menos 300 valores/requisitos
   **somente quando essa contagem tiver sido realmente medida**;
 - duas leituras independentes concluídas;

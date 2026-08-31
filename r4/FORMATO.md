@@ -2,7 +2,9 @@
 
 Este documento define o formato do *golden dataset* da R4. O payload de uma
 anotação é **exatamente** um `ProcurementProcess` do schema atual
-`0.1.0`; não é um novo schema e não acrescenta propriedades à raiz.
+`0.1.0`; não é um novo schema e não acrescenta propriedades à raiz. Em
+particular, perfil, esfera, hashes e OCR nunca são campos do payload: ficam no
+manifesto/catálogo externo.
 
 O arquivo `exemplo_processo_sintetico.json` é apenas um exemplo executável. Ele
 é totalmente fictício, não é parte do corpus e não conta para a meta da R4.
@@ -24,9 +26,10 @@ O arquivo `exemplo_processo_sintetico.json` é apenas um exemplo executável. El
   r4/review/<process_id>.json       # registro externo de revisão, se usado
   ```
 
-  Esses diretórios são uma convenção de organização. `dev`, `eval` e o estado
-  da revisão **não** entram no objeto `ProcurementProcess`, pois o modelo atual
-  rejeita propriedades desconhecidas.
+  Esses diretórios são uma convenção de organização. `dev`, `eval`, estado da
+  revisão, perfil, esfera, hashes e OCR **não** entram no objeto
+  `ProcurementProcess`, pois o modelo fechado rejeita propriedades
+  desconhecidas.
 
 ## Forma da raiz
 
@@ -46,8 +49,10 @@ escrevê-lo. Os únicos campos válidos na raiz são `id`, `schema_version`,
 ### Identificadores e referências
 
 - `Document.id` identifica um documento da cadeia e deve ser único no processo.
-  `Document.type` só pode ser `ETP`, `TR`, `EDITAL` ou `CONTRATO`; `format` só
-  pode ser `PDF` ou `DOCX`.
+  `Document.type` segue `01_REQUIREMENTS.md`: `DFD`, `ETP`, `TR`, `EDITAL`,
+  `CONTRATO`, `PESQUISA_PRECOS`, `OUTROS`. `format` só pode ser `PDF` ou `DOCX`.
+  A R4 atual anota somente os ETP/TR elegíveis do lote exclusivo municipal; os
+  demais enums continuam no schema sem ampliar este recorte.
 - `Section.id` é estável. Cada seção deve manter `title_original` e pode ter
   `section_type_normalized` (por exemplo, `ITEMS`, `EXECUTION`, `RECEIPT`,
   `MEASUREMENT` ou `PAYMENT`). Esse valor é uma convenção, não um enum do
@@ -89,7 +94,10 @@ A política de evidência é:
    para o primeiro bloco da seção.
 
 O schema atual mantém texto original em `DocumentBlock.text`,
-`Section.title_original` e `Evidence.quote`. `Requirement` não possui campos
+`Section.title_original` e `Evidence.quote`. Esses textos-fonte são literais e
+não devem ser reescritos, inclusive quando contiverem nomes ou termos alheios
+ao perfil. O original é imutável; eventual OCR é um artefato derivado
+rastreado externamente. `Requirement` não possui campos
 `texto_original`, `section_id` ou `document_id`: não os adicione. O texto,
 documento e página da exigência são recuperados pela sua `Evidence`; a seção é
 determinada pela seção que contém o bloco citado.
@@ -121,7 +129,8 @@ tenham evidências.
 
 Use um `FieldValue` para um fato nominal ou mensurável. O valor normalizado
 fica em `value`; a unidade, quando houver, fica em `unit`; a formulação
-original fica na evidência. A unidade é uma string livre no schema, mas a
+original fica na evidência. `review_status` começa em `EXTRACTED` e só vira
+`CONFIRMED` após revisão humana com evidência (`FR-013`/`FR-014`). A unidade é uma string livre no schema, mas a
 anotação deve usar formas consistentes:
 
 - `kit`, `unidade`, `kg` e `°C` para unidades de medida;
@@ -188,9 +197,11 @@ schema `0.1.0`. Portanto, seus prazos vão em `FieldValue` (`DELIVERY_DEADLINE`,
 
 `Finding` não é um rótulo “aprovado/reprovado” e não substitui um fato
 extraível. Use-o como registro de conflito, ilegibilidade ou limitação que
-precisa de revisão humana. Todo achado precisa de evidência e deve ter
-`status: "OPEN"` até ser resolvido. `attrs` pode carregar detalhes auxiliares,
-mas não deve esconder o valor estruturado que ainda é observável.
+precisa de revisão humana. Todo achado precisa de evidência e começa com
+`status: "OPEN"`. Status de decisão: `UNDER_REVIEW`, `RESOLVED`,
+`ACCEPTED_RISK`, `FALSE_POSITIVE` (`FR-081`). Severidade: `HIGH`, `MEDIUM`,
+`INFO`. `attrs` pode carregar detalhes auxiliares, mas não deve esconder o
+valor estruturado que ainda é observável.
 
 Uma divergência entre documentos deve manter os valores anotados em seus
 respectivos documentos e pode receber um `Finding` com as evidências das duas
@@ -198,14 +209,24 @@ ocorrências. Nunca escolher silenciosamente a versão “mais provável”.
 
 ## Metadados fora do payload
 
-O schema não comporta metadados de avaliação. Em um manifesto externo (por
-exemplo, CSV ou JSON sob `r4/`) manter, no mínimo:
+O schema não comporta metadados de avaliação. O recorte de escopo do processo
+é validado externamente por
+[`corpus_process.v0.1.0.json`](../schemas/corpus_process.v0.1.0.json), com
+exemplos em [`schemas/examples/`](../schemas/examples/). Metadados específicos
+de anotação podem complementar esse registro em CSV ou JSON sob `r4/` e devem
+manter, no mínimo:
 
-- `process_id`, `split` (`dev` ou `eval`), IDs dos quatro documentos e hashes;
-- anotador(es), versão da política e data da primeira anotação;
-- estado da revisão A/B, decisão de adjudicação e IDs das evidências em
-  desacordo.
+- `process_id`, `split` (`dev` ou `eval`), perfil
+  `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`, esfera `M` e IDs de ETP/TR;
+- URL/canal e SHA-256 de cada original imutável;
+- policy `4-municipal-historical-ocr` e, quando houver OCR, idioma,
+  versão/configuração, hash e proveniência do artefato derivado;
+- anotador(es), data da primeira anotação, estado da revisão A/B, decisão de
+  adjudicação e IDs das evidências em desacordo.
 
-O manifesto deve referenciar o `id` do payload e não duplicar seus fatos.
-Assim, adicionar `split`, `reviewer`, `annotation_status` ou `source_url` à
-raiz do JSON torna o arquivo incompatível com `additionalProperties: false`.
+O cache de OCR para qualquer arquivo usa `SHA-256 do original + idioma +
+versão/configuração`; nunca sobrescreve o original. O manifesto deve
+referenciar o `id` do payload e não duplicar seus fatos. Assim, adicionar
+`split`, `profile`, `esfera`, `hash`, `ocr`, `reviewer`, `annotation_status` ou
+`source_url` à raiz do JSON torna o arquivo incompatível com
+`additionalProperties: false`.

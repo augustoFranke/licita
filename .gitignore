@@ -15,8 +15,9 @@ wheels/
 venv/
 env/
 
-# Corpus R1: os arquivos originais e o cache de coleta são reproduzíveis
-# por `uv run licita-corpus`; só o catálogo e os relatórios são versionados.
+# Corpus inicial: originais e estado da coleta são reproduzíveis por
+# `uv run licita-corpus`; só catálogo e relatórios podem ser versionados.
 corpus/documentos/
+corpus/estado/
 corpus/harvest/
 corpus/*.log

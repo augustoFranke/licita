@@ -1,0 +1,2306 @@
+{
+  "id": "01612698000169-1-000047-2024",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "01612698000169-1-000047-2024:etp",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "etp-02-03-etp.pdf",
+      "sections": [
+        {
+          "id": "01612698000169-1-000047-2024:etp:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "ESTUDO TÉCNICO PRELIMINAR \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0001:b-0015",
+              "type": "PARAGRAPH",
+              "text": "AQUISIÇÃO DE IMPLEMENTO AGRICOLA, COM USO DE RECURSOS PROPRIOS E DE CONVENIO \nSPOA/SE/MAPA Nº 957207/2024 – TRANSFEREGOV.BR Nº 006518/2024, DE ACORDO COM \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0001:b-0016",
+              "type": "PARAGRAPH",
+              "text": "TERMO DE COMVENIO E PLANO DE TRABALHO. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0001:b-0025",
+              "type": "PARAGRAPH",
+              "text": "Entre Rios-SC, 22 de julho de 2024 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "ESTUDO TÉCNICO PRELIMINAR DA AQUISIÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0008",
+              "type": "PARAGRAPH",
+              "text": "1. INTRODUÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "1.1- O presente ESTUDO TÉCNICO PRELIMINAR (ETP), enquanto elemento essencial ao planejamento \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0011",
+              "type": "PARAGRAPH",
+              "text": "do suprimento governamental, ao cumprir as determinações legais relacionadas à sua elaboração, auxilia na \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0012",
+              "type": "PARAGRAPH",
+              "text": "elaboração do competente Termo de Referência (TR) e dos demais documentos integrantes do processo de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0013",
+              "type": "PARAGRAPH",
+              "text": "aquisição. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0014",
+              "type": "PARAGRAPH",
+              "text": "1.2- Vê-se, assim, que as finalidades do ETP estão dirigidas, dentre outras, a analisar a viabilidade técnica \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0015",
+              "type": "PARAGRAPH",
+              "text": "da almejada aquisição, bem assim avaliar todos os aspectos necessários e suficientes à aquisição.1 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0016",
+              "type": "PARAGRAPH",
+              "text": "1.3- O papel do ETP (não obstante previsão legal) tem respaldo na doutrina administrativista brasileira, conforme \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0017",
+              "type": "PARAGRAPH",
+              "text": "diz a Professora Tatiana Camarão2: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0018",
+              "type": "PARAGRAPH",
+              "text": "Entende-se que um dos principais documentos da etapa de planejamento é o Estudo Técnico \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0019",
+              "type": "PARAGRAPH",
+              "text": "Preliminar (ETP), o qual se destina a identificar e analisar a necessidade pungente projetada pela unidade \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0020",
+              "type": "PARAGRAPH",
+              "text": "administrativa ao realizar o seu planejamento estratégico e o plano anual de aquisição, buscando evidenciar \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0021",
+              "type": "PARAGRAPH",
+              "text": "o problema a ser resolvido, assim como as soluções possíveis, com fins de avaliar as informações necessárias \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0022",
+              "type": "PARAGRAPH",
+              "text": "para subsidiar o respectivo processo de aquisição. Nota-se, portanto, que o ETP assume função estratégica \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0023",
+              "type": "PARAGRAPH",
+              "text": "na engrenagem das contratações públicas, pois pavimenta o caminho para o atendimento da demanda ao \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0024",
+              "type": "PARAGRAPH",
+              "text": "avaliar os cenários possíveis e demonstrar a viabilidade técnica e econômica das soluções disponíveis. Em \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0025",
+              "type": "PARAGRAPH",
+              "text": "decorrência disto, esse documento vem sendo exigido em vários normativos e trouxe à tona dúvidas em relação \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0026",
+              "type": "PARAGRAPH",
+              "text": "à sua produção, conteúdo, momento adequado para sua elaboração e aplicabilidade nas contratações públicas. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0027",
+              "type": "PARAGRAPH",
+              "text": "                                               \n1 \n1 TCU. Acórdão 1273/2007-Plenário. Relatório de Levantamento. Relator Min. Ubiratan Aguiar. Sessão \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0028",
+              "type": "PARAGRAPH",
+              "text": "de julgamento em 27.06.2007. Enunciado: “Os estudos técnicos preliminares devem demonstrar a viabilidade \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0029",
+              "type": "PARAGRAPH",
+              "text": "técnica a partir de todos os elementos necessários e suficientes, com nível de precisão adequado para \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0030",
+              "type": "PARAGRAPH",
+              "text": "caracterizar a obra, com indicações dos estudos técnicos e ambientais, avaliação do seu custo, definição dos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0031",
+              "type": "PARAGRAPH",
+              "text": "métodos e do prazo de execução.” \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0032",
+              "type": "PARAGRAPH",
+              "text": " \n2 \n2 CAMARÃO, Tatiana. Estudo Técnico Preliminar: arquitetura, conteúdo e obrigatoriedade. Disponível \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0033",
+              "type": "PARAGRAPH",
+              "text": "em: \nhttp://www.novaleilicitacao.com.br/2020/01/03/estudo-tecnico-preliminar-arquitetura-conteudo-\n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0034",
+              "type": "PARAGRAPH",
+              "text": "obrigatoriedade-e-a-previsao-no-pl1292-95/. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "1.4- O Estudo Técnico Preliminar tem por objetivo identificar e analisar os cenários para o atendimento da \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "demanda que consta no Documento de Oficialização da Demanda, bem como demonstrar a viabilidade \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "técnica e econômica das soluções identificadas, fornecendo as informações necessárias para subsidiar o \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "respectivo processo de aquisição. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "1.5- Não por outro motivo, aliás, disciplina o § 1º do artigo 18 da Lei n. 1.4133/2021 quanto à própria função \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "do ETP (atenção especial para os destaques que não constam do original): \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Art. 18. A fase preparatória do processo licitatório é caracterizada pelo planejamento e deve \ncompatibilizar-se com o plano de contratações anual de que trata o inciso VII do caput do art. 12 \ndesta Lei, sempre que elaborado, e com as leis orçamentárias, bem como abordar todas as \nconsiderações técnicas, mercadológicas e de gestão que podem interferir na aquisição, \ncompreendidos: \nI - a descrição da necessidade da aquisição fundamentada em estudo técnico preliminar que \ncaracterize o interesse público envolvido; \n[...] \n§ 1º. O estudo técnico preliminar a que se refere o inciso I do caput deste artigo deverá evidenciar \no problema a ser resolvido e a sua melhor solução, de modo a permitir a avaliação da viabilidade \ntécnica e econômica da aquisição, e conterá os seguintes elementos: \nI \n- A descrição da necessidade da aquisição, considerado o problema a ser resolvido sob a \nperspectiva do interesse público; \nII \n- A demonstração da previsão da aquisição no plano de contratações anual, sempre que \nelaborado, de modo a indicar o seu alinhamento com o planejamento da Administração; \nIII \n- Os requisitos da aquisição; \nIV \n- As estimativas das quantidades para a aquisição, acompanhadas das memórias de \ncálculo e dos documentos que lhes dão suporte, que considerem interdependências com outras \ncontratações, de modo a possibilitar economia de escala; \nV \n- O levantamento de mercado, que consiste na análise das alternativas possíveis, e \njustificativa técnica e econômica da escolha do tipo de solução a contratar; \nVI \n- A estimativa do valor da aquisição, acompanhada dos preços unitários referenciais, das \nmemórias de cálculo e dos documentos que lhe dão suporte, que poderão constar de anexo classificado, \nse a Administração optar por preservar o seu sigilo até a conclusão da licitação; \nVII \n- A descrição da solução como um todo, inclusive das exigências relacionadas à \nmanutenção e à assistência técnica, quando for o caso; \nVIII \n- As justificativas para o parcelamento ou não da aquisição; \nIX \n- O demonstrativo dos resultados pretendidos em termos de economicidade e de melhor \naproveitamento dos recursos humanos, materiais e financeiros disponíveis. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "2- \nDEFINIÇÃO DAS NECESSIDADES E DIAGNÓSTICOS. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0006",
+              "type": "PARAGRAPH",
+              "text": "2.1. - Trata-se da necessidade da AQUISIÇÃO DE IMPLEMENTO AGRICOLA, COM USO DE RECURSOS PROPRIOS \nE DE CONVENIO SPOA/SE/MAPA Nº 957207/2024 – TRANSFEREGOV.BR Nº 006518/2024, DE \nACORDO COM TERMO DE COMVENIO E PLANO DE TRABALHO. \n \n2.2- Com o provimento da solução, as áreas requisitantes da solução visa a atender as necessidades e garantir a \nprestação do atendimento das demandas. \n \n2.3- A descrição da necessidade da aquisição visa a solução mais adequada do problema sob a \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "perspectiva do interesse público. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0008",
+              "type": "PARAGRAPH",
+              "text": "2.4- Atualmente, para toda compra pública é realizada uma descrição detalhada e estimativa do quantitativo \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0009",
+              "type": "PARAGRAPH",
+              "text": "conforme a realidade que se apresenta, com intuito de alcançar a eficiência e vantajosidade das \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0010",
+              "type": "PARAGRAPH",
+              "text": "contratações públicas. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0011",
+              "type": "PARAGRAPH",
+              "text": "2.5- Trata-se de uma aquisição total. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0013",
+              "type": "PARAGRAPH",
+              "text": "3- \nDA AQUISIÇÃO E JUSTIFICATIVA DAS SOLUÇÕES A CONTRATAR \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0014",
+              "type": "PARAGRAPH",
+              "text": "3.1- A Administração Pública Municipal é composta por diversas Secretarias e Fundos Municipais engajados \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0015",
+              "type": "PARAGRAPH",
+              "text": "em cumprir com a obrigação pública visando o bem-estar da coletividade. E nessa linha de ideias, procedeu-se \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0016",
+              "type": "PARAGRAPH",
+              "text": "o levantamento das demandas do município para elaborar a presente documentação, encontrando-se no \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0017",
+              "type": "PARAGRAPH",
+              "text": "procedimento os elementos que dizem respeito ao objeto licitado. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0018",
+              "type": "PARAGRAPH",
+              "text": "3.2- A estimativa da demanda é baseada na elaboração da necessidade, do referido objeto com a \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0019",
+              "type": "PARAGRAPH",
+              "text": "disponibilidade de recursos. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0020",
+              "type": "PARAGRAPH",
+              "text": "3,3- Promover, incentivar a produção agrícola e pecuária do Município de Entre Rios \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0021",
+              "type": "PARAGRAPH",
+              "text": "localiza-se no Oeste de Santa Catarina, com uma População total com base no último \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0022",
+              "type": "PARAGRAPH",
+              "text": "censo: 3.322 (IBGE/2022), sendo que destas 70% residem no Interior e o restante de 30% \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0023",
+              "type": "PARAGRAPH",
+              "text": "no perímetro urbano. Atualmente nossas principais cultivares do Município são: Soja, milho, \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0024",
+              "type": "PARAGRAPH",
+              "text": "feijão e Trigo. Nosso IDH: 0,654, coloca nosso Município de Entre Rios, dentre os mais \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0025",
+              "type": "PARAGRAPH",
+              "text": "carentes do Estado. Estamos localizados no Micro Região do Alto Irani (AMAI), possui uma \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0026",
+              "type": "PARAGRAPH",
+              "text": "área de 105 km², com aproximadamente 500 estabelecimentos rurais, atuam no município \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0027",
+              "type": "PARAGRAPH",
+              "text": "diversas organizações, como Sindicato dos Trabalhadores da Agricultura familiar, \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0028",
+              "type": "PARAGRAPH",
+              "text": "Cooperativa dos Pequenos Agricultores (COMFAG). Estão organizados e em \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0029",
+              "type": "PARAGRAPH",
+              "text": "funcionamento os conselhos de Merenda Escolar, Conselho de Saúde, Conselho Municipal \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0030",
+              "type": "PARAGRAPH",
+              "text": "dos Direitos da Criança e Adolescente, Conselho de Assistência Social, Conselho Tutelar \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0003",
+              "type": "PARAGRAPH",
+              "text": "e Conselho Municipal de Desenvolvimento Rural. JUSTIFICA-SE a necessidade de atenção \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "especial na busca de reversão das desigualdades sociais e econômicas, justificando desse \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": "modo a priorização no atendimento desta solicitação, atendendo assim, as determinações \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0006",
+              "type": "PARAGRAPH",
+              "text": "das políticas estabelecidas de modo a atender aos critérios de viabilidade técnica \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0007",
+              "type": "PARAGRAPH",
+              "text": "solicitadas objetivando prover os municípios de infraestrutura de máquinas e equipamentos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0008",
+              "type": "PARAGRAPH",
+              "text": "para o Município de Entre Rios.  Acreditamos que com a aquisição desta Retroescavadeira \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0009",
+              "type": "PARAGRAPH",
+              "text": "iremos equipar nossa patrulha mecanizada visando atender de forma subsidiada nossos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0010",
+              "type": "PARAGRAPH",
+              "text": "agricultores \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0011",
+              "type": "PARAGRAPH",
+              "text": "3.4- A aquisição intentada na execução de atividades comemorativa bem como o incremento da atividades \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0012",
+              "type": "PARAGRAPH",
+              "text": "econômicas de nosso município de Entre Rios/SC. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0013",
+              "type": "PARAGRAPH",
+              "text": " 3.5- A definição do objeto aqui citado se dará, detalhadamente, no competente Termo de Referência que \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0014",
+              "type": "PARAGRAPH",
+              "text": "será elaborado oportunamente. Aqui, neste ETP, tão somente serão destacados os elementos principais \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0015",
+              "type": "PARAGRAPH",
+              "text": "relacionados à aquisição até mesmo porque o presente documento não se confunde com aquele, o Termo \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0016",
+              "type": "PARAGRAPH",
+              "text": "de Referência. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0017",
+              "type": "PARAGRAPH",
+              "text": "3.6- A contratação deverá ocorrer por meio de procedimento administrativo com ampla divulgação, em \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0018",
+              "type": "PARAGRAPH",
+              "text": "obediência a lei de licitações 14.133/21. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0019",
+              "type": "PARAGRAPH",
+              "text": "3.7- Sendo assim, essa aquisição é de suma importância, visto que as necessidades acima esplanadas. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0021",
+              "type": "PARAGRAPH",
+              "text": "4. DA IDENTIFICAÇÃO E ANÁLISE DAS SOLUÇÕES \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0022",
+              "type": "PARAGRAPH",
+              "text": "4.1- Este Estudo Técnico Preliminar visa, sobremaneira, analisar e escolher qual a solução que melhor responde \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0023",
+              "type": "PARAGRAPH",
+              "text": "às necessidades deste Município, sob os aspectos legais, técnicos, econômicos e ambientais em relação aos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0024",
+              "type": "PARAGRAPH",
+              "text": "produtos a serem adquiridos. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0025",
+              "type": "PARAGRAPH",
+              "text": "4.2- As formas como se é realizada atualmente: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "SOLUÇÃO"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "DESCRIÇÃO"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Aquisição"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Aquisição de pessoa jurídica de equipamentos agrícolas."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0030",
+              "type": "PARAGRAPH",
+              "text": "4.4- JUSTIFICATIVAS DA ESCOLHA DA SOLUÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0032",
+              "type": "PARAGRAPH",
+              "text": "4.1- Ao analisar a solução vemos que: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0033",
+              "type": "PARAGRAPH",
+              "text": "4.1-1. A solução de aquisição intenta a alternativa viável para aquisição de implementos novos; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0034",
+              "type": "PARAGRAPH",
+              "text": "4.2- A aquisição em questão amplamente transparente, sendo que todas as empresas do ramo teriam \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0003",
+              "type": "PARAGRAPH",
+              "text": "capacidade técnica e operacional necessária para executar o contrato favorecendo a competitividade do certame. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "4.3- Como benefícios resultantes desta aquisição espera-se melhor atender a demandas dos agricultores do \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "municipio, quai demanda auxilio municipal: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0006",
+              "type": "PARAGRAPH",
+              "text": "4.3-1. O planejamento para esta aquisição ora pretendida foi realizado buscando o melhor aproveitamento dos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0007",
+              "type": "PARAGRAPH",
+              "text": "recursos humanos, materiais e/ou financeiros despendidos na aquisição de serviços, contemplando assim, a \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0008",
+              "type": "PARAGRAPH",
+              "text": "demanda das atividades essenciais e auxiliares às atividades acadêmicas e administrativas; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0009",
+              "type": "PARAGRAPH",
+              "text": "4.3-2. Os padrões aqui definidos, que contam com especificações usuais no mercado, permitirão a permanente \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0010",
+              "type": "PARAGRAPH",
+              "text": "mensuração qualitativa e quantitativa dos resultados, maximizando o aproveitamento dos serviços prestados; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0011",
+              "type": "PARAGRAPH",
+              "text": "4.3-3. Os parâmetros definidos para o objeto da aquisição e para execução contratual possibilitam obter preço \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0012",
+              "type": "PARAGRAPH",
+              "text": "compatível com a finalidade estabelecida; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0013",
+              "type": "PARAGRAPH",
+              "text": "4.4- No que tange aos impactos ambientais da aquisição, foram relacionadas, neste estudo, as obrigações da \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0014",
+              "type": "PARAGRAPH",
+              "text": "contratada quanto a critérios de sustentabilidade, que vão desde rotinas até critérios que deverão    ser respeitados \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0015",
+              "type": "PARAGRAPH",
+              "text": "quando da aquisição/execução. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0017",
+              "type": "PARAGRAPH",
+              "text": "5- \nRELAÇÃO ENTRE DEMANDA ESTIMADA E QUANTIDADES PREVISTA \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0018",
+              "type": "PARAGRAPH",
+              "text": "5.1- Para a estimativa das quantidades, considerou-se as necessidades frente a disponibilidade de recursos. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0019",
+              "type": "PARAGRAPH",
+              "text": "5.3- Conforme estudos preliminares, a análise do objeto pretendido com a aquisição revela a sua natureza \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0020",
+              "type": "PARAGRAPH",
+              "text": "“bens comuns”, até por conta da averiguação de padrões de desempenho e qualidade que podem ser \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0021",
+              "type": "PARAGRAPH",
+              "text": "objetivamente definidos no edital, principalmente perante o parcelamento e as especificidades escolhidas \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0022",
+              "type": "PARAGRAPH",
+              "text": "para garantir a utilidade do produto pretendido na compra, reforçando o enquadramento fático à hipótese de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0023",
+              "type": "PARAGRAPH",
+              "text": "aquisição na modalidade licitatória “pregão” (art. 29, Lei nº 14.133/2021). \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0024",
+              "type": "PARAGRAPH",
+              "text": "5.4- Conforme planejamento, as especificações e quantidades em relação às suas adequabilidades frente \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0025",
+              "type": "PARAGRAPH",
+              "text": "às necessidades. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0026",
+              "type": "PARAGRAPH",
+              "text": "5.5- Itens e valores máximos de acordo com cotações de mercado feita com três possíveis fornecedores são: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Item"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Descrição"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "QTD"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "Valor máximo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "CONJUNTO \nIMPLEMENTOS \nAGRICOLAS \nNOVOS \nCOMPONDO POR: \n01 – Trator agrícola de pneus, motor 6 cilindros, com 171 cv \nde potência, tração 4x4, cabine com ar-condicionado, caixa \nde câmbio com 36 velocidades a frente e 36 a ré com \nreversor mecânico. Pneus dianteiros 18.4x26” e traseiros \n24,5x32”, equipado com hidráulico e tomada  de potência \nfrontal. Novo de fabricação Nacional, ano 2024. \n01 – Colhedora de forragens de milho, frontal com largura \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "R$ 811.750,00"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "mínima de corte de 2,30m com área total, com 2 rotores, 12 \nfacas cada rotor, com 4 rolos recolhedores com facas \nserrilhadas, bica e quebra jato com acionamento eletro-\nhidráulico, com exclusivo sistema quebrador de grãos. \nObs:  \na) Conjunto devera ser entregue montado com todos \nos itens não mencionados que sejam necessarios \npara pleno funcionamento; \nb) Proponente \nvencedor \ndevera \ndisponibilisar \ntreinamento completo de operação, bem como \ndisponibilizar \ntecnico \nque \nira \nacompanha \nfuncionamento do equipamentonas primeiras 50 \n(cinquenta) horas de funcionamento/uso; \nc) Ano fabricação 2024 minimo; \nd) Descrição dos itens são especificações minimas. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0008",
+              "type": "PARAGRAPH",
+              "text": "6- \nDESCRIÇÃO DOS REQUISITOS DA POTENCIAL AQUISIÇÃO  CARACTERÍSTICAS GERAIS: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "a) A contratação deve ser feita de forma menor preço por item, qual aumentara a gama de fornecedores; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0012",
+              "type": "PARAGRAPH",
+              "text": "DA EXECUÇÃO POR CONTA DA CONTRATADA: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0013",
+              "type": "PARAGRAPH",
+              "text": "a) Contratado:  \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0014",
+              "type": "PARAGRAPH",
+              "text": " \nAssumir todos os custos de preparar os produtos/serviços de acordo com solicitado e \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0015",
+              "type": "PARAGRAPH",
+              "text": "especificado no objeto, bem como custos de entrega de acordo com as normas estipuladas no \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0016",
+              "type": "PARAGRAPH",
+              "text": "certame licitatório. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0018",
+              "type": "PARAGRAPH",
+              "text": "DO VALOR DE MERCADO DO PRODUTOS/SERVIÇOS \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0019",
+              "type": "PARAGRAPH",
+              "text": " \nTendo buscado no mercado valor os produtos/serviços, realizando orçamentos/cotações, usando \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0020",
+              "type": "PARAGRAPH",
+              "text": "mínimo de 3 (três) cotações. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0022",
+              "type": "PARAGRAPH",
+              "text": "7. A QUALIDADE DOS PRODUTOS E DOS SERVIÇOS QUE INTEGRAM A SOLUÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0023",
+              "type": "PARAGRAPH",
+              "text": "7.1- O padrão de qualidade do objeto pretendido pelo Poder Público perfaz elemento essencial nas \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0024",
+              "type": "PARAGRAPH",
+              "text": "contratações, o que implica numa análise ampliada sobre a eficiência do negócio e o alcance da finalidade \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0025",
+              "type": "PARAGRAPH",
+              "text": "almejada, mormente perante a avaliação da viabilidade do parcelamento (ou não), ante a perda de economia \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0003",
+              "type": "PARAGRAPH",
+              "text": "da escala (art. 40, § 3º, I e II, Lei nº 14.133/2021). \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "7.2- Diante da necessidade de aquisição do objeto deste termo, buscou-se utilizar a centralização de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "aquisição de mesma natureza, com especificações e características já experimentadas e aprovadas para \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "demandas do setor, inclusive com intuito de afastar os materiais de qualidade inferior. Tal procedimento \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": "revela-se vantajoso e eficiente, gerando economicidade, redução da inatividade e agilidade na execução \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0008",
+              "type": "PARAGRAPH",
+              "text": "do serviço público. As ordens de fornecimentos periódicas contribuem para ganho de escala, tornando assim \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0009",
+              "type": "PARAGRAPH",
+              "text": "a aquisição mais atrativa para o mercado, despertando, maior interesse dos fornecedores. O material a ser \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0010",
+              "type": "PARAGRAPH",
+              "text": "adquirido enquadra- se como bem comum por possuir padrões de desempenho e características gerais e \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0011",
+              "type": "PARAGRAPH",
+              "text": "específicas, usualmente encontradas no mercado, podendo, portanto, ser licitado por meio da modalidade Pregão \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Eletrônico, no formato de Registro de Preços.  \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0013",
+              "type": "PARAGRAPH",
+              "text": "7.3- A essencialidade da aquisição/contratação terrestre, fundamenta-se nos danos e prejuízos que podem \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0014",
+              "type": "PARAGRAPH",
+              "text": "ser causados à Administração Pública no caso de eventual paralisação ou interrupção fornecimento dos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0015",
+              "type": "PARAGRAPH",
+              "text": "materiais, e, nesse sentido, a presente aquisição visa assegurar e manter o funcionamento de atividades \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0016",
+              "type": "PARAGRAPH",
+              "text": "finalísticas dos entes administrativos, e atendimento a melhoria das vias urbanas e aos seus munícipes. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0017",
+              "type": "PARAGRAPH",
+              "text": "7.6- A compreensão sobre a previsão de condições para assegurar o padrão da qualidade do objeto alcançará \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0018",
+              "type": "PARAGRAPH",
+              "text": "não só a escolha da modalidade de contrato, mas as especificações de cada item, prazo de fornecimento e \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0019",
+              "type": "PARAGRAPH",
+              "text": "obrigações. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0021",
+              "type": "PARAGRAPH",
+              "text": "8- \nRESULTADOS PRETENDIDOS \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0022",
+              "type": "PARAGRAPH",
+              "text": "8.1- Pretende-se, com a contratação: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0023",
+              "type": "PARAGRAPH",
+              "text": "a) \nAmpliar o parque de máquinas do Município visando fornecer atendimento \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0024",
+              "type": "PARAGRAPH",
+              "text": "subsidiado aos pequenos e médios agricultores do Município de Entre Rios. Também será \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0025",
+              "type": "PARAGRAPH",
+              "text": "utilizado para realizar diversos serviços na recuperação de estradas vicinais no município \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0026",
+              "type": "PARAGRAPH",
+              "text": "de Entre Rios visando melhorar a trafegabilidade de veículos e pedestres. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0027",
+              "type": "PARAGRAPH",
+              "text": "9- \nANÁLISE DE RISCO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0028",
+              "type": "PARAGRAPH",
+              "text": "9.1- Os itens licitados foram devidamente especificados e quantificados, diminuindo assim os riscos de uma \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0029",
+              "type": "PARAGRAPH",
+              "text": "aquisição indesejada ou ineficiente. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0030",
+              "type": "PARAGRAPH",
+              "text": "9.2- Diante o planejamento desenvolvido e apresentado neste ETP, a Administração Municipal tem como \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0031",
+              "type": "PARAGRAPH",
+              "text": "proposito uma aquisição eficiente e vantajosa. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0032",
+              "type": "PARAGRAPH",
+              "text": "9.3- Caberá ao Gestor do Contrato identificar os eventos de risco e geri-los em ordem crítica de maior \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0033",
+              "type": "PARAGRAPH",
+              "text": "impacto junto aos objetivos a serem alcançados. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:b-0003",
+              "type": "PARAGRAPH",
+              "text": "9.4- Para demonstração seguem os mapas de risco: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:b-0005",
+              "type": "PARAGRAPH",
+              "text": "MAPA DE RISCO I \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:b-0006",
+              "type": "PARAGRAPH",
+              "text": "(Planejamento da Aquisição) \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 01 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Licitação Deserta \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixa"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Média"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0003:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alta"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Médio"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0004:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alto"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0005:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "atuais necessidades para \nestabelecer orçamento Atrativo \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0006:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0007:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0008:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0008:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Novo planejamento para posterior licitação"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0001:r-0008:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 02 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Contratada Com Profissionais Desqualificados \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixa"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Média"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0003:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alta"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Médio"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0004:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alto"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0005:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Constar no planejamento a análise dos requisitos \nimprescindíveis à aquisição \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0006:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CARLOS ALEXANDRE LISE \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0007:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0008:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0008:c-0002",
+              "type": "TABLE_CELL",
+              "text": "providências cabíveis caso seja necessário \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0002:r-0008:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 03 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Aquisição de empresa sem aporte financeiro suficiente para prestação dos serviços \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixa"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Média"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0003:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alta"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Médio"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0004:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alto"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:t-0003:r-0005:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0009:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Critérios de qualificação econômica."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "CARLOS ALEXANDRE LISE"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "referentes à qualificação econômica e, após \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "CARLOS ALEXANDRE LISE \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "assinatura do contrato."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "JOAO MARIA ROQUE"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0010",
+              "type": "PARAGRAPH",
+              "text": "MAPA DE RISCO II \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0011",
+              "type": "PARAGRAPH",
+              "text": "(Execução do Contrato) \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 01 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Não conformidade da execução com as normas vigentes. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixa"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Média"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0003:c-0008",
+              "type": "TABLE_CELL",
+              "text": "Alta"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Médio"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0004:c-0008",
+              "type": "TABLE_CELL",
+              "text": "Alto"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0005:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Gerenciamento e Fiscalização."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0006:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0007:c-0006",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0008:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0008:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Notificações Extrajudiciais"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0002:r-0008:c-0006",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 02 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Atrasos na entrega e correções de projeto \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "X"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixa"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Média"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0003:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alta"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Baixo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Médio"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0004:c-0006",
+              "type": "TABLE_CELL",
+              "text": "x"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0004:c-0007",
+              "type": "TABLE_CELL",
+              "text": "Alto"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0005:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Alertar a empresa a respeitar as\ncláusulas contratuais"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0006:c-0005",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Id."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0007:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0008:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1."
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0008:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Aplicar sanção"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:t-0003:r-0008:c-0005",
+              "type": "TABLE_CELL",
+              "text": "CLAODIR DARTORA"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0032",
+              "type": "PARAGRAPH",
+              "text": "10- \nDECLARAÇÃO E JUSTIFICATIVA DA VIABILIDADE DA AQUISIÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0033",
+              "type": "PARAGRAPH",
+              "text": "10.1- Diante de toda a análise desenvolvida no presente estudo técnico preliminar, a aquisição mostra-se viável \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0034",
+              "type": "PARAGRAPH",
+              "text": "em termos de disponibilidade de mercado, forma de fornecimento do objeto, competitividade do mercado, não \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0010:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0003",
+              "type": "PARAGRAPH",
+              "text": "sendo possível observar óbices ao prosseguimento da presente aquisição. Diante o exposto esta equipe de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0004",
+              "type": "PARAGRAPH",
+              "text": "planejamento declara viável e razoável esta aquisição. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0006",
+              "type": "PARAGRAPH",
+              "text": "11- \nPROVIDÊNCIAS A SEREM ADOTADAS PELA ADMINISTRAÇÃO PREVIAMENTE À \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0007",
+              "type": "PARAGRAPH",
+              "text": "CELEBRAÇÃO \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0008",
+              "type": "PARAGRAPH",
+              "text": "11.1- Considerando que a Administração Pública deverá definir o objeto no TR com todos os seus elementos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0009",
+              "type": "PARAGRAPH",
+              "text": "essenciais e acidentais, homenageando a qualidade, o benefício, a superioridade e, enfim, a vantagem que não \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0010",
+              "type": "PARAGRAPH",
+              "text": "é – em absoluto – sinônimo de menor valor, o edital deve prever mecanismo de obtenção de qualidade e \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0011",
+              "type": "PARAGRAPH",
+              "text": "estabelecer as exigências de qualificação técnica e econômico-financeira que sejam pertinentes e correlatas ao \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0012",
+              "type": "PARAGRAPH",
+              "text": "cumprimento das obrigações assumidas, acompanhando o mandamento constitucional estampado no inciso \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0013",
+              "type": "PARAGRAPH",
+              "text": "XXI do artigo 37 da Carta Maior. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0014",
+              "type": "PARAGRAPH",
+              "text": "11.2- Serão estabelecidas premissas para a execução contratual, valorizando-se a qualidade e os demais \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0015",
+              "type": "PARAGRAPH",
+              "text": "objetivos que informam o processo de aquisição e demais informações como encargos, dotações \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0016",
+              "type": "PARAGRAPH",
+              "text": "orçamentárias e recursos, obrigações das partes, rescisão do contrato, penalidades, pagamentos e demais \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0017",
+              "type": "PARAGRAPH",
+              "text": "disposições gerais. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0018",
+              "type": "PARAGRAPH",
+              "text": "11.3- Os instrumentos que integrarão o procedimento deverão cuidar de temas indispensáveis a \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0019",
+              "type": "PARAGRAPH",
+              "text": "constar: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0020",
+              "type": "PARAGRAPH",
+              "text": "a) publicidade dos atos processuais: Os atos serão publicados nos termos da Lei 14.133/21. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0021",
+              "type": "PARAGRAPH",
+              "text": "b) fornecimento, recebimento e aceite do objeto: Diária de acordo com a demanda. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0022",
+              "type": "PARAGRAPH",
+              "text": "c) forma de pagamento: no prazo de 30 (trinta) dias após emissão da nota fiscal e entrega do bem ou serviços; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0023",
+              "type": "PARAGRAPH",
+              "text": "d) alterações de preços: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0024",
+              "type": "PARAGRAPH",
+              "text": " As solicitações de reequilíbrio econômico financeiro deverão ser protocoladas na sede da \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0025",
+              "type": "PARAGRAPH",
+              "text": "Prefeitura Municipal de Entre Rios-SC ou encaminhadas via correio com Aviso de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0026",
+              "type": "PARAGRAPH",
+              "text": "Recebimento, não sendo admitida nenhuma outra forma de apresentação. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0027",
+              "type": "PARAGRAPH",
+              "text": " A Administração Municipal terá o prazo de 10 (dez) dias para analisar e decidir sobre as \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0028",
+              "type": "PARAGRAPH",
+              "text": "solicitações de reequilíbrio econômico financeiro. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0032",
+              "type": "PARAGRAPH",
+              "text": "Aprovo este Estudo Técnico Preliminar e atesto sua conformidade às disposições pelo Decreto nº \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0033",
+              "type": "PARAGRAPH",
+              "text": "136/2023. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0035",
+              "type": "PARAGRAPH",
+              "text": "AUTORIDADE MÁXIMA \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0011:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0012",
+              "type": "PARAGRAPH",
+              "text": "Assinado de forma digital por \nJOAO MARIA \nROQUE:83373985900 \nDados: 2024.07.23 15:52:26 -03'00'\n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0011",
+              "type": "PARAGRAPH",
+              "text": "JOAO MARIA \nROQUE:83373985900\n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0007",
+              "type": "PARAGRAPH",
+              "text": "JOAO MARIA ROQUE \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0008",
+              "type": "PARAGRAPH",
+              "text": " Prefeita Municipal \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Entre Rios-SC, 22 de julho de 2024 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:etp:p-0012:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) 3351-0062, \ne-mail: licitacoes@entrerios.sc.gov.br \n"
+            }
+          ],
+          "evidence": {
+            "document_id": "01612698000169-1-000047-2024:etp",
+            "page": 1,
+            "block_id": "01612698000169-1-000047-2024:etp:p-0001:b-0004",
+            "quote": "ESTUDO TÉCNICO PRELIMINAR \n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [],
+      "field_values": [],
+      "requirements": []
+    },
+    {
+      "id": "01612698000169-1-000047-2024:tr",
+      "type": "TR",
+      "format": "PDF",
+      "title": "tr-03-04-termo-de-referencia.pdf",
+      "sections": [
+        {
+          "id": "01612698000169-1-000047-2024:tr:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:b-0003",
+              "type": "PARAGRAPH",
+              "text": "TERMO DE REFERENCIA \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": " \n \n \n1. OBJETO E PRAZO DO CONTRATO. \n \nO objeto da presente licitação é a escolha da proposta mais vantajosa para AQUISIÇÃO DE \nIMPLEMENTO AGRICOLA, COM USO DE RECURSOS PROPRIOS E DE CONVENIO SPOA/SE/MAPA \nNº 957207/2024 – TRANSFEREGOV.BR Nº 006518/2024, DE ACORDO COM TERMO \nDE COMVENIO E PLANO DE TRABALHO, para atividades do Executivo Municipal, com \nuso de recursos próprios e de repasses, de acordo com estudo técnico preliminar, \nconforme natureza, condições, quantidades e exigências estabelecidas neste \ninstrumento, de acordo com estudo técnico preliminar, conforme natureza, condições, \nquantidades e exigências estabelecidas neste instrumento; \n \n1.1. Os documentos auxiliares e os parâmetros utilizados para a obtenção dos preços de \nreferência, nos termos do artigo 23 da Lei nº 14.133/2021, constam dos autos do \nprocesso administrativo. \n \n1.2. O objeto a ser contratado é de natureza comum, nos termos do parágrafo único, do \nartigo 6º, inciso XIII da Lei nº 14.133/2021. \n \n1.3. O prazo de vigência do contrato é de até 6 (seis) meses contado da data da \nhomologação do certame licitatório. \n \n1.4. Itens a serem fornecidos e gerenciados pela contratada com valores máximos: \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Item"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Descrição"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "QTD"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "Valor máximo"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "01 \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "CONJUNTO \nIMPLEMENTOS \nAGRICOLAS \nNOVOS COMPONDO POR: \n01 – Trator agrícola de pneus, motor 6 cilindros, \ncom 171 cv de potência, tração 4x4, cabine com \nar-condicionado, caixa de câmbio com 36 \nvelocidades a frente e 36 a ré com reversor \nmecânico. Pneus dianteiros 18.4x26” e traseiros \n24,5x32”, equipado com hidráulico e tomada  de \npotência frontal. Novo de fabricação Nacional, \nano 2024. \n01 – Colhedora de forragens de milho, frontal com \nlargura mínima de corte de 2,30m com área total, \ncom 2 rotores, 12 facas cada rotor, com 4 rolos \nrecolhedores com facas serrilhadas, bica e \nquebra jato com acionamento electro-hidráulicos, \ncom exclusivo sistema quebrador de grãos. \nObs:  \na) Conjunto devera ser entregue montado \ncom todos os itens não mencionados que \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "01"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "R$ 811.750,00"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "sejam \nnecessarios \npara \npleno \nfuncionamento; \nb) Proponente \nvencedor \ndevera \ndisponibilisar treinamento completo de \noperação, \nbem \ncomo \ndisponibilizar \ntecnico \nque \nira \nacompanha \nfuncionamento \ndo \nequipamentonas \nprimeiras \n50 \n(cinquenta) \nhoras \nde \nfuncionamento/uso; \nc) Ano fabricação 2024 minimo; \nd) Descrição dos itens são especificações \nminimas. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": " \n \n1.5. Recursos financeiros: \n \nOs recursos financeiros para a execução do objeto deste Convênio, neste ato fixados em \nR$ R$950.000,00 (novecentos e cinquenta mil reais), serão alocados de acordo com \no cronograma dedesembolso constante no Plano de Trabalho, conforme a seguinte \nclassificação orçamentária: \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0006",
+              "type": "PARAGRAPH",
+              "text": "I. \nR$ 811.750,00 (oitocentos e onze mil setecentos e cinquenta reais), relativos \nao valor de repasse doCONCENDENTE, correrão à conta da dotação alocada no \norçamento, autorizado pela Lei nº 14.791, de 29 de dezembro de 2023; UG \n130141, assegurado pela Nota de Empenho nº 2024NE000376, R$ \n811.750,00(oitocentos e onze mil setecentos e cinquenta reais), PTRES \n238474, à conta de recursos oriundos doTesouro Nacional, Fonte de Recursos \n1000000000; Natureza da Despesa 444042/43; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0007",
+              "type": "PARAGRAPH",
+              "text": "II. \nR$ 138.250,00 (cento e trinta e oito mil duzentos e cinquenta reais), relativos \nà contrapartida doCONVENENTE, consignados na Lei Orçamentária vigente; \nIII. \nDespesa: 35. \n \n2. JUSTIFICATIVA E OBJETIVO DA CONTRATAÇÃO. \n \n2.1. Promover, incentivar a produção agrícola e pecuária do Município de Entre Rios localiza-se no Oeste \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0008",
+              "type": "PARAGRAPH",
+              "text": "de Santa Catarina, com uma População total com base no último censo: 3.322 (IBGE/2022), sendo \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0009",
+              "type": "PARAGRAPH",
+              "text": "que destas 70% residem no Interior e o restante de 30% no perímetro urbano. Atualmente nossas \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0010",
+              "type": "PARAGRAPH",
+              "text": "principais cultivares do Município são: Soja, milho, feijão e Trigo. Nosso IDH: 0,654, coloca nosso \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0011",
+              "type": "PARAGRAPH",
+              "text": "Município de Entre Rios, dentre os mais carentes do Estado. Estamos localizados no Micro Região \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0012",
+              "type": "PARAGRAPH",
+              "text": "do Alto Irani (AMAI), possui uma área de 105 km², com aproximadamente 500 estabelecimentos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0013",
+              "type": "PARAGRAPH",
+              "text": "rurais, atuam no município diversas organizações, como Sindicato dos Trabalhadores da Agricultura \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0014",
+              "type": "PARAGRAPH",
+              "text": "familiar, Cooperativa dos Pequenos Agricultores (COMFAG). Estão organizados e em \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0015",
+              "type": "PARAGRAPH",
+              "text": "funcionamento os conselhos de Merenda Escolar, Conselho de Saúde, Conselho Municipal dos \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0016",
+              "type": "PARAGRAPH",
+              "text": "Direitos da Criança e Adolescente, Conselho de Assistência Social, Conselho Tutelar e Conselho \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0003",
+              "type": "PARAGRAPH",
+              "text": "Municipal de Desenvolvimento Rural. JUSTIFICA-SE a necessidade de atenção especial na busca \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "de reversão das desigualdades sociais e econômicas, justificando desse modo a priorização no \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "atendimento desta solicitação, atendendo assim, as determinações das políticas estabelecidas de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0006",
+              "type": "PARAGRAPH",
+              "text": "modo a atender aos critérios de viabilidade técnica solicitadas objetivando prover os municípios de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0007",
+              "type": "PARAGRAPH",
+              "text": "infraestrutura de máquinas e equipamentos para o Município de Entre Rios.  Acreditamos que com \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0008",
+              "type": "PARAGRAPH",
+              "text": "a aquisição desta Retroescavadeira iremos equipar nossa patrulha mecanizada visando atender de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0009",
+              "type": "PARAGRAPH",
+              "text": "forma subsidiada nossos agricultores. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0011",
+              "type": "PARAGRAPH",
+              "text": "a) \nOBJETIVOS: Ampliar o parque de máquinas do Município visando \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0012",
+              "type": "PARAGRAPH",
+              "text": "fornecer atendimento subsidiado aos pequenos e médios agricultores do \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0013",
+              "type": "PARAGRAPH",
+              "text": "Município de Entre Rios. Também será utilizado para realizar diversos serviços \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0014",
+              "type": "PARAGRAPH",
+              "text": "na recuperação de estradas vicinais no município de Entre Rios visando melhorar \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0015",
+              "type": "PARAGRAPH",
+              "text": "a trafegabilidade de veículos e pedestres. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0016",
+              "type": "PARAGRAPH",
+              "text": "b) \nBENEFICIÁRIOS: Nome das comunidades Beneficiadas: Linha \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0017",
+              "type": "PARAGRAPH",
+              "text": "Nova, Linha Palmeira, Linha Aparecida, Linha Sagrado Coração de Jesus, Linha \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0018",
+              "type": "PARAGRAPH",
+              "text": "Tope da Serra, Linha Boa Esperança, Linha Guarani, Linha Limeira, Linha Paiol \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0019",
+              "type": "PARAGRAPH",
+              "text": "de Barro, Linha Matão, Linha João Veloso e Linha Manduri. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0020",
+              "type": "PARAGRAPH",
+              "text": " \n \n3. FORMA E CRITÉRIOS DE SELEÇÃO DO FORNECEDOR. \n \n3.1. As exigências de habilitação jurídica e de regularidade fiscal, social e trabalhista são \nas usuais para a generalidade dos objetos, conforme disciplinado no edital. \n \n3.2. Os critérios de qualificação econômico-financeira a serem atendidos pelo fornecedor \nestão previstos no edital. \n \n3.3. Os critérios de qualificação técnica a serem atendidos pelo fornecedor serão:  \n \n3.3.1. Mínimo de um atestado de capacidade técnica/operacional emitido por pessoa \njurídica de direito público ou privado, com data dos dois últimos anos contado data \nde publicação do edital. \n \n4. ENTREGA E CRITÉRIO DE ACEITAÇÃO DO OBJETO. \n \n4.1. Para a execução deve ser após a emissão de cada Autorização de fornecimento, em \nconformidade com o este Termo de Referência e a Emissão da ORDEM DE COMPRA \nemitida pelo município de ENTRE RIOS-SC, demandante, nas seguintes condições: \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0021",
+              "type": "PARAGRAPH",
+              "text": "a) O prazo de execução: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0022",
+              "type": "PARAGRAPH",
+              "text": "I \nA data de 16/06/2024, início as 12 horas; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0003",
+              "type": "PARAGRAPH",
+              "text": "4.2. Unidade e servidor responsável para esclarecimentos: Secretario da pasta \nsolicitante; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": " \n4.3. O recebimento provisório será realizado pelo fiscal técnico, fiscal administrativo, \nfiscal setorial ou equipe de fiscalização, através da elaboração de relatório \ncircunstanciado, em consonância com as suas atribuições, contendo o registro, a análise \ne a conclusão acerca das ocorrências na execução do contrato e demais documentos \nque julgarem necessários, devendo encaminhá-los ao gestor do contrato para \nrecebimento definitivo. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": " \n4.4. \nO recebimento provisório ou definitivo do objeto não exclui a responsabilidade da \nContratada pelos prejuízos resultantes da incorreta execução do contrato, ou, em \nqualquer época, das garantias concedidas e das responsabilidades assumidas em \ncontrato e por força das disposições legais em vigor. \n \n4.5. Os bens poderão ser rejeitados, no todo ou em parte, quando em desacordo com as \nespecificações constantes neste Termo de Referência e na proposta, devendo ser \nsubstituídos no prazo de até 5 (cinco) dias, a contar da notificação da contratada, às suas \ncustas, sem prejuízo da aplicação das penalidades. \n \n4.6. O recebimento do objeto não exclui a responsabilidade da contratada pelos prejuízos \nresultantes da incorreta execução do contrato. \n \n5. OBRIGAÇÕES DA CONTRATANTE. \n \n5.1. São obrigações da Contratante: \n \n5.1.1. Receber o objeto no prazo e condições estabelecidas no Edital e seus anexos; \n \n5.1.2. Verificar minuciosamente, no prazo fixado, a conformidade dos bens recebidos \nprovisoriamente com as especificações constantes do Edital e da proposta, para fins \nde aceitação e recebimento definitivo; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0006",
+              "type": "PARAGRAPH",
+              "text": "5.1.3. Comunicar à Contratada, por escrito, sobre imperfeições, falhas ou \nirregularidades verificadas no objeto fornecido, para que seja substituído, reparado ou \ncorrigido; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0007",
+              "type": "PARAGRAPH",
+              "text": "5.1.4. Acompanhar e fiscalizar o cumprimento das obrigações da Contratada, através \nde comissão/servidor especialmente designado; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0008",
+              "type": "PARAGRAPH",
+              "text": "5.1.5. Efetuar o pagamento à Contratada no valor correspondente ao fornecimento do \nobjeto, no prazo e forma estabelecidos no Edital e seus anexos, observada a ordem \ncronológica para cada fonte diferenciada de recursos, nos termos do art. 141 da Lei \nnº 14.133/2021; \n \n5.2. A Administração não responderá por quaisquer compromissos assumidos pela \nContratada com terceiros, ainda que vinculados à execução do presente Termo de \nContrato, bem como por qualquer dano causado a terceiros em decorrência de ato da \nContratada, de seus empregados, prepostos ou subordinados. \n \n \n6. OBRIGAÇÕES DA CONTRATADA. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0003",
+              "type": "PARAGRAPH",
+              "text": "6.1. A Contratada deve cumprir todas as obrigações constantes no Edital, seus anexos e \nsua proposta, assumindo como exclusivamente seus os riscos e as despesas \ndecorrentes da boa e perfeita execução do objeto e, ainda: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": " \n6.1.1. Efetuar a entrega do objeto em perfeitas condições, conforme especificações, \nprazo e local constantes no Termo de Referência e seus anexos, acompanhado da \nrespectiva nota fiscal, na qual constarão as indicações referentes a: marca, \nprocedência e prazo de validade; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": " \n6.1.2. Responsabilizar-se pelos vícios e danos decorrentes do objeto, de acordo com \nos artigos 12, 13 e 17 a 27, do Código de Defesa do Consumidor (Lei nº 8.078, de \n1990); \n \n6.1.3. Responsabilizar-se pelos danos causados diretamente à Administração ou a \nterceiros em razão da execução do contrato; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0006",
+              "type": "PARAGRAPH",
+              "text": "6.1.4. Reparar, corrigir, remover, reconstruir ou substituir, a suas expensas, no total ou \nem parte, o objeto do contrato em que se verificarem vícios, defeitos ou incorreções \nresultantes de sua execução ou de materiais nela empregados; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0007",
+              "type": "PARAGRAPH",
+              "text": "6.1.5. Comunicar à Contratante, no prazo máximo de 24 (vinte e quatro) horas que \nantecede a data da entrega, os motivos que impossibilitem o cumprimento do prazo \nprevisto, com a devida comprovação; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0008",
+              "type": "PARAGRAPH",
+              "text": "6.1.6. Manter, durante toda a execução do contrato, em compatibilidade com as \nobrigações assumidas, todas as condições de habilitação e qualificação exigidas na \nlicitação; \n \n6.1.7. Indicar preposto para representá-la durante a execução do contrato; \n \n6.1.8. Implantação de programa de integridade pelo licitante vencedor, no prazo de 6 \n(seis) meses, em caso de licitação de grande vulto, nos termos do artigo 25, §4º da \nLei nº 14.133/2021; \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0009",
+              "type": "PARAGRAPH",
+              "text": " \n6.1.9.  Cumprir com a reserva de cargos prevista em lei para pessoa com deficiência \nou para reabilitado da Previdência Social e para aprendiz, além de atender às regras \nde acessibilidade previstas na legislação, conforme disposto no art. 93 da Lei nº \n8.213/1991; \n \n6.1.10. \nManter seus funcionários com  todos os EPIs necessários a execução dos \nserviços. \n \n \n7. DA SUBCONTRATAÇÃO. \n \n7.1. Não será admitida a subcontratação do objeto licitatório. \n \n \n8. DA ALTERAÇÃO SUBJETIVA. \n \n8.1. É admissível a fusão, cisão ou incorporação da contratada com/em outra pessoa \njurídica, desde que sejam observados pela nova pessoa jurídica todos os requisitos de \nhabilitação exigidos na licitação original; sejam mantidas as demais cláusulas e \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0006:b-0003",
+              "type": "PARAGRAPH",
+              "text": "condições do contrato; não haja prejuízo à execução do objeto pactuado e haja a \nanuência expressa da Administração à continuidade do contrato. \n \n9. DO CONTROLE E FISCALIZAÇÃO DA EXECUÇÃO. \n \n9.1. Nos termos do art. 117 Lei nº 14.133/2021, será designado representante para \nacompanhar e fiscalizar a entrega dos bens, anotando em registro próprio todas as \nocorrências relacionadas com a execução e determinando o que for necessário à \nregularização de falhas ou defeitos observados. \n \n9.2. A fiscalização de que trata este item não exclui nem reduz a responsabilidade da \nContratada, inclusive perante terceiros, por qualquer irregularidade, ainda que resultante \nde imperfeições técnicas ou vícios redibitórios, e, na ocorrência desta, não implica em \ncorresponsabilidade da Administração ou de seus agentes e prepostos, de conformidade \ncom o art. 120 Lei nº 14.133/2021. \n \n9.3. O representante da Administração anotará em registro próprio todas as ocorrências \nrelacionadas com a execução do contrato, indicando dia, mês e ano, bem como o nome \ndos funcionários eventualmente envolvidos, determinando o que for necessário à \nregularização das falhas ou defeitos observados e encaminhando os apontamentos à \nautoridade competente para as providências cabíveis. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": " \n9.4. O fiscal do contrato será auxiliado pelos órgãos de assessoramento jurídico e de \ncontrole interno da Administração.  \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": " \n9.5. \nO fiscal designado não deverá ter exercido a função de Pregoeiro na licitação que \ntenha antecedido o contrato, a fim de preservar a segregação de funções (TCU, acórdão \n1375/2015 - Plenário e, TCU, acórdão 2146/2011, Segunda Câmara). \n \n9.6. \nA designação do fiscal deverá levar em conta potenciais conflitos de interesse, \nque possam ameaçar a qualidade da atividade a ser desenvolvida. (Acórdão TCU \n3083/2010 - Plenário). \n \n \n10. DO PAGAMENTO. \n \n10.1. O pagamento será realizado no prazo máximo de até 30 (trinta) dias, contados a \npartir do recebimento do produto/serviços, devida mente atestados o pleno atendimento \ndos requisitos constantes deste edital, através de ordem bancária, para crédito em banco, \nagência e conta corrente indicados pelo contratado, sempre após a realização das \nentregas. \n \n10.2. Considera-se ocorrido o recebimento da nota fiscal ou fatura no momento em que \no órgão contratante atestar a execução do objeto do contrato. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0006:b-0006",
+              "type": "PARAGRAPH",
+              "text": " \n10.3. \nA Nota Fiscal ou Fatura deverá ser obrigatoriamente acompanhada da \ncomprovação da regularidade fiscal, constatada por meio de consulta on-line mediante \nconsulta aos sítios eletrônicos oficiais ou à documentação mencionada no art. 68 Lei nº \n14.133/2021. \n \n10.4. Havendo erro na apresentação da Nota Fiscal ou dos documentos pertinentes à \ncontratação, ou, ainda, circunstância que impeça a liquidação da despesa, como, por \nexemplo, obrigação financeira pendente, decorrente de penalidade imposta ou \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0007:b-0003",
+              "type": "PARAGRAPH",
+              "text": "inadimplência, o pagamento ficará sobrestado até que a Contratada providencie as \nmedidas saneadoras. Nesta hipótese, o prazo para pagamento iniciar-se-á após a \ncomprovação da regularização da situação, não acarretando qualquer ônus para a \nContratante. \n \n10.5. Será considerada data do pagamento o dia em que constar como emitida a ordem \nbancária para pagamento. \n \n10.6. Antes de cada pagamento à contratada, será realizada de forma on-line consulta \naos sítios eletrônicos oficiais para verificar a manutenção das condições de habilitação \nexigidas no edital.  \n \n10.7. Constatando-se a situação de irregularidade da contratada, será providenciada sua \nnotificação, por escrito, para que, no prazo de 5 (cinco) dias úteis, regularize sua situação \nou, no mesmo prazo, apresente sua defesa. O prazo poderá ser prorrogado uma vez, por \nigual período, a critério da contratante. \n \n10.8. Previamente à emissão de nota de empenho e a cada pagamento, a Administração \ndeverá realizar consulta on-line mediante consulta aos sítios eletrônicos oficiais para \nidentificar possível suspensão temporária de participação em licitação, no âmbito do \nórgão ou entidade, proibição de contratar com o Poder Público, bem como ocorrências \nimpeditivas indiretas. \n \n10.9. Não havendo regularização ou sendo a defesa considerada improcedente, a \ncontratante deverá comunicar aos órgãos responsáveis pela fiscalização da regularidade \nfiscal quanto à inadimplência da contratada, bem como quanto à existência de \npagamento a ser efetuado, para que sejam acionados os meios pertinentes e necessários \npara garantir o recebimento de seus créditos.   \n \n10.10. Persistindo a irregularidade, a contratante deverá adotar as medidas necessárias \nà rescisão contratual nos autos do processo administrativo correspondente, assegurada \nà contratada a ampla defesa. \n  \n10.11. Havendo a efetiva execução do objeto, os pagamentos serão realizados \nnormalmente, até que se decida pela rescisão do contrato, caso a contratada não \nregularize sua situação de habilitação.  \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "10.11.1. Será rescindido o contrato em execução com a contratada inadimplente, \nsalvo por motivo de economicidade, segurança nacional ou outro de interesse público \nde alta relevância, devidamente justificado, em qualquer caso, pela máxima autoridade \nda contratante. \n \n10.12. Quando do pagamento, será efetuada a retenção tributária prevista na legislação \naplicável. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0007:b-0005",
+              "type": "PARAGRAPH",
+              "text": "10.12.1. A Contratada regularmente optante pelo Simples Nacional, nos termos da Lei \nComplementar nº 123/2006, não sofrerá a retenção tributária quanto aos impostos e \ncontribuições abrangidos por aquele regime. No entanto, o pagamento ficará \ncondicionado à apresentação de comprovação, por meio de documento oficial, de que \nfaz jus ao tratamento tributário favorecido previsto na referida Lei Complementar. \n  \n10.13. Nos casos de eventuais atrasos de pagamento, desde que a Contratada não \ntenha concorrido, de alguma forma, para tanto, fica convencionado que a taxa de \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0003",
+              "type": "PARAGRAPH",
+              "text": "compensação financeira devida pela Contratante, entre a data do vencimento e o efetivo \nadimplemento da parcela, é calculada mediante a aplicação da seguinte fórmula: \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "EM = I x N x VP, sendo: \nEM = Encargos moratórios; \nN = Número de dias entre a data prevista para o pagamento e a do efetivo \npagamento; \nVP = Valor da parcela a ser paga. \nI = Índice de compensação financeira = ***, assim apurado: \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "I = (TX) \nI =  \n( 6 / 100 ) \nI = *** \nTX = Percentual da taxa anual = 6% \n                                                        365 \n \n11. DO REAJUSTE e REEQUILIBRIO. \n \n11.1. Não será concedido reajuste;  \n \n11.2. Nos reajustes subsequentes ao primeiro, o interregno mínimo de um ano será \ncontado a partir dos efeitos financeiros do último reajuste. \n \n11.3. No caso de Reequilíbrio econômico financeiro deverá seguir o seguinte: \n \n11.3.1. Todo pedido deverá ser protocolado meio físico junto com toda documentação \npertinente, para parecer jurídico junto a municipalidade no endereço Rua \nPergentino Alberici, n 152, Centro de Entre Rios-SC, CEP 89.862-000; \n11.3.2. Não poderá nem será concedido reequilíbrio dentro do prazo de validade da \nproposta inicia que deverá ser de no mínimo 60 (sessenta) dias; \n11.3.3. Pedido de reequilíbrio só para Autorizações de fornecimento futuras, as \nAutorizações de Fornecimentos emitidas antes do protocolo de pedido de \nreequilíbrio, e obrigado o proponente entregar nas condições presentes na data \nda AF; \n11.3.4. Prazo para apresentação de parecer e decisão de reequilíbrio será de 10 (dez) \ndias uteis, sendo que caso produto seja de urgência o proponente deverá manter \no fornecimento dentro deste prazo, obedecido as demais condições do edital; \n  \n \n12. DA GARANTIA DE EXECUÇÃO. \n \n12.1. Não haverá exigência de garantia contratual da execução, pelas razões abaixo \njustificadas: \n \n13. DAS SANÇÕES ADMINISTRATIVAS. \n \n13.1. Comete infração administrativa nos termos da Lei nº 14.133/2021, a Contratada \nque: \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.1 \nDer causa à inexecução parcial ou total do contrato; \n \n13.1.1.2 \nDeixar de entregar os documentos exigidos no certame; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.3 \nNão mantiver a proposta, salvo em decorrência de fato superveniente \ndevidamente justificado; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "13.1.1.4 Não assinar o termo de contrato ou aceitar/retirar o instrumento"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "equivalente, quando convocado dentro do prazo de validade da proposta;"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0004",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.5 \nEnsejar o retardamento da execução ou entrega do objeto da licitação sem \nmotivo justificado; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0005",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.6 \nApresentar declaração ou documentação falsa; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0006",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.7 \nFraudar a licitação ou praticar ato fraudulento na execução do contrato; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0007",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.8 \nComportar-se de modo inidôneo ou cometer fraude de qualquer natureza; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0008",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.9 \nPraticar atos ilícitos com vistas a frustrar os objetivos da licitação; \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0009",
+              "type": "PARAGRAPH",
+              "text": "13.1.1.10 \nPraticar ato lesivo previsto no art. 5º da Lei nº 12.846/2013. \n \n13.2. O licitante/adjudicatário que cometer qualquer das infrações discriminadas nos \nsubitens anteriores ficará sujeito, sem prejuízo da responsabilidade civil e criminal, às \nseguintes sanções: \n \na) Advertência por escrito, por faltas leves, assim entendidas aquelas que não acarretem \nprejuízos significativos para a Contratante; \n \nb) Multa, 10% (dez por cento), sobre o valor contratual; \n \nc) Impedimento de licitar e contratar; \n \nd) Declaração de inidoneidade para licitar ou contratar. \n \n13.3. A penalidade de multa pode ser aplicada cumulativamente com as demais sanções. \n \n13.2. A aplicação de qualquer das penalidades previstas realizar-se-á em processo \nadministrativo que assegurará o contraditório e a ampla defesa à Contratada, \nobservando-se o procedimento previsto na Lei nº 14.133/2021, e subsidiariamente a Lei \nnº 9.784, de 1999. \n \n13.3. As multas devidas e/ou prejuízos causados à Contratante serão deduzidos dos \nvalores a serem pagos, ou recolhidos em favor da Contratada, ou deduzidos da garantia, \nou ainda, quando for o caso, serão inscritos na Dívida Ativa e cobrados judicialmente. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0010",
+              "type": "PARAGRAPH",
+              "text": " \n13.3.1. Caso a Contratante determine, a multa deverá ser recolhida no prazo máximo \nde 30 (trinta) dias, a contar da data do recebimento da comunicação enviada pela \nautoridade competente. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0011",
+              "type": "PARAGRAPH",
+              "text": " \n13.4. Caso o valor da multa não seja suficiente para cobrir os prejuízos causados pela \nconduta do licitante, o Município de Entre Rios-SC, poderá cobrar o valor remanescente \njudicialmente, conforme artigo 419 do Código Civil. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0012",
+              "type": "PARAGRAPH",
+              "text": " \n13.5. A autoridade competente, na aplicação das sanções, levará em consideração a \nnatureza e a gravidade da conduta do infrator, as peculiaridades do caso concreto, as \ncircunstâncias agravantes ou atenuantes e o caráter educativo da pena, bem como o \ndano causado à Administração, observado o princípio da proporcionalidade. \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0009:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0003",
+              "type": "PARAGRAPH",
+              "text": "13.6. Se, durante o processo de aplicação de penalidade, se houver indícios de prática \nde infração administrativa tipificada pela Lei nº 12.846/2013, como ato lesivo à \nadministração pública nacional ou estrangeira, cópias do processo administrativo \nnecessárias à apuração da responsabilidade da empresa deverão ser remetidas à \nautoridade competente, com despacho fundamentado, para ciência e decisão sobre a \neventual instauração de investigação preliminar ou Processo Administrativo de \nResponsabilização - PAR. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0004",
+              "type": "PARAGRAPH",
+              "text": " \n13.7. \nA apuração e o julgamento das demais infrações administrativas não \nconsideradas como ato lesivo à Administração Pública nacional ou estrangeira nos \ntermos da Lei nº 12.846/2013, seguirão seu rito normal na unidade administrativa. \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0005",
+              "type": "PARAGRAPH",
+              "text": " \n13.8. \nO processamento do PAR não interfere no seguimento regular dos processos \nadministrativos específicos para apuração da ocorrência de danos e prejuízos à \nAdministração Pública Federal resultantes de ato lesivo cometido por pessoa jurídica, \ncom ou sem a participação de agente público.  \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0006",
+              "type": "PARAGRAPH",
+              "text": " \n13.9. \nAs penalidades serão obrigatoriamente publicadas no órgão Oficial de Imprensa \ndo Município de Entre Rios-SC. \n \n14. DOS RECURSOS ORÇAMENTÁRIOS. \n \n1.1. As despesas para atender a esta licitação estão programadas em dotação \norçamentária própria, prevista no orçamento da União para o exercício de 2024 e \nfuturos. \n \n \n \nEntre Rios-SC, 14 de junho de 2024 \n \n \n \n \n \n \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0009",
+              "type": "PARAGRAPH",
+              "text": "JOAO MARIA \nROQUE:83373985900\n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Assinado de forma digital por \nJOAO MARIA ROQUE:83373985900 \nDados: 2024.07.23 15:53:16 -03'00'\n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0007",
+              "type": "PARAGRAPH",
+              "text": "JOÃO MARIA ROQUE \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0008",
+              "type": "PARAGRAPH",
+              "text": "Prefeito Municipal \n"
+            },
+            {
+              "id": "01612698000169-1-000047-2024:tr:p-0010:b-0002",
+              "type": "PARAGRAPH",
+              "text": "Rua Pergentino Alberici, n 152, Centro de Entre Rios-SC, CEP: 89.862-000, Fone (49) \n3351-0062, e-mail: licitacoes@entrerios.sc.gov.br \n"
+            }
+          ],
+          "evidence": {
+            "document_id": "01612698000169-1-000047-2024:tr",
+            "page": 1,
+            "block_id": "01612698000169-1-000047-2024:tr:p-0001:b-0003",
+            "quote": "TERMO DE REFERENCIA \n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-1",
+          "description": "Conjunto de implementos agrícolas novos",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 1,
+              "unit": null,
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:tr",
+                  "page": 1,
+                  "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0003",
+                  "quote": "01",
+                  "attr": "QUANTITY"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "811750.00",
+              "unit": "BRL",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:tr",
+                  "page": 1,
+                  "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0004",
+                  "quote": "R$ 811.750,00",
+                  "attr": "TOTAL_PRICE"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [],
+          "evidence": [
+            {
+              "document_id": "01612698000169-1-000047-2024:tr",
+              "page": 1,
+              "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
+              "quote": "CONJUNTO \nIMPLEMENTOS \nAGRICOLAS \nNOVOS COMPONDO POR: \n01 – Trator agrícola de pneus, motor 6 cilindros, \ncom 171 cv de potência, tração 4x4, cabine com \nar-condicionado, caixa de câmbio com 36 \nvelocidades a frente e 36 a ré com reversor \nmecânico. Pneus dianteiros 18.4x26” e traseiros \n24,5x32”, equipado com hidráulico e tomada  de \npotência frontal. Novo de fabricação Nacional, \nano 2024. \n01 – Colhedora de forragens de milho, frontal com \nlargura mínima de corte de 2,30m com área total, \ncom 2 rotores, 12 facas cada rotor, com 4 rolos \nrecolhedores com facas serrilhadas, bica e \nquebra jato com acionamento electro-hidráulicos, \ncom exclusivo sistema quebrador de grãos. \nObs:  \na) Conjunto devera ser entregue montado \ncom todos os itens não mencionados que \n",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

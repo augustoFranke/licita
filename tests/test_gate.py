@@ -19,7 +19,7 @@ def _pdf(caminho, texto):
 
 @pytest.fixture
 def corpus(tmp_path):
-    """Corpus sintético mínimo que passa em todos os critérios."""
+    """Corpus sintético mínimo ETP→TR que passa em todos os critérios."""
     import hashlib
 
     processos, documentos, relacoes = [], [], []
@@ -30,7 +30,7 @@ def corpus(tmp_path):
             "ano_compra": 2026,
             "sequencial_compra": indice,
             "orgao": f"ORGAO {indice % 6}",
-            "esfera": "F",
+            "esfera": "M",
             "poder": "E",
             "uf": "DF",
             "objeto": "Aquisição de bens",
@@ -46,7 +46,7 @@ def corpus(tmp_path):
         pasta.mkdir(parents=True)
 
         do_processo = []
-        for papel in ("ETP", "TR", "EDITAL", "CONTRATO"):
+        for papel in ("ETP", "TR"):
             arquivo = pasta / f"{papel.lower()}-01.pdf"
             _pdf(arquivo, f"{papel} do processo {indice} com conteúdo textual suficiente para validação local")
             do_processo.append(
@@ -56,21 +56,11 @@ def corpus(tmp_path):
                     "papel": papel,
                     "arquivo": str(arquivo.relative_to(tmp_path)),
                     "sha256": hashlib.sha256(arquivo.read_bytes()).hexdigest(),
+                    "sha256_original": hashlib.sha256(arquivo.read_bytes()).hexdigest(),
                     "verificacao": {"abriu": True, "paginas": 1, "caracteres": 20, "precisa_ocr": False},
                 }
             )
-        registro = montar_processo(
-            compra,
-            None,
-            do_processo,
-            [
-                {
-                    "numero_controle_pncp": f"{indice:014d}-2-{indice:06d}/2026",
-                    "numero_controle_pncp_compra": compra["numero_controle_pncp"],
-                    "criterio_vinculo": "numeroControlePncpCompra",
-                }
-            ],
-        )
+        registro = montar_processo(compra, None, do_processo, [])
         processos.append(registro)
         documentos.extend(do_processo)
         relacoes.extend(montar_relacoes(identificador, registro["cadeia"]))
@@ -81,7 +71,7 @@ def corpus(tmp_path):
     return tmp_path
 
 
-def test_corpus_completo_passa(corpus):
+def test_corpus_etp_tr_sem_edital_ou_contrato_passa(corpus):
     resultado = conferir(corpus)
     assert resultado["passou"] is True
     assert resultado["falhas_de_abertura"] == []
@@ -90,8 +80,9 @@ def test_corpus_completo_passa(corpus):
 def test_arquivo_ausente_reprova(corpus):
     documentos = (corpus / "catalogo" / "documentos.jsonl").read_text(encoding="utf-8").splitlines()
     (corpus / json.loads(documentos[0])["arquivo"]).unlink()
-    resultado = conferir(corpus)
+    resultado = conferir(corpus, minimo_processos=30)
     assert resultado["passou"] is False
+    assert resultado["processos_elegiveis"] == 29
     assert resultado["falhas_de_abertura"][0]["erro"] == "arquivo ausente"
 
 
@@ -100,32 +91,43 @@ def test_arquivo_alterado_reprova_pelo_hash(corpus):
         (corpus / "catalogo" / "documentos.jsonl").read_text(encoding="utf-8").splitlines()[0]
     )
     (corpus / primeiro["arquivo"]).write_bytes(b"%PDF-1.4 outro conteudo")
-    resultado = conferir(corpus)
+    resultado = conferir(corpus, minimo_processos=30)
     assert resultado["passou"] is False
+    assert resultado["processos_elegiveis"] == 29
     assert resultado["falhas_de_abertura"][0]["erro"] == "SHA-256 divergente"
 
 
-def test_processo_sem_contrato_reprova_a_cadeia(corpus):
+def test_processo_sem_tr_reprova_o_par(corpus):
     caminho = corpus / "catalogo" / "processos.json"
     processos = json.loads(caminho.read_text(encoding="utf-8"))
-    processos[0]["cadeia"]["CONTRATO"] = []
+    processos[0]["cadeia"]["TR"] = []
     caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
     resultado = conferir(corpus)
     assert resultado["passou"] is False
-    criterio = next(c for c in resultado["criterios"] if c["nome"] == "processos com cadeia completa")
+    assert resultado["processos_elegiveis"] == 29
+    criterio = next(
+        c
+        for c in resultado["criterios"]
+        if c["nome"] == "processos SUPPORTED com exatamente um ETP e um TR"
+    )
     assert criterio["passou"] is False
 
 
 def test_vinculo_contrato_divergente_reprova(corpus):
     caminho = corpus / "catalogo" / "processos.json"
     processos = json.loads(caminho.read_text(encoding="utf-8"))
-    processos[0]["contratos"][0]["numero_controle_pncp_compra"] = "outro"
+    processos[0]["contratos"] = [
+        {
+            "numero_controle_pncp_compra": "outro",
+            "criterio_vinculo": "numeroControlePncpCompra",
+        }
+    ]
     caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
     resultado = conferir(corpus)
     criterio = next(
         c
         for c in resultado["criterios"]
-        if c["nome"] == "vínculos compra–contrato por numeroControlePncpCompra"
+        if c["nome"] == "vínculos válidos dos contratos presentes"
     )
     assert criterio["passou"] is False
 
@@ -135,13 +137,9 @@ def test_documento_duplicado_no_mesmo_papel_reprova(corpus):
     processos = json.loads(caminho.read_text(encoding="utf-8"))
     processos[0]["cadeia"]["ETP"].append(processos[0]["cadeia"]["ETP"][0])
     caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
-    resultado = conferir(corpus)
-    criterio = next(
-        c
-        for c in resultado["criterios"]
-        if c["nome"] == "processos com exatamente um documento por papel"
-    )
-    assert criterio["passou"] is False
+    resultado = conferir(corpus, minimo_processos=30)
+    assert resultado["passou"] is False
+    assert resultado["processos_elegiveis"] == 29
 
 
 def test_poucos_processos_reprova(corpus):
@@ -152,3 +150,90 @@ def test_poucos_processos_reprova(corpus):
     assert resultado["passou"] is False
     criterio = next(c for c in resultado["criterios"] if c["nome"] == "processos")
     assert criterio["obtido"] == "10"
+
+
+def test_um_processo_fora_do_filtro_de_bens_nao_derruba_o_lote(corpus):
+    caminho = corpus / "catalogo" / "processos.json"
+    processos = json.loads(caminho.read_text(encoding="utf-8"))
+    processos[0]["objeto"] = "Contratação de empresa para fornecimento de energia elétrica"
+    caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+    resultado = conferir(corpus)
+    assert resultado["passou"] is True
+    criterio = next(
+        c
+        for c in resultado["criterios"]
+        if c["nome"] == "processos no filtro Lei 14.133/Pregão/bens"
+    )
+    assert criterio["passou"] is True
+    assert criterio["obtido"] == "29"
+
+
+def test_esfera_federal_ou_ausente_reprova_catalogo_aprovado(corpus):
+    caminho = corpus / "catalogo" / "processos.json"
+    originais = json.loads(caminho.read_text(encoding="utf-8"))
+    for esfera in ("F", None):
+        processos = json.loads(json.dumps(originais))
+        processos[0]["orgao"]["esfera"] = esfera
+        processos[0]["perfil_inicial"] = "SUPPORTED"  # persistido não é confiável
+        caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+        resultado = conferir(corpus)
+        criterio = next(c for c in resultado["criterios"] if c["nome"] == "esferas permitidas")
+        assert criterio["passou"] is False
+
+
+def test_minimo_de_categorias_conta_somente_elegiveis(corpus):
+    resultado = conferir(corpus, minimo_categorias=5)
+    criterio = next(c for c in resultado["criterios"] if c["nome"] == "categorias distintas")
+    assert criterio["obtido"] == "4"
+    assert criterio["passou"] is False
+
+
+def test_hash_original_tem_precedencia_sobre_sha_legado(corpus):
+    caminho = corpus / "catalogo" / "documentos.jsonl"
+    documentos = [json.loads(linha) for linha in caminho.read_text(encoding="utf-8").splitlines()]
+    documentos[0]["sha256_original"] = "0" * 64
+    escrever_jsonl(caminho, documentos)
+    resultado = conferir(corpus)
+    assert any(f["erro"] == "SHA-256 divergente" for f in resultado["falhas_de_abertura"])
+
+
+def test_ocr_historico_e_utilizavel_quando_hash_original_confere(monkeypatch, corpus):
+    import licita_corpus.gate as gate_module
+
+    caminho = corpus / "catalogo" / "documentos.jsonl"
+    documentos = [json.loads(linha) for linha in caminho.read_text(encoding="utf-8").splitlines()]
+    documentos[0]["verificacao"] = {
+        "abriu": True,
+        "caracteres": 120,
+        "precisa_ocr": False,
+        "ocr": {"usado": True},
+        "ocr_cache": {
+            "idioma": "por",
+            "pipeline_version": "verify-pymupdf-tesseract-v1",
+            "texto_sha256": "a" * 64,
+        },
+    }
+    escrever_jsonl(caminho, documentos)
+    real = gate_module.verificar
+
+    def sem_texto(arquivo):
+        resultado = real(arquivo)
+        if arquivo == corpus / documentos[0]["arquivo"]:
+            resultado.caracteres = 0
+            resultado.precisa_ocr = True
+        return resultado
+
+    monkeypatch.setattr(gate_module, "verificar", sem_texto)
+    resultado = conferir(corpus)
+    assert not any(
+        f["documento_id"] == documentos[0]["documento_id"]
+        for f in resultado["falhas_de_abertura"]
+    )
+
+    documentos[0]["verificacao"].pop("ocr_cache")
+    escrever_jsonl(caminho, documentos)
+    resultado_sem_derivado = conferir(corpus)
+    assert any(
+        f["documento_id"] == documentos[0]["documento_id"]
+        for f in resultado_sem_derivado["falhas_de_abertura"]
+    )

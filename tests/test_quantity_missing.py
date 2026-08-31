@@ -36,16 +36,20 @@ def test_finding_shape(
     assert finding.rule_id == "RULE-002"
     assert finding.severity == Severity.HIGH
     assert finding.item_id == "item-1"
+    assert finding.category is not None
+    assert finding.category.value == "STRUCTURE"
+    assert finding.confidence == 1.0
+    assert finding.id == "FIND-RULE-002-item-1"
+    assert finding.title == "Quantidade ou unidade ausente"
     assert "item-1" in finding.message
-    assert "unidade" not in finding.message.lower()
     assert finding.attrs == {"falta": "quantidade"}
     assert len(finding.evidence) >= 1
 
 
-def test_rule_002_description_is_only_about_missing_quantity() -> None:
+def test_rule_002_description_covers_quantity_and_unit() -> None:
     rule = _rule()
     assert "quantidade" in rule.description.lower()
-    assert "unidade" not in rule.description.lower()
+    assert "unidade" in rule.description.lower()
 
 
 def test_finding_evidence_resolves_to_real_block(
@@ -129,6 +133,7 @@ def test_one_item_with_quantity_only_flags_the_other(
                 {
                     "field_type": "QUANTITY",
                     "value": 10,
+                    "unit": "un",
                     "item_id": "item-2",
                     "evidence": [
                         {
@@ -157,3 +162,16 @@ def test_one_item_with_quantity_only_flags_the_other(
 
     assert len(findings) == 1
     assert findings[0].item_id == "item-1"
+
+
+def test_quantity_without_unit_generates_finding(
+    present_process: ProcurementProcess,
+) -> None:
+    data = present_process.model_dump(mode="json")
+    data["documents"][0]["items"][0]["field_values"][0]["unit"] = None
+    process = ProcurementProcess.model_validate(data)
+
+    (finding,) = _rule().detect(_context(process))
+
+    assert finding.attrs == {"falta": "unidade"}
+    assert "unidade" in finding.message.lower()

@@ -1,11 +1,16 @@
 """Primeiro extrator documental da R3.
 
-A camada é limitada a PDF textual (PyMuPDF) e DOCX (python-docx). OCR é
-somente um fallback planejado: PDFs que dependem dele produzem
-``OCRNotImplementedError`` em vez de perder texto silenciosamente.
+A camada lê PDF (PyMuPDF) e DOCX (python-docx). OCR é fallback da ingestão
+(mesmo motor de ``licita_corpus.verify``). Se o OCR não produzir texto
+utilizável, a extração falha de forma explícita.
 """
 
-from .errors import IngestError, OCRNotImplementedError, UnsupportedFormatError
+from .errors import (
+    IngestError,
+    OCRNotImplementedError,
+    OCRRequiredError,
+    UnsupportedFormatError,
+)
 from .extractor import (
     DocumentExtractor,
     extract,
@@ -26,7 +31,7 @@ from .models import (
     StructuredPage,
 )
 
-OCR_FALLBACK_IMPLEMENTED = False
+OCR_FALLBACK_IMPLEMENTED = True
 
 __all__ = [
     "BlockKind",
@@ -36,6 +41,7 @@ __all__ = [
     "DocumentFormat",
     "IngestError",
     "OCRNotImplementedError",
+    "OCRRequiredError",
     "OCR_FALLBACK_IMPLEMENTED",
     "PageKind",
     "StructuredBlock",

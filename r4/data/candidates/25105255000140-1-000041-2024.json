@@ -1,0 +1,2574 @@
+{
+  "id": "25105255000140-1-000041-2024",
+  "schema_version": "0.1.0",
+  "documents": [
+    {
+      "id": "25105255000140-1-000041-2024:etp",
+      "type": "ETP",
+      "format": "PDF",
+      "title": "etp-12-retificado-etp.pdf",
+      "sections": [
+        {
+          "id": "25105255000140-1-000041-2024:etp:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0006",
+              "type": "PARAGRAPH",
+              "text": "ANEXO II \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0007",
+              "type": "PARAGRAPH",
+              "text": " \nProcesso n° 2899/2024 \nPregão Eletrônico nº 11/2024 \n \nESTUDO TÉCNICO PRELIMINAR \n \n \n1. \nDESCRIÇÃO DA NECESSIDADE DE CONTRATAÇÃO \n1.1. Nos últimos anos, se faz necessário o desenvolvimento e avaliação de políticas, programas e \ncomunicações para invocar mudanças sociais e comportamentais \n1.2. A gestão Pública necessita da inovação tecnológica para ter um amplo atendimento e ampliar as \nexperiências para ajudar os tomadores de decisão em diversas questões que envolvem políticas \npúblicas em todos os setores da administração pública. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0008",
+              "type": "PARAGRAPH",
+              "text": "2. \nÁREA REQUISITANTE \nSetor Requisitante \nResponsável \nSecretário municipal de finanças \nArthur Martins Romualdo de Oliveira Goes \n \n3. \nDESCRIÇÃO DA SOLUÇÃO COMO UM TODO \n3.1. A solução escolhida e a ser adotada pelo Município de Colinas do Sul é a Registro de preço, em \nfunção do valor, considerando a necessidade de entrega imediata dos produtos/serviços, bem como o \nvalor total estimado para contratação, conforme disposto no Art. 75, inc. II da Lei 14.133/21; \n3.2. Ressalta-se que não foram identificados requisitos que restrinjam a competitividade de mercado.  \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Setor Requisitante"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Responsável"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Secretário municipal de finanças"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Arthur Martins Romualdo de Oliveira Goes"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "RISCO 01: Incompatibilidade com a infraestrutura existente"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Probabilidade:"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "( X ) Baixa ( ) Média ( ) Alta"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Impacto:"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "( ) Baixa ( X ) Média ( ) Alta"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Dano:  \nO mal uso pode provocar danos aos objetos contratados. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Ação Preventiva: \nProporcionar treinamentos, cursos e reuniões para \nsanar o dano. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Responsável:\nSecretaria de Administração e Planejamento e\nFornecedor contratado"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "Ação de Contingência:\nProvidenciar ações nas diversas secretaria do\nMunicípio de Colinas do Sul - Go."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0002:r-0006:c-0003",
+              "type": "TABLE_CELL",
+              "text": "Responsável:\nSecretaria Municipal de Administração e\nPlanejamento"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0027",
+              "type": "PARAGRAPH",
+              "text": "ASSINADO DIGITALMENTE POR VALMIR FRANCISCO MAIA EM 01/10/2024 ÀS 13:35:16.\n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0014",
+              "type": "PARAGRAPH",
+              "text": "5. \nESTIMATIVA DAS QUANTIDADE A SEREM CONTRATADAS \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "QUANTIDADE A SER CONTRATADA: \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM \nLOTE \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ESPECIFICAÇÃO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNIDAD\nE DE \nMEDIDA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "QTD \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Valor \nestimado \nUnitário \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "NOTEBOOKS COM PROCESSADOR INTEL CORE I5 DE 12ª \nGERAÇÃO TELA: SUPERIOR A 15.6 POL, INTERATIVIDADE \nDA \nTELA: \nSEM \nINTERATIVIDADE, \nMEMÓRIA \nRAM: \nSUPERIOR A 8 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR \nA 8GB, NUCLEOS POR PROCESSADOR DE 4 A 8 INTERFACE \nINTEGRADA 5.0, ARMAZENAMENTO SSD: SUPERIOR A 500 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "36,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:t-0003:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n3.954,53"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0001:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "GB, BATERIA: ATÉ 4 CÉLULAS, ALIMENTAÇÃO: BIVOLT \nAUTOMÁTICA, COM WIFI E BLUETOOTH, 2 ALTO-FALANTES \nCOM \nCERTIFICAÇÃO \nDOLBY \nAUDIO \nGARANTIA \nDO \nFABRICANTE MÍNIMO: 24 MESES; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "2 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "NOTEBOOKS COM PROCESSADOR INTEL CORE I7 1255U DE \n12ª GERAÇÃO EM UM CHASSI FINO E COMPACTO QUE \nFACILITA A MULTITAREFA ENQUANTO AUMENTA A \nEFICIÊNCIA ENERGÉTICA COM A BATERIA DE LONGA \nDURAÇÃO E CARGA RÁPIDA. 12GB DE MEMÓRIA RAM, \n512GB DE SSD, SISTEMA OPERACIONAL WINDOWS 11 E \nTELA LCD ANTIRREFLEXO DE 15,6\" COM RESOLUÇÃO HD \n(1366X768). HOME 64, ARMAZENAMENTO DE 1 TB, 2 ALTO-\nFALANTES COM CERTIFICAÇÃO DOLBY AUDIO, COM WIFI E \nBLUETOOTH, GARANTIA DO FABRICANTE: 24 MESES. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "22,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n6.110,64"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0002:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "2 ALTO-FALANTES"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "COM CERTIFICAÇÃO DOLBY AUDIO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "Do Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "3 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "IMPRESSORA LASER TENSÃO ALIMENTAÇÃO: 110/220 V, \nRESOLUÇÃO IMPRESSÃO: 1.200 X 1.200 DPI OU SUPERIOR, \nVELOCIDADE IMPRESSÃO PRETO E BRANCO: 35 PPM OU \nSUPEIOR, \nTIPO \nPAPEL: \nA3/A4/A5/B4/B5/CARTA \nOFÍCIO/ENVELOPE/ETIQUETA , CAPACIDADE FOLHA: 200 \nUN, CARACTERÍSTICAS ADICIONAIS: CICLO DE TRABALHO \nMINIMO 50.000 PÁGINAS/MÊS, LINGUAGEM PC , CONEXÃO: \nUSB E ETHERNET 10/100/100 BASE TX RJ45 INTEGRADO; \nCOMPATIBILIDADE: WINDOWS/VISTA, LINUX, APPLE, MAC \nOS X, TIPO IMPRESSORA: MONOCROMÁTICA/IMPRESSÃO \nFRENTE/VERSO \n, \nCARACTERÍSTICAS \nADICIONAIS \n1: \nIMPRESSÃO FRENTE E VERSO. GARANTIA DO FABRICANTE: \n24 MESES. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "17,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.590,08"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "4 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "IMPRESSORA MULTIFUNCIONAL - TIPO IMPRESSÃO: LASER, \nRESOLUÇÃO IMPRESSÃO: 1200 X 2400 DPI OU SUPEIOR, \nTENSÃO \nALIMENTAÇÃO: \n110/220 \nV, \nVELOCIDADE \nIMPRESSÃO COLORIDA: 35 PPM OU SUPERIOR, RESOLUÇÃO \nSCANNER: 600 X 600 DPI, CONECTIVIDADE: USB 2.0 E \nETHERNET 100/1000, CAPACIDADE MEMÓRIA: MÍNIMO 4 G; \nTEMPO DE SAÍDA DA PRIMEIRA PÁGINA MENOS DE 8,5 \nSEGUNDOS; GARANTIA DO FABRICANTE: 24 MESES. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0001:c-0005",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0001:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.469,14"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "5 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "NOBREAK. A LINHA DE NOBREAKS ATTIV POSSUI DESIGN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "20,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0002:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n864,53"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DIFERENCIADO E VERSÁTIL, POIS PERMITE USO NA"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "HORIZONTAL OU VERTICAL. FOI DESENVOLVIDA PARA"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "PROTEÇÃO DE EQUIPAMENTOS DE INFORMÁTICA."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0006:c-0003",
+              "type": "TABLE_CELL",
+              "text": "NOBREAK SMS PREMIUM 700 ENTRADA E SAÍDA BIVOLT WI-"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0007:c-0003",
+              "type": "TABLE_CELL",
+              "text": "FI - 29500 ESPECIFICAÇÕES TÉCNICAS PRODUTO NOBREAK"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0008:c-0003",
+              "type": "TABLE_CELL",
+              "text": "SMS PREMIUM 700BI/BI WIFI FABRICANTE SMS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0009:c-0003",
+              "type": "TABLE_CELL",
+              "text": "PN29500EAN7896586820704 TOPOLOGIA NOBREAK UPS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0010:c-0003",
+              "type": "TABLE_CELL",
+              "text": "INTERATIVO COM REGULAÇÃO ON-LINE POTÊNCIAI 700V A"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0011:c-0003",
+              "type": "TABLE_CELL",
+              "text": "TENSÃO ENTRADA."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0012:c-0001",
+              "type": "TABLE_CELL",
+              "text": "6 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0012:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SCANNER DE MESA PROFISSIONAL: DIGITALIZE ATÉ 40 \nPÁGINAS POR MINUTO • DIGITALIZAÇÃO DUPLEX DE ATÉ 80 \nIMAGENS POR MINUTO E PROCESSAMENTO DE IMAGENS \nAVANÇADO • ALIMENTADOR AUTOMÁTICO DE NO MINIMO 80 \nFOLHAS (ADF), CONEXÃO DE REDE CABEADA E SEM FIO • \nDIGITALIZE DIRETAMENTE PARA PENDRIVE COM CONEXÃO \nUSB3.0 SUPERSPEED • DIGITALIZE PARA SEU SMARTPHONE \nCOM APP MOBILE CONNECT • AUTO START SCAN, SENSOR \nULTRASSOM, PACOTE DE SOFTWARE COMPLETO INCLUSO. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0012:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0012:c-0005",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0012:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.010,71"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0013:c-0001",
+              "type": "TABLE_CELL",
+              "text": "7"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0013:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ROTEADOR - WIFI 04 ANTENAS WIRELESS DUAL BAND AC\n1200MBPS W5 1200F 05 DBI E 04 PORTAS FAST ETHERNET – 01\nWAN E 03 LAN – FREQUENCIA DE OPERACAO DE 2,4 GHZ/5GHZ."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0013:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0013:c-0005",
+              "type": "TABLE_CELL",
+              "text": "19,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0013:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n183,83"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0014:c-0001",
+              "type": "TABLE_CELL",
+              "text": "8"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0014:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ROTEADOR MIKROTIK ROUTER BOARD HEX RB750GR3 110V/240"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0014:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0014:c-0005",
+              "type": "TABLE_CELL",
+              "text": "7,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0014:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n487,37"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0015:c-0001",
+              "type": "TABLE_CELL",
+              "text": "9"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0015:c-0002",
+              "type": "TABLE_CELL",
+              "text": "RB 3011 (ROUTERBOARD 3011)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0015:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0015:c-0005",
+              "type": "TABLE_CELL",
+              "text": "4,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0015:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n1.330,01"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0016:c-0001",
+              "type": "TABLE_CELL",
+              "text": "10"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0016:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SWITCH GIGABIT 8 PORTAS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0016:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0016:c-0005",
+              "type": "TABLE_CELL",
+              "text": "10,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0016:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n158,37"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0017:c-0001",
+              "type": "TABLE_CELL",
+              "text": "11 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0017:c-0002",
+              "type": "TABLE_CELL",
+              "text": "DESKTOP \nCOMPLETO COM \nTELA \nDE \nNO \nMINIMO \n21,5 \nPOLEGADAS, PROCESSADOR  CORE I7 DE 12º GERAÇÃO 16 (2X8) \nGB \nDDR4 \nPLACA \nDE \nVÍDEO \nDEDICADA \nNVIDIA \n3060; \nARMAZENAMENTO SSD NVMe 1 TB FONTE 750w 80 PLUS KIT \nTECLADO+MOUSE SEM FIO \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0017:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0017:c-0005",
+              "type": "TABLE_CELL",
+              "text": "17,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:t-0001:r-0017:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n8.645,49"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "licenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "12 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "DESKTOP \nCOMPLETO COM \nTELA \nDE \nNO \nMINIMO \n21,5 \nPOLEGADAS, PROCESSADOR  CORE I7 DE 12º GERAÇÃO 16 (2X8) \nGB DDR4; ARMAZENAMENTO SSD NVMe PCIe 500GB FONTE 500w \nKIT TECLADO+MOUSE SEM FIO; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "28,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n3.664,26"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "licenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "13 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "HD EXTERNO 1TB DE ARMAZENAMENTO, TUDO EM UM DESIGN \nCOMPACTO E RESISTENTE ÀS MANCHAS. NOVA TECNOLOGIA USB \n3.0, OS DISCOS RÍGIDOS PORTÁTEIS CANVIO BASICS 3.0, SENDO  \nCOMPATÍVEIS COM A TECNOLOGIA USB 2.0 INFORMAÇÕES \nADICIONAIS COMPATÍVEL COM WINDOWS | VELOCIDADE: 5400 \nRPM | CACHE BUFFER: 8 MBTAXA DE TRANSFERÊNCIA: ATÉ 5 \nGB/S | TEMPO MÉDIO DE BUSCA: 12MS CONTEÚDO DA \nEMBALAGEM 1 HD EXTERNO E MANUAL 24 MESES DE GARANTIA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "15,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n412,50"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "14"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "AUTOTRANSFORMADOR BIVOLT – 110/127V PARA 220V\nTRIPOLAR 750VA MULTICRAFT"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "22,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n174,74"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "15 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "TABLET COM PROCESSADOR: 1,8 GHZ - VELOCIDADE DA CPU: 1,6 GHZ \n- TIPO DE CPU: OCTA-CORE - TAMANHO TELA: 10,1\" (255,4 MM) - \nRESOLUÇÃO (TELA PRINCIPAL): 1920 X 1200 (WUXGA) - CÂMERA \nTRASEIRA RESOLUÇÃO: 8,0 MP - CÂMERA TRASEIRA - FOCO \nAUTOMÁTICO: SIM - CÂMERA FRONTAL RESOLUÇÃO: 5,0 MP - \nRESOLUÇÃO DE GRAVAÇÃO DE VÍDEO: FULL HD (1920 X 1080) A 30 \nFPS – ARMAZENAMENTO: 3(GB) – ARMAZENAMENTO: 32(GB) - \nSUPORTE DE ARMAZENAMENTO EXTERNO: MICROSD (ATÉ 512 GB) - \nTECNOLOGIA DE LOCALIZAÇÃO: GPS, GLONASS, BEIDOU - WI-FI \n802.11 A/B/G/N/AC 2,4G+5GHZ, VHT80 - WI-FI DIRETO: SIM - \nVERSÃO BLUETOOTH: V5.0 (LE ATÉ 2 MBPS) \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0004:c-0004",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n1.034,38"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "16 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "MONITOR, ESPECIFICAÇÃO: COM ESPECIFICAÇÕES MINIMAS: \nWIDESCREEN (PAINEL LED) DE NO MINIMO DE 21,5 POLEGADAS, \nRESOLUÇÃO: 1600 X 900 X 60 HZ (HD), LED LCD, CONTRASTE: \n20.000.000:1, BRILHO: 200 CD/M2, TEMPO DE RESPOSTA: 5MS, \nNÚMERO DE CORES: MAIOR QUE 16 MILHÕES, ANGULO DE VISÃO: \nHORIZONTAL 90°, VERTICAL 50\", CONEXÕES: RGB. FONTE DE \nALIMENTAÇÃO: INTERNA-100~240V 50/60 HZ, VOLTAGEM: \nBIVOLT. ITENS INCLUSOS: CABO DE FORÇA, CABO RGB, MANUAL \n(CD), CERTIFICADO DE GARANTIA, BASE E MONITOR \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0005:c-0004",
+              "type": "TABLE_CELL",
+              "text": "29,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0001:r-0005:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n665,23"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM\nLOTE 2"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ESPECIFICAÇÃO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNIDA\nDE DE \nMEDID\nA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "QTD \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0001:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Valor \nEstimado \nUnitário \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "MOUSE PARA COMPUTADOR TAMANHO PADRÃO, SENSOR: LED, TIPO\nCONECTOR: BLUETOOTH, CONECTIVIDADE SEM FIO."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "43,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n69,67"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "2 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "PLACA MÃE - PLACA MÃE COMPONENTES: AM3, 4DIMM DDR3, 1 X PCIE \n(X16), 1 X PCIE (X1), 1 , APLICAÇÃO: MICROCOMPUTADOR , \nFREQUÊNCIA: 1333 MHZ, SLOTS: 4DIMM DDR3, 1 PCIE (X16), 1 PCIE \n(X1), PCI , BARRAMENTO: 1333 MHZ, TIPO PORTAS: 8 USB, PS/2, VGA, \nDISPLAY PORT, PADRÃO: ATX , TIPO CONECTORES: CPU FAN/CHASSIS \nFAN/FRONTPANEL/SATA/AUDIO FRONTAL/ , MEMÓRIA EXPANSÃO: \n16 GB, FONTE ALIMENTAÇÃO: 240W ATX \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "26,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n678,56"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "3"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "TECLADO MICROCOMPUTADOR - TIPO: PADRÃO, TIPO CONECTOR:\nUSB, CONECTIVIDADE: SEM FIO,"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0004:c-0004",
+              "type": "TABLE_CELL",
+              "text": "60,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n182,84"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "4"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FONTE 750w 80 PLUS Bronze para até 88% de eficiência, Ventoinha de"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0005:c-0004",
+              "type": "TABLE_CELL",
+              "text": "30,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:t-0002:r-0005:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "resfriamento de 120mm e baixo ruído, Comprimento compacto de\n125mm, Bivolt (110/220)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0001:c-0005",
+              "type": "TABLE_CELL",
+              "text": "489,47"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "5"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FONTE 500w 80 PLUS Bronze para até 88% de eficiência, Ventoinha de\nresfriamento de 120mm e baixo ruído, Comprimento compacto de\n125mm, Bivolt (110/220)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "40,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n315,62"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "6"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SSD 256GB, M.2, PCIe, NVMe, Leituras: 1700Mb/s e Gravações:\n1100Mb/s"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "30,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$ 178,16"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0009",
+              "type": "PARAGRAPH",
+              "text": " \n \n6. \nJUSTIFICATIVA PARA O PARCELAMENTO OU NÃO DA SOLUÇÃO DO OBJETO \nA definição do objeto considerou que há necessidade de agrupamento de itens por se tratar da aquisição de \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "vários objetos que serão entregues após a Ordem de Compra. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0012",
+              "type": "PARAGRAPH",
+              "text": "7. \nRESULTADOS PRETENDITOS \n7.1. \nA presente contração visa benefícios diretos e indiretos: \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0013",
+              "type": "PARAGRAPH",
+              "text": "a) Comunicação eficiente com fornecedores, servidores e população; \nb) Continuidade dos trâmites processuais e envio de prestação de contas aos órgãos \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0014",
+              "type": "PARAGRAPH",
+              "text": "e plataformas de fiscalização e controle; \nc) Identificar ações relevantes e reais; \nd) Suporte às operações das rotinas administrativas e economicidade; \ne) Capacidade para implementar e utilizar serviços, tendo melhor aproveitamento; \nf) Evitar futuras aquisições emergenciais por meio de dispensa de licitação; \ng) Maior eficiência energética dos equipamentos adquiridos; \nh) Aumentar a satisfação dos servidores na realização de suas atividades \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0015",
+              "type": "PARAGRAPH",
+              "text": "administrativas. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0016",
+              "type": "PARAGRAPH",
+              "text": " \n8. \nPROVIDÊNCIAS A SEREM ADOTADAS \n8.1. Encontra-se em andamento o processo que prevê a implantação de solução de modernização por isso o \ncronograma prevê datas diferentes de entrega. Dessa forma, a presente aquisição deverá ser realizada \nde forma parcelada, ou seja, à medida que a modernização dos ambientes e a necessidade dos \nservidores forem concluídas. \n8.2. Resta comprovada a necessidade de aquisição dos materiais pretendidos, inexistindo, entretanto, a \npossibilidade de definir previamente o quantitativo a ser demandado e o cronograma de entrega dos \nmesmos. \n8.3. Por se tratar de equipamentos de valor considerável, o armazenamento nas dependências dos setores \nrequisitantes demonstra-se inviável, uma vez que há risco de danos. Além disso, o armazenamento \nimplicaria na contagem do prazo de garantia, antes mesmo da utilização dos bens.  \n8.4. Quanto a entrega dos bens, deverá ocorrer durante o horário de expediente, no respectivo endereço \nrelacionado no termo de referência e/ou edital. \n \n9. \nPOSSÍVEIS IMPACTOS AMBIENTAIS \n9.1. A Lei nº 6938/81, que institui a Política Nacional do Meio Ambiente, em seu art. 13 atribui ao Poder \nPúblico a função de fomentador de atividades para ao desenvolvimento sustentável, como \ndesenvolvimento de meios que busquem a diminuição da degradação ambiental através de pesquisas e \nprocessos tecnológicos. \n9.2. Com a Lei de Resíduos Sólidos (L. no 12.305/10), instituiu-se, no art. 7º, inc. XI, alínea “b”, que um \ndos objetivos da Política Nacional de Resíduos Sólidos é que a Administração Pública compre, \nprioritariamente, os bens que “considerem critérios compatíveis de consumo social e ambientalmente \nsustentáveis \n9.3. Os possíveis impactos ambientais podem variar dependendo das práticas específicas da contratada \ndeverá atender aos critérios de qualidade ambiental, sustentabilidade socioambiental, respeitando as \nnormas de proteção ao meio ambiente. \n9.4. A contratada será responsável pela destinação correta de todos os resíduos gerados na execução dos \nserviços. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0007:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "9.5. Por todo o exposto, depreende-se que esta Administração visa a aquisição de produtos com o “melhor \npreço”, entendido como aquele que atenda aos requisitos eleitos, de qualidade e sustentabilidade, frente \na melhor utilização do erário. \n9.6. Consumo de energia: Só será admitida a oferta do produto objeto dessa contratação que possua a \nEtiqueta Nacional de Conservação de Energia – ENCE, na classe A, nos termos da Portaria INMETRO \nn°  234 de 29 de junho de 2020, que aprova os Requisitos de Avaliação da Conformidade – RAC do \nproduto e trata da etiquetagem compulsória Assim, resta-se demonstrada a necessidade de adquirir \nprodutos com comprovação técnica adequada e prazo de garantia  estendido, considerando todos os \nfatores acima expostos, sendo exigido práticas de sustentabilidade ambiental e as normas. \n9.7. Descarte de equipamentos antigos: Art. 18º Nos termos do parágrafo 1º “O estudo técnico preliminar \na que se refere o inciso I do caput deste artigo deverá evidenciar o problema a ser resolvido e a sua \nmelhor solução, de modo a permitir a avaliação da viabilidade técnica e econômica da contratação, e \nconterá os seguintes elementos:”, referindo-se ao inciso XII, “descrição de possíveis impactos \nambientais e respectivas medidas mitigadoras, incluídos requisitos de baixo consumo de energia e de \noutros recursos, bem como logística reversa para desfazimento e reciclagem de bens e refugos, quando \naplicável;”, sendo assim os materiais que forem substituídos serão enviados para o departamento \nresponsável pelo descarte. \n \n10. \nCONTRATAÇÕES CORRELATAS E/OU INTERDEPENDENTES  \n10.1. A contratação do objeto ocorre de forma independente, não dependendo de qualquer outro processo para \nprosseguir com a contratação.  \n \n11. \nALINHAMENTO ENTRE A CONTRATAÇÃO E O PLANEJAMENTO ESTRATÉGICO \n11.1. A contratação pretendida encontra-se em harmonia com as atividades do Município de Colinas do Sul, \nGoiás, conforme o Plano de Contratações Anual para o ano de 2024, pois visa proporcionar melhorias \npara o órgão e a troca de equipamentos obsoletos. \n \n12. \nPOSICIONAMENTO CONCLUSIVO \n12.1. Com base nos estudos expostos acima, especialmente no que tange à solução de mercado escolhida, \nconsidera-se que a contratação é viável, além de ser necessária para o atendimento das necessidades e \ninteresses da Administração. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": " \nColinas do Sul - GO, 01 de Outubro de 2024. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0008",
+              "type": "PARAGRAPH",
+              "text": " \n \nARTHUR MARTINS ROMUALDO DE OLIVEIRA GOES \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0009",
+              "type": "PARAGRAPH",
+              "text": "Gestor Executivo \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0011",
+              "type": "PARAGRAPH",
+              "text": " \n \nDANIELA MARQUES DE SOUZA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0012",
+              "type": "PARAGRAPH",
+              "text": " \nSecretaria de Assistência Social \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0014",
+              "type": "PARAGRAPH",
+              "text": " \n \nJULIMAR ATAÍDES DE OLIVEIRA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0015",
+              "type": "PARAGRAPH",
+              "text": " \nSecretário de Educação e Cultura\n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:etp:p-0008:b-0016",
+              "type": "PARAGRAPH",
+              "text": "Valide a assinatura deste documento em https://colinasdosul.megasoftservicos.com.br//cidadao/autenticar-assinatura com o código: 9189e5\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "25105255000140-1-000041-2024:etp",
+            "page": 1,
+            "block_id": "25105255000140-1-000041-2024:etp:p-0001:b-0001",
+            "quote": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [],
+      "field_values": [],
+      "requirements": []
+    },
+    {
+      "id": "25105255000140-1-000041-2024:tr",
+      "type": "TR",
+      "format": "PDF",
+      "title": "tr-11-retificado-termo-referencia.pdf",
+      "sections": [
+        {
+          "id": "25105255000140-1-000041-2024:tr:sec-0001",
+          "title_original": "CORPO",
+          "section_type_normalized": null,
+          "blocks": [
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0006",
+              "type": "PARAGRAPH",
+              "text": "ANEXO I - TERMO DE REFERÊNCIA \n \n \n1. \nDAS CONDIÇÕES GERAIS DE CONTRATAÇÃO \n \nObjeto: Constitui objeto do presente Termo a eventual aquisição de notebooks, impressoras e periféricos, \natravés de sistema de Registro de Preço, conforme quantidades, condições e especificações estabelecidas \nneste Termo de Referência e Estudo Preliminar Técnico. A aquisição de notebooks, impressoras e \nperiféricos são alguns dos objetivos que compõem o alinhamento Plano anual de Contratações do \nMunicípio de Colinas do Sul – Go, com atitudes que visam desencadear a modernização da infraestrutura \nde TI da instituição do Município De Colinas do Sul – Goiás. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "QUANTIDADE A SER CONTRATADA: \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM \nLOTE \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ESPECIFICAÇÃO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNIDAD\nE DE \nMEDIDA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "QTD \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Valor \nestimado \nUnitário \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "NOTEBOOKS COM PROCESSADOR INTEL CORE I5 DE 12ª \nGERAÇÃO TELA: SUPERIOR A 15.6 POL, INTERATIVIDADE \nDA \nTELA: \nSEM \nINTERATIVIDADE, \nMEMÓRIA \nRAM: \nSUPERIOR A 8 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR \nA 8GB, NUCLEOS POR PROCESSADOR DE 4 A 8 INTERFACE \nINTEGRADA 5.0, ARMAZENAMENTO SSD: SUPERIOR A 500 \nGB, BATERIA: ATÉ 4 CÉLULAS, ALIMENTAÇÃO: BIVOLT \nAUTOMÁTICA, COM WIFI E BLUETOOTH, 2 ALTO-FALANTES \nCOM \nCERTIFICAÇÃO \nDOLBY \nAUDIO \nGARANTIA \nDO \nFABRICANTE MÍNIMO: 24 MESES; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "36,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n3.954,53"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0002:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "2 ALTO-FALANTES"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "COM CERTIFICAÇÃO DOLBY AUDIO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0019",
+              "type": "PARAGRAPH",
+              "text": "ASSINADO DIGITALMENTE POR VALMIR FRANCISCO MAIA EM 01/10/2024 ÀS 13:35:16.\n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0001:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "licenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "2 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "NOTEBOOKS COM PROCESSADOR INTEL CORE I7 1255U DE \n12ª GERAÇÃO EM UM CHASSI FINO E COMPACTO QUE \nFACILITA A MULTITAREFA ENQUANTO AUMENTA A \nEFICIÊNCIA ENERGÉTICA COM A BATERIA DE LONGA \nDURAÇÃO E CARGA RÁPIDA. 12GB DE MEMÓRIA RAM, \n512GB DE SSD, SISTEMA OPERACIONAL WINDOWS 11 E \nTELA LCD ANTIRREFLEXO DE 15,6\" COM RESOLUÇÃO HD \n(1366X768). HOME 64, ARMAZENAMENTO DE 1 TB, 2 ALTO-\nFALANTES COM CERTIFICAÇÃO DOLBY AUDIO, COM WIFI E \nBLUETOOTH, GARANTIA DO FABRICANTE: 24 MESES. \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "22,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n6.110,64"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0002:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "próprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "3 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "IMPRESSORA LASER TENSÃO ALIMENTAÇÃO: 110/220 V, \nRESOLUÇÃO IMPRESSÃO: 1.200 X 1.200 DPI OU SUPERIOR, \nVELOCIDADE IMPRESSÃO PRETO E BRANCO: 35 PPM OU \nSUPEIOR, \nTIPO \nPAPEL: \nA3/A4/A5/B4/B5/CARTA \nOFÍCIO/ENVELOPE/ETIQUETA , CAPACIDADE FOLHA: 200 \nUN, CARACTERÍSTICAS ADICIONAIS: CICLO DE TRABALHO \nMINIMO 50.000 PÁGINAS/MÊS, LINGUAGEM PC , CONEXÃO: \nUSB E ETHERNET 10/100/100 BASE TX RJ45 INTEGRADO; \nCOMPATIBILIDADE: WINDOWS/VISTA, LINUX, APPLE, MAC \nOS X, TIPO IMPRESSORA: MONOCROMÁTICA/IMPRESSÃO \nFRENTE/VERSO \n, \nCARACTERÍSTICAS \nADICIONAIS \n1: \nIMPRESSÃO FRENTE E VERSO. GARANTIA DO FABRICANTE: \n24 MESES. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "17,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0002:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.590,08"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "4 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "IMPRESSORA MULTIFUNCIONAL - TIPO IMPRESSÃO: LASER, \nRESOLUÇÃO IMPRESSÃO: 1200 X 2400 DPI OU SUPEIOR, \nTENSÃO \nALIMENTAÇÃO: \n110/220 \nV, \nVELOCIDADE \nIMPRESSÃO COLORIDA: 35 PPM OU SUPERIOR, RESOLUÇÃO \nSCANNER: 600 X 600 DPI, CONECTIVIDADE: USB 2.0 E \nETHERNET 100/1000, CAPACIDADE MEMÓRIA: MÍNIMO 4 G; \nTEMPO DE SAÍDA DA PRIMEIRA PÁGINA MENOS DE 8,5 \nSEGUNDOS; GARANTIA DO FABRICANTE: 24 MESES. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UNID"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0003:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.469,14"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "5 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "NOBREAK. A LINHA DE NOBREAKS ATTIV POSSUI DESIGN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0004:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "20,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0004:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n864,53"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "DIFERENCIADO E VERSÁTIL, POIS PERMITE USO NA"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0006:c-0003",
+              "type": "TABLE_CELL",
+              "text": "HORIZONTAL OU VERTICAL. FOI DESENVOLVIDA PARA"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0007:c-0003",
+              "type": "TABLE_CELL",
+              "text": "PROTEÇÃO DE EQUIPAMENTOS DE INFORMÁTICA."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0008:c-0003",
+              "type": "TABLE_CELL",
+              "text": "NOBREAK SMS PREMIUM 700 ENTRADA E SAÍDA BIVOLT WI-"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0009:c-0003",
+              "type": "TABLE_CELL",
+              "text": "FI - 29500 ESPECIFICAÇÕES TÉCNICAS PRODUTO NOBREAK"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0010:c-0003",
+              "type": "TABLE_CELL",
+              "text": "SMS PREMIUM 700BI/BI WIFI FABRICANTE SMS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0011:c-0003",
+              "type": "TABLE_CELL",
+              "text": "PN29500EAN7896586820704 TOPOLOGIA NOBREAK UPS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0012:c-0003",
+              "type": "TABLE_CELL",
+              "text": "INTERATIVO COM REGULAÇÃO ON-LINE POTÊNCIAI 700V A"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0013:c-0003",
+              "type": "TABLE_CELL",
+              "text": "TENSÃO ENTRADA."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0014:c-0001",
+              "type": "TABLE_CELL",
+              "text": "6 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0014:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SCANNER DE MESA PROFISSIONAL: DIGITALIZE ATÉ 40 \nPÁGINAS POR MINUTO • DIGITALIZAÇÃO DUPLEX DE ATÉ 80 \nIMAGENS POR MINUTO E PROCESSAMENTO DE IMAGENS \nAVANÇADO • ALIMENTADOR AUTOMÁTICO DE NO MINIMO 80 \nFOLHAS (ADF), CONEXÃO DE REDE CABEADA E SEM FIO • \nDIGITALIZE DIRETAMENTE PARA PENDRIVE COM CONEXÃO \nUSB3.0 SUPERSPEED • DIGITALIZE PARA SEU SMARTPHONE \nCOM APP MOBILE CONNECT • AUTO START SCAN, SENSOR \nULTRASSOM, PACOTE DE SOFTWARE COMPLETO INCLUSO. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0014:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0014:c-0005",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0014:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n5.010,71"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0015:c-0001",
+              "type": "TABLE_CELL",
+              "text": "7"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0015:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ROTEADOR - WIFI 04 ANTENAS WIRELESS DUAL BAND AC\n1200MBPS W5 1200F 05 DBI E 04 PORTAS FAST ETHERNET – 01\nWAN E 03 LAN – FREQUENCIA DE OPERACAO DE 2,4 GHZ/5GHZ."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0015:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0015:c-0005",
+              "type": "TABLE_CELL",
+              "text": "19,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0015:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n183,83"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0016:c-0001",
+              "type": "TABLE_CELL",
+              "text": "8"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0016:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ROTEADOR MIKROTIK ROUTER BOARD HEX RB750GR3 110V/240"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0016:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0016:c-0005",
+              "type": "TABLE_CELL",
+              "text": "7,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0016:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n487,37"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0017:c-0001",
+              "type": "TABLE_CELL",
+              "text": "9"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0017:c-0002",
+              "type": "TABLE_CELL",
+              "text": "RB 3011 (ROUTERBOARD 3011)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0017:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0017:c-0005",
+              "type": "TABLE_CELL",
+              "text": "4,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0017:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n1.330,01"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0018:c-0001",
+              "type": "TABLE_CELL",
+              "text": "10"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0018:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SWITCH GIGABIT 8 PORTAS"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0018:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0018:c-0005",
+              "type": "TABLE_CELL",
+              "text": "10,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0018:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n158,37"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0019:c-0001",
+              "type": "TABLE_CELL",
+              "text": "11"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0019:c-0002",
+              "type": "TABLE_CELL",
+              "text": "DESKTOP COMPLETO COM TELA DE NO MINIMO 21,5\nPOLEGADAS, PROCESSADOR CORE I7 DE 12º GERAÇÃO 16 (2X8)\nGB DDR4 PLACA DE VÍDEO DEDICADA NVIDIA 3060;"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0019:c-0004",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0019:c-0005",
+              "type": "TABLE_CELL",
+              "text": "17,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:t-0001:r-0019:c-0006",
+              "type": "TABLE_CELL",
+              "text": "R$\n8.645,49"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0003:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ARMAZENAMENTO SSD NVMe 1 TB FONTE 750w 80 PLUS KIT \nTECLADO+MOUSE SEM FIO \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "12 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "DESKTOP \nCOMPLETO COM \nTELA \nDE \nNO \nMINIMO \n21,5 \nPOLEGADAS, PROCESSADOR  CORE I7 DE 12º GERAÇÃO 16 (2X8) \nGB DDR4; ARMAZENAMENTO SSD NVMe PCIe 500GB FONTE 500w \nKIT TECLADO+MOUSE SEM FIO; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "28,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n3.664,26"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0004:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "drivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \nlicenciado e instalado no computador, podendo ser \ndisponibilizado através de  mídia física ou através de \ndownload no site de suporte do próprio fabricante. \nFerramentas e softwares de recuperação fornecidas pelo \npróprio fabricante e disponibilizadas  para download no \nsite de suporte oficial, atendem esta exigência, desde que \npermitam a criação de pendrives e/ou DVDs para a \ninstalação e recuperação do sistema operacional que \nacompanha \no \ncomputador \nofertado. \nSoluções \nde \nrestauração em partição dentro do HD, não serão aceitos \ncomo forma de substituir as mídias supracitadas. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "13 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "HD EXTERNO 1TB DE ARMAZENAMENTO, TUDO EM UM DESIGN \nCOMPACTO E RESISTENTE ÀS MANCHAS. NOVA TECNOLOGIA USB \n3.0, OS DISCOS RÍGIDOS PORTÁTEIS CANVIO BASICS 3.0, SENDO  \nCOMPATÍVEIS COM A TECNOLOGIA USB 2.0 INFORMAÇÕES \nADICIONAIS COMPATÍVEL COM WINDOWS | VELOCIDADE: 5400 \nRPM | CACHE BUFFER: 8 MBTAXA DE TRANSFERÊNCIA: ATÉ 5 \nGB/S | TEMPO MÉDIO DE BUSCA: 12MS CONTEÚDO DA \nEMBALAGEM 1 HD EXTERNO E MANUAL 24 MESES DE GARANTIA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "15,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n412,50"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "14"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "AUTOTRANSFORMADOR BIVOLT – 110/127V PARA 220V\nTRIPOLAR 750VA MULTICRAFT"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "22,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n174,74"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "15 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "TABLET COM PROCESSADOR: 1,8 GHZ - VELOCIDADE DA CPU: 1,6 GHZ \n- TIPO DE CPU: OCTA-CORE - TAMANHO TELA: 10,1\" (255,4 MM) - \nRESOLUÇÃO (TELA PRINCIPAL): 1920 X 1200 (WUXGA) - CÂMERA \nTRASEIRA RESOLUÇÃO: 8,0 MP - CÂMERA TRASEIRA - FOCO \nAUTOMÁTICO: SIM - CÂMERA FRONTAL RESOLUÇÃO: 5,0 MP - \nRESOLUÇÃO DE GRAVAÇÃO DE VÍDEO: FULL HD (1920 X 1080) A 30 \nFPS – ARMAZENAMENTO: 3(GB) – ARMAZENAMENTO: 32(GB) - \nSUPORTE DE ARMAZENAMENTO EXTERNO: MICROSD (ATÉ 512 GB) - \nTECNOLOGIA DE LOCALIZAÇÃO: GPS, GLONASS, BEIDOU - WI-FI \n802.11 A/B/G/N/AC 2,4G+5GHZ, VHT80 - WI-FI DIRETO: SIM - \nVERSÃO BLUETOOTH: V5.0 (LE ATÉ 2 MBPS) \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0004:c-0004",
+              "type": "TABLE_CELL",
+              "text": "13,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n1.034,38"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "16 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "MONITOR, ESPECIFICAÇÃO: COM ESPECIFICAÇÕES MINIMAS:\nWIDESCREEN (PAINEL LED) DE NO MINIMO DE 21,5 POLEGADAS,\nRESOLUÇÃO: 1600 X 900 X 60 HZ (HD), LED LCD, CONTRASTE:\n20.000.000:1, BRILHO: 200 CD/M2, TEMPO DE RESPOSTA: 5MS,"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0005:c-0004",
+              "type": "TABLE_CELL",
+              "text": "29,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:t-0001:r-0005:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n665,23"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0005:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0001:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "NÚMERO DE CORES: MAIOR QUE 16 MILHÕES, ANGULO DE VISÃO:\nHORIZONTAL 90°, VERTICAL 50\", CONEXÕES: RGB. FONTE DE\nALIMENTAÇÃO: INTERNA-100~240V 50/60 HZ, VOLTAGEM:\nBIVOLT. ITENS INCLUSOS: CABO DE FORÇA, CABO RGB, MANUAL\n(CD), CERTIFICADO DE GARANTIA, BASE E MONITOR"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0001:c-0001",
+              "type": "TABLE_CELL",
+              "text": "ITEM \nLOTE \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0001:c-0002",
+              "type": "TABLE_CELL",
+              "text": "ESPECIFICAÇÃO"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0001:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UNIDADE \nDE \nMEDIDA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0001:c-0004",
+              "type": "TABLE_CELL",
+              "text": "QTD \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0001:c-0005",
+              "type": "TABLE_CELL",
+              "text": "Valor \nEstimado \nUnitário \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0002:c-0001",
+              "type": "TABLE_CELL",
+              "text": "1"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0002:c-0002",
+              "type": "TABLE_CELL",
+              "text": "MOUSE PARA COMPUTADOR TAMANHO PADRÃO, SENSOR: LED,\nTIPO CONECTOR: BLUETOOTH, CONECTIVIDADE SEM FIO."
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0002:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0002:c-0004",
+              "type": "TABLE_CELL",
+              "text": "43,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0002:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n69,67"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0003:c-0001",
+              "type": "TABLE_CELL",
+              "text": "2 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0003:c-0002",
+              "type": "TABLE_CELL",
+              "text": "PLACA MÃE - PLACA MÃE COMPONENTES: AM3, 4DIMM DDR3, 1 X \nPCIE (X16), 1 X PCIE (X1), 1 , APLICAÇÃO: MICROCOMPUTADOR , \nFREQUÊNCIA: 1333 MHZ, SLOTS: 4DIMM DDR3, 1 PCIE (X16), 1 \nPCIE (X1), PCI , BARRAMENTO: 1333 MHZ, TIPO PORTAS: 8 USB, \nPS/2, VGA, DISPLAY PORT, PADRÃO: ATX , TIPO CONECTORES: \nCPU FAN/CHASSIS FAN/FRONTPANEL/SATA/AUDIO FRONTAL/ , \nMEMÓRIA EXPANSÃO: 16 GB, FONTE ALIMENTAÇÃO: 240W ATX \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0003:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0003:c-0004",
+              "type": "TABLE_CELL",
+              "text": "26,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0003:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n678,56"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0004:c-0001",
+              "type": "TABLE_CELL",
+              "text": "3"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0004:c-0002",
+              "type": "TABLE_CELL",
+              "text": "TECLADO MICROCOMPUTADOR - TIPO: PADRÃO, TIPO\nCONECTOR: USB, CONECTIVIDADE: SEM FIO,"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0004:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0004:c-0004",
+              "type": "TABLE_CELL",
+              "text": "60,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0004:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n182,84"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0005:c-0001",
+              "type": "TABLE_CELL",
+              "text": "4"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0005:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FONTE 750w 80 PLUS Bronze para até 88% de eficiência, Ventoinha de\nresfriamento de 120mm e baixo ruído, Comprimento compacto de\n125mm, Bivolt (110/220)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0005:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0005:c-0004",
+              "type": "TABLE_CELL",
+              "text": "30,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0005:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n489,47"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0006:c-0001",
+              "type": "TABLE_CELL",
+              "text": "5"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0006:c-0002",
+              "type": "TABLE_CELL",
+              "text": "FONTE 500w 80 PLUS Bronze para até 88% de eficiência, Ventoinha de\nresfriamento de 120mm e baixo ruído, Comprimento compacto de\n125mm, Bivolt (110/220)"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0006:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0006:c-0004",
+              "type": "TABLE_CELL",
+              "text": "40,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0006:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$\n315,62"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0007:c-0001",
+              "type": "TABLE_CELL",
+              "text": "6"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0007:c-0002",
+              "type": "TABLE_CELL",
+              "text": "SSD 256GB, M.2, PCIe, NVMe, Leituras: 1700Mb/s e Gravações:\n1100Mb/s"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0007:c-0003",
+              "type": "TABLE_CELL",
+              "text": "UN"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0007:c-0004",
+              "type": "TABLE_CELL",
+              "text": "30,00"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:t-0002:r-0007:c-0005",
+              "type": "TABLE_CELL",
+              "text": "R$ 178,16"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0022",
+              "type": "PARAGRAPH",
+              "text": " \n1.1. \nO objeto desta contratação não se enquadra como sendo bem de luxo, conforme Decreto nº \n10.818, de 27 de setembro de 2021. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0023",
+              "type": "PARAGRAPH",
+              "text": "1.2. \nOs bens objetos desta contratação são caracterizados como comuns, uma vez que os padrões \nde desempenho e qualidade podem ser objetivamente definidos pelo edital, por meio de \nespecificações usuais de mercado. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0024",
+              "type": "PARAGRAPH",
+              "text": "1.3. \nO prazo de vigência da contratação é de 12 (doze) meses, contados da assinatura do \ncontrato, na forma do art. 105 da Lei nº 14.133, de 2021. \n1.3.1. O início da execução contratual fica condicionado à apresentação da garantia contratual \nfiduciária constante deste Termo de Referência. O encerramento da vigência contratual \nnão interrompe a obrigação de prestação da GARANTIA TÉCNICA, devendo a \nCONTRATADA honrá-la durante todo o período estipulado. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0025",
+              "type": "PARAGRAPH",
+              "text": "1.4. O contrato oferece maior detalhamento das regras que serão aplicadas em relação à vigência \nda contratação. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0026",
+              "type": "PARAGRAPH",
+              "text": "1.5. Todos os itens pertencentes ao mesmo Grupo deverão ter o mesmo preço, por tratar-se do \nmesmo produto. No caso de haver preços diferentes para os itens do mesmo grupo, a \ncontratação deverá ocorrer pelo menor preço para todos os itens do grupo. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0027",
+              "type": "PARAGRAPH",
+              "text": "2. \nFUNDAMENTAÇÃO E DESCRIÇÃO DA NECESSIDADE DA CONTRATAÇÃO \n2.1. \nA presente contratação justifica-se na necessidade de melhoria do atendimento ao público, maior \nagilidade no desempenho de atividades rotineiras que necessitam de aprimoramento e se justifica \ntambém, em virtude de o Município não dispor de bens permanentes especificados em seu depósito \npara atendimento das demandas; por não haver contratação firmada para o fornecimento de tais \nbens; pela necessidade de equipar salas e setores com novos equipamentos.  \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0006:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0006",
+              "type": "PARAGRAPH",
+              "text": "3. \nDESCRIÇÃO DA SOLUÇÃO COMO UM TODO \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0007",
+              "type": "PARAGRAPH",
+              "text": "3.1. A descrição da solução como um todo encontra-se pormenorizada em tópico específico dos \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0008",
+              "type": "PARAGRAPH",
+              "text": "3.2. Estudos Técnicos Preliminares, no entanto o fornecimento dos equipamentos será executado \nsob demanda, mediante a abertura de ORDEM DE FORNECIMENTO DE BENS (OFB); \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0009",
+              "type": "PARAGRAPH",
+              "text": "3.3.  Os equipamentos destinados a atividades que demandam mais performance em função de \naplicativos e serviços especializados. \n3.3.1. Pretende-se alcançar os seguintes resultados e benefícios: \n a) Economia no valor da contratação em função do ganho de escala da compra centralizada; \n b) Eficiência com a redução do custo administrativo em função da redução da fragmentação de \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0010",
+              "type": "PARAGRAPH",
+              "text": "processos licitatórios; \n c) Simplificação do processo de contratação pública, que ficará restrito a um número menor e mais \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0011",
+              "type": "PARAGRAPH",
+              "text": "padronizado de opções de itens, mas com especificações técnicas robustas e que atendem à \ndemanda de bens e serviços em comum de diversos órgãos.  \nd) Redução dos custos administrativos com os controles da entrega dos bens, inclusive durante a \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0012",
+              "type": "PARAGRAPH",
+              "text": "execução contratual, em função da redução do número de itens a serem contratados e \ncontrolados nos processos de acompanhamento e cobrança. \n e) Eficiência com a padronização dos equipamentos e aumento da qualidade das especificações \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0013",
+              "type": "PARAGRAPH",
+              "text": "técnicas; \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0014",
+              "type": "PARAGRAPH",
+              "text": "3.4. \nOs eletroeletrônicos do objeto desta contratação deverão estar acompanhados de sua \ndocumentação técnica completa e atualizada, preferencialmente, no idioma português, do \nBrasil, compreendendo manuais, guias de instalação e outros pertinentes; \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0015",
+              "type": "PARAGRAPH",
+              "text": "3.5. \nA solução escolhida e a ser adotada pela Município de Colinas do Sul/Go é o Registro de \nPreço, licitação em função do valor, considerando a necessidade de entrega imediata dos \nprodutos/serviços, bem como o valor total estimado para contratação, conforme disposto no \nArt. 75, inc. II da Lei 14.133/21; \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0016",
+              "type": "PARAGRAPH",
+              "text": "3.6. \nRessalta-se que não foram identificados requisitos que restrinjam a competitividade de \nmercado.  \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0017",
+              "type": "PARAGRAPH",
+              "text": " \n4. \nREQUISITOS DA CONTRATAÇÃO \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0018",
+              "type": "PARAGRAPH",
+              "text": "4.1. \nRequisitos de negócio. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0019",
+              "type": "PARAGRAPH",
+              "text": "4.1.1. \n A presente contratação orienta-se pelos seguintes requisitos de negócio:  \na) Atender às demandas registradas nos PCAs para o ano de 2024 dos órgãos relacionados ao \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0020",
+              "type": "PARAGRAPH",
+              "text": "Município de Colinas do Sul – Go, relacionadas à aquisição de eletroeletrônicos e \nperiféricos; \nb) Padronizar as especificações e disposições contratuais da tecnologia de estações de trabalho e \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0021",
+              "type": "PARAGRAPH",
+              "text": "equipamentos móveis daqueles órgãos da Administração Pública Municipal que \ndecidiram pela aquisição desses objetos, após os devidos estudos técnicos preliminares \nrealizados no âmbito processual interno e individual de cada instituição participante; \nc) Permitir a agregação de um volume significativo de demanda do Município de Colinas do Sul \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0022",
+              "type": "PARAGRAPH",
+              "text": "- Go, e de outros entes e, com isso, obter, potencialmente, melhores ofertas em termos \nfinanceiros;  \nd) Assegurar que os equipamentos adquiridos possuam uma garantia on-site e suporte ao longo \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0023",
+              "type": "PARAGRAPH",
+              "text": "de sua vida útil; \n e) Prover recursos computacionais necessários ao perfeito desenvolvimento das atividades \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0024",
+              "type": "PARAGRAPH",
+              "text": "laborais. Trata-se de recursos de hardware e software que forneçam apoio à execução \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0007:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0006",
+              "type": "PARAGRAPH",
+              "text": "de tarefas de suporte, administração e gestão de atividades meio e finalísticas \nrelacionadas ao alcance mediato ou indireto do interesse público por meio da \nimplementação das políticas públicas; \nf) Prover apoio computacional à continuidade dos serviços desenvolvidos em cada órgão ou \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0007",
+              "type": "PARAGRAPH",
+              "text": "entidade partícipe. Essa funcionalidade está ligada ao princípio da Continuidade do \nServiço Público, segundo o qual o Município, na qualidade de detentor dos bens e \ninteresses públicos, não pode parar, caso contrário, estaria deixando de defender ou \nrepresentar a coletividade de nossa sociedade. \ng) Todos os produtos deverão possuir garantia de fábrica que serão exigidas na entrega do produto \nsob pena de substituição do mesmo. \n \n4.2. Requisitos de prestação recursos relacionados ao objeto da presente contratação. \n 4.2.2 Todavia, a CONTRATADA deve prestar as informações e os esclarecimentos que \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0008",
+              "type": "PARAGRAPH",
+              "text": "venham a ser solicitados pela CONTRATANTE acerca do fornecimento ou de \ncaracterísticas técnicas dos equipamentos em até 24 horas corridas - a contar de sua \nsolicitação -, para as capitais estaduais e em até 72 horas para as demais cidades, por \nintermédio do preposto designado para acompanhamento do contrato.  \n4.3 Requisitos legais   \n4.3.1. O presente processo de contratação deve estar aderente à Constituição Federal, à Lei nº \n14.133/2021, Decreto nº 10.024/2019, à Instrução Normativa SGD/ME nº 94, de \n2022, Instrução Normativa SEGES/ME nº 65, de 7 de julho de 2021, Lei nº 13.709, \nde 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais – LGPD), Decreto \nnº 11.462, de 31 de março de 2023 (Sistema de Registro de preços) e a outras \nlegislações aplicáveis.  \n \n4.4. Forma de prestação dos serviços \n4.4.1 \nO prazo de entrega do serviço será parcelado, conforme ordem de compra, com o prazo de 15 \ndias para a entrega após a emissão da Ordem de Compra; \n4.4.2 \nA pesquisa e entrega compreendem a execução da pesquisa, análise e levantamento necessária \npara cumprimento das especificações do objeto; \n4.4.3 \nQuaisquer danos eventualmente causados deverão ser reparados pela contratada sem custo \npara a Município de Colinas do Sul/GO; \n4.4.4 \nA Contratada deverá prover os recursos e equipamentos necessários para a execução do \nobjeto, exceto aqueles a serem fornecidos pelo Município de Colinas do Sul/Go; \n4.4.5 \nA contratada deverá garantir transparência e todas aas exigências legais para execução do \nserviço; \n4.4.6 \nPara efeito de qualificação técnica, a LICITANTE deve demonstrar sua aptidão e capacidade \ntécnico-operacional para a execução do OBJETO mediante comprovação de prestação bem-\nsucedida de fornecimento de bens e de serviços em características e quantidades compatíveis \ncom a presente licitação, mediante apresentação de um ou mais ATESTADO(S) DE \nCAPACIDADE TÉCNICA que deverão comprovar o fornecimento de equipamentos para o \ngrupo em disputa e com características compatíveis com o objeto da presente pretensão \ncontratual, incluindo garantia e assistência técnica podendo considerar contratos já executados \ne/ou em execução. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0009",
+              "type": "PARAGRAPH",
+              "text": "4.5. Suporte técnico e da Substituição de equipamentos \n4.5.1. A contratada deverá prestar serviço de entrega dos produtos, não sendo \npossível o reparo do equipamento no local em que está instalado ou dentro do \nprazo de solução da prestação do serviço, deverá ser disponibilizado, \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0008:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0006",
+              "type": "PARAGRAPH",
+              "text": "imediatamente, backup do equipamento, com configurações iguais ou \nsuperiores aos do inicialmente instalado, até que o equipamento defeituoso \nretorne em perfeitas condições de funcionamento. \n4.5.2. Neste caso, deverá ser justificada tal necessidade por escrito ao gestor do \ncontrato, que irá providenciar a autorização de saída do equipamento, após \nconstatar tal necessidade \n4.5.3. O equipamento a ser removido ficará sob responsabilidade do prestador da \ngarantia, \nficando \neste \nresponsável \npelo \nseu \ntransporte, \nguarda \ne \nacondicionamento. \n4.5.4. Caso seja necessária a substituição temporária do equipamento em parte ou no \ntodo, deverá ser enviada ao gestor do contrato documentação comprobatória \ncom informações do equipamento, no prazo máximo de 24 horas, a fim de \nmanter os dados patrimoniais atualizados; \n4.5.5. O equipamento colocado em substituição ficará instalado até a devolução do \nequipamento consertado, que não poderá ultrapassar o prazo de 30 (trinta) dias \ncorridos; \n4.5.6. Sendo impossível o reparo do equipamento, a CONTRATADA realizará sua \nsubstituição definitiva, nas mesmas condições e prazos previstos acima; \n4.5.7. 8.3.5. No caso de troca de equipamento, o serviço da garantia será responsável \npela manutenção das configurações do equipamento suporte técnico ao longo \nde todo o período de vigência do contrato. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0007",
+              "type": "PARAGRAPH",
+              "text": "4.6. \nSubcontratação \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0008",
+              "type": "PARAGRAPH",
+              "text": "4.6.1. Não será admitida a subcontratação do objeto contratual. \n \n \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0009",
+              "type": "PARAGRAPH",
+              "text": "4.7. \nExigência de garantia de contratação \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0010",
+              "type": "PARAGRAPH",
+              "text": "4.7.1. O prazo de garantia contratual dos bens, complementar à garantia legal, é de, \nno mínimo 24 meses, ou pelo prazo fornecido pelo fabricante, se superior, \ncontado a partir do primeiro dia útil subsequente à data do recebimento \ndefinitivo do objeto.  \n4.7.2. Uma vez notificado, o Contratado realizará a reparação ou substituição dos \nbens que apresentarem vício ou defeito no prazo de até 5 dias úteis, contados a \npartir da data de retirada do equipamento das dependências da Administração \npelo Contratado ou pela assistência técnica autorizada.  \n4.7.3. O prazo indicado no subitem anterior, durante seu transcurso, poderá ser prorrogado \numa única vez, por igual período, mediante solicitação escrita e justificada do \nContratado, aceita pelo Contratante. \n4.7.4. Deve atender às exigências especificadas no Termo de Referência, Estudo \nPreliminar Técnico, elaborado pela fiscalização técnica e documentação \napresentada. Não haverá exigência da garantia da contratação dos arts. 96 \ne seguintes da Lei nº 14.133/21. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0011",
+              "type": "PARAGRAPH",
+              "text": "5. \nMODELO DE EXECUÇÃO DO OBJETO \n \n5.1. \nLocal e horário de execução dos serviços \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0009:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0006",
+              "type": "PARAGRAPH",
+              "text": "5.1.1. A contratada deverá realizar a entrega dos itens em até 15 dias após a emissão da Ordem \nde Compras. \n \n5.2. \nGarantia dos serviços \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0007",
+              "type": "PARAGRAPH",
+              "text": "5.2.1. O prazo de garantia é aquele estabelecido na Lei nº 8.078, de 11 de setembro de 1990 \n(Código de Defesa do Consumidor). \n \n6. \nMODELO DE GESTÃO DO CONTRATO \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0008",
+              "type": "PARAGRAPH",
+              "text": "6.1. O contrato ou instrumento equivalente deverá ser executado fielmente pelas partes, de acordo \ncom as cláusulas avençadas e as normas da Lei nº 14.133, de 2021, e cada parte responderá \npelas consequências de sua inexecução total ou parcial; \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0009",
+              "type": "PARAGRAPH",
+              "text": "6.1.1 Em caso de impedimento, ordem de paralisação ou suspensão do contrato, o \ncronograma \nde \nexecução \nserá \nprorrogado \nautomaticamente \npelo \ntempo \ncorrespondente, anotadas tais circunstâncias mediante simples apostila; \n6.1.2 As comunicações entre o órgão ou entidade e a contratada devem ser realizadas por escrito \nsempre que o ato exigir tal formalidade, admitindo-se o uso de mensagem eletrônica para \nesse fim. \n6.1.3 O órgão ou entidade poderá convocar representante a empresa para adoção de providências \nque devam ser cumpridas de imediato; \n6.1.4  Após a assinatura do contrato ou instrumento equivalente, o órgão ou entidade \npoderá convocar o representante da empresa contratada para reunião inicial para \napresentação do plano de fiscalização, que conterá informações acerca das \nobrigações contratuais, dos mecanismos de fiscalização, das estratégias para \nexecução do objeto, do plano complementar de execução da contratada, quando \nhouver, do método de aferição dos resultados e das sanções aplicáveis, dentre \noutros; \n \n \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0010",
+              "type": "PARAGRAPH",
+              "text": "6.2. Preposto \n6.2.1. A Contratada designará o preposto da empresa, antes do início da prestação \ndos serviços, indicando os poderes e deveres em relação à execução do objeto \ncontratado; \n6.2.2. A Contratada deverá manter preposto da empresa à disposição, através de \nmeio eletrônico digital, para execução do objeto; \n6.2.3. A Contratante poderá recusar, desde que justificadamente, a indicação ou a \nmanutenção do preposto da empresa, hipótese em que a Contratada designará \noutro para o exercício da atividade. \n \n6.3. \nFiscalização  \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0011",
+              "type": "PARAGRAPH",
+              "text": "6.3.1. A execução do contrato deverá ser acompanhada e fiscalizada pelo(s) fiscal(is) \ndo contrato, ou pelos respectivos substitutos (Lei nº 14.133, de 2021, art. 117, \ncaput); \n6.3.2. Fica responsável pelo acompanhamento e fiscalização quanto à completa \nexecução do contrato, o servidor Victor Emanuel, designado pelo Decreto n° \n1569 de 07 de Agosto de 2024. \n \n6.4. \nFiscalização técnica \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0010:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0006",
+              "type": "PARAGRAPH",
+              "text": "6.4.1. O fiscal técnico do contrato acompanhará a execução do contrato, para que \nsejam cumpridas todas as condições estabelecidas no contrato, de modo a \nassegurar os melhores resultados para a Administração. (Decreto nº 11.246, de \n2022, art. 22, VI); \n6.4.2. O fiscal técnico do contrato anotará no histórico de gerenciamento do contrato \ntodas as ocorrências relacionadas à execução do contrato, com a descrição do \nque for necessário para a regularização das faltas ou dos defeitos observados. \n(Lei nº 14.133, de 2021, art. 117, §1º e Decreto nº 11.246, de 2022, art. 22, II); \n6.4.3. Identificada qualquer inexatidão ou irregularidade, o fiscal técnico do contrato \nemitirá notificações para a correção da execução do contrato, determinando \nprazo para a correção. (Decreto nº 11.246, de 2022, art. 22, III); \n6.4.4. O fiscal técnico do contrato informará ao gestor do contato, em tempo hábil, a \nsituação que demandar decisão ou adoção de medidas que ultrapassem sua \ncompetência, para que adote as medidas necessárias e saneadoras, se for o \ncaso. (Decreto nº 11.246, de 2022, art. 22, IV); \n6.4.5. No caso de ocorrências que possam inviabilizar a execução do contrato nas \ndatas aprazadas, o fiscal técnico do contrato comunicará o fato imediatamente \nao gestor do contrato. (Decreto nº 11.246, de 2022, art. 22, V); \n6.4.6. O fiscal técnico do contrato comunicará ao gestor do contrato, em tempo hábil, \no término do contrato sob sua responsabilidade, com vistas à tempestiva \nrenovação ou à prorrogação contratual (Decreto nº 11.246, de 2022, art. 22, \nVII). \n \n6.5. \nFiscalização administrativa \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0007",
+              "type": "PARAGRAPH",
+              "text": "6.5.1. O fiscal do contrato verificará a manutenção das condições de habilitação da \ncontratada, acompanhará o empenho, o pagamento, as garantias, as glosas e a \nformalização de apostilamento e termos aditivos, solicitando quaisquer \ndocumentos comprobatórios pertinentes, caso necessário (Art. 23, I e II, do \nDecreto nº 11.246, de 2022); \n6.5.2. Caso \nocorra \ndescumprimento \ndas \nobrigações \ncontratuais, \no \nfiscal \nadministrativo do contrato atuará tempestivamente na solução do problema, \nreportando ao gestor do contrato para que tome as providências cabíveis, \nquando ultrapassar a sua competência; (Decreto nº 11.246, de 2022, art. 23, \nIV). \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0008",
+              "type": "PARAGRAPH",
+              "text": "6.6. \nGestão do contrato \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0009",
+              "type": "PARAGRAPH",
+              "text": "6.6.1. Fica responsável pela gestão do contrato o servidor designado pelo Decreto n° \n1570 de 07 de Agosto de 2024, conforme designação para cada fundo. \n6.6.2. O gestor do \ncontrato \ncoordenará a atualização do processo de \nacompanhamento e fiscalização do contrato contendo todos os registros \nformais da execução no histórico de gerenciamento do contrato, a exemplo da \nordem de serviço, do registro de ocorrências, das alterações e das prorrogações \ncontratuais, elaborando, se necessário, relatório com vistas à verificação da \nnecessidade de adequações do contrato para fins de atendimento da finalidade \nda administração. (Decreto nº 11.246, de 2022, art. 21, IV); \n6.6.3. O gestor do contrato acompanhará os registros realizados pelos fiscais do \ncontrato, de todas as ocorrências relacionadas à execução do contrato e as \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0011:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0006",
+              "type": "PARAGRAPH",
+              "text": "medidas adotadas, informando, se for o caso, à autoridade superior àquelas que \nultrapassarem a sua competência. (Decreto nº 11.246, de 2022, art. 21, II); \n6.6.4. O gestor do contrato acompanhará a manutenção das condições de habilitação \nda contratada, para fins de empenho de despesa e pagamento, e anotará os \nproblemas que obstem o fluxo normal da liquidação e do pagamento da \ndespesa no relatório de riscos eventuais. (Decreto nº 11.246, de 2022, art. 21, \nIII); \n6.6.5. O gestor do contrato emitirá documento comprobatório da avaliação realizada \npelo fiscal quanto ao cumprimento de obrigações assumidas pelo contratado, \ncom menção ao seu desempenho na execução contratual, baseado nos \nindicadores objetivamente definidos e aferidos, e a eventuais penalidades \naplicadas, devendo constar do cadastro de atesto de cumprimento de \nobrigações. (Decreto nº 11.246, de 2022, art. 21, VIII); \n6.6.6. O gestor do contrato tomará providências para a formalização de processo \nadministrativo de responsabilização para fins de aplicação de sanções, a ser \nconduzido pela comissão de que trata o art. 158 da Lei nº 14.133, de 2021, ou \npelo agente ou pelo setor com competência para tal, conforme o caso. (Decreto \nnº 11.246, de 2022, art. 21, X); \n6.6.7. O gestor do contrato deverá elaborar relatório final com informações sobre a \nconsecução dos objetivos que tenham justificado a contratação e eventuais \ncondutas a serem adotadas para o aprimoramento das atividades da \nAdministração. (Decreto nº 11.246, de 2022, art. 21, VI); \n6.6.8. O gestor do contrato deverá enviar a documentação pertinente ao setor de \ncontratos para a formalização dos procedimentos de liquidação e pagamento, \nno valor dimensionado pela fiscalização e gestão nos termos do contrato. \n \n7. \nCRITÉRIOS DE PAGAMENTO \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0007",
+              "type": "PARAGRAPH",
+              "text": "7.1. \nSerá indicada a retenção ou glosa no pagamento, proporcional à irregularidade verificada, \nsem prejuízo das sanções cabíveis, caso se constate que a CONTRATADA: \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0008",
+              "type": "PARAGRAPH",
+              "text": "7.1.1. Não produzir os resultados acordados; \n7.1.2. Deixar de executar, ou não executar com a qualidade mínima exigida as \natividades contratadas; ou \n7.1.3. Deixar de utilizar materiais e recursos humanos exigidos para a execução do \nserviço, ou utilizá-los com qualidade ou quantidade inferior à demandada. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0009",
+              "type": "PARAGRAPH",
+              "text": "7.2. \nRecebimento \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0010",
+              "type": "PARAGRAPH",
+              "text": "7.2.1. Os serviços serão recebidos provisoriamente, no prazo de 3 (três) dias, por \nservidor devidamente nomeado para tanto, mediante termos detalhados, \nquando verificado o cumprimento das exigências de caráter técnico e \nadministrativo. (Art. 140, I, a , da Lei nº 14.133, de 2021 e Arts. 22, X e 23, X \ndo Decreto nº 11.246, de 2022); \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0011",
+              "type": "PARAGRAPH",
+              "text": "7.3. \nLiquidação \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0012",
+              "type": "PARAGRAPH",
+              "text": "7.3.1. Para fins de liquidação, o setor competente deverá verificar se a nota fiscal ou \ninstrumento de cobrança equivalente apresentado expressa os elementos \nnecessários e essenciais do documento, tais como: \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0013",
+              "type": "PARAGRAPH",
+              "text": "a) prazo de validade; \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0012:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0006",
+              "type": "PARAGRAPH",
+              "text": "b) data da emissão; \nc) dados do contrato e do órgão contratante; \nd) valor a pagar; e \ne) eventual destaque do valor de retenções tributárias cabíveis. \n7.3.2. Havendo erro na apresentação da nota fiscal ou instrumento de cobrança \nequivalente, ou circunstância que impeça a liquidação da despesa, esta ficará \nsobrestada até que o contratado providencie as medidas saneadoras, \nreiniciando-se o prazo após a comprovação da regularização da situação, sem \nônus ao contratante; \n7.3.3. A nota fiscal ou instrumento de cobrança equivalente deverá ser \nobrigatoriamente acompanhado da comprovação da regularidade fiscal, \nconstatada por meio de consulta aos sítios eletrônicos oficiais; \n7.3.4. Constatando-se a situação de irregularidade do contratado, será providenciada \nsua notificação, por escrito, para que, no prazo de 5 (cinco) dias úteis, \nregularize sua situação ou, no mesmo prazo, apresente sua defesa. O prazo \npoderá ser prorrogado uma vez, por igual período, a critério do contratante; \n7.3.5. Não havendo regularização ou sendo a defesa considerada improcedente, o \ncontratante deverá comunicar aos órgãos responsáveis pela fiscalização da \nregularidade fiscal quanto à inadimplência do contratado, bem como quanto à \nexistência de pagamento a ser efetuado, para que sejam acionados os meios \npertinentes e necessários para garantir o recebimento de seus créditos; \n7.3.6. Persistindo a irregularidade, o contratante deverá adotar as medidas \nnecessárias à rescisão contratual nos autos do processo administrativo \ncorrespondente, assegurada ao contratado a ampla defesa. \n7.3.7. Havendo a efetiva execução do objeto, os pagamentos serão realizados \nnormalmente, até que se decida pela rescisão do contrato, caso o contratado \nnão regularize sua situação fiscal. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0007",
+              "type": "PARAGRAPH",
+              "text": "7.4. \nPrazo de pagamento \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0008",
+              "type": "PARAGRAPH",
+              "text": "7.4.1. O pagamento será efetuado no prazo de até 5 (cinco) dias contados da \nliquidação da nota fiscal. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0009",
+              "type": "PARAGRAPH",
+              "text": "7.5. \nForma de pagamento \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0010",
+              "type": "PARAGRAPH",
+              "text": "7.5.1. O pagamento será realizado por meio de ordem bancária, para crédito em \nbanco, agência e conta corrente indicados pelo contratado; \n7.5.2. Será considerada data do pagamento o dia em que constar como emitida a \nordem bancária para pagamento; \n7.5.3. Quando do pagamento, será efetuada a retenção tributária prevista na \nlegislação aplicável; \n7.5.4. Independentemente do percentual de tributo inserido na planilha, quando \nhouver, serão retidos na fonte, quando da realização do pagamento, os \npercentuais estabelecidos na legislação vigente; \n7.5.5. O contratado regularmente optante pelo Simples Nacional, nos termos da Lei \nComplementar nº 123, de 2006, não sofrerá a retenção tributária quanto aos \nimpostos e contribuições abrangidos por aquele regime. No entanto, o \npagamento ficará condicionado à apresentação de comprovação, por meio de \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0013:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0006",
+              "type": "PARAGRAPH",
+              "text": "documento oficial, de que faz jus ao tratamento tributário favorecido previsto \nna referida Lei Complementar. \n \n8. \nFORMA E CRITÉRIOS DE SELEÇÃO DO FORNECEDOR \n \n8.1. \nForma de seleção e critério de julgamento da proposta  \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0007",
+              "type": "PARAGRAPH",
+              "text": "8.1.1. O fornecedor será selecionado por meio da realização de procedimento de Registro \nde Preços, com adoção do critério de julgamento pelo MENOR PREÇO POR \nITEM. \n \n8.2. \nRegime de execução \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0008",
+              "type": "PARAGRAPH",
+              "text": "8.2.1. O regime de execução do contrato será por preço unitário. \n \n8.3. \nExigências de habilitação \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0009",
+              "type": "PARAGRAPH",
+              "text": "8.3.1. Habilitação jurídica \n8.3.1.1. Empresário individual: inscrição no Registro Público de Empresas \nMercantis, a cargo da Junta Comercial da respectiva sede; \n8.3.1.2. Microempreendedor Individual - MEI: Certificado da Condição de \nMicroempreendedor Individual - CCMEI, cuja aceitação ficará \ncondicionada \nà \nverificação \nda \nautenticidade \nno \nsítio \nhttps://www.gov.br/empresas-e-negocios/pt-br/empreendedor;  \n \n8.3.1.3. Sociedade empresária, sociedade limitada unipessoal – SLU ou \nsociedade \nidentificada \ncomo \nempresa \nindividual \nde \nresponsabilidade limitada - EIRELI: inscrição do ato constitutivo, \nestatuto ou contrato social no Registro Público de Empresas \nMercantis, a cargo da Junta Comercial da respectiva sede, \nacompanhada \nde \ndocumento \ncomprobatório \nde \nseus \nadministradores; \n8.3.1.4. Empresário individual: inscrição no Registro Público de Empresas \nMercantis, a cargo da Junta Comercial da respectiva sede; \n8.3.1.5. Sociedade simples: inscrição do ato constitutivo no Registro Civil \nde Pessoas Jurídicas do local de sua sede, acompanhada de \ndocumento comprobatório de seus administradores. \n \n8.3.2. Habilitação fiscal, social e trabalhista \n8.3.2.1. Prova de inscrição no Cadastro Nacional de Pessoas Jurídicas; \n8.3.2.2. Prova de regularidade fiscal perante a Fazenda Nacional, mediante \napresentação de certidão expedida conjuntamente pela Secretaria \nda Receita Federal do Brasil (RFB) e pela Procuradoria-Geral da \nFazenda Nacional (PGFN), referente a todos os créditos tributários \nfederais e à Dívida Ativa da União (DAU) por elas administrados, \ninclusive aqueles relativos à Seguridade Social, nos termos da \nPortaria Conjunta nº 1.751, de 02 de outubro de 2014, do \nSecretário da Receita Federal do Brasil e da Procuradora-Geral da \nFazenda Nacional. \n8.3.2.3. Prova de regularidade com o Fundo de Garantia do Tempo de \nServiço (FGTS); \n8.3.2.4. Prova de inexistência de débitos inadimplidos perante a Justiça do \nTrabalho, mediante a apresentação de certidão negativa ou positiva \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0014:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0006",
+              "type": "PARAGRAPH",
+              "text": "com efeito de negativa, nos termos do Título VII-A da Consolidação \ndas Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de \nmaio de 1943; \n8.3.2.5. Prova de inscrição no cadastro de contribuintes Estadual ou \nMunicipal relativo ao domicílio ou sede do fornecedor, pertinente \nao seu ramo de atividade e compatível com o objeto contratual; \n8.3.2.6. Prova de regularidade com a Fazenda Estadual ou Municipal do \ndomicílio ou sede do fornecedor, relativa à atividade em cujo \nexercício contrata ou concorre. \n \n8.3.3. Habilitação técnica \n8.3.3.1. Declaração de que o interessado tomou conhecimento de todas as \ninformações e das condições locais para o cumprimento das \nobrigações objeto da contratação; \n8.3.3.2. A declaração acima poderá ser substituída por declaração formal \nassinada pelo responsável técnico do interessado acerca do \nconhecimento pleno das condições e peculiaridades da contratação; \n8.3.3.3. Comprovação de aptidão para execução do objeto desta \ncontratação, ou com o item pertinente, por meio da apresentação de \ncertidões ou atestados, por pessoas jurídicas de direito público ou \nprivado, ou regularmente emitido(s) pelo conselho profissional \ncompetente, quando for o caso; \n8.3.3.4. Os atestados de capacidade técnica poderão ser apresentados em \nnome da matriz ou da filial da empresa interessada; \n8.3.3.5. O interessado disponibilizará todas as informações necessárias à \ncomprovação da legitimidade dos atestados, apresentando, quando \nsolicitado pela Administração, cópia do contrato que deu suporte à \ncontratação, endereço atual da contratante e local em que foi \nexecutado o objeto contratado, dentre outros documentos; \n8.3.3.6. Declaração que não emprega menor em cumprimento do disposto \nno inciso XXXIII do art. 7º da Constituição Federal. \n8.3.3.7. Apresentação obrigatória de Catálogo ou Ficha Técnica da \nFabricante dos produtos ofertados juntamente com a proposta \ncontendo todos os dados e especificações técnicas dos produtos \nconforme exigência do Edital, sob pena de desclassificação. \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0007",
+              "type": "PARAGRAPH",
+              "text": "8.3.4. Habilitação Econômico Financeira \n8.3.4.1. Certidão Negativa de feitos sobre falência expedida pelo \ndistribuidor da sede do licitante, dentro do prazo de validade ou com \ndata não superior a 90 (noventa) dias da data da sessão; \n8.3.4.2. Balanço patrimonial e demonstrações contábeis dos 02 (dois) \núltimos exercícios sociais, já exigíveis e apresentados na forma da \nlei, emitido por contador registrado no Conselho de Contabilidade, \nvedado a sua substituição por balancetes ou balanços provisórios, \npodendo ser atualizados por índices oficiais quando encerrado há \nmais de 3 (três) meses da data de apresentação da proposta, ou por \nseu Contrato Social atualizado ou seu Registro perante a Junta \nComercial; \n \n8.3.5. Previamente à celebração do contrato, a Administração verificará o eventual \ndescumprimento das condições para contratação, especialmente quanto à existência \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0015:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0001",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0002",
+              "type": "PARAGRAPH",
+              "text": "GESTÃO 2021/2024 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0006",
+              "type": "PARAGRAPH",
+              "text": "de sanção que a impeça, mediante a consulta a cadastros informativos oficiais, tais \ncomo:   \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0007",
+              "type": "PARAGRAPH",
+              "text": "8.3.5.1. Consulta Nacional de Pessoa Jurídica, mantido pelo Tribunal de \nContas da União (https://certidoes-apf.apps.tcu.gov.br/). \n \n8.3.6. A consulta aos cadastros será realizada em nome da empresa interessada e de seu \nsócio majoritário, por força do artigo 12 da Lei n° 8.429, de 1992, que prevê, dentre \nas sanções impostas ao responsável pela prática de ato de improbidade administrativa, \na proibição de contratar com o Poder Público, inclusive por intermédio de pessoa \njurídica da qual seja sócio majoritário; \n8.3.7. Não serão aceitos documentos de habilitação com indicação de CNPJ/CPF diferentes, \nsalvo aqueles legalmente permitidos. \n \n9. \nADEQUAÇÃO ORÇAMENTÁRIA  \n9.1.  As despesas decorrentes da presente contratação correrão à conta de recursos específicos \nconsignados no Orçamento da Prefeitura Municipal e demais Secretarias para o ano em exercício, \nconforme codificação expedida pelo Departamento Contábil. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0008",
+              "type": "PARAGRAPH",
+              "text": " \n \n \nColinas do Sul - GO, 01 de Outubro de 2024. \n \n \n \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0009",
+              "type": "PARAGRAPH",
+              "text": " \n \nARTHUR MARTINS ROMUALDO DE OLIVEIRA GOES \n \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0010",
+              "type": "PARAGRAPH",
+              "text": "Gestor Executivo \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0011",
+              "type": "PARAGRAPH",
+              "text": " \n \n \n \n \nDANIELA MARQUES DE SOUZA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0012",
+              "type": "PARAGRAPH",
+              "text": " \nSecretaria de Assistência Social \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0013",
+              "type": "PARAGRAPH",
+              "text": " \n \n \n \n \n \nJULIMAR ATAÍDES DE OLIVEIRA \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0014",
+              "type": "PARAGRAPH",
+              "text": " \nSecretário de Educação e Cultura\n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0004",
+              "type": "PARAGRAPH",
+              "text": "Site: www.colinasdosul.go.gov.br \nMUNICÍPIO DE COLINAS DO SUL (CNPJ sob o n. 25.105.255/0001-40) \nEnd.: Avenida Ary Valadão, área pública nº 01, Centro, Colinas do Sul - Goiás, CEP 73.740-000. \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0005",
+              "type": "PARAGRAPH",
+              "text": "CONTATO: (62) 3486-1117 \n"
+            },
+            {
+              "id": "25105255000140-1-000041-2024:tr:p-0016:b-0015",
+              "type": "PARAGRAPH",
+              "text": "Valide a assinatura deste documento em https://colinasdosul.megasoftservicos.com.br//cidadao/autenticar-assinatura com o código: 31247e\n"
+            }
+          ],
+          "evidence": {
+            "document_id": "25105255000140-1-000041-2024:tr",
+            "page": 1,
+            "block_id": "25105255000140-1-000041-2024:tr:p-0001:b-0001",
+            "quote": " \n \n \nESTADO DE GOIAS \nMUNICIPIO DE COLINAS DO SUL \n",
+            "attr": null
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-1",
+          "description": "Notebook Intel Core i5 12ª geração",
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 36,
+              "unit": "UNID",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "25105255000140-1-000041-2024:tr",
+                  "page": 1,
+                  "block_id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0004",
+                  "quote": "36,00",
+                  "attr": "QUANTITY"
+                },
+                {
+                  "document_id": "25105255000140-1-000041-2024:tr",
+                  "page": 1,
+                  "block_id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0003",
+                  "quote": "UNID",
+                  "attr": "unit"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "WARRANTY_TERM",
+              "value": 24,
+              "unit": "meses",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "25105255000140-1-000041-2024:tr",
+                  "page": 1,
+                  "block_id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0002",
+                  "quote": "NOTEBOOKS COM PROCESSADOR INTEL CORE I5 DE 12ª \nGERAÇÃO TELA: SUPERIOR A 15.6 POL, INTERATIVIDADE \nDA \nTELA: \nSEM \nINTERATIVIDADE, \nMEMÓRIA \nRAM: \nSUPERIOR A 8 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR \nA 8GB, NUCLEOS POR PROCESSADOR DE 4 A 8 INTERFACE \nINTEGRADA 5.0, ARMAZENAMENTO SSD: SUPERIOR A 500 \nGB, BATERIA: ATÉ 4 CÉLULAS, ALIMENTAÇÃO: BIVOLT \nAUTOMÁTICA, COM WIFI E BLUETOOTH, 2 ALTO-FALANTES \nCOM \nCERTIFICAÇÃO \nDOLBY \nAUDIO \nGARANTIA \nDO \nFABRICANTE MÍNIMO: 24 MESES; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \n",
+                  "attr": "WARRANTY_TERM"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "technical.ram",
+              "operator": "GREATER_THAN",
+              "value": 8,
+              "unit": "GB",
+              "item_id": "item-1",
+              "evidence": [
+                {
+                  "document_id": "25105255000140-1-000041-2024:tr",
+                  "page": 1,
+                  "block_id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0002",
+                  "quote": "NOTEBOOKS COM PROCESSADOR INTEL CORE I5 DE 12ª \nGERAÇÃO TELA: SUPERIOR A 15.6 POL, INTERATIVIDADE \nDA \nTELA: \nSEM \nINTERATIVIDADE, \nMEMÓRIA \nRAM: \nSUPERIOR A 8 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR \nA 8GB, NUCLEOS POR PROCESSADOR DE 4 A 8 INTERFACE \nINTEGRADA 5.0, ARMAZENAMENTO SSD: SUPERIOR A 500 \nGB, BATERIA: ATÉ 4 CÉLULAS, ALIMENTAÇÃO: BIVOLT \nAUTOMÁTICA, COM WIFI E BLUETOOTH, 2 ALTO-FALANTES \nCOM \nCERTIFICAÇÃO \nDOLBY \nAUDIO \nGARANTIA \nDO \nFABRICANTE MÍNIMO: 24 MESES; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \n",
+                  "attr": "technical.ram"
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "25105255000140-1-000041-2024:tr",
+              "page": 1,
+              "block_id": "25105255000140-1-000041-2024:tr:p-0001:t-0001:r-0003:c-0002",
+              "quote": "NOTEBOOKS COM PROCESSADOR INTEL CORE I5 DE 12ª \nGERAÇÃO TELA: SUPERIOR A 15.6 POL, INTERATIVIDADE \nDA \nTELA: \nSEM \nINTERATIVIDADE, \nMEMÓRIA \nRAM: \nSUPERIOR A 8 GB, NÚCLEOS POR PROCESSADOR: SUPERIOR \nA 8GB, NUCLEOS POR PROCESSADOR DE 4 A 8 INTERFACE \nINTEGRADA 5.0, ARMAZENAMENTO SSD: SUPERIOR A 500 \nGB, BATERIA: ATÉ 4 CÉLULAS, ALIMENTAÇÃO: BIVOLT \nAUTOMÁTICA, COM WIFI E BLUETOOTH, 2 ALTO-FALANTES \nCOM \nCERTIFICAÇÃO \nDOLBY \nAUDIO \nGARANTIA \nDO \nFABRICANTE MÍNIMO: 24 MESES; \n \nDo Sistema Operacional, Segurança e Drivers: \n \na) O equipamento deve vir equipado com licença do \nWindows 11 Pro original de fábrica, gravada na BIOS. \nEssa licença deve acompanhar o equipamento desde a sua \nfabricação. O sistema operacional Microsoft Windows \nlicenciado deverá estar pré-instalado, bem como, todos os \ndrivers de adaptadores internos necessário para seu \nfuncionamento; No ato da entrega, será feita verificação, \nutilizando comandos WMI ou softwares apropriados, para \nassegurar que a licença (Windows Key / Product Key) do \nMicrosoft Windows esteja efetivamente gravada na BIOS. \nCaso não esteja conforme especificado, os computadores \nnão serão aceitos. Além disso, serão conduzidas \ndiligências junto ao fabricante do computador e à \nMicrosoft para verificar a autenticidade e legalidade das \nlicenças fornecidas. \nb) Deverá estar dotado de licença original (OEM) com \nsuíte Microsoft Office Home and Business 2021 no \nidioma português Brasil; Deverá ser entregue a respectiva \nlicença de uso;  \nc) \nTodos \nos \ndrivers \nnecessários \npara \no \npleno \nfuncionamento do equipamento deverão estar inclusos e \ndisponíveis;  \nd) O fabricante deverá fornecer a Mídia necessária para \nInstalação/ \nRecuperação \ndo \nsistema \n \noperacional \n",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "CONTRACT_TERM",
+          "value": 12,
+          "unit": "meses",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "25105255000140-1-000041-2024:tr",
+              "page": 6,
+              "block_id": "25105255000140-1-000041-2024:tr:p-0006:b-0024",
+              "quote": "1.3. \nO prazo de vigência da contratação é de 12 (doze) meses, contados da assinatura do \ncontrato, na forma do art. 105 da Lei nº 14.133, de 2021. \n1.3.1. O início da execução contratual fica condicionado à apresentação da garantia contratual \nfiduciária constante deste Termo de Referência. O encerramento da vigência contratual \nnão interrompe a obrigação de prestação da GARANTIA TÉCNICA, devendo a \nCONTRATADA honrá-la durante todo o período estipulado. \n",
+              "attr": "CONTRACT_TERM"
+            }
+          ],
+          "review_status": "EXTRACTED"
+        },
+        {
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 15,
+          "unit": "dias",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "25105255000140-1-000041-2024:tr",
+              "page": 10,
+              "block_id": "25105255000140-1-000041-2024:tr:p-0010:b-0006",
+              "quote": "5.1.1. A contratada deverá realizar a entrega dos itens em até 15 dias após a emissão da Ordem \nde Compras. \n \n5.2. \nGarantia dos serviços \n",
+              "attr": "DELIVERY_DEADLINE"
+            }
+          ],
+          "review_status": "EXTRACTED"
+        }
+      ],
+      "requirements": []
+    }
+  ],
+  "findings": []
+}

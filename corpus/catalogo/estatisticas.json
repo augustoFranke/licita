@@ -1,0 +1,119 @@
+{
+  "processos": 28,
+  "processos_elegiveis": 27,
+  "processos_out_of_scope": 1,
+  "orgaos_distintos": 16,
+  "orgaos_distintos_elegiveis": 15,
+  "categorias_distintas": 10,
+  "categorias_distintas_elegiveis": 9,
+  "esferas": {
+    "M": 28
+  },
+  "documentos": 56,
+  "documentos_por_papel": {
+    "ETP": 28,
+    "TR": 28
+  },
+  "processos_com_tr": 28,
+  "processos_com_etp": 28,
+  "processos_com_edital": 0,
+  "processos_com_contrato": 0,
+  "processos_com_par_etp_tr": 28,
+  "processos_elegiveis_com_par_etp_tr": 27,
+  "processos_cadeia_completa": 0,
+  "documentos_abertos": 56,
+  "documentos_com_texto": 56,
+  "documentos_precisam_ocr": 0,
+  "categorias": {
+    "material_medico_hospitalar": 2,
+    "outros_bens": 12,
+    "equipamentos_de_informatica": 1,
+    "eletrodomesticos_e_eletroeletronicos": 2,
+    "veiculos_pecas_e_combustiveis": 3,
+    "material_de_limpeza_e_higiene": 2,
+    "generos_alimenticios": 3,
+    "epi_uniformes_e_textil": 1,
+    "material_agropecuario_e_jardinagem": 1,
+    "material_de_construcao_e_ferramentas": 1
+  },
+  "categorias_elegiveis": {
+    "material_medico_hospitalar": 2,
+    "outros_bens": 12,
+    "equipamentos_de_informatica": 1,
+    "eletrodomesticos_e_eletroeletronicos": 2,
+    "veiculos_pecas_e_combustiveis": 3,
+    "material_de_limpeza_e_higiene": 2,
+    "generos_alimenticios": 3,
+    "epi_uniformes_e_textil": 1,
+    "material_agropecuario_e_jardinagem": 1
+  },
+  "estrategia": "compras_gov_para_descoberta_pncp_para_documentos",
+  "alvo_processos": 27,
+  "fonte_preferencial": "compras",
+  "policy_version": "4-municipal-historical-ocr",
+  "requisicoes_hoje_utc": 6161,
+  "limite_requisicoes_dia_utc": 1000000,
+  "margem_requisicoes": 0,
+  "editais_baixados": 0,
+  "contratos_consultados": 0,
+  "marcas_de_reuso": {
+    "arquivo_identico:entre_processos": 4,
+    "reuso_parcial:entre_processos": 4,
+    "reuso_parcial:intra_processos": 2
+  },
+  "tarefas_paginacao": 407,
+  "paginas_concluidas": 271,
+  "paginas_pendentes": 130,
+  "paginas_retry": 6,
+  "erros_paginas": [
+    {
+      "fonte": "pncp-busca",
+      "pagina": 6,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 6, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    },
+    {
+      "fonte": "pncp-busca",
+      "pagina": 7,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 7, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    },
+    {
+      "fonte": "pncp-busca",
+      "pagina": 9,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 9, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    },
+    {
+      "fonte": "pncp-busca",
+      "pagina": 10,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 10, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    },
+    {
+      "fonte": "pncp-busca",
+      "pagina": 14,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 14, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    },
+    {
+      "fonte": "pncp-busca",
+      "pagina": 18,
+      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 18, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
+      "tentativas": 1
+    }
+  ],
+  "cobertura_incompleta": true,
+  "cobertura_paginas_incompleta": true,
+  "compras_inspecionadas_nesta_execucao": 0,
+  "pares_publicados_nesta_execucao": 0,
+  "registros_invalidos_ano_nesta_execucao": 0,
+  "aceitos_migrados_sem_download": 0,
+  "tentativas_documentais_por_orgao": {
+    "18260489000104": 2,
+    "17749896000290": 1,
+    "46137410000180": 1
+  },
+  "max_tentativas_documentais_por_orgao": 3,
+  "parou_por_limite_requisicoes": false
+}

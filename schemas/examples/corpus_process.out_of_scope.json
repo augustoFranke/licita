@@ -1,0 +1,35 @@
+{
+  "processo_id": "12345678000199-1-000002-2025",
+  "numero_controle_pncp": "12345678000199-1-000002/2025",
+  "orgao": {
+    "cnpj": "12345678000199",
+    "razao_social": "AUTARQUIA MUNICIPAL DE EXEMPLO",
+    "esfera": "M"
+  },
+  "compra": {
+    "modalidade_id": 6,
+    "instrumento_convocatorio_codigo": 1,
+    "amparo_legal_codigo": 1,
+    "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I"
+  },
+  "objeto": "Contratação para fornecimento de energia elétrica",
+  "categoria_objeto": "material_de_construcao_e_ferramentas",
+  "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+  "perfil_status": "FORA_DO_PERFIL",
+  "perfil_inicial": "FORA_DO_PERFIL",
+  "scope_status": "OUT_OF_SCOPE",
+  "policy_version": "4-municipal-historical-ocr",
+  "collection_policy_version": "exemplo-sintetico",
+  "cadeia": {
+    "DFD": [],
+    "ETP": ["12345678000199-1-000002-2025#etp-01"],
+    "TR": ["12345678000199-1-000002-2025#tr-02"],
+    "EDITAL": [],
+    "CONTRATO": [],
+    "PESQUISA_PRECOS": []
+  },
+  "documentos": [
+    "12345678000199-1-000002-2025#etp-01",
+    "12345678000199-1-000002-2025#tr-02"
+  ]
+}

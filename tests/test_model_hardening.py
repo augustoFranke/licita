@@ -280,7 +280,7 @@ def test_item_id_references_are_valid_for_all_entities(
     data["findings"] = [
         {
             "rule_id": "RULE-X",
-            "severity": "LOW",
+            "severity": "INFO",
             "message": "revisar item",
             "item_id": "item-1",
             "evidence": [evidence],
@@ -359,7 +359,7 @@ def test_finding_item_id_must_reference_item_in_evidence_documents(
     data["findings"] = [
         {
             "rule_id": "RULE-X",
-            "severity": "LOW",
+            "severity": "INFO",
             "message": "revisar item",
             "item_id": "item-inexistente",
             "evidence": [

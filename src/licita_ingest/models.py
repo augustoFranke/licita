@@ -27,6 +27,8 @@ class BlockType(str, Enum):
     PARAGRAPH = "PARAGRAPH"
     TABLE = "TABLE"
     TABLE_CELL = "TABLE_CELL"
+    LIST = "LIST"
+    HEADER = "HEADER"
     IMAGE = "IMAGE"
 
 

@@ -11,6 +11,7 @@ Implementa:
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -31,6 +32,41 @@ from licita_review.models import (
     ReviewAuditEntry,
     ReviewTargetType,
 )
+
+
+def _pagina_do_bloco(block_id: str, padrao: int) -> int:
+    """Lê a página da convenção ``<doc>:p-0001:b-0002`` do id do bloco."""
+    achado = re.search(r":p-(\d+):", block_id)
+    return int(achado.group(1)) if achado else padrao
+
+
+def _reancorar(document: Document, quote: str) -> Evidence:
+    """Localiza no documento dono do fato o bloco que contém o trecho.
+
+    O trecho tem de ser substring literal de um bloco ingerido **desse**
+    documento: é isso que impede uma confirmação de nascer com evidência
+    inventada, ou com evidência emprestada do outro documento do par — um
+    valor do TR sustentado por texto do ETP faria a R7 comparar o mesmo fato
+    consigo mesmo.
+    """
+    trecho = (quote or "").strip()
+    if not trecho:
+        raise ValueError(
+            "FR-013: editar o valor exige o trecho do documento que sustenta o valor novo"
+        )
+    for section in document.sections:
+        for block in section.blocks:
+            if trecho in block.text:
+                return Evidence(
+                    document_id=document.id,
+                    page=_pagina_do_bloco(block.id, section.evidence.page),
+                    block_id=block.id,
+                    quote=trecho,
+                )
+    raise ValueError(
+        f"Trecho não encontrado em nenhum bloco do documento '{document.id}': "
+        f"a evidência precisa ser texto literal do próprio documento do fato"
+    )
 
 
 class ReviewService:
@@ -178,15 +214,21 @@ class ReviewService:
 
         prev_val = fv.value
         prev_status = fv.review_status
+        prev_evidence = list(fv.evidence)
+        nova_evidencia: list[Evidence] | None = None
 
         if request.action == ReviewActionType.CONFIRM:
             fv.review_status = ReviewStatus.CONFIRMED
             new_val = fv.value
         elif request.action == ReviewActionType.EDIT_AND_CONFIRM:
+            # A evidência anterior sustenta o valor anterior: editar exige
+            # reancorar, senão o CONFIRMED nasce apontando para outro fato.
+            nova_evidencia = [_reancorar(doc, request.new_evidence_quote or "")]
             if request.new_value is not None:
                 fv.value = request.new_value
             if request.new_unit is not None:
                 fv.unit = request.new_unit
+            fv.evidence = nova_evidencia
             fv.review_status = ReviewStatus.CONFIRMED
             new_val = fv.value
         elif request.action == ReviewActionType.REJECT:
@@ -205,6 +247,8 @@ class ReviewService:
             new_value=new_val,
             previous_status=prev_status,
             new_status=fv.review_status,
+            previous_evidence=prev_evidence,
+            new_evidence=nova_evidencia,
             notes=request.notes,
         )
         self._audit_trails[process_id].append(entry)
@@ -227,15 +271,19 @@ class ReviewService:
 
         prev_val = req.value
         prev_status = req.review_status
+        prev_evidence = list(req.evidence)
+        nova_evidencia: list[Evidence] | None = None
 
         if request.action == ReviewActionType.CONFIRM:
             req.review_status = ReviewStatus.CONFIRMED
             new_val = req.value
         elif request.action == ReviewActionType.EDIT_AND_CONFIRM:
+            nova_evidencia = [_reancorar(doc, request.new_evidence_quote or "")]
             if request.new_value is not None:
                 req.value = request.new_value
             if request.new_unit is not None:
                 req.unit = request.new_unit
+            req.evidence = nova_evidencia
             req.review_status = ReviewStatus.CONFIRMED
             new_val = req.value
         elif request.action == ReviewActionType.REJECT:
@@ -254,6 +302,8 @@ class ReviewService:
             new_value=new_val,
             previous_status=prev_status,
             new_status=req.review_status,
+            previous_evidence=prev_evidence,
+            new_evidence=nova_evidencia,
             notes=request.notes,
         )
         self._audit_trails[process_id].append(entry)

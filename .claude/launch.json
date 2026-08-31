@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "licita-review",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "uvicorn", "licita_review.app:app", "--port", "8011"],
+      "port": 8011
+    }
+  ]
+}

@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="field-pill-actions">
               <span class="badge ${badgeClass}">${fv.review_status}</span>
               <button class="btn btn-sm btn-success btn-action" data-action="CONFIRM" data-target="${targetId}" title="Confirmar este campo">✓</button>
+              <button class="btn btn-sm btn-action" data-action="EDIT_AND_CONFIRM" data-target="${targetId}" data-value="${fv.value}" data-unit="${fv.unit || ''}" title="Editar e confirmar">✎</button>
               <button class="btn btn-sm btn-danger btn-action" data-action="REJECT" data-target="${targetId}" title="Rejeitar este campo">✕</button>
             </div>
           </div>
@@ -155,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="field-pill-actions">
               <span class="badge ${badgeClass}">${req.review_status}</span>
               <button class="btn btn-sm btn-success btn-action" data-action="CONFIRM" data-target="${targetId}" title="Confirmar este requisito">✓</button>
+              <button class="btn btn-sm btn-action" data-action="EDIT_AND_CONFIRM" data-target="${targetId}" data-value="${req.value}" data-unit="${req.unit || ''}" title="Editar e confirmar">✎</button>
               <button class="btn btn-sm btn-danger btn-action" data-action="REJECT" data-target="${targetId}" title="Rejeitar este requisito">✕</button>
             </div>
           </div>
@@ -200,6 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
           e.stopPropagation();
           const action = btn.dataset.action;
           const target = btn.dataset.target;
+          if (action === 'EDIT_AND_CONFIRM') {
+            openEditModal(target, btn.dataset.value, btn.dataset.unit);
+            return;
+          }
           await submitReview(target, action);
         });
       });
@@ -229,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="field-val" style="font-size:15px; margin-bottom:10px;">${fv.value} ${fv.unit || ''}</div>
         <div class="item-actions">
           <button class="btn btn-sm btn-success btn-action" data-action="CONFIRM" data-target="${targetId}">Confirmar (Aceitar)</button>
+          <button class="btn btn-sm btn-action" data-action="EDIT_AND_CONFIRM" data-target="${targetId}" data-value="${fv.value}" data-unit="${fv.unit || ''}">Editar</button>
           <button class="btn btn-sm btn-danger btn-action" data-action="REJECT" data-target="${targetId}">Rejeitar</button>
         </div>
       `;
@@ -250,6 +257,10 @@ document.addEventListener('DOMContentLoaded', () => {
           e.stopPropagation();
           const action = btn.dataset.action;
           const target = btn.dataset.target;
+          if (action === 'EDIT_AND_CONFIRM') {
+            openEditModal(target, btn.dataset.value, btn.dataset.unit);
+            return;
+          }
           await submitReview(target, action);
         });
       });
@@ -357,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  async function submitReview(targetId, action, newVal = null) {
+  async function submitReview(targetId, action, newVal = null, newUnit = null, quote = null) {
     const isReq = targetId.includes(':req:');
     const endpoint = isReq
       ? `/api/processes/${currentProcessId}/requirements/${encodeURIComponent(targetId)}/review`
@@ -371,19 +382,111 @@ document.addEventListener('DOMContentLoaded', () => {
           user_id: 'revisor_humano',
           action: action,
           new_value: newVal,
+          new_unit: newUnit,
+          new_evidence_quote: quote,
         }),
       });
       if (!res.ok) {
         const err = await res.json();
-        alert(`Erro na revisão: ${err.detail || 'Falha ao aplicar ação'}`);
-        return;
+        return { ok: false, detail: err.detail || 'Falha ao aplicar ação' };
       }
       // Recarrega dados atualizados
       loadProcessDetail(currentProcessId);
+      return { ok: true };
     } catch (e) {
       console.error('Erro ao enviar revisão:', e);
+      return { ok: false, detail: 'Falha de rede ao enviar revisão' };
     }
   }
+
+  // --- Edição com reancoragem obrigatória (FR-013) ---
+  const editModal = document.getElementById('edit-modal');
+  const editOverlay = document.getElementById('edit-overlay');
+  const editClose = document.getElementById('edit-close');
+  const editCancel = document.getElementById('edit-cancel');
+  const editSave = document.getElementById('edit-save');
+  const editValue = document.getElementById('edit-value');
+  const editUnit = document.getElementById('edit-unit');
+  const editBlock = document.getElementById('edit-block');
+  const editQuote = document.getElementById('edit-quote');
+  const editError = document.getElementById('edit-error');
+  const editTargetLabel = document.getElementById('edit-target-label');
+  let editTargetId = null;
+
+  // A evidência tem de vir do documento dono do fato: um valor do TR não pode
+  // ser sustentado por texto do ETP.
+  function documentBlocks(targetId) {
+    const blocos = [];
+    (currentProcessData?.documents || []).forEach(doc => {
+      if (targetId && !targetId.startsWith(`${doc.id}:`)) return;
+      (doc.sections || []).forEach(sec => {
+        (sec.blocks || []).forEach(b => blocos.push({ ...b, docId: doc.id }));
+      });
+    });
+    return blocos;
+  }
+
+  function openEditModal(targetId, valorAtual, unidadeAtual) {
+    editTargetId = targetId;
+    editTargetLabel.textContent = targetId;
+    editValue.value = valorAtual ?? '';
+    editUnit.value = unidadeAtual ?? '';
+    editError.textContent = '';
+
+    const blocos = documentBlocks(targetId);
+    editBlock.innerHTML = '';
+    blocos.forEach((b, i) => {
+      const opt = document.createElement('option');
+      opt.value = String(i);
+      const resumo = b.text.replace(/\s+/g, ' ').trim();
+      opt.textContent = `${b.id} — ${resumo.slice(0, 60)}${resumo.length > 60 ? '…' : ''}`;
+      editBlock.appendChild(opt);
+    });
+    editQuote.value = blocos.length ? blocos[0].text.trim() : '';
+    editBlock.onchange = () => {
+      const b = blocos[Number(editBlock.value)];
+      editQuote.value = b ? b.text.trim() : '';
+    };
+
+    if (!blocos.length) {
+      editError.textContent = 'Documento sem blocos ingeridos: não há trecho para ancorar.';
+    }
+    editModal.classList.add('active');
+  }
+
+  function closeEditModal() {
+    editModal.classList.remove('active');
+    editTargetId = null;
+  }
+
+  [editClose, editCancel, editOverlay].forEach(el => {
+    if (el) el.addEventListener('click', closeEditModal);
+  });
+
+  editSave.addEventListener('click', async () => {
+    if (!editTargetId) return;
+    const quote = editQuote.value.trim();
+    if (!quote) {
+      editError.textContent = 'Informe o trecho do documento que sustenta o valor novo.';
+      return;
+    }
+    const bruto = editValue.value.trim();
+    const numero = Number(bruto);
+    const valor = bruto !== '' && !Number.isNaN(numero) ? numero : bruto;
+
+    const resultado = await submitReview(
+      editTargetId,
+      'EDIT_AND_CONFIRM',
+      valor,
+      editUnit.value.trim() || null,
+      quote,
+    );
+    if (resultado && resultado.ok) {
+      closeEditModal();
+    } else {
+      editError.textContent = resultado ? resultado.detail : 'Falha ao aplicar edição';
+    }
+  });
 
   // Audit modal
   btnAudit.addEventListener('click', async () => {

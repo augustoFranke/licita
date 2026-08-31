@@ -75,6 +75,42 @@
       </section>
     </main>
 
+    <!-- Edit Modal -->
+    <div class="modal" id="edit-modal">
+      <div class="modal-overlay" id="edit-overlay"></div>
+      <div class="modal-card modal-card-sm">
+        <div class="modal-header">
+          <h3>Editar e confirmar</h3>
+          <button class="modal-close" id="edit-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="edit-target" id="edit-target-label"></p>
+
+          <label class="edit-label" for="edit-value">Novo valor</label>
+          <input class="edit-input" id="edit-value" type="text" autocomplete="off" />
+
+          <label class="edit-label" for="edit-unit">Unidade (opcional)</label>
+          <input class="edit-input" id="edit-unit" type="text" autocomplete="off" />
+
+          <label class="edit-label" for="edit-block">Bloco do documento</label>
+          <select class="edit-input" id="edit-block"></select>
+
+          <label class="edit-label" for="edit-quote">
+            Trecho que sustenta o valor novo
+            <span class="edit-hint">tem de ser texto literal do bloco</span>
+          </label>
+          <textarea class="edit-input edit-textarea" id="edit-quote" rows="4"></textarea>
+
+          <p class="edit-error" id="edit-error"></p>
+
+          <div class="edit-actions">
+            <button class="btn btn-sm btn-neutral" id="edit-cancel">Cancelar</button>
+            <button class="btn btn-sm btn-success" id="edit-save">Salvar e confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Audit Modal -->
     <div class="modal" id="audit-modal">
       <div class="modal-overlay" id="modal-overlay"></div>

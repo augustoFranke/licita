@@ -9,7 +9,7 @@ from uuid import uuid4
 
 from pydantic import BaseModel, Field
 
-from licita_core.schema import ReviewStatus
+from licita_core.schema import Evidence, ReviewStatus
 
 
 class ReviewActionType(str, Enum):
@@ -29,6 +29,14 @@ class ReviewActionRequest(BaseModel):
     action: ReviewActionType
     new_value: Any | None = None
     new_unit: str | None = None
+    new_evidence_quote: str | None = Field(
+        default=None,
+        description=(
+            "Trecho literal do documento que sustenta o valor editado. "
+            "Obrigatório em EDIT_AND_CONFIRM: a evidência anterior sustentava "
+            "o valor anterior (FR-013)."
+        ),
+    )
     notes: str | None = None
 
 
@@ -46,6 +54,8 @@ class ReviewAuditEntry(BaseModel):
     new_value: Any | None = None
     previous_status: ReviewStatus
     new_status: ReviewStatus
+    previous_evidence: list[Evidence] | None = None
+    new_evidence: list[Evidence] | None = None
     notes: str | None = None
 
 

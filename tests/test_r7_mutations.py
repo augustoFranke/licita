@@ -12,6 +12,11 @@ registrado como não injetável, nunca ignorado em silêncio.
 Substituir o dado anotado por um par sintético antes de mutar mede o
 comparador contra uma fixture, não contra o corpus, e por isso não fecha esta
 fase. Os comparadores isolados continuam cobertos por ``test_r7_consistency``.
+
+Os pares TR↔EDITAL, TR↔CONTRATO e DFD↔ETP (FR-030–036) ficam **em aberto**: o
+lote R1 é, por decisão de escopo, só ETP+TR. O motor os implementa, esta suíte
+relata que não foram exercitados, e a prova depende de uma expansão futura do
+corpus. Ausência de documento não é inconsistência.
 """
 
 from __future__ import annotations
@@ -40,6 +45,13 @@ MIN_DETECTION_RATE = 95.0
 MAX_FALSE_POSITIVE_RATE = 5.0
 # Piso de mutações para a suíte ter poder estatístico.
 MIN_INJECTED_MUTATIONS = 30
+
+# Pares que a saída da R7 lista e que o lote atual não contém.
+SECONDARY_PAIRS = (
+    (DocumentType.TR, DocumentType.EDITAL),
+    (DocumentType.TR, DocumentType.CONTRATO),
+    (DocumentType.DFD, DocumentType.ETP),
+)
 
 
 @dataclass(frozen=True)
@@ -170,6 +182,13 @@ def test_r7_mutation_suite_detection_and_bilateral_evidence() -> None:
     false_positive_rate = (baseline_findings / total_facts * 100) if total_facts else 0.0
     bilateral_rate = (bilateral / detected * 100) if detected else 0.0
 
+    available_types = {d.type for _, process in pairs for d in process.documents}
+    unexercised = [
+        f"{a.value}↔{b.value}"
+        for a, b in SECONDARY_PAIRS
+        if not {a, b} <= available_types
+    ]
+
     print(
         f"\n[R7 CONSISTENCY MUTATION BENCHMARK]\n"
         f"  Processos com par ETP+TR:       {len(pairs)}\n"
@@ -181,7 +200,10 @@ def test_r7_mutation_suite_detection_and_bilateral_evidence() -> None:
         f"- Meta >= {MIN_DETECTION_RATE}%)\n"
         f"  Evidência bilateral:            {bilateral_rate:.2f}% (Meta == 100%)\n"
         f"  Falsos positivos no baseline:   {baseline_findings} "
-        f"({false_positive_rate:.2f}% - Meta <= {MAX_FALSE_POSITIVE_RATE}%)"
+        f"({false_positive_rate:.2f}% - Meta <= {MAX_FALSE_POSITIVE_RATE}%)\n"
+        f"  Pares não exercitados (em aberto): "
+        f"{', '.join(unexercised) if unexercised else '-'} "
+        f"— o lote R1 só tem ETP e TR"
     )
 
     assert injected >= MIN_INJECTED_MUTATIONS, (

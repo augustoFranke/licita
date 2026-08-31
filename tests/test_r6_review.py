@@ -173,6 +173,7 @@ def test_review_service_edit_and_confirm(sample_process: ProcurementProcess) -> 
     srv.import_process(sample_process)
 
     target_item_qtd = "proc-001:tr:item-0001:QUANTITY"
+    fv_evidencia_anterior = sample_process.documents[0].items[0].field_values[0].evidence[0]
     audit = srv.review_field_value(
         "proc-001",
         target_item_qtd,
@@ -181,6 +182,7 @@ def test_review_service_edit_and_confirm(sample_process: ProcurementProcess) -> 
             action=ReviewActionType.EDIT_AND_CONFIRM,
             new_value=600.0,
             new_unit="PACOTES",
+            new_evidence_quote="Item 1: Caderno Universitário, 500 unidades",
             notes="Corrigido conforme errata do edital",
         ),
     )
@@ -196,6 +198,125 @@ def test_review_service_edit_and_confirm(sample_process: ProcurementProcess) -> 
     assert fv.value == 600.0
     assert fv.unit == "PACOTES"
     assert fv.review_status == ReviewStatus.CONFIRMED
+
+    # A âncora passa a ser a do trecho informado, resolvida no bloco real.
+    assert [ev.block_id for ev in fv.evidence] == ["proc-001:tr:p-0001:b-0005"]
+    assert fv.evidence[0].page == 1
+    assert audit.new_evidence == fv.evidence
+    assert audit.previous_evidence == [fv_evidencia_anterior]
+
+
+def test_edit_and_confirm_troca_a_ancora(sample_process: ProcurementProcess) -> None:
+    """A âncora registrada passa a ser a do trecho informado na edição."""
+    srv = ReviewService()
+    srv.import_process(sample_process)
+
+    audit = srv.review_field_value(
+        "proc-001",
+        "proc-001:tr:DELIVERY_DEADLINE",
+        ReviewActionRequest(
+            action=ReviewActionType.EDIT_AND_CONFIRM,
+            new_value=15,
+            new_evidence_quote="Item 1: Caderno Universitário, 500 unidades",
+        ),
+    )
+
+    fv = srv.get_process("proc-001").documents[0].field_values[0]
+    assert [ev.block_id for ev in fv.evidence] == ["proc-001:tr:p-0001:b-0005"]
+    assert fv.evidence[0].page == 1
+    assert audit.previous_evidence[0].block_id == "proc-001:tr:p-0002:b-0001"
+    assert audit.previous_evidence[0].page == 2
+
+
+def test_edit_and_confirm_exige_trecho_do_documento(sample_process: ProcurementProcess) -> None:
+    """Editar sem reancorar deixaria um CONFIRMED apontando para o valor antigo."""
+    srv = ReviewService()
+    srv.import_process(sample_process)
+
+    with pytest.raises(ValueError, match="FR-013"):
+        srv.review_field_value(
+            "proc-001",
+            "proc-001:tr:item-0001:QUANTITY",
+            ReviewActionRequest(
+                action=ReviewActionType.EDIT_AND_CONFIRM,
+                new_value=600.0,
+            ),
+        )
+
+    fv = srv.get_process("proc-001").documents[0].items[0].field_values[0]
+    assert fv.value == 500.0
+    assert fv.review_status == ReviewStatus.EXTRACTED
+
+
+def test_edit_and_confirm_recusa_trecho_inexistente(sample_process: ProcurementProcess) -> None:
+    """A evidência tem de ser texto literal de um bloco ingerido."""
+    srv = ReviewService()
+    srv.import_process(sample_process)
+
+    with pytest.raises(ValueError, match="Trecho não encontrado"):
+        srv.review_field_value(
+            "proc-001",
+            "proc-001:tr:item-0001:QUANTITY",
+            ReviewActionRequest(
+                action=ReviewActionType.EDIT_AND_CONFIRM,
+                new_value=600.0,
+                new_evidence_quote="600 unidades conforme combinado por telefone",
+            ),
+        )
+
+    fv = srv.get_process("proc-001").documents[0].items[0].field_values[0]
+    assert fv.review_status == ReviewStatus.EXTRACTED
+
+
+def test_edit_and_confirm_recusa_evidencia_do_outro_documento(
+    sample_process: ProcurementProcess,
+) -> None:
+    """Valor do TR não pode ser sustentado por texto do ETP.
+
+    A evidência emprestada faria a R7 comparar ETP e TR sobre o mesmo trecho.
+    """
+    etp = Document(
+        id="proc-001:etp",
+        type=DocumentType.ETP,
+        format=DocumentFormat.PDF,
+        title="ETP Teste",
+        sections=[
+            Section(
+                id="sec-etp-001",
+                title_original="Corpo",
+                blocks=[
+                    DocumentBlock(
+                        id="proc-001:etp:p-0001:b-0001",
+                        type="PARAGRAPH",
+                        text="Estimativa preliminar de 900 unidades.",
+                    )
+                ],
+                evidence=Evidence(
+                    document_id="proc-001:etp",
+                    page=1,
+                    block_id="proc-001:etp:p-0001:b-0001",
+                    quote="Estimativa preliminar de 900 unidades.",
+                ),
+            )
+        ],
+    )
+    processo = sample_process.model_copy(
+        update={"documents": [*sample_process.documents, etp]}
+    )
+
+    srv = ReviewService()
+    srv.import_process(processo)
+
+    with pytest.raises(ValueError, match="Trecho não encontrado"):
+        srv.review_field_value(
+            "proc-001",
+            "proc-001:tr:item-0001:QUANTITY",
+            ReviewActionRequest(
+                action=ReviewActionType.EDIT_AND_CONFIRM,
+                new_value=900.0,
+                new_evidence_quote="Estimativa preliminar de 900 unidades.",
+            ),
+        )
 
 
 def test_review_service_reject_preserves_original(sample_process: ProcurementProcess) -> None:

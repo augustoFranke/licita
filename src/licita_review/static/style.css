@@ -494,3 +494,73 @@ select {
   background: var(--bg-main);
   font-weight: 600;
 }
+
+
+/* Modal de edição com reancoragem obrigatória (FR-013) */
+.modal-card-sm {
+  max-width: 560px;
+}
+
+.edit-target {
+  font-family: monospace;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 14px;
+  word-break: break-all;
+}
+
+.edit-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 12px 0 4px;
+}
+
+.edit-hint {
+  display: block;
+  font-weight: 400;
+  text-transform: none;
+  color: #94a3b8;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #1e293b;
+}
+
+.edit-textarea {
+  font-family: monospace;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.edit-error {
+  color: #b91c1c;
+  font-size: 13px;
+  min-height: 18px;
+  margin: 10px 0 0;
+}
+
+.btn-neutral {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.btn-neutral:hover {
+  background: #cbd5e1;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}

@@ -3,8 +3,11 @@
   "configurations": [
     {
       "name": "licita-review",
-      "runtimeExecutable": "uv",
-      "runtimeArgs": ["run", "uvicorn", "licita_review.app:app", "--port", "8011"],
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "LICITA_REVIEW_DB_URL=postgresql://licita@100.96.253.2:5432/licita exec uv run uvicorn licita_review.app:app --port 8011"
+      ],
       "port": 8011
     }
   ]

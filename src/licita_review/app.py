@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import logging
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, status
@@ -18,6 +20,7 @@ from licita_review.models import (
     ReviewAuditEntry,
 )
 from licita_review.service import ReviewService
+from licita_review.storage import InMemoryStorage, PostgresStorage, ReviewStorage
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
@@ -37,7 +40,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-service = ReviewService()
+logger = logging.getLogger(__name__)
+
+DB_URL_ENV = "LICITA_REVIEW_DB_URL"
+
+
+def _build_storage() -> ReviewStorage:
+    """Escolhe a persistência e diz em voz alta quando ela é volátil.
+
+    Sem ``LICITA_REVIEW_DB_URL`` o serviço continua utilizável, mas revisão e
+    audit log morrem no restart — a R6 não fecha nesse modo, e o operador
+    precisa saber disso ao subir o app, não ao perder o trabalho.
+    """
+    conninfo = os.environ.get(DB_URL_ENV, "").strip()
+    if not conninfo:
+        logger.warning(
+            "%s não definida: revisão e audit log ficam em memória e somem no "
+            "restart. Defina a URL do PostgreSQL para persistir.",
+            DB_URL_ENV,
+        )
+        return InMemoryStorage()
+    storage = PostgresStorage(conninfo)
+    storage.migrate()
+    logger.info("Persistência em PostgreSQL ativa")
+    return storage
+
+
+service = ReviewService(_build_storage())
 
 
 def _preload_golden_data() -> None:
@@ -48,6 +77,7 @@ def _preload_golden_data() -> None:
     pode fazer.
     """
     root = Path(__file__).resolve().parent.parent.parent
+    ja_importados = set(service.list_process_ids())
     for split in ["dev", "eval"]:
         split_dir = root / "r4" / "data" / split
         if not split_dir.exists():
@@ -60,7 +90,10 @@ def _preload_golden_data() -> None:
                 raise RuntimeError(
                     f"Processo do golden ilegível em {f}: {erro}"
                 ) from erro
-            service.import_process(proc)
+            # Reimportar sobrescreveria a revisão já persistida com a extração
+            # original: quem já está no banco fica como está.
+            if proc.id not in ja_importados:
+                service.import_process(proc)
 
 
 _preload_golden_data()

@@ -32,6 +32,7 @@ from licita_review.models import (
     ReviewAuditEntry,
     ReviewTargetType,
 )
+from licita_review.storage import InMemoryStorage, ReviewStorage
 
 
 def _pagina_do_bloco(block_id: str, padrao: int) -> int:
@@ -72,26 +73,31 @@ def _reancorar(document: Document, quote: str) -> Evidence:
 class ReviewService:
     """Gerenciador de estado de revisão humana e auditoria."""
 
-    def __init__(self) -> None:
-        self._processes: dict[str, ProcurementProcess] = {}
-        self._audit_trails: dict[str, list[ReviewAuditEntry]] = {}
+    def __init__(self, storage: ReviewStorage | None = None) -> None:
+        self._storage: ReviewStorage = storage or InMemoryStorage()
 
     def import_process(self, process: ProcurementProcess) -> None:
         """Importa ou atualiza um processo na área de trabalho de revisão."""
-        self._processes[process.id] = process
-        if process.id not in self._audit_trails:
-            self._audit_trails[process.id] = []
+        self._storage.save_process(process)
 
     def get_process(self, process_id: str) -> ProcurementProcess:
         """Obtém o processo pelo ID."""
-        if process_id not in self._processes:
+        process = self._storage.load_process(process_id)
+        if process is None:
             raise KeyError(f"Processo '{process_id}' não encontrado")
-        return self._processes[process_id]
+        return process
+
+    def list_process_ids(self) -> list[str]:
+        """Ids já presentes na persistência."""
+        return self._storage.process_ids()
 
     def list_processes(self) -> list[ProcessSummary]:
         """Lista os resumos de todos os processos carregados."""
         summaries = []
-        for pid, proc in self._processes.items():
+        for pid in self._storage.process_ids():
+            proc = self._storage.load_process(pid)
+            if proc is None:
+                continue
             doc_count = len(proc.documents)
             items_count = sum(len(d.items) for d in proc.documents)
 
@@ -251,7 +257,8 @@ class ReviewService:
             new_evidence=nova_evidencia,
             notes=request.notes,
         )
-        self._audit_trails[process_id].append(entry)
+        self._storage.save_process(proc)
+        self._storage.append_audit(entry)
         return entry
 
     def review_requirement(
@@ -306,14 +313,14 @@ class ReviewService:
             new_evidence=nova_evidencia,
             notes=request.notes,
         )
-        self._audit_trails[process_id].append(entry)
+        self._storage.save_process(proc)
+        self._storage.append_audit(entry)
         return entry
 
     def get_audit_trail(self, process_id: str) -> list[ReviewAuditEntry]:
         """Retorna o histórico de auditoria do processo."""
-        if process_id not in self._audit_trails:
-            raise KeyError(f"Processo '{process_id}' não encontrado")
-        return list(self._audit_trails[process_id])
+        self.get_process(process_id)
+        return self._storage.audit_trail(process_id)
 
     def get_confirmed_process(self, process_id: str) -> ProcurementProcess:
         """Exporta uma versão filtrada contendo apenas fatos CONFIRMED (para R7/R8/R9 downstream)."""

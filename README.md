@@ -17,3 +17,22 @@ uv sync
 uv run pytest -q
 python3 -m compileall -q src tests
 ```
+
+## Revisão humana (R6)
+
+A UI de revisão persiste processos e trilha de auditoria em PostgreSQL. Sem a
+variável, ela sobe em memória e avisa no log que revisão e audit log somem no
+restart — nesse modo a R6 não fecha.
+
+```bash
+LICITA_REVIEW_DB_URL=postgresql://licita@100.96.253.2:5432/licita \
+  uv run uvicorn licita_review.app:app --port 8011
+```
+
+A senha fica com o libpq (`~/.pgpass`), nunca na URL nem no repositório. O
+schema é criado sozinho na subida. A integração roda com a mesma variável:
+
+```bash
+LICITA_REVIEW_DB_URL=postgresql://licita@100.96.253.2:5432/licita \
+  uv run pytest tests/test_r6_postgres.py -q
+```

@@ -21,3 +21,6 @@ corpus/documentos/
 corpus/estado/
 corpus/harvest/
 corpus/*.log
+
+# Ferramenta de anotação: derivada do corpus, regenerável
+r4/anotacao_worksheet.html

@@ -41,7 +41,9 @@
           "arquivo": "documentos/01612698000169-1-000047-2024/tr-03-04-termo-de-referencia.pdf",
           "sha256_original": "d3c26e2bd8a93a1b58f4923bbf90f1e38b06c2274cc3f03a55731d945d20b619"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "13988308000139-1-000095-2024",
@@ -65,7 +67,9 @@
           "arquivo": "documentos/13988308000139-1-000095-2024/tr-10-tr-veiculos-pos-impugnacao.pdf",
           "sha256_original": "a810fca1b55e2f43d1f9cd76846956e5cd46268205608a05cbbe660e3308b90e"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "17749896000290-1-000055-2024",
@@ -89,7 +93,9 @@
           "arquivo": "documentos/17749896000290-1-000055-2024/tr-03-termo-20de-20referencia-pdf.pdf",
           "sha256_original": "bd2418d70ff4cbdce800a35747cf01336a69cc545d33ed11051958629215388e"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "25105255000140-1-000041-2024",
@@ -113,7 +119,9 @@
           "arquivo": "documentos/25105255000140-1-000041-2024/tr-11-retificado-termo-referencia.pdf",
           "sha256_original": "7e316be5e873c15a4d920962b8b532fbdbe9dc8c0069bdc0dd7457b0fc856526"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "52061181000160-1-000080-2024",
@@ -137,7 +145,9 @@
           "arquivo": "documentos/52061181000160-1-000080-2024/tr-02-termo-de-referencia-epi-e-epc.pdf",
           "sha256_original": "c7175f240d16517ea2c5bd91f319bc836c7c2ae20acae61b8d0484047ce0acef"
         }
-      ]
+      ],
+      "annotation_provenance": "engine_generated",
+      "engine_agreement_pct": 95.59
     },
     {
       "processo_id": "76017474000108-1-000118-2025",
@@ -161,7 +171,9 @@
           "arquivo": "documentos/76017474000108-1-000118-2025/tr-10-anexo-i-termo-de-referencia-pdf.pdf",
           "sha256_original": "acbe869f5d996ae7e68ec53eed9908af5e091fbc49e787a774eeab65ac73b299"
         }
-      ]
+      ],
+      "annotation_provenance": "engine_generated",
+      "engine_agreement_pct": 99.45
     },
     {
       "processo_id": "83026138000197-1-000126-2024",
@@ -185,7 +197,9 @@
           "arquivo": "documentos/83026138000197-1-000126-2024/tr-04-termo-de-referencia-mudas-e-plantas.pdf",
           "sha256_original": "990dc4b81bbf86ccf809bf868c12c157ca49b07fda8d171766536b211f3737e1"
         }
-      ]
+      ],
+      "annotation_provenance": "engine_generated",
+      "engine_agreement_pct": 66.05
     },
     {
       "processo_id": "87613022000105-1-000106-2024",
@@ -209,7 +223,9 @@
           "arquivo": "documentos/87613022000105-1-000106-2024/tr-05-48970-termo-de-referencia-pdf.pdf",
           "sha256_original": "09808040cd32ec443a46920a01289c5350eacc4b0dfdd95597929c70967e0765"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "87613022000105-1-000285-2025",
@@ -233,7 +249,9 @@
           "arquivo": "documentos/87613022000105-1-000285-2025/tr-06-63900883322431995963900880539946627153947-rev-0-termo-de-ref.pdf",
           "sha256_original": "4d650be4a0b081a1c58ab781d1dc4e1b3f76173f1891b356e076a3b03c26d705"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     },
     {
       "processo_id": "88814181000130-1-000215-2024",
@@ -257,7 +275,10 @@
           "arquivo": "documentos/88814181000130-1-000215-2024/tr-03-termo-de-referencia.pdf",
           "sha256_original": "d474d39127abc57a385ef2d4f053fab0d4fe29105fc733fcf2376ba074d7042c"
         }
-      ]
+      ],
+      "annotation_provenance": "manual",
+      "engine_agreement_pct": 0.0
     }
-  ]
+  ],
+  "annotation_provenance_note": "annotation_provenance registra se a anotação foi conferida contra o documento por pessoa (manual) ou coincide com a saída do extrator da R5 (engine_generated). engine_agreement_pct é a fração dos fatos anotados que o motor da R5 reproduz identicamente. Anotação engine_generated não serve de oráculo para medir o motor que a produziu e não conta para as metas da R4 nem da R5."
 }

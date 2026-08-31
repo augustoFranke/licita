@@ -31,6 +31,7 @@ from .catalog import (
     estatisticas,
     montar_processo,
     montar_relacoes,
+    ocr_historico_utilizavel,
 )
 from .classify import (
     ETP,
@@ -1021,43 +1022,6 @@ def _registrar_documento(
     return registro
 
 
-def _ocr_historico_utilizavel(
-    documento: Mapping[str, Any], *, abriu: bool
-) -> bool:
-    verificacao_bruta = documento.get("verificacao")
-    verificacao = (
-        verificacao_bruta if isinstance(verificacao_bruta, Mapping) else {}
-    )
-    ocr_bruto = verificacao.get("ocr") or documento.get("ocr")
-    ocr_meta = ocr_bruto if isinstance(ocr_bruto, Mapping) else {}
-    usado = bool(
-        verificacao.get("ocr_usado")
-        or documento.get("ocr_usado")
-        or ocr_meta.get("usado")
-    )
-    try:
-        caracteres = int(
-            verificacao.get("caracteres", documento.get("caracteres", 0)) or 0
-        )
-    except (TypeError, ValueError):
-        caracteres = 0
-    texto = (
-        documento.get("_texto")
-        or verificacao.get("texto")
-        or documento.get("texto")
-        or ""
-    )
-    precisa_ocr = bool(
-        verificacao.get("precisa_ocr", documento.get("precisa_ocr", False))
-    )
-    return bool(
-        abriu
-        and usado
-        and (caracteres > 0 or str(texto).strip())
-        and not precisa_ocr
-    )
-
-
 def _documento_utilizavel(documento: Mapping[str, Any]) -> bool:
     verificacao_bruta = documento.get("verificacao")
     verificacao = (
@@ -1313,7 +1277,7 @@ def _revalidar_aceito(
         abriu = bool(_atributo(resultado, "abriu", False))
         ocr_historico = bool(
             hash_original
-            and _ocr_historico_utilizavel(original, abriu=abriu)
+            and ocr_historico_utilizavel(original, abriu=abriu)
         )
         if not ocr_historico:
             registro["verificacao"] = _metadados_verificacao(resultado)

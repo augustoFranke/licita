@@ -9,6 +9,7 @@ from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import ValidationError
 
 from licita_core.schema import ProcurementProcess
 from licita_review.models import (
@@ -29,7 +30,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    # A API não usa cookie nem credencial: origem "*" com credenciais é
+    # combinação inválida no CORS e o navegador a rejeita.
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -38,17 +41,26 @@ service = ReviewService()
 
 
 def _preload_golden_data() -> None:
+    """Carrega o golden na área de revisão; arquivo ilegível é erro, não silêncio.
+
+    NFR-002: falha de parsing nunca desaparece. Um processo que some da UI sem
+    aviso vira ausência invisível de documento, exatamente o que o produto não
+    pode fazer.
+    """
     root = Path(__file__).resolve().parent.parent.parent
     for split in ["dev", "eval"]:
         split_dir = root / "r4" / "data" / split
-        if split_dir.exists():
-            for f in sorted(split_dir.glob("*.json")):
-                try:
-                    data = json.loads(f.read_text(encoding="utf-8"))
-                    proc = ProcurementProcess.model_validate(data)
-                    service.import_process(proc)
-                except Exception:
-                    pass
+        if not split_dir.exists():
+            continue
+        for f in sorted(split_dir.glob("*.json")):
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                proc = ProcurementProcess.model_validate(data)
+            except (OSError, json.JSONDecodeError, ValidationError) as erro:
+                raise RuntimeError(
+                    f"Processo do golden ilegível em {f}: {erro}"
+                ) from erro
+            service.import_process(proc)
 
 
 _preload_golden_data()

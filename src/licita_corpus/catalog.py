@@ -8,7 +8,9 @@ consultados nem baixados por esta coleta.
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
@@ -28,6 +30,64 @@ from .pncp import url_contrato, url_processo
 CADEIA = (DFD, ETP, TR, EDITAL, CONTRATO, PESQUISA_PRECOS)
 PAPEIS_OBRIGATORIOS = (ETP, TR)
 PAPEIS_MATERIAIS = (ETP, TR, EDITAL, CONTRATO)
+
+
+def metadados_verificacao(
+    documento: Mapping[str, Any],
+) -> tuple[Mapping[str, Any], Mapping[str, Any]]:
+    """Separa verificação e metadados de OCR de um registro de documento."""
+    verificacao_bruta = documento.get("verificacao")
+    verificacao = verificacao_bruta if isinstance(verificacao_bruta, Mapping) else {}
+    ocr_bruto = verificacao.get("ocr") or documento.get("ocr")
+    ocr = ocr_bruto if isinstance(ocr_bruto, Mapping) else {}
+    return verificacao, ocr
+
+
+def ocr_historico_utilizavel(documento: Mapping[str, Any], *, abriu: bool) -> bool:
+    """Decide se o texto de OCR histórico de um documento pode ser usado.
+
+    Fonte única da coleta e do gate: um texto derivado só conta quando é
+    auditável (SHA-256 do derivado, versão do pipeline e idioma registrados),
+    conforme a policy ``4-municipal-historical-ocr``. Coletar sob um critério
+    mais frouxo do que o do gate deixa entrar no corpus documento que o gate
+    depois rejeita.
+    """
+    verificacao, ocr = metadados_verificacao(documento)
+    cache_bruto = verificacao.get("ocr_cache") or documento.get("ocr_cache")
+    cache = cache_bruto if isinstance(cache_bruto, Mapping) else {}
+    texto_sha256 = str(cache.get("texto_sha256") or "").strip().lower()
+    derivado_auditavel = bool(
+        re.fullmatch(r"[0-9a-f]{64}", texto_sha256)
+        and str(cache.get("pipeline_version") or "").strip()
+        and str(cache.get("idioma") or "").strip()
+    )
+    usado = bool(
+        verificacao.get("ocr_usado")
+        or documento.get("ocr_usado")
+        or ocr.get("usado")
+    )
+    try:
+        caracteres = int(
+            verificacao.get("caracteres", documento.get("caracteres", 0)) or 0
+        )
+    except (TypeError, ValueError):
+        caracteres = 0
+    texto = (
+        documento.get("_texto")
+        or verificacao.get("texto")
+        or documento.get("texto")
+        or ""
+    )
+    precisa_ocr = bool(
+        verificacao.get("precisa_ocr", documento.get("precisa_ocr", False))
+    )
+    return bool(
+        abriu
+        and usado
+        and derivado_auditavel
+        and (caracteres > 0 or str(texto).strip())
+        and not precisa_ocr
+    )
 
 
 def escrever_json(caminho: Path, dados: Any) -> None:

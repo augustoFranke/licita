@@ -537,6 +537,49 @@ def test_recatalogacao_preserva_apenas_controle_negativo_municipal(tmp_path):
     assert [r["processo_id"] for r in relacoes] == ["controle"]
 
 
+def test_revalidacao_descarta_ocr_historico_sem_derivado_auditavel(monkeypatch, tmp_path):
+    """OCR sem SHA-256 do derivado, idioma e versão do pipeline não é reaproveitado.
+
+    A policy ``4-municipal-historical-ocr`` exige artefato derivado auditável;
+    aceitar na coleta o que o gate rejeita faz o corpus divergir do lote
+    aprovado.
+    """
+    conteudo = b"%PDF-1.4 original imutavel"
+    digesto = hashlib.sha256(conteudo).hexdigest()
+    documentos = []
+    for papel in ("ETP", "TR"):
+        arquivo_local = tmp_path / f"{papel.lower()}.pdf"
+        arquivo_local.write_bytes(conteudo)
+        documentos.append(
+            {
+                "documento_id": papel,
+                "papel": papel,
+                "arquivo": arquivo_local.name,
+                "sha256": "hash legado divergente",
+                "sha256_original": digesto,
+                "verificacao": {
+                    "abriu": True,
+                    "caracteres": 90,
+                    "precisa_ocr": False,
+                    "ocr_usado": True,
+                },
+                "_texto": f"texto OCR histórico {papel}",
+            }
+        )
+
+    def verificacao_normal_sem_texto(_path, **_kwargs):
+        resultado = _verificacao_mock(_path)
+        resultado.caracteres = 0
+        resultado.precisa_ocr = True
+        resultado.texto = ""
+        return resultado
+
+    monkeypatch.setattr(collect_module, "verificar", verificacao_normal_sem_texto)
+    candidato = {"numero_controle_pncp": NUMERO, "compra": normalizar_compra(compra_flat(), "feed")}
+
+    assert collect_module._revalidar_aceito(candidato, documentos, tmp_path) is None
+
+
 def test_revalidacao_preserva_ocr_historico_com_hash_original(monkeypatch, tmp_path):
     conteudo = b"%PDF-1.4 original imutavel"
     digesto = hashlib.sha256(conteudo).hexdigest()
@@ -556,6 +599,12 @@ def test_revalidacao_preserva_ocr_historico_com_hash_original(monkeypatch, tmp_p
                     "caracteres": 90,
                     "precisa_ocr": False,
                     "ocr_usado": True,
+                    "ocr_cache": {
+                        "sha256_original": digesto,
+                        "texto_sha256": "b" * 64,
+                        "idioma": "por",
+                        "pipeline_version": "verify-pymupdf-tesseract-v1",
+                    },
                 },
                 "_texto": f"texto OCR histórico {papel}",
             }

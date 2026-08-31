@@ -2,10 +2,28 @@
 
 ## Estado deste artefato
 
-Este é o guia e o contrato operacional da R4. O repositório ainda não contém
-as 10–15 anotações reais nem a meta de 300 valores/requisitos; o exemplo ao
-lado é sintético e não conta para nenhuma meta. A existência deste guia também
-não declara a R4 concluída.
+Este é o guia e o contrato operacional da R4. A meta da fase — 10–15
+processos anotados e ≥300 valores/requisitos — **não** está cumprida.
+
+Estado medido em `r4/manifest.json` (campo `annotation_provenance`):
+
+| Procedência | Processos | Valores + requisitos |
+|---|---|---|
+| `manual` — anotado lendo o documento | 7 | 29 |
+| `engine_generated` — reproduz a saída do extrator da R5 | 3 | 465 |
+
+Anotação `engine_generated` não é oráculo: ela foi produzida pelo motor que a
+R5 precisa medir, e `engine_agreement_pct` registra o quanto cada uma coincide
+com a saída atual desse motor (66% a 99%). Ela não conta para a meta da R4,
+não entra no benchmark da R5 e não sustenta a suíte de mutações da R7.
+
+Faltam ainda, para fechar a fase: ~271 valores/requisitos de anotação manual e,
+para a R7 existir, o **mesmo fato anotado nos dois documentos** do par ETP→TR —
+hoje nenhum processo do golden tem isso, o que deixa a suíte de mutações sem
+material.
+
+O exemplo ao lado é sintético e não conta para nenhuma meta. A existência deste
+guia não declara a R4 concluída.
 
 A R4 cria uma verdade de referência para avaliar a extração da R5. A anotação
 não deve corrigir o documento-fonte, completar lacunas com conhecimento

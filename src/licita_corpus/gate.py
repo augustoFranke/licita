@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 import json
-import re
 from collections import Counter
 from collections.abc import Mapping
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Sequence
 
-from .catalog import PAPEIS_OBRIGATORIOS, escrever_json
+from .catalog import (
+    PAPEIS_OBRIGATORIOS,
+    escrever_json,
+    ocr_historico_utilizavel,
+)
 from .classify import (
     PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS,
     PERFIL_SUPPORTED,
@@ -59,53 +62,6 @@ def _atributo(resultado: Any, nome: str, padrao: Any = None) -> Any:
     return getattr(resultado, nome, padrao)
 
 
-def _metadados(documento: Mapping[str, Any]) -> tuple[Mapping[str, Any], Mapping[str, Any]]:
-    verificacao_bruta = documento.get("verificacao")
-    verificacao = verificacao_bruta if isinstance(verificacao_bruta, Mapping) else {}
-    ocr_bruto = verificacao.get("ocr") or documento.get("ocr")
-    ocr = ocr_bruto if isinstance(ocr_bruto, Mapping) else {}
-    return verificacao, ocr
-
-
-def _ocr_historico_utilizavel(documento: Mapping[str, Any], *, abriu: bool) -> bool:
-    verificacao, ocr = _metadados(documento)
-    cache_bruto = verificacao.get("ocr_cache") or documento.get("ocr_cache")
-    cache = cache_bruto if isinstance(cache_bruto, Mapping) else {}
-    texto_sha256 = str(cache.get("texto_sha256") or "").strip().lower()
-    derivado_auditavel = bool(
-        re.fullmatch(r"[0-9a-f]{64}", texto_sha256)
-        and str(cache.get("pipeline_version") or "").strip()
-        and str(cache.get("idioma") or "").strip()
-    )
-    usado = bool(
-        verificacao.get("ocr_usado")
-        or documento.get("ocr_usado")
-        or ocr.get("usado")
-    )
-    try:
-        caracteres = int(
-            verificacao.get("caracteres", documento.get("caracteres", 0)) or 0
-        )
-    except (TypeError, ValueError):
-        caracteres = 0
-    texto = (
-        documento.get("_texto")
-        or verificacao.get("texto")
-        or documento.get("texto")
-        or ""
-    )
-    precisa_ocr = bool(
-        verificacao.get("precisa_ocr", documento.get("precisa_ocr", False))
-    )
-    return bool(
-        abriu
-        and usado
-        and derivado_auditavel
-        and (caracteres > 0 or str(texto).strip())
-        and not precisa_ocr
-    )
-
-
 def _validar_documento(
     raiz: Path, documento: Mapping[str, Any]
 ) -> tuple[bool, str | None]:
@@ -138,7 +94,7 @@ def _validar_documento(
         return False, _atributo(resultado, "erro") or "não abriu"
 
     utilizavel_normal = bool(_atributo(resultado, "utilizavel", False))
-    if utilizavel_normal or _ocr_historico_utilizavel(documento, abriu=abriu):
+    if utilizavel_normal or ocr_historico_utilizavel(documento, abriu=abriu):
         return True, None
     return False, "arquivo sem texto utilizável"
 

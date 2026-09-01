@@ -44,6 +44,50 @@ def _parse_quantidade(texto: str) -> Decimal | None:
     return None
 
 
+_NUM_POR_EXTENSO = {
+    "um": 1, "uma": 1, "dois": 2, "duas": 2, "tres": 3, "três": 3, "quatro": 4,
+    "cinco": 5, "seis": 6, "sete": 7, "oito": 8, "nove": 9, "dez": 10,
+    "quinze": 15, "vinte": 20, "trinta": 30, "quarenta": 40, "sessenta": 60,
+    "noventa": 90, "cento e vinte": 120,
+}
+
+# Prazo de ENTREGA/fornecimento (não pagamento, não vigência). O número pode vir
+# como dígito seguido de forma por extenso entre parênteses ("20(vinte) dias").
+# Dois padrões: (A) uma âncora de entrega ANTES do número; (B) "no prazo de N
+# dias" seguido, na mesma cláusula, de um gatilho de entrega ("após a
+# autorização de fornecimento", "da ordem", "do recebimento") — é o que
+# distingue entrega de pagamento sem depender da ordem das palavras.
+_GATILHO_ENTREGA = (
+    r"autoriza[çc][ãa]o\s+de\s+fornecimento|ordem\s+de\s+fornecimento|nota\s+de\s+empenho"
+    r"|recebimento\s+da\s+(?:ordem|af|autoriza)|solicita[çc][ãa]o|assinatura\s+d[oa]\s+contrato"
+)
+_PRAZO_ENTREGA_RE = re.compile(
+    r"(?:prazo\s+de\s+entrega|prazo\s+de\s+fornecimento|prazo\s+de\s+execu[çc][ãa]o\s+d[oa]\s+entrega"
+    r"|entreg\w+\s+(?:no\s+prazo\s+de|em\s+at[ée]|em)|ser[áa]\s+entregue\s+(?:no\s+prazo\s+de|em))"
+    r"\s*(\d{1,3})\s*(?:\([^)]*\))?\s*(dias?|horas?)",
+    re.IGNORECASE,
+)
+_PRAZO_ENTREGA_GATILHO_RE = re.compile(
+    r"no\s+prazo\s+de\s+(\d{1,3})\s*(?:\([^)]*\))?\s*(dias?|horas?)"
+    rf"(?:(?!pagamento).){{0,80}}?(?:{_GATILHO_ENTREGA})",
+    re.IGNORECASE,
+)
+# Garantia técnica / do produto: exige a palavra-âncora ANTES do número, para
+# não capturar "validade da proposta" nem "garantia de execução" (caução).
+_GARANTIA_RE = re.compile(
+    r"garantia(?:\s+t[ée]cnica|\s+do\s+produto|\s+m[íi]nima|\s+contra\s+defeitos)?"
+    r"(?:\s+de|\s+ser[áa]\s+de|\s+m[íi]nima\s+de|\s*:)?\s*(\d{1,3})\s*(?:\([^)]*\))?\s*(meses|m[êe]s|anos?)",
+    re.IGNORECASE,
+)
+
+
+def _num_prazo(texto_num: str) -> int | None:
+    texto_num = texto_num.strip().lower()
+    if texto_num.isdigit():
+        return int(texto_num)
+    return _NUM_POR_EXTENSO.get(texto_num)
+
+
 def _parse_moeda(texto: str) -> Decimal | None:
     if not texto:
         return None
@@ -67,37 +111,67 @@ def extract_document_fields(doc_ext: ExtractedDocument, document_id: str) -> lis
     """Extrai campos transversais de nível documental (prazo de entrega, garantia, orçamento)."""
     fields: list[FieldValue] = []
 
+    # Prazo e garantia são campos documentais: um valor por documento. Emitir o
+    # primeiro achado com contexto seguro evita multiplicar valores (uma cláusula
+    # de substituição "em 5 dias" não é o prazo de entrega) e mantém a precisão.
+    prazo_emitido = False
+    garantia_emitida = False
+
+    def _evid(block: StructuredBlock) -> Evidence:
+        return Evidence(
+            document_id=document_id,
+            page=block.page if block.page is not None and block.page >= 1 else 1,
+            block_id=block.id,
+            quote=block.text,
+        )
+
     for block in doc_ext.iter_blocks(include_children=True):
         if block.type.value in ("TABLE", "IMAGE") or not (block.text or "").strip():
             continue
         text = _clean_text(block.text)
+        low = text.lower()
 
-        # 1. Prazo de Entrega
-        match_deadline = re.search(
-            r"\b(?:prazo\s+de\s+entrega|entrega\s+em|prazo\s+de\s+fornecimento|em\s+at[eé]|no\s+prazo\s+de)\s*(\d+)\s*(?:dias?\s*(?:[uú]teis|corridos)?|horas?)\b",
-            text,
-            re.IGNORECASE,
-        )
-        if match_deadline and "vigência" not in text.lower():
-            qtd_dias = int(match_deadline.group(1))
-            ev = Evidence(
-                document_id=document_id,
-                page=block.page if block.page is not None and block.page >= 1 else 1,
-                block_id=block.id,
-                quote=block.text,
-            )
-            fields.append(
-                FieldValue(
-                    field_type=FieldType.DELIVERY_DEADLINE,
-                    value=qtd_dias,
-                    unit="DIAS",
-                    item_id=None,
-                    evidence=[ev],
-                    review_status=ReviewStatus.EXTRACTED,
-                )
-            )
+        # 1. Prazo de Entrega. Ignora cláusulas de pagamento e de vigência, que
+        # têm seus próprios campos e não são o prazo operacional de entrega.
+        if not prazo_emitido and "pagamento" not in low and "vig" not in low[:60]:
+            m = _PRAZO_ENTREGA_RE.search(text) or _PRAZO_ENTREGA_GATILHO_RE.search(text)
+            if m:
+                dias = _num_prazo(m.group(1))
+                if dias is not None:
+                    fields.append(
+                        FieldValue(
+                            field_type=FieldType.DELIVERY_DEADLINE,
+                            value=dias,
+                            unit="DIAS",
+                            item_id=None,
+                            evidence=[_evid(block)],
+                            review_status=ReviewStatus.EXTRACTED,
+                        )
+                    )
+                    prazo_emitido = True
 
-        # 2. Estimativa de Orçamento / Valor Total
+        # 2. Garantia técnica / do produto (art. 40, §1º, III). Ausência é
+        # legítima e não gera campo — só se extrai quando o TR a declara.
+        if not garantia_emitida:
+            mg = _GARANTIA_RE.search(text)
+            if mg:
+                num = _num_prazo(mg.group(1))
+                unidade = mg.group(2).lower()
+                if num is not None:
+                    meses = num * 12 if unidade.startswith("ano") else num
+                    fields.append(
+                        FieldValue(
+                            field_type=FieldType.WARRANTY_TERM,
+                            value=meses,
+                            unit="MESES",
+                            item_id=None,
+                            evidence=[_evid(block)],
+                            review_status=ReviewStatus.EXTRACTED,
+                        )
+                    )
+                    garantia_emitida = True
+
+        # 3. Estimativa de Orçamento / Valor Total
         match_budget = re.search(
             r"\b(?:valor\s+total\s+(?:estimado|da\s+contrata[cç][aã]o)|estimativa\s+de\s+pre[cç]os?|or[cç]amento\s+estimado|valor\s+global)\s*(?:[:=]|\s+de|\s+em)?\s*R\$\s*([\d\.,]+)",
             text,

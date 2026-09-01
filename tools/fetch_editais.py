@@ -30,17 +30,20 @@ from typing import Any
 
 from licita_corpus.classify import EDITAL, normalizar
 from licita_corpus.collect import (
+    POLICY_VERSION,
     _escolher_mais_recente,
     _registrar_documento,
     _resumir_arquivo,
 )
 from licita_corpus.catalog import (
     CADEIA,
+    PAPEIS_OPCIONAIS,
     documento_id,
     montar_relacoes,
     ocr_historico_utilizavel,
 )
 from licita_corpus.pncp import Pncp, partes_controle
+from licita_corpus.state import EstadoColeta
 from licita_corpus.store import baixar_documento, processo_id as pid_de_controle
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -48,6 +51,7 @@ CORPUS = ROOT / "corpus"
 CATALOG = CORPUS / "catalogo" / "documentos.jsonl"
 PROCESSOS = CORPUS / "catalogo" / "processos.json"
 RELACOES = CORPUS / "catalogo" / "relacoes.json"
+ESTADO = CORPUS / "estado" / "etp_tr.sqlite3"
 GOLDEN_DIRS = (ROOT / "r4" / "data" / "dev", ROOT / "r4" / "data" / "eval")
 
 
@@ -106,6 +110,8 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
         pendentes = pendentes[:limite]
 
     novos: list[dict[str, Any]] = []
+    # registro completo (com _texto) por processo, para gravar no estado
+    para_estado: dict[str, dict[str, Any]] = {}
     with Pncp() as pncp:
         for pid in pendentes:
             nc = controle[pid]
@@ -155,6 +161,7 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
             publico = _para_publico(registro)
             novos.append(publico)
             por_processo[pid].append(publico)
+            para_estado[pid] = registro
             print(f"[edital+] {pid}: {publico['arquivo']} "
                   f"({publico['bytes']} bytes, {registro['verificacao'].get('caracteres')} chars, "
                   f"ocr={registro['verificacao'].get('ocr_usado')})")
@@ -168,7 +175,55 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
         for r in catalogo:
             saida.write(json.dumps(r, ensure_ascii=False) + "\n")
     sincronizar_catalogo(catalogo)
+    registrar_no_estado(para_estado)
     print(f"\n{len(novos)} edital(is) adicionado(s) ao catálogo ({CATALOG.relative_to(ROOT)}).")
+
+
+def registrar_no_estado(novos_por_processo: dict[str, dict[str, Any]]) -> None:
+    """Anexa o elo baixado ao aceite do coletor, na política vigente.
+
+    ``collect._catalogar`` reconstrói ``documentos.jsonl`` a partir do banco de
+    estado, e não do catálogo. Um documento gravado só no catálogo é apagado na
+    primeira coleta seguinte — foi o que aconteceu com os editais. O estado é a
+    fonte da verdade, então o elo precisa entrar nele; o catálogo continua
+    sendo escrito aqui apenas para o corpus ficar utilizável de imediato.
+
+    O registro guardado no estado conserva ``_texto`` (a catalogação o usa) e
+    não leva ``reuso``, que é campo do catálogo.
+    """
+    if not ESTADO.exists():
+        print(f"[estado] ausente em {ESTADO.relative_to(ROOT)}: nada a registrar")
+        return
+
+    anexados, sem_aceite = 0, []
+    with EstadoColeta(ESTADO, 0, policy_version=POLICY_VERSION) as estado:
+        aceitos = {
+            str(candidato.get("numero_controle_pncp") or ""): (candidato, documentos)
+            for candidato, documentos in estado.aceitos()
+        }
+        por_pid = {
+            pid_de_controle(numero): numero for numero in aceitos
+        }
+        for pid, registro in novos_por_processo.items():
+            numero = por_pid.get(pid)
+            if numero is None:
+                sem_aceite.append(pid)
+                continue
+            candidato, documentos = aceitos[numero]
+            ja_tem = any(
+                d.get("documento_id") == registro["documento_id"] for d in documentos
+            )
+            if ja_tem:
+                continue
+            estado.salvar_aceito(candidato, [*documentos, registro])
+            anexados += 1
+
+    print(f"[estado] {anexados} elo(s) anexado(s) ao aceite da política {POLICY_VERSION}")
+    if sem_aceite:
+        print(
+            f"[estado] {len(sem_aceite)} processo(s) sem aceite nesta política "
+            f"(o elo vive só no catálogo até a próxima coleta): {sem_aceite[:5]}"
+        )
 
 
 def sincronizar_catalogo(catalogo: list[dict[str, Any]]) -> None:
@@ -208,13 +263,40 @@ def sincronizar_catalogo(catalogo: list[dict[str, Any]]) -> None:
     print(f"catálogo sincronizado: {len(arestas)} arestas de cadeia")
 
 
+def reparar_estado() -> None:
+    """Registra no estado os elos opcionais que só existem no catálogo.
+
+    Necessário uma vez para os elos baixados antes de o registro no estado
+    existir. ``_texto`` não é reconstruído aqui: a catalogação o recalcula ao
+    abrir o arquivo, e só o preserva quando veio de OCR — nenhum destes veio.
+    """
+    catalogo = _carregar_catalogo()
+    opcionais = {}
+    for d in catalogo:
+        if d.get("papel") in PAPEIS_OPCIONAIS:
+            opcionais[d["processo_id"]] = {
+                k: v for k, v in d.items() if k != "reuso"
+            }
+    print(f"[reparo] {len(opcionais)} elo(s) opcional(is) no catálogo")
+    registrar_no_estado(opcionais)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("pids", nargs="*", help="processo_id(s) explícitos")
+    ap.add_argument(
+        "--reparar-estado",
+        action="store_true",
+        help="registra no estado os elos que já estão no catálogo, sem baixar nada",
+    )
     ap.add_argument("--golden", action="store_true", help="os processos do golden (dev+eval)")
     ap.add_argument("--all", action="store_true", help="todos os processos do catálogo")
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
+
+    if args.reparar_estado:
+        reparar_estado()
+        return
 
     if args.all:
         pids = sorted({d["processo_id"] for d in _carregar_catalogo()})

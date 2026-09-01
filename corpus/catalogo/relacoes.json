@@ -17,6 +17,14 @@
       "relacao": "origina"
     },
     {
+      "processo_id": "01612698000169-1-000047-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01612698000169-1-000047-2024#tr-03",
+      "para": "01612698000169-1-000047-2024#edital-04",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "25105255000140-1-000041-2024",
       "de_papel": "ETP",
       "para_papel": "TR",
@@ -25,12 +33,28 @@
       "relacao": "origina"
     },
     {
+      "processo_id": "25105255000140-1-000041-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "25105255000140-1-000041-2024#tr-11",
+      "para": "25105255000140-1-000041-2024#edital-14",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "88814181000130-1-000215-2024",
       "de_papel": "ETP",
       "para_papel": "TR",
       "de": "88814181000130-1-000215-2024#etp-02",
       "para": "88814181000130-1-000215-2024#tr-03",
       "relacao": "origina"
+    },
+    {
+      "processo_id": "88814181000130-1-000215-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "88814181000130-1-000215-2024#tr-03",
+      "para": "88814181000130-1-000215-2024#edital-01",
+      "relacao": "precede_em"
     },
     {
       "processo_id": "88814181000130-1-000180-2024",
@@ -97,6 +121,14 @@
       "relacao": "origina"
     },
     {
+      "processo_id": "52061181000160-1-000080-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "52061181000160-1-000080-2024#tr-02",
+      "para": "52061181000160-1-000080-2024#edital-01",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "17749896000290-1-000055-2024",
       "de_papel": "ETP",
       "para_papel": "TR",
@@ -105,12 +137,28 @@
       "relacao": "origina"
     },
     {
+      "processo_id": "17749896000290-1-000055-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "17749896000290-1-000055-2024#tr-03",
+      "para": "17749896000290-1-000055-2024#edital-01",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "83026138000197-1-000126-2024",
       "de_papel": "ETP",
       "para_papel": "TR",
       "de": "83026138000197-1-000126-2024#etp-02",
       "para": "83026138000197-1-000126-2024#tr-04",
       "relacao": "origina"
+    },
+    {
+      "processo_id": "83026138000197-1-000126-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "83026138000197-1-000126-2024#tr-04",
+      "para": "83026138000197-1-000126-2024#edital-07",
+      "relacao": "precede_em"
     },
     {
       "processo_id": "87613048000153-1-000119-2024",
@@ -137,6 +185,14 @@
       "relacao": "origina"
     },
     {
+      "processo_id": "13988308000139-1-000095-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "13988308000139-1-000095-2024#tr-10",
+      "para": "13988308000139-1-000095-2024#edital-11",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "76017474000108-1-000118-2025",
       "de_papel": "ETP",
       "para_papel": "TR",
@@ -159,6 +215,14 @@
       "de": "87613022000105-1-000106-2024#etp-03",
       "para": "87613022000105-1-000106-2024#tr-05",
       "relacao": "origina"
+    },
+    {
+      "processo_id": "87613022000105-1-000106-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "87613022000105-1-000106-2024#tr-05",
+      "para": "87613022000105-1-000106-2024#edital-02",
+      "relacao": "precede_em"
     },
     {
       "processo_id": "87613022000105-1-000034-2024",

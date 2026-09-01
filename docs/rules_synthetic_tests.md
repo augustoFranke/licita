@@ -1,6 +1,6 @@
 # Testes Sintéticos Municipais do TR Linter — Compras de Bens Comuns
 
-Casos para os seis controles `NORMATIVE` e os dois controles `ADVISORY` de `rules_draft.md`. Todos usam o perfil `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`. Finding é achado, não veredito; não usar “aprovado” ou “reprovado”.
+Casos para os seis controles `NORMATIVE` e os dois controles `ADVISORY` de `rules_draft.md`. Todos usam o perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`. Finding é achado, não veredito; não usar “aprovado” ou “reprovado”.
 
 A base vinculante dos casos normativos é somente a Lei nº 14.133/2021 aplicável aos Municípios. IN SEGES/ME nº 81/2022, modelos AGU e TR Digital são `REFERENCE_ONLY`; não participam dos oráculos de `SUPPORTED`, `finding` ou `silencio`.
 
@@ -13,7 +13,7 @@ Cada caso declara:
 | Campo | Valor |
 |---|---|
 | `id` | estável (`001-D1`) |
-| `profile_id` | `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` |
+| `profile_id` | `PUBLICO_14133_PREGAO_ELETRONICO_BENS` |
 | `rule_id` | controle sob teste |
 | `rule_class` | `NORMATIVE` ou `ADVISORY` |
 | `aplica_regras` | lista fechada; snippets parciais não rodam controles omitidos |
@@ -75,7 +75,7 @@ b) definitivo, em até 10 (dez) dias úteis após o provisório, por servidor de
 
 ```yaml
 id: TR-MINIMO
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ALL
 rule_class: [NORMATIVE, ADVISORY]
 aplica_regras: [RULE-001, RULE-002, RULE-003, RULE-004, RULE-005, RULE-006, RULE-007, ADVISORY-008]
@@ -90,7 +90,7 @@ esperado: silencio
 
 ```yaml
 id: 001-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-001
 rule_class: NORMATIVE
 aplica_regras: [RULE-001]
@@ -117,7 +117,7 @@ Custo total estimado: R$ 5.400,00, conforme memória de cálculo do processo.
 
 ```yaml
 id: 001-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-001
 rule_class: NORMATIVE
 aplica_regras: [RULE-001]
@@ -138,7 +138,7 @@ Partir do TR-MINIMO e substituir a seção 5 por:
 
 ```yaml
 id: 001-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-001
 rule_class: NORMATIVE
 aplica_regras: [RULE-001]
@@ -151,7 +151,7 @@ Usar o TR-MINIMO.
 
 ```yaml
 id: 001-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-001
 rule_class: NORMATIVE
 aplica_regras: [RULE-001]
@@ -198,7 +198,7 @@ Programa de Trabalho 10.122.0001, Fonte 100.
 
 ```yaml
 id: 001-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-001
 rule_class: NORMATIVE
 aplica_regras: [RULE-001]
@@ -218,7 +218,7 @@ Partir do TR-MINIMO, acrescentar `Contratação por sistema de registro de preç
 
 ```yaml
 id: 002-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-002
 rule_class: NORMATIVE
 aplica_regras: [RULE-002]
@@ -238,7 +238,7 @@ Valor unitário de referência: R$ 26,00.
 
 ```yaml
 id: 002-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-002
 rule_class: NORMATIVE
 aplica_regras: [RULE-002]
@@ -256,7 +256,7 @@ attrs.falta: quantidade
 
 ```yaml
 id: 002-D3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-002
 rule_class: NORMATIVE
 aplica_regras: [RULE-002]
@@ -274,7 +274,7 @@ Valor unitário de referência: R$ 26,00.
 
 ```yaml
 id: 002-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-002
 rule_class: NORMATIVE
 aplica_regras: [RULE-002]
@@ -291,7 +291,7 @@ esperado: silencio
 
 ```yaml
 id: 002-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-002
 rule_class: NORMATIVE
 aplica_regras: [RULE-002]
@@ -311,7 +311,7 @@ Unidade de fornecimento: unidade. Quantidade estimada: 50.
 
 ```yaml
 id: 003-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-003
 rule_class: NORMATIVE
 aplica_regras: [RULE-003]
@@ -327,7 +327,7 @@ A contratada entregará os materiais no Almoxarifado Municipal após notificaç�
 
 ```yaml
 id: 003-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-003
 rule_class: NORMATIVE
 aplica_regras: [RULE-003]
@@ -348,7 +348,7 @@ A contratada entregará os bens mediante ordem de fornecimento.
 
 ```yaml
 id: 003-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-003
 rule_class: NORMATIVE
 aplica_regras: [RULE-003]
@@ -363,7 +363,7 @@ Entrega no Almoxarifado Municipal em até 15 dias corridos da confirmação do r
 
 ```yaml
 id: 003-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-003
 rule_class: NORMATIVE
 aplica_regras: [RULE-003]
@@ -384,7 +384,7 @@ Entrega imediata, no ato da retirada, mediante Nota de Empenho.
 
 ```yaml
 id: 003-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-003
 rule_class: NORMATIVE
 aplica_regras: [RULE-003]
@@ -406,7 +406,7 @@ O fornecimento será parcelado, sob demanda, durante a vigência. Cada parcela d
 
 ```yaml
 id: 004-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -428,7 +428,7 @@ Para o mesmo Item 1, a garantia técnica integral prestada pela contratada contr
 
 ```yaml
 id: 004-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -447,7 +447,7 @@ Garantia técnica integral do Item 1 pela contratada: 24 meses do recebimento de
 
 ```yaml
 id: 004-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -463,7 +463,7 @@ A mesma garantia terá 12 meses, contados do recebimento definitivo.
 
 ```yaml
 id: 004-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -479,7 +479,7 @@ Garantia técnica do Item 1 pela contratada: 12 meses do recebimento definitivo.
 
 ```yaml
 id: 004-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -494,7 +494,7 @@ Garantia técnica on-site de 12 meses. Entrega em 15 dias corridos.
 
 ```yaml
 id: 004-N4
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-004
 rule_class: NORMATIVE
 aplica_regras: [RULE-004]
@@ -515,7 +515,7 @@ Não se exige garantia técnica adicional para os gêneros perecíveis, consider
 
 ```yaml
 id: 005-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -531,7 +531,7 @@ O contrato será fiscalizado pelo Setor de Patrimônio. Os bens serão entregues
 
 ```yaml
 id: 005-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -547,7 +547,7 @@ O recebimento observará o art. 140 da Lei nº 14.133/2021. Pagamento em até 10
 
 ```yaml
 id: 005-D3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -563,7 +563,7 @@ Os bens serão recebidos provisoriamente, de forma sumária, no ato da entrega, 
 
 ```yaml
 id: 005-D4
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -583,7 +583,7 @@ O recebimento definitivo ocorrerá em XXXX dias por [servidor/comissão a indica
 
 ```yaml
 id: 005-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -598,7 +598,7 @@ Os bens serão recebidos provisoriamente, de forma sumária, pelo fiscal no ato 
 
 ```yaml
 id: 005-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -613,7 +613,7 @@ Para estes bens padronizados de pronta entrega, os recebimentos provisório e de
 
 ```yaml
 id: 005-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-005
 rule_class: NORMATIVE
 aplica_regras: [RULE-005]
@@ -634,7 +634,7 @@ Em razão da conferência integral e imediata de cada unidade no balcão de reti
 
 ```yaml
 id: 006-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-006
 rule_class: ADVISORY
 aplica_regras: [RULE-006]
@@ -653,7 +653,7 @@ A distribuição das 500 carteiras seguirá os quantitativos e endereços das es
 
 ```yaml
 id: 006-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-006
 rule_class: ADVISORY
 aplica_regras: [RULE-006]
@@ -671,7 +671,7 @@ A distribuição seguirá o Anexo I deste TR.
 
 ```yaml
 id: 006-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-006
 rule_class: ADVISORY
 aplica_regras: [RULE-006]
@@ -688,7 +688,7 @@ Almoxarifado Municipal.
 
 ```yaml
 id: 006-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-006
 rule_class: ADVISORY
 aplica_regras: [RULE-006]
@@ -703,7 +703,7 @@ A demanda está detalhada no Anexo I do ETP municipal nº 12/2024, que não inte
 
 ```yaml
 id: 006-N4
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-006
 rule_class: ADVISORY
 aplica_regras: [RULE-006]
@@ -727,7 +727,7 @@ Os endereços e quantitativos constam do Anexo III deste Termo de Referência, j
 
 ```yaml
 id: 007-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-007
 rule_class: NORMATIVE
 aplica_regras: [RULE-007]
@@ -746,7 +746,7 @@ Item 1: bebedouro de mesa, gabinete em plástico ABS, capacidade de 10 litros, 1
 
 ```yaml
 id: 007-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-007
 rule_class: NORMATIVE
 aplica_regras: [RULE-007]
@@ -763,7 +763,7 @@ Item 1 — especificação: MDF 18 mm, 3 gavetas.
 
 ```yaml
 id: 007-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-007
 rule_class: NORMATIVE
 aplica_regras: [RULE-007]
@@ -779,7 +779,7 @@ Item 1: tipo coluna, chapa de aço inox escovado, reservatório de 50 litros, 22
 
 ```yaml
 id: 007-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-007
 rule_class: NORMATIVE
 aplica_regras: [RULE-007]
@@ -795,7 +795,7 @@ Item 2: bebedouro de mesa, plástico ABS, 10 litros, 110 V.
 
 ```yaml
 id: 007-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: RULE-007
 rule_class: NORMATIVE
 aplica_regras: [RULE-007]
@@ -825,7 +825,7 @@ Estes testes são de qualidade editorial `ADVISORY`, fora da R8 normativa. Nunca
 
 ```yaml
 id: 008-D1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ADVISORY-008
 rule_class: ADVISORY
 aplica_regras: [ADVISORY-008]
@@ -840,7 +840,7 @@ O calçado de segurança deverá possuir biqueira de composite com resistência 
 
 ```yaml
 id: 008-D2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ADVISORY-008
 rule_class: ADVISORY
 aplica_regras: [ADVISORY-008]
@@ -855,7 +855,7 @@ O tecido dos uniformes deve possuir proteção solar UV fator 50+ e propriedade 
 
 ```yaml
 id: 008-N1
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ADVISORY-008
 rule_class: ADVISORY
 aplica_regras: [ADVISORY-008]
@@ -870,7 +870,7 @@ O calçado deverá possuir biqueira de composite de 200 Joules e solado SRC. A c
 
 ```yaml
 id: 008-N2
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ADVISORY-008
 rule_class: ADVISORY
 aplica_regras: [ADVISORY-008]
@@ -885,7 +885,7 @@ Item 1: cadeira giratória, revestimento em tecido preto, cinco rodízios e apoi
 
 ```yaml
 id: 008-N3
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 rule_id: ADVISORY-008
 rule_class: ADVISORY
 aplica_regras: [ADVISORY-008]
@@ -902,49 +902,49 @@ Os equipamentos deverão ser de alta qualidade e tecnologia moderna, com bom des
 
 | id | profile_id | rule_id | rule_class | esperado |
 |---|---|---|---|---|
-| TR-MINIMO | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ALL | NORMATIVE + ADVISORY | silêncio |
-| 001-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
-| 001-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
-| 001-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | silêncio |
-| 001-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | silêncio |
-| 001-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
-| 002-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
-| 002-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
-| 002-D3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
-| 002-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | silêncio |
-| 002-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | silêncio |
-| 003-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | finding |
-| 003-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | finding |
-| 003-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
-| 003-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
-| 003-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
-| 004-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | finding |
-| 004-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | finding |
-| 004-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
-| 004-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
-| 004-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
-| 004-N4 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
-| 005-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
-| 005-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
-| 005-D3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
-| 005-D4 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
-| 005-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
-| 005-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
-| 005-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
-| 006-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | advisory |
-| 006-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
-| 006-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
-| 006-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
-| 006-N4 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
-| 007-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | finding |
-| 007-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | finding |
-| 007-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
-| 007-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
-| 007-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
-| 008-D1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | advisory |
-| 008-D2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | advisory |
-| 008-N1 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
-| 008-N2 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
-| 008-N3 | MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
+| TR-MINIMO | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ALL | NORMATIVE + ADVISORY | silêncio |
+| 001-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
+| 001-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
+| 001-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | silêncio |
+| 001-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | silêncio |
+| 001-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-001 | NORMATIVE | finding |
+| 002-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
+| 002-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
+| 002-D3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | finding |
+| 002-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | silêncio |
+| 002-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-002 | NORMATIVE | silêncio |
+| 003-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | finding |
+| 003-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | finding |
+| 003-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
+| 003-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
+| 003-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-003 | NORMATIVE | silêncio |
+| 004-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | finding |
+| 004-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | finding |
+| 004-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
+| 004-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
+| 004-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
+| 004-N4 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-004 | NORMATIVE | silêncio |
+| 005-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
+| 005-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
+| 005-D3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
+| 005-D4 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | finding |
+| 005-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
+| 005-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
+| 005-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-005 | NORMATIVE | silêncio |
+| 006-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | advisory |
+| 006-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
+| 006-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
+| 006-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
+| 006-N4 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-006 | ADVISORY / INTEGRITY | silêncio |
+| 007-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | finding |
+| 007-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | finding |
+| 007-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
+| 007-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
+| 007-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | RULE-007 | NORMATIVE | silêncio |
+| 008-D1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | advisory |
+| 008-D2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | advisory |
+| 008-N1 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
+| 008-N2 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
+| 008-N3 | PUBLICO_14133_PREGAO_ELETRONICO_BENS | ADVISORY-008 | ADVISORY / QUALITY | silêncio |
 
 Nenhum controle entra no linter sem casos D e N correspondentes. Caso que altere predicado exige atualizar `rules_draft.md` no mesmo commit e preservar a separação entre `NORMATIVE` e `ADVISORY`.

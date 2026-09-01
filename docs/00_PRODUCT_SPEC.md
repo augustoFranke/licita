@@ -2,7 +2,7 @@
 
 **Status:** Draft v0.1  
 **Escopo:** produto completo, cobrindo a fase preparatória até execução/fiscalização da contratação.  
-**Perfil inicial e exclusivo desta versão:** `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` — ente municipal, Lei 14.133/2021, pregão eletrônico e aquisição de bens comuns.  
+**Perfil inicial e exclusivo desta versão:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS` — ente municipal, Lei 14.133/2021, pregão eletrônico e aquisição de bens comuns.  
 **Princípio central:** a ferramenta não substitui decisão administrativa, jurídica ou técnica. Ela estrutura evidências, detecta inconsistências e reduz trabalho mecânico.
 
 Este arquivo, com `01`–`04` e o [README](README.md), é a fonte de verdade do produto. A ordem de construção é M0–M6 em `04_TRACEABILITY_MATRIX.md`. `scope.md` e `Plano.md` recortam a fatia atual; não redefinem o produto.
@@ -35,9 +35,9 @@ Cada valor estruturado deve possuir **proveniência**: documento, página/seçã
 
 ### 1.1 Escopo suportado nesta versão
 
-Um processo só é `SUPPORTED` quando satisfaz cumulativamente o perfil `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`:
+Um processo só é `SUPPORTED` quando satisfaz cumulativamente o perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`:
 
-- órgão ou entidade da esfera municipal;
+- órgão ou entidade de qualquer esfera (federal, estadual, distrital ou municipal);
 - regência pela Lei 14.133/2021;
 - modalidade pregão, em forma eletrônica;
 - objeto de aquisição de bens comuns.

@@ -36,7 +36,7 @@ externo ou transformar interpretação jurídica em fato estruturado.
 ## 1. Escopo e unidade de trabalho
 
 Anotar apenas processos elegíveis no perfil exclusivo
-`MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: esfera `M`, Lei nº 14.133/2021,
+`PUBLICO_14133_PREGAO_ELETRONICO_BENS`: esfera `M`, Lei nº 14.133/2021,
 Pregão Eletrônico (`PE`) e aquisição de bens comuns. Nesta rodada a unidade é
 exatamente o par ETP→TR da mesma contratação. O controle negativo SAEMA de
 energia e qualquer processo `FORA_DO_PERFIL` não entram em R2/R4 nem nas

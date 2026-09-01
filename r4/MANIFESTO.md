@@ -1,6 +1,6 @@
 # Manifesto do Golden Dataset (R4)
 
-**Perfil:** `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`  
+**Perfil:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS`  
 **Política:** `4-municipal-historical-ocr`  
 **Total de Processos:** 10 (5 `dev`, 5 `eval`)  
 **Total de Itens:** 192  

@@ -9,8 +9,8 @@ perfil exclusivo de `scope.md`; nos demais pontos, vale o pack.
 - **M2–M6** só depois da saída de R10 verde, na ordem de `04`
 
 A numeração antiga “v1” = fatia M0–M1, não o produto completo.
-O perfil exclusivo `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` vale para o produto
-atual inteiro: esfera municipal (`M`), Lei nº 14.133/2021, Pregão Eletrônico
+O perfil exclusivo `PUBLICO_14133_PREGAO_ELETRONICO_BENS` vale para o produto
+atual inteiro: qualquer esfera (`F`/`E`/`D`/`M`), Lei nº 14.133/2021, Pregão Eletrônico
 (`PE`) e aquisição de bens. Escopo binário: [`scope.md`](scope.md).
 
 ---
@@ -38,7 +38,7 @@ Prova da saída: checklist versionado neste arquivo + testes/CI quando o artefat
 
 **Saída**
 - `scope.md` responde `SUPPORTED` ou `OUT_OF_SCOPE` sem “depende” e restringe
-  todo o produto atual a `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`.
+  todo o produto atual a `PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 - PE está definido como Pregão Eletrônico; PNCP e Compras.gov estão registrados
   somente como canais.
 - A única base normativa vinculante é a Lei nº 14.133/2021. IN SEGES/ME nº
@@ -64,7 +64,7 @@ Pares ETP→TR reais, reproduzíveis. Operação: [`corpus/README.md`](../corpus
   tem exatamente 1 ETP e 1 TR, ambos reabertos localmente, texto utilizável e
   relação `ETP → TR` catalogada.
 - Cada elegível tem esfera `M`, Lei nº 14.133/2021, modalidade PE, objeto de
-  aquisição de bens e perfil `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`.
+  aquisição de bens e perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 - Diversidade calculada somente sobre elegíveis: ≥5 CNPJs, ≥3 categorias e
   ≤5 processos por CNPJ.
 - Metadados: CNPJ/órgão, processo, data, objeto, categoria, perfil, esfera,
@@ -237,7 +237,7 @@ Compara valores **já confirmados** (ou golden R4 no lugar da UI, em teste).
 Catálogo: [`rules_draft.md`](rules_draft.md). Casos: [`rules_synthetic_tests.md`](rules_synthetic_tests.md).
 
 **Entrada:** TR estruturado `CONFIRMED` ou fixture sintético no schema; perfil
-`MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` de `scope.md`. Processo
+`PUBLICO_14133_PREGAO_ELETRONICO_BENS` de `scope.md`. Processo
 `FORA_DO_PERFIL`, inclusive o controle negativo SAEMA, não entra na prova.
 
 **Saída**

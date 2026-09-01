@@ -2,9 +2,9 @@
 
 Ferramenta para estruturar e verificar a consistência documental de processos
 municipais de compras públicas no perfil exclusivo
-`MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`.
+`PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 
-O produto atual inteiro cobre somente aquisições municipais de bens por Pregão
+O produto atual inteiro cobre somente aquisições públicas de bens por Pregão
 Eletrônico (PE), sob a Lei nº 14.133/2021. PNCP e Compras.gov são canais de
 dados, não fontes normativas.
 

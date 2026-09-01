@@ -9,9 +9,9 @@ Referências:
 
 ## Preâmbulo transversal aos fluxos 1–14
 
-- O perfil único atual é `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
+- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
 - Nos fluxos executados pela plataforma, FR-006 é a primeira porta de domínio. Apenas processo `SUPPORTED` alimenta corpus aprovado, denominadores, comparáveis e engines. Processo `OUT_OF_SCOPE` pode ser preservado na trilha de rejeição/auditoria, com motivo e evidência, mas é excluído desses usos.
-- Toda busca, painel, contagem e exportação exibe e conserva os filtros de esfera municipal, perfil e estado de escopo. PNCP e Compras.gov são canais: não tornam um processo municipal por si sós.
+- Toda busca, painel, contagem e exportação exibe e conserva os filtros de esfera, perfil e estado de escopo. PNCP e Compras.gov são canais: não enquadram um processo no perfil por si sós.
 - Em cada importação, o hash obrigatório cobre o arquivo original imutável. Se houver OCR, o texto é derivado auditável ligado ao original, com motor, idioma, confiança e hash ou versão do resultado; reprocessamento nunca altera o original.
 - Engines operam somente sobre documentos ativos/utilizáveis e dados confirmados. Toda conclusão abre sua evidência e termina em decisão humana registrada; a plataforma não certifica legalidade nem substitui decisão administrativa, técnica, jurídica ou de controle.
 - A base normativa vinculante deste perfil é a Lei 14.133/2021. IN SEGES/ME nº 81 e modelos AGU/TR Digital são `REFERENCE_ONLY` e não determinam escopo nem sustentam, isoladamente, finding normativo.
@@ -105,7 +105,7 @@ flowchart TD
 
 1. Usuário clica `Nova contratação`.
 2. Informa CNPJ e identificação do órgão/entidade, unidade, objeto, responsável, esfera, regime legal, modalidade, forma, natureza do objeto e perfil.
-3. Workspace nasce com status `DRAFT` e estado de escopo `SCOPE_VALIDATION`; FR-006 verifica cumulativamente esfera municipal, Lei 14.133/2021, pregão, forma eletrônica e bens comuns.
+3. Workspace nasce com status `DRAFT` e estado de escopo `SCOPE_VALIDATION`; FR-006 verifica cumulativamente esfera conhecida (`F`/`E`/`D`/`M`), Lei 14.133/2021, pregão, forma eletrônica e bens comuns.
 4. Pessoa autorizada confirma a decisão e sua evidência:
    - `OUT_OF_SCOPE`: registra motivo na trilha de rejeição/auditoria e bloqueia corpus aprovado, denominadores, comparáveis e engines;
    - `SUPPORTED`: prossegue.
@@ -170,7 +170,7 @@ TR §5.8: 12 meses
 
 Ação da UI: `Verificar mercado`.
 
-Antes de executar, o sistema exige workspace `SUPPORTED`, requisitos confirmados e filtros visíveis de esfera municipal, perfil e escopo. Fonte PNCP/Compras.gov não dispensa a validação de cada registro.
+Antes de executar, o sistema exige workspace `SUPPORTED`, requisitos confirmados e filtros visíveis de esfera, perfil e escopo. Fonte PNCP/Compras.gov não dispensa a validação de cada registro.
 
 ```mermaid
 flowchart LR
@@ -186,7 +186,7 @@ Saída por item:
 
 ```text
 ITEM-004 — Notebook
-Perfil: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+Perfil: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 Candidatos analisados no filtro: 143
 Compatíveis: 2
 

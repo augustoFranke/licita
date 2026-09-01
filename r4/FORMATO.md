@@ -217,7 +217,7 @@ de anotação podem complementar esse registro em CSV ou JSON sob `r4/` e devem
 manter, no mínimo:
 
 - `process_id`, `split` (`dev` ou `eval`), perfil
-  `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`, esfera `M` e IDs de ETP/TR;
+  `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, esfera `M` e IDs de ETP/TR;
 - URL/canal e SHA-256 de cada original imutável;
 - policy `4-municipal-historical-ocr` e, quando houver OCR, idioma,
   versão/configuração, hash e proveniência do artefato derivado;

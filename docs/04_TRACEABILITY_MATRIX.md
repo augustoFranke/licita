@@ -9,7 +9,7 @@ Este arquivo é a referência para verificar se uma feature possui:
 
 ## Premissas transversais
 
-O único perfil atual é `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: esfera municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, não Pernambuco) e aquisição de bens comuns. FR-006 antecede F-02–F-15: somente `SUPPORTED` entra em corpus aprovado, denominadores, comparáveis ou engines; `OUT_OF_SCOPE` pode ser retido apenas em trilha segregada de rejeição/auditoria.
+O único perfil atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: qualquer esfera (`F`/`E`/`D`/`M`), Lei 14.133/2021, **Pregão Eletrônico** (`PE`, não Pernambuco) e aquisição de bens comuns. FR-006 antecede F-02–F-15: somente `SUPPORTED` entra em corpus aprovado, denominadores, comparáveis ou engines; `OUT_OF_SCOPE` pode ser retido apenas em trilha segregada de rejeição/auditoria.
 
 Originais são imutáveis e têm hash obrigatório sobre seus bytes. OCR é derivado auditável, com motor, idioma, confiança e hash ou versão do resultado. Toda análise usa documentos ativos/utilizáveis e dados confirmados, expõe evidência e filtros municipais e termina em decisão humana. Exportações preservam perfil, filtros, exclusões, hashes e versões.
 
@@ -52,7 +52,7 @@ Milestone indica ordem e alvo, não disponibilidade automática. Uma feature ou 
 
 Este gate fecha o corpus aprovado de R1 somente quando **todos** os critérios forem atendidos em conjunto:
 
-- pelo menos **15 processos elegíveis** no perfil `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`;
+- pelo menos **15 processos elegíveis** no perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`;
 - pelo menos **5 CNPJs distintos** de órgãos/entidades entre os processos elegíveis;
 - pelo menos **3 categorias** entre os processos elegíveis;
 - no máximo **5 processos elegíveis por CNPJ**;

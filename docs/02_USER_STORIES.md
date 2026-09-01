@@ -8,9 +8,9 @@ Cada história referencia as features (`F-*`) e requisitos (`FR-*`) corresponden
 
 ## Premissas transversais de aceite
 
-- O perfil único atual é `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
+- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
 - FR-006 é porta obrigatória: somente workspace `SUPPORTED` pode alimentar o corpus aprovado, denominadores, comparáveis e engines F-03–F-14. Material `OUT_OF_SCOPE` pode permanecer em trilha de rejeição/auditoria, mas não participa dessas entradas, contagens ou conclusões.
-- Toda história que consulta, lista ou analisa dados aplica e exibe os filtros de esfera municipal, perfil e estado de escopo. Toda exportação registra perfil ativo, filtros, versões e exclusões; não promove material fora do perfil a evidência aprovada.
+- Toda história que consulta, lista ou analisa dados aplica e exibe os filtros de esfera, perfil e estado de escopo. Toda exportação registra perfil ativo, filtros, versões e exclusões; não promove material fora do perfil a evidência aprovada.
 - O arquivo original é imutável e possui hash obrigatório calculado sobre seus bytes. OCR é apenas derivado auditável, vinculado ao original e identificado por motor, idioma, confiança e hash ou versão do resultado; nunca altera o original.
 - Valores, comparações e findings precisam apontar evidência navegável. A ferramenta apoia decisão humana, não certifica legalidade nem substitui decisão administrativa, técnica, jurídica ou de controle.
 - Para conclusões normativas deste perfil, a base vinculante é a Lei 14.133/2021. IN SEGES/ME nº 81 e modelos AGU/TR Digital são `REFERENCE_ONLY`: podem apoiar revisão humana, mas não determinar escopo nem, isoladamente, gerar conclusão ou finding normativo.
@@ -71,7 +71,7 @@ Cada história referencia as features (`F-*`) e requisitos (`FR-*`) corresponden
 **Reqs:** FR-006
 
 **Aceite**
-- a decisão usa cumulativamente esfera municipal, Lei 14.133/2021, modalidade pregão, forma eletrônica e aquisição de bens comuns;
+- a decisão usa cumulativamente esfera conhecida (`F`/`E`/`D`/`M`), Lei 14.133/2021, modalidade pregão, forma eletrônica e aquisição de bens comuns;
 - `SUPPORTED` libera a ingestão e os engines conforme sua disponibilidade;
 - `OUT_OF_SCOPE` registra motivo e evidência na trilha de rejeição/auditoria, sem entrar no corpus aprovado, denominadores, comparáveis ou engines;
 - canal de origem, inclusive PNCP ou Compras.gov, não determina a esfera;

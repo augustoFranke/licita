@@ -12,7 +12,7 @@ Estes enums são normativos. Schema e demais docs devem convergir para eles.
 
 | Contrato | Valores |
 |---|---|
-| `Workspace.scope_profile` | `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` |
+| `Workspace.scope_profile` | `PUBLICO_14133_PREGAO_ELETRONICO_BENS` |
 | `Workspace.scope_status` | `SCOPE_VALIDATION`, `SUPPORTED`, `OUT_OF_SCOPE` |
 | `Workspace.government_sphere` | `MUNICIPAL`, `ESTADUAL`, `DISTRITAL`, `FEDERAL` |
 | `Workspace.legal_regime` | `LEI_14133_2021` |
@@ -87,7 +87,7 @@ O workspace percorre os estados documentais definidos em `00_PRODUCT_SPEC.md` §
 
 ### FR-006 — Gate obrigatório de escopo
 **Feature:** F-01  
-Antes de extração de domínio, indexação, análise, contagem ou recuperação como comparável, o sistema deve validar o workspace contra `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`.
+Antes de extração de domínio, indexação, análise, contagem ou recuperação como comparável, o sistema deve validar o workspace contra `PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 
 **AC**
 - dados ausentes ou ainda não confirmados mantêm `scope_status = SCOPE_VALIDATION` e nenhuma engine de domínio é executada;
@@ -133,7 +133,7 @@ Usuário deve aceitar, editar ou rejeitar extrações.
 Toda regra deve registrar `source_type`, fonte, versão, vigência e perfis aos quais é aplicável.
 
 **AC**
-- regra `NORMATIVE` só gera finding normativo quando aplicável a `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`;
+- regra `NORMATIVE` só gera finding normativo quando aplicável a `PUBLICO_14133_PREGAO_ELETRONICO_BENS`;
 - regra `REFERENCE_ONLY` pode fornecer contexto identificado como não normativo, mas não determina suporte, não gera finding normativo e não eleva severidade por suposta obrigação;
 - IN SEGES/ME nº 81 e modelos AGU são `REFERENCE_ONLY` neste perfil;
 - findings e relatórios exibem o `source_type` das regras utilizadas.
@@ -280,7 +280,7 @@ Contratações públicas usadas como comparáveis devem passar individualmente p
 Encontrar preços de itens equivalentes, registrando `scope_status`, esfera, CNPJ do órgão/entidade quando aplicável e canal de cada candidato público.
 
 **AC**
-- PNCP/Compras.gov pode ser canal de coleta, mas não prova esfera municipal;
+- PNCP/Compras.gov pode ser canal de coleta, mas não prova a esfera do ente;
 - candidato público sem escopo validado não entra na amostra;
 - exclusões por escopo ficam auditáveis e fora do denominador.
 
@@ -385,7 +385,7 @@ Toda chamada de LLM que afete estado deve retornar schema validado.
 Conclusões semânticas devem referenciar evidências fornecidas ao modelo.
 
 ### FR-102 — Agent tool isolation
-Agentes só podem acessar ferramentas explicitamente registradas, com filtros de `scope_profile = MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` e `scope_status = SUPPORTED` aplicados no servidor.
+Agentes só podem acessar ferramentas explicitamente registradas, com filtros de `scope_profile = PUBLICO_14133_PREGAO_ELETRONICO_BENS` e `scope_status = SUPPORTED` aplicados no servidor.
 
 ### FR-103 — Iteration budget
 Cada tarefa agêntica deve possuir limite de passos/custo/tempo.
@@ -459,7 +459,7 @@ Findings `HIGH` devem ter precisão alvo ≥ 90%.
 Falha em um módulo não deve invalidar resultados independentes.
 
 ### NFR-012 — Perfil normativo municipal
-Nesta versão, regras e execução devem ser isoladas pelo único perfil aceito, `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`, sem fallback para regras federais, estaduais ou distritais. A organização por `profile` pode permitir evolução futura sem alterar o escopo aceito agora; nenhum perfil não municipal pode ser ativado ou tratado como `SUPPORTED` nesta versão.
+Nesta versão, regras e execução devem ser isoladas pelo único perfil aceito, `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, sem fallback para regras federais, estaduais ou distritais. A organização por `profile` pode permitir evolução futura sem alterar o escopo aceito agora; nenhum perfil não municipal pode ser ativado ou tratado como `SUPPORTED` nesta versão.
 
 ---
 

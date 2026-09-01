@@ -2,7 +2,7 @@
 
 Fonte de verdade do produto, nesta ordem:
 
-1. O perfil exclusivo `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`, definido em
+1. O perfil exclusivo `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, definido em
    [`scope.md`](scope.md), e este README
 2. Os arquivos numerados `00`–`04`, sempre interpretados dentro desse perfil
 3. O recorte da fatia em construção (`scope.md`, `Plano.md`)

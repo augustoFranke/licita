@@ -1,6 +1,6 @@
 # Catálogo Municipal de Regras Determinísticas do TR Linter — Compras de Bens Comuns
 
-Catálogo versionado da R8 / F-05 determinística (fatia M1) para o perfil `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`: Termo de Referência municipal para aquisição de bens comuns por pregão eletrônico, sob a Lei nº 14.133/2021.
+Catálogo versionado da R8 / F-05 determinística (fatia M1) para o perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: Termo de Referência municipal para aquisição de bens comuns por pregão eletrônico, sob a Lei nº 14.133/2021.
 
 A única base normativa vinculante deste catálogo é a **Lei nº 14.133/2021 aplicável aos Municípios**. A IN SEGES/ME nº 81/2022, os modelos da AGU e o TR Digital são `REFERENCE_ONLY`: podem inspirar vocabulário, aliases e exemplos comparativos, mas nunca criam obrigação municipal, nunca sustentam finding `NORMATIVE` e nunca determinam a classificação `SUPPORTED`.
 
@@ -18,7 +18,7 @@ Testes: `rules_synthetic_tests.md`.
 
 | Campo | Valor |
 |---|---|
-| `profile_id` | `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` |
+| `profile_id` | `PUBLICO_14133_PREGAO_ELETRONICO_BENS` |
 | ente | Município |
 | regime | Lei nº 14.133/2021 |
 | modalidade | pregão eletrônico |
@@ -115,7 +115,7 @@ Antes de comparar:
 ```text
 rule_id: RULE-00X | ADVISORY-008
 rule_class: NORMATIVE | ADVISORY
-profile_id: MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+profile_id: PUBLICO_14133_PREGAO_ELETRONICO_BENS
 severity: HIGH | MEDIUM
 message: <achado, uma frase, sem juízo de ilegalidade>
 evidence: [<trechos com seção/página>]
@@ -165,7 +165,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-001
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Elemento descritivo exigido ausente ou sem conteúdo no TR.
 - **escopo**: Todo TR classificado `SUPPORTED` neste perfil. Avalia presença determinística, não qualidade argumentativa nem numeração de modelo.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 6º, XXIII, alíneas a a j, e art. 40, § 1º, incisos I a III.
@@ -188,7 +188,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-002
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Item ou lote sem quantidade numérica estimada ou sem unidade de fornecimento.
 - **escopo**: Cada `Item` extraído do TR. Não roda se o TR não tiver item identificável; isso é falha de extração ou RULE-001 em `objeto`.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 6º, XXIII, a, e art. 40, III.
@@ -209,7 +209,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-003
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Prazo determinado de entrega ou de cada fornecimento ausente.
 - **escopo**: Todo TR do perfil. Só prazo de entrega/fornecimento. Prazo de vigência contratual é outro campo e não substitui o prazo operacional.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 6º, XXIII, a e e, e art. 40, § 1º, II.
@@ -230,7 +230,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-004
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Prazo ou condição da mesma garantia técnica, para o mesmo bem e sujeito obrigado, citado de forma contraditória no TR.
 - **escopo**: Só contradição interna. Não torna garantia obrigatória quando ela não for aplicável. Menção única, ausência de garantia ou declaração justificada de não aplicabilidade não dispara.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 40, § 1º, III.
@@ -252,7 +252,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-005
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Regras aplicáveis de recebimento dos bens ausentes ou insuficientemente definidas.
 - **escopo**: Todo TR do perfil. Aceita rito provisório/definitivo, recebimento simultâneo explicitamente definido ou declaração fundamentada de não aplicabilidade de uma etapa. Mera citação da Lei não basta.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 140, II, a e b, e art. 40, § 1º, II.
@@ -276,7 +276,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 - **rule_id**: RULE-006
 - **rule_class**: ADVISORY
 - **category**: INTEGRITY
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Referência a anexo ou apêndice do TR não resolvida no pacote documental disponível.
 - **escopo**: Referências que afirmam integrar o TR. O arquivo referido pode estar incorporado ao TR ou separado no mesmo pacote. Não resolve anexos de edital, ETP, contrato ou ata declarados como outros instrumentos.
 - **fundamento_normativo**: não se aplica — controle de integridade documental, sem conclusão de compliance normativo.
@@ -298,7 +298,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 - **rule_id**: RULE-007
 - **rule_class**: NORMATIVE
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: O mesmo item tem, em seções distintas do TR, valores incompatíveis para o mesmo atributo extraído.
 - **escopo**: Contradição estruturada no próprio TR. Compara `Requirement` e `FieldValue` já extraídos. Contradição apenas prosaica, sem campos, é R9.
 - **fundamento_normativo**: Lei nº 14.133/2021, art. 6º, XXIII, a, e art. 40, V, a.
@@ -322,7 +322,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 - **legacy_id**: RULE-008 (aposentado)
 - **rule_class**: ADVISORY
 - **category**: QUALITY
-- **profile_id**: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`
+- **profile_id**: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **descricao**: Requisito técnico objetivamente aferível sem critério, documento ou método de comprovação explicitado.
 - **escopo**: Controle opcional de qualidade editorial, fora da R8 normativa. Só requisito objetivamente verificável usado como filtro de proposta, habilitação ou recebimento. Especificação ordinária do bem não entra; expressão vaga pertence à R9.
 - **fundamento_normativo**: não se aplica — não é teste automático de compliance municipal.

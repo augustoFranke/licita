@@ -1,7 +1,7 @@
 # Lote real ETP→TR municipal
 
 Este diretório é o corpus da R1 para o perfil exclusivo
-`MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`. O alvo inicial de 20 processos
+`PUBLICO_14133_PREGAO_ELETRONICO_BENS`. O alvo inicial de 20 processos
 **elegíveis** foi superado; o gate normativo aprova a partir de 15. Cada elegível deve ser municipal (`M`), regido
 pela Lei nº 14.133/2021, modalidade Pregão Eletrônico (`PE`), aquisição de bens
 e conter exatamente um ETP e um TR da mesma contratação, ambos reabertos
@@ -33,7 +33,7 @@ O gate é calculado somente sobre os elegíveis e exige:
 ```text
 Compras.gov.br /modulo-contratacoes/..._PNCP_14133
   → Pregão Eletrônico (codigoModalidade=5; modalidadeIdPncp=6)
-  → esfera municipal e Lei nº 14.133/2021
+  → esfera conhecida (F/E/D/M) e Lei nº 14.133/2021
   → filtro conservador de aquisição de bens
   → PNCP /api/.../compras/{ano}/{sequencial}/arquivos
   → identificação de ETP/TR

@@ -35,28 +35,23 @@ from licita_corpus.collect import (
     _registrar_documento,
     _resumir_arquivo,
 )
+from _corpus_sync import (
+    CORPUS,
+    ROOT,
+    carregar_catalogo,
+    para_publico,
+    publicar,
+    registrar_no_estado,
+)
 from licita_corpus.catalog import (
-    CADEIA,
     PAPEIS_OPCIONAIS,
     documento_id,
-    montar_relacoes,
     ocr_historico_utilizavel,
 )
 from licita_corpus.pncp import Pncp, partes_controle
-from licita_corpus.state import EstadoColeta
-from licita_corpus.store import baixar_documento, processo_id as pid_de_controle
+from licita_corpus.store import baixar_documento
 
-ROOT = Path(__file__).resolve().parent.parent
-CORPUS = ROOT / "corpus"
-CATALOG = CORPUS / "catalogo" / "documentos.jsonl"
-PROCESSOS = CORPUS / "catalogo" / "processos.json"
-RELACOES = CORPUS / "catalogo" / "relacoes.json"
-ESTADO = CORPUS / "estado" / "etp_tr.sqlite3"
 GOLDEN_DIRS = (ROOT / "r4" / "data" / "dev", ROOT / "r4" / "data" / "eval")
-
-
-def _carregar_catalogo() -> list[dict[str, Any]]:
-    return [json.loads(l) for l in CATALOG.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
 def _pids_golden() -> set[str]:
@@ -82,15 +77,9 @@ def _escolher_edital(resumidos: list[dict[str, Any]]) -> dict[str, Any] | None:
     return _escolher_mais_recente(com_titulo or tipo2)
 
 
-def _para_publico(registro: dict[str, Any]) -> dict[str, Any]:
-    """Remove campos internos e alinha ao formato persistido do catálogo."""
-    publico = {k: v for k, v in registro.items() if k not in ("_texto", "ocr_cache")}
-    publico["reuso"] = []
-    return publico
-
 
 def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
-    catalogo = _carregar_catalogo()
+    catalogo = carregar_catalogo()
     por_processo: dict[str, list[dict[str, Any]]] = {}
     controle: dict[str, str] = {}
     for d in catalogo:
@@ -158,7 +147,7 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
                       f"chars={v.get('caracteres')} precisa_ocr={v.get('precisa_ocr')}")
                 continue
 
-            publico = _para_publico(registro)
+            publico = para_publico(registro)
             novos.append(publico)
             por_processo[pid].append(publico)
             para_estado[pid] = registro
@@ -166,101 +155,8 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
                   f"({publico['bytes']} bytes, {registro['verificacao'].get('caracteres')} chars, "
                   f"ocr={registro['verificacao'].get('ocr_usado')})")
 
-    if not novos:
-        print("\nNenhum edital novo adicionado.")
-        return
+    publicar(novos, para_estado)
 
-    catalogo.extend(novos)
-    with CATALOG.open("w", encoding="utf-8") as saida:
-        for r in catalogo:
-            saida.write(json.dumps(r, ensure_ascii=False) + "\n")
-    sincronizar_catalogo(catalogo)
-    registrar_no_estado(para_estado)
-    print(f"\n{len(novos)} edital(is) adicionado(s) ao catálogo ({CATALOG.relative_to(ROOT)}).")
-
-
-def registrar_no_estado(novos_por_processo: dict[str, dict[str, Any]]) -> None:
-    """Anexa o elo baixado ao aceite do coletor, na política vigente.
-
-    ``collect._catalogar`` reconstrói ``documentos.jsonl`` a partir do banco de
-    estado, e não do catálogo. Um documento gravado só no catálogo é apagado na
-    primeira coleta seguinte — foi o que aconteceu com os editais. O estado é a
-    fonte da verdade, então o elo precisa entrar nele; o catálogo continua
-    sendo escrito aqui apenas para o corpus ficar utilizável de imediato.
-
-    O registro guardado no estado conserva ``_texto`` (a catalogação o usa) e
-    não leva ``reuso``, que é campo do catálogo.
-    """
-    if not ESTADO.exists():
-        print(f"[estado] ausente em {ESTADO.relative_to(ROOT)}: nada a registrar")
-        return
-
-    anexados, sem_aceite = 0, []
-    with EstadoColeta(ESTADO, 0, policy_version=POLICY_VERSION) as estado:
-        aceitos = {
-            str(candidato.get("numero_controle_pncp") or ""): (candidato, documentos)
-            for candidato, documentos in estado.aceitos()
-        }
-        por_pid = {
-            pid_de_controle(numero): numero for numero in aceitos
-        }
-        for pid, registro in novos_por_processo.items():
-            numero = por_pid.get(pid)
-            if numero is None:
-                sem_aceite.append(pid)
-                continue
-            candidato, documentos = aceitos[numero]
-            ja_tem = any(
-                d.get("documento_id") == registro["documento_id"] for d in documentos
-            )
-            if ja_tem:
-                continue
-            estado.salvar_aceito(candidato, [*documentos, registro])
-            anexados += 1
-
-    print(f"[estado] {anexados} elo(s) anexado(s) ao aceite da política {POLICY_VERSION}")
-    if sem_aceite:
-        print(
-            f"[estado] {len(sem_aceite)} processo(s) sem aceite nesta política "
-            f"(o elo vive só no catálogo até a próxima coleta): {sem_aceite[:5]}"
-        )
-
-
-def sincronizar_catalogo(catalogo: list[dict[str, Any]]) -> None:
-    """Refaz ``cadeia`` e relações a partir do catálogo de documentos.
-
-    O documento sozinho não basta: o gate lê a cadeia do processo e as arestas
-    de ``relacoes.json``. Sem esta sincronização o catálogo fica internamente
-    inconsistente — documento presente em disco e ausente da cadeia.
-    """
-    por_processo: dict[str, list[dict[str, Any]]] = {}
-    for d in catalogo:
-        por_processo.setdefault(d["processo_id"], []).append(d)
-
-    processos = json.loads(PROCESSOS.read_text(encoding="utf-8"))
-    registros = processos["processos"] if isinstance(processos, dict) else processos
-    cadeias: dict[str, dict[str, list[str]]] = {}
-    for processo in registros:
-        pid = processo["processo_id"]
-        cadeia = {papel: [] for papel in CADEIA}
-        for doc in por_processo.get(pid, []):
-            if doc.get("papel") in cadeia:
-                cadeia[doc["papel"]].append(doc["documento_id"])
-        processo["cadeia"] = cadeia
-        cadeias[pid] = cadeia
-    PROCESSOS.write_text(
-        json.dumps(processos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-
-    relacoes = json.loads(RELACOES.read_text(encoding="utf-8"))
-    arestas: list[dict[str, str]] = []
-    for pid, cadeia in cadeias.items():
-        arestas.extend(montar_relacoes(pid, cadeia))
-    relacoes["cadeia"] = arestas
-    RELACOES.write_text(
-        json.dumps(relacoes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    print(f"catálogo sincronizado: {len(arestas)} arestas de cadeia")
 
 
 def reparar_estado() -> None:
@@ -270,7 +166,7 @@ def reparar_estado() -> None:
     existir. ``_texto`` não é reconstruído aqui: a catalogação o recalcula ao
     abrir o arquivo, e só o preserva quando veio de OCR — nenhum destes veio.
     """
-    catalogo = _carregar_catalogo()
+    catalogo = carregar_catalogo()
     opcionais = {}
     for d in catalogo:
         if d.get("papel") in PAPEIS_OPCIONAIS:
@@ -299,7 +195,7 @@ def main() -> None:
         return
 
     if args.all:
-        pids = sorted({d["processo_id"] for d in _carregar_catalogo()})
+        pids = sorted({d["processo_id"] for d in carregar_catalogo()})
     elif args.golden:
         pids = sorted(_pids_golden())
     else:

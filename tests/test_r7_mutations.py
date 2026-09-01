@@ -46,6 +46,21 @@ MAX_FALSE_POSITIVE_RATE = 5.0
 # Piso de mutações para a suíte ter poder estatístico.
 MIN_INJECTED_MUTATIONS = 30
 
+# Campos que a saída da R7 declara comparar (Plano R7): quantidade, unidade,
+# prazo de entrega, vigência, garantia, especificação, local, valores. Prazo
+# de pagamento e recebimento NÃO estão na lista, então não são injetados aqui —
+# um valor anotado fora deste conjunto (ex.: PAYMENT_DEADLINE) permanece no
+# golden mas não é mutado, pois a R7 não promete compará-lo.
+R7_DECLARED_FIELDS = frozenset({
+    FieldType.QUANTITY,
+    FieldType.DELIVERY_DEADLINE,
+    FieldType.CONTRACT_TERM,      # vigência
+    FieldType.WARRANTY_TERM,      # garantia
+    FieldType.UNIT_PRICE,         # valores
+    FieldType.TOTAL_PRICE,        # valores
+    FieldType.DELIVERY_LOCATION,  # local
+})
+
 # Pares que a saída da R7 lista e que o lote atual não contém.
 SECONDARY_PAIRS = (
     (DocumentType.TR, DocumentType.EDITAL),
@@ -56,10 +71,15 @@ SECONDARY_PAIRS = (
 
 @dataclass(frozen=True)
 class BilateralFact:
-    """Fato anotado nos dois documentos do par, portanto mutável."""
+    """Fato anotado nos dois documentos do par, portanto mutável.
+
+    ``field_type`` para um FieldValue; ``attribute`` para um Requirement
+    (especificação). Exatamente um dos dois é preenchido.
+    """
 
     item_number: int | None
-    field_type: FieldType
+    field_type: FieldType | None = None
+    attribute: str | None = None
 
 
 def _item_number(item_id: str) -> int | None:
@@ -91,19 +111,26 @@ def _bilateral_facts(etp: Document, tr: Document) -> list[BilateralFact]:
     """Fatos anotados nos dois documentos — o único material mutável honesto."""
     facts: list[BilateralFact] = []
 
-    etp_doc_fields = {fv.field_type for fv in etp.field_values}
-    tr_doc_fields = {fv.field_type for fv in tr.field_values}
-    for field_type in sorted(etp_doc_fields & tr_doc_fields, key=lambda f: f.value):
+    def campos(doc_fvs):
+        return {fv.field_type for fv in doc_fvs} & R7_DECLARED_FIELDS
+
+    for field_type in sorted(campos(etp.field_values) & campos(tr.field_values),
+                             key=lambda f: f.value):
         facts.append(BilateralFact(item_number=None, field_type=field_type))
 
     etp_items = {_item_number(i.id): i for i in etp.items}
     tr_items = {_item_number(i.id): i for i in tr.items}
     shared_items = {n for n in etp_items.keys() & tr_items.keys() if n is not None}
     for number in sorted(shared_items):
-        etp_fields = {fv.field_type for fv in etp_items[number].field_values}
-        tr_fields = {fv.field_type for fv in tr_items[number].field_values}
-        for field_type in sorted(etp_fields & tr_fields, key=lambda f: f.value):
+        it_e, it_t = etp_items[number], tr_items[number]
+        for field_type in sorted(campos(it_e.field_values) & campos(it_t.field_values),
+                                 key=lambda f: f.value):
             facts.append(BilateralFact(item_number=number, field_type=field_type))
+        # especificação: requisitos com o mesmo atributo nos dois lados
+        attrs_e = {r.attribute for r in it_e.requirements}
+        attrs_t = {r.attribute for r in it_t.requirements}
+        for attr in sorted(attrs_e & attrs_t):
+            facts.append(BilateralFact(item_number=number, attribute=attr))
 
     return facts
 
@@ -131,7 +158,10 @@ def _inject(process: ProcurementProcess, fact: BilateralFact) -> ProcurementProc
         target = next(fv for fv in tr.field_values if fv.field_type == fact.field_type)
     else:
         item = next(i for i in tr.items if _item_number(i.id) == fact.item_number)
-        target = next(fv for fv in item.field_values if fv.field_type == fact.field_type)
+        if fact.attribute is not None:
+            target = next(r for r in item.requirements if r.attribute == fact.attribute)
+        else:
+            target = next(fv for fv in item.field_values if fv.field_type == fact.field_type)
 
     target.value = _divergent_value(target.value)
     return mutated
@@ -176,7 +206,8 @@ def test_r7_mutation_suite_detection_and_bilateral_evidence() -> None:
                 if any(len({ev.document_id for ev in f.evidence}) >= 2 for f in findings):
                     bilateral += 1
             else:
-                undetected.append(f"{name} {fact.field_type.value} item={fact.item_number}")
+                rotulo = fact.attribute or (fact.field_type.value if fact.field_type else "?")
+                undetected.append(f"{name} {rotulo} item={fact.item_number}")
 
     detection_rate = (detected / injected * 100) if injected else 0.0
     false_positive_rate = (baseline_findings / total_facts * 100) if total_facts else 0.0

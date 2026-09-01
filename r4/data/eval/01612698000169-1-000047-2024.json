@@ -1743,8 +1743,126 @@
           }
         }
       ],
-      "items": [],
-      "field_values": [],
+      "items": [
+        {
+          "id": "item-01",
+          "description": null,
+          "field_values": [
+            {
+              "field_type": "QUANTITY",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:etp",
+                  "page": 6,
+                  "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0003",
+                  "quote": "01",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "811750",
+              "unit": "BRL",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:etp",
+                  "page": 6,
+                  "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0004",
+                  "quote": "R$ 811.750,00",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "trator_motor_cilindros",
+              "operator": "EQUAL",
+              "value": 6,
+              "unit": null,
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:etp",
+                  "page": 6,
+                  "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0002",
+                  "quote": "01 – Trator agrícola de pneus, motor 6 cilindros, com 171 cv",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "attribute": "trator_potencia",
+              "operator": "EQUAL",
+              "value": 171,
+              "unit": "cv",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:etp",
+                  "page": 6,
+                  "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0002",
+                  "quote": "01 – Trator agrícola de pneus, motor 6 cilindros, com 171 cv",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "attribute": "trator_tracao",
+              "operator": "EQUAL",
+              "value": 44,
+              "unit": null,
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:etp",
+                  "page": 6,
+                  "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0002",
+                  "quote": "de potência, tração 4x4, cabine com ar-condicionado, caixa",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "01612698000169-1-000047-2024:etp",
+              "page": 6,
+              "block_id": "01612698000169-1-000047-2024:etp:p-0006:t-0001:r-0002:c-0003",
+              "quote": "01",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 30,
+          "unit": "DIAS",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "01612698000169-1-000047-2024:etp",
+              "page": 11,
+              "block_id": "01612698000169-1-000047-2024:etp:p-0011:b-0022",
+              "quote": "c) forma de pagamento: no prazo de 30 (trinta) dias após emissão da nota fiscal e entrega do bem ou serviços;",
+              "attr": null
+            }
+          ],
+          "review_status": "EXTRACTED"
+        }
+      ],
       "requirements": []
     },
     {
@@ -2250,49 +2368,101 @@
       ],
       "items": [
         {
-          "id": "item-1",
-          "description": "Conjunto de implementos agrícolas novos",
+          "id": "item-01",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
               "value": 1,
-              "unit": null,
-              "item_id": "item-1",
+              "unit": "UN",
+              "item_id": "item-01",
               "evidence": [
                 {
                   "document_id": "01612698000169-1-000047-2024:tr",
                   "page": 1,
                   "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0003",
                   "quote": "01",
-                  "attr": "QUANTITY"
+                  "attr": null
                 }
               ],
               "review_status": "EXTRACTED"
             },
             {
               "field_type": "TOTAL_PRICE",
-              "value": "811750.00",
+              "value": "811750",
               "unit": "BRL",
-              "item_id": "item-1",
+              "item_id": "item-01",
               "evidence": [
                 {
                   "document_id": "01612698000169-1-000047-2024:tr",
                   "page": 1,
                   "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0004",
                   "quote": "R$ 811.750,00",
-                  "attr": "TOTAL_PRICE"
+                  "attr": null
                 }
               ],
               "review_status": "EXTRACTED"
             }
           ],
-          "requirements": [],
+          "requirements": [
+            {
+              "attribute": "trator_motor_cilindros",
+              "operator": "EQUAL",
+              "value": 6,
+              "unit": null,
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:tr",
+                  "page": 1,
+                  "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
+                  "quote": "01 – Trator agrícola de pneus, motor 6 cilindros,",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "attribute": "trator_potencia",
+              "operator": "EQUAL",
+              "value": 171,
+              "unit": "cv",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:tr",
+                  "page": 1,
+                  "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
+                  "quote": "com 171 cv de potência, tração 4x4, cabine com",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "attribute": "trator_tracao",
+              "operator": "EQUAL",
+              "value": 44,
+              "unit": null,
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "01612698000169-1-000047-2024:tr",
+                  "page": 1,
+                  "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
+                  "quote": "com 171 cv de potência, tração 4x4, cabine com",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
           "evidence": [
             {
               "document_id": "01612698000169-1-000047-2024:tr",
               "page": 1,
-              "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0002",
-              "quote": "CONJUNTO \nIMPLEMENTOS \nAGRICOLAS \nNOVOS COMPONDO POR: \n01 – Trator agrícola de pneus, motor 6 cilindros, \ncom 171 cv de potência, tração 4x4, cabine com \nar-condicionado, caixa de câmbio com 36 \nvelocidades a frente e 36 a ré com reversor \nmecânico. Pneus dianteiros 18.4x26” e traseiros \n24,5x32”, equipado com hidráulico e tomada  de \npotência frontal. Novo de fabricação Nacional, \nano 2024. \n01 – Colhedora de forragens de milho, frontal com \nlargura mínima de corte de 2,30m com área total, \ncom 2 rotores, 12 facas cada rotor, com 4 rolos \nrecolhedores com facas serrilhadas, bica e \nquebra jato com acionamento electro-hidráulicos, \ncom exclusivo sistema quebrador de grãos. \nObs:  \na) Conjunto devera ser entregue montado \ncom todos os itens não mencionados que \n",
+              "block_id": "01612698000169-1-000047-2024:tr:p-0001:t-0001:r-0002:c-0003",
+              "quote": "01",
               "attr": null
             }
           ]

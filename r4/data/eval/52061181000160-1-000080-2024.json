@@ -13880,14 +13880,14 @@
       ],
       "items": [
         {
-          "id": "item-0001",
-          "description": "Apoio ergonômico para teclado NR17 confeccionado em espuma.",
+          "id": "item-01",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 40.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0001",
+              "value": 40,
+              "unit": "UN",
+              "item_id": "item-01",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -13905,21 +13905,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 3,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0003:t-0001:r-0002:c-0002",
-              "quote": "Apoio ergonômico para teclado NR17 confeccionado em espuma.",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0003:t-0001:r-0003:c-0002",
+              "quote": "40 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0002",
-          "description": "Apoio ergonômico para os pés NR17 com três níveis de \nregulagem de posição e plataforma antiderrapante.",
+          "id": "item-02",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0002",
+              "value": 20,
+              "unit": "UN",
+              "item_id": "item-02",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -13937,21 +13937,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 4,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0004:t-0001:r-0002:c-0002",
-              "quote": "Apoio ergonômico para os pés NR17 com três níveis de \nregulagem de posição e plataforma antiderrapante. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0004:t-0001:r-0003:c-0002",
+              "quote": "20 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0003",
-          "description": "Avental de segurança confeccionado em raspa, tiras em raspa e \nfivelas metálicas para ajustes, tamanho 120x70cm e com \nCertificado de Aprovação (CA).",
+          "id": "item-03",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0003",
+              "value": 20,
+              "unit": "UN",
+              "item_id": "item-03",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -13969,36 +13969,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 4,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0004:t-0002:r-0002:c-0002",
-              "quote": "Avental de segurança confeccionado em raspa, tiras em raspa e \nfivelas metálicas para ajustes, tamanho 120x70cm e com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0004:t-0002:r-0003:c-0002",
+              "quote": "20 unidades",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0004",
-          "description": "Bomba Elétrica. Vazão de ar/gás: 1600 mL/min, Distância de \namostragem: até 30 metros, Temperatura de operação: -20 a \n50°C, Umidade de operação: 10 a 90%UR, Alimentação: 3.7V \n(bateria de lítio recarregável), Tensão/corrente de carga: 5V / 1A \nAutonomia da bateria: 8 horas Bateria interna de lítio recarregável, \ncom Haste de alumínio com adaptador para mangueira, 120 cm \nde \nmangueira, \nConjunto \npara \nfiltragem \nmontado, \nFiltro \nsobressalente (cilindro branco) e Carregador de bateria bivolt com",
-          "field_values": [],
-          "requirements": [],
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:etp",
-              "page": 5,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0005:t-0002:r-0002:c-0002",
-              "quote": "Bomba Elétrica. Vazão de ar/gás: 1600 mL/min, Distância de \namostragem: até 30 metros, Temperatura de operação: -20 a \n50°C, Umidade de operação: 10 a 90%UR, Alimentação: 3.7V \n(bateria de lítio recarregável), Tensão/corrente de carga: 5V / 1A \nAutonomia da bateria: 8 horas Bateria interna de lítio recarregável, \ncom Haste de alumínio com adaptador para mangueira, 120 cm \nde \nmangueira, \nConjunto \npara \nfiltragem \nmontado, \nFiltro \nsobressalente (cilindro branco) e Carregador de bateria bivolt com \n",
-              "attr": null
-            }
-          ]
-        },
-        {
-          "id": "item-0005",
-          "description": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 36, com \nCertificado de Aprovação (CA).",
+          "id": "item-05",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
+              "value": 5,
               "unit": "PARES",
-              "item_id": "item-0005",
+              "item_id": "item-05",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14016,21 +14001,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 6,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0006:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 36, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0006:t-0002:r-0003:c-0002",
+              "quote": "05 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0006",
-          "description": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 37, com \nCertificado de Aprovação (CA).",
+          "id": "item-06",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
+              "value": 5,
               "unit": "PARES",
-              "item_id": "item-0006",
+              "item_id": "item-06",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14048,21 +14033,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 7,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0007:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 37, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0007:t-0002:r-0003:c-0002",
+              "quote": "05 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0007",
-          "description": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 38, com \nCertificado de Aprovação (CA).",
+          "id": "item-07",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
+              "value": 5,
               "unit": "PARES",
-              "item_id": "item-0007",
+              "item_id": "item-07",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14080,21 +14065,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 8,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0008:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional tipo bota cano longo, confeccionado em \nPVC injetado (com adição de plastificantes e nitrílicos). \nImpermeável, solado antiderrapante, sem forro, número 38, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0008:t-0002:r-0003:c-0002",
+              "quote": "05 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0008",
-          "description": "Calçado ocupacional isolante elétrico de uso profissional tipo \nbotina, fechamento em cadarço, confeccionado em couro tipo \nnobuck e material têxtil, forro da gáspea em não tecido, forro \nlateral em tecido, palmilha de montagem em material sintético \nmontada pelo sistema strobel, palmilha interna removível, biqueira \nplástica para conformação, solado de poliuretano bidensidade \ninjetado direto no cabedal e resistente ao escorregamento e \nsistema de absorção de energia na região do salto.",
+          "id": "item-08",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
+              "value": 3,
               "unit": "PARES",
-              "item_id": "item-0008",
+              "item_id": "item-08",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14112,21 +14097,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 9,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0009:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional isolante elétrico de uso profissional tipo \nbotina, fechamento em cadarço, confeccionado em couro tipo \nnobuck e material têxtil, forro da gáspea em não tecido, forro \nlateral em tecido, palmilha de montagem em material sintético \nmontada pelo sistema strobel, palmilha interna removível, biqueira \nplástica para conformação, solado de poliuretano bidensidade \ninjetado direto no cabedal e resistente ao escorregamento e \nsistema de absorção de energia na região do salto. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0009:t-0002:r-0003:c-0002",
+              "quote": "03 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0009",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 38, com \nCertificado de Aprovação (CA).",
+          "id": "item-09",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 30.0,
+              "value": 30,
               "unit": "PARES",
-              "item_id": "item-0009",
+              "item_id": "item-09",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14144,21 +14129,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 10,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0010:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 38, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0010:t-0002:r-0003:c-0002",
+              "quote": "30 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0010",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 39, com \nCertificado de Aprovação (CA).",
+          "id": "item-10",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
+              "value": 20,
               "unit": "PARES",
-              "item_id": "item-0010",
+              "item_id": "item-10",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14176,21 +14161,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 11,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0011:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 39, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0011:t-0002:r-0003:c-0002",
+              "quote": "20 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0011",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 40, com \nCertificado de Aprovação (CA).",
+          "id": "item-11",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 40.0,
+              "value": 40,
               "unit": "PARES",
-              "item_id": "item-0011",
+              "item_id": "item-11",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14208,21 +14193,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 12,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0012:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 40, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0012:t-0002:r-0003:c-0002",
+              "quote": "40 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0012",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 41, com \nCertificado de Aprovação (CA).",
+          "id": "item-12",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 40.0,
+              "value": 40,
               "unit": "PARES",
-              "item_id": "item-0012",
+              "item_id": "item-12",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14240,21 +14225,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 13,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0013:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 41, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0013:t-0002:r-0003:c-0002",
+              "quote": "40 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0013",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 42, com \nCertificado de Aprovação (CA).",
+          "id": "item-13",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 50.0,
+              "value": 50,
               "unit": "PARES",
-              "item_id": "item-0013",
+              "item_id": "item-13",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14272,21 +14257,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 14,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0014:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 42, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0014:t-0002:r-0003:c-0002",
+              "quote": "50 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0014",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 43, com \nCertificado de Aprovação (CA).",
+          "id": "item-14",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 30.0,
+              "value": 30,
               "unit": "PARES",
-              "item_id": "item-0014",
+              "item_id": "item-14",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14304,21 +14289,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 15,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0015:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 43, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0015:t-0002:r-0003:c-0002",
+              "quote": "30 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0015",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 44, com \nCertificado de Aprovação (CA).",
+          "id": "item-15",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 15.0,
+              "value": 15,
               "unit": "PARES",
-              "item_id": "item-0015",
+              "item_id": "item-15",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14336,21 +14321,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 16,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0016:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 44, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0016:t-0002:r-0003:c-0002",
+              "quote": "15 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0016",
-          "description": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 45, com \nCertificado de Aprovação (CA).",
+          "id": "item-16",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 15.0,
+              "value": 15,
               "unit": "PARES",
-              "item_id": "item-0016",
+              "item_id": "item-16",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14368,21 +14353,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 17,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0017:t-0002:r-0002:c-0002",
-              "quote": "Calçado ocupacional de uso profissional, tipo botina, fechamento \nem elástico sem componentes metálicos, confeccionado em couro \ncurtido ao cromo, palmilha de montagem em material sintético \nmontada pelo sistema strobel, biqueira de conformação, solado em \npoliuretano bidensidade com propriedades antiderrapantes injetado \ndiretamente no cabedal, com sistema de absorção de energia na \nregião do salto, resistente ao óleo combustível, número 45, com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0017:t-0002:r-0003:c-0002",
+              "quote": "15 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0017",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 40.",
+          "id": "item-17",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 8.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0017",
+              "value": 8,
+              "unit": "UN",
+              "item_id": "item-17",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14400,21 +14385,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 18,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0018:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 40. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0018:t-0002:r-0003:c-0002",
+              "quote": "8 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0018",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 41.",
+          "id": "item-18",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0018",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-18",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14432,21 +14417,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 19,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0019:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 41. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0019:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0019",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 42.",
+          "id": "item-19",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0019",
+              "value": 5,
+              "unit": "UN",
+              "item_id": "item-19",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14464,21 +14449,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 20,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0020:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 42. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0020:t-0002:r-0003:c-0002",
+              "quote": "5 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0020",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 43.",
+          "id": "item-20",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0020",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-20",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14496,21 +14481,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 21,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0021:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho G e bota nº 43. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0021:t-0002:r-0003:c-0002",
+              "quote": "2 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0021",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 39.",
+          "id": "item-21",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0021",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-21",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14528,21 +14513,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 22,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0022:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 39. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0022:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0022",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 40.",
+          "id": "item-22",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0022",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-22",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14560,21 +14545,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 23,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0023:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 40. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0023:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0023",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 41.",
+          "id": "item-23",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0023",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-23",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14592,21 +14577,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 24,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0024:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 41. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0024:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0024",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 42.",
+          "id": "item-24",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0024",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-24",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14624,21 +14609,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 25,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0025:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 42. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0025:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0025",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 43.",
+          "id": "item-25",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0025",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-25",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14656,21 +14641,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 26,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0026:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 43. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0026:t-0002:r-0003:c-0002",
+              "quote": "3 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0026",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 44.",
+          "id": "item-26",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0026",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-26",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14688,21 +14673,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 27,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0027:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GG e bota nº 44. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0027:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0027",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 41.",
+          "id": "item-27",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0027",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-27",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14720,21 +14705,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 28,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0028:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 41. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0028:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0028",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 42.",
+          "id": "item-28",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0028",
+              "value": 5,
+              "unit": "UN",
+              "item_id": "item-28",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14752,21 +14737,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 29,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0029:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 42. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0029:t-0002:r-0003:c-0002",
+              "quote": "5 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0029",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 43.",
+          "id": "item-29",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0029",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-29",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14784,21 +14769,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 30,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0030:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 43. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0030:t-0002:r-0003:c-0002",
+              "quote": "3 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0030",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 44.",
+          "id": "item-30",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0030",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-30",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14816,21 +14801,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 31,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0031:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 44. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0031:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0031",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 45.",
+          "id": "item-31",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0031",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-31",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14848,21 +14833,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 32,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0032:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho GGX e bota nº 45. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0032:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0032",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 38.",
+          "id": "item-32",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0032",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-32",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14880,21 +14865,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 33,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0033:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 38. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0033:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0033",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 39.",
+          "id": "item-33",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0033",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-33",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14912,21 +14897,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 34,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0034:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 39. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0034:t-0002:r-0003:c-0002",
+              "quote": "1 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0034",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 40.",
+          "id": "item-34",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0034",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-34",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14944,21 +14929,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 35,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0035:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 40. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0035:t-0002:r-0003:c-0002",
+              "quote": "2 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0035",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 41.",
+          "id": "item-35",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0035",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-35",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -14976,66 +14961,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 36,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0036:t-0001:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \nlogotipo da empresa, botas de PVC acopladas, com Certificado de \nAprovação (CA). Calça tamanho M e bota nº 41. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0036:t-0001:r-0003:c-0002",
+              "quote": "3 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0036",
-          "description": "CALÇA DE SANEAMENTO TIPO JARDINEIRA TAMANHO M \nCOM BOTA PVC ACOPLADA Nº 42",
-          "field_values": [],
-          "requirements": [],
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:etp",
-              "page": 36,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0036:t-0002:r-0001:c-0002",
-              "quote": "CALÇA DE SANEAMENTO TIPO JARDINEIRA TAMANHO M \nCOM BOTA PVC ACOPLADA Nº 42 \n",
-              "attr": null
-            }
-          ]
-        },
-        {
-          "id": "item-0036-p37",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em\npoliamida e a outra em PVC na cor azul royal, com bolso frontal",
-          "field_values": [],
-          "requirements": [],
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:etp",
-              "page": 37,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0037:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em\npoliamida e a outra em PVC na cor azul royal, com bolso frontal",
-              "attr": null
-            }
-          ]
-        },
-        {
-          "id": "item-0037",
-          "description": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura,",
-          "field_values": [],
-          "requirements": [],
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:etp",
-              "page": 38,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0038:t-0002:r-0002:c-0002",
-              "quote": "Calça confeccionada em nylon emborrachado com uma face em \npoliamida e a outra em PVC na cor azul royal, com bolso frontal \ninterno, duas alças de ajuste nos ombros e elásticos de regulagem \nna parte traseira, elásticos e cordão de regulagem na cintura, \n",
-              "attr": null
-            }
-          ]
-        },
-        {
-          "id": "item-0038",
-          "description": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. Número 46. Com Certificado de \nAprovação (CA).",
+          "id": "item-38",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0038",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-38",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15053,21 +14993,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 39,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0039:t-0002:r-0002:c-0002",
-              "quote": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. Número 46. Com Certificado de \nAprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0039:t-0002:r-0003:c-0002",
+              "quote": "02 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0039",
-          "description": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. Número 40. Com Certificado de \nAprovação (CA).",
+          "id": "item-39",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0039",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-39",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15085,21 +15025,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 40,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0040:t-0002:r-0002:c-0002",
-              "quote": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. Número 40. Com Certificado de \nAprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0040:t-0002:r-0003:c-0002",
+              "quote": "02 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0040",
-          "description": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. TamanhoG. Com Certificado de \nAprovação (CA).",
+          "id": "item-40",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0040",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-40",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15117,21 +15057,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 41,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0041:t-0002:r-0002:c-0002",
-              "quote": "Calça de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão, ATPV 11 cal/cm², \ncom gramatura nominal de 8,6 oz/yd² (290 g/m²). Refletivo: abaixo \ndo joelho. Cor Azul Royal. TamanhoG. Com Certificado de \nAprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0041:t-0002:r-0003:c-0002",
+              "quote": "03 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0041",
-          "description": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho G. Com \nCertificado de Aprovação (CA).",
+          "id": "item-41",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0041",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-41",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15149,21 +15089,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 42,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0042:t-0002:r-0002:c-0002",
-              "quote": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho G. Com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0042:t-0002:r-0003:c-0002",
+              "quote": "02 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0042",
-          "description": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho GG. Com \nCertificado de Aprovação (CA).",
+          "id": "item-42",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0042",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-42",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15181,21 +15121,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 43,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0043:t-0002:r-0002:c-0002",
-              "quote": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho GG. Com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0043:t-0002:r-0003:c-0002",
+              "quote": "02 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0043",
-          "description": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho M. Com \nCertificado de Aprovação (CA).",
+          "id": "item-43",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 2.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0043",
+              "value": 2,
+              "unit": "UN",
+              "item_id": "item-43",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15213,21 +15153,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 44,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0044:t-0002:r-0002:c-0002",
-              "quote": "Camisa de segurança, confeccionada em uma camada de tecido \nCedrotech FR, composto por 100% de algodão. ATPV 11 cal/cm², \ncom gramatura nominal de 8,0 oz/yd² (290 g/m²). Refletivo: braço e \nna altura do abdômen. Cor Azul Royal. Tamanho M. Com \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0044:t-0002:r-0003:c-0002",
+              "quote": "02 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0044",
-          "description": "Capacete de motociclistas fechado com viseira e engate rápido nº \n56 na cor preta ou azul. Aprovado pelo INMETRO.",
+          "id": "item-44",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 4.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0044",
+              "value": 4,
+              "unit": "UN",
+              "item_id": "item-44",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15245,21 +15185,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 45,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0045:t-0002:r-0002:c-0002",
-              "quote": "Capacete de motociclistas fechado com viseira e engate rápido nº \n56 na cor preta ou azul. Aprovado pelo INMETRO. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0045:t-0002:r-0003:c-0002",
+              "quote": "04 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0045",
-          "description": "Capacete de motociclistas fechado com viseira e engate rápido nº \n58 na cor preta ou azul. Aprovado pelo INMETRO.",
+          "id": "item-45",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0045",
+              "value": 20,
+              "unit": "UN",
+              "item_id": "item-45",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15277,21 +15217,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 46,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0046:t-0002:r-0002:c-0002",
-              "quote": "Capacete de motociclistas fechado com viseira e engate rápido nº \n58 na cor preta ou azul. Aprovado pelo INMETRO. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0046:t-0002:r-0003:c-0002",
+              "quote": "20 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0046",
-          "description": "Capacete de motociclistas fechado com viseira e engate rápido nº \n60 na cor preta ou azul. Aprovado pelo INMETRO.",
+          "id": "item-46",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0046",
+              "value": 20,
+              "unit": "UN",
+              "item_id": "item-46",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15309,21 +15249,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 47,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0047:t-0002:r-0002:c-0002",
-              "quote": "Capacete de motociclistas fechado com viseira e engate rápido nº \n60 na cor preta ou azul. Aprovado pelo INMETRO. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0047:t-0002:r-0003:c-0002",
+              "quote": "20 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0047",
-          "description": "Cinto para roçadeira com divisão nos dois ombros (cinto duplo), \ntamanho universal, fecho frontal, almofada na altura dos ombros e \ngancho com engate rápido.",
+          "id": "item-47",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0047",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-47",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15341,21 +15281,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 48,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0048:t-0002:r-0002:c-0002",
-              "quote": "Cinto para roçadeira com divisão nos dois ombros (cinto duplo), \ntamanho universal, fecho frontal, almofada na altura dos ombros e \ngancho com engate rápido. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0048:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0048",
-          "description": "Vestimenta \ncomposta \nde \njaqueta \nimpermeável \ne \ncalça \nimpermeável, ambas confeccionadas em nylon emborrachado com \numa face em poliamida e a outra em PVC. Jaqueta com gola alta e \ncapuz embutido na gola, fechamento frontal, punhos com \nregulagem por elástico e logotipo da empresa no peitoral e nas \ncostas. Calça com regulagem por elástico e cordão na cintura. \nConjunto no tamanho M, cor preta, com faixas refletivas de 50mm \ne Certificado de Aprovação (CA).",
+          "id": "item-48",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0048",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-48",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15373,21 +15313,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 49,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0049:t-0002:r-0002:c-0002",
-              "quote": "Vestimenta \ncomposta \nde \njaqueta \nimpermeável \ne \ncalça \nimpermeável, ambas confeccionadas em nylon emborrachado com \numa face em poliamida e a outra em PVC. Jaqueta com gola alta e \ncapuz embutido na gola, fechamento frontal, punhos com \nregulagem por elástico e logotipo da empresa no peitoral e nas \ncostas. Calça com regulagem por elástico e cordão na cintura. \nConjunto no tamanho M, cor preta, com faixas refletivas de 50mm \ne Certificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0049:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0049",
-          "description": "Vestimenta \ncomposta \nde \njaqueta \nimpermeável \ne \ncalça \nimpermeável, ambas confeccionadas em nylon emborrachado com \numa face em poliamida e a outra em PVC. Jaqueta com gola alta e \ncapuz embutido na gola, fechamento frontal, punhos com \nregulagem por elástico e logotipo da empresa no peitoral e nas \ncostas. Calça com regulagem por elástico e cordão na cintura. \nConjunto no tamanho P, cor preta, com faixas refletivas de 50mm e \nCertificado de Aprovação (CA).",
+          "id": "item-49",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0049",
+              "value": 5,
+              "unit": "UN",
+              "item_id": "item-49",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15405,21 +15345,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 50,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0050:t-0002:r-0002:c-0002",
-              "quote": "Vestimenta \ncomposta \nde \njaqueta \nimpermeável \ne \ncalça \nimpermeável, ambas confeccionadas em nylon emborrachado com \numa face em poliamida e a outra em PVC. Jaqueta com gola alta e \ncapuz embutido na gola, fechamento frontal, punhos com \nregulagem por elástico e logotipo da empresa no peitoral e nas \ncostas. Calça com regulagem por elástico e cordão na cintura. \nConjunto no tamanho P, cor preta, com faixas refletivas de 50mm e \nCertificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0050:t-0002:r-0003:c-0002",
+              "quote": "5 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0050",
-          "description": "Macacão confeccionado em nylon emborrachado com uma face \nem poliamida e a outra em PVC,com Certificado de Aprovação \n(CA). Vestimenta de corpo inteiro com capuz fixo, fechamento \nfrontal com zíper e Botas e Luvas de PVC acopladas, cor azul \nroyal. Tamanho GG e Bota número 44.",
+          "id": "item-50",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0050",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-50",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15437,21 +15377,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 51,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0051:t-0002:r-0002:c-0002",
-              "quote": "Macacão confeccionado em nylon emborrachado com uma face \nem poliamida e a outra em PVC,com Certificado de Aprovação \n(CA). Vestimenta de corpo inteiro com capuz fixo, fechamento \nfrontal com zíper e Botas e Luvas de PVC acopladas, cor azul \nroyal. Tamanho GG e Bota número 44. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0051:t-0002:r-0003:c-0002",
+              "quote": "01 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0051",
-          "description": "Rolo de corda em Poliamida 12mm NR18para altura com 50 \nMetros.",
+          "id": "item-51",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0051",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-51",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15469,21 +15409,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 52,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0052:t-0002:r-0002:c-0002",
-              "quote": "Rolo de corda em Poliamida 12mm NR18para altura com 50 \nMetros. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0052:t-0002:r-0003:c-0002",
+              "quote": "03 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0052",
-          "description": "Detector de 4 gases. Escalas: Oxigênio: 0 a 30% Gases \ncombustíveis: 0 a 100% LEL Monóxido de Carbono (CO): 0 a 500 \nppm Gás Sulfídrico (H2S): 0 a 100 ppm Alarmes: baixo, alto, STEL \ne TWA Capa integrada para proteção contra impactos Entrada de \npoeira e umidade: IP66/67 Intrinsecamente seguro UL/cUL Class I, \nGroups A, B, C, D, T6 Alta resistência a EMI/RFI, compatível com \na diretiva EMC 89/336/EEC Autoteste de função completa de \nintegridade do sensor, bateria e circuitos Alimentação: Bateria de \nlítio recarregável, com Carregador portátil, Adaptador para \ncalibração, Manual de instruções e Certificado de Calibração.",
+          "id": "item-52",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0052",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-52",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15501,21 +15441,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 53,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0053:t-0002:r-0002:c-0002",
-              "quote": "Detector de 4 gases. Escalas: Oxigênio: 0 a 30% Gases \ncombustíveis: 0 a 100% LEL Monóxido de Carbono (CO): 0 a 500 \nppm Gás Sulfídrico (H2S): 0 a 100 ppm Alarmes: baixo, alto, STEL \ne TWA Capa integrada para proteção contra impactos Entrada de \npoeira e umidade: IP66/67 Intrinsecamente seguro UL/cUL Class I, \nGroups A, B, C, D, T6 Alta resistência a EMI/RFI, compatível com \na diretiva EMC 89/336/EEC Autoteste de função completa de \nintegridade do sensor, bateria e circuitos Alimentação: Bateria de \nlítio recarregável, com Carregador portátil, Adaptador para \ncalibração, Manual de instruções e Certificado de Calibração. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0053:t-0002:r-0003:c-0002",
+              "quote": "01 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0053",
-          "description": "Conjunto composto por:  \n1 Maleta de 1ºs socorros (G) 28x20x19cm;  \n  1 Abaixador de língua (Paleta Madeira)-(Pct c/10 unid.); \n  1 Atadura de crepom 10cmx1,8m; \n  1 Atadura de crepom 15cmx1,8m; \n  1 Atadura de Rayon 7,5cmx5m; \n  1 Bandagem Triamgular algodão 140x100x100cm; \n  3 Compressas gazes esterilizados 7,5x7,5cm; \n  1 Curativos Anticépticos tipo Band-aid (Caixa 10 unid); \n  1 Esparadrapo 5cmx4,5m; \n  1 Fita microporosa hipolergenica 5cmx4,5m; \n  1 Kit Luvas cirúrgica esterilizadas (3Pares); \n  1 Lanterna de pupila; \n  1 Manta térmica aluminizada 210x140cm; \n  2 Mascaras RCP descartável; \n  1 Óculos de proteção incolor ampla visão; \n  1 Película protetora p/ queimados 50x50cm; \n  1 Pinça Anatômica (Dissecção) 16cm; \n  1 Tala moldável alumínio/espuma - 10x2cm; \n  1 Tala moldável alumínio/espuma - 20x2cm; \n  1 Tala moldável alumínio/espuma - 25x2cm; \n  1 Termômetro digital.",
+          "id": "item-53",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 3.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0053",
+              "value": 3,
+              "unit": "UN",
+              "item_id": "item-53",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15533,21 +15473,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 54,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0054:t-0002:r-0002:c-0002",
-              "quote": "Conjunto composto por:  \n1 Maleta de 1ºs socorros (G) 28x20x19cm;  \n  1 Abaixador de língua (Paleta Madeira)-(Pct c/10 unid.); \n  1 Atadura de crepom 10cmx1,8m; \n  1 Atadura de crepom 15cmx1,8m; \n  1 Atadura de Rayon 7,5cmx5m; \n  1 Bandagem Triamgular algodão 140x100x100cm; \n  3 Compressas gazes esterilizados 7,5x7,5cm; \n  1 Curativos Anticépticos tipo Band-aid (Caixa 10 unid); \n  1 Esparadrapo 5cmx4,5m; \n  1 Fita microporosa hipolergenica 5cmx4,5m; \n  1 Kit Luvas cirúrgica esterilizadas (3Pares); \n  1 Lanterna de pupila; \n  1 Manta térmica aluminizada 210x140cm; \n  2 Mascaras RCP descartável; \n  1 Óculos de proteção incolor ampla visão; \n  1 Película protetora p/ queimados 50x50cm; \n  1 Pinça Anatômica (Dissecção) 16cm; \n  1 Tala moldável alumínio/espuma - 10x2cm; \n  1 Tala moldável alumínio/espuma - 20x2cm; \n  1 Tala moldável alumínio/espuma - 25x2cm; \n  1 Termômetro digital. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0054:t-0002:r-0003:c-0002",
+              "quote": "03 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0054",
-          "description": "Luva de segurança confeccionada PVC, sem forro, palma áspera \nanti-derrapante, tamanho 46cm, com Certificado de Aprovação \n(CA).",
+          "id": "item-54",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 200.0,
+              "value": 200,
               "unit": "PARES",
-              "item_id": "item-0054",
+              "item_id": "item-54",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15565,21 +15505,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 55,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0055:t-0002:r-0002:c-0002",
-              "quote": "Luva de segurança confeccionada PVC, sem forro, palma áspera \nanti-derrapante, tamanho 46cm, com Certificado de Aprovação \n(CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0055:t-0002:r-0003:c-0002",
+              "quote": "200 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0055",
-          "description": "Luva de segurança confeccionada em borracha de látex natural, \nrevestimento interno de flocos de algodão, texturizada na palma e \ndedos tamanho M, com Certificado de Aprovação (CA).",
+          "id": "item-55",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 50.0,
+              "value": 50,
               "unit": "PARES",
-              "item_id": "item-0055",
+              "item_id": "item-55",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15597,21 +15537,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 56,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0056:t-0002:r-0002:c-0002",
-              "quote": "Luva de segurança confeccionada em borracha de látex natural, \nrevestimento interno de flocos de algodão, texturizada na palma e \ndedos tamanho M, com Certificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0056:t-0002:r-0003:c-0002",
+              "quote": "50 pares",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0056",
-          "description": "Luva de segurança confeccionada em borracha de látex natural, \nrevestimento interno de flocos de algodão, texturizada na palma e \ndedos tamanho G, com Certificado de Aprovação (CA).",
+          "id": "item-56",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 50.0,
+              "value": 50,
               "unit": "PARES",
-              "item_id": "item-0056",
+              "item_id": "item-56",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15629,21 +15569,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 57,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0057:t-0002:r-0002:c-0002",
-              "quote": "Luva de segurança confeccionada em borracha de látex natural, \nrevestimento interno de flocos de algodão, texturizada na palma e \ndedos tamanho G, com Certificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0057:t-0002:r-0003:c-0002",
+              "quote": "50 pares",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0057",
-          "description": "Luva \nde \nsegurança \nconfeccionada \nem \nfibras \nsintéticas, \nrevestimento da face palmar e ponta dos dedos em poliuretano \n(PU), punho com inserções de fibras elásticas e acabamento em \nfibras sintéticas, com Certificado de Aprovação (CA).",
+          "id": "item-57",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 200.0,
+              "value": 200,
               "unit": "PARES",
-              "item_id": "item-0057",
+              "item_id": "item-57",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15661,21 +15601,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 58,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0058:t-0002:r-0002:c-0002",
-              "quote": "Luva \nde \nsegurança \nconfeccionada \nem \nfibras \nsintéticas, \nrevestimento da face palmar e ponta dos dedos em poliuretano \n(PU), punho com inserções de fibras elásticas e acabamento em \nfibras sintéticas, com Certificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0058:t-0002:r-0003:c-0002",
+              "quote": "200 pares.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0058",
-          "description": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho P.",
+          "id": "item-58",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0058",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-58",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15693,21 +15633,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 59,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0059:t-0002:r-0002:c-0002",
-              "quote": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho P.   \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0059:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0059",
-          "description": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho M.",
+          "id": "item-59",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0059",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-59",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15725,21 +15665,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 60,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0060:t-0002:r-0002:c-0002",
-              "quote": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho M.   \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0060:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0060",
-          "description": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho G.",
+          "id": "item-60",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0060",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-60",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15757,21 +15697,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 61,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0061:t-0002:r-0002:c-0002",
-              "quote": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho G.   \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0061:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0061",
-          "description": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho XG.",
+          "id": "item-61",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0061",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-61",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15789,21 +15729,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 62,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0062:t-0002:r-0002:c-0002",
-              "quote": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho XG.   \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0062:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0062",
-          "description": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho XGG.",
+          "id": "item-62",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 5.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0062",
+              "value": 5,
+              "unit": "UN",
+              "item_id": "item-62",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15821,21 +15761,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 63,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0063:t-0002:r-0002:c-0002",
-              "quote": "Macacão de segurança confeccionado em tecido Tyvek, com \nelástico na cintura, punhos, capuz e tornozelos, zíper na parte \nfrontal do traje coberto por uma pala, com Certificado de \nAprovação (CA), tamanho XGG.   \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0063:t-0002:r-0003:c-0002",
+              "quote": "5 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0063",
-          "description": "Mangote confeccionado em raspa, tamanho de 40cm, com \nelásticos nas extremidades para ajuste no antebraço e Certificado \nde Aprovação (CA).",
+          "id": "item-63",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 20.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0063",
+              "value": 20,
+              "unit": "UN",
+              "item_id": "item-63",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15853,21 +15793,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 64,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0064:t-0002:r-0002:c-0002",
-              "quote": "Mangote confeccionado em raspa, tamanho de 40cm, com \nelásticos nas extremidades para ajuste no antebraço e Certificado \nde Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0064:t-0002:r-0003:c-0002",
+              "quote": "20 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0064",
-          "description": "Mousepad com apoio de pulso, revestido com neoprene e com \nbase de poliuretano lisa, antiderrapante, na cor preta.",
+          "id": "item-64",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 25.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0064",
+              "value": 25,
+              "unit": "UN",
+              "item_id": "item-64",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15885,21 +15825,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 65,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0065:t-0002:r-0002:c-0002",
-              "quote": "Mousepad com apoio de pulso, revestido com neoprene e com \nbase de poliuretano lisa, antiderrapante, na cor preta. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0065:t-0002:r-0003:c-0002",
+              "quote": "25 unidades",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0065",
-          "description": "Óculos de segurança constituído de arco de material plástico preto \ndividido em duas partes pela ponte e apoio nasal, plaquetas de \nborracha maleável preta são encaixadas em dois pinos localizados \nno apoio nasal, visores confeccionados em policarbonato cinza \nespelhado encaixados nas canaletas do arco, hastes tipo espátula \nconfeccionadas do mesmo material do arco e compostas de duas \npeças: semi-haste fixada ao arco por meio de parafuso metálico e \nsemi-haste que se encaixa na semi-haste descrita anteriormente \ncom Certificado de Aprovação (CA).",
+          "id": "item-65",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 60.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0065",
+              "value": 60,
+              "unit": "UN",
+              "item_id": "item-65",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15917,21 +15857,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 66,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0066:t-0002:r-0002:c-0002",
-              "quote": "Óculos de segurança constituído de arco de material plástico preto \ndividido em duas partes pela ponte e apoio nasal, plaquetas de \nborracha maleável preta são encaixadas em dois pinos localizados \nno apoio nasal, visores confeccionados em policarbonato cinza \nespelhado encaixados nas canaletas do arco, hastes tipo espátula \nconfeccionadas do mesmo material do arco e compostas de duas \npeças: semi-haste fixada ao arco por meio de parafuso metálico e \nsemi-haste que se encaixa na semi-haste descrita anteriormente \ncom Certificado de Aprovação (CA). \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0066:t-0002:r-0003:c-0002",
+              "quote": "60 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0066",
-          "description": "Equipamento de segurança para trabalhos em espaços confinados \ncom massa de até 110 kg, cabo de aço retrátil com 20m, dotado de \nsistema de auto travamento, dispositivo de amortecimento para \ndissipação de energia no caso de queda do usuário e guincho – \nsobe e desce – com frenagem automática quando da parada de \nmovimentação de sua manivela durante os trabalhos de resgate. \nAcondicionamento do sistema de auto travamento e do guincho em \ncaixa de liga leve de alumínio, com pintura epóxi sobre superfície \nanodizada, possui mosquetão dupla trava e Indicador de stress.",
+          "id": "item-66",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 1.0,
-              "unit": "UNIDADE",
-              "item_id": "item-0066",
+              "value": 1,
+              "unit": "UN",
+              "item_id": "item-66",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15949,21 +15889,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 67,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0067:t-0002:r-0002:c-0002",
-              "quote": "Equipamento de segurança para trabalhos em espaços confinados \ncom massa de até 110 kg, cabo de aço retrátil com 20m, dotado de \nsistema de auto travamento, dispositivo de amortecimento para \ndissipação de energia no caso de queda do usuário e guincho – \nsobe e desce – com frenagem automática quando da parada de \nmovimentação de sua manivela durante os trabalhos de resgate. \nAcondicionamento do sistema de auto travamento e do guincho em \ncaixa de liga leve de alumínio, com pintura epóxi sobre superfície \nanodizada, possui mosquetão dupla trava e Indicador de stress. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0067:t-0002:r-0003:c-0002",
+              "quote": "01 unidade.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0067",
-          "description": "Rolo de tela tapume extrusada (cerquite), proporções 1,20m x \n50m, confeccionado em polietileno na cor laranja.",
+          "id": "item-67",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 10.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0067",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-67",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -15981,21 +15921,21 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 68,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0068:t-0002:r-0002:c-0002",
-              "quote": "Rolo de tela tapume extrusada (cerquite), proporções 1,20m x \n50m, confeccionado em polietileno na cor laranja. \n",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0068:t-0002:r-0003:c-0002",
+              "quote": "10 unidades.",
               "attr": null
             }
           ]
         },
         {
-          "id": "item-0068",
-          "description": "Repelente contra insetos tipo spray 100ml com ICARIDINA.",
+          "id": "item-68",
+          "description": null,
           "field_values": [
             {
               "field_type": "QUANTITY",
-              "value": 300.0,
-              "unit": "UNIDADES",
-              "item_id": "item-0068",
+              "value": 300,
+              "unit": "UN",
+              "item_id": "item-68",
               "evidence": [
                 {
                   "document_id": "52061181000160-1-000080-2024:etp",
@@ -16013,8 +15953,8 @@
             {
               "document_id": "52061181000160-1-000080-2024:etp",
               "page": 69,
-              "block_id": "52061181000160-1-000080-2024:etp:p-0069:t-0001:r-0002:c-0002",
-              "quote": "Repelente contra insetos tipo spray 100ml com ICARIDINA.",
+              "block_id": "52061181000160-1-000080-2024:etp:p-0069:t-0001:r-0003:c-0002",
+              "quote": "300 unidades",
               "attr": null
             }
           ]
@@ -16450,56 +16390,7 @@
         }
       ],
       "items": [],
-      "field_values": [
-        {
-          "field_type": "CONTRACT_TERM",
-          "value": 12,
-          "unit": "meses",
-          "item_id": null,
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:tr",
-              "page": 3,
-              "block_id": "52061181000160-1-000080-2024:tr:p-0003:t-0001:r-0001:c-0001",
-              "quote": "10.4 O Contrato vigorará pelo prazo de 12 meses, contados a",
-              "attr": "CONTRACT_TERM"
-            }
-          ],
-          "review_status": "EXTRACTED"
-        },
-        {
-          "field_type": "DELIVERY_DEADLINE",
-          "value": 20,
-          "unit": "dias",
-          "item_id": null,
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:tr",
-              "page": 3,
-              "block_id": "52061181000160-1-000080-2024:tr:p-0003:b-0002",
-              "quote": "9.2 As entregas dos materiais ocorrerão sempre na cidade de \nMarília/SP, no Almoxarifado da Garagem do Departamento de Água e \nEsgoto de Marília, na Avenida Santo Antônio, nº 1.817, no prazo \nmáximo de até 20(vinte) dias, contados da emissão da Autorização \nde Fornecimento. \n",
-              "attr": "DELIVERY_DEADLINE"
-            }
-          ],
-          "review_status": "EXTRACTED"
-        },
-        {
-          "field_type": "DELIVERY_LOCATION",
-          "value": "Almoxarifado da Garagem, Avenida Santo Antônio, nº 1.817, Marília/SP",
-          "unit": null,
-          "item_id": null,
-          "evidence": [
-            {
-              "document_id": "52061181000160-1-000080-2024:tr",
-              "page": 3,
-              "block_id": "52061181000160-1-000080-2024:tr:p-0003:b-0002",
-              "quote": "9.2 As entregas dos materiais ocorrerão sempre na cidade de \nMarília/SP, no Almoxarifado da Garagem do Departamento de Água e \nEsgoto de Marília, na Avenida Santo Antônio, nº 1.817, no prazo \nmáximo de até 20(vinte) dias, contados da emissão da Autorização \nde Fornecimento. \n",
-              "attr": "DELIVERY_LOCATION"
-            }
-          ],
-          "review_status": "EXTRACTED"
-        }
-      ],
+      "field_values": [],
       "requirements": []
     }
   ],

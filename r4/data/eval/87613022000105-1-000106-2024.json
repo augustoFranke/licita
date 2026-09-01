@@ -573,8 +573,222 @@
           }
         }
       ],
-      "items": [],
-      "field_values": [],
+      "items": [
+        {
+          "id": "item-01",
+          "description": null,
+          "field_values": [
+            {
+              "field_type": "UNIT_PRICE",
+              "value": "66.94",
+              "unit": "BRL",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0002:c-0007",
+                  "quote": "Valor médio\nunitário\n \n66,94",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2677.60",
+              "unit": "BRL",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0002:c-0008",
+                  "quote": "or total\nitem\n2.677,60",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "QUANTITY",
+              "value": 40,
+              "unit": "UN",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0002:c-0006",
+                  "quote": "Quantidade\nmáxima\n \n40",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "quantidade_minima",
+              "operator": "EQUAL",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0002:c-0005",
+                  "quote": "Quantidade\nMínima\n \n10",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:etp",
+              "page": 4,
+              "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0002:c-0007",
+              "quote": "Valor médio\nunitário\n \n66,94",
+              "attr": null
+            }
+          ]
+        },
+        {
+          "id": "item-02",
+          "description": null,
+          "field_values": [
+            {
+              "field_type": "UNIT_PRICE",
+              "value": "48.52",
+              "unit": "BRL",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0003:c-0007",
+                  "quote": "R$ 48,52 R $",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2426",
+              "unit": "BRL",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0003:c-0008",
+                  "quote": "2.426,00",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "QUANTITY",
+              "value": 50,
+              "unit": "UN",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0003:c-0006",
+                  "quote": "50",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "quantidade_minima",
+              "operator": "EQUAL",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:etp",
+                  "page": 4,
+                  "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0003:c-0005",
+                  "quote": "10",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:etp",
+              "page": 4,
+              "block_id": "87613022000105-1-000106-2024:etp:p-0004:t-0002:r-0003:c-0007",
+              "quote": "R$ 48,52 R $",
+              "attr": null
+            }
+          ]
+        }
+      ],
+      "field_values": [
+        {
+          "field_type": "TOTAL_PRICE",
+          "value": "5103.60",
+          "unit": "BRL",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:etp",
+              "page": 4,
+              "block_id": "87613022000105-1-000106-2024:etp:p-0004:b-0033",
+              "quote": "Estima-se para a contratação almejada o valor total de R$ 5.103,60 (cinco mil, cento e três reais e sessenta centavos).",
+              "attr": null
+            }
+          ],
+          "review_status": "EXTRACTED"
+        },
+        {
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 15,
+          "unit": "DIAS",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:etp",
+              "page": 2,
+              "block_id": "87613022000105-1-000106-2024:etp:p-0002:b-0002",
+              "quote": "Fernando Machado, nº 2899, Bairro Agrícola - São Luiz Gonzaga, no prazo de 15 (quinze) dias após a autorização de",
+              "attr": null
+            }
+          ],
+          "review_status": "EXTRACTED"
+        },
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 30,
+          "unit": "DIAS_UTEIS",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:etp",
+              "page": 2,
+              "block_id": "87613022000105-1-000106-2024:etp:p-0002:b-0003",
+              "quote": "3- PAGAMENTOS: Os pagamentos serão efetuados em até 30 (trinta) dias úteis contados da apresentação da nota fiscal ou",
+              "attr": null
+            }
+          ],
+          "review_status": "EXTRACTED"
+        }
+      ],
       "requirements": []
     },
     {
@@ -1050,33 +1264,165 @@
       ],
       "items": [
         {
-          "id": "item-1",
-          "description": "Recarga gás oxigênio medicinal 01m³",
+          "id": "item-01",
+          "description": null,
           "field_values": [
             {
-              "field_type": "QUANTITY",
-              "value": 10,
-              "unit": null,
-              "item_id": "item-1",
+              "field_type": "UNIT_PRICE",
+              "value": "66.94",
+              "unit": "BRL",
+              "item_id": "item-01",
               "evidence": [
                 {
                   "document_id": "87613022000105-1-000106-2024:tr",
-                  "page": 1,
-                  "block_id": "87613022000105-1-000106-2024:tr:p-0001:t-0001:r-0008:c-0003",
-                  "quote": "10",
-                  "attr": "QUANTITY"
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0002:c-0007",
+                  "quote": "Valor médio\nunitário\n \n66,94",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2677.60",
+              "unit": "BRL",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0002:c-0008",
+                  "quote": "or total\nitem\n2.677,60",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "QUANTITY",
+              "value": 40,
+              "unit": "UN",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0002:c-0006",
+                  "quote": "Quantidade\nmáxima\n \n40",
+                  "attr": null
                 }
               ],
               "review_status": "EXTRACTED"
             }
           ],
-          "requirements": [],
+          "requirements": [
+            {
+              "attribute": "quantidade_minima",
+              "operator": "EQUAL",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-01",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0002:c-0005",
+                  "quote": "Quantidade\nMínima\n \n10",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
           "evidence": [
             {
               "document_id": "87613022000105-1-000106-2024:tr",
-              "page": 1,
-              "block_id": "87613022000105-1-000106-2024:tr:p-0001:t-0001:r-0008:c-0002",
-              "quote": "Recarga de gás oxigênio medicinal cilindro de capacidade 01m³, com válvula tipo\nWM Nº 01.",
+              "page": 5,
+              "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0002:c-0007",
+              "quote": "Valor médio\nunitário\n \n66,94",
+              "attr": null
+            }
+          ]
+        },
+        {
+          "id": "item-02",
+          "description": null,
+          "field_values": [
+            {
+              "field_type": "UNIT_PRICE",
+              "value": "48.52",
+              "unit": "BRL",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0003:c-0007",
+                  "quote": "R$ 48,52 R$",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "TOTAL_PRICE",
+              "value": "2426",
+              "unit": "BRL",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0003:c-0008",
+                  "quote": "2.426,00",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            },
+            {
+              "field_type": "QUANTITY",
+              "value": 50,
+              "unit": "UN",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0003:c-0006",
+                  "quote": "50",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "requirements": [
+            {
+              "attribute": "quantidade_minima",
+              "operator": "EQUAL",
+              "value": 10,
+              "unit": "UN",
+              "item_id": "item-02",
+              "evidence": [
+                {
+                  "document_id": "87613022000105-1-000106-2024:tr",
+                  "page": 5,
+                  "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0003:c-0005",
+                  "quote": "10",
+                  "attr": null
+                }
+              ],
+              "review_status": "EXTRACTED"
+            }
+          ],
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:tr",
+              "page": 5,
+              "block_id": "87613022000105-1-000106-2024:tr:p-0005:t-0001:r-0003:c-0007",
+              "quote": "R$ 48,52 R$",
               "attr": null
             }
           ]
@@ -1084,33 +1430,49 @@
       ],
       "field_values": [
         {
-          "field_type": "DELIVERY_DEADLINE",
-          "value": 15,
-          "unit": "dias",
+          "field_type": "TOTAL_PRICE",
+          "value": "5103.60",
+          "unit": "BRL",
           "item_id": null,
           "evidence": [
             {
               "document_id": "87613022000105-1-000106-2024:tr",
-              "page": 2,
-              "block_id": "87613022000105-1-000106-2024:tr:p-0002:b-0020",
-              "quote": "2-  PRAZO e LOCAL DE ENTREGA DOS MATERIAIS: Materiais deverão ser entregues de forma parcelada na SEMSA na Rua\nFernando Machado, nº 2899, Bairro Agrícola - São Luiz Gonzaga, no prazo de 15 (quinze) dias após a autorização de\nfornecimento, conform a necessidade da Secretaria.\n",
-              "attr": "DELIVERY_DEADLINE"
+              "page": 5,
+              "block_id": "87613022000105-1-000106-2024:tr:p-0005:b-0029",
+              "quote": "Estima-se para a contratação almejada o valor total de R$ 5.103,60 (cinco mil, cento e três reais e sessenta centavos).",
+              "attr": null
             }
           ],
           "review_status": "EXTRACTED"
         },
         {
-          "field_type": "DELIVERY_LOCATION",
-          "value": "SEMSA, Rua Fernando Machado, nº 2899, Bairro Agrícola - São Luiz Gonzaga",
-          "unit": null,
+          "field_type": "DELIVERY_DEADLINE",
+          "value": 15,
+          "unit": "DIAS",
           "item_id": null,
           "evidence": [
             {
               "document_id": "87613022000105-1-000106-2024:tr",
               "page": 2,
               "block_id": "87613022000105-1-000106-2024:tr:p-0002:b-0020",
-              "quote": "2-  PRAZO e LOCAL DE ENTREGA DOS MATERIAIS: Materiais deverão ser entregues de forma parcelada na SEMSA na Rua\nFernando Machado, nº 2899, Bairro Agrícola - São Luiz Gonzaga, no prazo de 15 (quinze) dias após a autorização de\nfornecimento, conform a necessidade da Secretaria.\n",
-              "attr": "DELIVERY_LOCATION"
+              "quote": "Fernando Machado, nº 2899, Bairro Agrícola - São Luiz Gonzaga, no prazo de 15 (quinze) dias após a autorização de",
+              "attr": null
+            }
+          ],
+          "review_status": "EXTRACTED"
+        },
+        {
+          "field_type": "PAYMENT_DEADLINE",
+          "value": 30,
+          "unit": "DIAS_UTEIS",
+          "item_id": null,
+          "evidence": [
+            {
+              "document_id": "87613022000105-1-000106-2024:tr",
+              "page": 2,
+              "block_id": "87613022000105-1-000106-2024:tr:p-0002:b-0021",
+              "quote": "3- PAGAMENTOS: Os pagamentos serão efetuados em até 30 (trinta) dias úteis contados da apresentação da nota fiscal ou",
+              "attr": null
             }
           ],
           "review_status": "EXTRACTED"

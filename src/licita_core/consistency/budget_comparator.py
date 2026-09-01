@@ -30,13 +30,17 @@ def _to_decimal(val: str | float | int | Decimal | None) -> Decimal | None:
         return None
 
 
-def _get_item_total_price(item: Item) -> tuple[Decimal | None, FieldValue | None]:
+def _get_item_price(item: Item, field_type: FieldType) -> tuple[Decimal | None, FieldValue | None]:
     for fv in item.field_values:
-        if fv.field_type == FieldType.TOTAL_PRICE and fv.value is not None:
+        if fv.field_type == field_type and fv.value is not None:
             d = _to_decimal(fv.value)
             if d is not None:
                 return d, fv
     return None, None
+
+
+def _get_item_total_price(item: Item) -> tuple[Decimal | None, FieldValue | None]:
+    return _get_item_price(item, FieldType.TOTAL_PRICE)
 
 
 def _get_doc_budget(doc: Document) -> tuple[Decimal | None, FieldValue | None]:
@@ -86,29 +90,35 @@ class BudgetComparator(ConsistencyComparator):
                     )
                 )
 
-        # 2. Compara preços totais por item correspondente
+        # 2. Compara valores por item correspondente: preço total e preço
+        # unitário, ambos "valores comparáveis" no escopo da R7.
+        precos = (
+            (FieldType.TOTAL_PRICE, "Preço Total"),
+            (FieldType.UNIT_PRICE, "Preço Unitário"),
+        )
         matched_pairs = match_items_between_docs(doc_a, doc_b)
         for it_a, it_b in matched_pairs:
-            tp_a, fv_tp_a = _get_item_total_price(it_a)
-            tp_b, fv_tp_b = _get_item_total_price(it_b)
+            for field_type, rotulo in precos:
+                v_a, fv_a2 = _get_item_price(it_a, field_type)
+                v_b, fv_b2 = _get_item_price(it_b, field_type)
 
-            if tp_a is not None and tp_b is not None and tp_a != tp_b:
-                ev_a = fv_tp_a.evidence if fv_tp_a and fv_tp_a.evidence else it_a.evidence
-                ev_b = fv_tp_b.evidence if fv_tp_b and fv_tp_b.evidence else it_b.evidence
-                if ev_a and ev_b:
-                    findings.append(
-                        build_bilateral_finding(
-                            rule_id=self.rule_id,
-                            title=f"Divergência no Preço Total do Item ({it_a.id})",
-                            description=(
-                                f"Preço total estimado divergente para o Item {it_a.id}: "
-                                f"R$ {tp_a} no {doc_a.type.value} vs R$ {tp_b} no {doc_b.type.value}."
-                            ),
-                            severity=Severity.HIGH,
-                            evidence_a=ev_a,
-                            evidence_b=ev_b,
-                            process_id=process.id,
+                if v_a is not None and v_b is not None and v_a != v_b:
+                    ev_a = fv_a2.evidence if fv_a2 and fv_a2.evidence else it_a.evidence
+                    ev_b = fv_b2.evidence if fv_b2 and fv_b2.evidence else it_b.evidence
+                    if ev_a and ev_b:
+                        findings.append(
+                            build_bilateral_finding(
+                                rule_id=self.rule_id,
+                                title=f"Divergência no {rotulo} do Item ({it_a.id})",
+                                description=(
+                                    f"{rotulo} estimado divergente para o Item {it_a.id}: "
+                                    f"R$ {v_a} no {doc_a.type.value} vs R$ {v_b} no {doc_b.type.value}."
+                                ),
+                                severity=Severity.HIGH,
+                                evidence_a=ev_a,
+                                evidence_b=ev_b,
+                                process_id=process.id,
+                            )
                         )
-                    )
 
         return findings

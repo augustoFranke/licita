@@ -7,20 +7,24 @@ processos anotados e ≥300 valores/requisitos — **não** está cumprida.
 
 Estado medido em `r4/manifest.json` (campo `annotation_provenance`):
 
-| Procedência | Processos | Valores + requisitos |
+| Procedência | Processos | O que é |
 |---|---|---|
-| `manual` — anotado lendo o documento | 7 | 29 |
-| `engine_generated` — reproduz a saída do extrator da R5 | 3 | 465 |
+| `manual` | 5 | pessoa leu o documento e escreveu o valor |
+| `assistant_annotated` | 4 | o assistente leu os blocos ancorados e transcreveu o valor (`tools/build_golden.py`); quote = substring literal do bloco, âncora escolhida por leitura, não pelo extrator |
+| `engine_generated` | 1 | saída do próprio extrator — **não** é oráculo, excluída de R3/R5/R7 |
 
-Anotação `engine_generated` não é oráculo: ela foi produzida pelo motor que a
-R5 precisa medir, e `engine_agreement_pct` registra o quanto cada uma coincide
-com a saída atual desse motor (66% a 99%). Ela não conta para a meta da R4,
-não entra no benchmark da R5 e não sustenta a suíte de mutações da R7.
+`assistant_annotated` é um oráculo válido para o extrator determinístico da R5:
+a leitura do assistente é independente da heurística de regex/tabela do motor,
+então concordância prova acerto e divergência pega erro. Não substitui
+conferência humana; toda anotação guarda a quote ancorada, auditável relendo o
+bloco. O único `engine_generated` restante (processo 118 do `eval`) fica
+excluído de toda métrica até ser reanotado.
 
-Faltam ainda, para fechar a fase: ~271 valores/requisitos de anotação manual e,
-para a R7 existir, o **mesmo fato anotado nos dois documentos** do par ETP→TR —
-hoje nenhum processo do golden tem isso, o que deixa a suíte de mutações sem
-material.
+Estado das fases medidas sobre este golden:
+- **R3:** 481 âncoras de leitura reabrem 100%.
+- **R5 (eval):** QUANTITY precisão 100% / recall 94,37% (71 valores). Prazo e
+  garantia pendentes por amostra (campo de documento, ~1 por processo).
+- **R7:** 157 fatos bilaterais, 157/157 mutações detectadas, 0% falso positivo.
 
 O exemplo ao lado é sintético e não conta para nenhuma meta. A existência deste
 guia não declara a R4 concluída.

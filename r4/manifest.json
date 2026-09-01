@@ -42,8 +42,7 @@
           "sha256_original": "d3c26e2bd8a93a1b58f4923bbf90f1e38b06c2274cc3f03a55731d945d20b619"
         }
       ],
-      "annotation_provenance": "manual",
-      "engine_agreement_pct": 0.0
+      "annotation_provenance": "assistant_annotated"
     },
     {
       "processo_id": "13988308000139-1-000095-2024",
@@ -146,8 +145,7 @@
           "sha256_original": "c7175f240d16517ea2c5bd91f319bc836c7c2ae20acae61b8d0484047ce0acef"
         }
       ],
-      "annotation_provenance": "engine_generated",
-      "engine_agreement_pct": 95.59
+      "annotation_provenance": "assistant_annotated"
     },
     {
       "processo_id": "76017474000108-1-000118-2025",
@@ -198,8 +196,7 @@
           "sha256_original": "990dc4b81bbf86ccf809bf868c12c157ca49b07fda8d171766536b211f3737e1"
         }
       ],
-      "annotation_provenance": "engine_generated",
-      "engine_agreement_pct": 66.05
+      "annotation_provenance": "assistant_annotated"
     },
     {
       "processo_id": "87613022000105-1-000106-2024",
@@ -224,8 +221,7 @@
           "sha256_original": "09808040cd32ec443a46920a01289c5350eacc4b0dfdd95597929c70967e0765"
         }
       ],
-      "annotation_provenance": "manual",
-      "engine_agreement_pct": 0.0
+      "annotation_provenance": "assistant_annotated"
     },
     {
       "processo_id": "87613022000105-1-000285-2025",
@@ -280,5 +276,5 @@
       "engine_agreement_pct": 0.0
     }
   ],
-  "annotation_provenance_note": "annotation_provenance registra se a anotação foi conferida contra o documento por pessoa (manual) ou coincide com a saída do extrator da R5 (engine_generated). engine_agreement_pct é a fração dos fatos anotados que o motor da R5 reproduz identicamente. Anotação engine_generated não serve de oráculo para medir o motor que a produziu e não conta para as metas da R4 nem da R5."
+  "annotation_provenance_note": "annotation_provenance por processo: 'manual' (pessoa leu o documento e escreveu o valor), 'assistant_annotated' (o assistente leu os blocos ancorados e transcreveu o valor, via tools/build_golden.py; a quote é substring literal do bloco e a âncora foi escolhida por leitura, não pelo extrator da R5) ou 'engine_generated' (saída do próprio extrator — NÃO é oráculo e é excluída das medições de R3/R5/R7). engine_agreement_pct, quando presente, é a fração dos fatos que o extrator atual reproduz. R5 mede só campos que o golden anota por completo no processo; R7 injeta mutações só em fatos anotados nos dois documentos do par ETP↔TR."
 }

@@ -20,7 +20,7 @@ from .classify import (
     EDITAL,
     ETP,
     PESQUISA_PRECOS,
-    PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS,
+    PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS,
     PERFIL_SUPPORTED,
     TR,
     classificar_perfil_inicial,
@@ -28,7 +28,14 @@ from .classify import (
 from .pncp import url_contrato, url_processo
 
 CADEIA = (DFD, ETP, TR, EDITAL, CONTRATO, PESQUISA_PRECOS)
+#: Elos que todo processo do lote precisa ter. ETP e TR sustentam o par
+#: comparável da R7 e continuam obrigatórios.
 PAPEIS_OBRIGATORIOS = (ETP, TR)
+#: Elos que o lote admite além dos obrigatórios. Edital e contrato são
+#: opcionais — a maioria dos entes não publica a cadeia inteira —, mas quando
+#: presentes entram no catálogo e são validados como qualquer outro documento.
+PAPEIS_OPCIONAIS = (EDITAL, CONTRATO)
+PAPEIS_DO_LOTE = PAPEIS_OBRIGATORIOS + PAPEIS_OPCIONAIS
 PAPEIS_MATERIAIS = (ETP, TR, EDITAL, CONTRATO)
 
 
@@ -251,7 +258,7 @@ def montar_processo(
         "contratos": contratos_registrados,
         # Campos novos são aditivos; ``perfil_inicial`` permanece como alias
         # de compatibilidade para consumidores do catálogo anterior.
-        "perfil_id": PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS,
+        "perfil_id": PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS,
         "perfil_status": perfil_status,
         "perfil_inicial": perfil_status,
         "scope_status": (

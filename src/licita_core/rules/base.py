@@ -17,7 +17,7 @@ class RuleContext:
 
     process: ProcurementProcess
     target_document_id: str
-    profile_id: str = "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+    profile_id: str = "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
     package_files: tuple[str, ...] = ()
     package_anchors: dict[str, list[str]] = field(default_factory=dict)
     overlay_id: str | None = None

@@ -461,17 +461,38 @@ def test_tres_aceitos_legados_sao_migrados_sem_download(monkeypatch, tmp_path):
         atual.close()
 
 
-def test_coletor_tem_politica_e_esfera_municipais_rigidas(tmp_path):
-    assert collect_module.POLICY_VERSION == "4-municipal-historical-ocr"
+def test_coletor_aceita_todas_as_esferas_e_exige_esfera_conhecida(tmp_path):
+    """Escopo de todas as esferas: F/E/D/M entram; sem esfera, não.
+
+    A política precisa mudar junto: decisões ficam gravadas por
+    (processo, policy_version), então reaproveitar a política municipal faria
+    o coletor pular os processos que passaram a ser elegíveis.
+    """
+    assert collect_module.POLICY_VERSION == "5-todas-esferas-historical-ocr"
     assert collect_module._aceitavel(
         normalizar_compra(compra_flat(), "feed"), None
     )[0]
-    for esfera in ("F", "E", "D", None):
+
+    for esfera in ("F", "E", "D", "M"):
         compra = normalizar_compra(compra_flat(), "feed")
         compra["esfera"] = esfera
-        assert collect_module._aceitavel(compra, {"M"})[0] is False
-    with pytest.raises(ValueError, match="somente M"):
-        collect_module.coletar(tmp_path, esferas={"F"})
+        assert collect_module._aceitavel(compra, None)[0] is True, esfera
+
+    # Esfera ausente ou desconhecida continua fora: sem ela não há prova de
+    # que a compra é de ente público sob o regime.
+    for esfera in (None, "", "X"):
+        compra = normalizar_compra(compra_flat(), "feed")
+        compra["esfera"] = esfera
+        assert collect_module._aceitavel(compra, None)[0] is False, esfera
+
+    # Um filtro restrito a M continua válido e exclui as demais.
+    compra_federal = normalizar_compra(compra_flat(), "feed")
+    compra_federal["esfera"] = "F"
+    assert collect_module._aceitavel(compra_federal, {"M"})[0] is False
+
+    # Um filtro fora da tabela de esferas é erro de uso, não coleta silenciosa.
+    with pytest.raises(ValueError, match="subconjunto"):
+        collect_module.coletar(tmp_path, esferas={"X"})
 
 
 def test_filtro_preliminar_adia_campos_ausentes_para_confirmacao():

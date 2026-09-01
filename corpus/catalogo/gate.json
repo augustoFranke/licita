@@ -1,6 +1,6 @@
 {
   "passou": true,
-  "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+  "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
   "processos_elegiveis": 27,
   "processos_elegiveis_ids": [
     "01612698000169-1-000047-2024",
@@ -37,7 +37,7 @@
   "criterios": [
     {
       "nome": "processos",
-      "exigido": "≥20",
+      "exigido": "≥15",
       "obtido": "27",
       "passou": true
     },
@@ -61,19 +61,19 @@
     },
     {
       "nome": "esferas permitidas",
-      "exigido": "M",
+      "exigido": "D,E,F,M",
       "obtido": "M",
       "passou": true
     },
     {
-      "nome": "perfil MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
-      "exigido": "≥20",
+      "nome": "perfil PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+      "exigido": "≥15",
       "obtido": "27",
       "passou": true
     },
     {
       "nome": "processos no filtro Lei 14.133/Pregão/bens",
-      "exigido": "≥20",
+      "exigido": "≥15",
       "obtido": "27",
       "passou": true
     },
@@ -102,27 +102,33 @@
       "passou": true
     },
     {
-      "nome": "somente documentos ETP/TR",
+      "nome": "somente documentos da cadeia (ETP/TR/EDITAL/CONTRATO)",
       "exigido": "0 extras",
       "obtido": "0",
       "passou": true
     },
     {
-      "nome": "sem contratos no lote",
-      "exigido": "0",
-      "obtido": "0",
-      "passou": true
-    },
-    {
       "nome": "documentos ETP",
-      "exigido": "≥20",
+      "exigido": "≥15",
       "obtido": "27",
       "passou": true
     },
     {
       "nome": "documentos TR",
-      "exigido": "≥20",
+      "exigido": "≥15",
       "obtido": "27",
+      "passou": true
+    },
+    {
+      "nome": "documentos EDITAL (opcional)",
+      "exigido": "sem piso",
+      "obtido": "8",
+      "passou": true
+    },
+    {
+      "nome": "documentos CONTRATO (opcional)",
+      "exigido": "sem piso",
+      "obtido": "0",
       "passou": true
     }
   ],

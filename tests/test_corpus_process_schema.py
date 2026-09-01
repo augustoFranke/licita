@@ -45,13 +45,31 @@ def test_catalogo_real_valida_quando_disponivel(
         validator.validate(processo)
 
 
-def test_esfera_nao_municipal_e_rejeitada(
+def test_esferas_da_uniao_aos_municipios_sao_aceitas(
     validator: Draft202012Validator,
 ) -> None:
+    """A esfera deixou de restringir o perfil: F/E/D/M validam."""
     payload = json.loads(
         (EXEMPLOS / "corpus_process.supported.json").read_text(encoding="utf-8")
     )
-    payload["orgao"]["esfera"] = "F"
+    for esfera in ("F", "E", "D", "M"):
+        payload["orgao"]["esfera"] = esfera
+        validator.validate(payload)
+
+
+def test_esfera_desconhecida_ou_ausente_e_rejeitada(
+    validator: Draft202012Validator,
+) -> None:
+    """A esfera continua fechada e obrigatória."""
+    payload = json.loads(
+        (EXEMPLOS / "corpus_process.supported.json").read_text(encoding="utf-8")
+    )
+    for esfera in ("X", "", "municipal"):
+        payload["orgao"]["esfera"] = esfera
+        with pytest.raises(ValidationError):
+            validator.validate(payload)
+
+    del payload["orgao"]["esfera"]
     with pytest.raises(ValidationError):
         validator.validate(payload)
 

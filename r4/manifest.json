@@ -1,6 +1,6 @@
 {
   "policy": "4-municipal-historical-ocr",
-  "profile": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+  "profile": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
   "esfera": "M",
   "split": {
     "dev": [

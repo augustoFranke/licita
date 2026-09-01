@@ -34,6 +34,7 @@ from .catalog import (
     ocr_historico_utilizavel,
 )
 from .classify import (
+    ESFERAS_SUPORTADAS,
     ETP,
     PERFIL_SUPPORTED,
     TR,
@@ -61,13 +62,17 @@ from .store import baixar_documento, processo_id
 from .verify import verificar
 
 
-# Inspeções da política federal anterior coexistem no estado, mas não são
-# reaproveitadas automaticamente pela política municipal.
-POLICY_VERSION = "4-municipal-historical-ocr"
+# Decisões ficam gravadas por (processo, policy_version). A política 4 rejeitou
+# ~20 mil processos por "esfera não é municipal"; reaproveitá-las sob o escopo
+# de todas as esferas faria o coletor pular justamente o que passou a ser
+# elegível. Por isso a ampliação da esfera exige uma política nova — as
+# inspeções anteriores coexistem no estado, mas não são reaproveitadas.
+POLICY_VERSION = "5-todas-esferas-historical-ocr"
 # Alterar este identificador sempre que a implementação, defaults ou
 # interpretação das opções do OCR mudar de forma capaz de alterar o texto.
 OCR_PIPELINE_VERSION = "verify-pymupdf-tesseract-v1"
-ESFERAS_MUNICIPAIS = frozenset({"M"})
+#: Esferas do perfil — fonte única em ``classify.ESFERAS_SUPORTADAS``.
+ESFERAS_PERMITIDAS = ESFERAS_SUPORTADAS
 DEFAULT_TERMOS = ("Estudo Tecnico Preliminar", "ETP")
 ANOS_PRIORITARIOS = (2024, 2023, 2022, 2025)
 PAGINAS_POR_LOTE = 5
@@ -435,14 +440,17 @@ def _data_no_periodo(compra: dict[str, Any], inicio: str, fim: str) -> bool:
     return limite_inicial <= valor <= limite_final
 
 
-def _normalizar_esferas_municipais(
+def _normalizar_esferas(
     esferas: set[str] | frozenset[str] | None,
 ) -> set[str]:
-    normalizadas = {"M"} if esferas is None else {
+    normalizadas = set(ESFERAS_PERMITIDAS) if esferas is None else {
         str(esfera).strip().upper() for esfera in esferas if str(esfera).strip()
     }
-    if normalizadas != {"M"}:
-        raise ValueError("esferas deve conter somente M")
+    if not normalizadas or not normalizadas <= set(ESFERAS_PERMITIDAS):
+        raise ValueError(
+            f"esferas deve ser um subconjunto não vazio de "
+            f"{sorted(ESFERAS_PERMITIDAS)}"
+        )
     return normalizadas
 
 
@@ -452,14 +460,18 @@ def _aceitavel(
     *,
     preliminar: bool = False,
 ) -> tuple[bool, str | None]:
-    # A esfera municipal é invariável da política e precede qualquer consulta
-    # de arquivos. ``esferas`` é mantido na assinatura por compatibilidade.
-    if str(compra.get("esfera") or "").strip().upper() != "M":
-        return False, "esfera não é municipal"
-    if esferas is not None and {
+    # A esfera precede qualquer consulta de arquivos. Ela deixou de restringir
+    # o escopo a municípios, mas continua obrigatória: sem esfera conhecida não
+    # há prova de que a compra é de ente público sob o regime.
+    permitidas = set(ESFERAS_PERMITIDAS) if esferas is None else {
         str(esfera).strip().upper() for esfera in esferas if str(esfera).strip()
-    } != {"M"}:
-        return False, "filtro de esfera deve conter somente M"
+    }
+    if not permitidas or not permitidas <= set(ESFERAS_PERMITIDAS):
+        return False, (
+            f"filtro de esfera deve ser subconjunto de {sorted(ESFERAS_PERMITIDAS)}"
+        )
+    if str(compra.get("esfera") or "").strip().upper() not in permitidas:
+        return False, "esfera fora das permitidas"
 
     instrumento = _int(compra.get("instrumento_convocatorio_codigo"))
     amparo = _int(compra.get("amparo_legal_codigo"))
@@ -1905,7 +1917,7 @@ def coletar(
     processos: int = 20,
     fonte: str = "auto",
     termos: Sequence[str] = DEFAULT_TERMOS,
-    esferas: set[str] | frozenset[str] | None = ESFERAS_MUNICIPAIS,
+    esferas: set[str] | frozenset[str] | None = ESFERAS_PERMITIDAS,
     max_por_orgao: int = 5,
     max_paginas_busca: int = 40,
     janela_dias: int = 31,
@@ -1950,7 +1962,7 @@ def coletar(
         raise ValueError("tentativas_confirmacao deve ser positiva")
     if not str(idioma_ocr).strip():
         raise ValueError("idioma_ocr não pode ser vazio")
-    esferas = _normalizar_esferas_municipais(esferas)
+    esferas = _normalizar_esferas(esferas)
     policy_version = str(policy_version).strip() or POLICY_VERSION
 
     inicio = _data(data_inicial)

@@ -47,7 +47,7 @@
       "descoberta": "pncp_busca"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -133,7 +133,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -145,7 +145,9 @@
       "TR": [
         "01612698000169-1-000047-2024#tr-03"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "01612698000169-1-000047-2024#edital-04"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -219,7 +221,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -231,7 +233,9 @@
       "TR": [
         "25105255000140-1-000041-2024#tr-11"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "25105255000140-1-000041-2024#edital-14"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -305,7 +309,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -317,7 +321,9 @@
       "TR": [
         "88814181000130-1-000215-2024#tr-03"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "88814181000130-1-000215-2024#edital-01"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -391,7 +397,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -477,7 +483,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -563,7 +569,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -649,7 +655,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -735,7 +741,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -821,7 +827,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -907,7 +913,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -993,7 +999,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1005,7 +1011,9 @@
       "TR": [
         "52061181000160-1-000080-2024#tr-02"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "52061181000160-1-000080-2024#edital-01"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -1079,7 +1087,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1091,7 +1099,9 @@
       "TR": [
         "17749896000290-1-000055-2024#tr-03"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "17749896000290-1-000055-2024#edital-01"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -1165,7 +1175,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1177,7 +1187,9 @@
       "TR": [
         "83026138000197-1-000126-2024#tr-04"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "83026138000197-1-000126-2024#edital-07"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -1251,7 +1263,7 @@
       "descoberta": "pncp_busca"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1337,7 +1349,7 @@
       "descoberta": "pncp_busca"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1423,7 +1435,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1435,7 +1447,9 @@
       "TR": [
         "13988308000139-1-000095-2024#tr-10"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "13988308000139-1-000095-2024#edital-11"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -1509,7 +1523,7 @@
       "descoberta": "compras_gov"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1595,7 +1609,7 @@
       "descoberta": "compras_gov"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1681,7 +1695,7 @@
       "descoberta": "compras_gov"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1693,7 +1707,9 @@
       "TR": [
         "87613022000105-1-000106-2024#tr-05"
       ],
-      "EDITAL": [],
+      "EDITAL": [
+        "87613022000105-1-000106-2024#edital-02"
+      ],
       "CONTRATO": [],
       "PESQUISA_PRECOS": []
     },
@@ -1767,7 +1783,7 @@
       "descoberta": "compras_gov"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1853,7 +1869,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -1939,7 +1955,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -2025,7 +2041,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -2111,7 +2127,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -2197,7 +2213,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -2283,7 +2299,7 @@
       "descoberta": "pncp_busca+pncp_confirmacao"
     },
     "contratos": [],
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "SUPPORTED",
     "perfil_inicial": "SUPPORTED",
     "scope_status": "SUPPORTED",
@@ -2370,6 +2386,7 @@
     },
     "contratos": [],
     "cadeia": {
+      "DFD": [],
       "ETP": [
         "44699908000100-1-000054-2025#etp-02"
       ],
@@ -2377,7 +2394,8 @@
         "44699908000100-1-000054-2025#tr-03"
       ],
       "EDITAL": [],
-      "CONTRATO": []
+      "CONTRATO": [],
+      "PESQUISA_PRECOS": []
     },
     "escopo_documental": {
       "par_etp_tr_valido": true,
@@ -2396,7 +2414,7 @@
     "extras": {
       "fonte": "auto"
     },
-    "perfil_id": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
     "perfil_status": "FORA_DO_PERFIL",
     "perfil_inicial": "FORA_DO_PERFIL",
     "scope_status": "OUT_OF_SCOPE",

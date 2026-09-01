@@ -191,8 +191,22 @@ class TestPerfilInicial:
             == PERFIL_SUPPORTED
         )
 
-    def test_esferas_nao_municipais_e_ausente_ficam_fora(self):
-        for esfera in ("F", "E", "D", None, ""):
+    def test_todas_as_esferas_da_uniao_aos_municipios_sao_suportadas(self):
+        """A esfera deixou de restringir o perfil (F/E/D/M valem)."""
+        for esfera in ("F", "E", "D", "M", "m"):
+            assert (
+                classificar_perfil_inicial(
+                    esfera=esfera,
+                    amparo_legal_nome="Lei 14.133/2021, Art. 28, I",
+                    modalidade_id=6,
+                    objeto="Aquisição de material de limpeza",
+                )
+                == PERFIL_SUPPORTED
+            )
+
+    def test_esfera_ausente_ou_desconhecida_fica_fora(self):
+        """Sem esfera conhecida não há prova de ente público sob o regime."""
+        for esfera in (None, "", "X", "  "):
             assert (
                 classificar_perfil_inicial(
                     esfera=esfera,

@@ -9,21 +9,22 @@ Este lote não baixa editais nem consulta contratos.
 
 | Critério | Exigido | Obtido | |
 |---|---|---|---|
-| processos | ≥20 | 27 | ✅ |
+| processos | ≥15 | 27 | ✅ |
 | órgãos distintos | ≥5 | 15 | ✅ |
 | máximo por órgão | ≤5 | 5 | ✅ |
 | categorias distintas | ≥3 | 9 | ✅ |
-| esferas permitidas | M | M | ✅ |
-| perfil MUNICIPAL_14133_PREGAO_ELETRONICO_BENS | ≥20 | 27 | ✅ |
-| processos no filtro Lei 14.133/Pregão/bens | ≥20 | 27 | ✅ |
+| esferas permitidas | D,E,F,M | M | ✅ |
+| perfil PUBLICO_14133_PREGAO_ELETRONICO_BENS | ≥15 | 27 | ✅ |
+| processos no filtro Lei 14.133/Pregão/bens | ≥15 | 27 | ✅ |
 | processos SUPPORTED com exatamente um ETP e um TR | 27 | 27 | ✅ |
 | processos SUPPORTED com documentos utilizáveis localmente | 27 | 27 | ✅ |
 | relações ETP→TR catalogadas | 27 processos | 27 processos | ✅ |
 | vínculos válidos dos contratos presentes | 0 | 0 | ✅ |
-| somente documentos ETP/TR | 0 extras | 0 | ✅ |
-| sem contratos no lote | 0 | 0 | ✅ |
-| documentos ETP | ≥20 | 27 | ✅ |
-| documentos TR | ≥20 | 27 | ✅ |
+| somente documentos da cadeia (ETP/TR/EDITAL/CONTRATO) | 0 extras | 0 | ✅ |
+| documentos ETP | ≥15 | 27 | ✅ |
+| documentos TR | ≥15 | 27 | ✅ |
+| documentos EDITAL (opcional) | sem piso | 8 | ✅ |
+| documentos CONTRATO (opcional) | sem piso | 0 | ✅ |
 
 ## Processos
 
@@ -58,4 +59,4 @@ Este lote não baixa editais nem consulta contratos.
 | 27 | [88814181000130-1-000180/2024](https://pncp.gov.br/app/editais/88814181000130/2024/180) | MUNICIPIO DE OSORIO | RS | eletrodomesticos_e_eletroeletronicos | SUPPORTED | 1 | 1 |
 | 28 | [88814181000130-1-000215/2024](https://pncp.gov.br/app/editais/88814181000130/2024/215) | MUNICIPIO DE OSORIO | RS | outros_bens | SUPPORTED | 1 | 1 |
 
-Total de documentos: **56**.
+Total de documentos: **64**.

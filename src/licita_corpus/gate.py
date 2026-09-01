@@ -1,4 +1,4 @@
-"""Gate independente do lote municipal de pares ETP→TR."""
+"""Gate independente do lote de pares ETP→TR."""
 
 from __future__ import annotations
 
@@ -10,19 +10,23 @@ from pathlib import Path
 from typing import Any, Sequence
 
 from .catalog import (
+    PAPEIS_DO_LOTE,
     PAPEIS_OBRIGATORIOS,
+    PAPEIS_OPCIONAIS,
     escrever_json,
     ocr_historico_utilizavel,
 )
 from .classify import (
-    PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS,
+    ESFERAS_SUPORTADAS,
+    PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS,
     PERFIL_SUPPORTED,
     classificar_perfil_inicial,
 )
 from .verify import sha256_arquivo, verificar
 
 
-ESFERAS_MUNICIPAIS = frozenset({"M"})
+#: Fonte única das esferas do perfil (ver ``classify.ESFERAS_SUPORTADAS``).
+ESFERAS_PERMITIDAS = ESFERAS_SUPORTADAS
 
 
 @dataclass(slots=True)
@@ -115,14 +119,17 @@ def conferir(
     minimo_processos: int = 15,
     max_por_orgao: int | None = 5,
     minimo_orgaos: int = 5,
-    esferas: set[str] | frozenset[str] | None = ESFERAS_MUNICIPAIS,
+    esferas: set[str] | frozenset[str] | None = ESFERAS_PERMITIDAS,
     minimo_categorias: int = 3,
 ) -> dict[str, Any]:
-    permitidas = {"M"} if esferas is None else {
+    permitidas = set(ESFERAS_PERMITIDAS) if esferas is None else {
         str(esfera).strip().upper() for esfera in esferas if str(esfera).strip()
     }
-    if permitidas != {"M"}:
-        raise ValueError("esferas deve conter somente M")
+    if not permitidas or not permitidas <= set(ESFERAS_PERMITIDAS):
+        raise ValueError(
+            f"esferas deve ser um subconjunto não vazio de "
+            f"{sorted(ESFERAS_PERMITIDAS)}"
+        )
     if minimo_categorias < 1:
         raise ValueError("minimo_categorias deve ser positivo")
 
@@ -151,6 +158,7 @@ def conferir(
     perfis_supported: list[dict[str, Any]] = []
     supported_com_par_exato = 0
     supported_com_documentos_utilizaveis = 0
+    documentos_esperados_supported = 0
     supported_com_relacao = 0
     documentos_validos_supported = 0
     processos_sem_relacoes: set[str] = set()
@@ -167,23 +175,30 @@ def conferir(
         perfis_supported.append(processo)
 
         cadeia = processo.get("cadeia") or {}
-        exato_na_cadeia = all(
-            len(cadeia.get(papel) or []) == 1 for papel in PAPEIS_OBRIGATORIOS
-        ) and all(
-            not ids
-            for papel, ids in cadeia.items()
-            if papel not in PAPEIS_OBRIGATORIOS
+        # O lote admite a cadeia: ETP e TR exatamente uma vez; edital e
+        # contrato no máximo uma vez cada. Papel fora do lote continua barrado,
+        # e duplicata de qualquer elo desfaz a correspondência um-a-um.
+        exato_na_cadeia = (
+            all(len(cadeia.get(papel) or []) == 1 for papel in PAPEIS_OBRIGATORIOS)
+            and all(len(cadeia.get(papel) or []) <= 1 for papel in PAPEIS_OPCIONAIS)
+            and all(
+                not ids
+                for papel, ids in cadeia.items()
+                if papel not in PAPEIS_DO_LOTE
+            )
         )
+        papeis_presentes = [
+            papel for papel in PAPEIS_DO_LOTE if cadeia.get(papel)
+        ]
         ids_esperados = {
-            str((cadeia.get(papel) or [""])[0])
-            for papel in PAPEIS_OBRIGATORIOS
-            if cadeia.get(papel)
+            str((cadeia.get(papel) or [""])[0]) for papel in papeis_presentes
         }
         registros = por_processo.get(pid, [])
         ids_registrados = {str(d.get("documento_id") or "") for d in registros}
         documentos_exatos = (
-            len(registros) == 2
-            and {d.get("papel") for d in registros} == set(PAPEIS_OBRIGATORIOS)
+            len(registros) == len(papeis_presentes)
+            and set(PAPEIS_OBRIGATORIOS) <= {d.get("papel") for d in registros}
+            and {d.get("papel") for d in registros} <= set(PAPEIS_DO_LOTE)
             and ids_registrados == ids_esperados
         )
         utilizaveis = documentos_exatos and all(
@@ -199,6 +214,10 @@ def conferir(
         tem_relacao = aresta_esperada in arestas_etp_tr.get(pid, set())
         if exato_na_cadeia and documentos_exatos:
             supported_com_par_exato += 1
+            # O total esperado varia por processo: os obrigatórios mais os elos
+            # opcionais que o ente publicou. Presumir dois por processo
+            # reprovaria justamente quem tem a cadeia mais completa.
+            documentos_esperados_supported += len(ids_esperados)
             documentos_validos_supported += sum(
                 bool(documentos_validos.get(identificador, False))
                 for identificador in ids_esperados
@@ -230,14 +249,14 @@ def conferir(
     }
 
     # Diferentemente dos denominadores de qualidade, a esfera cobre todos os
-    # registros publicados: ausente ou F/E/D nunca pode ser ocultado como fora
-    # do perfil.
+    # registros publicados: uma esfera ausente ou fora das permitidas nunca
+    # pode ser ocultada como fora do perfil.
     esferas_obtidas = {
         str((p.get("orgao") or {}).get("esfera") or "").strip().upper()
         or "AUSENTE"
         for p in processos
     }
-    esfera_ok = bool(processos) and esferas_obtidas == {"M"}
+    esfera_ok = bool(processos) and esferas_obtidas <= permitidas
 
     documentos_elegiveis = [
         documento
@@ -257,7 +276,7 @@ def conferir(
         )
     ]
     papeis_fora = [
-        d for d in documentos_elegiveis if d.get("papel") not in PAPEIS_OBRIGATORIOS
+        d for d in documentos_elegiveis if d.get("papel") not in PAPEIS_DO_LOTE
     ]
 
     criterios = [
@@ -270,9 +289,14 @@ def conferir(
             max_por_orgao is None or (bool(elegiveis) and maior_orgao <= max_por_orgao),
         ),
         Criterio("categorias distintas", f"≥{minimo_categorias}", str(len(categorias)), len(categorias) >= minimo_categorias),
-        Criterio("esferas permitidas", "M", ",".join(sorted(esferas_obtidas)) or "—", esfera_ok),
         Criterio(
-            f"perfil {PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS}",
+            "esferas permitidas",
+            ",".join(sorted(permitidas)),
+            ",".join(sorted(esferas_obtidas)) or "—",
+            esfera_ok,
+        ),
+        Criterio(
+            f"perfil {PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS}",
             f"≥{minimo_processos}",
             str(len(perfis_supported)),
             len(perfis_supported) >= minimo_processos,
@@ -290,7 +314,7 @@ def conferir(
             str(supported_com_documentos_utilizaveis),
             bool(perfis_supported)
             and supported_com_documentos_utilizaveis == len(perfis_supported)
-            and documentos_validos_supported == 2 * len(perfis_supported),
+            and documentos_validos_supported == documentos_esperados_supported,
         ),
         Criterio(
             "relações ETP→TR catalogadas",
@@ -304,16 +328,27 @@ def conferir(
             str(len(contratos_validos)),
             len(contratos_validos) == len(contratos_no_catalogo),
         ),
-        Criterio("somente documentos ETP/TR", "0 extras", str(len(papeis_fora)), not papeis_fora),
-        Criterio("sem contratos no lote", "0", str(len(contratos_no_catalogo)), not contratos_no_catalogo),
+        Criterio(
+            "somente documentos da cadeia (ETP/TR/EDITAL/CONTRATO)",
+            "0 extras",
+            str(len(papeis_fora)),
+            not papeis_fora,
+        ),
     ]
     for papel in PAPEIS_OBRIGATORIOS:
         quantos = sum(1 for d in documentos_elegiveis if d.get("papel") == papel)
         criterios.append(Criterio(f"documentos {papel}", f"≥{minimo_processos}", str(quantos), quantos >= minimo_processos))
+    # Elos opcionais não têm piso: a cadeia completa é rara e sua ausência não
+    # reprova o lote. São reportados para a cobertura ficar visível.
+    for papel in PAPEIS_OPCIONAIS:
+        quantos = sum(1 for d in documentos_elegiveis if d.get("papel") == papel)
+        criterios.append(
+            Criterio(f"documentos {papel} (opcional)", "sem piso", str(quantos), True)
+        )
 
     return {
         "passou": all(c.passou for c in criterios),
-        "perfil_id": PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS,
+        "perfil_id": PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS,
         "processos_elegiveis": len(elegiveis),
         "processos_elegiveis_ids": sorted(
             str(processo.get("processo_id") or "") for processo in elegiveis
@@ -382,20 +417,24 @@ def como_markdown(raiz: Path, resultado: dict[str, Any]) -> str:
 def principal(argv: Sequence[str] | None = None) -> int:
     import argparse
 
-    parser = argparse.ArgumentParser(description="Verifica o lote municipal local de pares ETP→TR.")
+    parser = argparse.ArgumentParser(description="Verifica o lote local de pares ETP→TR.")
     parser.add_argument("--raiz", type=Path, default=Path("corpus"))
     parser.add_argument("--processos", type=int, default=15)
     parser.add_argument("--orgaos", type=int, default=5)
     parser.add_argument("--max-por-orgao", type=int, default=5)
     parser.add_argument("--categorias", type=int, default=3)
-    parser.add_argument("--esferas", choices=("M",), default="M")
+    parser.add_argument(
+        "--esferas",
+        default=",".join(sorted(ESFERAS_PERMITIDAS)),
+        help="esferas admitidas, separadas por vírgula (F,E,D,M)",
+    )
     argumentos = parser.parse_args(argv)
     resultado = conferir(
         argumentos.raiz,
         minimo_processos=argumentos.processos,
         max_por_orgao=argumentos.max_por_orgao,
         minimo_orgaos=argumentos.orgaos,
-        esferas={argumentos.esferas},
+        esferas={e.strip().upper() for e in argumentos.esferas.split(",") if e.strip()},
         minimo_categorias=argumentos.categorias,
     )
     escrever_json(argumentos.raiz / "catalogo" / "gate.json", resultado)

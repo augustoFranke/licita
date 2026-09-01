@@ -1,7 +1,7 @@
 """Testes formais de validação do Golden Dataset (Fase R4).
 
 Verifica os critérios de saída da R4:
-- 10 a 15 processos reais elegíveis no perfil MUNICIPAL_14133_PREGAO_ELETRONICO_BENS;
+- 10 a 15 processos reais elegíveis no perfil PUBLICO_14133_PREGAO_ELETRONICO_BENS;
 - >= 300 valores e requisitos com evidência navegável;
 - Split dev / eval formalmente congelado e estritamente disjunto;
 - 100% de validação no schema fechado ProcurementProcess;
@@ -32,7 +32,7 @@ def test_r4_manifest_integrity_and_disjoint_split() -> None:
     assert MANIFEST_PATH.exists(), f"Manifesto {MANIFEST_PATH} não encontrado"
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
 
-    assert manifest["profile"] == "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+    assert manifest["profile"] == "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
     assert manifest["esfera"] == "M"
     assert manifest["policy"] == "4-municipal-historical-ocr"
 

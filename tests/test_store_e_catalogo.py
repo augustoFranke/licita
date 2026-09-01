@@ -99,7 +99,7 @@ class TestMontagemDeProcesso:
             "CONTRATO": [],
             "PESQUISA_PRECOS": [],
         }
-        assert registro["perfil_id"] == "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+        assert registro["perfil_id"] == "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
         assert registro["perfil_status"] == registro["perfil_inicial"] == "SUPPORTED"
         assert registro["scope_status"] == "SUPPORTED"
 

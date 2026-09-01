@@ -21,14 +21,34 @@
     "documentos"
   ],
   "properties": {
-    "processo_id": {"type": "string", "minLength": 1},
-    "numero_controle_pncp": {"type": "string", "minLength": 1},
+    "processo_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "numero_controle_pncp": {
+      "type": "string",
+      "minLength": 1
+    },
     "orgao": {
       "type": "object",
-      "required": ["cnpj", "esfera"],
+      "required": [
+        "cnpj",
+        "esfera"
+      ],
       "properties": {
-        "cnpj": {"type": "string", "pattern": "^[0-9]{14}$"},
-        "esfera": {"const": "M"}
+        "cnpj": {
+          "type": "string",
+          "pattern": "^[0-9]{14}$"
+        },
+        "esfera": {
+          "enum": [
+            "F",
+            "E",
+            "D",
+            "M"
+          ],
+          "description": "Esfera do ente. Deixou de restringir o perfil (F/E/D/M valem), mas continua fechada e obrigatória: sem esfera conhecida não há prova de ente público sob o regime."
+        }
       },
       "additionalProperties": true
     },
@@ -41,9 +61,15 @@
         "amparo_legal_nome"
       ],
       "properties": {
-        "modalidade_id": {"const": 6},
-        "instrumento_convocatorio_codigo": {"const": 1},
-        "amparo_legal_codigo": {"const": 1},
+        "modalidade_id": {
+          "const": 6
+        },
+        "instrumento_convocatorio_codigo": {
+          "const": 1
+        },
+        "amparo_legal_codigo": {
+          "const": 1
+        },
         "amparo_legal_nome": {
           "type": "string",
           "pattern": "14[.]133/2021"
@@ -51,24 +77,93 @@
       },
       "additionalProperties": true
     },
-    "objeto": {"type": "string", "minLength": 1},
-    "categoria_objeto": {"type": "string", "minLength": 1},
-    "perfil_id": {"const": "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"},
-    "perfil_status": {"enum": ["SUPPORTED", "FORA_DO_PERFIL"]},
-    "perfil_inicial": {"enum": ["SUPPORTED", "FORA_DO_PERFIL"]},
-    "scope_status": {"enum": ["SUPPORTED", "OUT_OF_SCOPE"]},
-    "policy_version": {"const": "4-municipal-historical-ocr"},
-    "collection_policy_version": {"type": "string", "minLength": 1},
+    "objeto": {
+      "type": "string",
+      "minLength": 1
+    },
+    "categoria_objeto": {
+      "type": "string",
+      "minLength": 1
+    },
+    "perfil_id": {
+      "const": "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
+    },
+    "perfil_status": {
+      "enum": [
+        "SUPPORTED",
+        "FORA_DO_PERFIL"
+      ]
+    },
+    "perfil_inicial": {
+      "enum": [
+        "SUPPORTED",
+        "FORA_DO_PERFIL"
+      ]
+    },
+    "scope_status": {
+      "enum": [
+        "SUPPORTED",
+        "OUT_OF_SCOPE"
+      ]
+    },
+    "policy_version": {
+      "const": "4-municipal-historical-ocr"
+    },
+    "collection_policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
     "cadeia": {
       "type": "object",
-      "required": ["ETP", "TR"],
+      "required": [
+        "ETP",
+        "TR"
+      ],
       "properties": {
-        "DFD": {"type": "array", "maxItems": 0},
-        "ETP": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string", "minLength": 1}},
-        "TR": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string", "minLength": 1}},
-        "EDITAL": {"type": "array", "maxItems": 0},
-        "CONTRATO": {"type": "array", "maxItems": 0},
-        "PESQUISA_PRECOS": {"type": "array", "maxItems": 0}
+        "DFD": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "ETP": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "TR": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "EDITAL": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Elo opcional da cadeia. Ausente na maioria dos entes; quando publicado, entra no lote e é validado como os demais."
+        },
+        "CONTRATO": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Elo opcional da cadeia. Ausente na maioria dos entes; quando publicado, entra no lote e é validado como os demais."
+        },
+        "PESQUISA_PRECOS": {
+          "type": "array",
+          "maxItems": 0
+        }
       },
       "additionalProperties": false
     },
@@ -77,25 +172,54 @@
       "minItems": 2,
       "maxItems": 2,
       "uniqueItems": true,
-      "items": {"type": "string", "minLength": 1}
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "allOf": [
     {
-      "if": {"properties": {"scope_status": {"const": "SUPPORTED"}}, "required": ["scope_status"]},
+      "if": {
+        "properties": {
+          "scope_status": {
+            "const": "SUPPORTED"
+          }
+        },
+        "required": [
+          "scope_status"
+        ]
+      },
       "then": {
         "properties": {
-          "perfil_status": {"const": "SUPPORTED"},
-          "perfil_inicial": {"const": "SUPPORTED"}
+          "perfil_status": {
+            "const": "SUPPORTED"
+          },
+          "perfil_inicial": {
+            "const": "SUPPORTED"
+          }
         }
       }
     },
     {
-      "if": {"properties": {"scope_status": {"const": "OUT_OF_SCOPE"}}, "required": ["scope_status"]},
+      "if": {
+        "properties": {
+          "scope_status": {
+            "const": "OUT_OF_SCOPE"
+          }
+        },
+        "required": [
+          "scope_status"
+        ]
+      },
       "then": {
         "properties": {
-          "perfil_status": {"const": "FORA_DO_PERFIL"},
-          "perfil_inicial": {"const": "FORA_DO_PERFIL"}
+          "perfil_status": {
+            "const": "FORA_DO_PERFIL"
+          },
+          "perfil_inicial": {
+            "const": "FORA_DO_PERFIL"
+          }
         }
       }
     }

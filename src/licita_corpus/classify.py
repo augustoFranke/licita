@@ -38,14 +38,20 @@ OUTRO = OUTROS  # alias legado
 AVISO_DIRETA = OUTROS  # PNCP tipo 1 não é tipo do pack
 MINUTA_CONTRATO = OUTROS  # PNCP tipo 3 não é tipo do pack
 
-MUNICIPAL_14133_PREGAO_ELETRONICO_BENS = (
-    "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+PUBLICO_14133_PREGAO_ELETRONICO_BENS = (
+    "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
 )
-PERFIL_MUNICIPAL_14133_PREGAO_ELETRONICO_BENS = (
-    MUNICIPAL_14133_PREGAO_ELETRONICO_BENS
+PERFIL_PUBLICO_14133_PREGAO_ELETRONICO_BENS = (
+    PUBLICO_14133_PREGAO_ELETRONICO_BENS
 )
 PERFIL_SUPPORTED = "SUPPORTED"
 PERFIL_FORA = "FORA_DO_PERFIL"
+
+#: Esferas admitidas pelo perfil. A esfera deixou de ser critério de escopo:
+#: federal, estadual, distrital e municipal publicam a mesma cadeia documental
+#: (ETP, TR, edital, contrato) sob a Lei 14.133. Regime, modalidade e objeto
+#: continuam restringindo — ampliá-los seria outro produto.
+ESFERAS_SUPORTADAS = frozenset({"F", "E", "D", "M"})
 
 #: ``tipoDocumentoId`` do PNCP → tipo do pack.
 TIPO_PNCP_PARA_PAPEL = {
@@ -325,7 +331,12 @@ def classificar_perfil_inicial(
     modalidade_id: int | str | None,
     objeto: str | None,
 ) -> str:
-    """Classifica o perfil municipal de bens comuns do Pregão Eletrônico."""
+    """Classifica o perfil de bens comuns do Pregão Eletrônico da Lei 14.133.
+
+    Vale para qualquer esfera (``F``/``E``/``D``/``M``). Uma esfera ausente ou
+    desconhecida não é enquadrável: o campo é a prova de que a compra é de ente
+    público sob o regime, então continua obrigatório.
+    """
     esfera_n = (esfera or "").strip().upper()
     amparo = normalizar(amparo_legal_nome or "")
     try:
@@ -334,7 +345,7 @@ def classificar_perfil_inicial(
         modalidade = None
     lei = "lei 14 133" in amparo
     if (
-        esfera_n == "M"
+        esfera_n in ESFERAS_SUPORTADAS
         and lei
         and modalidade == 6
         and parece_aquisicao_de_bens(objeto or "")

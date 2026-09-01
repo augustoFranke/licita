@@ -77,6 +77,96 @@ def test_corpus_etp_tr_sem_edital_ou_contrato_passa(corpus):
     assert resultado["falhas_de_abertura"] == []
 
 
+def test_edital_no_lote_nao_reprova_e_e_contado(corpus):
+    """O lote é de cadeia: um edital acompanhando o par não invalida o processo.
+
+    Trava a decisão de escopo — antes o lote exigia exatamente dois documentos
+    (ETP e TR), então qualquer elo a mais reprovava justamente o processo com a
+    cadeia mais completa.
+    """
+    import hashlib
+
+    caminho_docs = corpus / "catalogo" / "documentos.jsonl"
+    documentos = [
+        json.loads(l) for l in caminho_docs.read_text(encoding="utf-8").splitlines() if l.strip()
+    ]
+    modelo = documentos[0]
+    pid = modelo["processo_id"]
+
+    destino = corpus / "documentos" / pid / "edital-01.pdf"
+    _pdf(destino, "EDITAL do processo com conteúdo textual suficiente para validação local")
+    digesto = hashlib.sha256(destino.read_bytes()).hexdigest()
+    edital = dict(modelo)
+    edital.update({
+        "documento_id": f"{pid}#edital-01",
+        "papel": "EDITAL",
+        "arquivo": str(destino.relative_to(corpus)),
+        "sha256": digesto,
+        "sha256_original": digesto,
+        "verificacao": {"abriu": True, "paginas": 1, "caracteres": 20, "precisa_ocr": False},
+    })
+    documentos.append(edital)
+    caminho_docs.write_text(
+        "\n".join(json.dumps(d, ensure_ascii=False) for d in documentos) + "\n",
+        encoding="utf-8",
+    )
+
+    caminho_proc = corpus / "catalogo" / "processos.json"
+    processos = json.loads(caminho_proc.read_text(encoding="utf-8"))
+    registros = processos["processos"] if isinstance(processos, dict) else processos
+    for processo in registros:
+        if processo["processo_id"] == pid:
+            processo["cadeia"]["EDITAL"] = [edital["documento_id"]]
+    caminho_proc.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+
+    resultado = conferir(corpus)
+    reprovados = [c for c in resultado["criterios"] if not c["passou"]]
+    assert resultado["passou"] is True, reprovados
+    criterio = next(
+        c for c in resultado["criterios"] if c["nome"] == "documentos EDITAL (opcional)"
+    )
+    assert criterio["obtido"] == "1"
+
+
+def test_papel_fora_da_cadeia_reprova(corpus):
+    """DFD e pesquisa de preços seguem fora do lote."""
+    import hashlib
+
+    caminho_docs = corpus / "catalogo" / "documentos.jsonl"
+    documentos = [
+        json.loads(l) for l in caminho_docs.read_text(encoding="utf-8").splitlines() if l.strip()
+    ]
+    modelo = documentos[0]
+    pid = modelo["processo_id"]
+    destino = corpus / "documentos" / pid / "dfd-01.pdf"
+    _pdf(destino, "DFD do processo com conteúdo textual suficiente para validação local")
+    digesto = hashlib.sha256(destino.read_bytes()).hexdigest()
+    intruso = dict(modelo)
+    intruso.update({
+        "documento_id": f"{pid}#dfd-01",
+        "papel": "DFD",
+        "arquivo": str(destino.relative_to(corpus)),
+        "sha256": digesto,
+        "sha256_original": digesto,
+        "verificacao": {"abriu": True, "paginas": 1, "caracteres": 20, "precisa_ocr": False},
+    })
+    documentos.append(intruso)
+    caminho_docs.write_text(
+        "\n".join(json.dumps(d, ensure_ascii=False) for d in documentos) + "\n",
+        encoding="utf-8",
+    )
+    caminho_proc = corpus / "catalogo" / "processos.json"
+    processos = json.loads(caminho_proc.read_text(encoding="utf-8"))
+    registros = processos["processos"] if isinstance(processos, dict) else processos
+    for processo in registros:
+        if processo["processo_id"] == pid:
+            processo["cadeia"]["DFD"] = [intruso["documento_id"]]
+    caminho_proc.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+
+    resultado = conferir(corpus, minimo_processos=30)
+    assert resultado["passou"] is False
+
+
 def test_arquivo_ausente_reprova(corpus):
     documentos = (corpus / "catalogo" / "documentos.jsonl").read_text(encoding="utf-8").splitlines()
     (corpus / json.loads(documentos[0])["arquivo"]).unlink()
@@ -168,10 +258,11 @@ def test_um_processo_fora_do_filtro_de_bens_nao_derruba_o_lote(corpus):
     assert criterio["obtido"] == "29"
 
 
-def test_esfera_federal_ou_ausente_reprova_catalogo_aprovado(corpus):
+def test_esfera_ausente_ou_desconhecida_reprova_catalogo_aprovado(corpus):
+    """Esfera é obrigatória: ausente ou fora da tabela reprova o lote."""
     caminho = corpus / "catalogo" / "processos.json"
     originais = json.loads(caminho.read_text(encoding="utf-8"))
-    for esfera in ("F", None):
+    for esfera in (None, "", "X"):
         processos = json.loads(json.dumps(originais))
         processos[0]["orgao"]["esfera"] = esfera
         processos[0]["perfil_inicial"] = "SUPPORTED"  # persistido não é confiável
@@ -179,6 +270,19 @@ def test_esfera_federal_ou_ausente_reprova_catalogo_aprovado(corpus):
         resultado = conferir(corpus)
         criterio = next(c for c in resultado["criterios"] if c["nome"] == "esferas permitidas")
         assert criterio["passou"] is False
+
+
+def test_esferas_federal_estadual_e_distrital_sao_aceitas(corpus):
+    """A esfera deixou de restringir o perfil: F/E/D não reprovam o lote."""
+    caminho = corpus / "catalogo" / "processos.json"
+    originais = json.loads(caminho.read_text(encoding="utf-8"))
+    for esfera in ("F", "E", "D"):
+        processos = json.loads(json.dumps(originais))
+        processos[0]["orgao"]["esfera"] = esfera
+        caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+        resultado = conferir(corpus)
+        criterio = next(c for c in resultado["criterios"] if c["nome"] == "esferas permitidas")
+        assert criterio["passou"] is True, f"esfera {esfera} deveria ser aceita"
 
 
 def test_minimo_de_categorias_conta_somente_elegiveis(corpus):

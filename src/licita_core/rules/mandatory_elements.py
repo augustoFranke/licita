@@ -179,7 +179,7 @@ class MandatoryElementsRule(Rule):
         return (
             doc is not None
             and doc.type == DocumentType.TR
-            and context.profile_id == "MUNICIPAL_14133_PREGAO_ELETRONICO_BENS"
+            and context.profile_id == "PUBLICO_14133_PREGAO_ELETRONICO_BENS"
         )
 
     def detect(self, context: RuleContext) -> list[Finding]:

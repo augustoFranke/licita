@@ -25,6 +25,7 @@ from typing import Any, Callable
 
 from . import reuse
 from .catalog import (
+    PAPEIS_DO_LOTE,
     documento_id,
     escrever_json,
     escrever_jsonl,
@@ -1323,10 +1324,10 @@ def _migrar_aceitos_legados(
         compra = candidato.get("compra")
         if not isinstance(compra, dict):
             compra = candidato
-        aceitavel, _motivo = _aceitavel(compra, {"M"}, preliminar=False)
+        aceitavel, _motivo = _aceitavel(compra, None, preliminar=False)
         if not aceitavel:
-            # Aceites federais/estaduais/distritais da política anterior
-            # continuam auditáveis, porém nunca migram para a política atual.
+            # Aceite fora do perfil atual continua auditável no estado, porém
+            # nunca migra para a política vigente.
             continue
         revalidado = _revalidar_aceito(
             candidato,
@@ -1623,15 +1624,16 @@ def _reaproveitar_inspecao(estado: EstadoColeta, numero: str) -> bool:
     }
 
 
-def _aceitos_municipais(
+def _aceitos_no_perfil(
     aceitos: Sequence[tuple[dict[str, Any], list[dict[str, Any]]]],
 ) -> list[tuple[dict[str, Any], list[dict[str, Any]]]]:
+    """Aceites que ainda satisfazem o perfil vigente, em qualquer esfera."""
     resultado: list[tuple[dict[str, Any], list[dict[str, Any]]]] = []
     for candidato, documentos in aceitos:
         compra = candidato.get("compra")
         if not isinstance(compra, dict):
             compra = candidato
-        aceitavel, _motivo = _aceitavel(compra, {"M"}, preliminar=False)
+        aceitavel, _motivo = _aceitavel(compra, None, preliminar=False)
         if aceitavel:
             resultado.append((candidato, documentos))
     return resultado
@@ -1746,7 +1748,7 @@ def _catalogar(
     log: Callable[[str], None],
     cobertura_incompleta: bool | None = None,
 ) -> dict[str, Any]:
-    aceitos = _aceitos_municipais(estado.aceitos())
+    aceitos = _aceitos_no_perfil(estado.aceitos())
     controles, documentos_controle, relacoes_controle = _controles_catalogados(
         caminhos
     )
@@ -1759,18 +1761,19 @@ def _catalogar(
         if not isinstance(compra_candidata, dict):
             compra_candidata = candidato
         aceitavel, _motivo = _aceitavel(
-            compra_candidata, {"M"}, preliminar=False
+            compra_candidata, None, preliminar=False
         )
         if not aceitavel:
-            # Proteção adicional contra um aceite injetado sob a versão atual:
-            # o catálogo aprovado municipal jamais publica outra esfera.
+            # Proteção contra aceite injetado: o catálogo aprovado só publica
+            # o que satisfaz o perfil vigente.
             continue
-        # Mesmo um banco legado não deve fazer edital/contrato reaparecer no
-        # catálogo deste pipeline.
+        # O lote é de cadeia: ETP e TR são obrigatórios e os elos opcionais
+        # publicados pelo ente entram junto. Filtrar só o par aqui apagaria do
+        # catálogo edital e contrato já baixados e verificados.
         documentos_par = [
             dict(documento)
             for documento in documentos
-            if documento.get("papel") in (ETP, TR)
+            if documento.get("papel") in PAPEIS_DO_LOTE
         ]
         pid = processo_id(candidato["numero_controle_pncp"])
         documentos_locais: list[dict[str, Any]] = []
@@ -2019,7 +2022,7 @@ def coletar(
             reservar=estado.reservar_requisicao,
             throttle=throttle,
         ) as compras_confirmacao:
-            contagens = _contagens_orgaos(_aceitos_municipais(estado.aceitos()))
+            contagens = _contagens_orgaos(_aceitos_no_perfil(estado.aceitos()))
             tentativas_documentais = _contagens_tentativas_documentais(estado)
             vistos_nesta_execucao: set[str] = set()
             total_inspecoes = 0
@@ -2029,7 +2032,7 @@ def coletar(
             cobertura_incompleta_execucao = False
 
             def aceitos_atuais() -> list[tuple[dict[str, Any], list[dict[str, Any]]]]:
-                return _aceitos_municipais(estado.aceitos())
+                return _aceitos_no_perfil(estado.aceitos())
 
             def alvo_atingido() -> bool:
                 return len(aceitos_atuais()) >= processos
@@ -2579,9 +2582,8 @@ def principal(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--termo", action="append", dest="termos", default=None)
     parser.add_argument(
         "--esferas",
-        choices=("M",),
-        default="M",
-        help="esfera municipal (único valor aceito: M)",
+        default=",".join(sorted(ESFERAS_PERMITIDAS)),
+        help="esferas admitidas, separadas por vírgula (F,E,D,M)",
     )
     parser.add_argument("--max-por-orgao", type=int, default=5)
     parser.add_argument(
@@ -2632,7 +2634,9 @@ def principal(argv: Sequence[str] | None = None) -> int:
         parser.error("--data-final deve usar YYYYMMDD")
     if fim >= date.today():
         parser.error("--data-final deve ser uma data já encerrada, anterior a hoje")
-    esferas = {argumentos.esferas}
+    esferas = {
+        e.strip().upper() for e in str(argumentos.esferas).split(",") if e.strip()
+    }
     termos = tuple(argumentos.termos or DEFAULT_TERMOS)
     try:
         resumo = coletar(

@@ -412,7 +412,7 @@ def test_policy_negativa_antiga_nao_bloqueia_politica_nova(tmp_path):
         atual.close()
 
 
-def test_tres_aceitos_legados_sao_migrados_sem_download(monkeypatch, tmp_path):
+def test_aceitos_legados_de_todas_as_esferas_sao_migrados_sem_download(monkeypatch, tmp_path):
     caminho = tmp_path / "estado.sqlite3"
     conteudo = b"%PDF-1.4 legado"
     hash_ = hashlib.sha256(conteudo).hexdigest()
@@ -455,8 +455,16 @@ def test_tres_aceitos_legados_sao_migrados_sem_download(monkeypatch, tmp_path):
     monkeypatch.setattr(collect_module, "verificar", _verificacao_mock)
     atual = EstadoColeta(caminho, policy_version="v2", margem_requisicoes=0)
     try:
-        assert collect_module._migrar_aceitos_legados(atual, tmp_path, log=lambda _: None) == 3
-        assert len(atual.aceitos()) == 3
+        # Os quatro legados (três municipais e um federal) satisfazem o perfil
+        # vigente. Sob o escopo anterior o federal ficava para trás; a migração
+        # agora o aproveita sem novo download.
+        assert collect_module._migrar_aceitos_legados(atual, tmp_path, log=lambda _: None) == 4
+        aceitos = atual.aceitos()
+        assert len(aceitos) == 4
+        esferas = {
+            (candidato.get("compra") or {}).get("esfera") for candidato, _ in aceitos
+        }
+        assert esferas == {"M", "F"}
     finally:
         atual.close()
 

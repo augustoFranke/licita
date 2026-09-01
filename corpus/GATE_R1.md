@@ -23,7 +23,7 @@ Este lote não baixa editais nem consulta contratos.
 | somente documentos da cadeia (ETP/TR/EDITAL/CONTRATO) | 0 extras | 0 | ✅ |
 | documentos ETP | ≥15 | 27 | ✅ |
 | documentos TR | ≥15 | 27 | ✅ |
-| documentos EDITAL (opcional) | sem piso | 8 | ✅ |
+| documentos EDITAL (opcional) | sem piso | 21 | ✅ |
 | documentos CONTRATO (opcional) | sem piso | 0 | ✅ |
 
 ## Processos
@@ -59,4 +59,4 @@ Este lote não baixa editais nem consulta contratos.
 | 27 | [88814181000130-1-000180/2024](https://pncp.gov.br/app/editais/88814181000130/2024/180) | MUNICIPIO DE OSORIO | RS | eletrodomesticos_e_eletroeletronicos | SUPPORTED | 1 | 1 |
 | 28 | [88814181000130-1-000215/2024](https://pncp.gov.br/app/editais/88814181000130/2024/215) | MUNICIPIO DE OSORIO | RS | outros_bens | SUPPORTED | 1 | 1 |
 
-Total de documentos: **64**.
+Total de documentos: **78**.

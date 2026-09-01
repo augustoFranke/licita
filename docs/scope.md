@@ -1,11 +1,12 @@
 # scope.md — Perfil exclusivo do produto atual
 
-> Perfil canônico: `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS`.
+> Perfil canônico: `PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 > A restrição deste documento vale para o produto atual inteiro. Os arquivos
 > `00`–`04` descrevem capacidades, mas não ampliam este perfil.
 
-O produto cobre o ciclo documental de aquisições municipais de bens por
-**Pregão Eletrônico (PE)** sob a Lei nº 14.133/2021. A fatia M0–M1 implementa
+O produto cobre o ciclo documental de aquisições públicas de bens por
+**Pregão Eletrônico (PE)** sob a Lei nº 14.133/2021, em **qualquer esfera**
+(federal, estadual, distrital ou municipal). A fatia M0–M1 implementa
 F-01–F-06, F-11 e F-12; as capacidades posteriores continuam sujeitas ao mesmo
 perfil exclusivo.
 
@@ -15,19 +16,23 @@ perfil exclusivo.
 
 Um processo é `SUPPORTED` somente quando satisfaz simultaneamente:
 
-1. **Esfera:** municipal (`M`).
+1. **Esfera:** federal, estadual, distrital ou municipal (`F`/`E`/`D`/`M`).
+   A esfera não restringe o escopo, mas é **obrigatória e fechada**: ausente ou
+   desconhecida resulta em `OUT_OF_SCOPE`, pois é a prova de que a compra é de
+   ente público sob o regime.
 2. **Regime:** Lei nº 14.133/2021.
 3. **Modalidade:** Pregão Eletrônico (`PE`).
 4. **Objeto:** aquisição de bens comuns.
 5. **Documentos do lote R1:** exatamente um ETP e um TR da mesma contratação,
    reabertos localmente e com texto utilizável.
-6. **Perfil:** `MUNICIPAL_14133_PREGAO_ELETRONICO_BENS` registrado no catálogo.
+6. **Perfil:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS` registrado no catálogo.
 
 Falha ou ambiguidade em qualquer critério resulta em `OUT_OF_SCOPE`. O motivo
 deve ser registrado, por exemplo `FORA_DO_PERFIL` por objeto.
 
 O controle negativo SAEMA de energia permanece fisicamente no corpus por ser
-municipal, mas é `OUT_OF_SCOPE` / `FORA_DO_PERFIL` no critério de objeto. Ele
+de ente público sob o regime, mas é `OUT_OF_SCOPE` / `FORA_DO_PERFIL` no
+critério de objeto. Ele
 não entra em R2 nem em qualquer denominador ou métrica dos elegíveis.
 
 ---
@@ -49,11 +54,26 @@ finding no perfil atual.
 
 Esses materiais podem auxiliar leitura, vocabulário ou comparação, mas nunca
 determinam `SUPPORTED`, `OUT_OF_SCOPE`, disparo, severidade ou fundamento de
-finding. Eles não são overlay ativo do perfil municipal.
+finding. Eles não são overlay ativo deste perfil.
 
-Um overlay municipal poderá existir no futuro apenas quando a norma local
-aplicável estiver expressamente identificada, versionada e associada ao ente.
-Até isso ocorrer, nenhuma prática local presumida complementa a Lei.
+**Limite conhecido do perfil multiesfera.** A Lei nº 14.133/2021 é norma
+nacional e alcança União, Estados, DF e Municípios (CF art. 22, XXVII; art. 1º
+da Lei), então a base vinculante é a mesma em qualquer esfera — e todas as
+regras deste produto se fundamentam apenas em artigos dela. A Lei, porém,
+remete diversos pontos a *regulamento*, e cada esfera edita o seu (decretos e
+INs federais, decretos estaduais, distritais e municipais). Esse regulamento
+**não é verificado por este produto em nenhuma esfera**.
+
+A consequência muda com a ampliação: a IN SEGES/ME nº 81/2022 permanece
+`REFERENCE_ONLY` aqui, mas ela *vincula* o órgão federal. Um achado "conforme"
+deste produto afirma conformidade com a Lei nº 14.133/2021, nunca com o
+regulamento da esfera do ente. Um overlay por esfera poderá existir no futuro
+apenas quando a norma aplicável estiver expressamente identificada, versionada
+e associada ao ente. Até isso ocorrer, nenhuma prática regulamentar presumida
+complementa a Lei.
+
+Empresas públicas e sociedades de economia mista seguem a Lei nº 13.303/2016 e
+ficam fora por critério de regime — o filtro de amparo legal já as exclui.
 
 PNCP e Compras.gov são **canais de publicação e obtenção de dados**, não fontes
 normativas e não prova autônoma de enquadramento.
@@ -76,7 +96,9 @@ normativas e não prova autônoma de enquadramento.
 - Obras e serviços de engenharia.
 - Contratação predominantemente intelectual ou consultoria.
 - Regime especial de TIC ou outro regime incompatível.
-- Outra esfera, modalidade, regime jurídico ou objeto.
+- Outra modalidade, regime jurídico ou objeto. Ampliar qualquer um deles
+  (serviços/obras, dispensa, Lei 8.666) muda as regras de conformidade e é
+  outro produto, não uma configuração deste.
 
 O critério é a natureza do objeto e da obrigação, não a forma do modelo usado
 pelo órgão. Na dúvida, registrar `OUT_OF_SCOPE` com o motivo observável.
@@ -144,7 +166,7 @@ de mercado.
 ## 6. Procedimento binário
 
 ```text
-1. Esfera = M?                                      não → OUT_OF_SCOPE
+1. Esfera ∈ {F,E,D,M}?                             não → OUT_OF_SCOPE
 2. Regime = Lei nº 14.133/2021?                    não → OUT_OF_SCOPE
 3. Modalidade = PE (Pregão Eletrônico)?            não → OUT_OF_SCOPE
 4. Objeto = aquisição de bens comuns?              não → OUT_OF_SCOPE

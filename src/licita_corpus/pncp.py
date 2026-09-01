@@ -311,6 +311,52 @@ class Pncp:
             raise PncpError("lista de arquivos da contratação inválida")
         return payload
 
+    def arquivos_contrato(
+        self, cnpj: str, ano: int, sequencial: int
+    ) -> list[dict[str, Any]]:
+        """Arquivos publicados sob um contrato.
+
+        Os anexos de contrato vêm com ``tipoDocumentoId`` nulo; o papel sai de
+        ``tipoDocumentoNome`` (ver ``classify.papel_documento_contrato``).
+        """
+        payload = self._http.json(
+            f"{PNCP_API}/orgaos/{cnpj}/contratos/{ano}/{sequencial}/arquivos",
+            ausente_ok=True,
+        )
+        if payload is None:
+            return []
+        if not isinstance(payload, list) or not all(isinstance(x, dict) for x in payload):
+            raise PncpError("lista de arquivos do contrato inválida")
+        return payload
+
+    def contratos_da_compra(
+        self, numero_controle_compra: str, *, data_inicial: str, data_final: str,
+        cnpj_orgao: str | None = None, pagina: int = 1,
+    ) -> list[dict[str, Any]]:
+        """Contratos do feed oficial que apontam para uma compra.
+
+        O feed não filtra por compra: o vínculo é o ``numeroControlePncpCompra``
+        de cada contrato, conferido aqui. Restringir por ``cnpj_orgao`` mantém a
+        varredura barata.
+        """
+        params: dict[str, Any] = {
+            "dataInicial": data_inicial,
+            "dataFinal": data_final,
+            "pagina": pagina,
+        }
+        if cnpj_orgao:
+            params["cnpjOrgao"] = cnpj_orgao
+        payload = self._http.json(
+            f"{CONSULTA}/contratos", params, sem_conteudo_ok=True, ausente_ok=True
+        )
+        if not isinstance(payload, dict):
+            return []
+        return [
+            c for c in (payload.get("data") or [])
+            if isinstance(c, dict)
+            and c.get("numeroControlePncpCompra") == numero_controle_compra
+        ]
+
     def baixar(self, url: str) -> tuple[bytes, str | None, str | None]:
         return self._http.bytes(url)
 

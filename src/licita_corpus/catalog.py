@@ -1,8 +1,9 @@
 """Catálogo local dos documentos coletados.
 
-O pipeline atual grava exclusivamente ETP e TR. Os dois papéis adicionais da
-cadeia permanecem no formato para leitura de catálogos antigos, mas não são
-consultados nem baixados por esta coleta.
+Novas coletas publicam uma cadeia completa (ETP, TR, EDITAL e CONTRATO). Os
+processos históricos existentes, inclusive os que só têm ETP/TR, continuam
+legíveis e são mantidos como exceção de compatibilidade até que seus elos
+faltantes sejam promovidos.
 """
 
 from __future__ import annotations
@@ -28,15 +29,20 @@ from .classify import (
 from .pncp import url_contrato, url_processo
 
 CADEIA = (DFD, ETP, TR, EDITAL, CONTRATO, PESQUISA_PRECOS)
-#: Elos que todo processo do lote precisa ter. ETP e TR sustentam o par
-#: comparável da R7 e continuam obrigatórios.
-PAPEIS_OBRIGATORIOS = (ETP, TR)
-#: Elos que o lote admite além dos obrigatórios. Edital e contrato são
-#: opcionais — a maioria dos entes não publica a cadeia inteira —, mas quando
-#: presentes entram no catálogo e são validados como qualquer outro documento.
+#: Papéis exigidos pela coleta vigente, em ordem documental.
+PAPEIS_CADEIA_COMPLETA = (ETP, TR, EDITAL, CONTRATO)
+PAPEIS_OBRIGATORIOS = PAPEIS_CADEIA_COMPLETA
+#: Papéis que podem ser acrescentados por ferramentas de promoção de registros
+#: históricos. Eles não são opcionais para uma coleta nova: nessa coleta todos
+#: os quatro papéis abaixo são obrigatórios.
 PAPEIS_OPCIONAIS = (EDITAL, CONTRATO)
-PAPEIS_DO_LOTE = PAPEIS_OBRIGATORIOS + PAPEIS_OPCIONAIS
+PAPEIS_OPCIONAIS_HISTORICOS = PAPEIS_OPCIONAIS
+PAPEIS_DO_LOTE = PAPEIS_CADEIA_COMPLETA
+#: ETP/TR continuam sendo o par compartilhado por regras de comparação e por
+#: catálogos históricos.
+PAPEIS_PAR_ETP_TR = (ETP, TR)
 PAPEIS_MATERIAIS = (ETP, TR, EDITAL, CONTRATO)
+CRITERIO_VINCULO_CONTRATO = "numeroControlePncpCompra"
 
 
 def metadados_verificacao(
@@ -120,10 +126,11 @@ def documento_id(
 def montar_relacoes(
     processo_id: str, cadeia: dict[str, list[str]]
 ) -> list[dict[str, str]]:
-    """Liga os elos presentes, atravessando opcionais ausentes.
+    """Liga os elos presentes, atravessando elos ausentes.
 
-    Para o pipeline novo, ``cadeia`` contém apenas ETP e TR e resulta em uma
-    única relação. A travessia mantém compatibilidade com catálogos legados.
+    A coleta nova produz as quatro arestas consecutivas da cadeia. A travessia
+    também mantém compatibilidade com catálogos históricos que ainda têm só o
+    par ETP/TR ou que receberam algum elo por enriquecimento.
     """
     presentes = [papel for papel in CADEIA if cadeia.get(papel)]
     arestas: list[dict[str, str]] = []
@@ -147,13 +154,35 @@ def _url_do_contrato(contrato: dict[str, Any]) -> str:
     return url_contrato(contrato["numero_controle_pncp"])
 
 
+def _contrato_vincula_processo(processo: Mapping[str, Any]) -> bool:
+    """Confere o vínculo explícito de ao menos um contrato à compra.
+
+    Os quatro papéis documentais, sozinhos, não provam a cadeia exigida pela
+    coleta vigente: o instrumento contratual precisa apontar para a mesma
+    contratação pelo campo canônico do PNCP. Catálogos históricos podem não
+    ter esse metadado e continuam válidos como histórico, mas não como cadeia
+    nova/completa.
+    """
+    numero_compra = str(processo.get("numero_controle_pncp") or "").strip()
+    contratos = processo.get("contratos")
+    if not isinstance(contratos, Sequence) or isinstance(contratos, (str, bytes)):
+        return False
+    return any(
+        isinstance(contrato, Mapping)
+        and str(contrato.get("numero_controle_pncp_compra") or "").strip()
+        == numero_compra
+        and contrato.get("criterio_vinculo") == CRITERIO_VINCULO_CONTRATO
+        for contrato in contratos
+    )
+
+
 def montar_processo(
     compra: dict[str, Any],
     extras: dict[str, Any] | None,
     documentos: Sequence[dict[str, Any]],
     contratos: Sequence[dict[str, Any]] = (),
 ) -> dict[str, Any]:
-    """Monta o registro canônico; a coleta nova sempre passa ``contratos=()``."""
+    """Monta o registro canônico para um par histórico ou cadeia completa."""
     numero = compra["numero_controle_pncp"]
     identificador = numero.replace("/", "-")
     extras = extras or {}
@@ -198,6 +227,12 @@ def montar_processo(
     total_estimado = extras.get("valor_total_estimado_itens", compra.get("valor_global"))
     quantidade_itens = extras.get("quantidade_itens")
     total_contratado = sum(c.get("valor_global") or 0 for c in contratos) or None
+    contrato_vinculado = bool(contratos_registrados) and any(
+        str(contrato.get("numero_controle_pncp_compra") or "").strip()
+        == str(numero).strip()
+        and contrato.get("criterio_vinculo") == CRITERIO_VINCULO_CONTRATO
+        for contrato in contratos_registrados
+    )
 
     perfil_status = classificar_perfil_inicial(
         esfera=compra.get("esfera"),
@@ -267,11 +302,14 @@ def montar_processo(
         "cadeia": cadeia,
         "escopo_documental": {
             "par_etp_tr_valido": all(
-                len(cadeia[papel]) == 1 for papel in PAPEIS_OBRIGATORIOS
+                len(cadeia[papel]) == 1 for papel in PAPEIS_PAR_ETP_TR
             ),
             "um_documento_por_papel": all(
                 len(cadeia[papel]) == 1 for papel in PAPEIS_MATERIAIS
             ),
+            "cadeia_completa": all(
+                len(cadeia[papel]) == 1 for papel in PAPEIS_CADEIA_COMPLETA
+            ) and contrato_vinculado,
             "contagem": {papel: len(cadeia[papel]) for papel in CADEIA},
         },
         "documentos": [d["documento_id"] for d in documentos],
@@ -327,15 +365,18 @@ def estatisticas(
         "processos_com_par_etp_tr": sum(
             1
             for p in processos
-            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_OBRIGATORIOS)
+            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_PAR_ETP_TR)
         ),
         "processos_elegiveis_com_par_etp_tr": sum(
             1
             for p in elegiveis
-            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_OBRIGATORIOS)
+            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_PAR_ETP_TR)
         ),
         "processos_cadeia_completa": sum(
-            1 for p in processos if all(p.get("cadeia", {}).get(papel) for papel in CADEIA)
+            1
+            for p in processos
+            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_CADEIA_COMPLETA)
+            and _contrato_vincula_processo(p)
         ),
         "documentos_abertos": sum(
             1 for d in documentos if d.get("verificacao", {}).get("abriu")

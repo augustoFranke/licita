@@ -1,4 +1,4 @@
-"""Testes do pipeline novo, sem edital nem contrato."""
+"""Testes dos componentes compartilhados da coleta documental."""
 
 from __future__ import annotations
 
@@ -142,7 +142,7 @@ def test_estado_persiste_cache_e_nao_deixa_estourar_orcamento(tmp_path):
         estado.close()
 
 
-def test_catalogo_de_download_tem_somente_etp_e_tr(monkeypatch, tmp_path):
+def test_download_compartilhado_etp_tr_preserva_escopo_historico(monkeypatch, tmp_path):
     from types import SimpleNamespace
     import licita_corpus.collect as modulo
     from licita_corpus.collect import baixar_par
@@ -469,6 +469,187 @@ def test_aceitos_legados_de_todas_as_esferas_sao_migrados_sem_download(monkeypat
         atual.close()
 
 
+def test_migracao_escolhe_promocao_mais_nova_e_preserva_edital(
+    monkeypatch, tmp_path
+):
+    monkeypatch.setattr(collect_module, "verificar", _verificacao_mock)
+    numero = NUMERO
+    compra = normalizar_compra(compra_flat(), "feed")
+    conteudo = b"%PDF-1.4 cadeia historica"
+    hash_ = hashlib.sha256(conteudo).hexdigest()
+
+    def documento(papel: str, nome: str) -> dict:
+        caminho = tmp_path / "documentos" / numero.replace("/", "-") / nome
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+        caminho.write_bytes(conteudo)
+        return {
+            "documento_id": f"{numero}#{papel}",
+            "processo_id": numero.replace("/", "-"),
+            "papel": papel,
+            "arquivo": str(caminho.relative_to(tmp_path)),
+            "sha256": hash_,
+            "bytes": len(conteudo),
+        }
+
+    etp = documento("ETP", "etp.pdf")
+    tr = documento("TR", "tr.pdf")
+    edital = documento("EDITAL", "edital.pdf")
+
+    antigo = EstadoColeta(tmp_path / "estado.sqlite3", policy_version="v1")
+    antigo.salvar_aceito(
+        {"numero_controle_pncp": numero, "compra": compra}, [etp, tr]
+    )
+    antigo.close()
+    promovido = EstadoColeta(tmp_path / "estado.sqlite3", policy_version="v2")
+    promovido.salvar_aceito(
+        {"numero_controle_pncp": numero, "compra": compra}, [etp, tr, edital]
+    )
+    promovido.close()
+
+    atual = EstadoColeta(tmp_path / "estado.sqlite3", policy_version="v3")
+    try:
+        assert collect_module._migrar_aceitos_legados(
+            atual, tmp_path, log=lambda _: None
+        ) == 1
+        aceite = atual.aceitos()[0]
+        assert {documento["papel"] for documento in aceite[1]} == {
+            "ETP",
+            "TR",
+            "EDITAL",
+        }
+        resumo = collect_module._catalogar(
+            Caminhos(tmp_path),
+            atual,
+            alvo=1,
+            fonte="pncp-contratos",
+            log=lambda _: None,
+        )
+        assert resumo["documentos"] == 3
+        processo = json.loads(
+            (tmp_path / "catalogo" / "processos.json").read_text(encoding="utf-8")
+        )[0]
+        assert processo["cadeia"]["EDITAL"]
+    finally:
+        atual.close()
+
+
+def test_migracao_completa_aceite_vigente_parcial_sem_perder_elos_legados(
+    monkeypatch, tmp_path
+):
+    """Uma linha v6 parcial ainda deve herdar contrato/edital históricos."""
+    monkeypatch.setattr(collect_module, "verificar", _verificacao_mock)
+    numero = NUMERO
+    compra = normalizar_compra(compra_flat(), "feed")
+    conteudo = b"%PDF-1.4 cadeia historica"
+    hash_ = hashlib.sha256(conteudo).hexdigest()
+
+    def documento(papel: str, nome: str) -> dict:
+        caminho = tmp_path / "documentos" / numero.replace("/", "-") / nome
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+        caminho.write_bytes(conteudo)
+        return {
+            "documento_id": f"{numero}#{papel}",
+            "processo_id": numero.replace("/", "-"),
+            "papel": papel,
+            "arquivo": str(caminho.relative_to(tmp_path)),
+            "sha256": hash_,
+            "bytes": len(conteudo),
+        }
+
+    documentos = [
+        documento("ETP", "etp.pdf"),
+        documento("TR", "tr.pdf"),
+        documento("EDITAL", "edital.pdf"),
+        documento("CONTRATO", "contrato.pdf"),
+    ]
+    contrato = {
+        "numero_controle_pncp": "18025940000109-2-000001/2025",
+        "numero_controle_pncp_compra": numero,
+        "criterio_vinculo": "numeroControlePncpCompra",
+    }
+    antigo = EstadoColeta(tmp_path / "estado.sqlite3", policy_version="v1")
+    antigo.salvar_aceito(
+        {
+            "numero_controle_pncp": numero,
+            "compra": compra,
+            "contrato": contrato,
+            "contratos": [contrato],
+        },
+        documentos,
+    )
+    antigo.close()
+
+    parcial = EstadoColeta(tmp_path / "estado.sqlite3", policy_version="v2")
+    parcial.salvar_aceito(
+        {"numero_controle_pncp": numero, "compra": compra}, documentos[:2]
+    )
+    try:
+        assert collect_module._migrar_aceitos_legados(
+            parcial, tmp_path, log=lambda _: None
+        ) == 1
+        candidato, documentos_migrados = parcial.aceitos()[0]
+        assert {d["papel"] for d in documentos_migrados} == {
+            "ETP",
+            "TR",
+            "EDITAL",
+            "CONTRATO",
+        }
+        assert candidato["contratos"][0]["numero_controle_pncp_compra"] == numero
+    finally:
+        parcial.close()
+
+
+def test_catalogo_nao_rotula_quatro_documentos_sem_vinculo_como_cadeia_nova(
+    monkeypatch, tmp_path
+):
+    """IDs dos quatro papéis sem metadado contrato→compra seguem históricos."""
+    monkeypatch.setattr(collect_module, "verificar", _verificacao_mock)
+    numero = NUMERO
+    compra = normalizar_compra(compra_flat(), "feed")
+    conteudo = b"%PDF-1.4 aceite sem vinculo"
+    hash_ = hashlib.sha256(conteudo).hexdigest()
+    documentos = []
+    for papel in ("ETP", "TR", "EDITAL", "CONTRATO"):
+        caminho = tmp_path / "documentos" / numero.replace("/", "-") / f"{papel.lower()}.pdf"
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+        caminho.write_bytes(conteudo)
+        documentos.append(
+            {
+                "documento_id": f"{numero}#{papel.lower()}",
+                "processo_id": numero.replace("/", "-"),
+                "papel": papel,
+                "arquivo": str(caminho.relative_to(tmp_path)),
+                "sha256": hash_,
+                "bytes": len(conteudo),
+            }
+        )
+
+    estado = EstadoColeta(
+        tmp_path / "estado.sqlite3",
+        policy_version=collect_module.POLICY_VERSION,
+        margem_requisicoes=0,
+    )
+    estado.salvar_aceito(
+        {"numero_controle_pncp": numero, "compra": compra}, documentos
+    )
+    try:
+        resumo = collect_module._catalogar(
+            Caminhos(tmp_path),
+            estado,
+            alvo=1,
+            fonte="pncp-contratos",
+            log=lambda _: None,
+        )
+        processo = json.loads(
+            (tmp_path / "catalogo" / "processos.json").read_text(encoding="utf-8")
+        )[0]
+        assert processo["collection_policy_version"] != collect_module.POLICY_VERSION
+        assert processo["escopo_documental"]["cadeia_completa"] is False
+        assert resumo["processos_cadeia_completa"] == 0
+    finally:
+        estado.close()
+
+
 def test_coletor_aceita_todas_as_esferas_e_exige_esfera_conhecida(tmp_path):
     """Escopo de todas as esferas: F/E/D/M entram; sem esfera, não.
 
@@ -476,7 +657,7 @@ def test_coletor_aceita_todas_as_esferas_e_exige_esfera_conhecida(tmp_path):
     (processo, policy_version), então reaproveitar a política municipal faria
     o coletor pular os processos que passaram a ser elegíveis.
     """
-    assert collect_module.POLICY_VERSION == "5-todas-esferas-historical-ocr"
+    assert collect_module.POLICY_VERSION == "6-cadeia-completa-todas-esferas"
     assert collect_module._aceitavel(
         normalizar_compra(compra_flat(), "feed"), None
     )[0]
@@ -661,124 +842,6 @@ def test_revalidacao_preserva_ocr_historico_com_hash_original(monkeypatch, tmp_p
     assert collect_module._revalidar_aceito(candidato, documentos, tmp_path) is None
 
 
-def test_pagina_com_falha_vira_retry_e_pagina_seguinte_continua(monkeypatch, tmp_path):
-    chamadas: list[int] = []
-    compra = compra_flat()
-    compra["dataPublicacaoPncp"] = "2025-11-15T00:00:00"
-
-    class FakePncp:
-        def __init__(self, **_kwargs):
-            self.falhou = False
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_args):
-            return None
-
-        def pagina_contratacoes_publicadas(self, *_args, **kwargs):
-            pagina = kwargs["pagina"]
-            chamadas.append(pagina)
-            if pagina == 1 and not self.falhou:
-                self.falhou = True
-                raise PncpError("falha de página")
-            return ([compra], 2)
-
-        def arquivos_compra(self, *_args):
-            return [arquivo(2, "TR", 4), arquivo(3, "ETP", 7)]
-
-    class FakeCompras:
-        def __init__(self, **_kwargs):
-            pass
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_args):
-            return None
-
-    _instalar_download_mock(monkeypatch)
-    monkeypatch.setattr(collect_module, "Pncp", FakePncp)
-    monkeypatch.setattr(collect_module, "ComprasGov", FakeCompras)
-    resumo = collect_module.coletar(
-        tmp_path,
-        data_inicial="20251101",
-        data_final="20251130",
-        processos=1,
-        fonte="pncp-feed",
-        max_paginas_feed=2,
-        max_requisicoes_dia=100,
-        margem_requisicoes=0,
-        intervalo=0,
-    )
-    assert chamadas == [1, 2]
-    assert resumo["paginas_retry"] == 1
-    assert resumo["paginas_concluidas"] == 1
-    assert resumo["cobertura_incompleta"] is True
-
-
-def test_confirmacao_textual_prioriza_compras_antes_dos_arquivos(
-    monkeypatch, tmp_path
-):
-    chamadas: list[str] = []
-    compra = compra_flat()
-
-    class FakePncp:
-        def __init__(self, **_kwargs):
-            pass
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_args):
-            return None
-
-        def busca_portal(self, _termo, **_kwargs):
-            chamadas.append("busca")
-            return ([compra], 1)
-
-        def pagina_contratacoes_publicadas(self, *_args, **_kwargs):
-            chamadas.append("feed")
-            return ([], 1)
-
-        def arquivos_compra(self, *_args):
-            chamadas.append("arquivos")
-            return [arquivo(2, "TR", 4), arquivo(3, "ETP", 7)]
-
-    class FakeCompras:
-        def __init__(self, **_kwargs):
-            pass
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_args):
-            return None
-
-        def pagina_contratacoes(self, *_args, **_kwargs):
-            chamadas.append("compras")
-            return ([compra], 1)
-
-    _instalar_download_mock(monkeypatch)
-    monkeypatch.setattr(collect_module, "Pncp", FakePncp)
-    monkeypatch.setattr(collect_module, "ComprasGov", FakeCompras)
-    resumo = collect_module.coletar(
-        tmp_path,
-        data_inicial="20251101",
-        data_final="20251130",
-        processos=1,
-        fonte="pncp-busca",
-        termos=("ETP",),
-        max_paginas_busca=1,
-        max_requisicoes_dia=100,
-        margem_requisicoes=0,
-        intervalo=0,
-    )
-    assert resumo["processos"] == 1
-    assert chamadas[:3] == ["busca", "compras", "arquivos"]
-    assert "feed" not in chamadas
-
-
 def test_margem_deixa_pagina_pendente_sem_chamar_api(monkeypatch, tmp_path):
     chamadas = []
 
@@ -792,22 +855,11 @@ def test_margem_deixa_pagina_pendente_sem_chamar_api(monkeypatch, tmp_path):
         def __exit__(self, *_args):
             return None
 
-        def pagina_contratacoes_publicadas(self, *_args, **_kwargs):
+        def pagina_contratos_publicados(self, *_args, **_kwargs):
             chamadas.append(True)
             raise AssertionError("a margem deveria impedir a chamada")
 
-    class FakeCompras:
-        def __init__(self, **_kwargs):
-            pass
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_args):
-            return None
-
     monkeypatch.setattr(collect_module, "Pncp", FakePncp)
-    monkeypatch.setattr(collect_module, "ComprasGov", FakeCompras)
     resumo = collect_module.coletar(
         tmp_path,
         data_inicial="20251101",

@@ -95,7 +95,7 @@ _REGRAS_TITULO: tuple[tuple[str, re.Pattern[str]], ...] = (
 _TITULO_NEGATIVO = re.compile(
     r"\b(errata|retificacao|adendo|esclarecimento|impugnacao|recurso|"
     r"resultado|ata de (sessao|realizacao)|homologacao|adjudicacao|"
-    r"aviso de licitacao|extrato|publicacao|comprovante)\b"
+    r"aviso de licitacao|extrato|publicacao|comprovante|minuta|rascunho)\b"
 )
 
 
@@ -124,7 +124,8 @@ def papel_documento(tipo_id: int | str | None, titulo: str) -> str:
     return OUTROS
 
 
-#: Tipos do pack. O lote R1 só baixa ETP e TR.
+#: Tipos do pack. A coleta nova baixa os quatro elos materiais; DFD e pesquisa
+#: de preços continuam disponíveis para catálogos e classificações auxiliares.
 PAPEIS_DA_CADEIA = (DFD, ETP, TR, EDITAL, CONTRATO, PESQUISA_PRECOS)
 PAPEIS_MATERIAIS = (ETP, TR, EDITAL, CONTRATO)
 
@@ -359,6 +360,9 @@ def classificar_perfil_inicial(
 _TIPO_ANEXO_CONTRATO = {
     "contrato": CONTRATO,
     "termo de contrato": CONTRATO,
+    "contrato termo inicial": CONTRATO,
+    "contrato administrativo": CONTRATO,
+    "instrumento contratual": CONTRATO,
     "termo aditivo": OUTROS,
     "nota de empenho": OUTROS,
     "termo de rescisao": OUTROS,
@@ -366,9 +370,51 @@ _TIPO_ANEXO_CONTRATO = {
 }
 
 
-def papel_documento_contrato(tipo_nome: str | None, titulo: str) -> str:
-    """Papel de um arquivo publicado sob um contrato do PNCP."""
+def papel_documento_contrato(
+    tipo_nome: str | None, titulo: str, tipo_id: int | str | None = None
+) -> str:
+    """Papel de um arquivo publicado sob um contrato do PNCP.
+
+    O recurso de contrato costuma deixar ``tipoDocumentoId`` nulo, mas algumas
+    respostas o preenchem com o código 12. O título é o último fallback; antes
+    dele descartamos nomes que identificam aditivo, empenho, rescisão ou
+    apostilamento para não transformar um anexo acessório em instrumento.
+    """
     chave = normalizar(tipo_nome or "")
+    titulo_chave = normalizar(titulo or "")
+    # Extratos, publicações e comprovantes podem mencionar um contrato, mas
+    # não são o instrumento assinado. O mesmo vale para títulos preparatórios;
+    # descarte-os antes de considerar códigos ou fallbacks textuais.
+    if _TITULO_NEGATIVO.search(chave) or _TITULO_NEGATIVO.search(titulo_chave):
+        return OUTROS
+    # Minutas/rascunhos são modelos preparatórios, não o instrumento assinado.
+    # O fallback pelo título só pode promover um anexo que ainda represente um
+    # contrato efetivo; o PNCP publica ``tipoDocumentoId=3`` para ``Minuta de
+    # contrato`` em alguns registros, portanto o nome precisa ser excluído
+    # antes de qualquer heurística ampla para a palavra "contrato".
+    acessorio = re.search(
+        r"\b(?:aditivo|apostilamento|empenho|rescisao|minuta|rascunho)\b", chave
+    ) or re.search(
+        r"\b(?:aditivo|apostilamento|empenho|rescisao|minuta|rascunho)\b",
+        titulo_chave,
+    )
+    if acessorio:
+        return OUTROS
     if chave in _TIPO_ANEXO_CONTRATO:
         return _TIPO_ANEXO_CONTRATO[chave]
+    try:
+        codigo = None if tipo_id is None else int(tipo_id)
+    except (TypeError, ValueError):
+        codigo = None
+    if codigo == 3:
+        # No mapa de tipos do PNCP, 3 é ``Minuta de contrato``. O código é
+        # autoritativo quando presente, mesmo que o título contenha
+        # "contrato" e acionasse o fallback textual.
+        return OUTROS
+    if codigo == 12:
+        return CONTRATO
+    if chave.startswith("contrato "):
+        return CONTRATO
+    if re.search(r"\b(?:contrato|termo de contrato|instrumento contratual)\b", titulo_chave):
+        return CONTRATO
     return papel_documento(None, titulo)

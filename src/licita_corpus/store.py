@@ -672,7 +672,9 @@ def baixar_contrato_documentos(
             if not url:
                 continue
             papel = papel_documento_contrato(
-                bruto.get("tipoDocumentoNome"), bruto.get("titulo", "")
+                bruto.get("tipoDocumentoNome"),
+                bruto.get("titulo", ""),
+                bruto.get("tipoDocumentoId"),
             )
             if apenas_contrato and papel != "CONTRATO":
                 continue

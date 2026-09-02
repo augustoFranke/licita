@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://licita.local/schemas/corpus_process.v0.1.0.json",
-  "title": "Manifesto de processo do corpus municipal",
-  "description": "Metadados externos ao ProcurementProcess para o perfil municipal exclusivo.",
+  "title": "Manifesto de processo do corpus",
+  "description": "Metadados externos ao ProcurementProcess. Registros históricos podem conter apenas ETP/TR; novas coletas usam a cadeia completa ETP/TR/EDITAL/CONTRATO.",
   "type": "object",
   "required": [
     "processo_id",
@@ -107,7 +107,11 @@
       ]
     },
     "policy_version": {
-      "const": "4-municipal-historical-ocr"
+      "enum": [
+        "4-municipal-historical-ocr",
+        "5-todas-esferas-historical-ocr",
+        "6-cadeia-completa-todas-esferas"
+      ]
     },
     "collection_policy_version": {
       "type": "string",
@@ -170,11 +174,18 @@
     "documentos": {
       "type": "array",
       "minItems": 2,
-      "maxItems": 2,
+      "maxItems": 4,
       "uniqueItems": true,
       "items": {
         "type": "string",
         "minLength": 1
+      }
+    },
+    "contratos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
       }
     }
   },
@@ -221,6 +232,72 @@
             "const": "FORA_DO_PERFIL"
           }
         }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "collection_policy_version": {
+            "const": "6-cadeia-completa-todas-esferas"
+          }
+        },
+        "required": [
+          "collection_policy_version"
+        ]
+      },
+      "then": {
+        "properties": {
+          "cadeia": {
+            "required": [
+              "ETP",
+              "TR",
+              "EDITAL",
+              "CONTRATO"
+            ],
+            "properties": {
+              "EDITAL": {
+                "minItems": 1,
+                "maxItems": 1
+              },
+              "CONTRATO": {
+                "minItems": 1,
+                "maxItems": 1
+              }
+            }
+          },
+          "documentos": {
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "contratos": {
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "numero_controle_pncp",
+                "numero_controle_pncp_compra",
+                "criterio_vinculo"
+              ],
+              "properties": {
+                "numero_controle_pncp": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "numero_controle_pncp_compra": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "criterio_vinculo": {
+                  "const": "numeroControlePncpCompra"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "contratos"
+        ]
       }
     }
   ],

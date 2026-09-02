@@ -13,10 +13,11 @@ Substituir o dado anotado por um par sintético antes de mutar mede o
 comparador contra uma fixture, não contra o corpus, e por isso não fecha esta
 fase. Os comparadores isolados continuam cobertos por ``test_r7_consistency``.
 
-Os pares TR↔EDITAL, TR↔CONTRATO e DFD↔ETP (FR-030–036) ficam **em aberto**: o
-lote R1 é, por decisão de escopo, só ETP+TR. O motor os implementa, esta suíte
-relata que não foram exercitados, e a prova depende de uma expansão futura do
-corpus. Ausência de documento não é inconsistência.
+Os pares TR↔EDITAL, TR↔CONTRATO e DFD↔ETP (FR-030–036) ficam **em aberto** nesta
+suíte porque o golden anotado ainda não contém esses elos em quantidade
+bilateral. O motor os implementa, a suíte relata que não foram exercitados, e a
+prova depende de uma expansão futura das anotações. Ausência de documento não é
+inconsistência.
 """
 
 from __future__ import annotations
@@ -234,7 +235,7 @@ def test_r7_mutation_suite_detection_and_bilateral_evidence() -> None:
         f"({false_positive_rate:.2f}% - Meta <= {MAX_FALSE_POSITIVE_RATE}%)\n"
         f"  Pares não exercitados (em aberto): "
         f"{', '.join(unexercised) if unexercised else '-'} "
-        f"— o lote R1 só tem ETP e TR"
+        f"— o golden atual não tem anotações bilaterais desses elos"
     )
 
     assert injected >= MIN_INJECTED_MUTATIONS, (

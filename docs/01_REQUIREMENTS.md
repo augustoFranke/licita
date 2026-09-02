@@ -28,7 +28,7 @@ Estes enums são normativos. Schema e demais docs devem convergir para eles.
 
 `MEDIUM` substitui qualquer uso anterior de `MED`. `INFO` substitui `LOW`. Campos de escopo podem permanecer sem valor enquanto `scope_status = SCOPE_VALIDATION`; isso não cria novos valores de enum.
 
-Nesta versão, `SUPPORTED` significa exclusivamente a conjunção: esfera `MUNICIPAL`, regime `LEI_14133_2021`, modalidade `PREGAO`, forma `ELETRONICO` e natureza `AQUISICAO_BENS_COMUNS`. Qualquer outro perfil é `OUT_OF_SCOPE`. O desenho pode admitir novos perfis no futuro, mas eles não são aceitos agora.
+Nesta versão, `SUPPORTED` significa exclusivamente a conjunção: esfera conhecida entre `FEDERAL`, `ESTADUAL`, `DISTRITAL` e `MUNICIPAL`, regime `LEI_14133_2021`, modalidade `PREGAO`, forma `ELETRONICO` e natureza `AQUISICAO_BENS_COMUNS`. Qualquer outro perfil é `OUT_OF_SCOPE`. O desenho pode admitir novos perfis no futuro, mas eles não são aceitos agora.
 
 PNCP e Compras.gov são canais de dados, não valores ou evidências suficientes de `government_sphere`. IN SEGES/ME nº 81 e modelos AGU devem ser cadastrados como `REFERENCE_ONLY` para este perfil. Somente `NORMATIVE` aplicável ao perfil ativo pode fundamentar finding normativo; `REFERENCE_ONLY` não determina `SUPPORTED`.
 
@@ -91,8 +91,8 @@ Antes de extração de domínio, indexação, análise, contagem ou recuperaçã
 
 **AC**
 - dados ausentes ou ainda não confirmados mantêm `scope_status = SCOPE_VALIDATION` e nenhuma engine de domínio é executada;
-- `SUPPORTED` só é produzido quando há evidência registrada e confirmação dos cinco campos canônicos: `MUNICIPAL`, `LEI_14133_2021`, `PREGAO`, `ELETRONICO` e `AQUISICAO_BENS_COMUNS`;
-- esfera `FEDERAL`, `ESTADUAL` ou `DISTRITAL`, ou qualquer outro desenquadramento do perfil exclusivo, produz `OUT_OF_SCOPE` com motivo;
+- `SUPPORTED` só é produzido quando há evidência registrada e confirmação dos cinco campos canônicos: esfera `FEDERAL`/`ESTADUAL`/`DISTRITAL`/`MUNICIPAL`, `LEI_14133_2021`, `PREGAO`, `ELETRONICO` e `AQUISICAO_BENS_COMUNS`;
+- esfera ausente/desconhecida ou qualquer outro desenquadramento do perfil exclusivo produz `OUT_OF_SCOPE` com motivo;
 - PNCP/Compras.gov é tratado apenas como canal e jamais como evidência suficiente de esfera;
 - IN SEGES/ME nº 81, modelos AGU e qualquer regra `REFERENCE_ONLY` não participam da decisão de `SUPPORTED`;
 - `SCOPE_VALIDATION` e `OUT_OF_SCOPE` não alimentam engines, índices analíticos, contagens, corpus, denominadores nem comparáveis públicos;
@@ -250,10 +250,12 @@ Ausência de dado não pode ser tratada como `FAIL`.
 
 ## 6. Histórico e obsolescência [D]
 
-A base histórica deve ser filtrada antes da busca para conter somente processos `SUPPORTED`. Processos federais, estaduais ou distritais e demais `OUT_OF_SCOPE` não podem ser recuperados, usados em linhagem ou incluídos em contagens/denominadores.
+A base histórica deve ser filtrada antes da busca para conter somente processos
+`SUPPORTED` das esferas admitidas. Registros `OUT_OF_SCOPE` não podem ser
+recuperados, usados em linhagem ou incluídos em contagens/denominadores.
 
 ### FR-050 — Busca histórica
-Encontrar itens/TRs semanticamente semelhantes no universo municipal suportado.
+Encontrar itens/TRs semanticamente semelhantes no universo suportado.
 
 ### FR-051 — Similaridade
 Calcular similaridade global e por requisito.
@@ -274,7 +276,7 @@ Mostrar primeira ocorrência conhecida de requisito/descrição no universo `SUP
 
 ## 7. Price Intelligence [A]
 
-Contratações públicas usadas como comparáveis devem passar individualmente pelo gate do perfil; a amostra pública contém apenas processos municipais `SUPPORTED`. Registros `OUT_OF_SCOPE` são excluídos antes de estatística, contagem e denominador. Preços de fornecedores/comércio eletrônico seguem sua classificação própria de fonte e não são apresentados como contratação pública.
+Contratações públicas usadas como comparáveis devem passar individualmente pelo gate do perfil; a amostra pública contém apenas processos `SUPPORTED` das esferas admitidas. Registros `OUT_OF_SCOPE` são excluídos antes de estatística, contagem e denominador. Preços de fornecedores/comércio eletrônico seguem sua classificação própria de fonte e não são apresentados como contratação pública.
 
 ### FR-060 — Pesquisa comparável
 Encontrar preços de itens equivalentes, registrando `scope_status`, esfera, CNPJ do órgão/entidade quando aplicável e canal de cada candidato público.
@@ -414,8 +416,8 @@ Quando tecnicamente possível, integrar sistemas municipais de processo eletrôn
 
 **AC**
 - todo registro importado recebe canal de origem e passa pelo FR-006 antes de indexação analítica ou uso por engine;
-- PNCP/Compras.gov não implica esfera federal nem municipal;
-- registros federais, estaduais ou distritais são `OUT_OF_SCOPE` e nunca alimentam engines, contagens, corpus, denominadores ou comparáveis públicos;
+- PNCP/Compras.gov não implica qualquer esfera por si só;
+- registros `OUT_OF_SCOPE` nunca alimentam engines, contagens, corpus, denominadores ou comparáveis públicos;
 - falha de integração é visível (NFR-002);
 - ausência de um conector não bloqueia o workspace local.
 
@@ -458,8 +460,8 @@ Findings `HIGH` devem ter precisão alvo ≥ 90%.
 ### NFR-011 — Resiliência
 Falha em um módulo não deve invalidar resultados independentes.
 
-### NFR-012 — Perfil normativo municipal
-Nesta versão, regras e execução devem ser isoladas pelo único perfil aceito, `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, sem fallback para regras federais, estaduais ou distritais. A organização por `profile` pode permitir evolução futura sem alterar o escopo aceito agora; nenhum perfil não municipal pode ser ativado ou tratado como `SUPPORTED` nesta versão.
+### NFR-012 — Perfil normativo multiesfera
+Nesta versão, regras e execução devem ser isoladas pelo único perfil aceito, `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, aplicável às esferas federal, estadual, distrital e municipal, sem fallback para outro regime, modalidade ou natureza. A organização por `profile` pode permitir evolução futura sem alterar o escopo aceito agora.
 
 ---
 
@@ -468,10 +470,10 @@ Nesta versão, regras e execução devem ser isoladas pelo único perfil aceito,
 Estes critérios validam o lote/corpus de avaliação R1; não são limites, cotas ou tetos de uso produtivo.
 
 - **R1-AC-01 — Volume:** pelo menos 15 processos com `scope_status = SUPPORTED`.
-- **R1-AC-02 — Diversidade institucional:** pelo menos 5 CNPJs distintos de órgãos/entidades municipais entre os processos `SUPPORTED`.
+- **R1-AC-02 — Diversidade institucional:** pelo menos 5 CNPJs distintos de órgãos/entidades entre os processos `SUPPORTED`.
 - **R1-AC-03 — Diversidade material:** pelo menos 3 categorias normalizadas de bens entre os processos `SUPPORTED`.
 - **R1-AC-04 — Teto de concentração:** no máximo 5 processos `SUPPORTED` por CNPJ no corpus R1.
-- **R1-AC-05 — Par documental:** cada processo possui exatamente um ETP e exatamente um TR marcados como ativos e utilizáveis; versões anteriores podem ser preservadas, mas não contam como ativas/utilizáveis.
+- **R1-AC-05 — Cadeia documental:** cada nova coleta possui exatamente um ETP, um TR, um Edital e um instrumento contratual marcados como ativos e utilizáveis; versões anteriores podem ser preservadas, mas não contam como ativas/utilizáveis. Processos históricos apenas com ETP/TR permanecem preservados como exceção.
 - **R1-AC-06 — Denominador:** nenhum processo `SCOPE_VALIDATION` ou `OUT_OF_SCOPE` integra o corpus, as contagens ou o denominador de qualquer R1-AC.
 - **R1-AC-07 — Aplicação:** volume, diversidade e teto por CNPJ são critérios exclusivos de composição/aceite do corpus R1 e não restringem criação, ingestão ou uso produtivo de workspaces `SUPPORTED`.
 

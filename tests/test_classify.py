@@ -65,6 +65,25 @@ class TestPapelAnexoDeContrato:
         assert papel_documento_contrato("Nota de Empenho", "NE 2025NE000123") == OUTROS
         assert papel_documento_contrato("Termo Aditivo", "1º Termo Aditivo") == OUTROS
 
+    def test_instrumento_e_reconhecido_por_codigo_ou_titulo(self):
+        assert papel_documento_contrato(None, "Instrumento contratual") == CONTRATO
+        assert papel_documento_contrato(None, "arquivo assinado", 12) == CONTRATO
+        assert papel_documento_contrato(None, "Contrato aditivo") == OUTROS
+
+    def test_minuta_ou_rascunho_nao_e_instrumento_assinado(self):
+        assert papel_documento_contrato("Minuta de contrato", "Minuta de contrato", 3) == OUTROS
+        assert papel_documento_contrato("Outros documentos", "Contrato", 3) == OUTROS
+        assert papel_documento_contrato(None, "Rascunho do contrato") == OUTROS
+
+    def test_extrato_publicacao_ou_comprovante_nao_e_instrumento(self):
+        for tipo, titulo in (
+            (None, "Extrato de contrato"),
+            ("Extrato de contrato", "Contrato"),
+            ("Contrato", "Publicação do contrato"),
+            (None, "Comprovante de publicação do contrato"),
+        ):
+            assert papel_documento_contrato(tipo, titulo) == OUTROS
+
 
 class TestCategoriaObjeto:
     def test_categorias_distintas(self):

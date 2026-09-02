@@ -55,30 +55,35 @@ Prova da saída: checklist versionado neste arquivo + testes/CI quando o artefat
 
 ## R1 — Corpus real
 
-Pares ETP→TR reais, reproduzíveis. Operação: [`corpus/README.md`](../corpus/README.md).
+Cadeias completas reais e reproduzíveis. A coleta parte do feed de contratos,
+resolve a contratação vinculada e só publica o processo quando encontra e
+valida exatamente ETP, TR, Edital e instrumento contratual. Operação:
+[`corpus/README.md`](../corpus/README.md).
 
 **Entrada:** saída de R0.
 
 **Saída**
-- `licita-gate` verde sobre os elegíveis: ≥15 processos, com alvo 20; cada um
-  tem exatamente 1 ETP e 1 TR, ambos reabertos localmente, texto utilizável e
-  relação `ETP → TR` catalogada.
-- Cada elegível tem esfera `M`, Lei nº 14.133/2021, modalidade PE, objeto de
+- `licita-gate` verde sobre os elegíveis: ≥15 processos, com alvo 20; cada
+  cadeia nova tem exatamente 1 ETP, 1 TR, 1 Edital e 1 instrumento contratual,
+  todos reabertos localmente, com texto utilizável e relações catalogadas.
+- Cada elegível tem esfera `F`/`E`/`D`/`M`, Lei nº 14.133/2021, modalidade PE, objeto de
   aquisição de bens e perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`.
 - Diversidade calculada somente sobre elegíveis: ≥5 CNPJs, ≥3 categorias e
   ≤5 processos por CNPJ.
 - Metadados: CNPJ/órgão, processo, data, objeto, categoria, perfil, esfera,
   modalidade, URLs/fontes e hashes.
-- Os 28 atuais permanecem fisicamente: 27 elegíveis e o SAEMA energia como
-  controle negativo municipal `OUT_OF_SCOPE` / `FORA_DO_PERFIL` por objeto.
-  O controle não entra em R2 nem em nenhum denominador ou métrica de elegíveis.
+- Processos históricos sem os quatro elos permanecem fisicamente no corpus e
+  não são apagados. A exigência documental aplica-se a novas coletas; uma
+  promoção histórica substitui o processo somente depois de validar os quatro
+  documentos.
 - Pipeline reproduzível a partir do estado em `corpus/estado/` (falha de API
-  não vira lista vazia), sob a policy `4-municipal-historical-ocr`.
+  não vira lista vazia), sob a policy `6-cadeia-completa-todas-esferas`.
 - Comando do gate: `--processos 15 --orgaos 5 --categorias 3
-  --max-por-orgao 5 --esferas M`.
+  --max-por-orgao 5 --esferas F,E,D,M`.
 
 **Fora**
-- Não baixa edital/contrato/DFD (tipos do produto, não deste lote).
+- Não baixa DFD, pesquisa de preços ou outros tipos que não sejam os quatro
+  elos exigidos.
 - Não classifica qualidade do TR.
 - Não usa processos inelegíveis para fechar quantidade ou diversidade.
 - PNCP e Compras.gov, como canais, não comprovam sozinhos o enquadramento.
@@ -150,8 +155,9 @@ Oráculo de extração. Política: [`r4/GUIA.md`](../r4/GUIA.md), formato [`r4/F
 - ≥300 valores/requisitos com evidência navegável.
 - Split `dev` / `eval` congelado **por processo** (nenhum documento do mesmo processo nos dois).
 - Duas leituras consecutivas não revelam campo ambíguo sem decisão já escrita no `GUIA`.
-- Manifesto/catálogo externo com split, perfil, esfera `M`, hashes dos
-  originais, versão da policy `4-municipal-historical-ocr` e, quando houver,
+- Manifesto/catálogo externo com split, perfil, esfera `F`/`E`/`D`/`M`, hashes dos
+  originais, versão da policy `6-cadeia-completa-todas-esferas` (ou a versão
+  histórica preservada) e, quando houver,
   idioma, versão/configuração e hash do artefato OCR. Payload fechado =
   `ProcurementProcess` vigente, sem campos de esfera, perfil, hash ou OCR.
 
@@ -215,7 +221,7 @@ Primeira UI. Só dados `CONFIRMED` alimentam R7–R9.
 
 Compara valores **já confirmados** (ou golden R4 no lugar da UI, em teste).
 
-**Entrada:** valores `CONFIRMED` (R6) ou anotações R4; pares de documentos existentes. Ausência de DFD/edital/contrato ≠ inconsistência.
+**Entrada:** valores `CONFIRMED` (R6) ou anotações R4; documentos existentes. Ausência de DFD/edital/contrato ≠ inconsistência.
 
 **Saída**
 - Compara: ETP↔TR; TR↔edital; edital↔contrato; TR↔contrato; DFD↔ETP se houver DFD (FR-030–036).

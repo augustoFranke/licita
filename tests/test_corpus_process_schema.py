@@ -84,3 +84,36 @@ def test_scope_status_precisa_concordar_com_perfil(
     inconsistente["scope_status"] = "OUT_OF_SCOPE"
     with pytest.raises(ValidationError):
         validator.validate(inconsistente)
+
+
+def test_policy_nova_exige_quatro_papeis_e_contrato_vinculado(
+    validator: Draft202012Validator,
+) -> None:
+    payload = json.loads(
+        (EXEMPLOS / "corpus_process.supported.json").read_text(encoding="utf-8")
+    )
+    payload["collection_policy_version"] = "6-cadeia-completa-todas-esferas"
+    payload["cadeia"]["EDITAL"] = ["12345678000199-1-000001-2025#edital-03"]
+    payload["cadeia"]["CONTRATO"] = ["12345678000199-1-000001-2025#contrato-01"]
+    payload["documentos"] += [
+        "12345678000199-1-000001-2025#edital-03",
+        "12345678000199-1-000001-2025#contrato-01",
+    ]
+    payload["contratos"] = [
+        {
+            "numero_controle_pncp": "12345678000199-2-000001/2025",
+            "numero_controle_pncp_compra": payload["numero_controle_pncp"],
+            "criterio_vinculo": "numeroControlePncpCompra",
+        }
+    ]
+    validator.validate(payload)
+
+    sem_contrato = copy.deepcopy(payload)
+    del sem_contrato["contratos"]
+    with pytest.raises(ValidationError):
+        validator.validate(sem_contrato)
+
+    edital_vazio = copy.deepcopy(payload)
+    edital_vazio["cadeia"]["EDITAL"] = []
+    with pytest.raises(ValidationError):
+        validator.validate(edital_vazio)

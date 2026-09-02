@@ -1,6 +1,6 @@
 # Usage Flows — TR Intelligence Platform
 
-Este arquivo descreve **como o produto é usado no cotidiano**, do ponto de vista do servidor municipal.
+Este arquivo descreve **como o produto é usado no cotidiano**, do ponto de vista do servidor público.
 
 Referências:
 - features: `F-*` em `00_PRODUCT_SPEC.md`
@@ -9,7 +9,7 @@ Referências:
 
 ## Preâmbulo transversal aos fluxos 1–14
 
-- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
+- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade federal, estadual, distrital ou municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
 - Nos fluxos executados pela plataforma, FR-006 é a primeira porta de domínio. Apenas processo `SUPPORTED` alimenta corpus aprovado, denominadores, comparáveis e engines. Processo `OUT_OF_SCOPE` pode ser preservado na trilha de rejeição/auditoria, com motivo e evidência, mas é excluído desses usos.
 - Toda busca, painel, contagem e exportação exibe e conserva os filtros de esfera, perfil e estado de escopo. PNCP e Compras.gov são canais: não enquadram um processo no perfil por si sós.
 - Em cada importação, o hash obrigatório cobre o arquivo original imutável. Se houver OCR, o texto é derivado auditável ligado ao original, com motor, idioma, confiança e hash ou versão do resultado; reprocessamento nunca altera o original.
@@ -26,7 +26,7 @@ Referências:
 
 ```mermaid
 flowchart TD
-    A[Necessidade municipal] --> S{Perfil municipal, Lei 14.133, PE e bens comuns?}
+    A[Necessidade pública] --> S{Perfil F/E/D/M, Lei 14.133, PE e bens comuns?}
     S -- Não --> X[Tratar fora do recorte do produto]
     S -- Sim --> B[ETP]
     B --> C[Procurar TR antigo/modelo]
@@ -45,7 +45,7 @@ flowchart TD
 ```
 
 Principais trabalhos mecânicos:
-- validar manualmente o recorte municipal;
+- validar manualmente o recorte de esfera e perfil;
 - procurar documentos antigos;
 - copiar requisitos;
 - pesquisar produto por produto;
@@ -77,7 +77,7 @@ flowchart TD
     E --> F[F-05 TR Quality]
     E --> G[F-06 Consistência]
     E --> H[F-07 Mercado filtrado]
-    E --> I[F-08 Histórico municipal filtrado]
+    E --> I[F-08 Histórico filtrado por esfera e perfil]
     E --> J[F-09 Preços filtrados]
     F --> K[F-11 Findings]
     G --> K
@@ -109,7 +109,10 @@ flowchart TD
 4. Pessoa autorizada confirma a decisão e sua evidência:
    - `OUT_OF_SCOPE`: registra motivo na trilha de rejeição/auditoria e bloqueia corpus aprovado, denominadores, comparáveis e engines;
    - `SUPPORTED`: prossegue.
-5. Faz upload dos documentos disponíveis. Para o corpus R1, cada processo elegível deve ter exatamente um ETP e um TR ativos/utilizáveis; isso não impede versionamento no produto em uso.
+5. Faz upload dos documentos disponíveis. Para novas entradas do corpus R1, o
+   contrato deve apontar para a contratação vinculada e essa contratação deve
+   ter exatamente um ETP, um TR, um Edital e um instrumento contratual
+   ativos/utilizáveis; isso não impede versionamento no produto em uso.
 6. F-02 preserva cada original, calcula seu hash, registra versão e classifica o documento.
 7. Se necessário, F-02 gera OCR separado com motor, idioma, confiança e hash ou versão; falha de parsing/OCR é explícita.
 8. F-03 extrai itens, quantidades, requisitos, prazos, garantias e critérios, sempre com documento, página/seção, bloco e trecho.
@@ -127,7 +130,10 @@ flowchart TD
 **Features:** F-02, F-05, F-06, F-11, F-12  
 **Disponibilidade:** M1; controles permanecem indisponíveis antes do aceite de R10.
 
-1. Sistema reconfirma que o workspace está `SUPPORTED` e usa somente ETP/TR ativos, utilizáveis e confirmados.
+1. Sistema reconfirma que o workspace está `SUPPORTED` e usa somente os quatro
+   elos da cadeia (ETP, TR, Edital e contrato) ativos, utilizáveis e
+   confirmados. Processos históricos que ainda só têm ETP/TR permanecem
+   identificados como históricos até serem promovidos.
 2. Usuário envia versão atual do TR; F-02 preserva original, calcula hash e registra eventual OCR como derivado auditável.
 3. F-03/F-04 extraem e submetem os requisitos à confirmação humana.
 4. F-06 compara o TR com o baseline confirmado do ETP.
@@ -174,7 +180,7 @@ Antes de executar, o sistema exige workspace `SUPPORTED`, requisitos confirmados
 
 ```mermaid
 flowchart LR
-    A[Requirement Set confirmado] --> B[Search Agent com filtro municipal]
+    A[Requirement Set confirmado] --> B[Search Agent com filtro de esfera e perfil]
     B --> C[Candidate Resolver]
     C --> D[Spec Extraction]
     D --> E[Matcher]
@@ -210,12 +216,12 @@ Todos                   2       crítico
 **Disponibilidade:** M3, com dependências de M2/M4; cada controle fica indisponível até o respectivo milestone.
 
 1. Ação `Ver histórico da especificação` exige workspace `SUPPORTED` e requisito confirmado.
-2. Sistema normaliza requisitos atuais, busca somente processos históricos `SUPPORTED` no perfil municipal, calcula similaridade e identifica possíveis ancestrais.
+2. Sistema normaliza requisitos atuais, busca somente processos históricos `SUPPORTED` no perfil multiesfera, calcula similaridade e identifica possíveis ancestrais.
 3. Séries e denominadores excluem `OUT_OF_SCOPE`; UI exibe filtros, exclusões, fontes e evidências.
 4. Quando F-10 estiver disponível, o usuário abre a linhagem do requisito.
 
 ```text
-Possível linhagem — universo municipal filtrado
+Possível linhagem — universo filtrado por esfera e perfil
 
 2022 — Pregão Eletrônico 041/2022 — 96%
   ↓
@@ -385,7 +391,8 @@ Nenhuma alteração sobrescreve silenciosamente o histórico. Material fora do p
 **Disponibilidade:** F-14 parcial em M2 e ampliada pelos milestones seguintes; ação dependente de engine não aceita permanece indisponível.
 
 1. UI oferece ação de domínio (`Analisar requisito`, `Verificar mercado`) apenas em workspace `SUPPORTED`, com entrada confirmada e engine disponível.
-2. Orquestrador propaga filtros municipais/perfil para busca e tools, bloqueando `OUT_OF_SCOPE` de corpus, denominadores e conclusão.
+2. Orquestrador propaga filtros de esfera/perfil para busca e tools, bloqueando
+   `OUT_OF_SCOPE` de corpus, denominadores e conclusão.
 3. Toda saída retorna estrutura, versões, filtros e evidência; fonte `REFERENCE_ONLY` não fundamenta conclusão normativa.
 4. Usuário revisa e decide aceitar, rejeitar ou solicitar nova investigação. Nenhum agente publica decisão ou certificação legal autonomamente.
 
@@ -401,9 +408,10 @@ Regras de determinístico / LLM / agente: `00_PRODUCT_SPEC.md` F-14.
 **Disponibilidade:** happy path alvo, construído na ordem M0–M6; em cada momento, só etapas de milestones aceitos ficam habilitadas.
 
 1. Criar workspace e obter decisão humana `SUPPORTED` em FR-006.
-2. Importar ETP/TR ativos, preservar originais, calcular hashes e registrar eventual OCR derivado auditável.
+2. Importar os documentos da cadeia (ETP, TR, Edital e contrato), preservar
+   originais, calcular hashes e registrar eventual OCR derivado auditável.
 3. Extrair com evidência e confirmar humanamente.
-4. Executar somente engines disponíveis sobre dados confirmados e universo municipal filtrado.
+4. Executar somente engines disponíveis sobre dados confirmados e universo filtrado por esfera e perfil.
 5. Revisar findings e registrar correções, justificativas, riscos aceitos ou falsos positivos.
 6. Repetir importação, hash/OCR, confirmação e comparação para edital e contrato.
 7. Rastrear obrigações e fiscalizar, quando M4/M5 estiverem disponíveis.

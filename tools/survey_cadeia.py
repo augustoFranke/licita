@@ -5,7 +5,7 @@ publicados (que garantem, por construção, que o elo final existe), qual a
 fração de processos que também publica ETP, TR e EDITAL?
 
 Estratégia — inversão da busca:
-    feed de contratos  ->  numeroControlePncpCompra  ->  arquivos da compra
+    feed de contratos  ->  numeroControlePNCPCompra  ->  arquivos da compra
 Assim o contrato nunca é "torcida": ele já existe. O que se mede é quanto do
 resto da cadeia o órgão publicou.
 
@@ -27,7 +27,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from licita_corpus.classify import papel_documento
+from licita_corpus.classify import ESFERAS_SUPORTADAS, papel_documento
 from licita_corpus.pncp import CONSULTA, Pncp, partes_controle
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -58,9 +58,15 @@ def coletar_compras_com_contrato(p: Pncp, mes: str, paginas: int) -> list[str]:
         if not dados:
             break
         for c in dados:
-            if (c.get("orgaoEntidade") or {}).get("esferaId") != "M":
+            orgao = c.get("orgaoEntidade") or {}
+            esfera = c.get("orgaoEntidadeEsferaId") or (
+                orgao.get("esferaId") if isinstance(orgao, dict) else None
+            )
+            if str(esfera or "").strip().upper() not in ESFERAS_SUPORTADAS:
                 continue
-            nc = c.get("numeroControlePncpCompra")
+            nc = c.get("numeroControlePNCPCompra") or c.get(
+                "numeroControlePncpCompra"
+            )
             if nc and nc not in conhecidos:
                 conhecidos.add(nc)
                 vistos.append(nc)

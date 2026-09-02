@@ -1,9 +1,9 @@
-"""Coleta retomável e restrita de pares ETP→TR.
+"""Coleta retomável e restrita de cadeias documentais completas.
 
-A descoberta pode usar a busca textual do PNCP como acelerador, mas uma compra
-só chega à lista de arquivos depois de ser confirmada por uma fonte oficial.
-O feed PNCP e o feed do Compras.gov.br já são fontes autoritativas. O coletor
-nunca consulta contratos e nunca baixa editais.
+A descoberta começa no feed de contratos do PNCP. Cada contrato aponta para a
+contratação vinculada; somente depois de validar o detalhe e o perfil são
+consultados os anexos da contratação e do contrato para obter ETP, TR, edital e
+instrumento contratual.
 
 A fila de páginas, o cache, as decisões de política e os aceites ficam no
 ``EstadoColeta``. Este módulo não depende do schema SQLite: usa somente a API
@@ -26,6 +26,7 @@ from typing import Any, Callable
 from . import reuse
 from .catalog import (
     PAPEIS_DO_LOTE,
+    PAPEIS_CADEIA_COMPLETA,
     documento_id,
     escrever_json,
     escrever_jsonl,
@@ -35,13 +36,17 @@ from .catalog import (
     ocr_historico_utilizavel,
 )
 from .classify import (
+    CONTRATO,
+    EDITAL,
     ESFERAS_SUPORTADAS,
     ETP,
     PERFIL_SUPPORTED,
     TR,
     categoria_objeto,
     classificar_perfil_inicial,
+    normalizar,
     papel_documento,
+    papel_documento_contrato,
     parece_aquisicao_de_bens,
 )
 from .pncp import (
@@ -63,21 +68,28 @@ from .store import baixar_documento, processo_id
 from .verify import verificar
 
 
-# Decisões ficam gravadas por (processo, policy_version). A política 4 rejeitou
-# ~20 mil processos por "esfera não é municipal"; reaproveitá-las sob o escopo
-# de todas as esferas faria o coletor pular justamente o que passou a ser
-# elegível. Por isso a ampliação da esfera exige uma política nova — as
-# inspeções anteriores coexistem no estado, mas não são reaproveitadas.
-POLICY_VERSION = "5-todas-esferas-historical-ocr"
+# Decisões ficam gravadas por (processo, policy_version). A versão nova separa
+# a exigência de cadeia completa dos aceites históricos de ETP/TR; os registros
+# antigos continuam no catálogo e podem ser promovidos quando os elos faltantes
+# aparecerem.
+POLICY_VERSION = "6-cadeia-completa-todas-esferas"
 # Alterar este identificador sempre que a implementação, defaults ou
 # interpretação das opções do OCR mudar de forma capaz de alterar o texto.
 OCR_PIPELINE_VERSION = "verify-pymupdf-tesseract-v1"
 #: Esferas do perfil — fonte única em ``classify.ESFERAS_SUPORTADAS``.
 ESFERAS_PERMITIDAS = ESFERAS_SUPORTADAS
+# Compatibilidade para chamadores que ainda importam os termos históricos. A
+# coleta vigente não os consulta.
 DEFAULT_TERMOS = ("Estudo Tecnico Preliminar", "ETP")
 ANOS_PRIORITARIOS = (2024, 2023, 2022, 2025)
 PAGINAS_POR_LOTE = 5
 MARGEM_REQUISICOES_PADRAO = 15
+
+# A estratégia vigente sempre parte deste feed. ``fonte`` continua aceito na
+# API pública apenas para não quebrar scripts antigos; qualquer valor legado é
+# normalizado para o mesmo fluxo de contratos e jamais ativa uma descoberta
+# alternativa.
+FONTE_CONTRATOS = "pncp-contratos"
 
 
 @dataclass(frozen=True, slots=True)
@@ -505,7 +517,7 @@ def _aceitavel(
         objeto=compra.get("objeto") or "",
     )
     if perfil != PERFIL_SUPPORTED:
-        return False, "fora do perfil municipal de Pregão Eletrônico para bens comuns"
+        return False, "fora do perfil de Pregão Eletrônico para bens comuns sob a Lei 14.133"
     return True, None
 
 
@@ -661,7 +673,7 @@ def _resumir_arquivo(bruto: dict[str, Any]) -> dict[str, Any]:
 def formar_candidato(
     compra: dict[str, Any], arquivos_brutos: Sequence[dict[str, Any]]
 ) -> tuple[dict[str, Any] | None, str | None, list[dict[str, Any]]]:
-    """Forma um candidato preservando todas as revisões ETP/TR ativas.
+    """Forma um candidato histórico preservando revisões ETP/TR ativas.
 
     A lista ``documentos_compra`` continua contendo a escolha mais recente
     para compatibilidade. ``revisoes_documentos`` guarda todas as alternativas
@@ -720,6 +732,254 @@ def formar_candidato(
     return candidato, None, arquivos
 
 
+def _resumir_arquivo_contrato(bruto: dict[str, Any]) -> dict[str, Any]:
+    """Normaliza um anexo publicado no recurso de contrato.
+
+    Diferentemente dos anexos da contratação, esses registros normalmente não
+    trazem ``tipoDocumentoId``. O nome do tipo é a fonte autoritativa para
+    separar o instrumento inicial de empenhos, aditivos e apostilamentos.
+    """
+    titulo = str(bruto.get("titulo") or bruto.get("nome") or "")
+    return {
+        "sequencial_documento": _int(
+            bruto.get("sequencialDocumento")
+            if bruto.get("sequencialDocumento") is not None
+            else bruto.get("sequencial_documento")
+        ),
+        "titulo": titulo,
+        "tipo_documento_id": bruto.get("tipoDocumentoId"),
+        "tipo_documento_pncp": bruto.get("tipoDocumentoNome"),
+        "papel": papel_documento_contrato(
+            bruto.get("tipoDocumentoNome"), titulo, bruto.get("tipoDocumentoId")
+        ),
+        "url": bruto.get("url") or bruto.get("uri"),
+        "data_publicacao_pncp": bruto.get("dataPublicacaoPncp"),
+        "status_ativo": _ativo(bruto.get("statusAtivo")),
+    }
+
+
+def _normalizar_contrato(
+    dados: Mapping[str, Any], compra: Mapping[str, Any] | None = None
+) -> dict[str, Any]:
+    """Converte um registro do feed de contratos para o catálogo comum.
+
+    O vínculo é validado antes de qualquer consulta de anexos: um contrato que
+    aponta para outra contratação nunca pode ser associado por proximidade de
+    órgão, ano ou título.
+    """
+    if not isinstance(dados, Mapping):
+        raise ValueError("registro de contrato inválido")
+    numero_compra = _campo(
+        dados,
+        "numeroControlePNCPCompra",
+        "numeroControlePncpCompra",
+        "numero_controle_pncp_compra",
+    )
+    numero_compra = str(numero_compra or "").strip()
+    if not numero_compra:
+        raise ValueError("contrato sem numeroControlePncpCompra")
+    if compra is not None:
+        compra_numero = str(compra.get("numero_controle_pncp") or "").strip()
+        if not compra_numero or compra_numero != numero_compra:
+            raise ValueError("contrato sem vínculo exato com a contratação")
+    try:
+        cnpj_compra, ano_compra, _seq_compra = partes_controle(numero_compra)
+    except ValueError as erro:
+        raise ValueError(f"vínculo de compra inválido: {erro}") from erro
+
+    numero = _campo(
+        dados,
+        "numeroControlePNCP",
+        "numeroControlePncp",
+        "numero_controle_pncp",
+        "numeroContratoPncp",
+    )
+    numero = str(numero or "").strip()
+    if not numero:
+        raise ValueError("contrato sem numeroControlePNCP")
+    try:
+        cnpj, ano, sequencial = partes_controle(numero)
+    except ValueError as erro:
+        raise ValueError(f"número do contrato inválido: {erro}") from erro
+
+    orgao = dados.get("orgaoEntidade") or {}
+    unidade = dados.get("unidadeOrgao") or {}
+    if not isinstance(orgao, Mapping):
+        orgao = {}
+    if not isinstance(unidade, Mapping):
+        unidade = {}
+    cnpj_orgao = str(
+        _campo(dados, "orgaoEntidadeCnpj", "cnpj_orgao")
+        or orgao.get("cnpj")
+        or cnpj
+        or cnpj_compra
+    )
+    tipo = dados.get("tipoContrato")
+    if isinstance(tipo, Mapping):
+        tipo_id = _campo(tipo, "id", "codigo")
+        tipo_nome = _campo(tipo, "nome", "descricao")
+    else:
+        tipo_id = _campo(dados, "tipoContratoId", "tipo_contrato_id")
+        tipo_nome = tipo or _campo(
+            dados, "tipoContratoNome", "tipo_contrato_nome"
+        )
+    contrato = {
+        "numero_controle_pncp": numero,
+        "numero_controle_pncp_compra": numero_compra,
+        "numero_contrato": _campo(
+            dados,
+            "numeroContratoEmpenho",
+            "numeroContrato",
+            "numero_contrato",
+        ),
+        "cnpj_orgao": cnpj_orgao,
+        "ano_contrato": _int(
+            _campo(dados, "anoContrato", "ano_contrato")
+        )
+        or ano,
+        "sequencial_contrato": _int(
+            _campo(dados, "sequencialContrato", "sequencial_contrato")
+        )
+        or sequencial,
+        "processo": _campo(
+            dados, "processo", "processoAdministrativo", "processo_administrativo"
+        ),
+        "categoria_processo": _campo(
+            dados, "categoriaProcesso", "categoria_processo"
+        ),
+        "tipo_contrato": tipo_nome,
+        "tipo_contrato_id": tipo_id,
+        "fornecedor": _campo(
+            dados, "nomeRazaoSocialFornecedor", "fornecedor", "fornecedor_nome"
+        ),
+        "ni_fornecedor": _campo(
+            dados, "niFornecedor", "ni_fornecedor", "fornecedorNi"
+        ),
+        "data_assinatura": _campo(dados, "dataAssinatura", "data_assinatura"),
+        "data_atualizacao_global": _campo(
+            dados, "dataAtualizacaoGlobal", "data_atualizacao_global"
+        ),
+        "numero_retificacao": _campo(
+            dados, "numeroRetificacao", "numero_retificacao"
+        ),
+        "vigencia_inicio": _campo(
+            dados, "dataVigenciaInicio", "vigencia_inicio"
+        ),
+        "vigencia_fim": _campo(dados, "dataVigenciaFim", "vigencia_fim"),
+        "valor_global": _campo(dados, "valorGlobal", "valor_global"),
+        "objeto": _campo(dados, "objetoContrato", "objeto", "objeto_contrato"),
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_arquivos_pncp": (
+            f"https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}"
+            f"/contratos/{ano}/{sequencial}/arquivos"
+        ),
+        # O registro cru é útil para auditoria/reprocessamento, mas continua
+        # dentro de JSON e nunca é usado para construir caminhos locais.
+        "registro_feed": dict(dados),
+    }
+    if contrato["numero_controle_pncp_compra"] != numero_compra:
+        raise ValueError("contrato sem vínculo exato com a contratação")
+    return contrato
+
+
+def formar_candidato_cadeia(
+    compra: dict[str, Any],
+    arquivos_compra_brutos: Sequence[dict[str, Any]],
+    contrato: Mapping[str, Any],
+    arquivos_contrato_brutos: Sequence[dict[str, Any]],
+) -> tuple[dict[str, Any] | None, str | None, list[dict[str, Any]]]:
+    """Forma uma cadeia candidata com ETP, TR, edital e instrumento.
+
+    ETP/TR continuam usando exatamente a classificação e a ordenação de
+    revisões do caminho histórico. O edital usa o mesmo mecanismo, enquanto o
+    contrato é classificado pelo tipo do anexo contratual.
+    """
+    arquivos_compra = [
+        _resumir_arquivo(a)
+        for a in arquivos_compra_brutos
+        if _ativo(a.get("statusAtivo"))
+    ]
+    arquivos_contrato = [
+        _resumir_arquivo_contrato(a)
+        for a in arquivos_contrato_brutos
+        if _ativo(a.get("statusAtivo"))
+    ]
+    por_papel: dict[str, list[dict[str, Any]]] = {
+        papel: sorted(
+            [a for a in arquivos_compra if a.get("papel") == papel],
+            key=_chave_revisao,
+            reverse=True,
+        )
+        for papel in (ETP, TR, EDITAL)
+    }
+    por_papel[CONTRATO] = sorted(
+        [a for a in arquivos_contrato if a.get("papel") == CONTRATO],
+        key=_chave_revisao,
+        reverse=True,
+    )
+    faltantes = [
+        papel
+        for papel in PAPEIS_CADEIA_COMPLETA
+        if not any(a.get("url") for a in por_papel[papel])
+    ]
+    todos = [*arquivos_compra, *arquivos_contrato]
+    if faltantes:
+        return (
+            None,
+            "documentos da cadeia ausentes: " + ", ".join(faltantes),
+            todos,
+        )
+    escolhidos = {
+        papel: next(a for a in por_papel[papel] if a.get("url"))
+        for papel in PAPEIS_CADEIA_COMPLETA
+    }
+    contrato_normalizado = _normalizar_contrato(contrato, compra)
+    candidato = {
+        "numero_controle_pncp": compra["numero_controle_pncp"],
+        "compra": compra,
+        "contrato": contrato_normalizado,
+        "contratos": [contrato_normalizado],
+        "documentos_compra": [
+            escolhidos[ETP],
+            escolhidos[TR],
+            escolhidos[EDITAL],
+        ],
+        "documento_contrato": escolhidos[CONTRATO],
+        "documentos_cadeia": [
+            escolhidos[ETP],
+            escolhidos[TR],
+            escolhidos[EDITAL],
+            escolhidos[CONTRATO],
+        ],
+        "revisoes_documentos": {
+            ETP: por_papel[ETP],
+            TR: por_papel[TR],
+            EDITAL: por_papel[EDITAL],
+            CONTRATO: por_papel[CONTRATO],
+        },
+        "revisoes": {
+            ETP: por_papel[ETP],
+            TR: por_papel[TR],
+            EDITAL: por_papel[EDITAL],
+            CONTRATO: por_papel[CONTRATO],
+        },
+        "documentos_compra_todas": [
+            *por_papel[ETP],
+            *por_papel[TR],
+            *por_papel[EDITAL],
+        ],
+        "documentos_contrato_todas": por_papel[CONTRATO],
+        "cadeia_completa_exigida": True,
+    }
+    return candidato, None, todos
+
+
+# Nome público curto para integrações que tratam compras e contratos com o
+# mesmo vocabulário dos demais normalizadores.
+normalizar_contrato = _normalizar_contrato
+
+
 def _revisoes_do_candidato(
     candidato: Mapping[str, Any], papel: str
 ) -> list[dict[str, Any]]:
@@ -748,9 +1008,22 @@ def _revisoes_do_candidato(
                 return filtradas
     valor = candidato.get("documentos_compra")
     if isinstance(valor, Sequence) and not isinstance(valor, (str, bytes)):
-        return [
+        encontrados = [
             dict(item)
             for item in valor
+            if isinstance(item, Mapping) and item.get("papel") == papel
+        ]
+        if encontrados:
+            return encontrados
+    if papel == CONTRATO:
+        valor = candidato.get("documento_contrato")
+        if isinstance(valor, Mapping) and valor.get("papel") == papel:
+            return [dict(valor)]
+    cadeia = candidato.get("documentos_cadeia")
+    if isinstance(cadeia, Sequence) and not isinstance(cadeia, (str, bytes)):
+        return [
+            dict(item)
+            for item in cadeia
             if isinstance(item, Mapping) and item.get("papel") == papel
         ]
     return []
@@ -1142,6 +1415,8 @@ def baixar_par(
                     baixado = baixar_documento(*argumentos_download)
             else:
                 baixado = baixar_documento(*argumentos_download)
+        except LimiteRequisicoes:
+            raise
         except RuntimeError as erro:
             # PncpError é o tipo normal; RuntimeError também cobre doubles
             # antigos que sinalizam a falha do transporte sem o tipo PNCP.
@@ -1221,6 +1496,172 @@ def baixar_par(
     )
 
 
+def baixar_cadeia_completa(
+    pncp: Pncp,
+    candidato: Mapping[str, Any],
+    caminhos: Caminhos,
+    *,
+    estado: EstadoColeta | None = None,
+    ocr: bool = False,
+    idioma_ocr: str = "por",
+    usar_ocr: bool | None = None,
+    idioma: str | None = None,
+    opcoes_ocr: Mapping[str, Any] | None = None,
+) -> ResultadoDownload:
+    """Baixa exatamente ETP, TR, edital e instrumento contratual.
+
+    Cada papel pode ter revisões ativas; a mais recente é tentada primeiro e
+    uma revisão anterior só é usada quando a atual não é utilizável. O aceite
+    só é retornado depois de os quatro papéis passarem pela verificação local.
+    Os arquivos individuais continuam sendo gravados pelo store com replace
+    atômico; nenhum catálogo/aceite é escrito por esta função em caso parcial.
+    """
+    if usar_ocr is not None:
+        ocr = usar_ocr
+    if idioma is not None:
+        idioma_ocr = idioma
+    try:
+        numero = str(candidato["numero_controle_pncp"])
+        pid = processo_id(numero)
+    except (KeyError, TypeError, ValueError) as erro:
+        return ResultadoDownload(False, [], f"candidato sem número PNCP: {erro}", [])
+
+    destino = caminhos.documentos / pid
+    tentativas: list[dict[str, Any]] = []
+    escolhidos: list[dict[str, Any]] = []
+    falhas_api: list[str] = []
+
+    def chave(arquivo: Mapping[str, Any]) -> tuple[Any, ...]:
+        return (
+            arquivo.get("papel"),
+            arquivo.get("sequencial_documento"),
+            arquivo.get("url"),
+            arquivo.get("titulo"),
+        )
+
+    vistos: set[tuple[Any, ...]] = set()
+    bases_visitadas: set[tuple[Any, ...]] = set()
+    for ordem, papel in enumerate(PAPEIS_CADEIA_COMPLETA, start=1):
+        revisoes = _revisoes_do_candidato(candidato, papel)
+        revisoes.sort(key=_chave_revisao, reverse=True)
+        # Candidatos montados por consumidores simples podem trazer somente
+        # ``documentos_cadeia``; uma ausência aqui vira motivo explícito.
+        if not revisoes:
+            return ResultadoDownload(
+                False,
+                tentativas,
+                f"documento obrigatório ausente: {papel}",
+                tentativas,
+            )
+        documento_utilizavel: dict[str, Any] | None = None
+        motivos: list[str] = []
+        for arquivo in revisoes:
+            arquivo = dict(arquivo)
+            identidade = chave(arquivo)
+            if identidade in vistos:
+                continue
+            vistos.add(identidade)
+            url = arquivo.get("url") or arquivo.get("uri")
+            if not url:
+                motivos.append(f"{papel}: URL ausente")
+                continue
+            base_fisica = (
+                papel,
+                _int(arquivo.get("sequencial_documento")),
+                str(arquivo.get("titulo") or ""),
+            )
+            forcar_rede = base_fisica in bases_visitadas
+            bases_visitadas.add(base_fisica)
+            try:
+                argumentos_download = (
+                    pncp,
+                    str(url),
+                    destino,
+                    papel,
+                    _int(arquivo.get("sequencial_documento")),
+                    str(arquivo.get("titulo") or ""),
+                )
+                if forcar_rede:
+                    try:
+                        baixado = baixar_documento(
+                            *argumentos_download, reaproveitar=False
+                        )
+                    except TypeError as erro_tipo:
+                        # Doubles/consumidores antigos ainda expõem somente os
+                        # seis argumentos posicionais da função pública.
+                        if "reaproveitar" not in str(erro_tipo):
+                            raise
+                        baixado = baixar_documento(*argumentos_download)
+                else:
+                    baixado = baixar_documento(*argumentos_download)
+            except LimiteRequisicoes:
+                raise
+            except (RuntimeError, ValueError, OSError) as erro:
+                if isinstance(erro, RuntimeError):
+                    mensagem = f"falha de API no {papel}: {erro}"
+                    falhas_api.append(mensagem)
+                else:
+                    mensagem = f"falha ao baixar {papel}: {erro}"
+                motivos.append(mensagem)
+                continue
+            if baixado is None:
+                motivos.append(f"{papel}: arquivo ausente no download")
+                continue
+            try:
+                registro = _registrar_documento(
+                    documento_id(
+                        pid, papel, arquivo.get("sequencial_documento"), ordem
+                    ),
+                    pid,
+                    numero,
+                    arquivo,
+                    baixado,
+                    caminhos.raiz,
+                    estado=estado,
+                    ocr=ocr,
+                    idioma_ocr=idioma_ocr,
+                    opcoes_ocr=opcoes_ocr,
+                )
+            except (RuntimeError, ValueError, OSError) as erro:
+                motivos.append(f"falha ao verificar {papel}: {erro}")
+                continue
+            tentativas.append(registro)
+            if _documento_utilizavel(registro):
+                documento_utilizavel = registro
+                break
+            verificacao = registro.get("verificacao") or {}
+            if not verificacao.get("abriu"):
+                motivos.append(
+                    f"{papel} não abre: {verificacao.get('erro') or 'erro desconhecido'}"
+                )
+            else:
+                motivos.append(f"{papel} sem texto utilizável após download")
+        if documento_utilizavel is None:
+            detalhe = motivos[-1] if motivos else f"{papel} sem revisão utilizável"
+            if falhas_api and all(m.startswith("falha de API") for m in motivos):
+                detalhe = "; ".join(motivos)
+            return ResultadoDownload(
+                False,
+                tentativas,
+                f"cadeia incompleta: {detalhe}",
+                tentativas,
+            )
+        escolhidos.append(documento_utilizavel)
+
+    # A ordem é parte do contrato: ETP, TR, EDITAL, CONTRATO. Uma revisão não
+    # pode fazer o resultado conter dois documentos do mesmo papel.
+    if len(escolhidos) != len(PAPEIS_CADEIA_COMPLETA) or {
+        d.get("papel") for d in escolhidos
+    } != set(PAPEIS_CADEIA_COMPLETA):
+        return ResultadoDownload(
+            False,
+            tentativas,
+            "cadeia incompleta após verificação dos quatro papéis",
+            tentativas,
+        )
+    return ResultadoDownload(True, escolhidos, None, tentativas)
+
+
 # --------------------------------------------------------- revalidação/policy
 
 
@@ -1234,20 +1675,20 @@ def _revalidar_aceito(
     opcoes_ocr: Mapping[str, Any] | None = None,
 ) -> tuple[dict[str, Any], list[dict[str, Any]]] | None:
     """Revalida um aceite antigo só em disco, sem chamar o PNCP."""
-    por_papel: dict[str, list[dict[str, Any]]] = {ETP: [], TR: []}
+    por_papel: dict[str, list[dict[str, Any]]] = {
+        papel: [] for papel in PAPEIS_CADEIA_COMPLETA
+    }
     for documento in documentos:
         papel = documento.get("papel")
         if papel not in por_papel:
-            # Edital/contrato de um aceite legado é descartado na migração;
-            # seus hashes não precisam ser rebaixados nem entram no corpus V0.
+            # Tipos auxiliares não fazem parte da cadeia material publicada.
             continue
         por_papel[papel].append(documento)
     if any(len(por_papel[papel]) != 1 for papel in (ETP, TR)):
         return None
 
-    novos: list[dict[str, Any]] = []
-    for papel in (ETP, TR):
-        original = dict(por_papel[papel][0])
+    def revalidar_documento(original_bruto: Mapping[str, Any]) -> dict[str, Any] | None:
+        original = dict(original_bruto)
         relativo = original.get("arquivo")
         if not relativo:
             return None
@@ -1297,10 +1738,30 @@ def _revalidar_aceito(
             registro["_texto"] = _atributo(resultado, "texto", "") or ""
             if not _documento_utilizavel(registro):
                 return None
+        return registro
+
+    novos: list[dict[str, Any]] = []
+    for papel in (ETP, TR):
+        registro = revalidar_documento(por_papel[papel][0])
+        if registro is None:
+            return None
         novos.append(registro)
-    # O aceite migrado mantém o candidato original; só a verificação física
-    # dos dois documentos é atualizada. Isso preserva URLs/revisões legadas
-    # mesmo quando o registro antigo não tinha o formato mais novo.
+
+    # Promoções históricas podem já ter gravado edital/contrato no aceite.
+    # Revalidamos e preservamos no máximo a revisão ativa de cada papel, sem
+    # deixar um elo opcional ilegível impedir a continuidade do par histórico.
+    for papel in (EDITAL, CONTRATO):
+        if not por_papel[papel]:
+            continue
+        registro = revalidar_documento(
+            max(por_papel[papel], key=_chave_revisao)
+        )
+        if registro is not None:
+            novos.append(registro)
+
+    # O aceite migrado mantém o candidato original; a verificação física de
+    # cada elo preservado é atualizada. Isso mantém promoções legadas e URLs/
+    # revisões mesmo quando o registro antigo não tinha o formato mais novo.
     novo_candidato = dict(candidato)
     return novo_candidato, novos
 
@@ -1314,13 +1775,93 @@ def _migrar_aceitos_legados(
     opcoes_ocr: Mapping[str, Any] | None = None,
     log: Callable[[str], None] = print,
 ) -> int:
-    """Migra aceites de outras políticas quando os arquivos ainda passam."""
-    ativos = estado.numeros_aceitos()
-    migrados = 0
-    for candidato, documentos in estado.aceitos(None):
+    """Migra o melhor aceite legado de cada processo sem perder elos.
+
+    Um mesmo processo pode existir em várias políticas históricas. Escolher a
+    primeira linha de ``aceitos(None)`` descartaria uma promoção posterior
+    (por exemplo, o EDITAL adicionado em uma policy mais nova). Agrupamos por
+    processo, preferimos a opção com mais papéis e, em caso de empate, a última
+    linha persistida; elos opcionais ausentes nessa opção são herdados da
+    opção histórica mais recente que os contenha.
+    """
+    # Só pule um número que já tenha um aceite vigente realmente completo.
+    # Uma linha v6 parcial pode coexistir com a linha histórica que contém
+    # edital/contrato; tratá-la como ativa faria a migração perder esses elos
+    # e impediria a promoção posterior sem novo download.
+    ativos = {
+        str(candidato.get("numero_controle_pncp") or "")
+        for candidato, documentos in estado.aceitos()
+        if _documentos_formam_cadeia_completa(documentos)
+        and _candidato_tem_vinculo_contrato(candidato)
+    }
+    por_numero: dict[
+        str, list[tuple[int, dict[str, Any], list[dict[str, Any]]]]
+    ] = {}
+    for indice, (candidato, documentos) in enumerate(estado.aceitos(None)):
         numero = str(candidato.get("numero_controle_pncp") or "")
-        if not numero or numero in ativos:
+        if not numero:
             continue
+        por_numero.setdefault(numero, []).append(
+            (indice, candidato, list(documentos))
+        )
+
+    migrados = 0
+    for numero, opcoes in por_numero.items():
+        if numero in ativos:
+            continue
+        _indice, candidato, documentos = max(
+            opcoes,
+            key=lambda item: (
+                sum(
+                    1
+                    for documento in item[2]
+                    if documento.get("papel") in PAPEIS_CADEIA_COMPLETA
+                ),
+                len(item[2]),
+                item[0],
+            ),
+        )
+        # Uma promoção opcional pode ter sido gravada numa policy diferente da
+        # opção escolhida. Preserve esse elo, sem multiplicar ETP/TR (o helper
+        # de revalidação exige exatamente um de cada papel obrigatório).
+        documentos = list(documentos)
+        papeis_presentes = {str(d.get("papel") or "") for d in documentos}
+        for papel in (EDITAL, CONTRATO):
+            if papel in papeis_presentes:
+                continue
+            for _indice, _candidato, documentos_alternativos in reversed(opcoes):
+                candidatos_papel = [
+                    documento
+                    for documento in documentos_alternativos
+                    if documento.get("papel") == papel
+                ]
+                if candidatos_papel:
+                    documentos.append(
+                        max(candidatos_papel, key=_chave_revisao)
+                    )
+                    break
+        candidato = dict(candidato)
+        contratos_candidato = candidato.get("contratos")
+        tem_contrato_candidato = isinstance(contratos_candidato, Sequence) and any(
+            isinstance(item, Mapping) for item in contratos_candidato
+        )
+        if not tem_contrato_candidato:
+            for _indice, candidato_alternativo, _documentos_alternativos in reversed(
+                opcoes
+            ):
+                contratos_alternativos = candidato_alternativo.get("contratos")
+                if isinstance(contratos_alternativos, Sequence) and any(
+                    isinstance(item, Mapping) for item in contratos_alternativos
+                ):
+                    candidato["contratos"] = [
+                        dict(item)
+                        for item in contratos_alternativos
+                        if isinstance(item, Mapping)
+                    ]
+                    contrato_alternativo = candidato_alternativo.get("contrato")
+                    if isinstance(contrato_alternativo, Mapping):
+                        candidato["contrato"] = dict(contrato_alternativo)
+                    break
         compra = candidato.get("compra")
         if not isinstance(compra, dict):
             compra = candidato
@@ -1444,6 +1985,15 @@ def _buscar_pagina_tarefa(
     )
 
     def chamar() -> Any:
+        if fonte in {"pncp-contratos", "pncp-feed-contratos"}:
+            inicio = str(parametros.get("inicio") or "").replace("-", "")
+            fim = str(parametros.get("fim") or "").replace("-", "")
+            return pncp.pagina_contratos_publicados(
+                inicio,
+                fim,
+                pagina=pagina,
+                tamanho_pagina=(min(500, max(1, tamanho)) if tamanho else None),
+            )
         if fonte == "pncp-busca":
             termo = parametros.get("termo", parametros.get("q"))
             if not termo:
@@ -1487,6 +2037,41 @@ def _arquivos_com_cache(
     )
     if not isinstance(payload, list):
         raise PncpError("lista de arquivos da contratação inválida")
+    return payload
+
+
+def _detalhe_com_cache(
+    estado: EstadoColeta, pncp: Pncp, numero: str
+) -> dict[str, Any]:
+    """Obtém o detalhe da contratação uma vez por número e por TTL."""
+    cnpj, ano, seq = partes_controle(numero)
+    payload = _cache_resposta(
+        estado,
+        "pncp-detalhe-compra",
+        {"numero": numero},
+        lambda: pncp.detalhe_compra(cnpj, ano, seq),
+    )
+    if not isinstance(payload, dict):
+        raise PncpError("detalhe de contratação inválido")
+    return payload
+
+
+def _arquivos_contrato_com_cache(
+    estado: EstadoColeta, pncp: Pncp, contrato: Mapping[str, Any]
+) -> list[dict[str, Any]]:
+    """Consulta os anexos do instrumento uma única vez por contrato."""
+    numero = str(contrato.get("numero_controle_pncp") or "")
+    if not numero:
+        raise PncpError("contrato sem número para listar arquivos")
+    cnpj, ano, seq = partes_controle(numero)
+    payload = _cache_resposta(
+        estado,
+        "pncp-arquivos-contrato",
+        {"numero": numero},
+        lambda: pncp.arquivos_contrato(cnpj, ano, seq),
+    )
+    if not isinstance(payload, list):
+        raise PncpError("lista de arquivos do contrato inválida")
     return payload
 
 
@@ -1618,10 +2203,42 @@ def _reaproveitar_inspecao(estado: EstadoColeta, numero: str) -> bool:
     status = estado.status_inspecao(numero)
     return status in {
         "SEM_PAR_ETP_TR",
+        # Inspeções antigas de par continuam reutilizáveis; uma inspeção nova
+        # sem cadeia deve ser reavaliada em retomadas futuras, pois o órgão
+        # pode publicar o elo que faltava.
         "FORA_DO_ESCOPO",
         "LIMITE_ORGAO",
         "DOWNLOAD_REPROVADO",
     }
+
+
+def _documentos_formam_cadeia_completa(
+    documentos: Sequence[Mapping[str, Any]],
+) -> bool:
+    """Verdadeiro somente para um documento utilizável de cada elo exigido."""
+    papeis = [str(documento.get("papel") or "") for documento in documentos]
+    return (
+        len(documentos) == len(PAPEIS_CADEIA_COMPLETA)
+        and len(set(papeis)) == len(PAPEIS_CADEIA_COMPLETA)
+        and set(papeis) == set(PAPEIS_CADEIA_COMPLETA)
+        and all(_documento_utilizavel(documento) for documento in documentos)
+    )
+
+
+def _candidato_tem_vinculo_contrato(candidato: Mapping[str, Any]) -> bool:
+    """Confere o vínculo exato exigido para considerar um aceite completo."""
+    numero_compra = str(candidato.get("numero_controle_pncp") or "").strip()
+    contratos = candidato.get("contratos")
+    if not isinstance(contratos, Sequence) or isinstance(contratos, (str, bytes)):
+        contrato = candidato.get("contrato")
+        contratos = [contrato] if isinstance(contrato, Mapping) else []
+    return any(
+        isinstance(contrato, Mapping)
+        and str(contrato.get("numero_controle_pncp_compra") or "").strip()
+        == numero_compra
+        and contrato.get("criterio_vinculo") == "numeroControlePncpCompra"
+        for contrato in contratos
+    )
 
 
 def _aceitos_no_perfil(
@@ -1635,6 +2252,31 @@ def _aceitos_no_perfil(
             compra = candidato
         aceitavel, _motivo = _aceitavel(compra, None, preliminar=False)
         if aceitavel:
+            resultado.append((candidato, documentos))
+    return resultado
+
+
+def _aceitos_completos(
+    aceitos: Sequence[tuple[dict[str, Any], list[dict[str, Any]]]],
+    esferas: set[str] | frozenset[str] | None = None,
+) -> list[tuple[dict[str, Any], list[dict[str, Any]]]]:
+    """Aceites do perfil que podem contar para o alvo novo.
+
+    Aceites históricos de apenas ETP/TR permanecem visíveis no catálogo, mas
+    não satisfazem o alvo da coleta por cadeias completas.
+    """
+    resultado: list[tuple[dict[str, Any], list[dict[str, Any]]]] = []
+    permitidas = None if esferas is None else set(esferas)
+    for candidato, documentos in aceitos:
+        compra = candidato.get("compra")
+        if not isinstance(compra, dict):
+            compra = candidato
+        aceitavel, _motivo = _aceitavel(compra, permitidas, preliminar=False)
+        if (
+            aceitavel
+            and _documentos_formam_cadeia_completa(documentos)
+            and _candidato_tem_vinculo_contrato(candidato)
+        ):
             resultado.append((candidato, documentos))
     return resultado
 
@@ -1669,8 +2311,20 @@ def _contagens_tentativas_documentais(estado: EstadoColeta) -> Counter[str]:
 # -------------------------------------------------------------- catálogo/stats
 
 
-def _estatisticas_tarefas(estado: EstadoColeta) -> dict[str, Any]:
-    tarefas = estado.listar_tarefas_paginacao()
+def _estatisticas_tarefas(
+    estado: EstadoColeta, *, fonte: str | None = None
+) -> dict[str, Any]:
+    """Resume a fila da fonte ativa, sem misturar tarefas históricas."""
+    tarefas_todas = estado.listar_tarefas_paginacao()
+    tarefas = (
+        tarefas_todas
+        if fonte is None
+        else [
+            tarefa
+            for tarefa in tarefas_todas
+            if str(tarefa.get("fonte") or "") == str(fonte)
+        ]
+    )
     por_status = Counter(str(tarefa.get("status")) for tarefa in tarefas)
     retry = [
         {
@@ -1700,7 +2354,7 @@ def _estatisticas_tarefas(estado: EstadoColeta) -> dict[str, Any]:
 def _controles_catalogados(
     caminhos: Caminhos,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
-    """Preserva controles negativos municipais entre recatalogações.
+    """Preserva controles negativos entre recatalogações.
 
     Controles não são aceites da policy ativa e jamais contam para o alvo, mas
     precisam continuar fisicamente auditáveis no manifesto externo.
@@ -1749,9 +2403,41 @@ def _catalogar(
     cobertura_incompleta: bool | None = None,
 ) -> dict[str, Any]:
     aceitos = _aceitos_no_perfil(estado.aceitos())
-    controles, documentos_controle, relacoes_controle = _controles_catalogados(
-        caminhos
-    )
+    # Catálogos anteriores são históricos e não podem desaparecer quando a
+    # policy nova passa a publicar somente cadeias completas. Eles são
+    # substituídos apenas se o mesmo processo tiver um aceite novo.
+    processos_anteriores: list[dict[str, Any]] = []
+    documentos_anteriores: list[dict[str, Any]] = []
+    relacoes_anteriores: list[dict[str, Any]] = []
+    caminho_processos = caminhos.catalogo / "processos.json"
+    if caminho_processos.exists():
+        try:
+            bruto_processos = json.loads(caminho_processos.read_text(encoding="utf-8"))
+            processos_anteriores = list(
+                bruto_processos.get("processos", [])
+                if isinstance(bruto_processos, dict)
+                else bruto_processos
+            )
+        except (OSError, TypeError, ValueError, json.JSONDecodeError):
+            processos_anteriores = []
+    caminho_documentos = caminhos.catalogo / "documentos.jsonl"
+    if caminho_documentos.exists():
+        try:
+            documentos_anteriores = [
+                json.loads(linha)
+                for linha in caminho_documentos.read_text(encoding="utf-8").splitlines()
+                if linha.strip()
+            ]
+        except (OSError, TypeError, ValueError, json.JSONDecodeError):
+            documentos_anteriores = []
+    caminho_relacoes = caminhos.catalogo / "relacoes.json"
+    if caminho_relacoes.exists():
+        try:
+            bruto_relacoes = json.loads(caminho_relacoes.read_text(encoding="utf-8"))
+            if isinstance(bruto_relacoes, dict):
+                relacoes_anteriores = list(bruto_relacoes.get("cadeia", []))
+        except (OSError, TypeError, ValueError, json.JSONDecodeError):
+            relacoes_anteriores = []
     processos: list[dict[str, Any]] = []
     documentos_com_texto: list[dict[str, Any]] = []
     relacoes: list[dict[str, Any]] = []
@@ -1767,14 +2453,13 @@ def _catalogar(
             # Proteção contra aceite injetado: o catálogo aprovado só publica
             # o que satisfaz o perfil vigente.
             continue
-        # O lote é de cadeia: ETP e TR são obrigatórios e os elos opcionais
-        # publicados pelo ente entram junto. Filtrar só o par aqui apagaria do
-        # catálogo edital e contrato já baixados e verificados.
         documentos_par = [
             dict(documento)
             for documento in documentos
             if documento.get("papel") in PAPEIS_DO_LOTE
         ]
+        if not documentos_par:
+            continue
         pid = processo_id(candidato["numero_controle_pncp"])
         documentos_locais: list[dict[str, Any]] = []
         for documento in documentos_par:
@@ -1795,34 +2480,75 @@ def _catalogar(
                 else resultado.texto
             )
             documentos_locais.append(registro)
+        extras = {"fonte": fonte}
+        extras_candidato = candidato.get("extras")
+        if isinstance(extras_candidato, Mapping):
+            extras.update(extras_candidato)
+        contratos = candidato.get("contratos")
+        if not isinstance(contratos, Sequence) or isinstance(contratos, (str, bytes)):
+            contrato_unico = candidato.get("contrato")
+            contratos = [contrato_unico] if isinstance(contrato_unico, Mapping) else []
+        contratos_validos = [
+            dict(contrato) for contrato in contratos if isinstance(contrato, Mapping)
+        ]
+        if contratos_validos and not extras.get("processo_administrativo"):
+            extras["processo_administrativo"] = contratos_validos[0].get("processo")
+            extras["processo_administrativo_fonte"] = "contrato_pncp"
         processo = montar_processo(
-            candidato["compra"],
-            {"fonte": fonte},
-            documentos_locais,
-            (),
+            candidato["compra"], extras, documentos_locais, contratos_validos
         )
-        processo["policy_version"] = estado.policy_version
-        processo["collection_policy_version"] = estado.policy_version
+        cadeia_completa = (
+            _documentos_formam_cadeia_completa(documentos_locais)
+            and _candidato_tem_vinculo_contrato(candidato)
+        )
+        if not cadeia_completa:
+            # Quatro arquivos sem o metadado que prova o elo contrato→compra
+            # não podem ser rotulados como cadeia nova/completa. O gate ainda
+            # pode apontar um histórico malformado, mas a publicação e as
+            # estatísticas permanecem conservadoras.
+            processo["escopo_documental"]["cadeia_completa"] = False
+        if cadeia_completa:
+            # A aceitação vigente é a única forma de publicar uma cadeia nova.
+            # Aceites de ETP/TR migrados para a policy atual continuam
+            # históricos e não podem ganhar artificialmente a versão nova.
+            processo["policy_version"] = estado.policy_version
+            processo["collection_policy_version"] = estado.policy_version
+        else:
+            # O catálogo histórico pode conter aceites antigos que foram
+            # revalidados sem download. Preserve sua origem documental para que
+            # o gate aplique a regra de compatibilidade (ETP/TR) e não a nova.
+            politica_historica = str(
+                candidato.get("collection_policy_version")
+                or candidato.get("policy_version")
+                or "4-municipal-historical-ocr"
+            ).strip() or "4-municipal-historical-ocr"
+            processo["policy_version"] = politica_historica
+            processo["collection_policy_version"] = politica_historica
         processos.append(processo)
         relacoes.extend(montar_relacoes(pid, processo["cadeia"]))
         documentos_com_texto.extend(documentos_locais)
         escrever_json(caminhos.documentos / pid / "metadata.json", processo)
 
     ids_ativos = {str(processo.get("processo_id") or "") for processo in processos}
+    ids_historicos = {
+        str(processo.get("processo_id") or "")
+        for processo in processos_anteriores
+        if str(processo.get("processo_id") or "") not in ids_ativos
+    }
     processos.extend(
         processo
-        for processo in controles
-        if str(processo.get("processo_id") or "") not in ids_ativos
+        for processo in processos_anteriores
+        if str(processo.get("processo_id") or "") in ids_historicos
     )
     documentos_com_texto.extend(
         documento
-        for documento in documentos_controle
-        if str(documento.get("processo_id") or "") not in ids_ativos
+        for documento in documentos_anteriores
+        if str(documento.get("processo_id") or "") in ids_historicos
     )
     relacoes.extend(
         relacao
-        for relacao in relacoes_controle
-        if str(relacao.get("processo_id") or "") not in ids_ativos
+        for relacao in relacoes_anteriores
+        if str(relacao.get("processo_id") or "") in ids_historicos
     )
 
     marcas = reuse.detectar(
@@ -1885,21 +2611,21 @@ def _catalogar(
     )
 
     resumo = estatisticas(processos, documentos_publicos)
-    tarefas_stats = _estatisticas_tarefas(estado)
+    tarefas_stats = _estatisticas_tarefas(estado, fonte=fonte)
     if cobertura_incompleta:
         tarefas_stats["cobertura_incompleta"] = True
         tarefas_stats["cobertura_paginas_incompleta"] = True
     resumo.update(
         {
-            "estrategia": "compras_gov_para_descoberta_pncp_para_documentos",
+            "estrategia": "pncp_contratos_para_cadeia_completa",
             "alvo_processos": alvo,
             "fonte_preferencial": fonte,
             "policy_version": estado.policy_version,
             "requisicoes_hoje_utc": estado.requisicoes_hoje(),
             "limite_requisicoes_dia_utc": estado.max_requisicoes_dia,
             "margem_requisicoes": estado.margem_requisicoes,
-            "editais_baixados": 0,
-            "contratos_consultados": 0,
+            "editais_baixados": resumo.get("processos_com_edital", 0),
+            "contratos_consultados": resumo.get("processos_com_contrato", 0),
             "marcas_de_reuso": reuse.resumir(marcas),
             **tarefas_stats,
         }
@@ -1912,17 +2638,113 @@ def _catalogar(
 # ------------------------------------------------------------------- coletor
 
 
+# ---------------------------------------------------------- coleta vigente
+
+
+def _numero_compra_do_contrato(registro: Mapping[str, Any]) -> str:
+    valor = _campo(
+        registro,
+        "numeroControlePNCPCompra",
+        "numeroControlePncpCompra",
+        "numero_controle_pncp_compra",
+    )
+    return str(valor or "").strip()
+
+
+def _identidade_contrato_feed(registro: Mapping[str, Any]) -> str:
+    """Devolve uma identidade estável para deduplicar um contrato do feed."""
+    valor = _campo(
+        registro,
+        "numeroControlePNCP",
+        "numeroControlePncp",
+        "numero_controle_pncp",
+        "numeroContratoPncp",
+    )
+    if valor:
+        return str(valor).strip()
+    # Um registro sem id será rejeitado pelo normalizador, mas uma
+    # representação estável evita repetir a mesma rejeição quando o feed
+    # trouxer a linha duplicada.
+    return json.dumps(dict(registro), ensure_ascii=False, sort_keys=True)
+
+
+def _contrato_inicial(registro: Mapping[str, Any]) -> bool:
+    tipo = registro.get("tipoContrato")
+    if isinstance(tipo, Mapping):
+        tipo_id = _campo(tipo, "id", "codigo")
+        tipo_nome = _campo(tipo, "nome", "descricao")
+    else:
+        tipo_id = _campo(registro, "tipoContratoId", "tipo_contrato_id")
+        tipo_nome = tipo or _campo(registro, "tipoContratoNome", "tipo_contrato_nome")
+    if _int(tipo_id) == 1:
+        return True
+    return normalizar(str(tipo_nome or "")) in {
+        "contrato",
+        "contrato termo inicial",
+        "contrato administrativo",
+        "termo de contrato",
+        "instrumento contratual",
+    }
+
+
+def _prioridade_contrato_feed(registro: Mapping[str, Any]) -> tuple[int, str, int]:
+    """Ordena um grupo de contratos para escolher o instrumento inicial."""
+    inicial = 0 if _contrato_inicial(registro) else 1
+    data = str(
+        _campo(registro, "dataAssinatura", "dataAtualizacaoGlobal", "data_assinatura")
+        or ""
+    )
+    seq = _int(_campo(registro, "sequencialContrato", "sequencial_contrato")) or -1
+    return inicial, data, -seq
+
+
+def _agrupar_contratos_feed(
+    registros: Iterable[dict[str, Any]],
+) -> tuple[list[tuple[str, dict[str, Any]]], int]:
+    """Ordena contratos iniciais por contratação, preservando alternativas.
+
+    Uma contratação pode ter mais de um instrumento inicial (por exemplo, um
+    fornecedor por lote). O primeiro continua sendo tentado primeiro, mas os
+    demais ficam disponíveis caso seu instrumento esteja ausente ou
+    inutilizável. Registros que não são contratos iniciais permanecem como um
+    único candidato para que o chamador possa contabilizá-los sem consultar
+    anexos indevidos.
+    """
+    grupos: dict[str, list[dict[str, Any]]] = {}
+    invalidos = 0
+    for registro in registros:
+        if not isinstance(registro, dict):
+            invalidos += 1
+            continue
+        numero = _numero_compra_do_contrato(registro)
+        if not numero:
+            invalidos += 1
+            continue
+        grupos.setdefault(numero, []).append(registro)
+    escolhidos: list[tuple[str, dict[str, Any]]] = []
+    for numero, grupo in grupos.items():
+        ordenados = sorted(grupo, key=_prioridade_contrato_feed)
+        iniciais = [contrato for contrato in ordenados if _contrato_inicial(contrato)]
+        escolhidos.extend(
+            (numero, contrato) for contrato in (iniciais or ordenados[:1])
+        )
+    return escolhidos, invalidos
+
+
 def coletar(
     raiz: Path,
     *,
     data_inicial: str = "20240101",
     data_final: str | None = None,
     processos: int = 20,
-    fonte: str = "auto",
+    # Mantido como parâmetro de compatibilidade; a coleta não oferece mais
+    # estratégias alternativas. Todos os valores aceitos apontam para o feed
+    # de contratos.
+    fonte: str = FONTE_CONTRATOS,
     termos: Sequence[str] = DEFAULT_TERMOS,
     esferas: set[str] | frozenset[str] | None = ESFERAS_PERMITIDAS,
     max_por_orgao: int = 5,
-    max_paginas_busca: int = 40,
+    max_paginas_busca: int = 0,
     janela_dias: int = 31,
     max_paginas_feed: int = 100,
     max_requisicoes_dia: int = 900,
@@ -1942,13 +2764,20 @@ def coletar(
     cache_ttl_vazio_segundos: float | timedelta | None = CACHE_TTL_VAZIO_SEGUNDOS,
     log: Callable[[str], None] = print,
 ) -> dict[str, Any]:
-    """Executa ou retoma a coleta até o alvo, sem buscar edital/contrato."""
+    """Coleta processos somente pela cadeia ``contrato → compra → anexos``.
+
+    A lista de contratos é a única fonte de descoberta. Depois de normalizar o
+    vínculo, o detalhe da compra e o filtro de perfil são aplicados antes das
+    duas consultas de anexos e de qualquer download. Um aceite novo contém
+    exatamente quatro documentos utilizáveis; aceites históricos de ETP/TR são
+    preservados no catálogo, mas não contam para ``processos`` nesta execução.
+    """
     if processos < 1:
         raise ValueError("processos deve ser positivo")
     if max_por_orgao < 0:
         raise ValueError("max_por_orgao não pode ser negativo")
-    if max_paginas_busca < 0 or max_paginas_feed < 0:
-        raise ValueError("limite de páginas não pode ser negativo")
+    if max_paginas_feed < 0:
+        raise ValueError("max_paginas_feed não pode ser negativo")
     if janela_dias < 1:
         raise ValueError("janela_dias deve ser positivo")
     if max_tentativas_documentais is not None:
@@ -1959,15 +2788,30 @@ def coletar(
         raise ValueError("max_tentativas_documentais_por_orgao não pode ser negativo")
     if margem_requisicoes < 0:
         raise ValueError("margem_requisicoes não pode ser negativo")
+    if intervalo < 0:
+        raise ValueError("intervalo não pode ser negativo")
+    if tentativas < 1 or tentativas_confirmacao < 1:
+        raise ValueError("tentativas deve ser positiva")
     if timeout_confirmacao <= 0:
         raise ValueError("timeout_confirmacao deve ser positivo")
-    if tentativas_confirmacao < 1:
-        raise ValueError("tentativas_confirmacao deve ser positiva")
     if not str(idioma_ocr).strip():
         raise ValueError("idioma_ocr não pode ser vazio")
+    # ``fonte`` e os parâmetros de busca/texto existem para compatibilidade de
+    # CLI; aceitar seus nomes legados não reativa os coletores removidos.
+    if fonte not in {
+        FONTE_CONTRATOS,
+        "auto",
+        "pncp-busca",
+        "compras",
+        "pncp-feed",
+        "contratos",
+    }:
+        raise ValueError(f"fonte inválida: {fonte}")
+    # Os nomes legados são somente aliases de entrada; o estado, o catálogo e
+    # as métricas devem sempre usar o namespace único da coleta vigente.
+    fonte = FONTE_CONTRATOS
     esferas = _normalizar_esferas(esferas)
     policy_version = str(policy_version).strip() or POLICY_VERSION
-
     inicio = _data(data_inicial)
     data_final = data_final or (date.today() - timedelta(days=1)).strftime("%Y%m%d")
     fim = _data(data_final)
@@ -1975,8 +2819,6 @@ def coletar(
         raise ValueError("data inicial posterior à data final")
     if fim >= date.today():
         raise ValueError("data_final deve ser uma data encerrada, anterior a hoje")
-    if fonte not in {"auto", "pncp-busca", "compras", "pncp-feed"}:
-        raise ValueError(f"fonte inválida: {fonte}")
 
     caminhos = Caminhos(Path(raiz))
     caminhos.raiz.mkdir(parents=True, exist_ok=True)
@@ -2003,45 +2845,27 @@ def coletar(
             intervalo=intervalo,
             reservar=estado.reservar_requisicao,
             throttle=throttle,
-        ) as pncp, ComprasGov(
-            timeout=45,
-            tentativas=tentativas,
-            intervalo=intervalo,
-            reservar=estado.reservar_requisicao,
-            throttle=throttle,
-        ) as compras, Pncp(
-            timeout=timeout_confirmacao,
-            tentativas=tentativas_confirmacao,
-            intervalo=intervalo,
-            reservar=estado.reservar_requisicao,
-            throttle=throttle,
-        ) as pncp_confirmacao, ComprasGov(
-            timeout=timeout_confirmacao,
-            tentativas=tentativas_confirmacao,
-            intervalo=intervalo,
-            reservar=estado.reservar_requisicao,
-            throttle=throttle,
-        ) as compras_confirmacao:
-            contagens = _contagens_orgaos(_aceitos_no_perfil(estado.aceitos()))
+        ) as pncp:
+            aceitos_completos = _aceitos_completos(estado.aceitos(), esferas)
+            contagens = _contagens_orgaos(aceitos_completos)
             tentativas_documentais = _contagens_tentativas_documentais(estado)
-            vistos_nesta_execucao: set[str] = set()
+            vistos_nesta_execucao: set[tuple[str, str]] = set()
             total_inspecoes = 0
-            total_pares_publicados = 0
+            total_cadeias_identificadas = 0
+            total_contratos_consultados = 0
             registros_invalidos = 0
             parou_por_limite = False
             cobertura_incompleta_execucao = False
 
             def aceitos_atuais() -> list[tuple[dict[str, Any], list[dict[str, Any]]]]:
-                return _aceitos_no_perfil(estado.aceitos())
+                return _aceitos_completos(estado.aceitos(), esferas)
 
             def alvo_atingido() -> bool:
                 return len(aceitos_atuais()) >= processos
 
             def pode_reservar() -> bool:
                 metodo = getattr(estado, "pode_reservar_requisicao", None)
-                if not callable(metodo):
-                    return True
-                return bool(metodo(1))
+                return True if not callable(metodo) else bool(metodo(1))
 
             def retry_orcamento(tarefa: Mapping[str, Any]) -> None:
                 try:
@@ -2052,143 +2876,141 @@ def coletar(
                         atraso_segundos=0,
                     )
                 except (TypeError, ValueError):
-                    # A tarefa pode ser uma linha concluída de uma versão
-                    # antiga; nesse caso não há lease mutável a liberar.
                     pass
 
-            def executar_tarefas(
-                tarefas: Sequence[dict[str, Any]],
-            ) -> tuple[list[_ResultadoPagina], list[dict[str, Any]]]:
-                """Reivindica páginas pela fila e marca erro como RETRY."""
+            def executar_tarefa(
+                tarefa: dict[str, Any],
+            ) -> tuple[_ResultadoPagina | None, dict[str, Any] | None]:
+                """Reivindica/consulta uma página e devolve sua lease."""
                 nonlocal parou_por_limite
-                resultados: list[_ResultadoPagina] = []
-                leases: list[dict[str, Any]] = []
-                selecionadas = {
-                    int(tarefa.get("id"))
-                    for tarefa in tarefas
-                    if tarefa.get("id") is not None
-                    and tarefa.get("status") != CONCLUIDO
-                }
-                # Checkpoint concluído é reutilizado pelo cache; isso permite
-                # reprocessar uma página sob nova policy sem nova chamada.
-                for tarefa in tarefas:
-                    if tarefa.get("status") != CONCLUIDO:
-                        continue
-                    try:
-                        payload = _buscar_pagina_tarefa(estado, tarefa, pncp, compras)
-                        registros, total = _desempacotar_pagina(payload)
-                    except Exception as erro:
-                        log(f"página concluída sem cache utilizável: {erro}")
-                        continue
-                    resultados.append(_ResultadoPagina(dict(tarefa), registros, total))
-
-                vistos_tarefas_externas: set[int] = set()
-                while selecionadas and not parou_por_limite:
-                    # Uma resposta já cacheada pode ser processada mesmo se a
-                    # margem não permitir uma nova chamada. As páginas novas
-                    # permanecem PENDENTE.
-                    tem_cache = False
-                    for tarefa in tarefas:
-                        identificador = tarefa.get("id")
-                        if identificador is None or int(identificador) not in selecionadas:
-                            continue
-                        parametros = _parametros_tarefa(tarefa)
-                        chave = estado.chave_resposta(str(tarefa.get("fonte") or ""), parametros)
-                        if estado.resposta(chave) is not None:
-                            tem_cache = True
-                            break
-                    if not tem_cache and not pode_reservar():
+                concluida = tarefa.get("status") == CONCLUIDO
+                lease: dict[str, Any] | None = None
+                atual = tarefa
+                if not concluida:
+                    if not pode_reservar():
                         parou_por_limite = True
-                        break
-
-                    tarefa = estado.proxima_tarefa_paginacao(
-                        identificadores=selecionadas
-                    )
-                    if tarefa is None:
-                        break
-                    identificador = tarefa.get("id")
-                    id_normal = None if identificador is None else int(identificador)
-                    if id_normal not in selecionadas and id_normal in vistos_tarefas_externas:
-                        break
-                    try:
-                        payload = _buscar_pagina_tarefa(estado, tarefa, pncp, compras)
-                        registros, total = _desempacotar_pagina(payload)
-                    except LimiteRequisicoes:
-                        parou_por_limite = True
-                        retry_orcamento(tarefa)
-                        if id_normal in selecionadas:
-                            selecionadas.discard(id_normal)
-                        break
-                    except Exception as erro:
-                        # Falha de uma página (inclusive um double de
-                        # transporte que não use PncpError) não encerra o lote.
-                        # O token da lease autoriza a transição atômica para
-                        # RETRY.
-                        mensagem = str(erro) or type(erro).__name__
+                        return None, None
+                    atual = estado.proxima_tarefa_paginacao(
+                        identificadores={int(tarefa["id"])}
+                    ) or {}
+                    if not atual:
+                        return None, None
+                    lease = dict(atual)
+                try:
+                    payload = _buscar_pagina_tarefa(estado, atual, pncp, None)
+                    registros, total = _desempacotar_pagina(payload)
+                except LimiteRequisicoes:
+                    parou_por_limite = True
+                    if lease:
+                        retry_orcamento(lease)
+                    return None, None
+                except Exception as erro:
+                    if lease:
                         estado.marcar_tarefa_retry(
-                            tarefa,
-                            erro=mensagem,
+                            lease,
+                            erro=str(erro) or type(erro).__name__,
                             proxima_tentativa_em=None,
                             atraso_segundos=60,
                         )
-                        log(
-                            f"página RETRY {tarefa.get('fonte')}="
-                            f"{tarefa.get('pagina')}: {mensagem}"
-                        )
-                        if id_normal in selecionadas:
-                            selecionadas.discard(id_normal)
-                        else:
-                            vistos_tarefas_externas.add(id_normal or -1)
-                        continue
+                    log(
+                        f"página RETRY {atual.get('fonte')}={atual.get('pagina')}: {erro}"
+                    )
+                    return None, None
+                return _ResultadoPagina(dict(atual), registros, total), lease
 
-                    if id_normal in selecionadas:
-                        selecionadas.discard(id_normal)
-                    else:
-                        vistos_tarefas_externas.add(id_normal or -1)
-                    if tarefa.get("status") != CONCLUIDO:
-                        leases.append(dict(tarefa))
-                    resultados.append(_ResultadoPagina(dict(tarefa), registros, total))
-
-                # Se a fila não entregou uma tarefa nova, qualquer selecionada
-                # continua pendente no estado. Nenhuma página é falsamente
-                # concluída por falta de orçamento.
-                return resultados, leases
-
-            def finalizar_leases(
-                leases: Sequence[dict[str, Any]], *, pendentes: bool = False
+            def finalizar_lease(
+                lease: Mapping[str, Any] | None, *, pendente: bool = False
             ) -> None:
-                for tarefa in leases:
-                    if pendentes:
-                        retry_orcamento(tarefa)
-                    else:
-                        estado.concluir_tarefa_paginacao(tarefa)
+                if not lease:
+                    return
+                if pendente:
+                    retry_orcamento(lease)
+                else:
+                    estado.concluir_tarefa_paginacao(dict(lease))
 
-            def processar_compra(
-                compra: dict[str, Any], *, origem: str, detalhe: bool
+            def processar_contrato(
+                numero_compra: str, bruto_contrato: dict[str, Any]
             ) -> bool:
-                nonlocal total_inspecoes, total_pares_publicados
-                numero = compra["numero_controle_pncp"]
-                if numero in estado.numeros_aceitos():
+                nonlocal total_inspecoes, total_cadeias_identificadas
+                if not numero_compra:
                     return False
-                if not _data_no_periodo(
-                    compra,
-                    data_inicial[:4] + "-" + data_inicial[4:6] + "-" + data_inicial[6:],
-                    data_final[:4] + "-" + data_final[4:6] + "-" + data_final[6:],
-                ):
+                identidade_contrato = _identidade_contrato_feed(bruto_contrato)
+                identidade = (numero_compra, identidade_contrato)
+                if identidade in vistos_nesta_execucao:
                     return False
-                if _reaproveitar_inspecao(estado, numero):
+                vistos_nesta_execucao.add(identidade)
+                if numero_compra in {
+                    c["numero_controle_pncp"] for c, _ in aceitos_atuais()
+                }:
                     return False
-                ok, motivo = _aceitavel(compra, esferas, preliminar=not detalhe)
-                if not ok:
+                status = estado.status_inspecao(numero_compra)
+                if status in {"FORA_DO_ESCOPO", "LIMITE_ORGAO"}:
+                    return False
+                if status == "DOWNLOAD_REPROVADO":
+                    # Permita testar outro contrato inicial da mesma compra,
+                    # mas não repita no mesmo run a tentativa documental já
+                    # persistida para este contrato.
+                    inspecao_anterior = estado.inspecao(numero_compra) or {}
+                    candidato_anterior = inspecao_anterior.get("candidato")
+                    contrato_anterior = (
+                        candidato_anterior.get("contrato")
+                        if isinstance(candidato_anterior, Mapping)
+                        else None
+                    )
+                    if not isinstance(contrato_anterior, Mapping):
+                        contratos_anteriores = (
+                            candidato_anterior.get("contratos")
+                            if isinstance(candidato_anterior, Mapping)
+                            else None
+                        )
+                        contrato_anterior = (
+                            contratos_anteriores[0]
+                            if isinstance(contratos_anteriores, Sequence)
+                            and not isinstance(contratos_anteriores, (str, bytes))
+                            and contratos_anteriores
+                            and isinstance(contratos_anteriores[0], Mapping)
+                            else None
+                        )
+                    if isinstance(contrato_anterior, Mapping):
+                        identidade_anterior = _identidade_contrato_feed(
+                            contrato_anterior
+                        )
+                        if identidade_anterior == identidade_contrato:
+                            return False
+                    else:
+                        return False
+                total_inspecoes += 1
+                try:
+                    compra_bruta = _detalhe_com_cache(estado, pncp, numero_compra)
+                    compra = normalizar_compra(compra_bruta, "pncp_contratos")
+                except LimiteRequisicoes:
+                    raise
+                except (PncpError, RuntimeError, ValueError) as erro:
+                    mensagem = f"contratação vinculada indisponível: {erro}"
                     estado.salvar_inspecao(
-                        numero, compra, status="FORA_DO_ESCOPO", motivo=motivo
+                        numero_compra,
+                        {"numero_controle_pncp": numero_compra},
+                        status="ERRO_API",
+                        motivo=mensagem,
+                    )
+                    log(f"  confirmação pendente {numero_compra}: {mensagem}")
+                    return False
+                if compra.get("numero_controle_pncp") != numero_compra:
+                    motivo = "contratação vinculada diverge do numeroControlePncpCompra"
+                    estado.salvar_inspecao(
+                        numero_compra, compra, status="FORA_DO_ESCOPO", motivo=motivo
                     )
                     return False
-
+                ok, motivo = _aceitavel(compra, esferas, preliminar=False)
+                if not ok:
+                    estado.salvar_inspecao(
+                        numero_compra, compra, status="FORA_DO_ESCOPO", motivo=motivo
+                    )
+                    return False
                 orgao = _cnpj_da_compra(compra)
                 if contagens[orgao] >= max_por_orgao:
                     estado.salvar_inspecao(
-                        numero,
+                        numero_compra,
                         compra,
                         status="LIMITE_ORGAO",
                         motivo=f"limite de {max_por_orgao} processos por órgão",
@@ -2196,111 +3018,60 @@ def coletar(
                     return False
                 if tentativas_documentais[orgao] >= max_tentativas_documentais_por_orgao:
                     estado.salvar_inspecao(
-                        numero,
+                        numero_compra,
                         compra,
                         status="LIMITE_ORGAO",
                         motivo=(
                             "teto persistente de "
-                            f"{max_tentativas_documentais_por_orgao} tentativas "
-                            "documentais por órgão"
+                            f"{max_tentativas_documentais_por_orgao} tentativas documentais por órgão"
                         ),
                     )
                     return False
 
-                total_inspecoes += 1
-                # Para busca textual, a confirmação vem inteira antes da lista
-                # de arquivos: feed PNCP paginado → Compras → detalhe.
-                if not detalhe:
-                    try:
-                        try:
-                            # Compras.gov costuma responder mais rápido e já
-                            # fornece os metadados necessários ao gate. PNCP
-                            # permanece fonte dos documentos e fallback de
-                            # confirmação, sem repetir o endpoint de detalhe.
-                            compra = _confirmar_busca_no_compras(
-                                estado, compras_confirmacao, compra
-                            )
-                        except LimiteRequisicoes:
-                            raise
-                        except (PncpError, RuntimeError) as erro_compras:
-                            try:
-                                compra = _confirmar_busca_no_pncp(
-                                    estado, pncp_confirmacao, compra
-                                )
-                            except LimiteRequisicoes:
-                                raise
-                            except (PncpError, RuntimeError) as erro_pncp:
-                                raise PncpError(
-                                    "Compras.gov: "
-                                    f"{erro_compras}; PNCP: {erro_pncp}"
-                                ) from erro_pncp
-                    except LimiteRequisicoes:
-                        raise
-                    except (PncpError, RuntimeError, ValueError) as erro:
-                        mensagem = f"confirmação Compras.gov/PNCP: {erro}"
-                        estado.salvar_inspecao(
-                            numero,
-                            compra,
-                            status="ERRO_API",
-                            motivo=mensagem,
-                        )
-                        log(f"  confirmação pendente {numero}: {mensagem}")
-                        return False
-                    ok, motivo = _aceitavel(compra, esferas, preliminar=False)
-                    if not ok:
-                        estado.salvar_inspecao(
-                            numero,
-                            compra,
-                            status="FORA_DO_ESCOPO",
-                            motivo=motivo,
-                        )
-                        return False
-
-                if not _data_no_periodo(
-                    compra,
-                    data_inicial[:4] + "-" + data_inicial[4:6] + "-" + data_inicial[6:],
-                    data_final[:4] + "-" + data_final[4:6] + "-" + data_final[6:],
-                ):
-                    estado.salvar_inspecao(
-                        numero,
-                        compra,
-                        status="FORA_DO_ESCOPO",
-                        motivo="data de publicação ausente ou fora do intervalo",
-                    )
-                    return False
-
-                # Nenhuma chamada de arquivos ocorre antes do bloco de
-                # confirmação acima.
                 try:
-                    arquivos = _arquivos_com_cache(estado, pncp, compra)
+                    contrato = _normalizar_contrato(bruto_contrato, compra)
+                    # O vínculo e o número do contrato são validados antes de
+                    # tocar em qualquer lista de anexos. Assim um registro do
+                    # feed que aponta para outra compra não consome a consulta
+                    # documental dessa contratação.
+                    arquivos_compra = _arquivos_com_cache(estado, pncp, compra)
+                    arquivos_contrato = _arquivos_contrato_com_cache(
+                        estado, pncp, contrato
+                    )
                 except LimiteRequisicoes:
                     raise
-                except Exception as erro:
+                except (PncpError, RuntimeError, ValueError) as erro:
                     estado.salvar_inspecao(
-                        numero, compra, status="ERRO_API", motivo=str(erro)
+                        numero_compra,
+                        compra,
+                        status="ERRO_API",
+                        motivo=f"anexos da cadeia indisponíveis: {erro}",
                     )
-                    log(f"  API pendente {numero}: {erro}")
+                    log(f"  API pendente {numero_compra}: {erro}")
                     return False
-                candidato, motivo, _todos_arquivos = formar_candidato(compra, arquivos)
+                candidato, motivo, todos = formar_candidato_cadeia(
+                    compra, arquivos_compra, contrato, arquivos_contrato
+                )
                 if candidato is None:
                     estado.salvar_inspecao(
-                        numero,
+                        numero_compra,
                         compra,
-                        status="SEM_PAR_ETP_TR",
+                        status="SEM_CADEIA_COMPLETA",
                         motivo=motivo,
-                        arquivos=arquivos,
+                        arquivos=todos,
                     )
+                    log(f"  x {numero_compra}: {motivo}")
                     return False
 
-                total_pares_publicados += 1
+                total_cadeias_identificadas += 1
                 estado.salvar_inspecao(
-                    numero,
+                    numero_compra,
                     compra,
-                    status="PAR_PUBLICADO",
-                    arquivos=arquivos,
+                    status="CADEIA_IDENTIFICADA",
+                    arquivos=todos,
                     candidato=candidato,
                 )
-                resultado = baixar_par(
+                resultado = baixar_cadeia_completa(
                     pncp,
                     candidato,
                     caminhos,
@@ -2310,246 +3081,147 @@ def coletar(
                     opcoes_ocr=opcoes_ocr,
                 )
                 if not resultado.aprovado:
-                    motivo_download = resultado.motivo or "download documental reprovado"
-                    api = motivo_download.startswith("falha de API")
-                    status = "ERRO_API" if api else "DOWNLOAD_REPROVADO"
+                    motivo_download = resultado.motivo or "download da cadeia reprovado"
+                    api = "falha de API" in motivo_download
                     estado.salvar_inspecao(
-                        numero,
+                        numero_compra,
                         compra,
-                        status=status,
+                        status="ERRO_API" if api else "DOWNLOAD_REPROVADO",
                         motivo=motivo_download,
-                        arquivos=arquivos,
+                        arquivos=todos,
                         candidato=candidato,
                     )
                     if not api:
                         tentativas_documentais[orgao] += 1
-                    log(f"  x {numero}: {motivo_download}")
+                    log(f"  x {numero_compra}: {motivo_download}")
                     return False
-
+                if not _documentos_formam_cadeia_completa(resultado.documentos):
+                    motivo_download = "download concluído sem os quatro documentos utilizáveis"
+                    estado.salvar_inspecao(
+                        numero_compra,
+                        compra,
+                        status="DOWNLOAD_REPROVADO",
+                        motivo=motivo_download,
+                        arquivos=todos,
+                        candidato=candidato,
+                    )
+                    tentativas_documentais[orgao] += 1
+                    return False
                 estado.salvar_aceito(candidato, resultado.documentos)
                 estado.salvar_inspecao(
-                    numero,
+                    numero_compra,
                     compra,
                     status="ACEITO",
-                    arquivos=arquivos,
+                    arquivos=todos,
                     candidato=candidato,
                 )
                 contagens[orgao] += 1
-                log(f"  ok {numero} ({len(aceitos_atuais())}/{processos})")
+                log(f"  ok {numero_compra} ({len(aceitos_atuais())}/{processos})")
                 return True
 
             def inspecionar_paginas(
                 resultados: Sequence[_ResultadoPagina],
-                leases: Sequence[dict[str, Any]],
+                leases: Sequence[Mapping[str, Any]],
             ) -> None:
-                nonlocal parou_por_limite, registros_invalidos
-                pares: list[tuple[dict[str, Any], str, bool]] = []
+                nonlocal registros_invalidos, parou_por_limite, total_contratos_consultados
+                registros: list[dict[str, Any]] = []
                 for resultado in sorted(
-                    resultados,
-                    key=lambda item: int(item.tarefa.get("pagina") or 0),
+                    resultados, key=lambda item: int(item.tarefa.get("pagina") or 0)
                 ):
-                    fonte_tarefa = str(resultado.tarefa.get("fonte") or "")
-                    origem = {
-                        "pncp-busca": "pncp_busca",
-                        "compras-gov": "compras_gov",
-                        "pncp-feed": "pncp_feed",
-                    }.get(fonte_tarefa, fonte_tarefa)
-                    detalhe = fonte_tarefa in {"compras-gov", "pncp-feed"}
-                    for bruto in resultado.registros:
-                        try:
-                            pares.append((normalizar_compra(bruto, origem), origem, detalhe))
-                        except ValueError:
-                            registros_invalidos += 1
-                # Deduplica no lote antes de intercalar os órgãos; a ordem de
-                # descoberta de cada órgão continua determinística.
-                dedup: list[tuple[dict[str, Any], str, bool]] = []
-                vistos_lote: set[str] = set()
-                for par in pares:
-                    numero = par[0]["numero_controle_pncp"]
-                    if numero in vistos_lote or numero in vistos_nesta_execucao:
-                        continue
-                    vistos_lote.add(numero)
-                    vistos_nesta_execucao.add(numero)
-                    dedup.append(par)
-                # O sort é estável: dentro de cada nível de completude,
-                # preserva o round-robin por CNPJ. Registros que dispensam
-                # confirmação ou já informam modalidade 6 avançam primeiro.
-                ordenados = sorted(
-                    _round_robin_pares(dedup), key=_prioridade_confirmacao
-                )
+                    registros.extend(resultado.registros)
+                grupos, invalidos = _agrupar_contratos_feed(registros)
+                registros_invalidos += invalidos
+                total_contratos_consultados += len(registros)
                 try:
-                    for compra, origem, detalhe in ordenados:
-                        if alvo_atingido():
+                    for numero, contrato in grupos:
+                        if alvo_atingido() or parou_por_limite:
                             break
-                        processar_compra(compra, origem=origem, detalhe=detalhe)
+                        if not _contrato_inicial(contrato):
+                            # Sem termo inicial não há instrumento exigível;
+                            # outro contrato da mesma compra pode aparecer em
+                            # uma página futura, por isso não marcamos como
+                            # inspeção definitiva aqui.
+                            continue
+                        processar_contrato(numero, contrato)
                 except LimiteRequisicoes:
                     parou_por_limite = True
-                    finalizar_leases(leases, pendentes=True)
-                    return
-                finalizar_leases(leases, pendentes=False)
+                for lease in leases:
+                    finalizar_lease(lease, pendente=parou_por_limite)
 
-            def total_paginas_fonte(fonte_tarefa: str, total: int, tamanho: int) -> int:
-                if fonte_tarefa == "pncp-busca":
-                    return (total + tamanho - 1) // tamanho if total else 0
-                return total
-
-            def rodar_consulta(
-                fonte_tarefa: str,
-                base: Mapping[str, Any],
-                tamanho: int,
-                max_paginas: int,
-                *,
-                rotulo: str,
+            def rodar_feed(
+                base: Mapping[str, Any], max_paginas: int
             ) -> None:
-                nonlocal parou_por_limite, cobertura_incompleta_execucao
-                inicio_pagina = 1
-                if max_paginas == 0 and not alvo_atingido():
-                    cobertura_incompleta_execucao = True
-                    return
+                nonlocal cobertura_incompleta_execucao, parou_por_limite
+                pagina = 1
                 while (
-                    inicio_pagina <= max_paginas
+                    pagina <= max_paginas
                     and not alvo_atingido()
                     and not parou_por_limite
                 ):
-                    primeiro = _criar_tarefa_pagina(
+                    tarefa = _criar_tarefa_pagina(
                         estado,
-                        fonte_tarefa,
+                        FONTE_CONTRATOS,
                         base,
-                        inicio_pagina,
-                        tamanho,
+                        pagina,
+                        500,
                     )
-                    resultados, leases = executar_tarefas([primeiro])
+                    resultado, lease = executar_tarefa(tarefa)
                     if parou_por_limite:
-                        finalizar_leases(leases, pendentes=True)
+                        finalizar_lease(lease, pendente=True)
                         break
-                    total_conhecido = next(
-                        (resultado.total for resultado in resultados if resultado.tarefa.get("id") == primeiro.get("id")),
-                        None,
-                    )
-                    if total_conhecido is not None:
-                        limite_fonte = total_paginas_fonte(
-                            fonte_tarefa, total_conhecido, tamanho
-                        )
-                        fim_lote = min(
-                            max_paginas,
-                            inicio_pagina + PAGINAS_POR_LOTE - 1,
-                            max(inicio_pagina, limite_fonte),
-                        )
-                    else:
-                        # Se a primeira página falhou, ainda consulte as
-                        # próximas quatro: a falha vira RETRY sem bloquear a
-                        # cobertura das páginas seguintes.
-                        fim_lote = min(
-                            max_paginas,
-                            inicio_pagina + PAGINAS_POR_LOTE - 1,
-                        )
-
-                    restantes = [
-                        _criar_tarefa_pagina(
-                            estado,
-                            fonte_tarefa,
-                            base,
-                            pagina,
-                            tamanho,
-                        )
-                        for pagina in range(inicio_pagina + 1, fim_lote + 1)
-                    ]
-                    if restantes:
-                        resultados_restantes, leases_restantes = executar_tarefas(restantes)
-                        resultados.extend(resultados_restantes)
-                        leases = [*leases, *leases_restantes]
-                    log(
-                        f"{rotulo}: páginas {inicio_pagina}–{fim_lote} "
-                        f"({len(resultados)} respostas)"
-                    )
-                    inspecionar_paginas(resultados, leases)
+                    if resultado is None:
+                        # A página vira RETRY; avance para preservar cobertura
+                        # das páginas posteriores nesta execução.
+                        pagina += 1
+                        continue
+                    inspecionar_paginas([resultado], [lease] if lease else [])
                     if parou_por_limite or alvo_atingido():
                         break
-
-                    total_batch = next(
-                        (
-                            resultado.total
-                            for resultado in reversed(resultados)
-                            if resultado.tarefa.get("fonte") == fonte_tarefa
-                        ),
-                        total_conhecido,
-                    )
-                    if total_batch is not None:
-                        limite_fonte = total_paginas_fonte(
-                            fonte_tarefa, total_batch, tamanho
-                        )
-                        if limite_fonte <= fim_lote:
-                            break
-                        if fim_lote >= max_paginas:
-                            cobertura_incompleta_execucao = True
-                            break
-                    elif any(not resultado.registros for resultado in resultados):
+                    limite = resultado.total
+                    if limite <= pagina:
                         break
-                    inicio_pagina = fim_lote + 1
+                    if pagina >= max_paginas:
+                        cobertura_incompleta_execucao = True
+                        break
+                    pagina += 1
 
             try:
-                if fonte in {"auto", "pncp-busca"} and not alvo_atingido():
-                    consultas = termos_historicos(termos, data_inicial, data_final)
-                    for consulta in consultas:
-                        if alvo_atingido() or parou_por_limite:
-                            break
-                        rodar_consulta(
-                            "pncp-busca",
-                            {"termo": consulta},
-                            50,
-                            max_paginas_busca,
-                            rotulo=f"busca PNCP q={consulta!r}",
-                        )
-
-                if fonte in {"auto", "compras"} and not alvo_atingido() and not parou_por_limite:
+                if max_paginas_feed == 0 and not alvo_atingido():
+                    cobertura_incompleta_execucao = True
+                else:
                     for inicio_janela, fim_janela in janelas_calendario(
                         data_inicial, data_final, janela_dias
                     ):
                         if alvo_atingido() or parou_por_limite:
                             break
-                        rodar_consulta(
-                            "compras-gov",
+                        rodar_feed(
                             {"inicio": inicio_janela, "fim": fim_janela},
-                            500,
                             max_paginas_feed,
-                            rotulo=f"feed Compras.gov.br {inicio_janela}–{fim_janela}",
-                        )
-
-                if fonte == "pncp-feed" and not alvo_atingido() and not parou_por_limite:
-                    for inicio_janela, fim_janela in janelas_calendario(
-                        data_inicial, data_final, janela_dias
-                    ):
-                        if alvo_atingido() or parou_por_limite:
-                            break
-                        rodar_consulta(
-                            "pncp-feed",
-                            {"inicio": inicio_janela, "fim": fim_janela},
-                            500,
-                            max_paginas_feed,
-                            rotulo=f"feed PNCP {inicio_janela}–{fim_janela}",
                         )
             finally:
                 resumo = _catalogar(
                     caminhos,
                     estado,
                     alvo=processos,
-                    fonte=fonte,
+                    fonte=FONTE_CONTRATOS,
                     log=log,
                     cobertura_incompleta=cobertura_incompleta_execucao,
                 )
                 resumo.update(
                     {
+                        "contratos_consultados_nesta_execucao": total_contratos_consultados,
+                        "cadeias_identificadas_nesta_execucao": total_cadeias_identificadas,
                         "compras_inspecionadas_nesta_execucao": total_inspecoes,
-                        "pares_publicados_nesta_execucao": total_pares_publicados,
+                        "registros_invalidos_nesta_execucao": registros_invalidos,
                         "registros_invalidos_ano_nesta_execucao": registros_invalidos,
                         "aceitos_migrados_sem_download": migrados_legados,
                         "tentativas_documentais_por_orgao": dict(tentativas_documentais),
                         "max_tentativas_documentais_por_orgao": max_tentativas_documentais_por_orgao,
                         "parou_por_limite_requisicoes": parou_por_limite,
+                        "estrategia": "pncp_contratos_para_cadeia_completa",
                     }
                 )
                 escrever_json(caminhos.catalogo / "estatisticas.json", resumo)
-
     return resumo
 
 
@@ -2560,7 +3232,7 @@ def principal(argv: Sequence[str] | None = None) -> int:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Coleta somente pares ETP→TR pelas APIs públicas PNCP/Compras.gov.br."
+        description="Coleta cadeias completas pelo feed de contratos do PNCP."
     )
     parser.add_argument("--raiz", type=Path, default=Path("corpus"))
     parser.add_argument("--data-inicial", default="20240101")
@@ -2576,10 +3248,19 @@ def principal(argv: Sequence[str] | None = None) -> int:
     )
     parser.add_argument(
         "--fonte",
-        choices=("auto", "pncp-busca", "compras", "pncp-feed"),
-        default="auto",
+        choices=(
+            FONTE_CONTRATOS,
+            "contratos",
+            "auto",
+            "pncp-busca",
+            "compras",
+            "pncp-feed",
+        ),
+        default=FONTE_CONTRATOS,
+        help="compatibilidade; a coleta sempre usa o feed de contratos",
     )
-    parser.add_argument("--termo", action="append", dest="termos", default=None)
+    parser.add_argument("--termo", action="append", dest="termos", default=None,
+                        help="compatibilidade; não altera a descoberta por contratos")
     parser.add_argument(
         "--esferas",
         default=",".join(sorted(ESFERAS_PERMITIDAS)),
@@ -2594,7 +3275,8 @@ def principal(argv: Sequence[str] | None = None) -> int:
         type=int,
         default=3,
     )
-    parser.add_argument("--max-paginas-busca", type=int, default=40)
+    parser.add_argument("--max-paginas-busca", type=int, default=0,
+                        help="compatibilidade; páginas da busca textual não são consultadas")
     parser.add_argument("--janela-dias", type=int, default=31)
     parser.add_argument("--max-paginas-feed", type=int, default=100)
     parser.add_argument("--max-requisicoes-dia", type=int, default=900)
@@ -2618,13 +3300,13 @@ def principal(argv: Sequence[str] | None = None) -> int:
         "--timeout-confirmacao",
         type=float,
         default=20.0,
-        help="timeout por tentativa nas confirmações de metadados",
+        help="compatibilidade; confirmações ocorrem no detalhe vinculado",
     )
     parser.add_argument(
         "--tentativas-confirmacao",
         type=int,
         default=1,
-        help="tentativas rápidas por canal antes de registrar RETRY",
+        help="compatibilidade; usado como validação de entrada",
     )
     argumentos = parser.parse_args(argv)
 

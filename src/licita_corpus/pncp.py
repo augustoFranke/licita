@@ -1,13 +1,12 @@
-"""Clientes das APIs públicas usadas pela coleta ETP→TR.
+"""Clientes das APIs públicas usadas pela coleta de cadeias completas.
 
-A descoberta usa o endpoint público documentado de contratações do
-Compras.gov.br, que devolve até 500 registros por página. O PNCP fica
-responsável pela lista de arquivos e pelo download dos anexos. A busca textual
-pública do portal é apenas um acelerador; seus candidatos são confirmados
-primeiro no Compras.gov.br e, como fallback, no feed oficial do PNCP antes de
-qualquer download.
+O ponto de entrada da coleta é o feed de contratos do PNCP. Cada registro do
+feed aponta para uma contratação por ``numeroControlePNCPCompra``; o detalhe da
+contratação fornece os metadados de perfil e a lista de anexos com ETP, TR e
+edital. O instrumento contratual vem da lista de arquivos do próprio contrato.
 
-Não há chamadas para contratos e nenhum edital é baixado.
+Compras.gov.br e a busca textual do portal continuam expostos para consumidores
+legados, mas não fazem parte da estratégia de coleta vigente.
 """
 
 from __future__ import annotations
@@ -191,7 +190,7 @@ def _nome_disposicao(valor: str) -> str | None:
 
 
 class Pncp:
-    """Endpoints públicos do PNCP necessários para um par ETP→TR."""
+    """Endpoints públicos do PNCP necessários para uma cadeia completa."""
 
     def __init__(
         self,
@@ -307,6 +306,8 @@ class Pncp:
         )
         if payload is None:
             return []
+        if isinstance(payload, dict):
+            payload = payload.get("documentos", payload.get("Documentos"))
         if not isinstance(payload, list) or not all(isinstance(x, dict) for x in payload):
             raise PncpError("lista de arquivos da contratação inválida")
         return payload
@@ -325,36 +326,161 @@ class Pncp:
         )
         if payload is None:
             return []
+        if isinstance(payload, dict):
+            payload = payload.get("documentos", payload.get("Documentos"))
         if not isinstance(payload, list) or not all(isinstance(x, dict) for x in payload):
             raise PncpError("lista de arquivos do contrato inválida")
         return payload
 
-    def contratos_da_compra(
-        self, numero_controle_compra: str, *, data_inicial: str, data_final: str,
-        cnpj_orgao: str | None = None, pagina: int = 1,
-    ) -> list[dict[str, Any]]:
-        """Contratos do feed oficial que apontam para uma compra.
+    def pagina_contratos_da_compra(
+        self, numero_controle_compra: str, *, pagina: int = 1
+    ) -> tuple[list[dict[str, Any]], int]:
+        """Contratos/empenhos vinculados diretamente a uma contratação.
 
-        O feed não filtra por compra: o vínculo é o ``numeroControlePncpCompra``
-        de cada contrato, conferido aqui. Restringir por ``cnpj_orgao`` mantém a
-        varredura barata.
+        O serviço documentado para esse recurso não é paginado: a resposta é
+        uma lista de contratos e não recebe ``pagina`` na query string. O
+        parâmetro continua na assinatura para que os promotores históricos
+        possam manter seu laço de retomada; a primeira chamada devolve a lista
+        e informa um total lógico de uma página. Também aceitamos o envelope
+        ``{"data": [...], "totalPaginas": n}`` produzido por gateways antigos,
+        sem exigir esse formato do endpoint oficial.
         """
+        if pagina < 1:
+            raise ValueError("pagina deve ser positiva")
+        cnpj, ano, sequencial = partes_controle(numero_controle_compra)
+        payload = self._http.json(
+            f"{PNCP_API}/orgaos/{cnpj}/contratos/contratacao/{ano}/{sequencial}",
+            sem_conteudo_ok=True,
+            ausente_ok=True,
+        )
+        if payload is None:
+            return [], 0
+        if isinstance(payload, list):
+            contratos = payload
+            total_paginas = 1 if contratos else 0
+        elif isinstance(payload, dict) and isinstance(payload.get("data"), list):
+            contratos = payload["data"]
+            # O envelope não é o formato do manual, mas alguns gateways
+            # legados ainda o devolvem. Preserve seu total quando presente;
+            # sem total, a lista inteira é uma única página.
+            if "totalPaginas" in payload:
+                total_paginas = payload["totalPaginas"]
+            elif "total" in payload:
+                total_paginas = payload["total"]
+            else:
+                total_paginas = 1 if contratos else 0
+            if not isinstance(total_paginas, int) or total_paginas < 0:
+                raise PncpError("resposta de contratos sem total válido")
+        else:
+            raise PncpError("resposta de contratos da contratação inválida")
+        if not all(isinstance(contrato, dict) for contrato in contratos):
+            raise PncpError("lista de contratos da contratação inválida")
+        if pagina <= total_paginas and not contratos and total_paginas > 0:
+            raise PncpError(
+                "resposta de contratos da contratação terminou antes do total"
+            )
+        if pagina > 1:
+            # O endpoint oficial não oferece uma segunda página. Envelopes
+            # legados que anunciam mais páginas não devem fazer o promotor
+            # baixar a mesma lista repetidamente.
+            return [], total_paginas
+        return contratos, int(total_paginas)
+
+    def pagina_contratos_publicados(
+        self,
+        data_inicial: str,
+        data_final: str,
+        *,
+        pagina: int,
+        tamanho_pagina: int | None = None,
+        uf: str | None = None,
+        cnpj: str | None = None,
+    ) -> tuple[list[dict[str, Any]], int]:
+        """Lê uma página do feed oficial de contratos do PNCP.
+
+        O feed é a raiz da estratégia atual: contratos publicados já contêm o
+        vínculo ``numeroControlePNCPCompra`` e, portanto, não exigem uma
+        varredura separada para descobrir contratos de cada compra. O PNCP
+        aceita ``tamanhoPagina`` em instalações que o expõem; quando omitido,
+        preservamos o formato mínimo aceito pelo gateway público.
+        """
+        if pagina < 1:
+            raise ValueError("pagina deve ser positiva")
+        if tamanho_pagina is not None and not 1 <= tamanho_pagina <= 500:
+            raise ValueError("tamanho_pagina deve estar entre 1 e 500")
         params: dict[str, Any] = {
             "dataInicial": data_inicial,
             "dataFinal": data_final,
             "pagina": pagina,
         }
-        if cnpj_orgao:
-            params["cnpjOrgao"] = cnpj_orgao
+        if tamanho_pagina is not None:
+            params["tamanhoPagina"] = tamanho_pagina
+        if uf:
+            params["uf"] = uf
+        if cnpj:
+            params["cnpjOrgao"] = cnpj
         payload = self._http.json(
-            f"{CONSULTA}/contratos", params, sem_conteudo_ok=True, ausente_ok=True
+            f"{CONSULTA}/contratos",
+            params,
+            sem_conteudo_ok=True,
+            ausente_ok=True,
         )
-        if not isinstance(payload, dict):
-            return []
+        if payload is None:
+            return [], 0
+        if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
+            raise PncpError("resposta do feed de contratos sem 'data' válido")
+        contratos = payload["data"]
+        if not all(isinstance(contrato, dict) for contrato in contratos):
+            raise PncpError("lista do feed de contratos inválida")
+        total = payload.get("totalPaginas")
+        if not isinstance(total, int) or total < 0:
+            # Algumas respostas antigas usavam ``total`` para indicar a
+            # quantidade de páginas. Aceitamos o alias, mas nunca inferimos
+            # um total a partir de uma lista vazia.
+            total = payload.get("total")
+        if not isinstance(total, int) or total < 0:
+            raise PncpError("resposta do feed de contratos sem total válido")
+        if pagina <= total and not contratos:
+            raise PncpError("paginação do feed de contratos terminou antes do total")
+        return contratos, total
+
+    # Aliases explícitos facilitam integrações pequenas sem reintroduzir uma
+    # segunda estratégia: todos apontam para o mesmo endpoint e contrato.
+    pagina_feed_contratos = pagina_contratos_publicados
+    feed_contratos = pagina_contratos_publicados
+
+    def contratos_da_compra(
+        self,
+        numero_controle_compra: str,
+        *,
+        data_inicial: str,
+        data_final: str,
+        cnpj_orgao: str | None = None,
+        pagina: int = 1,
+    ) -> list[dict[str, Any]]:
+        """Compatibilidade: filtra uma página do mesmo feed por compra.
+
+        A coleta vigente não chama este método nem faz uma consulta dedicada
+        por contratação. Ele permanece para consumidores legados, mas delega
+        ao único endpoint de descoberta e aceita o nome oficial
+        ``numeroControlePNCPCompra`` (além do alias usado por integrações
+        antigas).
+        """
+        contratos, _total = self.pagina_contratos_publicados(
+            data_inicial,
+            data_final,
+            pagina=pagina,
+            cnpj=cnpj_orgao,
+        )
         return [
-            c for c in (payload.get("data") or [])
-            if isinstance(c, dict)
-            and c.get("numeroControlePncpCompra") == numero_controle_compra
+            contrato
+            for contrato in contratos
+            if (
+                contrato.get("numeroControlePNCPCompra")
+                or contrato.get("numeroControlePncpCompra")
+                or contrato.get("numero_controle_pncp_compra")
+            )
+            == numero_controle_compra
         ]
 
     def baixar(self, url: str) -> tuple[bytes, str | None, str | None]:

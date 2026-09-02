@@ -1,8 +1,8 @@
-# Catálogo Municipal de Regras Determinísticas do TR Linter — Compras de Bens Comuns
+# Catálogo de Regras Determinísticas do TR Linter — Compras de Bens Comuns
 
-Catálogo versionado da R8 / F-05 determinística (fatia M1) para o perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: Termo de Referência municipal para aquisição de bens comuns por pregão eletrônico, sob a Lei nº 14.133/2021.
+Catálogo versionado da R8 / F-05 determinística (fatia M1) para o perfil `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: Termo de Referência de órgão ou entidade federal, estadual, distrital ou municipal para aquisição de bens comuns por pregão eletrônico, sob a Lei nº 14.133/2021.
 
-A única base normativa vinculante deste catálogo é a **Lei nº 14.133/2021 aplicável aos Municípios**. A IN SEGES/ME nº 81/2022, os modelos da AGU e o TR Digital são `REFERENCE_ONLY`: podem inspirar vocabulário, aliases e exemplos comparativos, mas nunca criam obrigação municipal, nunca sustentam finding `NORMATIVE` e nunca determinam a classificação `SUPPORTED`.
+A única base normativa vinculante deste catálogo é a **Lei nº 14.133/2021**, aplicável às esferas federal, estadual, distrital e municipal. A IN SEGES/ME nº 81/2022, os modelos da AGU e o TR Digital são `REFERENCE_ONLY`: podem inspirar vocabulário, aliases e exemplos comparativos, mas nunca criam obrigação de uma esfera, nunca sustentam finding `NORMATIVE` e nunca determinam a classificação `SUPPORTED`.
 
 Enums de finding seguem `01_REQUIREMENTS.md`: severidade `HIGH` | `MEDIUM` | `INFO`; status `OPEN` | `UNDER_REVIEW` | `RESOLVED` | `ACCEPTED_RISK` | `FALSE_POSITIVE`. Este catálogo emite `HIGH` ou `MEDIUM`.
 
@@ -19,11 +19,11 @@ Testes: `rules_synthetic_tests.md`.
 | Campo | Valor |
 |---|---|
 | `profile_id` | `PUBLICO_14133_PREGAO_ELETRONICO_BENS` |
-| ente | Município |
+| ente | órgão ou entidade federal, estadual, distrital ou municipal |
 | regime | Lei nº 14.133/2021 |
 | modalidade | pregão eletrônico |
 | objeto | aquisição de bens comuns |
-| fora do perfil | obras, serviços, locações, alienações, contratação direta e regimes não municipais |
+| fora do perfil | obras, serviços, locações, alienações, contratação direta e regimes incompatíveis com a Lei nº 14.133/2021 |
 
 A decisão `SUPPORTED` decorre apenas do classificador de escopo acima. Citação, aderência ou divergência em relação à IN nº 81/2022, a modelo AGU ou ao TR Digital não altera essa decisão.
 
@@ -341,7 +341,7 @@ Esses conteúdos não precisam ser seções autônomas. Garantia, entrega e rece
 
 ## 7. O que este catálogo recusa
 
-- Usar IN nº 81/2022, modelo AGU ou TR Digital como fundamento municipal ou como determinante de `SUPPORTED`.
+- Usar IN nº 81/2022, modelo AGU ou TR Digital como fundamento de uma esfera ou como determinante de `SUPPORTED`.
 - Julgar preço, razoabilidade ou legalidade do processo.
 - Inferir seção obrigatória por similaridade semântica frouxa.
 - Tratar vigência como prazo de entrega (RULE-003).

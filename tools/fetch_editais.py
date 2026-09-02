@@ -1,10 +1,15 @@
-"""Enriquece o corpus com o EDITAL de cada processo já coletado.
+"""Promove processos históricos adicionando o elo EDITAL.
 
-O edital vem na MESMA lista de ``arquivos_compra`` que o coletor de pares já
-consulta; o coletor apenas o descartava (ver ``pncp.py``: "nenhum edital é
-baixado"). Esta ferramenta, restrita e idempotente, baixa o edital dos
-processos indicados, verifica que ele abre com texto utilizável e anexa a
-entrada ao catálogo — sem tocar nas linhas ETP/TR já existentes.
+O edital vem na MESMA lista de ``arquivos_compra`` que a coleta de cadeias
+completas consulta; o coletor vigente o seleciona e baixa junto com
+ETP/TR. Esta ferramenta, restrita e idempotente, existe apenas para promover
+processos históricos indicados, verifica que o edital abre com texto utilizável
+e anexa a entrada ao catálogo — sem tocar nas linhas ETP/TR já existentes.
+
+Ela não é uma segunda estratégia de descoberta: processos novos são sempre
+descobertos pelo feed de contratos em ``licita_corpus.collect.coletar``.
+Antes de consultar ou baixar anexos, o utilitário também descarta processos
+marcados como ``OUT_OF_SCOPE``/``FORA_DO_PERFIL`` no catálogo.
 
 Reusa os mesmos helpers do coletor (``_resumir_arquivo``, ``baixar_documento``,
 ``_registrar_documento``), então a entrada gravada é idêntica à que o coletor
@@ -38,6 +43,7 @@ from licita_corpus.collect import (
 from _corpus_sync import (
     CORPUS,
     ROOT,
+    PROCESSOS,
     carregar_catalogo,
     para_publico,
     publicar,
@@ -62,6 +68,33 @@ def _pids_golden() -> set[str]:
     return pids
 
 
+def _processos_promoviveis() -> set[str]:
+    """Retorna processos no perfil; falha de catálogo bloqueia downloads."""
+    if not PROCESSOS.exists():
+        return set()
+    try:
+        bruto = json.loads(PROCESSOS.read_text(encoding="utf-8"))
+    except (OSError, TypeError, ValueError, json.JSONDecodeError):
+        return set()
+    registros = bruto.get("processos", []) if isinstance(bruto, dict) else bruto
+    if not isinstance(registros, list):
+        return set()
+    promoviveis: set[str] = set()
+    for processo in registros:
+        if not isinstance(processo, dict) or not processo.get("processo_id"):
+            continue
+        status_escopo = str(processo.get("scope_status") or "").upper()
+        status_perfil = str(processo.get("perfil_status") or "").upper()
+        if status_escopo == "OUT_OF_SCOPE" or status_perfil in {
+            "OUT_OF_SCOPE",
+            "FORA_DO_PERFIL",
+            "UNSUPPORTED",
+        }:
+            continue
+        promoviveis.add(str(processo["processo_id"]))
+    return promoviveis
+
+
 def _escolher_edital(resumidos: list[dict[str, Any]]) -> dict[str, Any] | None:
     """Melhor candidato a edital: tipo 2, ativo, baixável, título preferido."""
     tipo2 = [
@@ -80,6 +113,7 @@ def _escolher_edital(resumidos: list[dict[str, Any]]) -> dict[str, Any] | None:
 
 def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
     catalogo = carregar_catalogo()
+    promoviveis = _processos_promoviveis()
     por_processo: dict[str, list[dict[str, Any]]] = {}
     controle: dict[str, str] = {}
     for d in catalogo:
@@ -90,6 +124,13 @@ def enriquecer(pids: list[str], *, limite: int | None = None) -> None:
     ausentes = [p for p in pids if p not in por_processo]
     for p in ausentes:
         print(f"[ignorado] {p}: não está no catálogo")
+    fora_perfil = [
+        p for p in alvos
+        if p not in promoviveis
+    ]
+    for p in fora_perfil:
+        print(f"[ignorado] {p}: processo fora do perfil, sem download")
+    alvos = [p for p in alvos if p not in fora_perfil]
 
     ja_tem = [p for p in alvos if any(x.get("papel") == EDITAL for x in por_processo[p])]
     pendentes = [p for p in alvos if p not in ja_tem]

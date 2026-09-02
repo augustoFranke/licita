@@ -23,12 +23,17 @@ Um processo é `SUPPORTED` somente quando satisfaz simultaneamente:
 2. **Regime:** Lei nº 14.133/2021.
 3. **Modalidade:** Pregão Eletrônico (`PE`).
 4. **Objeto:** aquisição de bens comuns.
-5. **Documentos do lote R1:** exatamente um ETP e um TR da mesma contratação,
-   reabertos localmente e com texto utilizável.
+5. **Documentos de uma coleta nova:** cadeia completa da mesma contratação,
+   exatamente um ETP, um TR, um Edital e um instrumento contratual, reabertos
+   localmente e com texto utilizável. O contrato é o ponto de descoberta e deve
+   trazer vínculo exato por `numeroControlePNCPCompra`.
 6. **Perfil:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS` registrado no catálogo.
 
-Falha ou ambiguidade em qualquer critério resulta em `OUT_OF_SCOPE`. O motivo
-deve ser registrado, por exemplo `FORA_DO_PERFIL` por objeto.
+Falha ou ambiguidade nos critérios de perfil resulta em `OUT_OF_SCOPE`. Falta,
+duplicidade ou inutilidade de um elo documental de uma coleta nova impede a
+publicação e fica registrada no estado com o motivo observável; isso não apaga
+processos históricos já preservados. O motivo de perfil deve ser registrado,
+por exemplo `FORA_DO_PERFIL` por objeto.
 
 O controle negativo SAEMA de energia permanece fisicamente no corpus por ser
 de ente público sob o regime, mas é `OUT_OF_SCOPE` / `FORA_DO_PERFIL` no
@@ -108,9 +113,10 @@ pelo órgão. Na dúvida, registrar `OUT_OF_SCOPE` com o motivo observável.
 ## 4. Documentos, originais e OCR
 
 Os tipos do produto permanecem `DFD`, `ETP`, `TR`, `EDITAL`, `CONTRATO`,
-`PESQUISA_PRECOS` e `OUTROS`, em PDF ou DOCX. Para elegibilidade no lote R1,
-a contratação deve ter **exatamente ETP e TR**; os outros tipos não compõem o
-lote.
+`PESQUISA_PRECOS` e `OUTROS`, em PDF ou DOCX. Para uma coleta nova, a
+contratação só entra no corpus quando há **exatamente ETP, TR, EDITAL e
+CONTRATO** utilizáveis. DFD, pesquisa de preços e outros tipos não são elos
+exigidos; processos históricos que só têm ETP/TR permanecem preservados.
 
 O original baixado é imutável e identificado pelo SHA-256 dos bytes originais.
 OCR pode ser aplicado a qualquer arquivo que necessite dele e é cacheável pela
@@ -122,11 +128,12 @@ SHA-256 do original + idioma + versão/configuração do OCR
 
 A saída de OCR é artefato derivado auditável, ligado ao original, à chave de
 cache, à ferramenta/configuração e ao momento de produção. Nunca substitui ou
-altera o original. Se ETP ou TR permanecer ilegível ou sem texto utilizável,
-o processo é `OUT_OF_SCOPE` no gate documental.
+altera o original. Se qualquer elo exigido permanecer ilegível ou sem texto
+utilizável, a nova cadeia não é publicada e o motivo fica registrado no estado.
 
-Política oficial de corpus/ingestão: `4-municipal-historical-ocr`. O manifesto
-de escopo segue `schemas/corpus_process.v0.1.0.json`; o payload documental
+Política de novas coletas: `6-cadeia-completa-todas-esferas`. As políticas
+históricas continuam registradas nos manifestos preservados. O manifesto de
+escopo segue `schemas/corpus_process.v0.1.0.json`; o payload documental
 `ProcurementProcess` permanece separado e fechado.
 
 ---
@@ -149,7 +156,7 @@ de escopo segue `schemas/corpus_process.v0.1.0.json`; o payload documental
 - Rastreio completo (M4).
 - Fiscalização (M5).
 - Pipeline agêntico e integrações posteriores, sempre limitados ao mesmo
-  perfil municipal enquanto este documento vigorar.
+  perfil multiesfera enquanto este documento vigorar.
 
 Valores monetários nesta fatia servem à consistência documental, não a juízo
 de mercado.
@@ -170,7 +177,12 @@ de mercado.
 2. Regime = Lei nº 14.133/2021?                    não → OUT_OF_SCOPE
 3. Modalidade = PE (Pregão Eletrônico)?            não → OUT_OF_SCOPE
 4. Objeto = aquisição de bens comuns?              não → OUT_OF_SCOPE
-5. R1 = exatamente ETP + TR, ambos utilizáveis?    não → OUT_OF_SCOPE
+5. Cadeia nova = ETP + TR + Edital + Contrato, utilizáveis e vinculados? não →
+   não publicar (registrar o elo faltante/inutilizável)
 6. Perfil registrado é o perfil exclusivo atual?  não → OUT_OF_SCOPE
 7. Todas sim?                                      sim → SUPPORTED
 ```
+
+Os processos históricos sem os dois últimos elos permanecem no corpus
+histórico; a etapa 5 é obrigatória apenas para novos aceites e para qualquer
+promoção de um processo histórico a completo.

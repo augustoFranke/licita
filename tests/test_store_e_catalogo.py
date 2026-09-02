@@ -173,6 +173,10 @@ class TestMontagemDeProcesso:
         ]
         registro = montar_processo(compra, None, documentos, [])
         assert registro["escopo_documental"]["um_documento_por_papel"] is True
+        # Os quatro IDs não bastam para provar a cadeia: falta o contrato
+        # explicitamente vinculado à mesma contratação.
+        assert registro["escopo_documental"]["cadeia_completa"] is False
+        assert estatisticas([registro], documentos)["processos_cadeia_completa"] == 0
 
     def test_valor_contratado_soma_os_contratos(self, compra):
         contratos = [

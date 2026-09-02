@@ -90,13 +90,25 @@
       "passou": true
     },
     {
-      "nome": "relações ETP→TR catalogadas",
+      "nome": "relações documentais catalogadas",
       "exigido": "27 processos",
       "obtido": "27 processos",
       "passou": true
     },
     {
+      "nome": "novas coletas com cadeia completa",
+      "exigido": "0",
+      "obtido": "0",
+      "passou": true
+    },
+    {
       "nome": "vínculos válidos dos contratos presentes",
+      "exigido": "0",
+      "obtido": "0",
+      "passou": true
+    },
+    {
+      "nome": "novas coletas com instrumento contratual vinculado",
       "exigido": "0",
       "obtido": "0",
       "passou": true

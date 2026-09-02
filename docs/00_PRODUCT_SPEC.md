@@ -2,7 +2,7 @@
 
 **Status:** Draft v0.1  
 **Escopo:** produto completo, cobrindo a fase preparatória até execução/fiscalização da contratação.  
-**Perfil inicial e exclusivo desta versão:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS` — ente municipal, Lei 14.133/2021, pregão eletrônico e aquisição de bens comuns.  
+**Perfil inicial e exclusivo desta versão:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS` — órgão ou entidade federal, estadual, distrital ou municipal, Lei 14.133/2021, pregão eletrônico e aquisição de bens comuns.
 **Princípio central:** a ferramenta não substitui decisão administrativa, jurídica ou técnica. Ela estrutura evidências, detecta inconsistências e reduz trabalho mecânico.
 
 Este arquivo, com `01`–`04` e o [README](README.md), é a fonte de verdade do produto. A ordem de construção é M0–M6 em `04_TRACEABILITY_MATRIX.md`. `scope.md` e `Plano.md` recortam a fatia atual; não redefinem o produto.
@@ -42,11 +42,11 @@ Um processo só é `SUPPORTED` quando satisfaz cumulativamente o perfil `PUBLICO
 - modalidade pregão, em forma eletrônica;
 - objeto de aquisição de bens comuns.
 
-Processos federais, estaduais ou distritais são `OUT_OF_SCOPE` e não podem alimentar engines, contagens, corpus de avaliação nem comparáveis públicos. PNCP e Compras.gov são canais de obtenção/publicação de dados; o canal, isoladamente, não define a esfera do processo nem o torna federal ou municipal.
+Processos com esfera ausente ou desconhecida são `OUT_OF_SCOPE` e não podem alimentar engines, contagens, corpus de avaliação nem comparáveis públicos. PNCP e Compras.gov são canais de obtenção/publicação de dados; o canal, isoladamente, não define a esfera do processo.
 
 IN SEGES/ME nº 81 e modelos da AGU são fontes `REFERENCE_ONLY` neste perfil: podem apoiar explicações e revisão humana, mas não determinar `SUPPORTED` nem originar finding normativo. Apenas regras `NORMATIVE` aplicáveis ao perfil ativo podem fazê-lo.
 
-Os contratos canônicos e o gate obrigatório de escopo são definidos em `01_REQUIREMENTS.md`. Outros perfis poderão ser incorporados em versões futuras, mas nenhum outro ente é aceito nesta versão.
+Os contratos canônicos e o gate obrigatório de escopo são definidos em `01_REQUIREMENTS.md`. Outros perfis poderão ser incorporados em versões futuras, mas nenhum regime, modalidade ou natureza fora deste perfil é aceito nesta versão.
 
 ---
 
@@ -222,14 +222,16 @@ todos             → 1,4%
 Identifica reutilização de especificações e evolução histórica.
 
 Deve:
-- localizar TRs/itens similares apenas entre processos municipais `SUPPORTED`;
+- localizar TRs/itens similares apenas entre processos `SUPPORTED` das esferas admitidas;
 - estimar similaridade;
 - reconstruir linhagem provável sem atravessar registros `OUT_OF_SCOPE`;
 - mostrar primeira ocorrência conhecida no universo suportado;
 - comparar disponibilidade de mercado ao longo do tempo;
 - detectar especificações possivelmente obsoletas.
 
-Processos federais, estaduais ou distritais nunca compõem a base histórica, os denominadores ou as contagens.
+Processos `SUPPORTED` de qualquer esfera admitida podem compor a base histórica,
+os denominadores e as contagens; registros `OUT_OF_SCOPE` nunca atravessam o
+gate.
 
 **Depende de:** F-03 + base histórica filtrada pelo escopo.  
 **Relaciona-se com:** F-07, F-09.
@@ -238,7 +240,7 @@ Processos federais, estaduais ou distritais nunca compõem a base histórica, os
 Pesquisa e estrutura preços comparáveis.
 
 Fontes podem incluir:
-- contratações públicas municipais semelhantes e `SUPPORTED`;
+- contratações públicas semelhantes e `SUPPORTED` nas esferas admitidas;
 - bases oficiais, após classificação do escopo de cada comparável;
 - fornecedores;
 - comércio eletrônico quando aplicável ao perfil normativo.
@@ -252,7 +254,7 @@ Deve:
 - produzir média, mediana e intervalo;
 - manter memória de cálculo e das exclusões de escopo.
 
-PNCP/Compras.gov podem fornecer dados, mas não qualificam a esfera: nenhum registro público entra como comparável sem validação municipal e dos demais critérios do perfil.
+PNCP/Compras.gov podem fornecer dados, mas não qualificam a esfera: nenhum registro público entra como comparável sem validação do perfil e dos demais critérios de escopo.
 
 **Depende de:** F-03.  
 **Relaciona-se com:** F-07, F-08.
@@ -346,7 +348,9 @@ Integrações com:
 - exportação PDF/DOCX/JSON;
 - API institucional.
 
-Todo registro importado por integração passa pelo FR-006 antes de indexação ou uso por engines. Registros federais, estaduais ou distritais podem ter a rejeição de escopo auditada, mas não alimentam corpus, contagens ou comparáveis públicos.
+Todo registro importado por integração passa pelo FR-006 antes de indexação ou
+uso por engines. Registros `OUT_OF_SCOPE` podem ter a rejeição de escopo
+auditada, mas não alimentam corpus, contagens ou comparáveis públicos.
 
 **Depende de:** maturidade das demais features e do gate de escopo.
 

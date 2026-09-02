@@ -1,22 +1,26 @@
-"""Enriquece o corpus com o CONTRATO de cada processo já coletado.
+"""Promove processos históricos adicionando o elo CONTRATO.
 
 O contrato é o único elo que não vem em ``arquivos_compra``: ele é assinado
-depois da licitação e vive sob outro recurso do PNCP. Não existe endpoint que
-devolva "os contratos desta compra" — o vínculo é o campo
-``numeroControlePncpCompra`` de cada contrato do feed. Foi verificado que
-``/orgaos/{cnpj}/compras/{ano}/{seq}/contratos`` devolve vazio, então a
-descoberta é necessariamente por varredura filtrada:
+depois da licitação e vive sob outro recurso do PNCP. A descoberta usa o
+endpoint oficial que lista diretamente os contratos e empenhos vinculados à
+contratação:
 
-    feed de contratos do órgão (cnpjOrgao)  ->  casa numeroControlePncpCompra
+    contratos/contratacao/{ano}/{sequencial}
     ->  arquivos do contrato  ->  baixa o instrumento (tipoDocumentoNome
         "Contrato"; aditivo, empenho e apostilamento ficam de fora)
 
 Consequências práticas, medidas:
 - nem toda compra gera contrato, e compras recentes ainda não o têm;
-- o feed é paginado em 500 e a API de consulta do PNCP oscila, então a
-  varredura é limitada por página e retomável — o progresso fica em
+- a API do PNCP oscila, então a consulta é limitada e retomável — o progresso fica em
   ``corpus/catalogo/contratos_encontrados.json`` e uma execução interrompida
   não perde o que já achou.
+
+Este utilitário é uma ferramenta de promoção/reparo de processos históricos;
+não é uma segunda estratégia de descoberta. A coleta de processos novos fica
+em ``licita_corpus.collect.coletar`` e começa sempre pelo feed de contratos,
+exigindo os quatro documentos da cadeia antes de publicar.
+Processos marcados como ``OUT_OF_SCOPE``/``FORA_DO_PERFIL`` são ignorados antes
+de qualquer consulta ou download de anexo.
 
 Uso:
     uv run python tools/fetch_contratos.py --all
@@ -28,23 +32,52 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
 from _corpus_sync import (
     CORPUS,
+    PROCESSOS,
     ROOT,
     carregar_catalogo,
     para_publico,
     publicar,
 )
-from licita_corpus.classify import CONTRATO, papel_documento_contrato
-from licita_corpus.collect import _registrar_documento
+from licita_corpus.classify import CONTRATO, normalizar, papel_documento_contrato
+from licita_corpus.collect import _normalizar_contrato, _registrar_documento
 from licita_corpus.catalog import documento_id, ocr_historico_utilizavel
-from licita_corpus.pncp import CONSULTA, Pncp, PncpError, partes_controle
+from licita_corpus.pncp import Pncp, PncpError
 from licita_corpus.store import baixar_documento
 
 PROGRESSO = CORPUS / "catalogo" / "contratos_encontrados.json"
+
+
+def _processos_promoviveis() -> set[str]:
+    """Retorna processos no perfil; falha de catálogo bloqueia downloads."""
+    if not PROCESSOS.exists():
+        return set()
+    try:
+        bruto = json.loads(PROCESSOS.read_text(encoding="utf-8"))
+    except (OSError, TypeError, ValueError, json.JSONDecodeError):
+        return set()
+    registros = bruto.get("processos", []) if isinstance(bruto, dict) else bruto
+    if not isinstance(registros, list):
+        return set()
+    promoviveis: set[str] = set()
+    for processo in registros:
+        if not isinstance(processo, dict) or not processo.get("processo_id"):
+            continue
+        status_escopo = str(processo.get("scope_status") or "").upper()
+        status_perfil = str(processo.get("perfil_status") or "").upper()
+        if status_escopo == "OUT_OF_SCOPE" or status_perfil in {
+            "OUT_OF_SCOPE",
+            "FORA_DO_PERFIL",
+            "UNSUPPORTED",
+        }:
+            continue
+        promoviveis.add(str(processo["processo_id"]))
+    return promoviveis
 
 
 def _carregar_progresso() -> dict[str, Any]:
@@ -63,42 +96,56 @@ def _salvar_progresso(dados: dict[str, Any]) -> None:
 def localizar_contrato(
     pncp: Pncp, numero_controle: str, *, max_paginas: int
 ) -> dict[str, Any] | None:
-    """Contrato cujo ``numeroControlePncpCompra`` é esta compra, ou ``None``.
-
-    A janela vai do ano da compra ao ano seguinte: o contrato é assinado depois
-    da licitação e pode atravessar o exercício.
-    """
-    cnpj, ano, _seq = partes_controle(numero_controle)
+    """Primeiro contrato vinculado à compra, excluindo empenhos."""
     for pagina in range(1, max_paginas + 1):
-        payload = pncp._http.json(
-            f"{CONSULTA}/contratos",
-            {
-                "dataInicial": f"{ano}0101",
-                "dataFinal": f"{ano + 1}1231",
-                "cnpjOrgao": cnpj,
-                "pagina": pagina,
-            },
-            sem_conteudo_ok=True,
-            ausente_ok=True,
+        contratos, total_paginas = pncp.pagina_contratos_da_compra(
+            numero_controle, pagina=pagina
         )
-        if not isinstance(payload, dict):
-            return None
-        dados = payload.get("data") or []
-        for contrato in dados:
-            if contrato.get("numeroControlePncpCompra") == numero_controle:
+        for contrato in contratos:
+            tipo = contrato.get("tipoContrato")
+            if isinstance(tipo, Mapping):
+                tipo_id = tipo.get("id")
+                tipo_nome = tipo.get("nome")
+            else:
+                tipo_id = contrato.get("tipoContratoId")
+                tipo_nome = tipo or contrato.get("tipoContratoNome")
+            if str(tipo_id) == "1" or normalizar(str(tipo_nome or "")) in {
+                "contrato",
+                "contrato termo inicial",
+                "contrato administrativo",
+                "termo de contrato",
+                "instrumento contratual",
+            }:
                 return contrato
-        if pagina >= int(payload.get("totalPaginas") or 1):
+        if pagina >= total_paginas:
             return None
     return None
 
 
 def baixar_instrumento(
-    pncp: Pncp, contrato: dict[str, Any], pid: str, numero_controle: str
+    pncp: Pncp,
+    contrato: dict[str, Any],
+    pid: str,
+    numero_controle: str,
+    *,
+    contrato_normalizado: Mapping[str, Any] | None = None,
 ) -> dict[str, Any] | None:
     """Baixa o instrumento contratual e devolve o registro no formato do estado."""
-    cnpj = (contrato.get("orgaoEntidade") or {}).get("cnpj")
-    ano = contrato.get("anoContrato")
-    seq = contrato.get("sequencialContrato")
+    # O feed atual traz ``orgaoEntidadeCnpj`` no nível superior e pode omitir
+    # ano/sequencial; o número de controle contém esses valores. Use sempre o
+    # contrato normalizado, que já validou o vínculo exato com a compra, em vez
+    # de depender do formato incidental da resposta crua.
+    normalizado = contrato_normalizado
+    if not isinstance(normalizado, Mapping):
+        try:
+            normalizado = _normalizar_contrato(
+                contrato, {"numero_controle_pncp": numero_controle}
+            )
+        except ValueError:
+            return None
+    cnpj = normalizado.get("cnpj_orgao")
+    ano = normalizado.get("ano_contrato")
+    seq = normalizado.get("sequencial_contrato")
     if not (cnpj and ano and seq):
         return None
 
@@ -108,7 +155,9 @@ def baixar_instrumento(
         if a.get("statusAtivo", True)
         and (a.get("url") or a.get("uri"))
         and papel_documento_contrato(
-            a.get("tipoDocumentoNome"), str(a.get("titulo") or "")
+            a.get("tipoDocumentoNome"),
+            str(a.get("titulo") or ""),
+            a.get("tipoDocumentoId"),
         ) == CONTRATO
     ]
     if not candidatos:
@@ -154,6 +203,7 @@ def baixar_instrumento(
 
 def enriquecer(pids: list[str], *, max_paginas: int) -> None:
     catalogo = carregar_catalogo()
+    promoviveis = _processos_promoviveis()
     controle: dict[str, str] = {}
     ja_tem: set[str] = set()
     for documento in catalogo:
@@ -163,12 +213,20 @@ def enriquecer(pids: list[str], *, max_paginas: int) -> None:
 
     progresso = _carregar_progresso()
     alvos = [p for p in pids if p in controle and p not in ja_tem]
+    fora_perfil = [
+        p for p in alvos
+        if p not in promoviveis
+    ]
+    for p in fora_perfil:
+        print(f"[ignorado] {p}: processo fora do perfil, sem download")
+    alvos = [p for p in alvos if p not in fora_perfil]
     for pid in pids:
         if pid in ja_tem:
             print(f"[ok-já-existe] {pid}: CONTRATO já no catálogo")
 
     novos: list[dict[str, Any]] = []
     para_estado: dict[str, dict[str, Any]] = {}
+    contratos_estado: dict[str, dict[str, Any]] = {}
     with Pncp(timeout=45.0, tentativas=3, intervalo=0.5) as pncp:
         for pid in alvos:
             numero = controle[pid]
@@ -186,6 +244,18 @@ def enriquecer(pids: list[str], *, max_paginas: int) -> None:
                 progresso[pid] = {"status": "sem_contrato"}
                 continue
 
+            try:
+                contrato_normalizado = _normalizar_contrato(
+                    contrato, {"numero_controle_pncp": numero}
+                )
+            except ValueError as erro:
+                print(f"[contrato-invalido] {pid}: {erro}")
+                progresso[pid] = {
+                    "status": "contrato_invalido",
+                    "motivo": str(erro),
+                }
+                continue
+
             progresso[pid] = {
                 "status": "encontrado",
                 "contrato": contrato.get("numeroControlePNCP"),
@@ -195,7 +265,13 @@ def enriquecer(pids: list[str], *, max_paginas: int) -> None:
             _salvar_progresso(progresso)
 
             try:
-                registro = baixar_instrumento(pncp, contrato, pid, numero)
+                registro = baixar_instrumento(
+                    pncp,
+                    contrato,
+                    pid,
+                    numero,
+                    contrato_normalizado=contrato_normalizado,
+                )
             except PncpError as erro:
                 print(f"[falha-download] {pid}: {str(erro)[:90]}")
                 continue
@@ -207,13 +283,14 @@ def enriquecer(pids: list[str], *, max_paginas: int) -> None:
             publico = para_publico(registro)
             novos.append(publico)
             para_estado[pid] = registro
+            contratos_estado[pid] = contrato_normalizado
             print(
                 f"[contrato+] {pid}: {publico['arquivo']} "
                 f"({publico['bytes']} bytes, {registro['verificacao'].get('caracteres')} chars)"
             )
 
     _salvar_progresso(progresso)
-    publicar(novos, para_estado)
+    publicar(novos, para_estado, contratos_por_processo=contratos_estado)
 
 
 def main() -> None:
@@ -224,7 +301,7 @@ def main() -> None:
         "--max-paginas",
         type=int,
         default=4,
-        help="páginas do feed varridas por processo (500 contratos cada)",
+        help="compatibilidade; o endpoint oficial de contratos vinculados não é paginado",
     )
     args = ap.parse_args()
 

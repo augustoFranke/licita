@@ -8,7 +8,7 @@ Cada história referencia as features (`F-*`) e requisitos (`FR-*`) corresponden
 
 ## Premissas transversais de aceite
 
-- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
+- O perfil único atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: órgão ou entidade federal, estadual, distrital ou municipal, Lei 14.133/2021, **Pregão Eletrônico** (`PE`, nunca Pernambuco) e aquisição de bens comuns.
 - FR-006 é porta obrigatória: somente workspace `SUPPORTED` pode alimentar o corpus aprovado, denominadores, comparáveis e engines F-03–F-14. Material `OUT_OF_SCOPE` pode permanecer em trilha de rejeição/auditoria, mas não participa dessas entradas, contagens ou conclusões.
 - Toda história que consulta, lista ou analisa dados aplica e exibe os filtros de esfera, perfil e estado de escopo. Toda exportação registra perfil ativo, filtros, versões e exclusões; não promove material fora do perfil a evidência aprovada.
 - O arquivo original é imutável e possui hash obrigatório calculado sobre seus bytes. OCR é apenas derivado auditável, vinculado ao original e identificado por motor, idioma, confiança e hash ou versão do resultado; nunca altera o original.
@@ -21,7 +21,7 @@ Cada história referencia as features (`F-*`) e requisitos (`FR-*`) corresponden
 ## Epic E-01 — Criar e entender a contratação
 
 ### US-001 — Abrir contratação
-**Como** P-02 Planejamento  
+**Como** P-02 Planejamento
 **quero** criar um workspace para uma nova contratação  
 **para** manter documentos, requisitos, decisões e análises em um único local.
 
@@ -62,10 +62,10 @@ Cada história referencia as features (`F-*`) e requisitos (`FR-*`) corresponden
 - o usuário pode confirmar, editar ou rejeitar, mantendo valor original, responsável e timestamp;
 - nenhum valor sem evidência pode tornar-se `CONFIRMED` ou alimentar engine downstream.
 
-### US-004 — Validar escopo municipal
-**Como** P-02 Planejamento municipal  
+### US-004 — Validar escopo da contratação
+**Como** P-02 Planejamento
 **quero** validar o perfil da contratação antes do processamento  
-**para** impedir que material fora do recorte contamine análises e métricas.
+**para** impedir que material fora do perfil contamine análises e métricas.
 
 **Features:** F-01  
 **Reqs:** FR-006

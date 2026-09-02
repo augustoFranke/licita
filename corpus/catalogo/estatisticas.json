@@ -1,4 +1,8 @@
 {
+  "snapshot": true,
+  "snapshot_data": "2026-09-01",
+  "snapshot_observacao": "Snapshot do catálogo histórico preservado; não é resultado de uma nova coleta v6. Tarefas legadas permanecem no estado, mas não entram nas métricas da fila pncp-contratos.",
+  "policy_version_nova_coleta": "6-cadeia-completa-todas-esferas",
   "processos": 28,
   "processos_elegiveis": 27,
   "processos_out_of_scope": 1,
@@ -9,20 +13,21 @@
   "esferas": {
     "M": 28
   },
-  "documentos": 56,
+  "documentos": 78,
   "documentos_por_papel": {
     "ETP": 28,
-    "TR": 28
+    "TR": 28,
+    "EDITAL": 22
   },
   "processos_com_tr": 28,
   "processos_com_etp": 28,
-  "processos_com_edital": 0,
+  "processos_com_edital": 22,
   "processos_com_contrato": 0,
   "processos_com_par_etp_tr": 28,
   "processos_elegiveis_com_par_etp_tr": 27,
   "processos_cadeia_completa": 0,
-  "documentos_abertos": 56,
-  "documentos_com_texto": 56,
+  "documentos_abertos": 78,
+  "documentos_com_texto": 78,
   "documentos_precisam_ocr": 0,
   "categorias": {
     "material_medico_hospitalar": 2,
@@ -47,66 +52,37 @@
     "epi_uniformes_e_textil": 1,
     "material_agropecuario_e_jardinagem": 1
   },
-  "estrategia": "compras_gov_para_descoberta_pncp_para_documentos",
-  "alvo_processos": 27,
-  "fonte_preferencial": "compras",
+  "estrategia": "pncp_contratos_para_cadeia_completa",
+  "alvo_processos": null,
+  "fonte_preferencial": "pncp-contratos",
   "policy_version": "4-municipal-historical-ocr",
-  "requisicoes_hoje_utc": 6161,
-  "limite_requisicoes_dia_utc": 1000000,
-  "margem_requisicoes": 0,
-  "editais_baixados": 0,
+  "requisicoes_hoje_utc": null,
+  "limite_requisicoes_dia_utc": null,
+  "margem_requisicoes": null,
+  "editais_baixados": 22,
   "contratos_consultados": 0,
   "marcas_de_reuso": {
     "arquivo_identico:entre_processos": 4,
     "reuso_parcial:entre_processos": 4,
     "reuso_parcial:intra_processos": 2
   },
-  "tarefas_paginacao": 407,
-  "paginas_concluidas": 271,
-  "paginas_pendentes": 130,
-  "paginas_retry": 6,
-  "erros_paginas": [
-    {
-      "fonte": "pncp-busca",
-      "pagina": 6,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 6, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    },
-    {
-      "fonte": "pncp-busca",
-      "pagina": 7,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 7, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    },
-    {
-      "fonte": "pncp-busca",
-      "pagina": 9,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 9, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    },
-    {
-      "fonte": "pncp-busca",
-      "pagina": 10,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 10, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    },
-    {
-      "fonte": "pncp-busca",
-      "pagina": 14,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 14, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    },
-    {
-      "fonte": "pncp-busca",
-      "pagina": 18,
-      "erro": "falha definitiva em https://pncp.gov.br/api/search/ ({'q': 'ETP aquisição 2024', 'tipos_documento': 'edital', 'pagina': 18, 'tam_pagina': 50}): [Errno 104] Connection reset by peer",
-      "tentativas": 1
-    }
-  ],
-  "cobertura_incompleta": true,
-  "cobertura_paginas_incompleta": true,
+  "tarefas_paginacao": 0,
+  "paginas_concluidas": 0,
+  "paginas_pendentes": 0,
+  "paginas_retry": 0,
+  "erros_paginas": [],
+  "cobertura_incompleta": null,
+  "cobertura_paginas_incompleta": null,
+  "tarefas_historicas_preservadas": 417,
+  "fontes_tarefas_historicas": {
+    "compras-gov": 90,
+    "pncp-busca": 317,
+    "pncp-feed": 10
+  },
+  "contratos_consultados_nesta_execucao": 0,
+  "cadeias_identificadas_nesta_execucao": 0,
   "compras_inspecionadas_nesta_execucao": 0,
-  "pares_publicados_nesta_execucao": 0,
+  "registros_invalidos_nesta_execucao": 0,
   "registros_invalidos_ano_nesta_execucao": 0,
   "aceitos_migrados_sem_download": 0,
   "tentativas_documentais_por_orgao": {

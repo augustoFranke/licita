@@ -1,4 +1,4 @@
-"""Estado persistente e pequeno da coleta de pares ETP→TR.
+"""Estado persistente e pequeno da coleta de cadeias documentais.
 
 O estado não é o corpus: ele só permite retomar uma coleta interrompida sem
 repetir páginas, inspeções de arquivos ou consumir novamente o orçamento de
@@ -31,6 +31,9 @@ class LimiteRequisicoes(RuntimeError):
 # Identificador da política usada para decidir se uma inspeção pode ser
 # reaproveitada.  É texto de propósito: além de ``1`` permite versões como
 # ``"2025-01"`` sem alterar o schema.
+# Policy default permanece o identificador histórico para que bancos e
+# artefatos R4 antigos continuem reprodutíveis. O coletor novo informa
+# explicitamente sua policy de cadeia completa.
 POLICY_VERSION = "4-municipal-historical-ocr"
 DEFAULT_POLICY_VERSION = POLICY_VERSION
 
@@ -2225,8 +2228,9 @@ class EstadoColeta:
     ) -> list[dict[str, str]]:
         versao = self.policy_version if policy_version is _MISSING else policy_version
         sql = """SELECT numero_controle_pncp, motivo FROM inspecoes
-                  WHERE status IN ('SEM_PAR_ETP_TR', 'DOWNLOAD_REPROVADO',
-                                   'FORA_DO_ESCOPO', 'LIMITE_ORGAO', 'ERRO_API')"""
+                  WHERE status IN ('SEM_PAR_ETP_TR', 'SEM_CADEIA_COMPLETA',
+                                   'DOWNLOAD_REPROVADO', 'FORA_DO_ESCOPO',
+                                   'LIMITE_ORGAO', 'ERRO_API')"""
         parametros: list[Any] = []
         if versao is not None:
             sql += " AND policy_version = ?"

@@ -6,7 +6,7 @@ import pymupdf
 import pytest
 
 from licita_corpus.catalog import escrever_json, escrever_jsonl, montar_processo, montar_relacoes
-from licita_corpus.gate import conferir
+from licita_corpus.gate import _eh_cadeia_nova, conferir
 
 
 def _pdf(caminho, texto):
@@ -220,6 +220,24 @@ def test_vinculo_contrato_divergente_reprova(corpus):
         if c["nome"] == "vínculos válidos dos contratos presentes"
     )
     assert criterio["passou"] is False
+
+
+def test_quatro_papeis_sem_vinculo_exato_continuam_historicos():
+    processo = {
+        "numero_controle_pncp": "12345678000199-1-000001/2025",
+        "cadeia": {
+            "ETP": ["etp"],
+            "TR": ["tr"],
+            "EDITAL": ["edital"],
+            "CONTRATO": ["contrato"],
+        },
+        "escopo_documental": {"cadeia_completa": True},
+        "contratos": [],
+    }
+
+    # A presença de quatro IDs (inclusive um escopo marcado por catálogo
+    # antigo) não cria uma cadeia nova sem o vínculo contrato→compra.
+    assert _eh_cadeia_nova(processo) is False
 
 
 def test_documento_duplicado_no_mesmo_papel_reprova(corpus):

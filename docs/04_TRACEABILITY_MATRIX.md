@@ -11,7 +11,7 @@ Este arquivo é a referência para verificar se uma feature possui:
 
 O único perfil atual é `PUBLICO_14133_PREGAO_ELETRONICO_BENS`: qualquer esfera (`F`/`E`/`D`/`M`), Lei 14.133/2021, **Pregão Eletrônico** (`PE`, não Pernambuco) e aquisição de bens comuns. FR-006 antecede F-02–F-15: somente `SUPPORTED` entra em corpus aprovado, denominadores, comparáveis ou engines; `OUT_OF_SCOPE` pode ser retido apenas em trilha segregada de rejeição/auditoria.
 
-Originais são imutáveis e têm hash obrigatório sobre seus bytes. OCR é derivado auditável, com motor, idioma, confiança e hash ou versão do resultado. Toda análise usa documentos ativos/utilizáveis e dados confirmados, expõe evidência e filtros municipais e termina em decisão humana. Exportações preservam perfil, filtros, exclusões, hashes e versões.
+Originais são imutáveis e têm hash obrigatório sobre seus bytes. OCR é derivado auditável, com motor, idioma, confiança e hash ou versão do resultado. Toda análise usa documentos ativos/utilizáveis e dados confirmados, expõe evidência e filtros de esfera/perfil e termina em decisão humana. Exportações preservam perfil, filtros, exclusões, hashes e versões.
 
 A base normativa vinculante deste perfil é a Lei 14.133/2021. IN SEGES/ME nº 81 e modelos AGU/TR Digital são `REFERENCE_ONLY`; não determinam escopo nem sustentam isoladamente finding normativo. A plataforma não certifica legalidade.
 
@@ -48,7 +48,7 @@ Assistência automática à redação de cláusulas **não** está em `00`–`04
 
 Milestone indica ordem e alvo, não disponibilidade automática. Uma feature ou ação de UI ainda não aceita pelo DoD permanece indisponível e não pode exibir dado sintético como resultado real.
 
-## R1-M-GATE — Corpus municipal mínimo
+## R1-M-GATE — Corpus multiesfera mínimo
 
 Este gate fecha o corpus aprovado de R1 somente quando **todos** os critérios forem atendidos em conjunto:
 
@@ -56,11 +56,11 @@ Este gate fecha o corpus aprovado de R1 somente quando **todos** os critérios f
 - pelo menos **5 CNPJs distintos** de órgãos/entidades entre os processos elegíveis;
 - pelo menos **3 categorias** entre os processos elegíveis;
 - no máximo **5 processos elegíveis por CNPJ**;
-- exatamente **1 ETP e 1 TR ativos/utilizáveis por processo**, com relação ETP → TR verificável;
+- em cada nova coleta, exatamente **1 ETP, 1 TR, 1 Edital e 1 instrumento contratual ativos/utilizáveis**, com as relações consecutivas verificáveis; processos históricos apenas com ETP/TR permanecem preservados;
 - hash conferido para cada arquivo original; quando houver OCR, derivado auditável com motor, idioma, confiança e hash ou versão do resultado, sem alteração do original;
 - filtros de perfil aplicados antes da contagem. Registros fora do perfil podem constar na trilha de rejeição/auditoria, mas não contam nos 15 elegíveis, nos denominadores nem como entrada de analisadores.
 
-O teto por CNPJ e a diversidade mínima de CNPJs/categorias são controles de composição do **corpus R1**, não limites do produto em uso. Um workspace municipal suportado não é rejeitado por o produto já possuir mais processos do mesmo CNPJ ou por pertencer a categoria já existente.
+O teto por CNPJ e a diversidade mínima de CNPJs/categorias são controles de composição do **corpus R1**, não limites do produto em uso. Um workspace suportado não é rejeitado por o produto já possuir mais processos do mesmo CNPJ ou por pertencer a categoria já existente.
 
 ## Milestone M0 — Fundação
 - F-01
@@ -113,7 +113,7 @@ Uma feature só é considerada concluída quando:
 
 - possui schema de entrada e saída;
 - possui testes, inclusive bloqueio de `OUT_OF_SCOPE` e segregação de denominadores;
-- valida FR-006 antes de processamento de domínio e demonstra o perfil municipal ativo;
+- valida FR-006 antes de processamento de domínio e demonstra o perfil e a esfera ativos;
 - opera somente sobre documentos ativos/utilizáveis e dados confirmados quando aplicável;
 - preserva o original e seu hash; OCR, quando usado, é derivado versionado/auditável com motor, idioma e confiança;
 - possui evidência navegável quando produz valor, comparação, finding ou conclusão;
@@ -121,7 +121,7 @@ Uma feature só é considerada concluída quando:
 - possui versão;
 - aparece em pelo menos uma história de usuário;
 - aparece em pelo menos um fluxo com ator responsável e decisão humana;
-- consultas e contagens exibem filtros municipais e exclusões; exports carregam perfil, filtros, hashes e versões;
+- consultas e contagens exibem filtros de esfera/perfil e exclusões; exports carregam perfil, filtros, hashes e versões;
 - distingue regra `NORMATIVE` aplicável da fonte `REFERENCE_ONLY`, sem alegar certificação legal;
 - possui telemetria mínima;
 - pode ser demonstrada usando um processo real `SUPPORTED`;

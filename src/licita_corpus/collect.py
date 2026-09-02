@@ -260,12 +260,12 @@ def _campo(dados: Mapping[str, Any], *chaves: str) -> Any:
 
 
 def normalizar_compra(dados: dict[str, Any], origem: str) -> dict[str, Any]:
-    """Converte os formatos das APIs em metadado comum e valida o ano.
+    """Converte os formatos das APIs em metadado comum e valida a identidade.
 
-    O ano no número ``.../AAAA`` é a identidade da contratação. Se a API
-    também enviar ano da compra ou data de publicação, ambos precisam ser
-    compatíveis com essa identidade; um registro inconsistente não é aceito
-    silenciosamente.
+    O ano no número ``.../AAAA`` identifica o ano da contratação e deve ser
+    compatível com ``anoCompra``. A publicação pode ocorrer em ano posterior,
+    portanto ``dataPublicacaoPncp`` precisa ser uma data válida, mas seu ano
+    não faz parte dessa invariável.
     """
     numero_bruto = _campo(dados, "numeroControlePNCP", "numero_controle_pncp")
     if not numero_bruto:
@@ -361,11 +361,6 @@ def normalizar_compra(dados: dict[str, Any], origem: str) -> dict[str, Any]:
         publicada = _data_iso_estrita(data_publicacao)
         if publicada is None:
             raise ValueError(f"data de publicação inválida para {numero!r}")
-        if publicada.year != ano_por_numero:
-            raise ValueError(
-                f"ano da publicação ({publicada.year}) diverge do número PNCP "
-                f"({ano_por_numero})"
-            )
 
     return {
         "numero_controle_pncp": numero,

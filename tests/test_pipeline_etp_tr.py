@@ -252,15 +252,20 @@ def test_query_historica_coloca_ano_no_q_e_prioriza_anos():
     )
 
 
-def test_normalizacao_rejeita_ano_do_numero_ou_publicacao_inconsistente():
+def test_normalizacao_valida_ano_da_compra_e_aceita_publicacao_posterior():
     compra = compra_flat()
     compra["anoCompraPncp"] = 2024
     with pytest.raises(ValueError, match="ano"):
         normalizar_compra(compra, "feed")
 
     compra = compra_flat()
-    compra["dataPublicacaoPncp"] = "2024-12-31T00:00:00"
-    with pytest.raises(ValueError, match="publicação"):
+    compra["dataPublicacaoPncp"] = "2026-03-17T16:01:52"
+    normalizada = normalizar_compra(compra, "feed")
+    assert normalizada["ano_compra"] == 2025
+    assert normalizada["data_publicacao_pncp"] == "2026-03-17T16:01:52"
+
+    compra["dataPublicacaoPncp"] = "data-inválida"
+    with pytest.raises(ValueError, match="data de publicação inválida"):
         normalizar_compra(compra, "feed")
 
 

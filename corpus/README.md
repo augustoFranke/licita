@@ -18,9 +18,10 @@ Registros fora do perfil continuam auditáveis, mas não entram nos denominadore
 de processos, CNPJs ou categorias.
 
 `catalogo/estatisticas.json` é um snapshot do catálogo histórico preservado,
-não uma execução nova da policy `6-cadeia-completa-todas-esferas`. Ele explicita
-essa condição e separa as tarefas legadas da fila `pncp-contratos`; a próxima
-coleta substituirá os campos operacionais por medições da execução.
+não uma execução nova da policy
+`8-cadeia-completa-documentos-utilizaveis`. Ele explicita essa condição e
+separa as tarefas legadas da fila `pncp-contratos`; a próxima coleta substituirá
+os campos operacionais por medições da execução.
 
 ## Gate, schema e diversidade
 
@@ -73,7 +74,7 @@ SHA-256 do original + idioma + versão/configuração do OCR
 A saída é artefato derivado auditável e deve registrar vínculo com o original,
 idioma, ferramenta, versão/configuração, hash próprio e data. Ela nunca
 substitui o arquivo original. A policy vigente da coleta é
-`6-cadeia-completa-todas-esferas`. Aceites históricos preservam suas versões
+`8-cadeia-completa-documentos-utilizaveis`. Aceites históricos preservam suas versões
 anteriores em `collection_policy_version` e `policy_version`.
 
 ## Limites e retomada
@@ -83,7 +84,8 @@ anteriores em `collection_policy_version` e `policy_version`.
 - Para cada contratação elegível, a lista de anexos da contratação e a lista de
   anexos do contrato são consultadas uma única vez (cacheadas no estado).
 - Intervalo mínimo 0,75 s; respeita `Retry-After`; retry em timeout, 429 e 5xx.
-- Orçamento local: 900 chamadas por dia UTC (`--max-requisicoes-dia`).
+- Sem teto diário local por padrão (`--max-requisicoes-dia 0`); o intervalo,
+  `Retry-After` e os retries controlam a pressão sobre o PNCP.
 - Estado em `corpus/estado/etp_tr.sqlite3`; falha de API não vira lista vazia.
 - Cada arquivo é gravado com lock, temporário e `replace` atômico. O processo e
   o catálogo só são publicados depois da verificação dos quatro documentos.

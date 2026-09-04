@@ -31,6 +31,7 @@ exclusivo. `scope.md` e `Plano.md` fixam o que a fatia M0–M1 já executa.
 | [`04_TRACEABILITY_MATRIX.md`](04_TRACEABILITY_MATRIX.md) | Feature → FR → US → fluxo; ordem M0–M6 |
 | [`scope.md`](scope.md) | Perfil exclusivo e decisão `SUPPORTED` / `OUT_OF_SCOPE` |
 | [`Plano.md`](Plano.md) | R0–R10 com porta de fase (entrada / saída / fora) |
+| [`TODO.md`](TODO.md) | Pendências verificadas após o fechamento da R1 |
 | [`rules_draft.md`](rules_draft.md) | Catálogo determinístico F-05 (M1) |
 | [`../schemas/procurement_process.v0.1.0.json`](../schemas/procurement_process.v0.1.0.json) | Payload documental fechado |
 | [`../schemas/corpus_process.v0.1.0.json`](../schemas/corpus_process.v0.1.0.json) | Manifesto externo de perfil e escopo |

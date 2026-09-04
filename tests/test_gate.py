@@ -6,7 +6,7 @@ import pymupdf
 import pytest
 
 from licita_corpus.catalog import escrever_json, escrever_jsonl, montar_processo, montar_relacoes
-from licita_corpus.gate import _eh_cadeia_nova, conferir
+from licita_corpus.gate import _eh_cadeia_nova, como_markdown, conferir
 
 
 def _pdf(caminho, texto):
@@ -238,6 +238,43 @@ def test_quatro_papeis_sem_vinculo_exato_continuam_historicos():
     # A presença de quatro IDs (inclusive um escopo marcado por catálogo
     # antigo) não cria uma cadeia nova sem o vínculo contrato→compra.
     assert _eh_cadeia_nova(processo) is False
+
+
+def test_policy_historica_com_quatro_ids_nao_e_coleta_nova():
+    processo = {
+        "numero_controle_pncp": "12345678000199-1-000001/2025",
+        "collection_policy_version": "6-cadeia-completa-todas-esferas",
+        "cadeia": {
+            "ETP": ["etp"],
+            "TR": ["tr"],
+            "EDITAL": ["edital"],
+            "CONTRATO": ["contrato"],
+        },
+        "escopo_documental": {"cadeia_completa": True},
+        "contratos": [
+            {
+                "numero_controle_pncp_compra": "12345678000199-1-000001/2025",
+                "criterio_vinculo": "numeroControlePncpCompra",
+            }
+        ],
+    }
+
+    assert _eh_cadeia_nova(processo) is False
+
+
+def test_relatorio_nao_rotula_historico_elegivel_como_fora_do_escopo(corpus):
+    caminho = corpus / "catalogo" / "processos.json"
+    processos = json.loads(caminho.read_text(encoding="utf-8"))
+    processos[0]["collection_policy_version"] = (
+        "8-cadeia-completa-documentos-utilizaveis"
+    )
+    caminho.write_text(json.dumps(processos, ensure_ascii=False), encoding="utf-8")
+    resultado = conferir(corpus)
+
+    markdown = como_markdown(corpus, resultado)
+
+    assert "| HISTÓRICO |" in markdown
+    assert "| REPROVADO |" in markdown
 
 
 def test_documento_duplicado_no_mesmo_papel_reprova(corpus):

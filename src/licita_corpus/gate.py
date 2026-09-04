@@ -28,25 +28,17 @@ from .verify import sha256_arquivo, verificar
 
 #: Fonte única das esferas do perfil (ver ``classify.ESFERAS_SUPORTADAS``).
 ESFERAS_PERMITIDAS = ESFERAS_SUPORTADAS
-POLICY_CADEIA_COMPLETA = "6-cadeia-completa-todas-esferas"
+POLICY_CADEIA_COMPLETA = "8-cadeia-completa-documentos-utilizaveis"
 
 
 def _eh_cadeia_nova(processo: Mapping[str, Any]) -> bool:
     """Identifica a regra documental aplicada ao manifesto.
 
-    A versão é o marcador principal. O campo ``escopo_documental`` permite
-    reconhecer uma cadeia publicada com uma versão de policy customizada, sem
-    reclassificar como histórico um processo que já traz os quatro elos.
+    Apenas a versão vigente prova que o aceite percorreu o fluxo atual de
+    quatro documentos. Metadados antigos podem mencionar os quatro papéis,
+    mas continuam históricos até serem promovidos pela policy vigente.
     """
-    if processo.get("collection_policy_version") == POLICY_CADEIA_COMPLETA:
-        return True
-    escopo = processo.get("escopo_documental")
-    if isinstance(escopo, Mapping) and escopo.get("cadeia_completa") is True:
-        return _contrato_vincula_processo(processo)
-    cadeia = processo.get("cadeia")
-    return isinstance(cadeia, Mapping) and all(
-        len(cadeia.get(papel) or []) == 1 for papel in PAPEIS_CADEIA_COMPLETA
-    ) and _contrato_vincula_processo(processo)
+    return processo.get("collection_policy_version") == POLICY_CADEIA_COMPLETA
 
 
 @dataclass(slots=True)
@@ -174,6 +166,18 @@ def conferir(
             (str(aresta.get("de") or ""), str(aresta.get("para") or ""))
         )
 
+    # Um catálogo pode preservar processos históricos de ETP/TR que não foram
+    # recolhidos sob a regra vigente. Quando o lote novo existe, R1 prova esse
+    # lote — os históricos seguem auditáveis, mas não podem reprová-lo nem
+    # elevar suas contagens.
+    processos_novos_catalogados = [
+        processo for processo in processos if _eh_cadeia_nova(processo)
+    ]
+    avaliar_somente_novos = bool(processos_novos_catalogados)
+    processos_do_lote = (
+        processos_novos_catalogados if avaliar_somente_novos else processos
+    )
+
     elegiveis: list[dict[str, Any]] = []
     perfis_supported: list[dict[str, Any]] = []
     supported_com_par_exato = 0
@@ -185,6 +189,8 @@ def conferir(
     documentos_validos_supported = 0
     processos_sem_relacoes: set[str] = set()
     for processo in processos:
+        if avaliar_somente_novos and not _eh_cadeia_nova(processo):
+            continue
         pid = str(processo.get("processo_id") or "")
         compra = processo.get("compra") or {}
         perfil = _perfil_atual(processo)  # nunca confie no valor persistido
@@ -328,7 +334,7 @@ def conferir(
     esferas_obtidas = {
         str((p.get("orgao") or {}).get("esfera") or "").strip().upper()
         or "AUSENTE"
-        for p in processos
+        for p in processos_do_lote
     }
     esfera_ok = bool(processos) and esferas_obtidas <= permitidas
 
@@ -337,7 +343,7 @@ def conferir(
         for processo in elegiveis
         for documento in por_processo.get(str(processo.get("processo_id") or ""), [])
     ]
-    contratos_no_catalogo = [p for p in processos if p.get("contratos")]
+    contratos_no_catalogo = [p for p in processos_do_lote if p.get("contratos")]
     contratos_validos = []
     for processo in contratos_no_catalogo:
         contratos = processo.get("contratos") or []
@@ -559,13 +565,27 @@ def como_markdown(raiz: Path, resultado: dict[str, Any]) -> str:
         sorted(processos, key=lambda p: p["processo_id"]), start=1
     ):
         cadeia = processo["cadeia"]
+        compra = processo.get("compra") or {}
+        perfil_atual = _perfil_atual(processo)
+        filtro_codigos = (
+            _int(compra.get("instrumento_convocatorio_codigo")) == 1
+            and _int(compra.get("amparo_legal_codigo")) == 1
+        )
+        if processo.get("processo_id") in elegiveis_ids:
+            escopo = "SUPPORTED"
+        elif _eh_cadeia_nova(processo):
+            escopo = "REPROVADO"
+        elif perfil_atual == PERFIL_SUPPORTED and filtro_codigos:
+            escopo = "HISTÓRICO"
+        else:
+            escopo = "OUT_OF_SCOPE"
         linhas.append(
             f"| {posicao} | [{processo['numero_controle_pncp']}]"
             f"({processo['fontes']['portal_pncp']}) | "
             f"{processo['orgao'].get('razao_social') or '—'} | "
             f"{processo['orgao'].get('uf') or '—'} | "
             f"{processo.get('categoria_objeto') or '—'} | "
-            f"{'SUPPORTED' if processo.get('processo_id') in elegiveis_ids else 'OUT_OF_SCOPE'} | "
+            f"{escopo} | "
             f"{len(cadeia.get('ETP') or [])} | {len(cadeia.get('TR') or [])} | "
             f"{len(cadeia.get('EDITAL') or [])} | {len(cadeia.get('CONTRATO') or [])} |"
         )

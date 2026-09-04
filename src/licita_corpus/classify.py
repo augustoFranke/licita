@@ -111,11 +111,17 @@ def papel_documento(tipo_id: int | str | None, titulo: str) -> str:
         codigo = None if tipo_id is None else int(tipo_id)
     except (TypeError, ValueError):
         codigo = None
+    alvo = normalizar(titulo)
+    # Alguns publicadores registram extratos e comprovantes com o mesmo tipo
+    # oficial do documento principal. O tipo continua prevalecendo sobre um
+    # título apenas divergente, mas não sobre um título explicitamente
+    # acessório: esses arquivos não podem satisfazer um elo material.
+    if codigo in TIPO_PNCP_PARA_PAPEL and _TITULO_NEGATIVO.search(alvo):
+        return OUTROS
     if codigo in TIPO_PNCP_PARA_PAPEL:
         return TIPO_PNCP_PARA_PAPEL[codigo]
     if codigo not in (None, 16):
         return OUTROS
-    alvo = normalizar(titulo)
     if _TITULO_NEGATIVO.search(alvo):
         return OUTROS
     for papel, padrao in _REGRAS_TITULO:

@@ -22,6 +22,14 @@ class TestPapelDocumento:
     def test_tipo_do_pncp_prevalece_sobre_o_titulo(self):
         assert papel_documento(2, "Termo de Referência anexo") == EDITAL
 
+    def test_tipo_oficial_nao_transforma_publicacao_em_documento_principal(self):
+        for titulo in (
+            "Publicação PNCP",
+            "Extrato do Edital",
+            "Comprovante de publicação",
+        ):
+            assert papel_documento(2, titulo) == OUTROS
+
     def test_tipos_conhecidos(self):
         assert papel_documento(4, "qualquer") == TR
         assert papel_documento(7, "qualquer") == ETP

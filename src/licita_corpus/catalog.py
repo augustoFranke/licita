@@ -321,10 +321,47 @@ def _contar(processos: Sequence[dict[str, Any]], papel: str) -> int:
     return sum(1 for p in processos if p.get("cadeia", {}).get(papel))
 
 
+def _cadeia_completa_catalogada(
+    processo: Mapping[str, Any],
+    documentos_por_processo: Mapping[
+        str, Sequence[Mapping[str, Any]]
+    ],
+) -> bool:
+    """Conta cadeia completa somente quando o manifesto existe no catálogo.
+
+    Metadados históricos podem declarar quatro IDs depois que os arquivos foram
+    descartados em uma revalidação. Eles continuam preservados para auditoria,
+    mas não podem inflar a estatística positiva do corpus.
+    """
+    cadeia = processo.get("cadeia") or {}
+    if not all(len(cadeia.get(papel) or []) == 1 for papel in PAPEIS_CADEIA_COMPLETA):
+        return False
+    if not _contrato_vincula_processo(processo):
+        return False
+    esperados = {
+        str((cadeia.get(papel) or [""])[0]) for papel in PAPEIS_CADEIA_COMPLETA
+    }
+    registros = documentos_por_processo.get(str(processo.get("processo_id") or ""), ())
+    registrados = {str(documento.get("documento_id") or "") for documento in registros}
+    if registrados != esperados or len(registros) != len(PAPEIS_CADEIA_COMPLETA):
+        return False
+    return all(
+        bool((documento.get("verificacao") or {}).get("abriu"))
+        and int((documento.get("verificacao") or {}).get("caracteres") or 0) > 0
+        and not bool((documento.get("verificacao") or {}).get("precisa_ocr"))
+        for documento in registros
+    )
+
+
 def estatisticas(
     processos: Sequence[dict[str, Any]], documentos: Sequence[dict[str, Any]]
 ) -> dict[str, Any]:
     por_papel = Counter(d.get("papel") for d in documentos)
+    documentos_por_processo: dict[str, list[dict[str, Any]]] = {}
+    for documento in documentos:
+        documentos_por_processo.setdefault(
+            str(documento.get("processo_id") or ""), []
+        ).append(documento)
     elegiveis = []
     for processo in processos:
         scope_status = processo.get("scope_status")
@@ -375,8 +412,7 @@ def estatisticas(
         "processos_cadeia_completa": sum(
             1
             for p in processos
-            if all(p.get("cadeia", {}).get(papel) for papel in PAPEIS_CADEIA_COMPLETA)
-            and _contrato_vincula_processo(p)
+            if _cadeia_completa_catalogada(p, documentos_por_processo)
         ),
         "documentos_abertos": sum(
             1 for d in documentos if d.get("verificacao", {}).get("abriu")

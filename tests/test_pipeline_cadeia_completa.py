@@ -215,6 +215,52 @@ def test_coleta_nova_consulta_feed_e_anexos_uma_vez_e_publica_quatro(
     assert processo["contratos"][0]["numero_controle_pncp_compra"] == COMPRA
 
 
+def test_publicacao_tipificada_como_edital_nao_substitui_o_edital_real(
+    monkeypatch, tmp_path
+):
+    publicacao = _anexo(9, "Publicação PNCP", 2, "PUBLICACAO") | {
+        "dataPublicacaoPncp": "2025-12-10T00:00:00"
+    }
+
+    class ComPublicacao(FakePncp):
+        arquivos_compra_resposta = [*_arquivos_compra(), publicacao]
+
+    urls: list[str] = []
+    conteudo = _pdf_bytes("conteúdo documental suficiente para a cadeia completa")
+
+    def baixar(_pncp, url, destino, papel, sequencial, titulo):
+        urls.append(url)
+        destino.mkdir(parents=True, exist_ok=True)
+        caminho = destino / f"{papel.lower()}-{sequencial or 0}.pdf"
+        caminho.write_bytes(conteudo)
+        return SimpleNamespace(
+            caminho=caminho,
+            nome_original=f"{papel.lower()}.pdf",
+            sha256=hashlib.sha256(conteudo).hexdigest(),
+            bytes=len(conteudo),
+            extensao="pdf",
+            content_type="application/pdf",
+        )
+
+    monkeypatch.setattr(collect_module, "baixar_documento", baixar)
+    resumo = _executar(monkeypatch, tmp_path, fake=ComPublicacao)
+
+    assert resumo["processos"] == 1
+    assert "https://arquivos.test/edital" in urls
+    assert "https://arquivos.test/publicacao" not in urls
+
+
+def test_revalidacao_nao_considera_publicacao_como_edital_utilizavel():
+    documento = {
+        "papel": "EDITAL",
+        "titulo": "Publicação PNCP",
+        "tipo_documento_id": 2,
+        "verificacao": {"abriu": True, "caracteres": 500, "precisa_ocr": False},
+    }
+
+    assert collect_module._documento_utilizavel(documento) is False
+
+
 def test_filtro_de_perfil_ocorre_antes_dos_anexos(monkeypatch, tmp_path):
     _instalar_download(monkeypatch)
 

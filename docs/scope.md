@@ -131,7 +131,7 @@ cache, à ferramenta/configuração e ao momento de produção. Nunca substitui 
 altera o original. Se qualquer elo exigido permanecer ilegível ou sem texto
 utilizável, a nova cadeia não é publicada e o motivo fica registrado no estado.
 
-Política de novas coletas: `6-cadeia-completa-todas-esferas`. As políticas
+Política de novas coletas: `8-cadeia-completa-documentos-utilizaveis`. As políticas
 históricas continuam registradas nos manifestos preservados. O manifesto de
 escopo segue `schemas/corpus_process.v0.1.0.json`; o payload documental
 `ProcurementProcess` permanece separado e fechado.

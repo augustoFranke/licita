@@ -264,7 +264,7 @@ class EstadoColeta:
     def __init__(
         self,
         caminho: Path,
-        max_requisicoes_dia: int = 900,
+        max_requisicoes_dia: int = 0,
         *,
         policy_version: str | int = DEFAULT_POLICY_VERSION,
         cache_ttl_segundos: float | timedelta | None = CACHE_TTL_SEGUNDOS,

@@ -72,7 +72,7 @@ from .verify import verificar
 # a exigência de cadeia completa dos aceites históricos de ETP/TR; os registros
 # antigos continuam no catálogo e podem ser promovidos quando os elos faltantes
 # aparecerem.
-POLICY_VERSION = "6-cadeia-completa-todas-esferas"
+POLICY_VERSION = "8-cadeia-completa-documentos-utilizaveis"
 # Alterar este identificador sempre que a implementação, defaults ou
 # interpretação das opções do OCR mudar de forma capaz de alterar o texto.
 OCR_PIPELINE_VERSION = "verify-pymupdf-tesseract-v1"
@@ -83,7 +83,7 @@ ESFERAS_PERMITIDAS = ESFERAS_SUPORTADAS
 DEFAULT_TERMOS = ("Estudo Tecnico Preliminar", "ETP")
 ANOS_PRIORITARIOS = (2024, 2023, 2022, 2025)
 PAGINAS_POR_LOTE = 5
-MARGEM_REQUISICOES_PADRAO = 15
+MARGEM_REQUISICOES_PADRAO = 0
 
 # A estratégia vigente sempre parte deste feed. ``fonte`` continua aceito na
 # API pública apenas para não quebrar scripts antigos; qualquer valor legado é
@@ -1314,6 +1314,22 @@ def _documento_utilizavel(documento: Mapping[str, Any]) -> bool:
         )
     except (TypeError, ValueError):
         caracteres = 0
+    papel = str(documento.get("papel") or "")
+    titulo = str(documento.get("titulo") or "")
+    tipo_id = documento.get("tipo_documento_id")
+    tem_classificacao = bool(
+        titulo.strip()
+        or tipo_id is not None
+        or documento.get("tipo_documento_pncp")
+    )
+    if tem_classificacao and papel in {ETP, TR, EDITAL}:
+        if papel_documento(tipo_id, titulo) != papel:
+            return False
+    elif tem_classificacao and papel == CONTRATO:
+        if papel_documento_contrato(
+            documento.get("tipo_documento_pncp"), titulo, tipo_id
+        ) != CONTRATO:
+            return False
     return bool(
         verificacao.get("abriu", documento.get("abriu"))
         and caracteres > 0
@@ -2742,7 +2758,7 @@ def coletar(
     max_paginas_busca: int = 0,
     janela_dias: int = 31,
     max_paginas_feed: int = 100,
-    max_requisicoes_dia: int = 900,
+    max_requisicoes_dia: int = 0,
     intervalo: float = 0.75,
     tentativas: int = 5,
     timeout_confirmacao: float = 20.0,
@@ -3274,7 +3290,12 @@ def principal(argv: Sequence[str] | None = None) -> int:
                         help="compatibilidade; páginas da busca textual não são consultadas")
     parser.add_argument("--janela-dias", type=int, default=31)
     parser.add_argument("--max-paginas-feed", type=int, default=100)
-    parser.add_argument("--max-requisicoes-dia", type=int, default=900)
+    parser.add_argument(
+        "--max-requisicoes-dia",
+        type=int,
+        default=0,
+        help="limite local diário; 0 desativa o limite (padrão)",
+    )
     parser.add_argument(
         "--margem-requisicoes",
         type=int,

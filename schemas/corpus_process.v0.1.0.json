@@ -110,7 +110,9 @@
       "enum": [
         "4-municipal-historical-ocr",
         "5-todas-esferas-historical-ocr",
-        "6-cadeia-completa-todas-esferas"
+        "6-cadeia-completa-todas-esferas",
+        "7-cadeia-completa-documentos-utilizaveis",
+        "8-cadeia-completa-documentos-utilizaveis"
       ]
     },
     "collection_policy_version": {
@@ -238,7 +240,10 @@
       "if": {
         "properties": {
           "collection_policy_version": {
-            "const": "6-cadeia-completa-todas-esferas"
+            "enum": [
+              "6-cadeia-completa-todas-esferas",
+              "8-cadeia-completa-documentos-utilizaveis"
+            ]
           }
         },
         "required": [

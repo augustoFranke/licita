@@ -27,7 +27,7 @@ def test_consulta_contratos_diretamente_pela_contratacao() -> None:
     assert requisicoes[0].url.path == (
         "/api/pncp/v1/orgaos/12345678000199/contratos/contratacao/2024/42"
     )
-    assert dict(requisicoes[0].url.params) == {}
+    assert dict(requisicoes[0].url.params) == {"pagina": "1"}
 
 
 def test_consulta_contratos_aceita_envelope_legado_sem_reexigir_parametro() -> None:
@@ -56,7 +56,10 @@ def test_consulta_contratos_aceita_envelope_legado_sem_reexigir_parametro() -> N
     assert total == 2
     assert segunda == []
     assert total_segunda == 2
-    assert all(dict(requisicao.url.params) == {} for requisicao in requisicoes)
+    assert [dict(requisicao.url.params) for requisicao in requisicoes] == [
+        {"pagina": "1"},
+        {"pagina": "2"},
+    ]
 
 
 def test_feed_de_contratos_e_a_raiz_da_descoberta() -> None:

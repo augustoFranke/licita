@@ -178,6 +178,21 @@ class TestMontagemDeProcesso:
         assert registro["escopo_documental"]["cadeia_completa"] is False
         assert estatisticas([registro], documentos)["processos_cadeia_completa"] == 0
 
+    def test_manifesto_sem_documentos_nao_infla_cadeia_completa(self, compra):
+        documentos = [
+            {"documento_id": f"x#{papel.lower()}-01", "papel": papel}
+            for papel in ("ETP", "TR", "EDITAL", "CONTRATO")
+        ]
+        contrato = {
+            "numero_controle_pncp": "10806496000149-2-000070/2025",
+            "numero_controle_pncp_compra": compra["numero_controle_pncp"],
+            "criterio_vinculo": "numeroControlePncpCompra",
+        }
+        registro = montar_processo(compra, None, documentos, [contrato])
+
+        assert registro["escopo_documental"]["cadeia_completa"] is True
+        assert estatisticas([registro], [])["processos_cadeia_completa"] == 0
+
     def test_valor_contratado_soma_os_contratos(self, compra):
         contratos = [
             {"numero_controle_pncp": "10806496000149-2-000001/2026", "valor_global": 100.0},

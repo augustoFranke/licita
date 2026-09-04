@@ -337,11 +337,9 @@ class Pncp:
     ) -> tuple[list[dict[str, Any]], int]:
         """Contratos/empenhos vinculados diretamente a uma contratação.
 
-        O serviço documentado para esse recurso não é paginado: a resposta é
-        uma lista de contratos e não recebe ``pagina`` na query string. O
-        parâmetro continua na assinatura para que os promotores históricos
-        possam manter seu laço de retomada; a primeira chamada devolve a lista
-        e informa um total lógico de uma página. Também aceitamos o envelope
+        O serviço devolve uma lista de contratos, mas o gateway exige
+        ``pagina`` na query string. A primeira chamada devolve a lista e
+        informa um total lógico de uma página. Também aceitamos o envelope
         ``{"data": [...], "totalPaginas": n}`` produzido por gateways antigos,
         sem exigir esse formato do endpoint oficial.
         """
@@ -350,6 +348,7 @@ class Pncp:
         cnpj, ano, sequencial = partes_controle(numero_controle_compra)
         payload = self._http.json(
             f"{PNCP_API}/orgaos/{cnpj}/contratos/contratacao/{ano}/{sequencial}",
+            {"pagina": pagina},
             sem_conteudo_ok=True,
             ausente_ok=True,
         )
@@ -380,9 +379,9 @@ class Pncp:
                 "resposta de contratos da contratação terminou antes do total"
             )
         if pagina > 1:
-            # O endpoint oficial não oferece uma segunda página. Envelopes
+            # A resposta em lista não oferece paginação real. Envelopes
             # legados que anunciam mais páginas não devem fazer o promotor
-            # baixar a mesma lista repetidamente.
+            # processar a mesma lista repetidamente.
             return [], total_paginas
         return contratos, int(total_paginas)
 

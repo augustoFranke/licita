@@ -225,6 +225,15 @@ def test_verificar_path_e_pdf_image_only_sao_compativeis_e_nao_mutam_original(
     assert resultado.ocr["erros"] == []
 
 
+def test_extracao_longa_com_caracteres_de_controle_exige_ocr() -> None:
+    texto_corrompido = ("\x08\x0e\x0fABC " * 80).strip()
+    assert len(texto_corrompido) > MIN_CARACTERES_POR_PAGINA
+    assert verify_module._texto_insuficiente(texto_corrompido) is True
+    assert verify_module._texto_insuficiente(
+        "Texto digital suficiente e perfeitamente legível para esta página."
+    ) is False
+
+
 def test_ocr_usa_tsv_em_disco_so_nas_paginas_necessarias_e_limpa_temporario(
     tmp_path: Path, monkeypatch
 ) -> None:

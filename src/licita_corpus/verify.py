@@ -21,6 +21,7 @@ import stat
 import subprocess
 import tempfile
 import time
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping
@@ -29,6 +30,8 @@ from typing import Any, Mapping
 MIN_CARACTERES_POR_PAGINA = 40
 MIN_PALAVRAS_POR_PAGINA = 8
 MIN_CONFIANCA_OCR = 40.0
+MAX_FRACAO_CARACTERES_CONTROLE = 0.05
+MIN_CARACTERES_CONTROLE_CORROMPIDOS = 8
 
 #: Limites seguros padrão do fallback OCR. São argumentos configuráveis de
 #: :func:`verificar` e também ficam expostos para consumidores do módulo.
@@ -790,8 +793,18 @@ def _qualidade_texto(
 
 
 def _texto_insuficiente(texto: str) -> bool:
-    """Decide a necessidade de OCR pelo limiar de extração direta."""
-    return _metricas_texto(texto)[0] < MIN_CARACTERES_POR_PAGINA
+    """Decide se a extração direta é curta ou estruturalmente corrompida."""
+    normalizado = _normalizar_texto(texto)
+    if len(normalizado) < MIN_CARACTERES_POR_PAGINA:
+        return True
+    controles = sum(
+        unicodedata.category(caractere).startswith("C")
+        for caractere in normalizado
+    )
+    return (
+        controles >= MIN_CARACTERES_CONTROLE_CORROMPIDOS
+        and controles / len(normalizado) > MAX_FRACAO_CARACTERES_CONTROLE
+    )
 
 
 def _dimensoes_pagina_pontos(pagina: Any) -> tuple[float, float] | None:

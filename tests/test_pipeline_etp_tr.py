@@ -662,7 +662,7 @@ def test_coletor_aceita_todas_as_esferas_e_exige_esfera_conhecida(tmp_path):
     (processo, policy_version), então reaproveitar a política municipal faria
     o coletor pular os processos que passaram a ser elegíveis.
     """
-    assert collect_module.POLICY_VERSION == "6-cadeia-completa-todas-esferas"
+    assert collect_module.POLICY_VERSION == "8-cadeia-completa-documentos-utilizaveis"
     assert collect_module._aceitavel(
         normalizar_compra(compra_flat(), "feed"), None
     )[0]

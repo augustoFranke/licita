@@ -77,7 +77,7 @@ valida exatamente ETP, TR, Edital e instrumento contratual. Operação:
   promoção histórica substitui o processo somente depois de validar os quatro
   documentos.
 - Pipeline reproduzível a partir do estado em `corpus/estado/` (falha de API
-  não vira lista vazia), sob a policy `6-cadeia-completa-todas-esferas`.
+  não vira lista vazia), sob a policy `8-cadeia-completa-documentos-utilizaveis`.
 - Comando do gate: `--processos 15 --orgaos 5 --categorias 3
   --max-por-orgao 5 --esferas F,E,D,M`.
 
@@ -156,7 +156,7 @@ Oráculo de extração. Política: [`r4/GUIA.md`](../r4/GUIA.md), formato [`r4/F
 - Split `dev` / `eval` congelado **por processo** (nenhum documento do mesmo processo nos dois).
 - Duas leituras consecutivas não revelam campo ambíguo sem decisão já escrita no `GUIA`.
 - Manifesto/catálogo externo com split, perfil, esfera `F`/`E`/`D`/`M`, hashes dos
-  originais, versão da policy `6-cadeia-completa-todas-esferas` (ou a versão
+  originais, versão da policy `8-cadeia-completa-documentos-utilizaveis` (ou a versão
   histórica preservada) e, quando houver,
   idioma, versão/configuração e hash do artefato OCR. Payload fechado =
   `ProcurementProcess` vigente, sem campos de esfera, perfil, hash ou OCR.

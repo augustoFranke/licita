@@ -1,6 +1,6 @@
 # Dados do golden R4
 
-O split congelado fica em `dev/` e `eval/`, com cinco processos em cada pasta.
+O conjunto provisório fica em `dev/` e `eval/`, com cinco processos em cada pasta.
 Os dez payloads ativos validam como `ProcurementProcess` e somam 392
 valores/requisitos. Nenhum payload ativo tem procedência `engine_generated`.
 
@@ -11,6 +11,9 @@ golden deveria avaliar.
 
 O processo substituto `90836693000140-1-000431-2026` pertence ao lote policy
 8 e foi materializado a partir de uma leitura direta dos ETP e TR originais.
+Apesar disso, uma execução prematura do benchmark R5 abriu todos os cinco
+processos de `eval`. Eles devem migrar para `dev` e ser substituídos antes do
+congelamento definitivo do holdout.
 
 Validação estrutural:
 

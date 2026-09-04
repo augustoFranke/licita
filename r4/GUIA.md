@@ -3,8 +3,8 @@
 ## Estado deste artefato
 
 Este é o guia e o contrato operacional da R4. A amostra e o volume estão
-cumpridos, mas a fase continua **pendente** até terminar a leitura B cega e a
-adjudicação dos dez processos.
+cumpridos, mas a fase continua **pendente** até substituir o `eval` exposto,
+terminar a leitura B cega e adjudicar todos os processos.
 
 Estado medido em `r4/manifest.json` (campo `annotation_provenance`):
 
@@ -26,8 +26,11 @@ Estado medido em 2026-09-04:
 - **proveniência:** 100% `manual` ou `assistant_annotated` no split ativo;
 - **evidência:** o teste estrutural reabre todas as evidências e confere os
   hashes dos originais;
-- **revisão:** leitura B e adjudicação pendentes nos dez processos; por isso R4
-  ainda não libera R5.
+- **holdout:** os cinco processos de `eval` foram abertos por uma execução
+  prematura do benchmark R5 e precisam migrar para `dev`; um novo `eval` nunca
+  medido deve ser anotado e congelado;
+- **revisão:** leitura B e adjudicação pendentes; por isso R4 ainda não libera
+  R5.
 
 O exemplo ao lado é sintético e não conta para nenhuma meta. O gate vigente e
 suas pendências estão em `GATE_R4.md`.

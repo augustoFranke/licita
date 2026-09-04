@@ -24,6 +24,31 @@ def test_split_ativo_nao_usa_oraculo_gerado_pelo_motor() -> None:
     )
 
 
+def test_eval_e_um_holdout_limpo_e_congelado() -> None:
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    holdout = manifest.get("evaluation_holdout", {})
+
+    if holdout.get("status") != "CLEAN_FROZEN":
+        pytest.skip(
+            "R4 aguarda substituir os cinco processos de eval expostos ao benchmark R5"
+        )
+
+    assert manifest["split_frozen_at"]
+
+
+def test_candidatos_de_reposicao_sao_cinco_e_nao_foram_expostos() -> None:
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    holdout = manifest["evaluation_holdout"]
+    candidates = holdout["replacement_candidates"]
+    active_ids = {process["processo_id"] for process in manifest["processes"]}
+
+    assert holdout["replacement_candidates_status"] == (
+        "SOURCE_REOPENED_READING_A_PENDING"
+    )
+    assert len(candidates) == len(set(candidates)) == 5
+    assert active_ids.isdisjoint(candidates)
+
+
 def test_todos_os_processos_possuem_leitura_b_cega_e_adjudicada() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     expected_ids = {process["processo_id"] for process in manifest["processes"]}

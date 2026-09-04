@@ -45,17 +45,27 @@ foram reabertos (`100%`) depois da conferência dos hashes dos originais.
 
 - [x] Anotar de 10 a 15 processos reais e elegíveis, com pelo menos 300
   valores ou requisitos e evidência navegável.
-- [x] Congelar o split `dev`/`eval` por processo e registrar policy, esfera,
+- [ ] Substituir os cinco processos de `eval` já expostos ao benchmark R5 por
+  cinco processos elegíveis nunca medidos; só então congelar o split e registrar policy, esfera,
   hashes e proveniência no manifesto externo.
 - [ ] Fazer duas leituras consecutivas e incorporar no guia todas as decisões
   necessárias para campos ambíguos.
 
-Estado auditado: o split ativo tem dez processos e 392 valores/requisitos, sem
+Estado auditado: o conjunto ativo tem dez processos e 392 valores/requisitos, sem
 nenhuma procedência `engine_generated`. O antigo processo contaminado foi
 retirado de `eval` e preservado somente como candidato histórico. Seu substituto
-foi anotado diretamente das fontes com 80 registros. Ainda faltam a leitura B
-cega e a adjudicação dos dez processos por revisor distinto; até isso ocorrer,
-R4 permanece parcial e R5 não começa. Ver `r4/GATE_R4.md`.
+foi anotado diretamente das fontes com 80 registros. Porém, os cinco processos
+de `eval` foram expostos a uma execução prematura do benchmark R5 e não podem
+mais servir de holdout. Ainda faltam um novo `eval` nunca medido, a leitura B
+cega e a adjudicação por revisor distinto; até isso ocorrer, R4 permanece
+parcial e R5 não começa. Ver `r4/GATE_R4.md`.
+
+Os cinco substitutos já reservados, com ETP e TR reabertos sem depender do
+motor R5, são: `87613048000153-1-000119-2024`,
+`83024240000153-1-000099-2024`, `52061181000160-1-000057-2024`,
+`88814181000130-1-000180-2024` e `88814181000130-1-000098-2024`.
+Ainda falta produzir a leitura A desses processos, migrar o `eval` exposto para
+`dev` e congelar o novo split sem executar R5.
 
 ## R5 — Requirements Engine
 

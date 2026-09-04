@@ -137,6 +137,10 @@ def _requirement_set(process: ProcurementProcess) -> set[tuple]:
 
 def test_r5_eval_benchmark_accuracy_and_anchors() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    if manifest.get("evaluation_holdout", {}).get("status") != "CLEAN_FROZEN":
+        pytest.skip(
+            "R5 bloqueada: o eval foi exposto e ainda não foi substituído por holdout cego"
+        )
     if manifest.get("review_gate", {}).get("status") != "ADJUDICATED":
         pytest.skip(
             "R5 bloqueada: o golden R4 ainda não concluiu leitura B e adjudicação"

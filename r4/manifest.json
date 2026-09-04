@@ -2,7 +2,20 @@
   "policy": "4-municipal-historical-ocr",
   "profile": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
   "esfera": "M",
-  "split_frozen_at": "2026-09-04",
+  "split_frozen_at": null,
+  "evaluation_holdout": {
+    "status": "CONTAMINATED_BY_PREMATURE_R5_RUN",
+    "observed_at": "2026-09-04",
+    "reason": "O benchmark R5 foi executado antes do fechamento da R4 sobre todos os cinco processos de eval. Esses processos devem migrar para dev e ser substituídos por um novo eval nunca medido.",
+    "replacement_candidates_status": "SOURCE_REOPENED_READING_A_PENDING",
+    "replacement_candidates": [
+      "87613048000153-1-000119-2024",
+      "83024240000153-1-000099-2024",
+      "52061181000160-1-000057-2024",
+      "88814181000130-1-000180-2024",
+      "88814181000130-1-000098-2024"
+    ]
+  },
   "review_gate": {
     "status": "PENDING_READING_B",
     "adjudicated_processes": 0,

@@ -2,10 +2,11 @@
 
 - **Perfil:** `PUBLICO_14133_PREGAO_ELETRONICO_BENS`
 - **Política padrão:** `4-municipal-historical-ocr`; o processo policy 8 declara sua versão no manifesto JSON
-- **Total de Processos:** 10 (5 `dev`, 5 `eval`)
+- **Total de Processos:** 10 (5 `dev`, 5 `eval` provisórios)
 - **Total de Itens:** 149
 - **Total de Valores e Requisitos Anotados:** 392 (Meta $\ge 300$ atingida)
-- **Revisão:** leitura A concluída; leitura B cega e adjudicação pendentes
+- **Holdout:** inválido; os cinco processos de `eval` foram expostos ao benchmark R5 e devem migrar para `dev`
+- **Revisão:** leitura A concluída; novo `eval`, leitura B cega e adjudicação pendentes
 
 ## Particionamento do Dataset
 
@@ -25,6 +26,7 @@
 ## Conformidade e Imutabilidade
 
 Todos os 20 documentos (10 ETPs e 10 TRs) tiveram seus hashes SHA-256 validados diretamente dos bytes originais em disco.
-Nenhum processo ou documento é compartilhado entre `dev` e `eval`. O split
+Nenhum processo ou documento é compartilhado entre `dev` e `eval`, mas o split
+é provisório porque o benchmark R5 já abriu os cinco processos de `eval`. O split
 ativo não contém anotações `engine_generated`; a cópia histórica excluída foi
 preservada somente em `r4/data/candidates/` e não participa das métricas.

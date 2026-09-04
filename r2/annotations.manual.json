@@ -1,0 +1,67 @@
+{
+  "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis",
+  "processes": [
+    {
+      "process_id": "01409580000138-1-003530-2025",
+      "documents": ["ETP", "TR", "EDITAL", "CONTRATO"],
+      "annotations": [
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0001:t-0003:r-0005:c-0002", "page": 1, "item_id": "item-001", "description": "Desfibrilador externo automático", "field_type": "QUANTITY", "value": 10, "unit": "unidade"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0002:t-0001:r-0002:c-0002", "page": 2, "item_id": "item-001", "description": "Desfibrilador externo automático", "field_type": "UNIT_PRICE", "value": "7136.15", "unit": "BRL"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0002:t-0001:r-0003:c-0002", "page": 2, "item_id": "item-001", "description": "Desfibrilador externo automático", "field_type": "TOTAL_PRICE", "value": "71361.50", "unit": "BRL"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0003:t-0001:r-0001:c-0003", "page": 3, "item_id": "item-001", "description": "Desfibrilador externo automático", "attribute": "technical.ip_rating", "operator": "GREATER_THAN_OR_EQUAL", "value": 55, "unit": "IP"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0001:t-0002:r-0006:c-0002", "page": 1, "field_type": "CONTRACT_TERM", "value": 12, "unit": "meses"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0004:b-0017", "page": 4, "field_type": "DELIVERY_DEADLINE", "value": 330, "unit": "dias_corridos"},
+        {"document": "TR", "block_id": "01409580000138-1-003530-2025:tr:p-0001:t-0003:r-0008:c-0002", "page": 1, "field_type": "DELIVERY_LOCATION", "value": "comando de apoio logístico - cal"}
+      ]
+    },
+    {
+      "process_id": "01409580000138-1-003002-2024",
+      "documents": ["ETP", "TR", "EDITAL", "CONTRATO"],
+      "annotations": [
+        {"document": "CONTRATO", "block_id": "01409580000138-1-003002-2024:contrato:p-0002:t-0001:r-0005:c-0002", "page": 2, "item_id": "item-002", "description": "Ar-condicionado split 12000 BTU", "field_type": "QUANTITY", "value": 19, "unit": "unidade"},
+        {"document": "CONTRATO", "block_id": "01409580000138-1-003002-2024:contrato:p-0002:t-0001:r-0009:c-0002", "page": 2, "item_id": "item-002", "description": "Ar-condicionado split 12000 BTU", "field_type": "UNIT_PRICE", "value": "1791.15", "unit": "BRL"},
+        {"document": "CONTRATO", "block_id": "01409580000138-1-003002-2024:contrato:p-0002:t-0001:r-0010:c-0002", "page": 2, "item_id": "item-002", "description": "Ar-condicionado split 12000 BTU", "field_type": "TOTAL_PRICE", "value": "34031.85", "unit": "BRL"},
+        {"document": "CONTRATO", "block_id": "01409580000138-1-003002-2024:contrato:p-0002:t-0001:r-0004:c-0001", "page": 2, "item_id": "item-002", "description": "Ar-condicionado split 12000 BTU", "attribute": "technical.cooling_capacity", "operator": "EQUAL", "value": 12000, "unit": "BTU/h"},
+        {"document": "ETP", "block_id": "01409580000138-1-003002-2024:etp:p-0002:b-0003", "page": 2, "field_type": "CONTRACT_TERM", "value": 12, "unit": "meses"}
+      ]
+    },
+    {
+      "process_id": "92963560000160-1-000546-2025",
+      "documents": ["ETP", "TR", "EDITAL", "CONTRATO"],
+      "annotations": [
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0001:t-0001:r-0002:c-0005", "page": 1, "item_id": "item-001", "description": "Lâmpada de laringoscópio LED 2,5 V", "field_type": "QUANTITY", "value": 200, "unit": "peça"},
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0001:t-0001:r-0002:c-0003", "page": 1, "item_id": "item-001", "description": "Lâmpada de laringoscópio LED 2,5 V", "attribute": "technical.voltage", "operator": "EQUAL", "value": 2.5, "unit": "V"},
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0002:b-0033", "page": 2, "field_type": "DELIVERY_DEADLINE", "value": 30, "unit": "dias_corridos"},
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0003:b-0012", "page": 3, "field_type": "RECEIPT_DEADLINE", "value": 10, "unit": "dias_corridos"},
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0003:b-0016", "page": 3, "field_type": "WARRANTY_TERM", "value": 12, "unit": "meses"},
+        {"document": "TR", "block_id": "92963560000160-1-000546-2025:tr:p-0003:b-0043", "page": 3, "field_type": "PAYMENT_DEADLINE", "value": 30, "unit": "dias_corridos"},
+        {"document": "CONTRATO", "block_id": "92963560000160-1-000546-2025:contrato:p-0001:b-0021", "page": 1, "field_type": "CONTRACT_TERM", "value": 6, "unit": "meses"},
+        {"document": "CONTRATO", "block_id": "92963560000160-1-000546-2025:contrato:p-0002:b-0001", "page": 2, "field_type": "DELIVERY_LOCATION", "value": "Município de Porto Alegre"},
+        {"document": "CONTRATO", "block_id": "92963560000160-1-000546-2025:contrato:p-0002:b-0013", "page": 2, "field_type": "TOTAL_PRICE", "value": "114800.00", "unit": "BRL"}
+      ]
+    },
+    {
+      "process_id": "47999864000122-1-000051-2026",
+      "documents": ["ETP", "TR", "EDITAL", "CONTRATO"],
+      "annotations": [
+        {"document": "TR", "block_id": "47999864000122-1-000051-2026:tr:p-0001:t-0001:r-0002:c-0005", "page": 1, "item_id": "item-001", "description": "Papel higiênico em rolo", "field_type": "QUANTITY", "value": 15000, "unit": "rolo"},
+        {"document": "TR", "block_id": "47999864000122-1-000051-2026:tr:p-0001:t-0001:r-0002:c-0002", "page": 1, "item_id": "item-001", "description": "Papel higiênico em rolo", "attribute": "technical.roll_width", "operator": "EQUAL", "value": 10, "unit": "cm"},
+        {"document": "CONTRATO", "block_id": "47999864000122-1-000051-2026:contrato:p-0002:b-0008", "page": 2, "field_type": "CONTRACT_TERM", "value": 12, "unit": "meses"},
+        {"document": "CONTRATO", "block_id": "47999864000122-1-000051-2026:contrato:p-0002:b-0023", "page": 2, "field_type": "TOTAL_PRICE", "value": "181693.20", "unit": "BRL"}
+      ]
+    },
+    {
+      "process_id": "89522064000166-1-000261-2024",
+      "documents": ["ETP", "TR", "EDITAL", "CONTRATO"],
+      "annotations": [
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0004", "page": 3, "item_id": "item-001", "description": "Poltrona Le Corbusier LC2", "field_type": "QUANTITY", "value": 110, "unit": "unidade"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0005", "page": 3, "item_id": "item-001", "description": "Poltrona Le Corbusier LC2", "field_type": "UNIT_PRICE", "value": "3122.00", "unit": "BRL"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0006", "page": 3, "item_id": "item-001", "description": "Poltrona Le Corbusier LC2", "field_type": "TOTAL_PRICE", "value": "343420.00", "unit": "BRL"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0002", "page": 3, "item_id": "item-001", "description": "Poltrona Le Corbusier LC2", "attribute": "technical.dimensions", "operator": "EQUAL", "value": "980 x 700 x 680", "unit": "mm"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0002:b-0001", "page": 2, "field_type": "DELIVERY_DEADLINE", "value": 30, "unit": "dias_corridos"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0007:b-0003", "page": 7, "field_type": "WARRANTY_TERM", "value": 60, "unit": "meses"},
+        {"document": "CONTRATO", "block_id": "89522064000166-1-000261-2024:contrato:p-0010:b-0002", "page": 10, "field_type": "CONTRACT_TERM", "value": 12, "unit": "meses"}
+      ]
+    }
+  ]
+}

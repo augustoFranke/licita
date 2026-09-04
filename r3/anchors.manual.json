@@ -1,0 +1,96 @@
+{
+  "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis",
+  "required_categories": ["quantity", "specification", "delivery_deadline", "warranty"],
+  "processes": [
+    {
+      "process_id": "01409580000138-1-003530-2025",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "01409580000138-1-003530-2025:tr:p-0001:t-0003:r-0005:c-0002", "quote": "10"},
+        {"category": "specification", "document": "TR", "page": 3, "block_id": "01409580000138-1-003530-2025:tr:p-0003:t-0001:r-0001:c-0003", "quote": "Grau de proteção mínimo IP 55"},
+        {"category": "delivery_deadline", "document": "TR", "page": 4, "block_id": "01409580000138-1-003530-2025:tr:p-0004:b-0017", "quote": "330 (trinta) dias corridos"},
+        {"category": "warranty", "document": "TR", "page": 4, "block_id": "01409580000138-1-003530-2025:tr:p-0004:b-0026", "quote": "prazo de garantia mínima"}
+      ]
+    },
+    {
+      "process_id": "01409580000138-1-003002-2024",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "01409580000138-1-003002-2024:tr:p-0001:t-0003:r-0006:c-0002", "quote": "19"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "01409580000138-1-003002-2024:tr:p-0001:t-0002:r-0001:c-0002", "quote": "capacidade de refrigeração de 12.000 Btu/h"},
+        {"category": "delivery_deadline", "document": "TR", "page": 3, "block_id": "01409580000138-1-003002-2024:tr:p-0003:b-0018", "quote": "prazo de entrega do objeto ou prestação do serviço contratado é de 60 dias"},
+        {"category": "warranty", "document": "TR", "page": 4, "block_id": "01409580000138-1-003002-2024:tr:p-0004:b-0006", "quote": "prazo de garantia é aquele estabelecido"}
+      ]
+    },
+    {
+      "process_id": "92963560000160-1-000546-2025",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "92963560000160-1-000546-2025:tr:p-0001:t-0001:r-0002:c-0005", "quote": "200"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "92963560000160-1-000546-2025:tr:p-0001:t-0001:r-0002:c-0003", "quote": "Lâmpada laringoscópio Led 2,5V, rosca grossa"},
+        {"category": "delivery_deadline", "document": "TR", "page": 2, "block_id": "92963560000160-1-000546-2025:tr:p-0002:b-0033", "quote": "prazo de entrega dos bens é de até 30 dias"},
+        {"category": "warranty", "document": "TR", "page": 3, "block_id": "92963560000160-1-000546-2025:tr:p-0003:b-0016", "quote": "prazo de garantia contratual dos bens"}
+      ]
+    },
+    {
+      "process_id": "89522064000166-1-000261-2024",
+      "anchors": [
+        {"category": "quantity", "document": "CONTRATO", "page": 3, "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0004", "quote": "110"},
+        {"category": "specification", "document": "CONTRATO", "page": 3, "block_id": "89522064000166-1-000261-2024:contrato:p-0003:t-0001:r-0002:c-0002", "quote": "Dimensões: 980 x 700 x 680mm"},
+        {"category": "delivery_deadline", "document": "CONTRATO", "page": 2, "block_id": "89522064000166-1-000261-2024:contrato:p-0002:b-0001", "quote": "prazo máximo para a entrega dos produtos é de 30"},
+        {"category": "warranty", "document": "CONTRATO", "page": 7, "block_id": "89522064000166-1-000261-2024:contrato:p-0007:b-0003", "quote": "garantia dos bens fornecidos por período não inferior a 60"}
+      ]
+    },
+    {
+      "process_id": "01612888000186-1-000034-2026",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "01612888000186-1-000034-2026:tr:p-0001:t-0001:r-0002:c-0004", "quote": "05"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "01612888000186-1-000034-2026:tr:p-0001:t-0001:r-0002:c-0002", "quote": "Lâmina de arrasto Traseira min."},
+        {"category": "delivery_deadline", "document": "TR", "page": 10, "block_id": "01612888000186-1-000034-2026:tr:p-0010:b-0015", "quote": "prazo de entrega é de 15 dias"},
+        {"category": "warranty", "document": "TR", "page": 2, "block_id": "01612888000186-1-000034-2026:tr:p-0002:t-0001:r-0009:c-0002", "quote": "será de 24 (vinte e quatro) meses"}
+      ]
+    },
+    {
+      "process_id": "01743335000162-1-000114-2026",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 2, "block_id": "01743335000162-1-000114-2026:tr:p-0002:t-0001:r-0002:c-0004", "quote": "04"},
+        {"category": "specification", "document": "TR", "page": 2, "block_id": "01743335000162-1-000114-2026:tr:p-0002:t-0001:r-0002:c-0002", "quote": "Geladeira Frost Free 385 Litros Duplex"},
+        {"category": "delivery_deadline", "document": "TR", "page": 46, "block_id": "01743335000162-1-000114-2026:tr:p-0046:b-0005", "quote": "prazo de entrega dos bens será de até 20 dias úteis"},
+        {"category": "warranty", "document": "TR", "page": 2, "block_id": "01743335000162-1-000114-2026:tr:p-0002:t-0001:r-0002:c-0002", "quote": "Garantia do Fornecedor (Mês): 12"}
+      ]
+    },
+    {
+      "process_id": "34921783000168-1-000016-2026",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "34921783000168-1-000016-2026:tr:p-0001:t-0001:r-0008:c-0012", "quote": "10.000"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "34921783000168-1-000016-2026:tr:p-0001:t-0001:r-0012:c-0005", "quote": "240 X 340 MM"},
+        {"category": "delivery_deadline", "document": "TR", "page": 23, "block_id": "34921783000168-1-000016-2026:tr:p-0023:t-0001:r-0004:c-0010", "quote": "prazo de até 30 dias corridos"},
+        {"category": "warranty", "document": "TR", "page": 19, "block_id": "34921783000168-1-000016-2026:tr:p-0019:t-0001:r-0025:c-0008", "quote": "por, no mínimo, 12 meses"}
+      ]
+    },
+    {
+      "process_id": "44699908000100-1-000438-2025",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "44699908000100-1-000438-2025:tr:p-0001:t-0001:r-0002:c-0002", "quote": "1.238"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "44699908000100-1-000438-2025:tr:p-0001:t-0001:r-0002:c-0004", "quote": "SULFATO DE ALUMÍNIO ISENTO DE"},
+        {"category": "delivery_deadline", "document": "TR", "page": 5, "block_id": "44699908000100-1-000438-2025:tr:p-0005:b-0008", "quote": "prazo máximo para entrega do produto químico de até 03 (três) dias úteis"},
+        {"category": "warranty", "document": "TR", "page": 6, "block_id": "44699908000100-1-000438-2025:tr:p-0006:b-0013", "quote": "Não haverá exigência da garantia da contratação"}
+      ]
+    },
+    {
+      "process_id": "90836693000140-1-000431-2026",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "90836693000140-1-000431-2026:tr:p-0001:t-0001:r-0002:c-0004", "quote": "01"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "90836693000140-1-000431-2026:tr:p-0001:t-0001:r-0002:c-0002", "quote": "km, tipo VUC"},
+        {"category": "delivery_deadline", "document": "TR", "page": 3, "block_id": "90836693000140-1-000431-2026:tr:p-0003:b-0005", "quote": "prazo de entrega do objeto será de até 90 (noventa) dias"},
+        {"category": "warranty", "document": "TR", "page": 3, "block_id": "90836693000140-1-000431-2026:tr:p-0003:b-0007", "quote": "garantia mínima de 12 (doze) meses"}
+      ]
+    },
+    {
+      "process_id": "84438381000185-1-000209-2026",
+      "anchors": [
+        {"category": "quantity", "document": "TR", "page": 1, "block_id": "84438381000185-1-000209-2026:tr:p-0001:t-0002:r-0003:c-0003", "quote": "520"},
+        {"category": "specification", "document": "TR", "page": 1, "block_id": "84438381000185-1-000209-2026:tr:p-0001:t-0002:r-0003:c-0002", "quote": "Altura mínima de 30 cm"},
+        {"category": "delivery_deadline", "document": "TR", "page": 8, "block_id": "84438381000185-1-000209-2026:tr:p-0008:b-0026", "quote": "prazo máximo de até 30 (trinta) dias consecutivos"},
+        {"category": "warranty", "document": "TR", "page": 9, "block_id": "84438381000185-1-000209-2026:tr:p-0009:b-0018", "quote": "em até 07 (sete) dias corridos após a entrega deverão ser substituídas"}
+      ]
+    }
+  ]
+}

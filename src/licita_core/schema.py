@@ -1,8 +1,8 @@
-"""Schema Pydantic provisório v0.1.0 da representação estruturada de processos.
+"""Schema Pydantic v0.1.0 da representação estruturada de processos.
 
-Coisa provisória: ainda NÃO declara a R2 concluída. A R2 só passará após
-conversão manual de cinco processos reais para este schema sem que os campos
-verificáveis exijam recorrer de volta ao texto livre.
+A prova R2 sobre cinco cadeias completas reais fica em ``r2/``. Os campos
+comparáveis estão estruturados com evidência e não exigem retornar à prosa para
+recuperar o valor normalizado.
 
 O texto original é preservado SOMENTE em ``Section.title_original``,
 ``DocumentBlock.text`` e ``Evidence.quote``; nunca é usado como entrada das

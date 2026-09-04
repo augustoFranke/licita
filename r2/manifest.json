@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.1.0",
+  "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis",
+  "processes": [
+    {
+      "processo_id": "01409580000138-1-003530-2025",
+      "annotation_provenance": "manual",
+      "annotation_count": 7,
+      "artifact": "r2/data/01409580000138-1-003530-2025.json",
+      "artifact_sha256": "d01ba48ead021f6b64509997e49be54197c0fccfe4b3205685f25dc8653716b0",
+      "documents": [
+        {
+          "papel": "ETP",
+          "documento_id_catalogo": "01409580000138-1-003530-2025#etp-05",
+          "arquivo": "documentos/01409580000138-1-003530-2025/etp-05-etp-v1.pdf",
+          "sha256": "042eb91fddabea661ee3b787f988fcccac639ae02c4e5a3e1ec111eefe5471c8"
+        },
+        {
+          "papel": "TR",
+          "documento_id_catalogo": "01409580000138-1-003530-2025#tr-11",
+          "arquivo": "documentos/01409580000138-1-003530-2025/tr-11-termo-de-referencia-v-2.pdf",
+          "sha256": "d41290b00f8b9330f103c7f7398568852373a07aa06829ee61b28115aa18d730"
+        },
+        {
+          "papel": "EDITAL",
+          "documento_id_catalogo": "01409580000138-1-003530-2025#edital-01",
+          "arquivo": "documentos/01409580000138-1-003530-2025/edital-01-edital.pdf",
+          "sha256": "8015c2f6c02a322a231b62d365e39ee012daa1f3573a2897c61f4dfecfdef3bc"
+        },
+        {
+          "papel": "CONTRATO",
+          "documento_id_catalogo": "01409580000138-1-003530-2025#contrato-01",
+          "arquivo": "documentos/01409580000138-1-003530-2025/contrato-01-contrato.pdf",
+          "sha256": "bb688be918ff54612b62f689cd02ec77867318d70dd0a84422a2eafc92a2c8c7"
+        }
+      ]
+    },
+    {
+      "processo_id": "01409580000138-1-003002-2024",
+      "annotation_provenance": "manual",
+      "annotation_count": 5,
+      "artifact": "r2/data/01409580000138-1-003002-2024.json",
+      "artifact_sha256": "2850666fb996a9c4f326846e9276d603dd8280f79a3fe91e9d02ea8473399ee8",
+      "documents": [
+        {
+          "papel": "ETP",
+          "documento_id_catalogo": "01409580000138-1-003002-2024#etp-04",
+          "arquivo": "documentos/01409580000138-1-003002-2024/etp-04-etp-5a-versao.pdf",
+          "sha256": "4450ced173c92a62503789a7004353a6bbf7e47a753fd8f570e53598ddd2a46f"
+        },
+        {
+          "papel": "TR",
+          "documento_id_catalogo": "01409580000138-1-003002-2024#tr-03",
+          "arquivo": "documentos/01409580000138-1-003002-2024/tr-03-tr-4a-versao.pdf",
+          "sha256": "8e833c8892ebdd92969676fd0563aa5c29a47b73b958eb6639c0048ccbe71718"
+        },
+        {
+          "papel": "EDITAL",
+          "documento_id_catalogo": "01409580000138-1-003002-2024#edital-01",
+          "arquivo": "documentos/01409580000138-1-003002-2024/edital-01-edital.pdf",
+          "sha256": "13a918144e4941f21ce7eec298783d89355a13aac547f0ea7d67e119972f9e1c"
+        },
+        {
+          "papel": "CONTRATO",
+          "documento_id_catalogo": "01409580000138-1-003002-2024#contrato-01",
+          "arquivo": "documentos/01409580000138-1-003002-2024/contrato-01-contrato.pdf",
+          "sha256": "b1d9818613f7aae84b89e732272d4e5b537fd6595a442d01b6aa831090fdd86b"
+        }
+      ]
+    },
+    {
+      "processo_id": "92963560000160-1-000546-2025",
+      "annotation_provenance": "manual",
+      "annotation_count": 9,
+      "artifact": "r2/data/92963560000160-1-000546-2025.json",
+      "artifact_sha256": "02420cc38e53988713af4a3490baebd0509ab5fc690b42852ca32b1f385e6c68",
+      "documents": [
+        {
+          "papel": "ETP",
+          "documento_id_catalogo": "92963560000160-1-000546-2025#etp-04",
+          "arquivo": "documentos/92963560000160-1-000546-2025/etp-04-etp-191-pdf.pdf",
+          "sha256": "28856a42bffca38c6b20722bb41246d2adf2757fa6c9d2bab12c9330c13056db"
+        },
+        {
+          "papel": "TR",
+          "documento_id_catalogo": "92963560000160-1-000546-2025#tr-07",
+          "arquivo": "documentos/92963560000160-1-000546-2025/tr-07-novo-termo-referencia-pdf.pdf",
+          "sha256": "1ad343705633656b3034bbb41d7c6f6a949efc708b6b7858370f49151afecef5"
+        },
+        {
+          "papel": "EDITAL",
+          "documento_id_catalogo": "92963560000160-1-000546-2025#edital-01",
+          "arquivo": "documentos/92963560000160-1-000546-2025/edital-01-edital-191-25-pdf.pdf",
+          "sha256": "f154daa0340ddb5919e5a7412782142de172e4b91bed5f829393d0a97cc9a085"
+        },
+        {
+          "papel": "CONTRATO",
+          "documento_id_catalogo": "92963560000160-1-000546-2025#contrato-01",
+          "arquivo": "documentos/92963560000160-1-000546-2025/contrato-01-contrato-registrado-secon-40506554-pdf.pdf",
+          "sha256": "d5644b0795a8f62df4921852f7fc527c771b53717d86eb22a541a2d6134ab432"
+        }
+      ]
+    },
+    {
+      "processo_id": "47999864000122-1-000051-2026",
+      "annotation_provenance": "manual",
+      "annotation_count": 4,
+      "artifact": "r2/data/47999864000122-1-000051-2026.json",
+      "artifact_sha256": "4291c0fac1b92f577bfe32ff7141fa4ab3ffdab82ea11077b83581e6694237ea",
+      "documents": [
+        {
+          "papel": "ETP",
+          "documento_id_catalogo": "47999864000122-1-000051-2026#etp-02",
+          "arquivo": "documentos/47999864000122-1-000051-2026/etp-02-54-2026-pdf.pdf",
+          "sha256": "49170472f0c52d34a3d6c0c2ea5863ccbf68ffc6ba7130e40fe85fcb1dd1de13"
+        },
+        {
+          "papel": "TR",
+          "documento_id_catalogo": "47999864000122-1-000051-2026#tr-03",
+          "arquivo": "documentos/47999864000122-1-000051-2026/tr-03-64-2026-pdf.pdf",
+          "sha256": "a900f1d49583911edd5129f4a2bef8f65f41c81e0e82354cdb01151ce06d1dd4"
+        },
+        {
+          "papel": "EDITAL",
+          "documento_id_catalogo": "47999864000122-1-000051-2026#edital-01",
+          "arquivo": "documentos/47999864000122-1-000051-2026/edital-01-sei-edital-papel-toalha-e-papel-higienico-pdf.pdf",
+          "sha256": "f4edc6615200275f08d1a7920a28ec199466a72ea3e89673bffbdc8cdb959aa7"
+        },
+        {
+          "papel": "CONTRATO",
+          "documento_id_catalogo": "47999864000122-1-000051-2026#contrato-01",
+          "arquivo": "documentos/47999864000122-1-000051-2026/contrato-01-contrato-00040-2026.pdf",
+          "sha256": "72ea57c913338cbe7d386c033d35d86b21d6a96137080a6f7e013753666edd9b"
+        }
+      ]
+    },
+    {
+      "processo_id": "89522064000166-1-000261-2024",
+      "annotation_provenance": "manual",
+      "annotation_count": 7,
+      "artifact": "r2/data/89522064000166-1-000261-2024.json",
+      "artifact_sha256": "bcd141a4367a37d45f36270fcd36ed4332ab34baabf61b033112d0020d6bbf45",
+      "documents": [
+        {
+          "papel": "ETP",
+          "documento_id_catalogo": "89522064000166-1-000261-2024#etp-01",
+          "arquivo": "documentos/89522064000166-1-000261-2024/etp-01-projetos-e-estudos-tecnicos-326178.pdf",
+          "sha256": "1770c31b722e27eef5ce8e877346533bf7bf7db7a981ea72bd3bf0dd47040944"
+        },
+        {
+          "papel": "TR",
+          "documento_id_catalogo": "89522064000166-1-000261-2024#tr-02",
+          "arquivo": "documentos/89522064000166-1-000261-2024/tr-02-projeto-basico-termo-de-referencia-326179.pdf",
+          "sha256": "08f9a190171982b095fd07a493329f7a36dc07e996d883081bf5d122aa042440"
+        },
+        {
+          "papel": "EDITAL",
+          "documento_id_catalogo": "89522064000166-1-000261-2024#edital-05",
+          "arquivo": "documentos/89522064000166-1-000261-2024/edital-05-edital-e-anexos-326191.pdf",
+          "sha256": "65e34f4b875b0b5c42a5ce00582042d184746234fe72ec780a2a690b8f4d03c9"
+        },
+        {
+          "papel": "CONTRATO",
+          "documento_id_catalogo": "89522064000166-1-000261-2024#contrato-01",
+          "arquivo": "documentos/89522064000166-1-000261-2024/contrato-01-contrato-332786.pdf",
+          "sha256": "5b2e8a3ce7abeefbcdf7ac47638f58d640e733c2d5caaf2769de918c563d248c"
+        }
+      ]
+    }
+  ]
+}

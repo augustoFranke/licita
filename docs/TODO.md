@@ -1,6 +1,6 @@
-# Pendências após o fechamento da R1
+# Pendências após o fechamento da R3
 
-Estado verificado em 2026-09-04: a R1 está verde com 20 processos recolhidos
+Estado verificado em 2026-09-04: R1, R2 e R3 estão verdes. A R1 mantém 20 processos recolhidos
 sob a policy `8-cadeia-completa-documentos-utilizaveis`. Cada processo possui
 exatamente um ETP, um TR, um Edital e um instrumento contratual utilizáveis.
 O gate foi executado com o alvo 20 e passou.
@@ -17,24 +17,29 @@ começa enquanto a anterior não fechar seu gate.
 
 ## R2 — Modelo estruturado
 
-- [ ] Converter manualmente cinco processos reais das 20 cadeias completas
+- [x] Converter manualmente cinco processos reais das 20 cadeias completas
   atuais para `ProcurementProcess`.
-- [ ] Validar os cinco payloads pelo modelo Pydantic e pelo JSON Schema.
-- [ ] Demonstrar nos payloads o suporte estruturado aos campos que R7 e R8
+- [x] Validar os cinco payloads pelo modelo Pydantic e pelo JSON Schema.
+- [x] Demonstrar nos payloads o suporte estruturado aos campos que R7 e R8
   compararão, sem depender de prosa como única representação.
-- [ ] Criar um gate de R2 que confira a origem dos cinco IDs no lote policy 8.
+- [x] Criar um gate de R2 que confira a origem dos cinco IDs no lote policy 8.
 
-Os dez payloads existentes em `r4/data/` validam no schema, mas nenhum dos IDs
-pertence às 20 cadeias completas atuais; portanto, eles não fecham a nova R2.
+Gate: `39 passed` em `tests/test_r2_current_lot.py`,
+`tests/test_r2_annotations.py` e `tests/test_schema.py`. Os artefatos atuais
+ficam em `r2/data/`; os dez payloads históricos em `r4/data/` não foram usados
+para fechar esta fase.
 
 ## R3 — Ingestão documental
 
-- [ ] Selecionar dez processos elegíveis do lote policy 8 e medir a cobertura
+- [x] Selecionar dez processos elegíveis do lote policy 8 e medir a cobertura
   dos trechos necessários para quantidade, especificação, prazo e garantia.
-- [ ] Atingir pelo menos 95% de reabertura desses trechos, com página,
+- [x] Atingir pelo menos 95% de reabertura desses trechos, com página,
   `block_id`, citação literal e SHA-256 do original.
-- [ ] Atualizar `corpus/GATE_R3.md`: a prova existente confirma 54 de 54
-  âncoras escolhidas por leitura, mas não mede o denominador de cobertura.
+- [x] Atualizar `corpus/GATE_R3.md` com o denominador explícito das quatro
+  categorias em cada um dos dez processos.
+
+Gate: `1 passed` em `tests/test_r3_current_lot.py`; 40 de 40 trechos manuais
+foram reabertos (`100%`) depois da conferência dos hashes dos originais.
 
 ## R4 — Golden dataset
 
@@ -44,6 +49,14 @@ pertence às 20 cadeias completas atuais; portanto, eles não fecham a nova R2.
   hashes e proveniência no manifesto externo.
 - [ ] Fazer duas leituras consecutivas e incorporar no guia todas as decisões
   necessárias para campos ambíguos.
+
+Estado auditado: o golden histórico tem dez processos e 494 valores/requisitos,
+mas um processo com 182 registros tem procedência `engine_generated` e não
+pode ser oráculo. Os outros nove somam 312 registros (`manual` ou
+`assistant_annotated`), porém ainda não há registro de duas leituras
+independentes e adjudicadas. Portanto, os números existentes não fecham R4.
+É necessário reanotar o décimo processo sem reutilizar a saída do motor e
+executar/registrar as duas leituras cegas antes de iniciar R5.
 
 ## R5 — Requirements Engine
 

@@ -2,32 +2,35 @@
 
 ## Estado deste artefato
 
-Este é o guia e o contrato operacional da R4. A meta da fase — 10–15
-processos anotados e ≥300 valores/requisitos — **não** está cumprida.
+Este é o guia e o contrato operacional da R4. A amostra e o volume estão
+cumpridos, mas a fase continua **pendente** até terminar a leitura B cega e a
+adjudicação dos dez processos.
 
 Estado medido em `r4/manifest.json` (campo `annotation_provenance`):
 
 | Procedência | Processos | O que é |
 |---|---|---|
 | `manual` | 5 | pessoa leu o documento e escreveu o valor |
-| `assistant_annotated` | 4 | o assistente leu os blocos ancorados e transcreveu o valor (`tools/build_golden.py`); quote = substring literal do bloco, âncora escolhida por leitura, não pelo extrator |
-| `engine_generated` | 1 | saída do próprio extrator — **não** é oráculo, excluída de R3/R5/R7 |
+| `assistant_annotated` | 5 | o assistente leu os blocos-fonte e transcreveu o valor; a âncora foi escolhida por leitura, não pelo extrator da R5 |
+| `engine_generated` | 0 | proibido no split ativo; a cópia histórica excluída permanece somente em `r4/data/candidates/` |
 
-`assistant_annotated` é um oráculo válido para o extrator determinístico da R5:
+`assistant_annotated` é um candidato a oráculo para o extrator determinístico da R5:
 a leitura do assistente é independente da heurística de regex/tabela do motor,
 então concordância prova acerto e divergência pega erro. Não substitui
 conferência humana; toda anotação guarda a quote ancorada, auditável relendo o
-bloco. O único `engine_generated` restante (processo 118 do `eval`) fica
-excluído de toda métrica até ser reanotado.
+bloco. Nenhum payload `engine_generated` integra agora `dev` ou `eval`.
 
-Estado das fases medidas sobre este golden:
-- **R3:** 481 âncoras de leitura reabrem 100%.
-- **R5 (eval):** QUANTITY precisão 100% / recall 94,37% (71 valores). Prazo e
-  garantia pendentes por amostra (campo de documento, ~1 por processo).
-- **R7:** 157 fatos bilaterais, 157/157 mutações detectadas, 0% falso positivo.
+Estado medido em 2026-09-04:
+- **amostra:** 10 processos reais e elegíveis, cinco em `dev` e cinco em `eval`;
+- **volume:** 392 valores/requisitos (318 `FieldValue` e 74 `Requirement`);
+- **proveniência:** 100% `manual` ou `assistant_annotated` no split ativo;
+- **evidência:** o teste estrutural reabre todas as evidências e confere os
+  hashes dos originais;
+- **revisão:** leitura B e adjudicação pendentes nos dez processos; por isso R4
+  ainda não libera R5.
 
-O exemplo ao lado é sintético e não conta para nenhuma meta. A existência deste
-guia não declara a R4 concluída.
+O exemplo ao lado é sintético e não conta para nenhuma meta. O gate vigente e
+suas pendências estão em `GATE_R4.md`.
 
 A R4 cria uma verdade de referência para avaliar a extração da R5. A anotação
 não deve corrigir o documento-fonte, completar lacunas com conhecimento
@@ -238,13 +241,11 @@ documento ou por página:
    cálculo final.
 4. Reservar uma parcela de avaliação que contenha processos inteiros e
    variedade de órgãos/categorias sem permitir vazamento. A meta do plano é
-   10–15 processos reais no total; este repositório ainda não afirma possuir
-   essa amostra.
+   10–15 processos reais no total; o split congelado atual possui dez.
 5. Guardar o split em manifesto/catálogo externo com `process_id`, perfil,
-   esfera `M`, hashes dos originais, versão da policy
-   `4-municipal-historical-ocr`, data do congelamento e, quando aplicável,
-   idioma, versão/configuração e hash do artefato OCR; não inserir esses campos
-   no JSON do schema.
+   esfera `M`, hashes dos originais, versão da policy aplicável a cada processo,
+   data do congelamento e, quando aplicável, idioma, versão/configuração e hash
+   do artefato OCR; não inserir esses campos no JSON do schema.
 
 Relatar separadamente erros de ingestão, falhas de normalização e falhas de
 localização da evidência. Um processo do `eval` não pode ser movido para

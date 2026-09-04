@@ -43,20 +43,19 @@ foram reabertos (`100%`) depois da conferência dos hashes dos originais.
 
 ## R4 — Golden dataset
 
-- [ ] Anotar de 10 a 15 processos reais e elegíveis, com pelo menos 300
+- [x] Anotar de 10 a 15 processos reais e elegíveis, com pelo menos 300
   valores ou requisitos e evidência navegável.
-- [ ] Congelar o split `dev`/`eval` por processo e registrar policy, esfera,
+- [x] Congelar o split `dev`/`eval` por processo e registrar policy, esfera,
   hashes e proveniência no manifesto externo.
 - [ ] Fazer duas leituras consecutivas e incorporar no guia todas as decisões
   necessárias para campos ambíguos.
 
-Estado auditado: o golden histórico tem dez processos e 494 valores/requisitos,
-mas um processo com 182 registros tem procedência `engine_generated` e não
-pode ser oráculo. Os outros nove somam 312 registros (`manual` ou
-`assistant_annotated`), porém ainda não há registro de duas leituras
-independentes e adjudicadas. Portanto, os números existentes não fecham R4.
-É necessário reanotar o décimo processo sem reutilizar a saída do motor e
-executar/registrar as duas leituras cegas antes de iniciar R5.
+Estado auditado: o split ativo tem dez processos e 392 valores/requisitos, sem
+nenhuma procedência `engine_generated`. O antigo processo contaminado foi
+retirado de `eval` e preservado somente como candidato histórico. Seu substituto
+foi anotado diretamente das fontes com 80 registros. Ainda faltam a leitura B
+cega e a adjudicação dos dez processos por revisor distinto; até isso ocorrer,
+R4 permanece parcial e R5 não começa. Ver `r4/GATE_R4.md`.
 
 ## R5 — Requirements Engine
 

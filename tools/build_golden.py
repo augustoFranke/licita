@@ -202,6 +202,10 @@ def build(flat_path: Path, provenance: str) -> None:
         for p in manifest["processes"]:
             if p["processo_id"] == pid:
                 p["annotation_provenance"] = provenance
+                p["items_count"] = sum(len(document.items) for document in documents)
+                p["field_values_count"] = n_fv
+                p["requirements_count"] = n_rq
+                p["total_values_and_requirements"] = n_fv + n_rq
                 p.pop("engine_agreement_pct", None)
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

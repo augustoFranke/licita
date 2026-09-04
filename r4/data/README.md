@@ -1,21 +1,23 @@
-# R2 — teste de várias seeds
+# Dados do golden R4
 
-10 processos convertidos em `candidates/` (schema 10/10 válido).
-252 combinações de 5.
+O split congelado fica em `dev/` e `eval/`, com cinco processos em cada pasta.
+Os dez payloads ativos validam como `ProcurementProcess` e somam 392
+valores/requisitos. Nenhum payload ativo tem procedência `engine_generated`.
 
-Critério A — **cada** um dos 5 tem qtd+prazo+vigência+garantia+local: **0 seeds**.
-Critério B — os 5 juntos cobrem esses tipos e todos têm quantidade: **229/252**.
+`candidates/` é histórico e não participa dos gates. Em particular, a cópia
+de `76017474000108-1-000118-2025` foi preservada ali depois de ser retirada de
+`eval`, pois seus 182 registros haviam sido produzidos pelo mesmo motor que o
+golden deveria avaliar.
 
-Nenhuma seed fecha a R2 no critério A. O teto é o texto/R3 (cláusula partida), não o sorteio.
+O processo substituto `90836693000140-1-000431-2026` pertence ao lote policy
+8 e foi materializado a partir de uma leitura direta dos ETP e TR originais.
 
-## Seed promovida em `dev/` (melhor mínimo: 3 campos/processo)
+Validação estrutural:
 
-| Processo | qtd | prazo | vigência | garantia | local |
-|---|---|---|---|---|---|
-| cateter SJDR | 46080 UN | 10 d | 12 meses | 12 meses | endereço |
-| notebooks Colinas | 36 UNID | 15 d | 12 meses | 24 meses | — |
-| veículos Bonfim | 2 Unid | 30 d úteis | 12 meses | — | almoxarifado |
-| drones SLG | 1 unidade | 30 d | — | 12 meses | — |
-| fragmentadora Osório | 1 UN | 30 d | — | — | almoxarifado |
+```bash
+uv run pytest -q tests/test_r4_golden.py
+```
 
-União da seed: os 5 tipos. Validação: 5/5.
+O resultado estrutural não fecha sozinho a R4. A leitura B cega e a
+adjudicação estão descritas em `../review/README.md` e medidas por
+`tests/test_r4_review_gate.py`.

@@ -20,6 +20,8 @@ import re
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
+import pytest
+
 from licita_core.engine import extract_procurement_process
 from licita_core.schema import (
     FieldType,
@@ -134,6 +136,12 @@ def _requirement_set(process: ProcurementProcess) -> set[tuple]:
 
 
 def test_r5_eval_benchmark_accuracy_and_anchors() -> None:
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    if manifest.get("review_gate", {}).get("status") != "ADJUDICATED":
+        pytest.skip(
+            "R5 bloqueada: o golden R4 ainda não concluiu leitura B e adjudicação"
+        )
+
     catalog = _load_catalog()
     manual_ids = _manual_process_ids()
 

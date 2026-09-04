@@ -219,8 +219,9 @@ manter, no mínimo:
 - `process_id`, `split` (`dev` ou `eval`), perfil
   `PUBLICO_14133_PREGAO_ELETRONICO_BENS`, esfera `M` e IDs de ETP/TR;
 - URL/canal e SHA-256 de cada original imutável;
-- policy `4-municipal-historical-ocr` e, quando houver OCR, idioma,
-  versão/configuração, hash e proveniência do artefato derivado;
+- policy aplicável ao processo (`4-municipal-historical-ocr` nos históricos ou
+  `8-cadeia-completa-documentos-utilizaveis` no lote atual) e, quando houver
+  OCR, idioma, versão/configuração, hash e proveniência do artefato derivado;
 - anotador(es), data da primeira anotação, estado da revisão A/B, decisão de
   adjudicação e IDs das evidências em desacordo.
 

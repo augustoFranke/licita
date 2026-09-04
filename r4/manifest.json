@@ -2,6 +2,12 @@
   "policy": "4-municipal-historical-ocr",
   "profile": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
   "esfera": "M",
+  "split_frozen_at": "2026-09-04",
+  "review_gate": {
+    "status": "PENDING_READING_B",
+    "adjudicated_processes": 0,
+    "required_processes": 10
+  },
   "split": {
     "dev": [
       "13988308000139-1-000095-2024",
@@ -13,7 +19,7 @@
     "eval": [
       "01612698000169-1-000047-2024",
       "52061181000160-1-000080-2024",
-      "76017474000108-1-000118-2025",
+      "90836693000140-1-000431-2026",
       "83026138000197-1-000126-2024",
       "87613022000105-1-000106-2024"
     ]
@@ -148,30 +154,31 @@
       "annotation_provenance": "assistant_annotated"
     },
     {
-      "processo_id": "76017474000108-1-000118-2025",
+      "processo_id": "90836693000140-1-000431-2026",
       "split": "eval",
-      "items_count": 45,
-      "field_values_count": 136,
-      "requirements_count": 46,
-      "total_values_and_requirements": 182,
+      "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis",
+      "items_count": 2,
+      "field_values_count": 10,
+      "requirements_count": 70,
+      "total_values_and_requirements": 80,
       "documents": [
         {
-          "document_id": "76017474000108-1-000118-2025:etp",
+          "document_id": "90836693000140-1-000431-2026:etp",
           "type": "ETP",
           "format": "PDF",
-          "arquivo": "documentos/76017474000108-1-000118-2025/etp-03-anexo-i-apendice-estudo-tecnico-preliminar-pdf.pdf",
-          "sha256_original": "a3b5f8dbfaa5dae9e3373b2ed1418d7993a6d83e3b092c009abef08651041661"
+          "arquivo": "documentos/90836693000140-1-000431-2026/etp-03-anexo-04-estudo-tecnico-preliminar.pdf",
+          "sha256_original": "72a50262b2197bb8d6ffd01469e817eb55ca0e20b13a19ffbac8c79447e10b4f"
         },
         {
-          "document_id": "76017474000108-1-000118-2025:tr",
+          "document_id": "90836693000140-1-000431-2026:tr",
           "type": "TR",
           "format": "PDF",
-          "arquivo": "documentos/76017474000108-1-000118-2025/tr-10-anexo-i-termo-de-referencia-pdf.pdf",
-          "sha256_original": "acbe869f5d996ae7e68ec53eed9908af5e091fbc49e787a774eeab65ac73b299"
+          "arquivo": "documentos/90836693000140-1-000431-2026/tr-02-anexo-05-termo-de-referencia-complementar.pdf",
+          "sha256_original": "35d867b2db12f729f0a27ed47922d46f1d39b277f9f24f855a97646b7deaed71"
         }
       ],
-      "annotation_provenance": "engine_generated",
-      "engine_agreement_pct": 99.45
+      "annotation_provenance": "assistant_annotated",
+      "review_status": "READING_A_COMPLETE"
     },
     {
       "processo_id": "83026138000197-1-000126-2024",
@@ -276,5 +283,5 @@
       "engine_agreement_pct": 0.0
     }
   ],
-  "annotation_provenance_note": "annotation_provenance por processo: 'manual' (pessoa leu o documento e escreveu o valor), 'assistant_annotated' (o assistente leu os blocos ancorados e transcreveu o valor, via tools/build_golden.py; a quote é substring literal do bloco e a âncora foi escolhida por leitura, não pelo extrator da R5) ou 'engine_generated' (saída do próprio extrator — NÃO é oráculo e é excluída das medições de R3/R5/R7). engine_agreement_pct, quando presente, é a fração dos fatos que o extrator atual reproduz. R5 mede só campos que o golden anota por completo no processo; R7 injeta mutações só em fatos anotados nos dois documentos do par ETP↔TR."
+  "annotation_provenance_note": "O split ativo não contém saída engine_generated. 'manual' significa que uma pessoa leu a fonte e escreveu o valor; 'assistant_annotated' significa que o assistente leu os blocos-fonte e transcreveu o valor sem consultar a saída da R5. O antigo processo engine_generated permanece somente em r4/data/candidates e não entra em R4/R5/R7. A policy da raiz é o padrão histórico; processos da policy 8 declaram collection_policy_version individualmente. R5 mede somente campos que o golden anota por completo; R7 injeta mutações somente em fatos anotados nos dois documentos do par ETP↔TR."
 }

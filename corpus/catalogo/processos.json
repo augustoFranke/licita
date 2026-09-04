@@ -1,5 +1,2385 @@
 [
   {
+    "processo_id": "13124052000111-1-000078-2026",
+    "numero_controle_pncp": "13124052000111-1-000078/2026",
+    "orgao": {
+      "cnpj": "13124052000111",
+      "razao_social": "MUNICIPIO DE LAGARTO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE LAGARTO",
+      "uf": "SE",
+      "municipio": "Lagarto"
+    },
+    "processo_administrativo": "138/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 78,
+      "titulo": "28",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-03T11:30:48",
+      "inicio_propostas": "2026-06-23T09:00:00",
+      "fim_propostas": "2026-06-23T09:00:00"
+    },
+    "objeto": "CONTRATAÇÃO DE EMPRESA PARA AQUISIÇÃO IMEDIATA DE VEÍCULOS AUTOMOTORES, ZERO QUILÔMETRO, TIPO PICK-UP 4x4 E MOTOCICLETAS OFF-ROAD PARA FORTALECER A FROTA OPERACIONAL E AS AÇÕES DA SECRETARIA MUNICIPAL DA ORDEM PÚBLICA E DEFESA DO PATRIMÔNIO DO MUNICÍPIO DE LAGARTO (SE).",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 314024.82,
+      "total_estimado_itens": 314024.82,
+      "quantidade_itens": null,
+      "total_homologado": 281000.0,
+      "total_contratado": 240000.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/13124052000111/2026/78",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/13124052000111/compras/2026/78",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/13124052000111/compras/2026/78/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "13124052000111-2-000151/2026",
+        "numero_controle_pncp_compra": "13124052000111-1-000078/2026",
+        "numero_contrato": "138",
+        "processo_administrativo": "138/2026",
+        "categoria_processo": {
+          "id": 8,
+          "nome": "Serviços"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "SAMAM VEÍCULOS LTDA",
+        "ni_fornecedor": "13136197000132",
+        "data_assinatura": "2026-07-15",
+        "data_atualizacao_global": "2026-08-12T10:35:53",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-15",
+        "vigencia_fim": "2027-07-15",
+        "valor_global": 240000.0,
+        "objeto": "CONTRATAÇÃO DE EMPRESA PARA AQUISIÇÃO IMEDIATA DE VEÍCULOS AUTOMOTORES, ZERO QUILÔMETRO, TIPO PICK-UP 4x4 E MOTOCICLETAS OFF-ROAD PARA FORTALECER A FROTA OPERACIONAL E AS AÇÕES DA SECRETARIA MUNICIPAL DA ORDEM PÚBLICA E DEFESA DO PATRIMÔNIO DO MUNICÍPIO DE LAGARTO (SE).",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/13124052000111/2026/151"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "13124052000111-1-000078-2026#etp-31"
+      ],
+      "TR": [
+        "13124052000111-1-000078-2026#tr-38"
+      ],
+      "EDITAL": [
+        "13124052000111-1-000078-2026#edital-25"
+      ],
+      "CONTRATO": [
+        "13124052000111-1-000078-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "13124052000111-1-000078-2026#etp-31",
+      "13124052000111-1-000078-2026#tr-38",
+      "13124052000111-1-000078-2026#edital-25",
+      "13124052000111-1-000078-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "138/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "44699908000100-1-000438-2025",
+    "numero_controle_pncp": "44699908000100-1-000438/2025",
+    "orgao": {
+      "cnpj": "44699908000100",
+      "razao_social": "SERVICO DE AGUA E ESGOTO DO MUNICIPIO DE ARARAS - SAEMA",
+      "esfera": "M",
+      "poder": "E",
+      "unidade": "Serviço de Água e Esgoto do Município de Araras",
+      "uf": "SP",
+      "municipio": "Araras"
+    },
+    "processo_administrativo": "017/2025",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 438,
+      "titulo": "017/2025",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2025-10-29T16:50:50",
+      "inicio_propostas": "2025-10-30T08:00:00",
+      "fim_propostas": "2025-11-13T08:30:00"
+    },
+    "objeto": "Aquisição parcelada de 1.650 (mil seiscentos e cinquenta) toneladas de Sulfato de Alumínio Isento de Ferro Líquido, para uso na ETA (Estação de Tratamento de Água) da Autarquia.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 2260500.0,
+      "total_estimado_itens": 2260500.0,
+      "quantidade_itens": null,
+      "total_homologado": 1632669.58,
+      "total_contratado": 1162989.58
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/44699908000100/2025/438",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/44699908000100/compras/2025/438",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/44699908000100/compras/2025/438/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "44699908000100-2-000251/2025",
+        "numero_controle_pncp_compra": "44699908000100-1-000438/2025",
+        "numero_contrato": "30",
+        "processo_administrativo": "017/2025",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "TQA INDUSTRIA E COMERCIO LTDA",
+        "ni_fornecedor": "01221461000157",
+        "data_assinatura": "2025-11-25",
+        "data_atualizacao_global": "2026-08-03T09:44:43",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2025-11-25",
+        "vigencia_fim": "2026-11-24",
+        "valor_global": 1162989.58,
+        "objeto": "Aquisicao parcelada de 1.650  um mil  seiscentos e cinquenta  toneladas de Sulfato de Aluminio Isento de Ferro Liquido  para uso na ETA  Estacao de Tratamento de Agua  da Autarquia  sendo eles divididos em cota principal  75   e cota reservada  25    de acordo com as especificacoes contidas no Termo de Referencia do Edital. ",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/44699908000100/2025/251"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "44699908000100-1-000438-2025#etp-02"
+      ],
+      "TR": [
+        "44699908000100-1-000438-2025#tr-03"
+      ],
+      "EDITAL": [
+        "44699908000100-1-000438-2025#edital-01"
+      ],
+      "CONTRATO": [
+        "44699908000100-1-000438-2025#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "44699908000100-1-000438-2025#etp-02",
+      "44699908000100-1-000438-2025#tr-03",
+      "44699908000100-1-000438-2025#edital-01",
+      "44699908000100-1-000438-2025#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "017/2025",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "92963560000160-1-000546-2025",
+    "numero_controle_pncp": "92963560000160-1-000546/2025",
+    "orgao": {
+      "cnpj": "92963560000160",
+      "razao_social": "MUNICIPIO DE PORTO ALEGRE",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "DLC - Diretoria de Licitações e Contratos",
+      "uf": "RS",
+      "municipio": "Porto Alegre"
+    },
+    "processo_administrativo": "2500000706763",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 546,
+      "titulo": "191",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2025-08-14T16:45:05",
+      "inicio_propostas": "2025-08-14T18:00:00",
+      "fim_propostas": "2025-08-28T09:59:00"
+    },
+    "objeto": "[Portal de Compras Públicas] - Aquisição de materiais hospitalares (lâmpadaslaringoscópio ehalogena, detector fetal, autoclave, câmaras fria e conservação de vacinas, eletrocardiógrafo, curativo antimicrobiano, berço aquecido, desfibrilador, incubadora neonatal, cabo paciente, cobertura para ferimentos, bocal descartável, atadura e membrana filtrante)para a Secretaria Municipal da Saúde.",
+    "categoria_objeto": "medicamentos_e_insumos_farmaceuticos",
+    "valores": {
+      "total_estimado": 2835972.62,
+      "total_estimado_itens": 2835972.62,
+      "quantidade_itens": null,
+      "total_homologado": 2272080.99,
+      "total_contratado": 114800.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/92963560000160/2025/546",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/92963560000160/compras/2025/546",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/92963560000160/compras/2025/546/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "92963560000160-2-000686/2026",
+        "numero_controle_pncp_compra": "92963560000160-1-000546/2025",
+        "numero_contrato": "103578",
+        "processo_administrativo": "2500000706763",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "FANEM LTDA",
+        "ni_fornecedor": "61100244000130",
+        "data_assinatura": "2026-07-30",
+        "data_atualizacao_global": "2026-08-10T14:09:58",
+        "numero_retificacao": 2,
+        "vigencia_inicio": "2026-07-30",
+        "vigencia_fim": "2027-01-30",
+        "valor_global": 114800.0,
+        "objeto": "Aquisição de materiais hospitalares (lâmpadaslaringoscópio ehalogena, detector fetal, autoclave, câmaras fria e conservação de vacinas, eletrocardiógrafo, curativo antimicrobiano, berço aquecido, desfibrilador, incubadora neonatal, cabo paciente,...",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/92963560000160/2026/686"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "92963560000160-1-000546-2025#etp-04"
+      ],
+      "TR": [
+        "92963560000160-1-000546-2025#tr-07"
+      ],
+      "EDITAL": [
+        "92963560000160-1-000546-2025#edital-01"
+      ],
+      "CONTRATO": [
+        "92963560000160-1-000546-2025#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "92963560000160-1-000546-2025#etp-04",
+      "92963560000160-1-000546-2025#tr-07",
+      "92963560000160-1-000546-2025#edital-01",
+      "92963560000160-1-000546-2025#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "2500000706763",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "18025957000158-1-000096-2026",
+    "numero_controle_pncp": "18025957000158-1-000096/2026",
+    "orgao": {
+      "cnpj": "18025957000158",
+      "razao_social": "MUNICIPIO DE MARIA DA FE",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Prefeitura Municipal de Maria da Fé",
+      "uf": "MG",
+      "municipio": "Maria da Fé"
+    },
+    "processo_administrativo": "101/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 96,
+      "titulo": "101",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-07-07T14:06:54",
+      "inicio_propostas": "2026-07-07T00:00:00",
+      "fim_propostas": "2026-07-20T12:30:00"
+    },
+    "objeto": "AQUISIÇÃO DE MOBILIÁRIOS E EQUIPAMENTOS DESTINADOS ÀS ESCOLAS DA REDE MUNICIPAL DE ENSINO E AOS SETORES ADMINISTRATIVOS LIGADOS À SECRETARIA MUNICIPAL DE EDUCAÇÃO. TUDO EM CONFORMIDADE COM O TERMO DE REFERÊNCIA, ETP E DFD, ANEXOS A ESTE EDITAL.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 357697.4,
+      "total_estimado_itens": 357697.4,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 45480.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18025957000158/2026/96",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18025957000158/compras/2026/96",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18025957000158/compras/2026/96/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "18025957000158-2-000044/2026",
+        "numero_controle_pncp_compra": "18025957000158-1-000096/2026",
+        "numero_contrato": "145",
+        "processo_administrativo": "101/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "VERTICE COMERCIO DE ARTIGOS DE PLASTICO LTDA",
+        "ni_fornecedor": "66712923000184",
+        "data_assinatura": "2026-07-31",
+        "data_atualizacao_global": "2026-08-03T14:00:29",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-31",
+        "vigencia_fim": "2026-12-31",
+        "valor_global": 45480.0,
+        "objeto": "AQUISIÇÃO DE MOBILIÁRIOS E EQUIPAMENTOS DESTINADOS ÀS ESCOLAS DA REDE MUNICIPAL DE ENSINO E AOS SETORES ADMINISTRATIVOS LIGADOS À SECRETARIA MUNICIPAL DE EDUCAÇÃO. TUDO EM CONFORMIDADE COM O TERMO DE REFERÊNCIA, ETP E DFD, ANEXOS A ESTE EDITAL.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/18025957000158/2026/44"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18025957000158-1-000096-2026#etp-03"
+      ],
+      "TR": [
+        "18025957000158-1-000096-2026#tr-04"
+      ],
+      "EDITAL": [
+        "18025957000158-1-000096-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "18025957000158-1-000096-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18025957000158-1-000096-2026#etp-03",
+      "18025957000158-1-000096-2026#tr-04",
+      "18025957000158-1-000096-2026#edital-01",
+      "18025957000158-1-000096-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "101/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "34921783000168-1-000016-2026",
+    "numero_controle_pncp": "34921783000168-1-000016/2026",
+    "orgao": {
+      "cnpj": "34921783000168",
+      "razao_social": "SECRETARIA DE ESTADO DE MEIO AMBIENTE E SUSTENTABILIDADE",
+      "esfera": "E",
+      "poder": "E",
+      "unidade": "SEMAS",
+      "uf": "PA",
+      "municipio": "Belém"
+    },
+    "processo_administrativo": "2025/3330417",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 16,
+      "titulo": "003",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-05-14T12:00:03",
+      "inicio_propostas": "2026-05-14T08:00:00",
+      "fim_propostas": "2026-05-26T09:00:00"
+    },
+    "objeto": "Contratação de empresa para aquisição de materiais de expediente.",
+    "categoria_objeto": "material_de_expediente_e_escritorio",
+    "valores": {
+      "total_estimado": 228800.4,
+      "total_estimado_itens": 228800.4,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 10860.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/34921783000168/2026/16",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/34921783000168/compras/2026/16",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/34921783000168/compras/2026/16/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "34921783000168-2-000027/2026",
+        "numero_controle_pncp_compra": "34921783000168-1-000016/2026",
+        "numero_contrato": "030",
+        "processo_administrativo": "2025/3330417",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "ARGS DISTRIBUIDORA DE EQUIPAMENTOS ELETRO-ELETRONICOS LTDA",
+        "ni_fornecedor": "20274219000196",
+        "data_assinatura": "2026-07-22",
+        "data_atualizacao_global": "2026-08-03T14:00:27",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-22",
+        "vigencia_fim": "2027-07-21",
+        "valor_global": 10860.0,
+        "objeto": "Contratação de natureza não continuada de empresa para aquisição de materiais de expediente para atendimento das necessidades da Secretaria de Estado de Meio Ambiente e Sustentabilidade- SEMAS/PA",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/34921783000168/2026/27"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "34921783000168-1-000016-2026#etp-03"
+      ],
+      "TR": [
+        "34921783000168-1-000016-2026#tr-02"
+      ],
+      "EDITAL": [
+        "34921783000168-1-000016-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "34921783000168-1-000016-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "34921783000168-1-000016-2026#etp-03",
+      "34921783000168-1-000016-2026#tr-02",
+      "34921783000168-1-000016-2026#edital-01",
+      "34921783000168-1-000016-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "2025/3330417",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "18715433000199-1-000022-2026",
+    "numero_controle_pncp": "18715433000199-1-000022/2026",
+    "orgao": {
+      "cnpj": "18715433000199",
+      "razao_social": "MUNICIPIO DE MATEUS LEME",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Unidade Única",
+      "uf": "MG",
+      "municipio": "Mateus Leme"
+    },
+    "processo_administrativo": "41",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 22,
+      "titulo": "5",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-25T15:32:28",
+      "inicio_propostas": "2026-06-26T09:30:00",
+      "fim_propostas": "2026-07-09T09:30:00"
+    },
+    "objeto": "AQUISIÇÃO DE FRUTAS, VERDURAS, LEGUMES, LATICÍNIOS, LEITE E OVOS DESTINADO AO PREPARO DA MERENDA ESCOLAR, A SEREM SERVIDOS AOS ALUNOS MATRICULADOS NA REDE MUNICIPAL DE ENSINO.",
+    "categoria_objeto": "generos_alimenticios",
+    "valores": {
+      "total_estimado": 2170561.82,
+      "total_estimado_itens": 2170561.82,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 138960.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18715433000199/2026/22",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18715433000199/compras/2026/22",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18715433000199/compras/2026/22/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "18715433000199-2-000022/2026",
+        "numero_controle_pncp_compra": "18715433000199-1-000022/2026",
+        "numero_contrato": "33/2026-07-30",
+        "processo_administrativo": "41",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "FRUTO DE MINAS INDUSTRIA E COMERCIO LTDA",
+        "ni_fornecedor": "00611162000166",
+        "data_assinatura": "2026-07-30",
+        "data_atualizacao_global": "2026-08-03T14:40:52",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-30",
+        "vigencia_fim": "2027-07-29",
+        "valor_global": 138960.0,
+        "objeto": "REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL AQUISIÇÃO DE FRUTAS, VERDURAS, LEGUMES, LATICÍNIOS, LEITE E OVOS DESTINADO AO PREPARO DA MERENDA ESCOLAR, A SEREM SERVIDOS AOS ALUNOS MATRICULADOS NA REDE MUNICIPAL DE ENSINO.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/18715433000199/2026/22"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18715433000199-1-000022-2026#etp-05"
+      ],
+      "TR": [
+        "18715433000199-1-000022-2026#tr-03"
+      ],
+      "EDITAL": [
+        "18715433000199-1-000022-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "18715433000199-1-000022-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18715433000199-1-000022-2026#etp-05",
+      "18715433000199-1-000022-2026#tr-03",
+      "18715433000199-1-000022-2026#edital-01",
+      "18715433000199-1-000022-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "41",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "90836693000140-1-000431-2026",
+    "numero_controle_pncp": "90836693000140-1-000431/2026",
+    "orgao": {
+      "cnpj": "90836693000140",
+      "razao_social": "MUNICIPIO DE CAPAO DA CANOA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Secretaria de Gestão, Inovação e Planejamento",
+      "uf": "RS",
+      "municipio": "Capão da Canoa"
+    },
+    "processo_administrativo": "325/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 431,
+      "titulo": "PE 191",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-05-18T13:27:11",
+      "inicio_propostas": "2026-05-15T14:00:00",
+      "fim_propostas": "2026-05-28T14:00:00"
+    },
+    "objeto": "Aquisição de veículo utilitário, tipo caminhão leve para transporte de cargas para a Secretaria do Turismo",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 238933.33,
+      "total_estimado_itens": 238933.33,
+      "quantidade_itens": null,
+      "total_homologado": 219800.0,
+      "total_contratado": 219800.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/90836693000140/2026/431",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/90836693000140/compras/2026/431",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/90836693000140/compras/2026/431/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "90836693000140-2-000466/2026",
+        "numero_controle_pncp_compra": "90836693000140-1-000431/2026",
+        "numero_contrato": "472",
+        "processo_administrativo": "325/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "BRENNER COMERCIO DE VEICULOS E PECAS LTDA.",
+        "ni_fornecedor": "53806200000100",
+        "data_assinatura": "2026-08-03",
+        "data_atualizacao_global": "2026-08-03T15:11:36",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-03",
+        "vigencia_fim": "2026-12-01",
+        "valor_global": 219800.0,
+        "objeto": "Aquisição de veículo utilitário, tipo caminhão leve para transporte de cargas para a Secretaria do Turismo PA 2984/2026",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/90836693000140/2026/466"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "90836693000140-1-000431-2026#etp-03"
+      ],
+      "TR": [
+        "90836693000140-1-000431-2026#tr-02"
+      ],
+      "EDITAL": [
+        "90836693000140-1-000431-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "90836693000140-1-000431-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "90836693000140-1-000431-2026#etp-03",
+      "90836693000140-1-000431-2026#tr-02",
+      "90836693000140-1-000431-2026#edital-01",
+      "90836693000140-1-000431-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "325/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01409580000138-1-003002-2024",
+    "numero_controle_pncp": "01409580000138-1-003002/2024",
+    "orgao": {
+      "cnpj": "01409580000138",
+      "razao_social": "ESTADO DE GOIAS",
+      "esfera": "E",
+      "poder": "N",
+      "unidade": "DIRETORIA-GERAL DE ADM. PENITENCIÁRIA",
+      "uf": "GO",
+      "municipio": "Goiânia"
+    },
+    "processo_administrativo": "202400005015495",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 3002,
+      "titulo": "105799",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-03T16:18:32",
+      "inicio_propostas": "2026-06-11T08:00:00",
+      "fim_propostas": "2026-06-26T09:00:00"
+    },
+    "objeto": "AR CONDICIONADO, split hi-wall, 12.000 btus, DEVIDAMENTE INSTALADO, com controle remoto, ciclo frio, tecnologia Inverter, com capacidade de refrigeração de 12.000 Btu/h, ciclos frio, resfriamento rápido, alimentação elétrica monofásica de 220 V, 60 Hz; fluído refrigerante R410A, proteção anticorrosão; serpentina de cobre; distância máxima suportada entre condensadora e evaporadora: 30 metros ou superior; composto por conjunto condensador e evaporador, com as seguintes características: a) unidade condensadora com compressor do tipo rotativo e tecnologia Inverter (funcionamento do compressor controlado por inversor de frequência); b) unidade evaporadora com saída de ar frontal; mínimo de três velocidades de insuflamento de ar; aletas direcionáveis; filtro de ar antibactérias lavável; fluxo de ar controlado por controle remoto; c) controle remoto sem fio (pilhas ou baterias inclusas) o qual ligue e desligue o equipamento; ajuste a temperatura, a velocidade do ar, a direção de insuflamento; d) Garantia de, no mínimo, 1 (um) ano pelo fornecedor contra defeitos de fabricação a partir do recebimento do produto.",
+    "categoria_objeto": "eletrodomesticos_e_eletroeletronicos",
+    "valores": {
+      "total_estimado": 205362.64,
+      "total_estimado_itens": 205362.64,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 176559.4
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01409580000138/2024/3002",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01409580000138/compras/2024/3002",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01409580000138/compras/2024/3002/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01409580000138-2-001110/2026",
+        "numero_controle_pncp_compra": "01409580000138-1-003002/2024",
+        "numero_contrato": "111",
+        "processo_administrativo": "202400005015495",
+        "categoria_processo": {
+          "id": 1,
+          "nome": "Cessão"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "ALCANCE VIBE LTDA",
+        "ni_fornecedor": "20819329000196",
+        "data_assinatura": "2026-07-29",
+        "data_atualizacao_global": "2026-08-03T14:00:37",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-04",
+        "vigencia_fim": "2027-08-03",
+        "valor_global": 176559.4,
+        "objeto": "AR CONDICIONADO",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01409580000138/2026/1110"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01409580000138-1-003002-2024#etp-04"
+      ],
+      "TR": [
+        "01409580000138-1-003002-2024#tr-03"
+      ],
+      "EDITAL": [
+        "01409580000138-1-003002-2024#edital-01"
+      ],
+      "CONTRATO": [
+        "01409580000138-1-003002-2024#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01409580000138-1-003002-2024#etp-04",
+      "01409580000138-1-003002-2024#tr-03",
+      "01409580000138-1-003002-2024#edital-01",
+      "01409580000138-1-003002-2024#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "202400005015495",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01612888000186-1-000034-2026",
+    "numero_controle_pncp": "01612888000186-1-000034/2026",
+    "orgao": {
+      "cnpj": "01612888000186",
+      "razao_social": "MUNICIPIO DE BELA VISTA DO TOLDO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE BELA VISTA DO TOLDO - SC",
+      "uf": "SC",
+      "municipio": "Bela Vista do Toldo"
+    },
+    "processo_administrativo": "35/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 34,
+      "titulo": "PE 18",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2026-04-27T09:29:47",
+      "inicio_propostas": "2026-04-28T08:30:00",
+      "fim_propostas": "2026-05-13T08:30:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS PARA PARA FUTURA E EVENTUAL AQUISIÇÃO DE EQUIPAMENTOS E IMPLEMENTOS AGRÍCOLAS PARA AS ASSOCIAÇÕES DE PRODUTORES RURAIS DO MUNICIPIO DE BELA VISTA DO TOLDO/SC.",
+    "categoria_objeto": "material_agropecuario_e_jardinagem",
+    "valores": {
+      "total_estimado": 2098541.49,
+      "total_estimado_itens": 2098541.49,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 54226.66
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01612888000186/2026/34",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01612888000186/compras/2026/34",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01612888000186/compras/2026/34/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01612888000186-2-000362/2026",
+        "numero_controle_pncp_compra": "01612888000186-1-000034/2026",
+        "numero_contrato": "127",
+        "processo_administrativo": "35/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "IMPLEMENTOS FREI BRUNO LTDA",
+        "ni_fornecedor": "47060802000150",
+        "data_assinatura": "2026-08-03",
+        "data_atualizacao_global": "2026-08-03T16:07:53",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-03",
+        "vigencia_fim": "2027-08-03",
+        "valor_global": 54226.66,
+        "objeto": "REGISTRO DE PREÇOS PARA PARA FUTURA E EVENTUAL AQUISIÇÃO DE EQUIPAMENTOS E IMPLEMENTOS AGRÍCOLAS PARA AS ASSOCIAÇÕES DE PRODUTORES RURAIS DO MUNICIPIO DE BELA VISTA DO TOLDO/SC.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01612888000186/2026/362"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01612888000186-1-000034-2026#etp-01"
+      ],
+      "TR": [
+        "01612888000186-1-000034-2026#tr-02"
+      ],
+      "EDITAL": [
+        "01612888000186-1-000034-2026#edital-03"
+      ],
+      "CONTRATO": [
+        "01612888000186-1-000034-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01612888000186-1-000034-2026#etp-01",
+      "01612888000186-1-000034-2026#tr-02",
+      "01612888000186-1-000034-2026#edital-03",
+      "01612888000186-1-000034-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "35/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01409580000138-1-003530-2025",
+    "numero_controle_pncp": "01409580000138-1-003530/2025",
+    "orgao": {
+      "cnpj": "01409580000138",
+      "razao_social": "ESTADO DE GOIAS",
+      "esfera": "E",
+      "poder": "N",
+      "unidade": "CORPO DE BOMBEIROS MILITAR DO ESTADO DE GOIÁS",
+      "uf": "GO",
+      "municipio": "Goiânia"
+    },
+    "processo_administrativo": "202600005024770",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2025,
+      "sequencial": 3530,
+      "titulo": "118133",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-04-29T15:27:29",
+      "inicio_propostas": "2026-04-30T08:00:00",
+      "fim_propostas": "2026-05-21T09:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE DESFIBRILADOR EXTERNO AUTOMÁTICO",
+    "categoria_objeto": "equipamentos_medico_hospitalares",
+    "valores": {
+      "total_estimado": 92769.95,
+      "total_estimado_itens": 92769.95,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 88400.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01409580000138/2025/3530",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01409580000138/compras/2025/3530",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01409580000138/compras/2025/3530/arquivos",
+      "descoberta": "pncp_contratos"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01409580000138-2-001114/2026",
+        "numero_controle_pncp_compra": "01409580000138-1-003530/2025",
+        "numero_contrato": "115",
+        "processo_administrativo": "202600005024770",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": null,
+        "fornecedor": "INSTRAMED INDÚSTRIA MÉDICO HOSPITALAR LTDA",
+        "ni_fornecedor": "90909631000200",
+        "data_assinatura": "2026-07-30",
+        "data_atualizacao_global": "2026-08-03T16:14:07",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-04",
+        "vigencia_fim": "2027-08-03",
+        "valor_global": 88400.0,
+        "objeto": "DESFIBRILADOR EXTERNO AUTOMÁTICO",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01409580000138/2026/1114"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01409580000138-1-003530-2025#etp-05"
+      ],
+      "TR": [
+        "01409580000138-1-003530-2025#tr-11"
+      ],
+      "EDITAL": [
+        "01409580000138-1-003530-2025#edital-01"
+      ],
+      "CONTRATO": [
+        "01409580000138-1-003530-2025#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01409580000138-1-003530-2025#etp-05",
+      "01409580000138-1-003530-2025#tr-11",
+      "01409580000138-1-003530-2025#edital-01",
+      "01409580000138-1-003530-2025#contrato-01"
+    ],
+    "extras": {
+      "fonte": "pncp-contratos",
+      "processo_administrativo": "202600005024770",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01612888000186-1-000037-2026",
+    "numero_controle_pncp": "01612888000186-1-000037/2026",
+    "orgao": {
+      "cnpj": "01612888000186",
+      "razao_social": "MUNICIPIO DE BELA VISTA DO TOLDO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE BELA VISTA DO TOLDO - SC",
+      "uf": "SC",
+      "municipio": "Bela Vista do Toldo"
+    },
+    "processo_administrativo": "38/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 37,
+      "titulo": "PE 20",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2026-05-07T13:32:41",
+      "inicio_propostas": "2026-05-08T08:30:00",
+      "fim_propostas": "2026-05-21T08:30:00"
+    },
+    "objeto": "REGISTRO DE PREÇOS PARA AQUISIÇÃO DE MOBILIÁRIOS, DESTINADOS AS CRECHES MUNICIPAIS E SECRETARIA MUNICIPAL DE EDUCAÇÃO.",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 157004.22,
+      "total_estimado_itens": 157004.22,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 112800.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01612888000186/2026/37",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01612888000186/compras/2026/37",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01612888000186/compras/2026/37/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01612888000186-2-000372/2026",
+        "numero_controle_pncp_compra": "01612888000186-1-000037/2026",
+        "numero_contrato": "121",
+        "processo_administrativo": "38/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "JOSÉ EDSON BLASZCZYK - ME",
+        "ni_fornecedor": "33113700000141",
+        "data_assinatura": "2026-08-05",
+        "data_atualizacao_global": "2026-08-05T09:23:53",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-05",
+        "vigencia_fim": "2027-08-05",
+        "valor_global": 112800.0,
+        "objeto": "REGISTRO DE PREÇOS PARA AQUISIÇÃO DE MOBILIÁRIOS, DESTINADOS AS CRECHES MUNICIPAIS E SECRETARIA MUNICIPAL DE EDUCAÇÃO.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01612888000186/2026/372"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01612888000186-1-000037-2026#etp-01"
+      ],
+      "TR": [
+        "01612888000186-1-000037-2026#tr-02"
+      ],
+      "EDITAL": [
+        "01612888000186-1-000037-2026#edital-03"
+      ],
+      "CONTRATO": [
+        "01612888000186-1-000037-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01612888000186-1-000037-2026#etp-01",
+      "01612888000186-1-000037-2026#tr-02",
+      "01612888000186-1-000037-2026#edital-03",
+      "01612888000186-1-000037-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "38/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01613338000181-1-000020-2026",
+    "numero_controle_pncp": "01613338000181-1-000020/2026",
+    "orgao": {
+      "cnpj": "01613338000181",
+      "razao_social": "MUNICIPIO DE FLORESTA DO ARAGUAIA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Fundo Municipal de Saúde",
+      "uf": "PA",
+      "municipio": "Floresta do Araguaia"
+    },
+    "processo_administrativo": "0003/2026-SMS/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 20,
+      "titulo": "0003.2026-SMS",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2026-04-22T00:35:31",
+      "inicio_propostas": "2026-04-22T09:00:00",
+      "fim_propostas": "2026-05-07T09:00:00"
+    },
+    "objeto": "[Portal de Compras Públicas] - REGISTRO DE PREÇO VISANDO EVENTUAL E FUTURA SELEÇÃO DAS MELHORES PROPOSTAS PARA AQUISIÇÃO DE COMPRAS DE MATERIAIS TÉCNICO HOSPITALAR, MEDICAMENTOS, MATERIAIS DE LABORATÓRIO E INSUMOS PARA RAIO-X, PARA ATENDER AS DEMANDAS DA SECRETARIA MUNICIPAL DE SAÚDE PARA FINS AS AÇÕES DE MÉDIA E ALTA COMPLEXIDADE DO MUNICÍPIO DE FLORESTA DO ARAGUAIA/PA",
+    "categoria_objeto": "medicamentos_e_insumos_farmaceuticos",
+    "valores": {
+      "total_estimado": 14651387.61,
+      "total_estimado_itens": 14651387.61,
+      "quantidade_itens": null,
+      "total_homologado": 6752372.14,
+      "total_contratado": 694157.9
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01613338000181/2026/20",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01613338000181/compras/2026/20",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01613338000181/compras/2026/20/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01613338000181-2-000121/2026",
+        "numero_controle_pncp_compra": "01613338000181-1-000020/2026",
+        "numero_contrato": "0001-SMS",
+        "processo_administrativo": "0003/2026-SMS/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "DENTAL REDENCAO COM. DE PROD. ODONTOLOGICOS LTDA",
+        "ni_fornecedor": "11670904000140",
+        "data_assinatura": "2026-07-23",
+        "data_atualizacao_global": "2026-07-27T11:18:40",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-23",
+        "vigencia_fim": "2026-12-31",
+        "valor_global": 694157.9,
+        "objeto": "O objeto do presente instrumento e o Registro de Preco Visando Eventual e Futura Selecao das Melhores Propostas para Aquisicao de Compras de Materiais Tecnico Hospitalar, Medicamentos, Materiais de Laboratorio e Insumos para Raio-X, para Atender as Demandas da Secretaria Municipal de Saude para Fins as Acoes de Media e Alta Complexidade do Municipio de Floresta do Araguaia/PA, nas condicoes estabelecidas no Termo de Referencia.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01613338000181/2026/121"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01613338000181-1-000020-2026#etp-23"
+      ],
+      "TR": [
+        "01613338000181-1-000020-2026#tr-26"
+      ],
+      "EDITAL": [
+        "01613338000181-1-000020-2026#edital-29"
+      ],
+      "CONTRATO": [
+        "01613338000181-1-000020-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01613338000181-1-000020-2026#etp-23",
+      "01613338000181-1-000020-2026#tr-26",
+      "01613338000181-1-000020-2026#edital-29",
+      "01613338000181-1-000020-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "0003/2026-SMS/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "01743335000162-1-000114-2026",
+    "numero_controle_pncp": "01743335000162-1-000114/2026",
+    "orgao": {
+      "cnpj": "01743335000162",
+      "razao_social": "MUNICIPIO DE POSSE",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "MUNICIPIO DE POSSE",
+      "uf": "GO",
+      "municipio": "Posse"
+    },
+    "processo_administrativo": "42872026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 114,
+      "titulo": "27",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-15T09:25:15",
+      "inicio_propostas": "2026-06-12T08:00:19",
+      "fim_propostas": "2026-06-30T08:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE EQUIPAMENTOS E MATERIAIS PERMANENTES PARA ESTRUTURAÇÃO DA UNIDADE BÁSICA DE SAÚDE, COMPREENDENDO MOBILIÁRIOS, ELETRODOMÉSTICOS, EQUIPAMENTOS DE INFORMÁTICA, ITENS DE APOIO OPERACIONAL E DEMAIS BENS PERMANENTES PREVISTOS NA PROPOSTA Nº 07892711000125001. ",
+    "categoria_objeto": "equipamentos_de_informatica",
+    "valores": {
+      "total_estimado": 490086.82,
+      "total_estimado_itens": 490086.82,
+      "quantidade_itens": null,
+      "total_homologado": 264833.63,
+      "total_contratado": 1850.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/01743335000162/2026/114",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/01743335000162/compras/2026/114",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/01743335000162/compras/2026/114/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "01743335000162-2-000036/2026",
+        "numero_controle_pncp_compra": "01743335000162-1-000114/2026",
+        "numero_contrato": "270",
+        "processo_administrativo": "42872026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "JUANA ESTER MARCELINO VARGAS",
+        "ni_fornecedor": "34579064000100",
+        "data_assinatura": "2026-07-23",
+        "data_atualizacao_global": "2026-08-04T09:15:09",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-23",
+        "vigencia_fim": "2026-12-31",
+        "valor_global": 1850.0,
+        "objeto": "AQUISIÇÃO DE EQUIPAMENTOS E MATERIAIS PERMANENTES PARA ESTRUTURAÇÃO DA UNIDADE BÁSICA DE SAÚDE, COMPREENDENDO MOBILIÁRIOS, ELETRODOMÉSTICOS, EQUIPAMENTOS DE INFORMÁTICA, ITENS DE APOIO OPERACIONAL E DEMAIS BENS PERMANENTES PREVISTOS NA PROPOSTA Nº 07892711000125001. ",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/01743335000162/2026/36"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "01743335000162-1-000114-2026#etp-03"
+      ],
+      "TR": [
+        "01743335000162-1-000114-2026#tr-02"
+      ],
+      "EDITAL": [
+        "01743335000162-1-000114-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "01743335000162-1-000114-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "01743335000162-1-000114-2026#etp-03",
+      "01743335000162-1-000114-2026#tr-02",
+      "01743335000162-1-000114-2026#edital-01",
+      "01743335000162-1-000114-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "42872026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "03107539000132-1-000114-2026",
+    "numero_controle_pncp": "03107539000132-1-000114/2026",
+    "orgao": {
+      "cnpj": "03107539000132",
+      "razao_social": "MUNICIPIO DE PORTO MURTINHO",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE PORTO MURTINHO",
+      "uf": "MS",
+      "municipio": "Porto Murtinho"
+    },
+    "processo_administrativo": "107/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 114,
+      "titulo": "PE 31",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-11T19:17:42",
+      "inicio_propostas": "2026-06-10T08:00:00",
+      "fim_propostas": "2026-06-30T07:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE EQUIPAMENTOS MÉDICOS HOSPITALARES PERMANENTES, INCLUSO INSTALAÇÃO E TREINAMENTOS AOS USUÁRIOS, para atender as necessidades do Hospital Municipal Oscar Ramires Pereira, através de recursos oriundo de repasses do Governo do Estado de Mato Grosso do Sul através da Resolução SES/MS nº 230/2024, processo nº 27/018153/2024, conforme especificações, quantidades e técnicas constantes do Termo de Referência.",
+    "categoria_objeto": "equipamentos_medico_hospitalares",
+    "valores": {
+      "total_estimado": 736200.0,
+      "total_estimado_itens": 736200.0,
+      "quantidade_itens": null,
+      "total_homologado": 730324.99,
+      "total_contratado": 7199.99
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/03107539000132/2026/114",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/03107539000132/compras/2026/114",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/03107539000132/compras/2026/114/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "03107539000132-2-000087/2026",
+        "numero_controle_pncp_compra": "03107539000132-1-000114/2026",
+        "numero_contrato": "117",
+        "processo_administrativo": "107/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "DORAMEL LTDA",
+        "ni_fornecedor": "17932562000176",
+        "data_assinatura": "2026-08-04",
+        "data_atualizacao_global": "2026-08-04T19:03:17",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-04",
+        "vigencia_fim": "2026-08-05",
+        "valor_global": 7199.99,
+        "objeto": "AQUISIÇÃO DE EQUIPAMENTOS MÉDICOS HOSPITALARES PERMANENTES, INCLUSO INSTALAÇÃO E TREINAMENTOS AOS USUÁRIOS, para atender as necessidades do Hospital Municipal Oscar Ramires Pereira, através de recursos oriundo de repasses do Governo do Estado de Mato Grosso do Sul através da Resolução SES/MS nº 230/2024, processo nº 27/018153/2024, conforme especificações, quantidades e técnicas constantes do Termo de Referência.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/03107539000132/2026/87"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "03107539000132-1-000114-2026#etp-02"
+      ],
+      "TR": [
+        "03107539000132-1-000114-2026#tr-03"
+      ],
+      "EDITAL": [
+        "03107539000132-1-000114-2026#edital-08"
+      ],
+      "CONTRATO": [
+        "03107539000132-1-000114-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "03107539000132-1-000114-2026#etp-02",
+      "03107539000132-1-000114-2026#tr-03",
+      "03107539000132-1-000114-2026#edital-08",
+      "03107539000132-1-000114-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "107/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "03173317000118-1-000068-2026",
+    "numero_controle_pncp": "03173317000118-1-000068/2026",
+    "orgao": {
+      "cnpj": "03173317000118",
+      "razao_social": "MUNICIPIO DE NOVA ANDRADINA",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE NOVA ANDRADINA-MS",
+      "uf": "MS",
+      "municipio": "Nova Andradina"
+    },
+    "processo_administrativo": "1902/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 68,
+      "titulo": "PE 20",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-07-21T09:40:25",
+      "inicio_propostas": "2026-05-27T08:00:00",
+      "fim_propostas": "2026-06-15T08:30:00"
+    },
+    "objeto": "AQUISIÇÃO DE MOTONIVELADORA - CONVÊNIO TRANSFEREGOV.BR N 985127/2025",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 1105062.5,
+      "total_estimado_itens": 1105062.5,
+      "quantidade_itens": null,
+      "total_homologado": 1097000.0,
+      "total_contratado": 1097000.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/03173317000118/2026/68",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/03173317000118/compras/2026/68",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/03173317000118/compras/2026/68/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "03173317000118-2-000049/2026",
+        "numero_controle_pncp_compra": "03173317000118-1-000068/2026",
+        "numero_contrato": "74",
+        "processo_administrativo": "1902/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "IGUAÇU MÁQUINAS AGRÍCOLAS LTDA",
+        "ni_fornecedor": "33656729003519",
+        "data_assinatura": "2026-07-24",
+        "data_atualizacao_global": "2026-08-04T13:02:56",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-24",
+        "vigencia_fim": "2027-07-24",
+        "valor_global": 1097000.0,
+        "objeto": "AQUISIÇÃO DE MOTONIVELADORA - CONVÊNIO TRANSFEREGOV.BR N 985127/2025",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/03173317000118/2026/49"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "03173317000118-1-000068-2026#etp-02"
+      ],
+      "TR": [
+        "03173317000118-1-000068-2026#tr-09"
+      ],
+      "EDITAL": [
+        "03173317000118-1-000068-2026#edital-10"
+      ],
+      "CONTRATO": [
+        "03173317000118-1-000068-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "03173317000118-1-000068-2026#etp-02",
+      "03173317000118-1-000068-2026#tr-09",
+      "03173317000118-1-000068-2026#edital-10",
+      "03173317000118-1-000068-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "1902/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "18278051000145-1-000177-2026",
+    "numero_controle_pncp": "18278051000145-1-000177/2026",
+    "orgao": {
+      "cnpj": "18278051000145",
+      "razao_social": "MUNICIPIO DE PARACATU",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "Secretaria Municipal de Agropecuária",
+      "uf": "MG",
+      "municipio": "Paracatu"
+    },
+    "processo_administrativo": "PL-88",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 177,
+      "titulo": "PL-88",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-25T13:57:27",
+      "inicio_propostas": "2026-07-08T08:00:00",
+      "fim_propostas": "2026-07-08T08:00:00"
+    },
+    "objeto": "AQUISIÇÃO DE UM CAMINHÃO PRANCHA COM GUINCHO PARA ATENDER AS DEMANDAS DA MECANIZAÇÃO AGRÍCOLA DA SECRETARIA MUNICIPAL DE AGROPECUÁRIA.",
+    "categoria_objeto": "veiculos_pecas_e_combustiveis",
+    "valores": {
+      "total_estimado": 774310.0,
+      "total_estimado_itens": 774310.0,
+      "quantidade_itens": null,
+      "total_homologado": 762900.0,
+      "total_contratado": 601000.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/18278051000145/2026/177",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/18278051000145/compras/2026/177",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/18278051000145/compras/2026/177/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "18278051000145-2-000122/2026",
+        "numero_controle_pncp_compra": "18278051000145-1-000177/2026",
+        "numero_contrato": "154",
+        "processo_administrativo": "PL-88",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "FOX DISTRIBUIDORA DE MAQUINAS LTDA",
+        "ni_fornecedor": "46135499000226",
+        "data_assinatura": "2026-07-27",
+        "data_atualizacao_global": "2026-08-04T14:22:42",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-28",
+        "vigencia_fim": "2027-07-28",
+        "valor_global": 601000.0,
+        "objeto": "AQUISIÇÃO DE UM CAMINHÃO PRANCHA COM GUINCHO PARA ATENDER AS DEMANDAS DA MECANIZAÇÃO AGRÍCOLA DA SECRETARIA MUNICIPAL DE AGROPECUÁRIA.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/18278051000145/2026/122"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "18278051000145-1-000177-2026#etp-02"
+      ],
+      "TR": [
+        "18278051000145-1-000177-2026#tr-05"
+      ],
+      "EDITAL": [
+        "18278051000145-1-000177-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "18278051000145-1-000177-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "18278051000145-1-000177-2026#etp-02",
+      "18278051000145-1-000177-2026#tr-05",
+      "18278051000145-1-000177-2026#edital-01",
+      "18278051000145-1-000177-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "PL-88",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "47999864000122-1-000051-2026",
+    "numero_controle_pncp": "47999864000122-1-000051/2026",
+    "orgao": {
+      "cnpj": "47999864000122",
+      "razao_social": "ESP-CONTROLADORIA GERAL DO ESTADO",
+      "esfera": "E",
+      "poder": "E",
+      "unidade": "ESP-SUBSECRETARIA DE GESTÃO CORPORATIVA",
+      "uf": "SP",
+      "municipio": "São Paulo"
+    },
+    "processo_administrativo": "009.00001769/2026-49",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 51,
+      "titulo": "166",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-07-14T17:02:14",
+      "inicio_propostas": "2026-07-15T08:00:00",
+      "fim_propostas": "2026-07-27T09:00:00"
+    },
+    "objeto": "Aquisição de papel higiênico e papel toalha ",
+    "categoria_objeto": "outros_bens",
+    "valores": {
+      "total_estimado": 803362.8,
+      "total_estimado_itens": 803362.8,
+      "quantidade_itens": null,
+      "total_homologado": 181693.2,
+      "total_contratado": 181693.2
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/47999864000122/2026/51",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/47999864000122/compras/2026/51",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/47999864000122/compras/2026/51/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "47999864000122-2-000034/2026",
+        "numero_controle_pncp_compra": "47999864000122-1-000051/2026",
+        "numero_contrato": "00040",
+        "processo_administrativo": "009.00001769/2026-49",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "ALFA HIGIENE E LIMPEZA DISTRIBUIDORA LTDA",
+        "ni_fornecedor": "61583749000101",
+        "data_assinatura": "2026-08-04",
+        "data_atualizacao_global": "2026-08-05T09:38:35",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-05",
+        "vigencia_fim": "2027-08-04",
+        "valor_global": 181693.2,
+        "objeto": "Aquisição de papel higiênico e papel toalha, com dispensadores em regime de comodato",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/47999864000122/2026/34"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "47999864000122-1-000051-2026#etp-02"
+      ],
+      "TR": [
+        "47999864000122-1-000051-2026#tr-03"
+      ],
+      "EDITAL": [
+        "47999864000122-1-000051-2026#edital-01"
+      ],
+      "CONTRATO": [
+        "47999864000122-1-000051-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "47999864000122-1-000051-2026#etp-02",
+      "47999864000122-1-000051-2026#tr-03",
+      "47999864000122-1-000051-2026#edital-01",
+      "47999864000122-1-000051-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "009.00001769/2026-49",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "83754044000134-1-000238-2026",
+    "numero_controle_pncp": "83754044000134-1-000238/2026",
+    "orgao": {
+      "cnpj": "83754044000134",
+      "razao_social": "MUNICIPIO DE CURITIBANOS",
+      "esfera": "M",
+      "poder": "N",
+      "unidade": "PREFEITURA MUNICIPAL DE CURITIBANOS",
+      "uf": "SC",
+      "municipio": "Curitibanos"
+    },
+    "processo_administrativo": "90/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 238,
+      "titulo": "PE 90",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": false
+    },
+    "datas": {
+      "publicacao_pncp": "2026-06-30T18:29:29",
+      "inicio_propostas": "2026-06-30T19:00:00",
+      "fim_propostas": "2026-07-16T13:15:00"
+    },
+    "objeto": "AQUISIÇÃO DE MOBILIÁRIO NOVO, ELETRODOMÉSTICOS E ELETROELETRÔNICOS PARA VIABILIZAR O PLENO DESEMPENHO DAS FUNÇÕES DO CONSELHO TUTELAR. CONFORME DOCUMENTAÇÃO E ANEXO 1 DESTE EDITAL.",
+    "categoria_objeto": "mobiliario",
+    "valores": {
+      "total_estimado": 82672.0,
+      "total_estimado_itens": 82672.0,
+      "quantidade_itens": null,
+      "total_homologado": null,
+      "total_contratado": 5511.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/83754044000134/2026/238",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/83754044000134/compras/2026/238",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/83754044000134/compras/2026/238/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "83754044000134-2-002168/2026",
+        "numero_controle_pncp_compra": "83754044000134-1-000238/2026",
+        "numero_contrato": "180",
+        "processo_administrativo": "90/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "TMD E-COMMERCE LTDA",
+        "ni_fornecedor": "54152890000186",
+        "data_assinatura": "2026-08-03",
+        "data_atualizacao_global": "2026-08-03T17:01:26",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-08-03",
+        "vigencia_fim": "2027-08-03",
+        "valor_global": 5511.0,
+        "objeto": "AQUISIÇÃO DE MOBILIÁRIO NOVO, ELETRODOMÉSTICOS E ELETROELETRÔNICOS PARA VIABILIZAR O PLENO DESEMPENHO DAS FUNÇÕES DO CONSELHO TUTELAR. CONFORME DOCUMENTAÇÃO E ANEXO 1 DESTE EDITAL.",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/83754044000134/2026/2168"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "83754044000134-1-000238-2026#etp-04"
+      ],
+      "TR": [
+        "83754044000134-1-000238-2026#tr-08"
+      ],
+      "EDITAL": [
+        "83754044000134-1-000238-2026#edital-10"
+      ],
+      "CONTRATO": [
+        "83754044000134-1-000238-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "83754044000134-1-000238-2026#etp-04",
+      "83754044000134-1-000238-2026#tr-08",
+      "83754044000134-1-000238-2026#edital-10",
+      "83754044000134-1-000238-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "90/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "84438381000185-1-000209-2026",
+    "numero_controle_pncp": "84438381000185-1-000209/2026",
+    "orgao": {
+      "cnpj": "84438381000185",
+      "razao_social": "SERVICO AUTONOMO MUNICIPAL DE AGUA E ESGOTO",
+      "esfera": "M",
+      "poder": "E",
+      "unidade": "SERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E ESGOTO DE JARAGUÁ DO SUL",
+      "uf": "SC",
+      "municipio": "Jaraguá do Sul"
+    },
+    "processo_administrativo": "74/2026",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2026,
+      "sequencial": 209,
+      "titulo": "PE 74",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2026-07-15T13:14:52",
+      "inicio_propostas": "2026-06-29T08:00:00",
+      "fim_propostas": "2026-07-10T08:45:00"
+    },
+    "objeto": "AQUISIÇÃO DE MUDAS DE PLANTAS ARBÓREAS",
+    "categoria_objeto": "material_agropecuario_e_jardinagem",
+    "valores": {
+      "total_estimado": 53227.4,
+      "total_estimado_itens": 53227.4,
+      "quantidade_itens": null,
+      "total_homologado": 47459.8,
+      "total_contratado": 29746.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/84438381000185/2026/209",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/84438381000185/compras/2026/209",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/84438381000185/compras/2026/209/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "84438381000185-2-000187/2026",
+        "numero_controle_pncp_compra": "84438381000185-1-000209/2026",
+        "numero_contrato": "238",
+        "processo_administrativo": "74/2026",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "MERCADO DAS FLORES LTDA",
+        "ni_fornecedor": "46161009000185",
+        "data_assinatura": "2026-07-31",
+        "data_atualizacao_global": "2026-08-04T15:36:30",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2026-07-31",
+        "vigencia_fim": "2026-08-30",
+        "valor_global": 29746.0,
+        "objeto": "AQUISIÇÃO DE MUDAS DE PLANTAS ARBÓREAS",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/84438381000185/2026/187"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "84438381000185-1-000209-2026#etp-01"
+      ],
+      "TR": [
+        "84438381000185-1-000209-2026#tr-02"
+      ],
+      "EDITAL": [
+        "84438381000185-1-000209-2026#edital-06"
+      ],
+      "CONTRATO": [
+        "84438381000185-1-000209-2026#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "84438381000185-1-000209-2026#etp-01",
+      "84438381000185-1-000209-2026#tr-02",
+      "84438381000185-1-000209-2026#edital-06",
+      "84438381000185-1-000209-2026#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "74/2026",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
+    "processo_id": "89522064000166-1-000261-2024",
+    "numero_controle_pncp": "89522064000166-1-000261/2024",
+    "orgao": {
+      "cnpj": "89522064000166",
+      "razao_social": "RIO GRANDE DO SUL PODER JUDICIARIO",
+      "esfera": "E",
+      "poder": "J",
+      "unidade": "TRIBUNAL DE JUSTIÇA DO ESTADO DO RIO G.DO SUL",
+      "uf": "RS",
+      "municipio": "Porto Alegre"
+    },
+    "processo_administrativo": "54/2025",
+    "processo_administrativo_fonte": "contrato_pncp",
+    "compra": {
+      "ano": 2024,
+      "sequencial": 261,
+      "titulo": "[20810] 46",
+      "modalidade_id": 6,
+      "modalidade": "Pregão - Eletrônico",
+      "instrumento_convocatorio_codigo": 1,
+      "instrumento_convocatorio": "Edital",
+      "amparo_legal_codigo": 1,
+      "amparo_legal_nome": "Lei 14.133/2021, Art. 28, I",
+      "amparo_legal_descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+      "srp": true
+    },
+    "datas": {
+      "publicacao_pncp": "2024-10-11T13:33:05",
+      "inicio_propostas": "2024-10-15T00:00:00",
+      "fim_propostas": "2024-10-28T14:00:00"
+    },
+    "objeto": "Registro de preços visando à futura aquisição de sofás e poltronas modelo Le Corbusier. ",
+    "categoria_objeto": "mobiliario",
+    "valores": {
+      "total_estimado": 979621.9,
+      "total_estimado_itens": 979621.9,
+      "quantidade_itens": null,
+      "total_homologado": 831560.0,
+      "total_contratado": 343420.0
+    },
+    "fontes": {
+      "portal_pncp": "https://pncp.gov.br/app/editais/89522064000166/2024/261",
+      "api_detalhe_pncp": "https://pncp.gov.br/api/consulta/v1/orgaos/89522064000166/compras/2024/261",
+      "api_arquivos": "https://pncp.gov.br/api/pncp/v1/orgaos/89522064000166/compras/2024/261/arquivos",
+      "descoberta": "recuperacao-dirigida"
+    },
+    "contratos": [
+      {
+        "numero_controle_pncp": "89522064000166-2-000055/2025",
+        "numero_controle_pncp_compra": "89522064000166-1-000261/2024",
+        "numero_contrato": "54",
+        "processo_administrativo": "54/2025",
+        "categoria_processo": {
+          "id": 2,
+          "nome": "Compras"
+        },
+        "tipo_contrato": "Contrato (termo inicial)",
+        "fornecedor": "BORTOLINI INDÚSTRIA DE MÓVEIS LTDA.",
+        "ni_fornecedor": "90051160000152",
+        "data_assinatura": "2025-04-11",
+        "data_atualizacao_global": "2025-04-15T13:04:24",
+        "numero_retificacao": 0,
+        "vigencia_inicio": "2025-04-15",
+        "vigencia_fim": "2026-04-14",
+        "valor_global": 343420.0,
+        "objeto": "Registro de preços visando à futura aquisição de sofás e poltronas modelo Le Corbusier. ",
+        "fonte": "pncp",
+        "criterio_vinculo": "numeroControlePncpCompra",
+        "url_portal": "https://pncp.gov.br/app/contratos/89522064000166/2025/55"
+      }
+    ],
+    "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
+    "perfil_status": "SUPPORTED",
+    "perfil_inicial": "SUPPORTED",
+    "scope_status": "SUPPORTED",
+    "cadeia": {
+      "DFD": [],
+      "ETP": [
+        "89522064000166-1-000261-2024#etp-01"
+      ],
+      "TR": [
+        "89522064000166-1-000261-2024#tr-02"
+      ],
+      "EDITAL": [
+        "89522064000166-1-000261-2024#edital-05"
+      ],
+      "CONTRATO": [
+        "89522064000166-1-000261-2024#contrato-01"
+      ],
+      "PESQUISA_PRECOS": []
+    },
+    "escopo_documental": {
+      "par_etp_tr_valido": true,
+      "um_documento_por_papel": true,
+      "cadeia_completa": true,
+      "contagem": {
+        "DFD": 0,
+        "ETP": 1,
+        "TR": 1,
+        "EDITAL": 1,
+        "CONTRATO": 1,
+        "PESQUISA_PRECOS": 0
+      }
+    },
+    "documentos": [
+      "89522064000166-1-000261-2024#etp-01",
+      "89522064000166-1-000261-2024#tr-02",
+      "89522064000166-1-000261-2024#edital-05",
+      "89522064000166-1-000261-2024#contrato-01"
+    ],
+    "extras": {
+      "fonte": "recuperacao-dirigida",
+      "processo_administrativo": "54/2025",
+      "processo_administrativo_fonte": "contrato_pncp"
+    },
+    "policy_version": "8-cadeia-completa-documentos-utilizaveis",
+    "collection_policy_version": "8-cadeia-completa-documentos-utilizaveis"
+  },
+  {
     "processo_id": "18025940000109-1-000260-2025",
     "numero_controle_pncp": "18025940000109-1-000260/2025",
     "orgao": {

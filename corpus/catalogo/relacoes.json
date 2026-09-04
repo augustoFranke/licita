@@ -1,6 +1,486 @@
 {
   "cadeia": [
     {
+      "processo_id": "13124052000111-1-000078-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "13124052000111-1-000078-2026#etp-31",
+      "para": "13124052000111-1-000078-2026#tr-38",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "13124052000111-1-000078-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "13124052000111-1-000078-2026#tr-38",
+      "para": "13124052000111-1-000078-2026#edital-25",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "13124052000111-1-000078-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "13124052000111-1-000078-2026#edital-25",
+      "para": "13124052000111-1-000078-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "44699908000100-1-000438-2025",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "44699908000100-1-000438-2025#etp-02",
+      "para": "44699908000100-1-000438-2025#tr-03",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "44699908000100-1-000438-2025",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "44699908000100-1-000438-2025#tr-03",
+      "para": "44699908000100-1-000438-2025#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "44699908000100-1-000438-2025",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "44699908000100-1-000438-2025#edital-01",
+      "para": "44699908000100-1-000438-2025#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "92963560000160-1-000546-2025",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "92963560000160-1-000546-2025#etp-04",
+      "para": "92963560000160-1-000546-2025#tr-07",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "92963560000160-1-000546-2025",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "92963560000160-1-000546-2025#tr-07",
+      "para": "92963560000160-1-000546-2025#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "92963560000160-1-000546-2025",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "92963560000160-1-000546-2025#edital-01",
+      "para": "92963560000160-1-000546-2025#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18025957000158-1-000096-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "18025957000158-1-000096-2026#etp-03",
+      "para": "18025957000158-1-000096-2026#tr-04",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "18025957000158-1-000096-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "18025957000158-1-000096-2026#tr-04",
+      "para": "18025957000158-1-000096-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18025957000158-1-000096-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "18025957000158-1-000096-2026#edital-01",
+      "para": "18025957000158-1-000096-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "34921783000168-1-000016-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "34921783000168-1-000016-2026#etp-03",
+      "para": "34921783000168-1-000016-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "34921783000168-1-000016-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "34921783000168-1-000016-2026#tr-02",
+      "para": "34921783000168-1-000016-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "34921783000168-1-000016-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "34921783000168-1-000016-2026#edital-01",
+      "para": "34921783000168-1-000016-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18715433000199-1-000022-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "18715433000199-1-000022-2026#etp-05",
+      "para": "18715433000199-1-000022-2026#tr-03",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "18715433000199-1-000022-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "18715433000199-1-000022-2026#tr-03",
+      "para": "18715433000199-1-000022-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18715433000199-1-000022-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "18715433000199-1-000022-2026#edital-01",
+      "para": "18715433000199-1-000022-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "90836693000140-1-000431-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "90836693000140-1-000431-2026#etp-03",
+      "para": "90836693000140-1-000431-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "90836693000140-1-000431-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "90836693000140-1-000431-2026#tr-02",
+      "para": "90836693000140-1-000431-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "90836693000140-1-000431-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "90836693000140-1-000431-2026#edital-01",
+      "para": "90836693000140-1-000431-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01409580000138-1-003002-2024",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01409580000138-1-003002-2024#etp-04",
+      "para": "01409580000138-1-003002-2024#tr-03",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01409580000138-1-003002-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01409580000138-1-003002-2024#tr-03",
+      "para": "01409580000138-1-003002-2024#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01409580000138-1-003002-2024",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01409580000138-1-003002-2024#edital-01",
+      "para": "01409580000138-1-003002-2024#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01612888000186-1-000034-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01612888000186-1-000034-2026#etp-01",
+      "para": "01612888000186-1-000034-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01612888000186-1-000034-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01612888000186-1-000034-2026#tr-02",
+      "para": "01612888000186-1-000034-2026#edital-03",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01612888000186-1-000034-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01612888000186-1-000034-2026#edital-03",
+      "para": "01612888000186-1-000034-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01409580000138-1-003530-2025",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01409580000138-1-003530-2025#etp-05",
+      "para": "01409580000138-1-003530-2025#tr-11",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01409580000138-1-003530-2025",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01409580000138-1-003530-2025#tr-11",
+      "para": "01409580000138-1-003530-2025#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01409580000138-1-003530-2025",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01409580000138-1-003530-2025#edital-01",
+      "para": "01409580000138-1-003530-2025#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01612888000186-1-000037-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01612888000186-1-000037-2026#etp-01",
+      "para": "01612888000186-1-000037-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01612888000186-1-000037-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01612888000186-1-000037-2026#tr-02",
+      "para": "01612888000186-1-000037-2026#edital-03",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01612888000186-1-000037-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01612888000186-1-000037-2026#edital-03",
+      "para": "01612888000186-1-000037-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01613338000181-1-000020-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01613338000181-1-000020-2026#etp-23",
+      "para": "01613338000181-1-000020-2026#tr-26",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01613338000181-1-000020-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01613338000181-1-000020-2026#tr-26",
+      "para": "01613338000181-1-000020-2026#edital-29",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01613338000181-1-000020-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01613338000181-1-000020-2026#edital-29",
+      "para": "01613338000181-1-000020-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01743335000162-1-000114-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "01743335000162-1-000114-2026#etp-03",
+      "para": "01743335000162-1-000114-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "01743335000162-1-000114-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "01743335000162-1-000114-2026#tr-02",
+      "para": "01743335000162-1-000114-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "01743335000162-1-000114-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "01743335000162-1-000114-2026#edital-01",
+      "para": "01743335000162-1-000114-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "03107539000132-1-000114-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "03107539000132-1-000114-2026#etp-02",
+      "para": "03107539000132-1-000114-2026#tr-03",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "03107539000132-1-000114-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "03107539000132-1-000114-2026#tr-03",
+      "para": "03107539000132-1-000114-2026#edital-08",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "03107539000132-1-000114-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "03107539000132-1-000114-2026#edital-08",
+      "para": "03107539000132-1-000114-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "03173317000118-1-000068-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "03173317000118-1-000068-2026#etp-02",
+      "para": "03173317000118-1-000068-2026#tr-09",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "03173317000118-1-000068-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "03173317000118-1-000068-2026#tr-09",
+      "para": "03173317000118-1-000068-2026#edital-10",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "03173317000118-1-000068-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "03173317000118-1-000068-2026#edital-10",
+      "para": "03173317000118-1-000068-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18278051000145-1-000177-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "18278051000145-1-000177-2026#etp-02",
+      "para": "18278051000145-1-000177-2026#tr-05",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "18278051000145-1-000177-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "18278051000145-1-000177-2026#tr-05",
+      "para": "18278051000145-1-000177-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "18278051000145-1-000177-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "18278051000145-1-000177-2026#edital-01",
+      "para": "18278051000145-1-000177-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "47999864000122-1-000051-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "47999864000122-1-000051-2026#etp-02",
+      "para": "47999864000122-1-000051-2026#tr-03",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "47999864000122-1-000051-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "47999864000122-1-000051-2026#tr-03",
+      "para": "47999864000122-1-000051-2026#edital-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "47999864000122-1-000051-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "47999864000122-1-000051-2026#edital-01",
+      "para": "47999864000122-1-000051-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "83754044000134-1-000238-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "83754044000134-1-000238-2026#etp-04",
+      "para": "83754044000134-1-000238-2026#tr-08",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "83754044000134-1-000238-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "83754044000134-1-000238-2026#tr-08",
+      "para": "83754044000134-1-000238-2026#edital-10",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "83754044000134-1-000238-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "83754044000134-1-000238-2026#edital-10",
+      "para": "83754044000134-1-000238-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "84438381000185-1-000209-2026",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "84438381000185-1-000209-2026#etp-01",
+      "para": "84438381000185-1-000209-2026#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "84438381000185-1-000209-2026",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "84438381000185-1-000209-2026#tr-02",
+      "para": "84438381000185-1-000209-2026#edital-06",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "84438381000185-1-000209-2026",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "84438381000185-1-000209-2026#edital-06",
+      "para": "84438381000185-1-000209-2026#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "89522064000166-1-000261-2024",
+      "de_papel": "ETP",
+      "para_papel": "TR",
+      "de": "89522064000166-1-000261-2024#etp-01",
+      "para": "89522064000166-1-000261-2024#tr-02",
+      "relacao": "origina"
+    },
+    {
+      "processo_id": "89522064000166-1-000261-2024",
+      "de_papel": "TR",
+      "para_papel": "EDITAL",
+      "de": "89522064000166-1-000261-2024#tr-02",
+      "para": "89522064000166-1-000261-2024#edital-05",
+      "relacao": "precede_em"
+    },
+    {
+      "processo_id": "89522064000166-1-000261-2024",
+      "de_papel": "EDITAL",
+      "para_papel": "CONTRATO",
+      "de": "89522064000166-1-000261-2024#edital-05",
+      "para": "89522064000166-1-000261-2024#contrato-01",
+      "relacao": "precede_em"
+    },
+    {
       "processo_id": "18025940000109-1-000260-2025",
       "de_papel": "ETP",
       "para_papel": "TR",
@@ -439,63 +919,271 @@
       "detalhe": "SHA-256 idêntico (7cfa2e5fd4e6…)"
     },
     {
-      "documento_id": "18260489000104-1-000129-2024#tr-13",
-      "outro_documento_id": "18260489000104-1-000155-2024#tr-04",
-      "tipo": "reuso_parcial",
+      "documento_id": "88814181000130-1-000177-2024#edital-01",
+      "outro_documento_id": "88814181000130-1-000180-2024#edital-01",
+      "tipo": "arquivo_identico",
       "mesmo_processo": false,
-      "jaccard": 0.5141,
-      "contencao": 0.6916,
-      "detalhe": "Jaccard 0.51"
+      "jaccard": 1.0,
+      "contencao": 1.0,
+      "detalhe": "SHA-256 idêntico (e2623857ee9e…)"
     },
     {
-      "documento_id": "18260489000104-1-000129-2024#tr-13",
-      "outro_documento_id": "18260489000104-1-000158-2024#tr-05",
-      "tipo": "reuso_parcial",
+      "documento_id": "01409580000138-1-003530-2025#contrato-01",
+      "outro_documento_id": "01409580000138-1-003002-2024#contrato-01",
+      "tipo": "contido_em",
       "mesmo_processo": false,
-      "jaccard": 0.4185,
-      "contencao": 0.6052,
-      "detalhe": "Jaccard 0.42"
+      "jaccard": 0.6457,
+      "contencao": 0.8582,
+      "detalhe": "86% do texto de CONTRATO aparece em CONTRATO"
     },
     {
-      "documento_id": "18260489000104-1-000155-2024#tr-04",
-      "outro_documento_id": "18260489000104-1-000158-2024#tr-05",
-      "tipo": "reuso_parcial",
+      "documento_id": "01409580000138-1-003530-2025#edital-01",
+      "outro_documento_id": "01409580000138-1-003002-2024#edital-01",
+      "tipo": "contido_em",
       "mesmo_processo": false,
-      "jaccard": 0.4458,
-      "contencao": 0.621,
-      "detalhe": "Jaccard 0.45"
+      "jaccard": 0.6782,
+      "contencao": 0.8117,
+      "detalhe": "81% do texto de EDITAL aparece em EDITAL"
     },
     {
-      "documento_id": "52061181000160-1-000057-2024#tr-03",
-      "outro_documento_id": "52061181000160-1-000080-2024#tr-02",
-      "tipo": "reuso_parcial",
-      "mesmo_processo": false,
-      "jaccard": 0.4182,
-      "contencao": 0.622,
-      "detalhe": "Jaccard 0.42"
+      "documento_id": "01612888000186-1-000034-2026#contrato-01",
+      "outro_documento_id": "01612888000186-1-000034-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2329,
+      "contencao": 0.8895,
+      "detalhe": "89% do texto de CONTRATO aparece em EDITAL"
     },
     {
-      "documento_id": "87613022000105-1-000034-2024#etp-03",
-      "outro_documento_id": "87613022000105-1-000034-2024#tr-05",
+      "documento_id": "01612888000186-1-000034-2026#contrato-01",
+      "outro_documento_id": "01612888000186-1-000037-2026#contrato-01",
+      "tipo": "contido_em",
+      "mesmo_processo": false,
+      "jaccard": 0.6149,
+      "contencao": 0.8228,
+      "detalhe": "82% do texto de CONTRATO aparece em CONTRATO"
+    },
+    {
+      "documento_id": "01612888000186-1-000034-2026#contrato-01",
+      "outro_documento_id": "01612888000186-1-000037-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": false,
+      "jaccard": 0.2135,
+      "contencao": 0.8327,
+      "detalhe": "83% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "01612888000186-1-000034-2026#tr-02",
+      "outro_documento_id": "01612888000186-1-000034-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.1862,
+      "contencao": 0.9157,
+      "detalhe": "92% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "01612888000186-1-000034-2026#edital-03",
+      "outro_documento_id": "01612888000186-1-000037-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": false,
+      "jaccard": 0.728,
+      "contencao": 0.8454,
+      "detalhe": "85% do texto de EDITAL aparece em EDITAL"
+    },
+    {
+      "documento_id": "01612888000186-1-000037-2026#contrato-01",
+      "outro_documento_id": "01612888000186-1-000037-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.272,
+      "contencao": 0.9015,
+      "detalhe": "90% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "01612888000186-1-000037-2026#tr-02",
+      "outro_documento_id": "01612888000186-1-000037-2026#edital-03",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.1901,
+      "contencao": 0.92,
+      "detalhe": "92% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "01743335000162-1-000114-2026#contrato-01",
+      "outro_documento_id": "01743335000162-1-000114-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.0639,
+      "contencao": 0.8355,
+      "detalhe": "84% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "01743335000162-1-000114-2026#tr-02",
+      "outro_documento_id": "01743335000162-1-000114-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.4736,
+      "contencao": 0.938,
+      "detalhe": "94% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "01743335000162-1-000114-2026#etp-03",
+      "outro_documento_id": "01743335000162-1-000114-2026#tr-02",
       "tipo": "reuso_parcial",
       "mesmo_processo": true,
-      "jaccard": 0.6245,
-      "contencao": 0.7862,
-      "detalhe": "Jaccard 0.62"
+      "jaccard": 0.5257,
+      "contencao": 0.705,
+      "detalhe": "Jaccard 0.53"
     },
     {
-      "documento_id": "87613022000105-1-000106-2024#etp-03",
-      "outro_documento_id": "87613022000105-1-000106-2024#tr-05",
+      "documento_id": "03107539000132-1-000114-2026#etp-02",
+      "outro_documento_id": "03107539000132-1-000114-2026#tr-03",
       "tipo": "reuso_parcial",
       "mesmo_processo": true,
-      "jaccard": 0.5633,
-      "contencao": 0.7459,
-      "detalhe": "Jaccard 0.56"
+      "jaccard": 0.3507,
+      "contencao": 0.571,
+      "detalhe": "Jaccard 0.35"
+    },
+    {
+      "documento_id": "03173317000118-1-000068-2026#contrato-01",
+      "outro_documento_id": "03173317000118-1-000068-2026#edital-10",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.1868,
+      "contencao": 0.8591,
+      "detalhe": "86% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "03173317000118-1-000068-2026#etp-02",
+      "outro_documento_id": "03173317000118-1-000068-2026#edital-10",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2303,
+      "contencao": 1.0,
+      "detalhe": "100% do texto de ETP aparece em EDITAL"
+    },
+    {
+      "documento_id": "03173317000118-1-000068-2026#tr-09",
+      "outro_documento_id": "03173317000118-1-000068-2026#edital-10",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.3035,
+      "contencao": 1.0,
+      "detalhe": "100% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "18278051000145-1-000177-2026#contrato-01",
+      "outro_documento_id": "18278051000145-1-000177-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.3549,
+      "contencao": 0.9403,
+      "detalhe": "94% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "18278051000145-1-000177-2026#tr-05",
+      "outro_documento_id": "18278051000145-1-000177-2026#contrato-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.489,
+      "contencao": 0.8129,
+      "detalhe": "81% do texto de TR aparece em CONTRATO"
+    },
+    {
+      "documento_id": "18278051000145-1-000177-2026#tr-05",
+      "outro_documento_id": "18278051000145-1-000177-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.248,
+      "contencao": 0.9576,
+      "detalhe": "96% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "18715433000199-1-000022-2026#etp-05",
+      "outro_documento_id": "18715433000199-1-000022-2026#tr-03",
+      "tipo": "reuso_parcial",
+      "mesmo_processo": true,
+      "jaccard": 0.3715,
+      "contencao": 0.59,
+      "detalhe": "Jaccard 0.37"
+    },
+    {
+      "documento_id": "44699908000100-1-000438-2025#contrato-01",
+      "outro_documento_id": "44699908000100-1-000438-2025#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2459,
+      "contencao": 0.8964,
+      "detalhe": "90% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "47999864000122-1-000051-2026#contrato-01",
+      "outro_documento_id": "47999864000122-1-000051-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.3098,
+      "contencao": 0.8463,
+      "detalhe": "85% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "47999864000122-1-000051-2026#tr-03",
+      "outro_documento_id": "47999864000122-1-000051-2026#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.1939,
+      "contencao": 0.9019,
+      "detalhe": "90% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "83754044000134-1-000238-2026#etp-04",
+      "outro_documento_id": "83754044000134-1-000238-2026#tr-08",
+      "tipo": "reuso_parcial",
+      "mesmo_processo": true,
+      "jaccard": 0.4676,
+      "contencao": 0.6757,
+      "detalhe": "Jaccard 0.47"
+    },
+    {
+      "documento_id": "84438381000185-1-000209-2026#contrato-01",
+      "outro_documento_id": "84438381000185-1-000209-2026#edital-06",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2119,
+      "contencao": 0.8838,
+      "detalhe": "88% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "84438381000185-1-000209-2026#tr-02",
+      "outro_documento_id": "84438381000185-1-000209-2026#edital-06",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2485,
+      "contencao": 0.8986,
+      "detalhe": "90% do texto de TR aparece em EDITAL"
+    },
+    {
+      "documento_id": "89522064000166-1-000261-2024#contrato-01",
+      "outro_documento_id": "89522064000166-1-000261-2024#edital-05",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2934,
+      "contencao": 0.9065,
+      "detalhe": "91% do texto de CONTRATO aparece em EDITAL"
+    },
+    {
+      "documento_id": "92963560000160-1-000546-2025#contrato-01",
+      "outro_documento_id": "92963560000160-1-000546-2025#edital-01",
+      "tipo": "contido_em",
+      "mesmo_processo": true,
+      "jaccard": 0.2222,
+      "contencao": 0.9557,
+      "detalhe": "96% do texto de CONTRATO aparece em EDITAL"
     }
   ],
   "resumo_reuso": {
-    "arquivo_identico:entre_processos": 4,
-    "reuso_parcial:entre_processos": 4,
-    "reuso_parcial:intra_processos": 2
+    "arquivo_identico:entre_processos": 5,
+    "contido_em:entre_processos": 5,
+    "contido_em:intra_processos": 19,
+    "reuso_parcial:intra_processos": 4
   }
 }

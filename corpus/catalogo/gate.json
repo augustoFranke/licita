@@ -1,8 +1,30 @@
 {
   "passou": true,
   "perfil_id": "PUBLICO_14133_PREGAO_ELETRONICO_BENS",
-  "processos_elegiveis": 27,
+  "processos_elegiveis": 20,
   "processos_elegiveis_ids": [
+    "01409580000138-1-003002-2024",
+    "01409580000138-1-003530-2025",
+    "01612888000186-1-000034-2026",
+    "01612888000186-1-000037-2026",
+    "01613338000181-1-000020-2026",
+    "01743335000162-1-000114-2026",
+    "03107539000132-1-000114-2026",
+    "03173317000118-1-000068-2026",
+    "13124052000111-1-000078-2026",
+    "18025957000158-1-000096-2026",
+    "18278051000145-1-000177-2026",
+    "18715433000199-1-000022-2026",
+    "34921783000168-1-000016-2026",
+    "44699908000100-1-000438-2025",
+    "47999864000122-1-000051-2026",
+    "83754044000134-1-000238-2026",
+    "84438381000185-1-000209-2026",
+    "89522064000166-1-000261-2024",
+    "90836693000140-1-000431-2026",
+    "92963560000160-1-000546-2025"
+  ],
+  "processos_out_of_scope_ids": [
     "01612698000169-1-000047-2024",
     "02056737000151-1-000358-2024",
     "13988308000139-1-000095-2024",
@@ -14,6 +36,7 @@
     "18260489000104-1-000155-2024",
     "18260489000104-1-000158-2024",
     "25105255000140-1-000041-2024",
+    "44699908000100-1-000054-2025",
     "45780095000141-1-000193-2024",
     "52061181000160-1-000057-2024",
     "52061181000160-1-000080-2024",
@@ -31,86 +54,83 @@
     "88814181000130-1-000180-2024",
     "88814181000130-1-000215-2024"
   ],
-  "processos_out_of_scope_ids": [
-    "44699908000100-1-000054-2025"
-  ],
   "criterios": [
     {
       "nome": "processos",
-      "exigido": "≥15",
-      "obtido": "27",
+      "exigido": "≥20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "órgãos distintos",
       "exigido": "≥5",
-      "obtido": "15",
+      "obtido": "18",
       "passou": true
     },
     {
       "nome": "máximo por órgão",
       "exigido": "≤5",
-      "obtido": "5",
+      "obtido": "2",
       "passou": true
     },
     {
       "nome": "categorias distintas",
       "exigido": "≥3",
-      "obtido": "9",
+      "obtido": "10",
       "passou": true
     },
     {
       "nome": "esferas permitidas",
       "exigido": "D,E,F,M",
-      "obtido": "M",
+      "obtido": "E,M",
       "passou": true
     },
     {
       "nome": "perfil PUBLICO_14133_PREGAO_ELETRONICO_BENS",
-      "exigido": "≥15",
-      "obtido": "27",
+      "exigido": "≥20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "processos no filtro Lei 14.133/Pregão/bens",
-      "exigido": "≥15",
-      "obtido": "27",
+      "exigido": "≥20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "processos SUPPORTED com exatamente um ETP e um TR",
-      "exigido": "27",
-      "obtido": "27",
+      "exigido": "20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "processos SUPPORTED com documentos utilizáveis localmente",
-      "exigido": "27",
-      "obtido": "27",
+      "exigido": "20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "relações documentais catalogadas",
-      "exigido": "27 processos",
-      "obtido": "27 processos",
+      "exigido": "20 processos",
+      "obtido": "20 processos",
       "passou": true
     },
     {
       "nome": "novas coletas com cadeia completa",
-      "exigido": "0",
-      "obtido": "0",
+      "exigido": "20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "vínculos válidos dos contratos presentes",
-      "exigido": "0",
-      "obtido": "0",
+      "exigido": "20",
+      "obtido": "20",
       "passou": true
     },
     {
       "nome": "novas coletas com instrumento contratual vinculado",
-      "exigido": "0",
-      "obtido": "0",
+      "exigido": "20",
+      "obtido": "20",
       "passou": true
     },
     {
@@ -120,30 +140,51 @@
       "passou": true
     },
     {
-      "nome": "documentos ETP",
-      "exigido": "≥15",
-      "obtido": "27",
+      "nome": "documentos ETP (cadeias novas)",
+      "exigido": "=20",
+      "obtido": "20",
       "passou": true
     },
     {
-      "nome": "documentos TR",
-      "exigido": "≥15",
-      "obtido": "27",
+      "nome": "documentos TR (cadeias novas)",
+      "exigido": "=20",
+      "obtido": "20",
       "passou": true
     },
     {
-      "nome": "documentos EDITAL (opcional)",
+      "nome": "documentos EDITAL (cadeias novas)",
+      "exigido": "=20",
+      "obtido": "20",
+      "passou": true
+    },
+    {
+      "nome": "documentos CONTRATO (cadeias novas)",
+      "exigido": "=20",
+      "obtido": "20",
+      "passou": true
+    },
+    {
+      "nome": "documentos EDITAL (históricos, opcional)",
       "exigido": "sem piso",
-      "obtido": "21",
+      "obtido": "0",
       "passou": true
     },
     {
-      "nome": "documentos CONTRATO (opcional)",
+      "nome": "documentos CONTRATO (históricos, opcional)",
       "exigido": "sem piso",
       "obtido": "0",
       "passou": true
     }
   ],
-  "falhas_de_abertura": [],
+  "falhas_de_abertura": [
+    {
+      "documento_id": "18025940000109-1-000260-2025#etp-04",
+      "erro": "arquivo sem texto utilizável"
+    },
+    {
+      "documento_id": "18025940000109-1-000260-2025#tr-02",
+      "erro": "arquivo sem texto utilizável"
+    }
+  ],
   "processos_sem_relacoes": []
 }
